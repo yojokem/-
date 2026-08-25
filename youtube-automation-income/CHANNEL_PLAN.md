@@ -75,6 +75,8 @@
 - 필러별 성과 편차가 크면(특정 필러가 확실히 하위권) → 그 필러 비중 축소, 상위 필러로 재배치
 - 이 기준에 도달하기 전에는 4필러 구성을 바꾸지 않는다 (표본 부족 상태에서 포맷 흔들지 않기)
 
+**확인 방법 (YouTube Studio)**: Content → Shorts 필터 → 영상별 Analytics → "Average percentage viewed"(초 단위 아님, Shorts는 비율 지표가 기준). 2026년 업계 벤치마크상 30~60초 영상은 40~50%가 평균, 70%↑가 양호 구간이므로 50% 미만 기준 자체는 합리적. 필러별 편차는 Studio에 자동 그룹 기능이 없어 `performance_log.csv`의 `pillar` 컬럼으로 20편을 모아 직접 비교한다. 보조로 "Swipe-away rate"도 같이 보면 초반 이탈(훅 실패)인지 후반 이탈(본론 늘어짐)인지 원인 진단에 도움된다.
+
 ## 콘텐츠 필러 (기둥 주제 4개, 순환 배치)
 
 1. **인지 편향/심리 트릭** (예: 확증 편향, 손실 회피)
@@ -109,19 +111,34 @@
 
 > 소재 확장 방법: Reddit r/psychology, r/todayilearned, Google Scholar 요약, 심리학 교양서(예: 대니얼 카너먼, 로버트 치알디니) 목차에서 팩트 추출 → 반드시 출처 확인 후 단순화.
 
+## 다음 20편 소재 후보 (21~40편)
+
+`SOURCE_DIRECTORY.md` 출처 기반, 기존 1~20편과 개념 중복 없음. 잠정 등급이며 실제 제작 전 `RESEARCH_WORKFLOW.md` 절차대로 재검증 필수.
+
+**필러1**: doubling-back aversion(왔던 길 되돌아가기 회피, A) · spotlight effect(내 실수를 남들은 잘 모른다, A) · illusory truth effect(반복은 진실처럼 느껴짐, A) · IKEA effect(직접 만든 걸 과대평가, A) · anchoring effect(무작위 숫자에 판단이 끌림, A)
+
+**필러2**: contempt as divorce predictor(경멸=이혼 최강 예측인자, A) · bids for connection(사소한 대화시도 반응 여부, A) · liking gap(상대가 날 좋아하는 정도를 과소평가, A) · emotional flooding(심박 100 넘으면 경청 기능 꺼짐, A) · oversharing on first dates(사회불안과 과잉공유, B — 원 논문 재확인 필요)
+
+**필러3** (⚠ 검증 시간 추가 배정): Fogg Behavior Model(동기보다 "쉽게 만들기", A) · celebration habit wiring(행동 직후 자축이 습관화 촉진, B — 수치 재검색 필요) · planning fallacy(과거 실패 알아도 이번엔 낙관, A) · ego depletion 논쟁(의지력 소모설이 재현 실패로 흔들림 — "논쟁 있음" 명시 조건부 사용) · habit loop 기저핵 이관(A, 원 논문명 재확인)
+
+**필러4**: slow-wave sleep과 장기기억(A) · cortisol memory paradox(스트레스 호르몬의 기억 촉진/방해 역설, A) · exercise-BDNF-neurogenesis(유산소 운동이 새 뉴런 생성, A) · novelty negativity bias(새 집단에 대한 부정 편향 — ep01 negativity_bias와 상위개념 겹침, `concept_log.csv`에 "다른 각도"로 명시 필요) · caffeine-adenosine(카페인의 각성 메커니즘, B — 원 저널명 확인 후 승격)
+
+이 후보들을 실제로 `content_calendar.csv`에 올릴 때 `concept_log.csv`와 대조해 중복/각도 겹침을 확인할 것.
+
 ## Day 0 착수 체크리스트
 
 기획은 이미 실행 가능한 수준이라는 판단 — 남은 건 손으로 해봐야 아는 것들뿐이라 계정가입/제작 등 실무는 아래 순서로 착수한다. 결제가 필요한 항목(TTS 초과분 등)만 사용자 승인 후 진행, 나머지 무료 항목은 바로 진행 가능.
 
-1. 채널명 최종 1개 확정(후보: `MindByte`, `The Quiet Insight`, `Psych Shorts`, `KnowMind` — 핸들 중복만 빠르게 확인) + 유튜브 채널 개설, 프로필/설명 세팅 (~30분)
-2. 캡컷 가입 + 인터페이스 훑어보기(자막 자동생성/템플릿 저장 기능 위치 확인) (~20분)
-3. 무료 스톡 소스 1~2곳 계정 생성 (Pexels/Pixabay 등, 결제 없는 곳부터) (~10분)
-4. 타입캐스트 API 키 발급(무료 티어) + 영어 보이스 후보 청취 후 1개 선정, Google Cloud TTS도 백업용으로 계정만 만들어둠 (~20분)
-5. ep01 대본 작성 (`templates/shorts_script_template.md`, negativity bias 리서치는 이미 A급 완료 — `research/sources_log.csv` 참고) (~30분)
-6. TTS 생성 → 스톡 소스 확보 → 캡컷 편집 → 업로드 메타데이터/예약 (~2시간, 첫 편이라 캡컷 편집은 문서 추정보다 길게 잡을 것)
-7. 유튜브 업로드와 동시에 TikTok/Instagram Reels에도 같은 영상 업로드 (재편집 없이, STRATEGY.md §1 배포 다각화 원칙)
+1. 채널명 최종 1개 확정(후보: `MindByte`, `The Quiet Insight`, `Psych Shorts`, `KnowMind` — namecheckly.com/nomely.ai 같은 무료 크로스플랫폼 체커로 유튜브·TikTok·Reels 핸들 동시 확인) + 유튜브 채널 개설. **채널 설정 국가는 "미국"으로 지정**(콘텐츠 타겟과 알고리즘 신호 일치 목적 — 애드센스 결제국가는 나중에 실거주지인 한국으로 별도 설정하면 되고 서로 충돌 안 함), 프로필/설명 세팅 (~30분)
+2. Canva 무료 플랜으로 프로필 아이콘·배너 제작 — `canva.com/profile-pictures/templates/youtube`(800×800), `canva.com/youtube-channel-art/templates`(2560×1440) 템플릿에서 Canva 자체 Elements 라이브러리(무료, 출처 표시 불필요)의 뇌/추상 아이콘으로 조합. 외부 사이트(Flaticon/Vecteezy/Noun Project)는 무료 티어 대부분 출처 표시 조건부라 채널 아트 용도로는 피할 것 (~20분)
+3. 캡컷 가입 + "템플릿 프로젝트" 하나 만들어두기: 자막 프리셋(스타일 저장) + 배경음악 트랙(캡컷 내장 아님, 위 §2 4번 참고) + 인트로 텍스트 스타일까지 세팅된 빈 프로젝트를 미리 구성 → 매 에피소드마다 이 프로젝트를 복제해서 시작하면 반복 세팅 시간이 줄어든다. 자막 일괄 스타일 적용은 "Apply to all captions" 기능(간헐적 오류 있음, 안 되면 캡션 다중선택 후 "Paste Attributes"로 대체) (~25분)
+4. 무료 스톡 소스 1~2곳 계정 생성 (Pexels/Pixabay 등, 결제 없는 곳부터) (~10분)
+5. 타입캐스트 API 키 발급(무료 티어) + 영어 보이스 후보 청취 후 1개 선정, Google Cloud TTS도 백업용으로 계정만 만들어둠 (~20분)
+6. ep01 대본 작성 (`templates/shorts_script_template.md`, negativity bias 리서치는 이미 A급 완료 — `research/sources_log.csv` 참고) (~30분)
+7. TTS 생성 → 스톡 소스 확보 → 캡컷 편집(3번에서 만든 템플릿 프로젝트 복제해서 시작) → 업로드 메타데이터/예약 (~2시간, 첫 편이라 캡컷 편집은 문서 추정보다 길게 잡을 것)
+8. TikTok/Instagram Reels 계정도 같은 핸들·같은 프로필 이미지로 개설 (1번에서 이미 핸들 확보 확인함) → 유튜브 업로드와 동시에 같은 영상 업로드 (재편집 없이, STRATEGY.md §1 배포 다각화 원칙). 해시태그는 완전히 동일하게 복붙하지 말고 플랫폼별 관행(TikTok은 광범위+니치 태그 혼합, Reels는 태그보다 캡션 일관성이 더 중요)에 맞춰 소폭 조정
 
-**Day 0 총합은 3.5~4.5시간으로 하루 2~3시간 상한선을 넘긴다 — 이건 원칙 위반이 아니라 "1회성 셋업 비용"으로 명시적 예외 처리한다.** ep02부터 실제로 2~3시간 안에 들어오는지가 진짜 검증 포인트.
+**Day 0 총합은 약 4~5시간으로 하루 2~3시간 상한선을 넘긴다 — 이건 원칙 위반이 아니라 "1회성 셋업 비용"으로 명시적 예외 처리한다.** 브랜딩(아이콘/배너)·캡컷 템플릿 프로젝트·TikTok/Reels 계정 개설은 모두 한 번만 하면 되는 초기 비용이라, ep02부터는 이 부분 없이 실제로 2~3시간 안에 들어오는지가 진짜 검증 포인트.
 
 **착수 후 1주일 내 반드시 확인**: (1) 캡컷 편집 실측 시간이 예상(40~60분)과 맞는지 — 90분+로 나오면 "매일 1편" 페이스 자체를 STRATEGY.md §4에서 즉시 재조정해야 함. (2) 필러3(생산성/습관) 리서치가 다른 필러보다 실제로 얼마나 더 걸리는지.
 

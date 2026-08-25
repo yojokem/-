@@ -12,6 +12,6 @@
 ## 폴더 구조
 
 - `research/` — 사실검증 절차(`RESEARCH_WORKFLOW.md`), 필러별 출처 등급표(`SOURCE_DIRECTORY.md`), 에피소드별 검증 기록(`sources_log.csv`), 소재 중복 방지 로그(`concept_log.csv`)
-- `templates/` — 대본 템플릿, 훅/CTA 문장 라이브러리(`hook_library.md`), 콘텐츠 캘린더, 자산 라이선스 로그
+- `templates/` — 대본 템플릿, 훅/CTA 문장 라이브러리(`hook_library.md`), 콘텐츠 캘린더, 자산 라이선스 로그, 성과 기록(`performance_log.csv`, ep01 업로드부터 채움)
 - `automation/` — 대본→TTS, 업로드 메타데이터 생성 보조 스크립트 (캡컷 편집·실제 업로드는 자동화 대상 아님)
 - `episodes/` — 에피소드별 실제 산출물(대본/음성/소스 기록). 미디어 파일은 `.gitignore` 처리
