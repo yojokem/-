@@ -1,6 +1,6 @@
 # 자동화 스크립트
 
-캡컷은 공식 자동화 API가 없어 편집 단계는 자동화 대상에서 제외했다. 아래 두 스크립트는 **대본 → TTS 음성 생성**, **업로드 메타데이터 준비**만 다룬다.
+캡컷은 공식 자동화 API가 없어 편집 단계는 자동화 대상에서 제외했다. 목소리도 기본은 본인 육성 녹음이라 자동화 대상이 아니다 — 아래 두 스크립트 중 `generate_tts.py`는 **TTS를 백업으로 쓸 때만** 사용하는 보조 스크립트이고, `prep_upload_metadata.py`는 **업로드 메타데이터 준비**를 돕는다.
 
 ## 준비물
 
@@ -16,7 +16,7 @@
 export TYPECAST_API_KEY="your_api_key_here"
 ```
 
-## 1. `generate_tts.py` — 대본 → 음성 파일
+## 1. `generate_tts.py` — 대본 → 음성 파일 (백업용, 기본은 본인 육성 녹음)
 
 `templates/shorts_script_template.md` 형식의 대본에서 "대본" 섹션 텍스트를 추출해 Typecast API로 mp3를 생성한다.
 

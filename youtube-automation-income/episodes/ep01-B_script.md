@@ -7,7 +7,7 @@
 - Target length: ~25s (61 words)
 - Hook line: "A law meant to cut plastic waste ended up increasing it by 47%."
 
-## Script (line-per-sentence, feeds directly into Typecast TTS)
+## Script (line-per-sentence — read aloud for own recording)
 
 ```
 [Hook - 0-3s]
@@ -36,7 +36,7 @@ Follow for more laws that didn't do what they were supposed to.
 - [ ] Stock footage/images sourced per cut
 - [ ] License/copyright confirmed
 - [ ] Royalty-free background music picked (not CapCut built-in — see `STRATEGY.md` §2)
-- [ ] Typecast voice selected
+- [ ] Own-voice recording done (`episodes/ep01-B.mp3`)
 
 ## Upload metadata (draft — this pilot stays Unlisted, not public)
 - Title: "A Law That Made Things Worse For 8 Years"

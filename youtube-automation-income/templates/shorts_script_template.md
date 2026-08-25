@@ -1,13 +1,13 @@
 # Shorts Script Template (English / US audience)
 
-> One video = one file, saved under `episodes/`. Naming: `ep01_script.md` (matches `automation/README.md` and `episodes/README.md`).
+> One video = one file, saved under `episodes/`. Naming: `ep01_script.md` (matches `automation/README.md` and `episodes/README.md`); pilot/comparison-track episodes may add a suffix, e.g. `ep01-B_script.md`.
 
 ## Meta
 - Niche/pillar (cognitive bias / relationships / productivity / brain facts):
 - Target length: (30-59s recommended)
 - Hook line (must land in the first 3 seconds):
 
-## Script (line-per-sentence, feeds directly into Typecast TTS)
+## Script (line-per-sentence — read aloud for your own recording, or feeds into Typecast TTS if used as backup)
 
 ```
 [Hook - 0-3s]
@@ -31,7 +31,7 @@
 - [ ] Stock footage/images sourced per cut
 - [ ] License/copyright confirmed
 - [ ] Royalty-free background music picked
-- [ ] Typecast voice selected:
+- [ ] Voice recorded (own voice) — or Typecast/TTS voice selected if used as backup:
 
 ## Upload metadata
 - Title (front-load the hook, <60 chars ideally):

@@ -15,8 +15,8 @@ def build_metadata(row: dict) -> str:
     return (
         f"Title: {topic} #shorts\n"
         f"Description: {topic}\n\n"
-        f"Follow for more psychology facts.\n\n"
-        f"Tags: shorts, psychology, {ep_no}\n"
+        f"Follow for more.\n\n"
+        f"Tags: shorts, {ep_no}\n"
     )
 
 
