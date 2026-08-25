@@ -2,6 +2,8 @@
 
 콘텐츠(팩트/심리학 소재)를 쓰기 전 사실관계를 검증하는 절차. 매 에피소드마다 아래 순서를 따른다.
 
+필러별로 어디부터 검색을 시작할지는 `SOURCE_DIRECTORY.md`(등급별 출처 목록)를 먼저 참고한다.
+
 ## 1. 검색 절차
 
 1. `content_calendar.csv`의 topic으로 1차 검색 (예: `"<claim>" psychology study`)
