@@ -121,7 +121,7 @@
 
 **필러3** (⚠ 검증 시간 추가 배정): Fogg Behavior Model(동기보다 "쉽게 만들기", A) · celebration habit wiring(행동 직후 자축이 습관화 촉진, B — 수치 재검색 필요) · planning fallacy(과거 실패 알아도 이번엔 낙관, A) · ego depletion 논쟁(의지력 소모설이 재현 실패로 흔들림 — "논쟁 있음" 명시 조건부 사용) · habit loop 기저핵 이관(A, 원 논문명 재확인)
 
-**필러4**: slow-wave sleep과 장기기억(A) · cortisol memory paradox(스트레스 호르몬의 기억 촉진/방해 역설, A) · exercise-BDNF-neurogenesis(유산소 운동이 새 뉴런 생성, A) · novelty negativity bias(새 집단에 대한 부정 편향 — ep01 negativity_bias와 상위개념 겹침, `concept_log.csv`에 "다른 각도"로 명시 필요) · caffeine-adenosine(카페인의 각성 메커니즘, B — 원 저널명 확인 후 승격)
+**필러4**: slow-wave sleep과 장기기억(A) · cortisol memory paradox(스트레스 호르몬의 기억 촉진/방해 역설, A) · exercise-BDNF-neurogenesis(유산소 운동이 새 뉴런 생성, A) · novelty negativity bias(새 집단에 대한 부정 편향 — ep01 negativity_bias와 상위개념 겹침, `concept_log.csv`에 "다른 각도"로 명시 필요) · caffeine-adenosine(카페인이 아데노신 A2A 수용체를 차단해 각성 유지, **A로 승격** — Journal of Neuroscience, American Journal of Physiology, Journal of Sleep Research 등 동료심사 저널 다수 확인, 2026-08-25 웹서치 검증)
 
 이 후보들을 실제로 `content_calendar.csv`에 올릴 때 `concept_log.csv`와 대조해 중복/각도 겹침을 확인할 것.
 
@@ -141,5 +141,13 @@
 **Day 0 총합은 약 4~5시간으로 하루 2~3시간 상한선을 넘긴다 — 이건 원칙 위반이 아니라 "1회성 셋업 비용"으로 명시적 예외 처리한다.** 브랜딩(아이콘/배너)·캡컷 템플릿 프로젝트·TikTok/Reels 계정 개설은 모두 한 번만 하면 되는 초기 비용이라, ep02부터는 이 부분 없이 실제로 2~3시간 안에 들어오는지가 진짜 검증 포인트.
 
 **착수 후 1주일 내 반드시 확인**: (1) 캡컷 편집 실측 시간이 예상(40~60분)과 맞는지 — 90분+로 나오면 "매일 1편" 페이스 자체를 STRATEGY.md §4에서 즉시 재조정해야 함. (2) 필러3(생산성/습관) 리서치가 다른 필러보다 실제로 얼마나 더 걸리는지.
+
+## 파일럿 게이트 (3편 후 지속 여부 판단)
+
+이 프로젝트는 결과가 느리게 보이는 구조(YPP 문턱, 6~12개월 손익분기)라 매일 커밋부터 걸지 않는다. **ep01~03까지만 만들어보고, 그 다음에 계속할지 판단**한다.
+
+- 소재 선정·대본은 사람이 초안, 에이전트가 사실검증/구조/톤 감수(`research/RESEARCH_WORKFLOW.md` §8) — 사람은 마케팅/배포/데이터분석 몰라도 됨
+- 3편 만드는 과정 자체가 지루하거나 힘들면 → 하루 2~3시간·매일 페이스 자체가 안 맞는다는 신호. 업로드 빈도를 주 1~2편으로 낮추거나, 여기서 접는 것도 정상적인 결론
+- 3편이 괜찮았으면 → Day 0 체크리스트대로 정식 착수, `CHECKPOINTS.md`의 트리거 체계로 넘어감
 
 **여전히 진행하며 결정할 것**: 썸네일 텍스트 오버레이 구체 폰트/컬러(가이드라인은 위 "제목/훅/썸네일 패턴" 참고), 정확한 업로드 요일 패턴.
