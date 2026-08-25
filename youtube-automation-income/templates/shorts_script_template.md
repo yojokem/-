@@ -1,40 +1,40 @@
-# 쇼츠 대본 템플릿
+# Shorts Script Template (English / US audience)
 
-> 하나의 영상 = 하나의 파일. 파일명 예시: `2026-08-25_ep01_소재명.md`
+> One video = one file. Example filename: `2026-08-25_ep01_topic-slug.md`
 
-## 메타
-- 니치/카테고리:
-- 예상 길이: (30~59초 권장)
-- 후킹 포인트 (3초 안에 시선을 끄는 한 문장):
+## Meta
+- Niche/pillar (cognitive bias / relationships / productivity / brain facts):
+- Target length: (30-59s recommended)
+- Hook line (must land in the first 3 seconds):
 
-## 대본 (타입캐스트 TTS 입력용, 문장 단위로 줄바꿈)
+## Script (line-per-sentence, feeds directly into Typecast TTS)
 
 ```
-[도입 - 3초 후킹]
+[Hook - 0-3s]
 
-[본론 1]
+[Setup]
 
-[본론 2]
+[Payoff / core fact]
 
-[반전/결론]
+[Twist or "here's why it matters"]
 
-[CTA - 팔로우/다음 편 예고]
+[CTA - follow for more / part 2 tease]
 ```
 
-## 자막 컷 포인트
-- 컷 1 (0~3초):
-- 컷 2 (3~15초):
-- 컷 3 (15~40초):
-- 컷 4 (40~끝):
+## Caption/cut timing
+- Cut 1 (0-3s):
+- Cut 2 (3-15s):
+- Cut 3 (15-40s):
+- Cut 4 (40s-end):
 
-## 영상 소스 체크리스트
-- [ ] 컷별 영상/이미지 소스 확보
-- [ ] 저작권/라이선스 확인
-- [ ] 배경음악 선정 (저작권 프리)
-- [ ] 타입캐스트 보이스 선택:
+## Source checklist
+- [ ] Stock footage/images sourced per cut
+- [ ] License/copyright confirmed
+- [ ] Royalty-free background music picked
+- [ ] Typecast voice selected:
 
-## 업로드 메타데이터
-- 제목 (30자 내외, 후킹 포함):
-- 설명:
-- 태그:
-- 썸네일 문구:
+## Upload metadata
+- Title (front-load the hook, <60 chars ideally):
+- Description:
+- Tags:
+- Thumbnail text:

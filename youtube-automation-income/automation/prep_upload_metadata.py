@@ -10,13 +10,13 @@ import os
 
 
 def build_metadata(row: dict) -> str:
-    topic = row.get("topic") or "(제목 미정)"
+    topic = row.get("topic") or "(untitled)"
     ep_no = row.get("ep_no", "")
     return (
-        f"제목: {topic} | 하루 만에 알게 된 이야기 #shorts\n"
-        f"설명: {topic}\n\n"
-        f"팔로우하면 다음 편도 놓치지 않아요.\n\n"
-        f"태그: shorts, {ep_no}\n"
+        f"Title: {topic} #shorts\n"
+        f"Description: {topic}\n\n"
+        f"Follow for more psychology facts.\n\n"
+        f"Tags: shorts, psychology, {ep_no}\n"
     )
 
 
