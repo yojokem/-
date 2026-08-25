@@ -1,6 +1,6 @@
 # Shorts Script Template (English / US audience)
 
-> One video = one file. Example filename: `2026-08-25_ep01_topic-slug.md`
+> One video = one file, saved under `episodes/`. Naming: `ep01_script.md` (matches `automation/README.md` and `episodes/README.md`).
 
 ## Meta
 - Niche/pillar (cognitive bias / relationships / productivity / brain facts):

@@ -23,3 +23,4 @@
 - **필러1(인지편향)**: "The more confident you are, the more likely you are to be wrong." (Dunning-Kruger, 역설형)
 - **필러2(관계심리)**: "You read someone's face in 3 seconds, and you don't even realize it." (첫인상, 직접 지목형)
 - **필러4(뇌과학)**: "Here are 3 reasons your brain forgets your dreams within minutes." (카운트다운형)
+- **필러3(생산성/습관)**: "It feels like willpower is the problem. It's actually your environment — here's why." (Setup→Payoff형, ⚠ 소스가 얇은 필러라 A급 원출처 확인 전엔 이 골격에 팩트를 확정해 넣지 말 것)

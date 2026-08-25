@@ -21,9 +21,9 @@ def extract_script_text(md_path: str) -> str:
     with open(md_path, encoding="utf-8") as f:
         content = f.read()
 
-    match = re.search(r"## 대본.*?```\n(.*?)```", content, re.DOTALL)
+    match = re.search(r"## Script.*?```\n(.*?)```", content, re.DOTALL)
     if not match:
-        raise ValueError("Could not find a fenced '## 대본' code block in the script file")
+        raise ValueError("Could not find a fenced '## Script' code block in the script file")
 
     lines = [line.strip() for line in match.group(1).splitlines()]
     lines = [line for line in lines if line and not line.startswith("[")]
