@@ -8,6 +8,9 @@
 2. **`CHANNEL_PLAN.md`** — 니치·채널 아이덴티티 확정, 제목/훅/썸네일 패턴, 초기 20편 소재 리스트, **Day 0 착수 체크리스트**(실제 시작은 여기부터)
 3. **`research/RESEARCH_WORKFLOW.md`** — 제작 전 사실검증 절차, 주간 배치 루틴
 4. 이후 상시 참조: **`CHECKPOINTS.md`** (판단 기준/트리거 색인 — 언제 조정하고 언제 접을지)
+5. 영상 편집이 처음이라면: **`PRODUCTION_GUIDE_FOR_BEGINNERS.md`** (대본 완성 후 업로드까지, 버튼 단위로 쪼갠 설명)
+
+파일럿 트랙(심리학 vs 글로벌 법/제도 트렌드 비교 중)의 소재 기준은 `research/TRENDS_TOPIC_CRITERIA.md` 참고 — 니치 확정 전까지는 실험용.
 
 ## 폴더 구조
 
