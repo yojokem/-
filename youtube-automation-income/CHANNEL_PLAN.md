@@ -44,8 +44,34 @@
 
 - 채널명 후보: `MindByte`, `The Quiet Insight`, `Psych Shorts`, `KnowMind`
 - 톤: 차분하고 권위 있는 내레이션, 문장 짧고 단정적
-- 썸네일/제목 패턴: "The Psychology Trick That [결과]", "Why Your Brain [현상]", "5 Signs You're [특성]"
 - 업로드 주기: 미국 시간대 기준 저녁~밤(EST 오후 7~10시) 골든타임에 맞춰 예약 업로드 → 한국 기준 오전 8~11시경
+
+### 제목/훅/썸네일 패턴 (2026-08-25 콘텐츠 기획관 결과, 유실됐던 걸 문서화)
+
+**제목 패턴**
+- 번호+단정형: `5 Signs You're a [특성]`, `3 Psychology Tricks That [결과]`
+- 질문형: `Why Do We [행동]?`
+- 반전/재정의형: `It's Not [통념], It's [진짜 이유]`
+- "cure/diagnose/treatment" 같은 의료 단정 표현은 피하고 "study suggests/psychology explains" 톤 유지 (광고주 친화도·정책 리스크)
+- 30~40자 내외, 첫 3~4단어에 후킹 단어(Why/Secret/Sign/Trick) 배치
+
+**훅(오프닝 3초 대사) 패턴**
+- 직접 지목형: "You do this every single day and don't even notice."
+- 역설 제시형: "The smarter you are, the more likely you are to fall for this."
+- 카운트다운 예고형: "Here are 3 signs your brain is lying to you."
+- 첫 문장에 배경 설명("Today we'll talk about...")을 넣지 않는다 — 첫 단어부터 훅
+
+**썸네일(첫 프레임 텍스트 오버레이) 패턴**
+- Shorts는 정지 썸네일보다 첫 프레임 텍스트 오버레이가 실질적 썸네일 — 핵심 문구 3~5단어를 화면 상단/중앙에 큰 볼드체로
+- 색상: 신뢰감(네이비/딥블루) + 주의환기 강조색(옐로/레드) 대비
+- 얼굴이 없으므로 뇌 일러스트/실루엣/추상 아이콘 같은 저작권 프리 비주얼 모티프를 채널 고유 스타일로 고정 (반복 노출 자체가 브랜드가 됨)
+
+### 니치/앵글 재검토 트리거 (구체 기준 신설)
+
+"실제 업로드 반응을 보고 추후 재검토"라고만 써있던 걸 구체화한다. **누적 20편 업로드 시점**에 아래를 확인:
+- 평균 시청 지속률이 50% 미만인 영상이 과반이면 → 서브니치 좁히기(행동신호 해독 등, 이전 감사 결과 참고)를 재검토
+- 필러별 성과 편차가 크면(특정 필러가 확실히 하위권) → 그 필러 비중 축소, 상위 필러로 재배치
+- 이 기준에 도달하기 전에는 4필러 구성을 바꾸지 않는다 (표본 부족 상태에서 포맷 흔들지 않기)
 
 ## 콘텐츠 필러 (기둥 주제 4개, 순환 배치)
 
@@ -56,26 +82,28 @@
 
 ## 초기 소재 리스트 (첫 20편)
 
-1. Why your brain remembers insults more than compliments (negativity bias)
-2. The psychology trick that makes people like you instantly
-3. Why multitasking is a myth (your brain can't actually do it)
-4. The Dunning-Kruger effect explained in 30 seconds
-5. Why we procrastinate (and the 2-minute fix)
-6. The mere-exposure effect: why you like what's familiar
-7. How color affects your mood (backed by psychology)
-8. The Zeigarnik effect: why unfinished tasks haunt you
-9. Why silence in a conversation feels so uncomfortable
-10. The psychology behind why we scroll endlessly
-11. What your sleep position says about your personality (fact-check version)
-12. The bystander effect: why nobody helps in a crowd
-13. Why comparison kills happiness (social comparison theory)
-14. The 3-second rule for first impressions
-15. Why you can't remember your dreams
-16. The psychology of regret: action vs inaction
-17. Why smiling can actually change your mood (facial feedback theory)
-18. The paradox of choice: why more options make you less happy
-19. Why we lie to ourselves (self-deception, briefly)
-20. The psychology trick top negotiators use
+> 2026-08-25 필러 태그 추가: `research/SOURCE_DIRECTORY.md`에서 필러3(생산성/습관)이 소스가 가장 얇고 과장 수치 리스크가 크다고 확인됨. 아래 목록에서 필러3인 #5, #10은 검증에 시간을 더 배정하고(신뢰도 A급 원 출처 확인 전엔 진행 보류), 초반 며칠 페이스에 몰아 넣지 않는다.
+
+1. Why your brain remembers insults more than compliments (negativity bias) — 필러1, 이미 researched=yes(A급, sources_log.csv 참고)
+2. The psychology trick that makes people like you instantly — 필러2
+3. Why multitasking is a myth (your brain can't actually do it) — 필러1
+4. The Dunning-Kruger effect explained in 30 seconds — 필러1
+5. Why we procrastinate (and the 2-minute fix) — 필러3 ⚠ 검증 시간 추가 배정
+6. The mere-exposure effect: why you like what's familiar — 필러1
+7. How color affects your mood (backed by psychology) — 필러4
+8. The Zeigarnik effect: why unfinished tasks haunt you — 필러1
+9. Why silence in a conversation feels so uncomfortable — 필러2
+10. The psychology behind why we scroll endlessly — 필러3 ⚠ 검증 시간 추가 배정
+11. What your sleep position says about your personality (fact-check version) — 필러4
+12. The bystander effect: why nobody helps in a crowd — 필러2
+13. Why comparison kills happiness (social comparison theory) — 필러2
+14. The 3-second rule for first impressions — 필러2
+15. Why you can't remember your dreams — 필러4
+16. The psychology of regret: action vs inaction — 필러1
+17. Why smiling can actually change your mood (facial feedback theory) — 필러4
+18. The paradox of choice: why more options make you less happy — 필러1
+19. Why we lie to ourselves (self-deception, briefly) — 필러1
+20. The psychology trick top negotiators use — 필러2
 
 > 소재 확장 방법: Reddit r/psychology, r/todayilearned, Google Scholar 요약, 심리학 교양서(예: 대니얼 카너먼, 로버트 치알디니) 목차에서 팩트 추출 → 반드시 출처 확인 후 단순화.
 
