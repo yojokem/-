@@ -8,7 +8,7 @@
 
 | 파일 | 내용 |
 |---|---|
-| [`00-background.md`](./00-background.md) | 배경, 핵심 철학, 신체계 8개 구성요소 |
+| [`00-background.md`](./00-background.md) | 배경, 핵심 철학, 사법입법제도가 낳는 8개 법률 |
 | [`01-source-law-reference.md`](./01-source-law-reference.md) | 구법 「사적 관계의 자치에 관한 법률」 전문(110개 조문) — 참조용 |
 | [`02-open-issues.md`](./02-open-issues.md) | 미해결 설계 쟁점 (처분유형 명명 · 인용 형식 · 생애주기 절차) |
 | [`03-legacy-mapping.md`](./03-legacy-mapping.md) | 구법 → 신체계 매핑 초안 |
