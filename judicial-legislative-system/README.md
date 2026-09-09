@@ -13,6 +13,7 @@
 | [`02-open-issues.md`](./02-open-issues.md) | 미해결 설계 쟁점 (처분유형 명명 · 인용 형식 · 생애주기 절차) |
 | [`03-legacy-mapping.md`](./03-legacy-mapping.md) | 구법 → 신체계 매핑 초안 |
 | [`04-next-steps.md`](./04-next-steps.md) | 다음에 이어갈 작업 목록 |
+| [`05-founding-disposition-draft.md`](./05-founding-disposition-draft.md) | 생애주기 절차 재구성 최초 처분 초안 ("입직 2026-1 결정") — 미확정 |
 | [`CHANGELOG.md`](./CHANGELOG.md) | 이 폴더의 변경 이력 |
 
 ## 성격 안내
