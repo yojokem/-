@@ -13,8 +13,9 @@
 | [`02-open-issues.md`](./02-open-issues.md) | 미해결 설계 쟁점 (처분유형 명명 · 인용 형식 · 생애주기 절차) |
 | [`03-legacy-mapping.md`](./03-legacy-mapping.md) | 구법 → 신체계 매핑 초안 |
 | [`04-next-steps.md`](./04-next-steps.md) | 다음에 이어갈 작업 목록 |
-| [`05-founding-disposition-draft.md`](./05-founding-disposition-draft.md) | 생애주기 절차 재구성 최초 처분 초안 ("입직 2026-1 결정") — 거의 확정 |
+| [`05-founding-disposition-draft.md`](./05-founding-disposition-draft.md) | (역사 보존용, 07로 통합됨) 생애주기 절차 재구성 최초 처분 초안 ("입직 2026-1 결정") |
 | [`06-audit-log.md`](./06-audit-log.md) | 감리록 — 체계 자기점검(감리) 처분 기록 |
+| [`07-general-plan-draft.md`](./07-general-plan-draft.md) | **사법입법제도일반계획 (초안) — 현재 소스 오브 트루스** |
 | [`CHANGELOG.md`](./CHANGELOG.md) | 이 폴더의 변경 이력 |
 
 ## 성격 안내
