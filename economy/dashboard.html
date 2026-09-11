@@ -1,0 +1,236 @@
+<title>가계 경제 현황판</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+  :root {
+    --bg: #f6f5f1;
+    --surface: #ffffff;
+    --surface-2: #eef0ec;
+    --border: #dcdcd4;
+    --text: #22261f;
+    --muted: #6a7168;
+    --accent: #2f6f5e;
+    --accent-soft: #e2eee9;
+    --warn: #a06a1f;
+    --warn-soft: #f4e9d8;
+    --critical: #a3402f;
+    --critical-soft: #f6e2dd;
+    --shadow: 0 1px 2px rgba(30,35,25,.06), 0 6px 20px -12px rgba(30,35,25,.18);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14170f;
+      --surface: #1c2018;
+      --surface-2: #232820;
+      --border: #343a2d;
+      --text: #eaece4;
+      --muted: #a2a998;
+      --accent: #6fbba1;
+      --accent-soft: #223129;
+      --warn: #d3a355;
+      --warn-soft: #2e2818;
+      --critical: #dd8672;
+      --critical-soft: #331f1a;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.5);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14170f;
+    --surface: #1c2018;
+    --surface-2: #232820;
+    --border: #343a2d;
+    --text: #eaece4;
+    --muted: #a2a998;
+    --accent: #6fbba1;
+    --accent-soft: #223129;
+    --warn: #d3a355;
+    --warn-soft: #2e2818;
+    --critical: #dd8672;
+    --critical-soft: #331f1a;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.5);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Source Sans 3", system-ui, sans-serif;
+    padding-block: 28px;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; display: flex; flex-direction: column; gap: 22px; }
+
+  h1, h2, h3 { font-family: "Fraunces", Georgia, serif; text-wrap: balance; margin: 0; }
+  .num { font-family: "IBM Plex Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+
+  header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px 16px; }
+  header h1 { font-size: 1.7rem; font-weight: 600; }
+  .status-chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: .78rem; font-weight: 600; letter-spacing: .02em;
+    padding: 5px 11px; border-radius: 999px;
+    background: var(--warn-soft); color: var(--warn);
+  }
+  .status-chip::before { content: "●"; font-size: .6em; }
+  .subtitle { color: var(--muted); font-size: .92rem; max-width: 62ch; }
+
+  .stat-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px;
+  }
+  .stat {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+    padding: 14px 16px; box-shadow: var(--shadow);
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .stat .label { font-size: .74rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+  .stat .value { font-size: 1.5rem; font-weight: 600; }
+  .stat .delta { font-size: .8rem; color: var(--muted); }
+  .stat .delta.up { color: var(--accent); }
+  .stat .delta.down { color: var(--critical); }
+
+  section.card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    padding: 18px 20px; box-shadow: var(--shadow);
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  section.card > h2 { font-size: 1.15rem; font-weight: 600; }
+  .card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+  .card-note { font-size: .82rem; color: var(--muted); }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 640px) { .two-col { grid-template-columns: 1fr; } }
+
+  table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+  th, td { text-align: left; padding: 7px 4px; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 600; font-size: .78rem; text-transform: uppercase; letter-spacing: .04em; }
+  td.num, th.num { text-align: right; }
+  tbody tr:last-child td { border-bottom: none; }
+  .table-wrap { overflow-x: auto; }
+
+  .bar-row { display: flex; align-items: center; gap: 10px; }
+  .bar-row .name { flex: 0 0 96px; font-size: .85rem; color: var(--muted); }
+  .bar-track { flex: 1; height: 8px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 999px; background: var(--accent); }
+  .bar-row .amt { flex: 0 0 auto; font-size: .85rem; }
+
+  .checklist { display: flex; flex-direction: column; gap: 8px; }
+  .checklist .item { display: flex; align-items: flex-start; gap: 8px; font-size: .9rem; }
+  .checklist .box {
+    flex: 0 0 16px; width: 16px; height: 16px; margin-top: 2px; border-radius: 4px;
+    border: 1.5px solid var(--border); background: var(--surface-2);
+  }
+  .checklist .item.done .box { background: var(--accent); border-color: var(--accent); }
+
+  .pill { display: inline-block; font-size: .74rem; font-weight: 600; padding: 2px 9px; border-radius: 999px; }
+  .pill.pending { background: var(--warn-soft); color: var(--warn); }
+  .pill.linked { background: var(--accent-soft); color: var(--accent); }
+
+  .empty { color: var(--muted); font-size: .9rem; font-style: italic; padding: 6px 0; }
+  footer { color: var(--muted); font-size: .78rem; text-align: center; padding-block: 8px 4px; }
+  a { color: var(--accent); }
+</style>
+
+<div class="wrap">
+
+  <header>
+    <div style="display:flex; flex-direction:column; gap:6px;">
+      <h1>가계 경제 현황판</h1>
+      <p class="subtitle">수입·지출, 자산·투자, 소스 교차검증을 한 화면에서 확인합니다. 지금은 소스 연동 전 단계라 아래 수치는 구조 확인용 예시입니다.</p>
+    </div>
+    <span class="status-chip">소스 미연동 · 예시 데이터</span>
+  </header>
+
+  <div class="stat-grid">
+    <div class="stat">
+      <span class="label">이번 달 총수입</span>
+      <span class="value num">₩4,200,000</span>
+      <span class="delta up">전월 대비 +3.1% (예시)</span>
+    </div>
+    <div class="stat">
+      <span class="label">이번 달 총지출</span>
+      <span class="value num">₩2,850,000</span>
+      <span class="delta down">전월 대비 +6.4% (예시)</span>
+    </div>
+    <div class="stat">
+      <span class="label">순현금흐름</span>
+      <span class="value num">₩1,350,000</span>
+      <span class="delta">저축률 32% (예시)</span>
+    </div>
+    <div class="stat">
+      <span class="label">순자산</span>
+      <span class="value num">₩61,400,000</span>
+      <span class="delta up">전월 대비 +1.8% (예시)</span>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <section class="card">
+      <div class="card-head">
+        <h2>지출 카테고리</h2>
+        <span class="card-note">이번 달 · 예시</span>
+      </div>
+      <div class="bar-row"><span class="name">주거</span><div class="bar-track"><div class="bar-fill" style="width:78%"></div></div><span class="amt num">₩980,000</span></div>
+      <div class="bar-row"><span class="name">식비</span><div class="bar-track"><div class="bar-fill" style="width:52%"></div></div><span class="amt num">₩650,000</span></div>
+      <div class="bar-row"><span class="name">고정지출</span><div class="bar-track"><div class="bar-fill" style="width:38%"></div></div><span class="amt num">₩480,000</span></div>
+      <div class="bar-row"><span class="name">교통</span><div class="bar-track"><div class="bar-fill" style="width:22%"></div></div><span class="amt num">₩280,000</span></div>
+      <div class="bar-row"><span class="name">여가/기타</span><div class="bar-track"><div class="bar-fill" style="width:35%"></div></div><span class="amt num">₩460,000</span></div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>자산 구성</h2>
+        <span class="card-note">기준일 2026-09-11 · 예시</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>구분</th><th class="num">평가금액</th><th class="num">비중</th></tr></thead>
+          <tbody>
+            <tr><td>현금성</td><td class="num">₩8,200,000</td><td class="num">13%</td></tr>
+            <tr><td>국내주식</td><td class="num">₩14,500,000</td><td class="num">24%</td></tr>
+            <tr><td>해외주식/ETF</td><td class="num">₩21,000,000</td><td class="num">34%</td></tr>
+            <tr><td>연금</td><td class="num">₩17,700,000</td><td class="num">29%</td></tr>
+            <tr><td>부채</td><td class="num">-₩0</td><td class="num">0%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <section class="card">
+    <div class="card-head">
+      <h2>데이터 소스 연동 상태</h2>
+      <span class="card-note">economy/04-data-sources.md 참조</span>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>소스</th><th>담고 있는 데이터</th><th>상태</th></tr></thead>
+        <tbody>
+          <tr><td>Notion</td><td>가계부, 자산 스냅샷 데이터베이스</td><td><span class="pill pending">연동 대기</span></td></tr>
+          <tr><td>Google Drive</td><td>은행/카드 거래내역 CSV</td><td><span class="pill pending">연동 대기</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="card-note">소스가 등록되면 이 표의 상태가 "연동됨"으로 바뀌고, 위 통계·표의 예시 값이 실데이터로 교체됩니다.</p>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <h2>이번 리포트 주기 체크리스트</h2>
+      <span class="card-note">economy/04, 05 문서 기준</span>
+    </div>
+    <div class="checklist">
+      <div class="item"><div class="box"></div><span>Notion·Drive 데이터 수집</span></div>
+      <div class="item"><div class="box"></div><span>교차검증 체크리스트 통과 (총합 일치, 중복/누락 확인)</span></div>
+      <div class="item"><div class="box"></div><span>수입/지출·자산 문서에 반영</span></div>
+      <div class="item"><div class="box"></div><span>정기 리포트 작성 (economy/reports/)</span></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <h2>최근 리포트</h2>
+    </div>
+    <p class="empty">아직 생성된 리포트가 없습니다. 첫 리포트는 소스 연동 후 economy/reports/에 쌓입니다.</p>
+  </section>
+
+  <footer>economy 브랜치 스캐폴드 · 소스 연동 전까지는 모든 수치가 예시입니다.</footer>
+</div>
