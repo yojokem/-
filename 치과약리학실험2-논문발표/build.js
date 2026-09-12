@@ -69,7 +69,7 @@ function pageNum(s, n) {
     { text: "저널  ", options: { bold: true, color: C.accent } },
     { text: "Oral and Maxillofacial Surgery (Springer), 2024\n", options: { color: C.white } },
     { text: "발표자  ", options: { bold: true, color: C.accent } },
-    { text: "[이름 입력]", options: { color: C.white } },
+    { text: "김민성", options: { color: C.white } },
   ], { x: 0.9, y: 5.6, w: 8, h: 1.0, fontFace: BODY_FONT, fontSize: 14, isTextBox: true, margin: 0, lineSpacingMultiple: 1.4 });
 
   s.addNotes("발표 시작 인사. 논문 출처(Springer, Oral and Maxillofacial Surgery, 2024), 선정 사유(치과약리학 직결, 최근 5년 이내, 국제학술지 Original article)를 한 줄로 언급.");
@@ -193,17 +193,17 @@ function pageNum(s, n) {
     s.addText(label, { x, y: 3.55, w: 4.9, h: 0.6, fontFace: BODY_FONT, fontSize: 15, bold: true, color: C.ink, align: "center", isTextBox: true, margin: 0 });
     x += 5.3;
   });
-  s.addText("→ 아티카인 측이 평균 22.4초 더 빠르게 발현 (통계적 유의성: [원문 확인 필요])", {
+  s.addText("→ 아티카인 측이 평균 22.4초 더 빠르게 발현 (p<0.01, paired t-test)", {
     x: 0.9, y: 4.6, w: 11.4, h: 0.5, fontFace: BODY_FONT, fontSize: 14, italic: true, color: C.primary, isTextBox: true, margin: 0,
   });
 
   s.addShape(pres.ShapeType.roundRect, { x: 0.9, y: 5.35, w: 11.4, h: 1.3, rectRadius: 0.1, fill: { color: C.paper }, line: { color: C.secondary, width: 1, transparency: 70 } });
   s.addText("추가 소견", { x: 1.2, y: 5.5, w: 3, h: 0.4, fontFace: BODY_FONT, fontSize: 13, bold: true, color: C.secondary, isTextBox: true, margin: 0 });
-  s.addText("아티카인 측의 추가 마취(보충 주사) 필요율이 리도카인 측보다 낮게 보고됨. 정확한 비율·건수는 [원문 확인 필요].", {
+  s.addText("추가 마취(보충 주사) 튜브 수: 아티카인 0.26±0.48개 vs 리도카인 0.50±0.75개 (p<0.01) — 리도카인 측에서 유의하게 더 많이 필요.", {
     x: 1.2, y: 5.85, w: 10.8, h: 0.7, fontFace: BODY_FONT, fontSize: 13, color: C.ink, isTextBox: true, margin: 0,
   });
   pageNum(s, 6);
-  s.addNotes("숫자는 초록/검색 스니펫 기준(122.1±52.90초 vs 144.5±68.85초)이며, p-value·95% CI 등 정확한 통계치는 원문 Results 섹션에서 직접 확인해 채울 것.");
+  s.addNotes("원문 Table 3 기준 수치로 확정. Results 본문에서는 p<0.01, Abstract에서는 p<0.05로 표기되어 있어 발표 시 Table 3 기준(p<0.01)으로 통일해 설명할 것.");
 }
 
 // ---------- Slide 7: Results - pain / summary ----------
@@ -212,9 +212,9 @@ function pageNum(s, n) {
   titleBar(s, "RESULTS", "통증(VAS) 및 종합 소견");
 
   s.addShape(pres.ShapeType.roundRect, { x: 0.6, y: 2.1, w: 5.85, h: 4.5, rectRadius: 0.1, fill: { color: C.white }, line: { type: "none" }, shadow: { type: "outer", color: "000000", opacity: 0.1, blur: 5, offset: 2, angle: 90 } });
-  s.addText("주사통 / 술 중·후 VAS", { x: 0.95, y: 2.35, w: 5.2, h: 0.5, fontFace: TITLE_FONT, fontSize: 16, bold: true, color: C.ink, isTextBox: true, margin: 0 });
-  s.addText("[원문 확인 필요 — VAS 평균값·표준편차, 군간 비교 결과]", {
-    x: 0.95, y: 2.95, w: 5.2, h: 3.4, fontFace: BODY_FONT, fontSize: 13.5, italic: true, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.4,
+  s.addText("술 중·후 VAS 및 기타 지표 (Table 3)", { x: 0.95, y: 2.35, w: 5.2, h: 0.5, fontFace: TITLE_FONT, fontSize: 16, bold: true, color: C.ink, isTextBox: true, margin: 0 });
+  s.addText("VAS 통증 점수: 리도카인 3.62±2.46 vs 아티카인 3.75±2.56 — 유의차 없음\n\n수술 시간(분): 리도카인 33.45±21.85 vs 아티카인 28.86±15.13 — 유의차 없음\n\n마취 지속시간(분): 리도카인 260.4±96.02 vs 아티카인 278.2±127.6 — 유의차 없음", {
+    x: 0.95, y: 2.95, w: 5.2, h: 3.4, fontFace: BODY_FONT, fontSize: 13, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.4,
   });
 
   s.addShape(pres.ShapeType.roundRect, { x: 6.85, y: 2.1, w: 5.85, h: 4.5, rectRadius: 0.1, fill: { color: C.ink }, line: { type: "none" } });
@@ -236,25 +236,41 @@ function pageNum(s, n) {
   titleBar(s, "CRITICAL APPRAISAL", "비평적 고찰 (본인 의견 작성)");
 
   const cols = [
-    ["강점", ["연구 설계의 강점은?", "(예: split-mouth로 개체간 변이 통제)"]],
-    ["한계 / Bias 위험", ["표본수·눈가림·결과 측정의 한계는?", "(직접 채워 넣기)"]],
-    ["임상 적용 가능성", ["한국 임상 현장에 그대로 적용 가능한가?", "(직접 채워 넣기)"]],
+    ["강점", [
+      "· Split-mouth 설계로 개체간 변이(연령·통증 역치 등) 통제",
+      "· 이중눈가림 + 무작위 배정(randomization table)",
+      "· CONSORT 가이드라인 준수, 사전 임상시험 등록(REBEC)",
+      "· 표본수 60명 = β power>0.90 사전 계산 근거 명시",
+    ]],
+    ["한계 / Bias 위험", [
+      "· 상·하악을 동시에 발치해 상/하악별 마취 효과 비교 불가",
+      "· 전신 진통제·소염제 병용 처방 — 통증 인지에 교란 가능",
+      "· 단일 기관(브라질) 연구 — 인종·시술자 숙련도 일반화 제한",
+      "· split-mouth 특성상 인접 부위로의 약물 확산 가능성",
+    ]],
+    ["임상 적용 가능성", [
+      "· 국내 임상에도 대체로 적용 가능(동일 기전의 아마이드계)",
+      "· 단, 국내 환자 대상 재현 데이터는 부재(연구계획서 과제와 연결)",
+      "· 발현시간 단축은 유의하나 절대적 차이(약 22초)는 임상적",
+      "  의미가 제한적일 수 있음 — 통계적 유의성 ≠ 임상적 유의성",
+    ]],
   ];
   let x = 0.6;
   const cw = 3.95;
   cols.forEach(([h, lines]) => {
     s.addShape(pres.ShapeType.roundRect, { x, y: 2.1, w: cw, h: 4.5, rectRadius: 0.1, fill: { color: C.white }, line: { color: C.accent, width: 1.25, dashType: "dash" } });
-    s.addText(h, { x: x + 0.3, y: 2.35, w: cw - 0.6, h: 0.6, fontFace: TITLE_FONT, fontSize: 16, bold: true, color: C.primary, isTextBox: true, margin: 0 });
-    s.addText(lines.map((t, i) => ({ text: t, options: { breakLine: i < lines.length - 1, italic: i > 0, color: i === 0 ? C.ink : C.muted, fontSize: i === 0 ? 13.5 : 12.5 } })),
-      { x: x + 0.3, y: 3.05, w: cw - 0.6, h: 1.2, fontFace: BODY_FONT, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3 });
-    // blank writing area
-    for (let i = 0; i < 3; i++) {
-      s.addShape(pres.ShapeType.line, { x: x + 0.3, y: 4.6 + i * 0.55, w: cw - 0.6, h: 0, line: { color: C.muted, width: 0.75, transparency: 40, dashType: "dash" } });
+    s.addText(h, { x: x + 0.3, y: 2.35, w: cw - 0.6, h: 0.5, fontFace: TITLE_FONT, fontSize: 16, bold: true, color: C.primary, isTextBox: true, margin: 0 });
+    s.addText(lines.map((t, i) => ({ text: t, options: { breakLine: i < lines.length - 1 } })),
+      { x: x + 0.3, y: 2.95, w: cw - 0.6, h: 2.9, fontFace: BODY_FONT, fontSize: 12, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.35 });
+    // blank writing area for personal additions
+    s.addText("(발표 시 본인 의견 추가)", { x: x + 0.3, y: 5.95, w: cw - 0.6, h: 0.3, fontFace: BODY_FONT, fontSize: 10.5, italic: true, color: C.muted, isTextBox: true, margin: 0 });
+    for (let i = 0; i < 2; i++) {
+      s.addShape(pres.ShapeType.line, { x: x + 0.3, y: 6.3 + i * 0.45, w: cw - 0.6, h: 0, line: { color: C.muted, width: 0.75, transparency: 40, dashType: "dash" } });
     }
     x += cw + 0.2;
   });
   pageNum(s, 8);
-  s.addNotes("이 슬라이드는 발표자 본인의 실제 의견으로 채워야 하는 영역. 표본수 60명의 검정력, split-mouth 특유의 교차확산(diffusion) 가능성, 단일 기관 연구의 일반화 한계 등을 생각해볼 것.");
+  s.addNotes("좌측 두 칸은 원문 Discussion·Limitations 절 기준 초안. 우측 임상 적용 가능성 칸의 '통계적 유의성 vs 임상적 유의성' 포인트는 Q&A에서 자주 나오는 포인트이니 본인 의견으로 발전시킬 것. 빈 줄에는 실습·발표 리허설 중 떠오른 개인 의견을 추가.");
 }
 
 // ---------- Slide 9: Take-home ----------
