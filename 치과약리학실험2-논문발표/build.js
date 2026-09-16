@@ -98,7 +98,30 @@ function pageNum(s, n) {
   s.addNotes("발치 시 통증 조절 실패가 환자 경험과 시술 효율에 미치는 영향을 도입부에서 강조. 리도카인/아티카인의 약리학적 차이(조직 침투력, pKa 등)는 다음 슬라이드로 연결.");
 }
 
-// ---------- Slide 3: Evidence gap ----------
+// ---------- Slide 3: Pharmacological mechanism ----------
+{
+  const s = baseSlide();
+  titleBar(s, "PHARMACOLOGY", "왜 아티카인이 더 빠르게 발현하는가");
+
+  const rows = [
+    ["화학구조", "아티카인은 티오펜(thiophene) 고리, 리도카인은 벤젠 고리 — 티오펜 고리가 지질용해도를 높여 신경막·연조직·피질골 투과를 향상시킴"],
+    ["대사 경로", "아티카인은 에스터 곁사슬을 가져 혈장 esterase에 의해 일부 가수분해됨(간 대사 의존도↓) → 전신독성이 낮아 4% 고농도 제형 사용이 가능"],
+    ["제형 농도", "이번 연구는 4% 아티카인 vs 2% 리도카인 비교 — 농도가 2배 높은 만큼 단위시간당 확산 가능한 분자 수 자체가 많아짐(순수 약리작용 차이와 분리해서 봐야 할 교란요인)"],
+    ["단백결합률", "아티카인 약 95% vs 리도카인 약 65% — 단백결합률이 높을수록 지속시간이 길어지는 경향과 관련(발현시간과는 별개 지표)"],
+  ];
+  let y = 2.0;
+  rows.forEach(([h, d]) => {
+    s.addShape(pres.ShapeType.roundRect, { x: 0.6, y, w: 12.1, h: 1.2, rectRadius: 0.08, fill: { color: C.white }, line: { color: C.secondary, width: 0.75, transparency: 70 }, shadow: { type: "outer", color: "000000", opacity: 0.1, blur: 5, offset: 2, angle: 90 } });
+    s.addShape(pres.ShapeType.roundRect, { x: 0.85, y: y + 0.25, w: 1.9, h: 0.7, rectRadius: 0.3, fill: { color: C.primary, transparency: 88 }, line: { type: "none" } });
+    s.addText(h, { x: 0.85, y: y + 0.25, w: 1.9, h: 0.7, fontFace: BODY_FONT, fontSize: 13, bold: true, color: C.primary, align: "center", valign: "middle", isTextBox: true, margin: 0 });
+    s.addText(d, { x: 3.0, y: y + 0.1, w: 9.4, h: 1.0, fontFace: BODY_FONT, fontSize: 12.5, color: C.ink, isTextBox: true, margin: 0, valign: "middle", lineSpacingMultiple: 1.2 });
+    y += 1.35;
+  });
+  pageNum(s, 3);
+  s.addNotes("Q&A 예상질문(농도 4% vs 2% 차이로 인한 교란)을 여기서 선제적으로 짚어주면 좋음. 아티카인의 티오펜 고리·에스터 곁사슬 구조는 약리학 교과서 표준 설명이므로 실습 교재/강의자료와 대조해 표현을 맞출 것.");
+}
+
+// ---------- Slide 4: Evidence gap ----------
 {
   const s = baseSlide();
   titleBar(s, "EVIDENCE GAP", "기존 근거의 공백");
@@ -124,11 +147,11 @@ function pageNum(s, n) {
   s.addText("→ 연령대·시술 종류에 따라 결과가 불일치 — 한국인 성인·제3대구치 발치 상황에 특화된 head-to-head 비교 데이터는 부재", {
     x: 0.6, y: 6.5, w: 12.1, h: 0.7, fontFace: BODY_FONT, fontSize: 13, italic: true, color: C.primary, isTextBox: true, margin: 0,
   });
-  pageNum(s, 3);
+  pageNum(s, 4);
   s.addNotes("이 슬라이드는 오늘 소개할 논문이 채우는 공백을 시각적으로 보여주는 목적. 세 연구 결과가 서로 다르다는 점을 강조.");
 }
 
-// ---------- Slide 4: Objective & Hypothesis ----------
+// ---------- Slide 5: Objective & Hypothesis ----------
 {
   const s = baseSlide(C.primary);
   s.addText("OBJECTIVE & HYPOTHESIS", { x: 0.6, y: 0.45, w: 10, h: 0.4, fontFace: BODY_FONT, fontSize: 13, bold: true, color: C.accent, charSpacing: 1, isTextBox: true, margin: 0 });
@@ -145,11 +168,11 @@ function pageNum(s, n) {
   s.addText("아티카인 측 부위가 리도카인 측 부위보다 마취 발현시간이 유의하게 짧고, 추가 마취 필요율이 유의하게 낮을 것이다.", {
     x: 1.0, y: 5.0, w: 11.3, h: 1.0, fontFace: BODY_FONT, fontSize: 15, bold: true, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
   });
-  pageNum(s, 4);
+  pageNum(s, 5);
   s.addNotes("가설은 저자들이 명시한 연구가설이 아니라 발표자가 선행연구 흐름을 근거로 재구성한 것임을 언급하면 좋음.");
 }
 
-// ---------- Slide 5: Methods - design ----------
+// ---------- Slide 6: Methods - design ----------
 {
   const s = baseSlide();
   titleBar(s, "METHODS", "연구 설계 및 대상");
@@ -172,11 +195,11 @@ function pageNum(s, n) {
   s.addText("측정변수  마취 발현시간(초시계) · 통증(VAS 0-10) · 마취 지속시간 · 추가 마취 필요 여부/횟수", {
     x: 0.6, y: 5.85, w: 12.1, h: 0.6, fontFace: BODY_FONT, fontSize: 13.5, bold: true, color: C.muted, isTextBox: true, margin: 0,
   });
-  pageNum(s, 5);
+  pageNum(s, 6);
   s.addNotes("split-mouth 설계의 장점(대상자 본인이 대조군 — 개체 간 변이 통제)을 설명. 이중눈가림이 어떻게 이뤄졌는지(투여자/평가자 분리 등) 원문에서 확인해 보충하면 좋음.");
 }
 
-// ---------- Slide 6: Results - onset time ----------
+// ---------- Slide 7: Results - onset time ----------
 {
   const s = baseSlide();
   titleBar(s, "RESULTS", "마취 발현시간 비교");
@@ -202,11 +225,11 @@ function pageNum(s, n) {
   s.addText("추가 마취(보충 주사) 튜브 수: 아티카인 0.26±0.48개 vs 리도카인 0.50±0.75개 (p<0.01) — 리도카인 측에서 유의하게 더 많이 필요.", {
     x: 1.2, y: 5.85, w: 10.8, h: 0.7, fontFace: BODY_FONT, fontSize: 13, color: C.ink, isTextBox: true, margin: 0,
   });
-  pageNum(s, 6);
+  pageNum(s, 7);
   s.addNotes("원문 Table 3 기준 수치로 확정. Results 본문에서는 p<0.01, Abstract에서는 p<0.05로 표기되어 있어 발표 시 Table 3 기준(p<0.01)으로 통일해 설명할 것.");
 }
 
-// ---------- Slide 7: Results - pain / summary ----------
+// ---------- Slide 8: Results - pain / summary ----------
 {
   const s = baseSlide();
   titleBar(s, "RESULTS", "통증(VAS) 및 종합 소견");
@@ -226,11 +249,11 @@ function pageNum(s, n) {
     { text: "더 낮아", options: { bold: true, color: C.accent } },
     { text: " 제3대구치 발치 시 유리한 선택지가 될 수 있음을 시사한다.", options: {} },
   ], { x: 7.2, y: 2.95, w: 5.2, h: 3.4, fontFace: BODY_FONT, fontSize: 14.5, color: C.white, isTextBox: true, margin: 0, lineSpacingMultiple: 1.45 });
-  pageNum(s, 7);
+  pageNum(s, 8);
   s.addNotes("VAS 관련 정량 수치는 검색 스니펫만으로 확보되지 않아 플레이스홀더로 남김 — 원문 Table/Figure를 확인해 직접 채워 넣을 것.");
 }
 
-// ---------- Slide 8: Critical appraisal ----------
+// ---------- Slide 9: Critical appraisal ----------
 {
   const s = baseSlide();
   titleBar(s, "CRITICAL APPRAISAL", "비평적 고찰 (본인 의견 작성)");
@@ -269,11 +292,11 @@ function pageNum(s, n) {
     }
     x += cw + 0.2;
   });
-  pageNum(s, 8);
+  pageNum(s, 9);
   s.addNotes("좌측 두 칸은 원문 Discussion·Limitations 절 기준 초안. 우측 임상 적용 가능성 칸의 '통계적 유의성 vs 임상적 유의성' 포인트는 Q&A에서 자주 나오는 포인트이니 본인 의견으로 발전시킬 것. 빈 줄에는 실습·발표 리허설 중 떠오른 개인 의견을 추가.");
 }
 
-// ---------- Slide 9: Take-home ----------
+// ---------- Slide 10: Take-home ----------
 {
   const s = baseSlide(C.primary);
   s.addShape(pres.ShapeType.ellipse, { x: -3, y: -3, w: 8, h: 8, fill: { color: C.secondary, transparency: 60 }, line: { type: "none" } });
@@ -284,11 +307,11 @@ function pageNum(s, n) {
   s.addText("단, 근거는 특정 인구집단·단일 연구 기준 — 한국인 대상 재현/후속 연구로 확인이 필요함 (→ 본 과제의 연구계획서 참고)", {
     x: 0.9, y: 4.3, w: 11.3, h: 0.9, fontFace: BODY_FONT, fontSize: 14, italic: true, color: C.paper, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
   });
-  pageNum(s, 9);
+  pageNum(s, 10);
   s.addNotes("연구계획서 과제(완충 아티카인 vs 리도카인, 한국인 대상)와 자연스럽게 연결하며 마무리. Q&A로 전환.");
 }
 
-// ---------- Slide 10: Q&A ----------
+// ---------- Slide 11: Q&A ----------
 {
   const s = baseSlide(C.ink);
   s.addText("Q & A", { x: 0.9, y: 2.9, w: 11, h: 1.3, fontFace: TITLE_FONT, fontSize: 54, bold: true, color: C.white, isTextBox: true, margin: 0 });
