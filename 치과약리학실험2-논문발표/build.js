@@ -54,13 +54,13 @@ function pageNum(s, n) {
     x: 0.9, y: 1.7, w: 10, h: 0.5, fontFace: BODY_FONT, fontSize: 15, bold: true,
     color: C.accent, charSpacing: 1, isTextBox: true, margin: 0,
   });
-  s.addText("Efficacy of Analgesia Promoted by Lidocaine and\nArticaine in Third Molar Extraction Surgery", {
+  s.addText("제3대구치 발치 시 리도카인과 아티카인의\n진통 효과 비교 — 스플릿마우스 무작위대조시험", {
     x: 0.9, y: 2.25, w: 11.3, h: 2.0, fontFace: TITLE_FONT, fontSize: 34, bold: true,
     color: C.white, isTextBox: true, margin: 0, lineSpacingMultiple: 1.15,
   });
-  s.addText("A Split-Mouth, Randomized, Controlled Trial", {
-    x: 0.9, y: 4.15, w: 11, h: 0.5, fontFace: BODY_FONT, fontSize: 17, italic: true,
-    color: C.secondary, isTextBox: true, margin: 0,
+  s.addText("원제  Efficacy of Analgesia Promoted by Lidocaine and Articaine in Third Molar Extraction Surgery: A Split-Mouth, Randomized, Controlled Trial", {
+    x: 0.9, y: 4.15, w: 11.3, h: 0.7, fontFace: BODY_FONT, fontSize: 12, italic: true,
+    color: C.secondary, isTextBox: true, margin: 0, lineSpacingMultiple: 1.25,
   });
 
   s.addShape(pres.ShapeType.rect, { x: 0.9, y: 5.35, w: 11.3, h: 0.02, fill: { color: C.muted, transparency: 60 }, line: { type: "none" } });
@@ -78,7 +78,7 @@ function pageNum(s, n) {
 // ---------- Slide 2: Clinical background ----------
 {
   const s = baseSlide();
-  titleBar(s, "BACKGROUND", "왜 국소마취제 선택이 중요한가");
+  titleBar(s, "배경", "왜 국소마취제 선택이 중요한가");
 
   const items = [
     ["하악 제3대구치 발치", "가장 흔한 구강악안면외과 시술 중 하나 — 마취 실패/지연 시 환자 불안·통증 급증"],
@@ -101,7 +101,7 @@ function pageNum(s, n) {
 // ---------- Slide 3: Pharmacological mechanism ----------
 {
   const s = baseSlide();
-  titleBar(s, "PHARMACOLOGY", "왜 아티카인이 더 빠르게 발현하는가");
+  titleBar(s, "약리기전", "왜 아티카인이 더 빠르게 발현하는가");
 
   const rows = [
     ["화학구조", "아티카인은 티오펜(thiophene) 고리, 리도카인은 벤젠 고리 — 티오펜 고리가 지질용해도를 높여 신경막·연조직·피질골 투과를 향상시킴"],
@@ -124,7 +124,7 @@ function pageNum(s, n) {
 // ---------- Slide 4: Evidence gap ----------
 {
   const s = baseSlide();
-  titleBar(s, "EVIDENCE GAP", "기존 근거의 공백");
+  titleBar(s, "선행연구 비교", "기존 근거의 공백");
 
   s.addText("아티카인 vs 리도카인 비교 연구, 조건에 따라 결과가 엇갈림", {
     x: 0.6, y: 1.95, w: 12, h: 0.5, fontFace: BODY_FONT, fontSize: 16, bold: true, color: C.ink, isTextBox: true, margin: 0,
@@ -154,7 +154,7 @@ function pageNum(s, n) {
 // ---------- Slide 5: Objective & Hypothesis ----------
 {
   const s = baseSlide(C.primary);
-  s.addText("OBJECTIVE & HYPOTHESIS", { x: 0.6, y: 0.45, w: 10, h: 0.4, fontFace: BODY_FONT, fontSize: 13, bold: true, color: C.accent, charSpacing: 1, isTextBox: true, margin: 0 });
+  s.addText("목적 및 가설", { x: 0.6, y: 0.45, w: 10, h: 0.4, fontFace: BODY_FONT, fontSize: 13, bold: true, color: C.accent, charSpacing: 1, isTextBox: true, margin: 0 });
   s.addText("연구 목적 및 가설", { x: 0.6, y: 0.82, w: 12, h: 0.9, fontFace: TITLE_FONT, fontSize: 30, bold: true, color: C.white, isTextBox: true, margin: 0 });
 
   s.addShape(pres.ShapeType.roundRect, { x: 0.6, y: 2.1, w: 12.1, h: 1.9, rectRadius: 0.1, fill: { color: C.white, transparency: 8 }, line: { type: "none" } });
@@ -175,7 +175,7 @@ function pageNum(s, n) {
 // ---------- Slide 6: Methods - design ----------
 {
   const s = baseSlide();
-  titleBar(s, "METHODS", "연구 설계 및 대상");
+  titleBar(s, "연구방법", "연구 설계 및 대상");
 
   const cards = [
     ["설계", "Split-mouth, 이중눈가림,\n무작위 대조 연구"],
@@ -202,7 +202,7 @@ function pageNum(s, n) {
 // ---------- Slide 7: Results - onset time ----------
 {
   const s = baseSlide();
-  titleBar(s, "RESULTS", "마취 발현시간 비교");
+  titleBar(s, "결과", "마취 발현시간 비교");
 
   // Stat callouts
   const stats = [
@@ -232,7 +232,7 @@ function pageNum(s, n) {
 // ---------- Slide 8: Results - pain / summary ----------
 {
   const s = baseSlide();
-  titleBar(s, "RESULTS", "통증(VAS) 및 종합 소견");
+  titleBar(s, "결과", "통증(VAS) 및 종합 소견");
 
   s.addShape(pres.ShapeType.roundRect, { x: 0.6, y: 2.1, w: 5.85, h: 4.5, rectRadius: 0.1, fill: { color: C.white }, line: { type: "none" }, shadow: { type: "outer", color: "000000", opacity: 0.1, blur: 5, offset: 2, angle: 90 } });
   s.addText("술 중·후 VAS 및 기타 지표 (Table 3)", { x: 0.95, y: 2.35, w: 5.2, h: 0.5, fontFace: TITLE_FONT, fontSize: 16, bold: true, color: C.ink, isTextBox: true, margin: 0 });
@@ -256,7 +256,7 @@ function pageNum(s, n) {
 // ---------- Slide 9: Critical appraisal ----------
 {
   const s = baseSlide();
-  titleBar(s, "CRITICAL APPRAISAL", "비평적 고찰 (본인 의견 작성)");
+  titleBar(s, "비평적 고찰", "비평적 고찰 (본인 의견 작성)");
 
   const cols = [
     ["강점", [
@@ -300,7 +300,7 @@ function pageNum(s, n) {
 {
   const s = baseSlide(C.primary);
   s.addShape(pres.ShapeType.ellipse, { x: -3, y: -3, w: 8, h: 8, fill: { color: C.secondary, transparency: 60 }, line: { type: "none" } });
-  s.addText("TAKE-HOME MESSAGE", { x: 0.9, y: 1.6, w: 10, h: 0.4, fontFace: BODY_FONT, fontSize: 13, bold: true, color: C.accent, charSpacing: 1, isTextBox: true, margin: 0 });
+  s.addText("핵심 결론", { x: 0.9, y: 1.6, w: 10, h: 0.4, fontFace: BODY_FONT, fontSize: 13, bold: true, color: C.accent, charSpacing: 1, isTextBox: true, margin: 0 });
   s.addText("발치 시 빠른 마취 발현이 필요한 상황이라면,\n아티카인이 리도카인보다 유리한 선택지일 수 있다.", {
     x: 0.9, y: 2.15, w: 11.3, h: 2.0, fontFace: TITLE_FONT, fontSize: 27, bold: true, color: C.white, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
   });
@@ -314,7 +314,7 @@ function pageNum(s, n) {
 // ---------- Slide 11: Q&A ----------
 {
   const s = baseSlide(C.ink);
-  s.addText("Q & A", { x: 0.9, y: 2.9, w: 11, h: 1.3, fontFace: TITLE_FONT, fontSize: 54, bold: true, color: C.white, isTextBox: true, margin: 0 });
+  s.addText("질의응답", { x: 0.9, y: 2.9, w: 11, h: 1.3, fontFace: TITLE_FONT, fontSize: 54, bold: true, color: C.white, isTextBox: true, margin: 0 });
   s.addText("감사합니다", { x: 0.9, y: 4.1, w: 8, h: 0.6, fontFace: BODY_FONT, fontSize: 18, color: C.accent, isTextBox: true, margin: 0 });
   s.addNotes([
     "예상 질문 1: split-mouth 설계에서 두 마취제가 서로 확산되어 결과를 교란할 가능성은 없는가?",
