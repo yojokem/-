@@ -126,14 +126,14 @@ function pageNum(s, n) {
   const s = baseSlide();
   titleBar(s, "EVIDENCE GAP", "기존 근거의 공백");
 
-  s.addText("완충(Buffered) 제형 효과는 연구마다 결과가 엇갈림", {
+  s.addText("아티카인 vs 리도카인 비교 연구, 조건에 따라 결과가 엇갈림", {
     x: 0.6, y: 1.95, w: 12, h: 0.5, fontFace: BODY_FONT, fontSize: 16, bold: true, color: C.ink, isTextBox: true, margin: 0,
   });
 
   const rows = [
-    ["성인 · 제3대구치 발치 (2024, Springer)", "아티카인 발현시간 유의하게 단축", C.accent],
-    ["성인 · 발치 시 완충 리도카인 (2024, JOMS/Cincinnati)", "완충 처리 효과 통계적 유의성 없음", C.muted],
-    ["소아 · 침윤/전달마취 (2019, 2024)", "완충 제형이 주사통·발현시간 유의하게 개선", C.accent],
+    ["신경차단 · 건강한 치아 · 숙련 시술자 (본 연구, 2024)", "아티카인 발현시간 유의하게 단축", C.accent],
+    ["침윤마취만 시행 (Majid & Ahmed 2018 등)", "두 약물 간 유의차 없음", C.muted],
+    ["치수염(pH 변화) · 비숙련 시술자 조건 (여러 RCT, refs 18–21)", "아티카인이 더 효과적", C.accent],
   ];
   let y = 2.65;
   rows.forEach(([label, res, color]) => {
@@ -144,11 +144,11 @@ function pageNum(s, n) {
     y += 1.25;
   });
 
-  s.addText("→ 연령대·시술 종류에 따라 결과가 불일치 — 한국인 성인·제3대구치 발치 상황에 특화된 head-to-head 비교 데이터는 부재", {
+  s.addText("→ 저자들 스스로도 밝히듯, 결과 차이는 마취 기법(신경차단 vs 침윤)·치아 상태(건강 vs 치수염)·시술자 숙련도 차이에서 기인 — 본 연구는 가장 표준적인 조건(신경차단·건강한 치아·숙련자)에서의 근거", {
     x: 0.6, y: 6.5, w: 12.1, h: 0.7, fontFace: BODY_FONT, fontSize: 13, italic: true, color: C.primary, isTextBox: true, margin: 0,
   });
   pageNum(s, 4);
-  s.addNotes("이 슬라이드는 오늘 소개할 논문이 채우는 공백을 시각적으로 보여주는 목적. 세 연구 결과가 서로 다르다는 점을 강조.");
+  s.addNotes("원문 Discussion 문단(923쪽) 그대로 재구성한 내용 — refs 10,12(유의차 없음), refs 18-21(아티카인 우세, 각각 치수염/침윤단독/비숙련자 조건) 인용. '완충 제형' 관련 언급은 원문에 전혀 없으므로 슬라이드에서 완전히 제외함.");
 }
 
 // ---------- Slide 5: Objective & Hypothesis ----------
