@@ -417,6 +417,24 @@ B2B로 자연 확장. 소상공인 진단 리포트는 본인이 명시적으로
 4. **과금**: 구독보다 1회성 라이프타임 구매 선호 신호 확인됨(원 사례에서도 라이프타임이 매출 견인)
 5. **일정**: 아직 미확정 — 다음에 이어서 구체화
 
+### 후보 기각 — 워크플로우/SOP 시각화 빌더 (2026-09-17)
+
+> "MCP 아니어도 되고, 추상적이지 않고 구체적 결과물이 나오는 것"을 원한다고 해서
+> 재질문한 결과: "업무 순서/dataflow/draggable/파일·이미지 링크/importing/공유 가능한 절차
+> 공식화" + "조직/모임 운영(학생회 경험 직결)" — 즉 **소규모 조직용 시각적 워크플로우/SOP
+> 빌더 툴**로 좁혀짐.
+
+- 시장 확인(웹서치): **여태 나온 것 중 가장 심하게 포화된 시장**. Asana, Trello, ClickUp,
+  Airtable, Scribe, SweetProcess, Trainual, Make, Qntrl, Flowster, Lucidchart 등 자금력
+  있는 기업들이 이미 장악, 다수 무료 티어 보유. 게다가 한국 소규모 조직은 이미 **Notion을
+  무료로 쓰고 있음**(본인의 economy 스캐폴드 자체가 증거) — 정부 무료 대안보다 더 강력한 대체재.
+- 니치 후보(한국어·학생조직 전용·거의 무료)는 있었으나, Notion·Asana가 하루 만에 채울 수 있는
+  얕은 틈이라 방어력 약함으로 판단.
+- **결정: 본인이 직접 이 아이디어 기각, 다른 방향 재모색.** 판단 기준(시장조사 먼저 → 빈틈
+  없으면 접기)을 스스로 적용한 사례로 기록.
+- 다음에 이어서: 구체적 결과물을 원한다는 기준 자체는 유효 — 워크플로우 빌더 말고 다른 형태의
+  "구체적 산출물"을 다시 찾을 것.
+
 Sources: [Apple Developer Program Fee](https://ambsandigital.com/apple-developer-program-fee-2026/),
 [Google Play 개발자 등록비](https://uxdev.org/blog/344-google-play/),
 [Habit trackers without streaks](https://getmostly.app/habit-lab/best-habit-trackers-without-streaks/)
