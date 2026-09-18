@@ -3,6 +3,7 @@
 - 학기: 2026-2 / 담당: Pf. Dong-joon Lee (dongjoon@dankook.ac.kr)
 - 이론 교안: Connective Tissue (총 64p) / 실습 교안: Connective Tissue 실습 슬라이드 (총 12종, 48p)
 - 야마(★) 판정 기준: **선배 실습노트(족보) 자료 존재 여부** — 내용 중요도 아님(CLAUDE.md 원칙)
+- 선배 예시 출처: **선배 B = 오아름 (2023학년도, 22학번)** 실습노트 / 선배 A = 출처 미기재(파일 메타데이터 없음)
 
 ## 오늘 실습 범위 요약
 
@@ -108,7 +109,7 @@
 
 ### 선배 예시 (족보) — 참고만, 눈에 띄지 않게
 - 선배 A: `../../images/선배그림/36_stomach_YAMA-senior-A_x100.jpg` — Tunica mucosa/submucosa/muscularis 구획과 "Dense irregular CT: 세포<섬유면 dense, tendon처럼 규칙적이면 regular, 아니면 irregular"라는 자체 정의 메모.
-- 선배 B: `../../images/선배그림/36_stomach_YAMA-senior-B_x400.jpg` — fibroblast·혈관·신경(핵이 갈색 염색) 표시, "콜라겐 섬유가 많고 방향성이 일정하지 않아 dense irregular CT"라는 서술.
+- 선배 B (오아름, 22학번·2023학년도): `../../images/선배그림/36_stomach_YAMA-senior-B_x400.jpg` — fibroblast·혈관·신경(핵이 갈색 염색) 표시, "콜라겐 섬유가 많고 방향성이 일정하지 않아 dense irregular CT"라는 서술.
 
 이미지(교안): `../../images/교안/36_stomach_YAMA-collagenfiber-overview_x100.jpg`, `../../images/교안/36_stomach_YAMA-collagenfiber-closeup_x400.jpg`
 
@@ -138,7 +139,7 @@
 
 ### 선배 예시 (족보) — 참고만, 눈에 띄지 않게
 - 선배 A: `../../images/선배그림/79_epiglottis_YAMA-senior-A_x200.jpg` — "Elastic fiber(탄력섬유): 가운데 elastin 단백질로 된 코어에 microfibril이 여러 줄 붙어있는 구조"로 정리.
-- 선배 B: `../../images/선배그림/79_epiglottis_YAMA-senior-B_x400.jpg` — lacuna(안에 세포 1~2개와 연골기질 포함) 라벨링.
+- 선배 B (오아름, 22학번·2023학년도): `../../images/선배그림/79_epiglottis_YAMA-senior-B_x400.jpg` — lacuna(안에 세포 1~2개와 연골기질 포함) 라벨링.
 
 이미지(교안): `../../images/교안/79_epiglottis_YAMA-elasticfiber-overview_x40.jpg`, `../../images/교안/79_epiglottis_YAMA-elasticfiber-lacuna_x400.jpg`
 
@@ -178,7 +179,7 @@
 
 ### 선배 예시 (족보) — 참고만, 눈에 띄지 않게
 - 선배 A: `../../images/선배그림/25_lymphnode_YAMA-senior-A_x100.jpg` — Lymphocyte/Reticular fiber/Trabecula 라벨, "Type III collagen, 배당·림프관·등에 분포" 메모.
-- 선배 B: `../../images/선배그림/25_lymphnode_YAMA-senior-B_x400.jpg` — "reticular fiber는 장기에서 강한 결합을 형성, 당단백질을 다량 함유" / "collagen fiber는 인장력에 저항하는 힘 제공, Type I collagen, 섬유성 구조밀도 높음" 대비 메모.
+- 선배 B (오아름, 22학번·2023학년도): `../../images/선배그림/25_lymphnode_YAMA-senior-B_x400.jpg` — "reticular fiber는 장기에서 강한 결합을 형성, 당단백질을 다량 함유" / "collagen fiber는 인장력에 저항하는 힘 제공, Type I collagen, 섬유성 구조밀도 높음" 대비 메모.
 
 이미지(교안): `../../images/교안/25_lymphnode_YAMA-reticularfiber-trabecula_x40.jpg`, `../../images/교안/25_lymphnode_YAMA-reticularfiber-reticulocyte_x400.jpg`
 
@@ -207,7 +208,7 @@
 - CT mast cell(10–12μm, heparin) vs Mucosal mast cell(5–10μm, chondroitin sulfate) 비교표로 암기.
 
 ### 선배 예시 (족보) — 참고만, 눈에 띄지 않게
-- 선배 B: `../../images/선배그림/40_mesentery_YAMA-senior-B_x800.jpg` — "heparin이 집중적으로 분포하면 진한 보라색으로 관찰된다 → 비만세포(mast cell)에서 분비되어 알레르기 반응을 유발한다 → 항응고제로 연결할 수 있다" 메모.
+- 선배 B (오아름, 22학번·2023학년도): `../../images/선배그림/40_mesentery_YAMA-senior-B_x800.jpg` — "heparin이 집중적으로 분포하면 진한 보라색으로 관찰된다 → 비만세포(mast cell)에서 분비되어 알레르기 반응을 유발한다 → 항응고제로 연결할 수 있다" 메모.
 
 이미지(교안): `../../images/교안/40_mesentery_YAMA-mastcell-overview_x100.jpg`, `../../images/교안/40_mesentery_YAMA-mastcell-granule_x400.jpg`
 
@@ -276,7 +277,7 @@
 
 ### 선배 예시 (족보) — 참고만, 눈에 띄지 않게
 - 선배 A: `../../images/선배그림/59_uterus_YAMA-senior-A_x1600.jpg` — "cartwheel nucleus(한쪽에 치우쳐짐)", "perinuclear halo(Golgi complex)", "① T세포로부터 interleukin을 제공받은 B cell이 plasma cell로 분화 ② 단백질 성분의 항체를 생성·분비해야 하므로 rER과 골지체가 발달"로 정리.
-- 선배 B: `../../images/선배그림/59_uterus_YAMA-senior-B_x1600.jpg` — 동일 슬라이드를 "항체 성분을 가지고 있는 rER(거친면 소포체)", "사바퀴모양 핵(cartwheel nucleus)", "halo(perinuclear halo, 곁세포에 다수 분포한다)"로 재정리.
+- 선배 B (오아름, 22학번·2023학년도): `../../images/선배그림/59_uterus_YAMA-senior-B_x1600.jpg` — 동일 슬라이드를 "항체 성분을 가지고 있는 rER(거친면 소포체)", "사바퀴모양 핵(cartwheel nucleus)", "halo(perinuclear halo, 곁세포에 다수 분포한다)"로 재정리.
 
 이미지(교안): `../../images/교안/59_uterus_YAMA-plasmacell_x400.jpg`, `../../images/교안/59_uterus_YAMA-plasmacell-cartwheel_x1000.jpg`
 
@@ -300,7 +301,7 @@
 [보충] 세포 수는 적고 무형질(히알루론산 위주)이 우세하여 "얼핏 dense CT처럼 보이나 실은 매우 이른 배아기 조직"이라는 감별 포인트(선배자료 주의사항).
 
 ### 선배 예시 (족보) — 참고만, 눈에 띄지 않게
-- 선배 B: `../../images/선배그림/18-62_neuraltube-umbilicalcord_YAMA-senior-B_x400.jpg` (상단) — "Mesenchyme: 미분화·미성숙 상태의 embryonic tissue, 원시적 → 유사의 차후분화와 택솔을 구성, 히알루론산 성분이 풍부", Stellate cell(별모양)·Fusiform cell(방추모양) 라벨, "세포 수가 적고 섬유성분이 많은 dense CT"라는 자체 메모(주의: 이 표현은 이론 정의상 오해 소지가 있어, 실제로는 무형질 위주의 배아성 조직임을 위 배경설명대로 정정해서 이해할 것).
+- 선배 B (오아름, 22학번·2023학년도): `../../images/선배그림/18-62_neuraltube-umbilicalcord_YAMA-senior-B_x400.jpg` (상단) — "Mesenchyme: 미분화·미성숙 상태의 embryonic tissue, 원시적 → 유사의 차후분화와 택솔을 구성, 히알루론산 성분이 풍부", Stellate cell(별모양)·Fusiform cell(방추모양) 라벨, "세포 수가 적고 섬유성분이 많은 dense CT"라는 자체 메모(주의: 이 표현은 이론 정의상 오해 소지가 있어, 실제로는 무형질 위주의 배아성 조직임을 위 배경설명대로 정정해서 이해할 것).
 
 이미지(교안): `../../images/교안/18_neuraltube_YAMA-mesenchymalcell_x100.jpg`, `../../images/교안/18_neuraltube_YAMA-mesenchymalcell_x400.jpg`
 
@@ -323,7 +324,7 @@
 - "Wharton's jelly"라는 명칭 자체가 자주 출제됨.
 
 ### 선배 예시 (족보) — 참고만, 눈에 띄지 않게
-- 선배 B: `../../images/선배그림/18-62_neuraltube-umbilicalcord_YAMA-senior-B_x400.jpg` (하단) — "제대혈관, 중에 다수하는 GAG → 외부는 주로 히알루론산 성분 경계", 별모양 fibroblast(stellate cell)·방추모양(대부분의 mesenchymal cell) fibroblast(fusiform cell)·collagen fiber·mesenchymal cell 라벨.
+- 선배 B (오아름, 22학번·2023학년도): `../../images/선배그림/18-62_neuraltube-umbilicalcord_YAMA-senior-B_x400.jpg` (하단) — "제대혈관, 중에 다수하는 GAG → 외부는 주로 히알루론산 성분 경계", 별모양 fibroblast(stellate cell)·방추모양(대부분의 mesenchymal cell) fibroblast(fusiform cell)·collagen fiber·mesenchymal cell 라벨.
 
 이미지(교안): `../../images/교안/62_umbilicalcord_YAMA-mucoidCT-overview_x20.jpg`, `../../images/교안/62_umbilicalcord_YAMA-mucoidCT-matrix_x100.jpg`
 
