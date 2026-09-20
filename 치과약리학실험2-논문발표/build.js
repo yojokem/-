@@ -183,11 +183,14 @@ function pageNum(s, n) {
   });
 
   s.addText("장치: 상악 절치 사이에 스테인리스 open-coil loop(25g 힘, tipping 이동) · 측정: 디지털캘리퍼(0.01mm)로 절치 간 거리 · 조직: PDL 폭, ALP·TRAP 염색(조골·파골세포 활성)", {
-    x: 0.6, y: 5.55, w: 12.1, h: 0.85, fontFace: BODY_FONT, fontSize: 12.5, bold: true, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
+    x: 0.6, y: 5.55, w: 9.3, h: 1.15, fontFace: BODY_FONT, fontSize: 12.5, bold: true, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3, valign: "top",
   });
   s.addText("- 일정: 가속기 4주 → 보정기 2주(장치 재부착, passive) → 재발기 2주(장치 완전 제거)", {
-    x: 0.6, y: 6.5, w: 12.1, h: 0.5, fontFace: BODY_FONT, fontSize: 12.5, italic: true, color: C.primary, isTextBox: true, margin: 0,
+    x: 0.6, y: 6.65, w: 9.3, h: 0.5, fontFace: BODY_FONT, fontSize: 12.5, italic: true, color: C.primary, isTextBox: true, margin: 0,
   });
+
+  s.addImage({ path: "assets/fig1_loop.jpg", x: 10.15, y: 5.5, w: 1.7, h: 1.65, sizing: { type: "cover", w: 1.7, h: 1.65 }, rounding: true });
+  s.addText("Fig.1 원문 — loop 장착", { x: 10.15, y: 7.13, w: 1.7, h: 0.3, fontFace: BODY_FONT, fontSize: 8.5, color: C.muted, align: "center", isTextBox: true, margin: 0 });
   pageNum(s, 6);
   s.addNotes("동물실험이므로 Q&A에서 '왜 랫드를 썼나' 물으면 '골개조·치아이동을 통제된 조건에서 관찰하기 위해 — 사람 대상으론 이 정도의 개입·조직검사가 불가능'이라고 답변.");
 }
@@ -239,7 +242,7 @@ function pageNum(s, n) {
     { text: "코르티코스테로이드  ", options: { bold: true, color: C.primary } }, { text: "-5.07 ± 0.87 mm  (최대 재발)\n", options: { bold: true } },
     { text: "비타민D  ", options: { bold: true, color: C.primary } }, { text: "-2.75 ± 0.15 mm\n", options: {} },
     { text: "PGE2  ", options: { bold: true, color: C.primary } }, { text: "-0.86 ± 0.23 mm  (양성대조와 통계적 동률 최소)", options: { bold: true } },
-  ], { x: 0.95, y: 2.9, w: 5.2, h: 3.3, fontFace: BODY_FONT, fontSize: 13.5, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.5 });
+  ], { x: 0.95, y: 2.9, w: 5.2, h: 2.9, fontFace: BODY_FONT, fontSize: 13.5, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.5, valign: "middle" });
   s.addText("※ 양성대조 vs PGE2 재발량 차이 - 통계적으로 유의하지 않음(p=0.605), Appendix 참고", {
     x: 0.95, y: 5.95, w: 5.2, h: 0.35, fontFace: BODY_FONT, fontSize: 10, italic: true, color: C.muted, isTextBox: true, margin: 0,
   });
@@ -250,12 +253,35 @@ function pageNum(s, n) {
     { text: "치주인대(PDL) 폭이 ", options: {} },
     { text: "코르티코스테로이드군에서 가장 넓게 유지", options: { bold: true, color: C.accent } },
     { text: "(압박·긴장측 모두) — 대조군이 가장 좁음, 비타민D·PGE2군은 중간 수준. 임상측정 결과와 조직 소견이 서로를 뒷받침.", options: {} },
-  ], { x: 7.2, y: 2.9, w: 5.2, h: 3.3, fontFace: BODY_FONT, fontSize: 13.5, color: C.white, isTextBox: true, margin: 0, lineSpacingMultiple: 1.45 });
+  ], { x: 7.2, y: 2.9, w: 5.2, h: 3.3, fontFace: BODY_FONT, fontSize: 13.5, color: C.white, isTextBox: true, margin: 0, lineSpacingMultiple: 1.45, valign: "middle" });
   pageNum(s, 8);
   s.addNotes("가속량이 클수록(코르티코스테로이드) 재발량도 크고, 가속량이 작을수록(PGE2) 재발도 작다는 '가속-재발 트레이드오프' 패턴이 핵심 메시지. 원문 Table VI·VII, Table VIII·IX 기준.");
 }
 
-// ---------- Slide 9: Critical appraisal ----------
+// ---------- Slide 9: Histology ----------
+{
+  const s = baseSlide();
+  titleBar(s, "조직학적 소견 — 코르티코스테로이드군에서 PDL 폭 가장 넓게 유지");
+
+  s.addImage({ path: "assets/fig3_he.jpg", x: 0.6, y: 1.85, w: 4.7, h: 4.98, sizing: { type: "contain", w: 4.7, h: 4.98 } });
+  s.addText("원문 Figure 3 (H&E 염색, ×40) — A: 음성대조, B: 양성대조, C: 코르티코스테로이드, D: 비타민D, E: PGE2", {
+    x: 0.6, y: 6.9, w: 5.3, h: 0.4, fontFace: BODY_FONT, fontSize: 9, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.15,
+  });
+
+  const points = [
+    "코르티코스테로이드군(C) - 압박·긴장측 모두 치주인대(PDL) 폭 가장 넓게 유지",
+    "대조군(A, B) - PDL 폭 가장 좁음, 재발을 흡수할 조직 여유가 적음을 시사",
+    "비타민D(D)·PGE2(E)군 - 중간 수준의 PDL 폭",
+    "임상측정(캘리퍼) 결과와 조직 소견이 서로 뒷받침함",
+    "동일한 순서 패턴이 ALP·TRAP 염색(원문 Figure 4, 5)에서도 확인됨",
+  ];
+  s.addText(points.map((t, i) => ({ text: "· " + t, options: { breakLine: i < points.length - 1 } })),
+    { x: 5.95, y: 2.1, w: 6.7, h: 4.6, fontFace: BODY_FONT, fontSize: 14.5, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.5, valign: "top" });
+  pageNum(s, 9);
+  s.addNotes("원문 Figure 3(H&E)·4(ALP)·5(TRAP) 모두 같은 순서(코르티코스테로이드 > 비타민D > PGE2 > 대조군)로 조직학적 활성을 보여줌. 임상측정치와 조직 소견이 일치한다는 점이 이 논문의 방법론적 강점.");
+}
+
+// ---------- Slide 10: Critical appraisal ----------
 {
   const s = baseSlide();
   titleBar(s, "비평적 고찰 (본인 의견 작성)");
@@ -283,21 +309,21 @@ function pageNum(s, n) {
   let x = 0.6;
   const cw = 3.95;
   cols.forEach(([h, lines]) => {
-    s.addShape(pres.ShapeType.roundRect, { x, y: 2.1, w: cw, h: 4.5, rectRadius: 0.1, fill: { color: C.white }, line: { color: C.accent, width: 1.25, dashType: "dash" } });
+    s.addShape(pres.ShapeType.roundRect, { x, y: 2.1, w: cw, h: 4.8, rectRadius: 0.1, fill: { color: C.white }, line: { color: C.accent, width: 1.25, dashType: "dash" } });
     s.addText(h, { x: x + 0.3, y: 2.35, w: cw - 0.6, h: 0.5, fontFace: TITLE_FONT, fontSize: 16, bold: true, color: C.primary, isTextBox: true, margin: 0 });
     s.addText(lines.map((t, i) => ({ text: t, options: { breakLine: i < lines.length - 1 } })),
-      { x: x + 0.3, y: 2.95, w: cw - 0.6, h: 2.9, fontFace: BODY_FONT, fontSize: 11, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3 });
-    s.addText("- 발표 시 본인 의견 추가", { x: x + 0.3, y: 5.95, w: cw - 0.6, h: 0.3, fontFace: BODY_FONT, fontSize: 10.5, italic: true, color: C.muted, isTextBox: true, margin: 0 });
-    for (let i = 0; i < 2; i++) {
-      s.addShape(pres.ShapeType.line, { x: x + 0.3, y: 6.3 + i * 0.45, w: cw - 0.6, h: 0, line: { color: C.muted, width: 0.75, transparency: 40, dashType: "dash" } });
+      { x: x + 0.3, y: 2.95, w: cw - 0.6, h: 2.5, fontFace: BODY_FONT, fontSize: 11, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3, valign: "top" });
+    s.addText("▸ 본인 의견 (발표 시 작성)", { x: x + 0.3, y: 5.55, w: cw - 0.6, h: 0.3, fontFace: BODY_FONT, fontSize: 10.5, bold: true, italic: true, color: C.accent, isTextBox: true, margin: 0 });
+    for (let i = 0; i < 3; i++) {
+      s.addShape(pres.ShapeType.line, { x: x + 0.3, y: 5.95 + i * 0.35, w: cw - 0.6, h: 0, line: { color: C.muted, width: 0.75, transparency: 40, dashType: "dash" } });
     }
     x += cw + 0.2;
   });
-  pageNum(s, 9);
+  pageNum(s, 10);
   s.addNotes("동물실험이라는 한계를 정면으로 짚어주는 게 신뢰도를 높임 — 숨기지 말고 먼저 말할 것. 코르티코스테로이드의 상반된 선행연구 결과는 발표 중 Q&A로 넘어가기 좋은 지점.");
 }
 
-// ---------- Slide 10: Take-home ----------
+// ---------- Slide 11: Take-home ----------
 {
   const s = baseSlide(C.primary);
   s.addShape(pres.ShapeType.ellipse, { x: -3, y: -3, w: 8, h: 8, fill: { color: C.secondary, transparency: 60 }, line: { type: "none" } });
@@ -307,11 +333,11 @@ function pageNum(s, n) {
   s.addText("코르티코스테로이드=최대가속·최대재발 / PGE2=최소가속·최소재발 / 비타민D=중간 - '빠른 이동'과 '안정적 결과'의 트레이드오프를 보여준 첫 3약물 비교연구임", {
     x: 0.9, y: 5.15, w: 11.3, h: 0.9, fontFace: BODY_FONT, fontSize: 14, italic: true, color: C.paper, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
   });
-  pageNum(s, 10);
+  pageNum(s, 11);
   s.addNotes("치과약리학1 20장(PGE2/COX)과 구강생화학(치아이동의 생화학) 두 과목 내용이 이 논문 하나로 이어진다는 점을 다시 언급하며 마무리. Q&A로 전환.");
 }
 
-// ---------- Slide 11: Q&A ----------
+// ---------- Slide 12: Q&A ----------
 {
   const s = baseSlide(C.ink);
   s.addText("질의응답", { x: 0.9, y: 2.9, w: 11, h: 1.3, fontFace: TITLE_FONT, fontSize: 54, bold: true, color: C.white, isTextBox: true, margin: 0 });
@@ -325,7 +351,7 @@ function pageNum(s, n) {
   ].join("\n"));
 }
 
-// ---------- Slide 12: Appendix A - Q&A backup (relapse "lowest" statistical nuance) ----------
+// ---------- Slide 13: Appendix A - Q&A backup (relapse "lowest" statistical nuance) ----------
 {
   const s = baseSlide();
   s.addText("APPENDIX A · Q&A 백업", {
@@ -368,7 +394,7 @@ function pageNum(s, n) {
   s.addText("- Results 본문·Conclusions: \"PGE2가 최소 재발\"이라 서술\n- Discussion 'Interpretation of findings': \"대조군이 최소, 그 다음 PGE2\"라 서술\n※ 둘 다 raw mean 순위와 통계적 유의성 서술을 혼용한 단순화 - 정확한 결론은 위 표대로 '대조군·PGE2군 통계적 동률'임", {
     x: 0.6, y: 6.15, w: 12.1, h: 1.1, fontFace: BODY_FONT, fontSize: 11.5, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
   });
-  pageNum(s, 12);
+  pageNum(s, 13);
   s.addNotes("Q&A 대비용 백업 슬라이드. 교수가 '원문 Discussion엔 대조군이 최저라고 되어있는데?' 라고 물으면 이 슬라이드를 띄우고: (1) Table III의 p3(CPG vs PGE2G)=0.605로 두 군이 통계적으로 구분 안 됨을 보여주고, (2) 원문 스스로도 Results/Conclusion과 Discussion에서 서술이 갈린다는 점을 지적하며, (3) '정확히는 대조군과 PGE2군이 재발 억제 면에서 통계적으로 동급'이라고 답변할 것. 임상적으로는 'PGE2가 가속 효과를 내면서도 재발은 무처치 수준으로 억제한다'는 게 이 발견의 가장 흥미로운 지점.");
 }
 
