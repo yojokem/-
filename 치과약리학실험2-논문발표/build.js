@@ -244,8 +244,11 @@ function pageNum(s, n) {
     { text: "양성대조  ", options: { bold: true, color: C.primary } }, { text: "-1.09 ± 0.17 mm\n", options: {} },
     { text: "코르티코스테로이드  ", options: { bold: true, color: C.primary } }, { text: "-5.07 ± 0.87 mm  (최대 재발)\n", options: { bold: true } },
     { text: "비타민D  ", options: { bold: true, color: C.primary } }, { text: "-2.75 ± 0.15 mm\n", options: {} },
-    { text: "PGE2  ", options: { bold: true, color: C.primary } }, { text: "-0.86 ± 0.23 mm  (최소 재발)", options: { bold: true } },
+    { text: "PGE2  ", options: { bold: true, color: C.primary } }, { text: "-0.86 ± 0.23 mm  (양성대조와 통계적 동률 최소)", options: { bold: true } },
   ], { x: 0.95, y: 2.9, w: 5.2, h: 3.3, fontFace: BODY_FONT, fontSize: 13.5, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.5 });
+  s.addText("* 양성대조 vs PGE2 재발량 차이는 통계적으로 유의하지 않음 (p=0.605) — Appendix 참고", {
+    x: 0.95, y: 5.95, w: 5.2, h: 0.35, fontFace: BODY_FONT, fontSize: 10, italic: true, color: C.muted, isTextBox: true, margin: 0,
+  });
 
   s.addShape(pres.ShapeType.roundRect, { x: 6.85, y: 2.05, w: 5.85, h: 4.3, rectRadius: 0.1, fill: { color: C.ink }, line: { type: "none" } });
   s.addText("조직학적 소견", { x: 7.2, y: 2.3, w: 5.2, h: 0.5, fontFace: TITLE_FONT, fontSize: 15, bold: true, color: C.accent, isTextBox: true, margin: 0 });
@@ -327,6 +330,53 @@ function pageNum(s, n) {
     "예상 질문 4: PGE2가 치근흡수를 유발할 수 있다는데, 이 연구에서는 그런 부작용을 확인했는가?",
     "예상 질문 5: 암컷 랫드는 왜 제외했는가? 성별에 따라 결과가 다를 가능성은?",
   ].join("\n"));
+}
+
+// ---------- Slide 12: Appendix A - Q&A backup (relapse "lowest" statistical nuance) ----------
+{
+  const s = baseSlide();
+  s.addText("APPENDIX A · Q&A 백업", {
+    x: 0.6, y: 0.45, w: 10, h: 0.4, fontFace: BODY_FONT, fontSize: 13, bold: true,
+    color: C.secondary, charSpacing: 1, isTextBox: true, margin: 0,
+  });
+  s.addText("재발이 '가장 적은' 군은 대조군도 PGE2군도 아닌, 둘의 통계적 동률이다", {
+    x: 0.6, y: 0.82, w: 12.1, h: 1.0, fontFace: TITLE_FONT, fontSize: 24, bold: true,
+    color: C.ink, isTextBox: true, margin: 0,
+  });
+
+  const table = [
+    [
+      { text: "", options: { bold: true, color: C.white, fill: { color: C.primary } } },
+      { text: "양성대조(CPG)", options: { bold: true, color: C.white, fill: { color: C.primary } } },
+      { text: "PGE2(PGE2G)", options: { bold: true, color: C.white, fill: { color: C.primary } } },
+      { text: "비타민D(VDG)", options: { bold: true, color: C.white, fill: { color: C.primary } } },
+      { text: "코르티코스테로이드(COG)", options: { bold: true, color: C.white, fill: { color: C.primary } } },
+    ],
+    ["2주 재발량 (T0 대비)", "-1.09 ± 0.17 mm", "-0.86 ± 0.23 mm", "-2.75 ± 0.15 mm", "-5.07 ± 0.87 mm"],
+    ["원문 유의성 문자", "a", "a", "b", "c"],
+  ];
+  s.addTable(table, {
+    x: 0.6, y: 2.05, w: 12.1, h: 1.1, fontFace: BODY_FONT, fontSize: 11.5, color: C.ink,
+    border: { type: "solid", color: "D8E8E6", pt: 1 }, autoPage: false, valign: "middle", align: "center",
+  });
+  s.addText("같은 문자(a, a)는 그 두 군 사이에 통계적 유의차가 없다는 뜻 (Table III, Tukey post-hoc)", {
+    x: 0.6, y: 3.25, w: 12.1, h: 0.4, fontFace: BODY_FONT, fontSize: 11, italic: true, color: C.muted, isTextBox: true, margin: 0,
+  });
+
+  s.addShape(pres.ShapeType.roundRect, { x: 0.6, y: 3.85, w: 12.1, h: 1.5, rectRadius: 0.08, fill: { color: C.white }, line: { color: C.accent, width: 1, transparency: 60 }, shadow: { type: "outer", color: "000000", opacity: 0.1, blur: 5, offset: 2, angle: 90 } });
+  s.addText([
+    { text: "핵심 수치:  ", options: { bold: true, color: C.primary } },
+    { text: "양성대조 vs PGE2군의 2주 재발량 차이는 통계적으로 유의하지 않음 (p = 0.605, Table III). 반면 비타민D·코르티코스테로이드는 서로 및 위 두 군과 모두 유의하게 다름(p<0.001).", options: { color: C.ink } },
+  ], { x: 0.95, y: 4.05, w: 11.4, h: 1.15, fontFace: BODY_FONT, fontSize: 13.5, isTextBox: true, margin: 0, lineSpacingMultiple: 1.35 });
+
+  s.addText("→ 통계적으로 유의미한 계층 구조:  {양성대조, PGE2} < 비타민D < 코르티코스테로이드  (재발 적은 순)", {
+    x: 0.6, y: 5.55, w: 12.1, h: 0.5, fontFace: BODY_FONT, fontSize: 14, bold: true, color: C.primary, isTextBox: true, margin: 0,
+  });
+  s.addText("원문 안에서도 서술이 갈린다 — Results 본문·Conclusions는 \"PGE2가 최소 재발\"이라 쓰고, Discussion \"Interpretation of findings\"는 \"대조군이 최소, 그 다음 PGE2\"라고 씀. 둘 다 raw mean 순위 서술과 통계적 유의성 서술을 섞어 쓴 단순화이며, 정확한 결론은 위 표와 같이 '대조군·PGE2군 통계적 동률'이다.", {
+    x: 0.6, y: 6.15, w: 12.1, h: 1.1, fontFace: BODY_FONT, fontSize: 11.5, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
+  });
+  pageNum(s, 12);
+  s.addNotes("Q&A 대비용 백업 슬라이드. 교수가 '원문 Discussion엔 대조군이 최저라고 되어있는데?' 라고 물으면 이 슬라이드를 띄우고: (1) Table III의 p3(CPG vs PGE2G)=0.605로 두 군이 통계적으로 구분 안 됨을 보여주고, (2) 원문 스스로도 Results/Conclusion과 Discussion에서 서술이 갈린다는 점을 지적하며, (3) '정확히는 대조군과 PGE2군이 재발 억제 면에서 통계적으로 동급'이라고 답변할 것. 임상적으로는 'PGE2가 가속 효과를 내면서도 재발은 무처치 수준으로 억제한다'는 게 이 발견의 가장 흥미로운 지점.");
 }
 
 pres.writeFile({ fileName: "치과약리학실험2_논문발표.pptx" }).then(() => {
