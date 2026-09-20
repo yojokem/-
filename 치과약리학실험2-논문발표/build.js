@@ -290,13 +290,14 @@ function pageNum(s, n) {
     ["강점", [
       "· 가속기+보정기+재발기를 모두 추적한 최초의 3약물 비교 — 선행연구 공백을 직접 채움",
       "· 임상측정(캘리퍼)+조직학(PDL폭, ALP/TRAP)으로 이중 검증",
-      "· ARRIVE 가이드라인 준수, 윤리위 승인, 눈가림 배정",
+      "· ARRIVE 가이드라인 준수, 윤리위 승인, 배정(allocation) 눈가림",
       "· 공공연구비(만수라대) 지원, 이해상충 없음",
     ]],
     ["한계 / Bias 위험", [
       "· 동물(랫드)실험 — 종간 차이로 사람에 그대로 적용 어려움(저자도 인정)",
       "· 수컷만 사용 — 호르몬 변동은 배제했지만 여성 적용 가능성은 미확인",
-      "· 약물당 용량 1개만 테스트 — 용량-반응 관계 분석 불가",
+      "· 약물당 용량 1개, 게다가 투여빈도도 매일·3일마다·매주로 제각각 — 공정 비교인지 불확실",
+      "· 배정만 눈가림, 측정(outcome assessment)은 비맹검 — 원문: 최종 배정 후엔 주 연구자 1인이 개입·측정·평가를 전부 수행",
       "· 코르티코스테로이드 결과가 일부 선행연구와 정반대 — 재현성 논쟁 여지",
     ]],
     ["임상 적용 가능성", [
@@ -312,10 +313,10 @@ function pageNum(s, n) {
     s.addShape(pres.ShapeType.roundRect, { x, y: 2.1, w: cw, h: 4.8, rectRadius: 0.1, fill: { color: C.white }, line: { color: C.accent, width: 1.25, dashType: "dash" } });
     s.addText(h, { x: x + 0.3, y: 2.35, w: cw - 0.6, h: 0.5, fontFace: TITLE_FONT, fontSize: 16, bold: true, color: C.primary, isTextBox: true, margin: 0 });
     s.addText(lines.map((t, i) => ({ text: t, options: { breakLine: i < lines.length - 1 } })),
-      { x: x + 0.3, y: 2.95, w: cw - 0.6, h: 2.5, fontFace: BODY_FONT, fontSize: 11, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3, valign: "top" });
-    s.addText("▸ 본인 의견 (발표 시 작성)", { x: x + 0.3, y: 5.55, w: cw - 0.6, h: 0.3, fontFace: BODY_FONT, fontSize: 10.5, bold: true, italic: true, color: C.accent, isTextBox: true, margin: 0 });
-    for (let i = 0; i < 3; i++) {
-      s.addShape(pres.ShapeType.line, { x: x + 0.3, y: 5.95 + i * 0.35, w: cw - 0.6, h: 0, line: { color: C.muted, width: 0.75, transparency: 40, dashType: "dash" } });
+      { x: x + 0.3, y: 2.95, w: cw - 0.6, h: 2.7, fontFace: BODY_FONT, fontSize: 10, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.25, valign: "top" });
+    s.addText("▸ 본인 의견 (발표 시 작성)", { x: x + 0.3, y: 5.75, w: cw - 0.6, h: 0.3, fontFace: BODY_FONT, fontSize: 10.5, bold: true, italic: true, color: C.accent, isTextBox: true, margin: 0 });
+    for (let i = 0; i < 2; i++) {
+      s.addShape(pres.ShapeType.line, { x: x + 0.3, y: 6.15 + i * 0.35, w: cw - 0.6, h: 0, line: { color: C.muted, width: 0.75, transparency: 40, dashType: "dash" } });
     }
     x += cw + 0.2;
   });
@@ -330,14 +331,44 @@ function pageNum(s, n) {
   s.addText("치아이동을 가장 많이 가속하는 약물이,\n보정 후 가장 많이 되돌아가기도 한다.", {
     x: 0.9, y: 3.0, w: 11.3, h: 2.0, fontFace: TITLE_FONT, fontSize: 27, bold: true, color: C.white, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
   });
-  s.addText("코르티코스테로이드=최대가속·최대재발 / PGE2=최소가속·최소재발 / 비타민D=중간 - '빠른 이동'과 '안정적 결과'의 트레이드오프를 보여준 첫 3약물 비교연구임", {
+  s.addText("코르티코스테로이드=최대가속·최대재발 / PGE2=최소가속·최소재발(대조군과 통계적 동률) / 비타민D=중간 - '빠른 이동'과 '안정적 결과'의 트레이드오프를 보여준 첫 3약물 비교연구임", {
     x: 0.9, y: 5.15, w: 11.3, h: 0.9, fontFace: BODY_FONT, fontSize: 14, italic: true, color: C.paper, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
+  });
+  s.addText("※ PGE2·대조군 relapse 차이 p=0.605(유의하지 않음) - Appendix A 참고", {
+    x: 0.9, y: 6.05, w: 11.3, h: 0.35, fontFace: BODY_FONT, fontSize: 10, color: C.paper, isTextBox: true, margin: 0,
   });
   pageNum(s, 11);
   s.addNotes("치과약리학1 20장(PGE2/COX)과 구강생화학(치아이동의 생화학) 두 과목 내용이 이 논문 하나로 이어진다는 점을 다시 언급하며 마무리. Q&A로 전환.");
 }
 
-// ---------- Slide 12: Q&A ----------
+// ---------- Slide 12: References ----------
+{
+  const s = baseSlide();
+  titleBar(s, "참고문헌");
+
+  const refs = [
+    "Hamed SA, Mohammad MH, Grawish ME, Fouda AM, Montasser MA. Three pharmacological agents for acceleratory orthodontic tooth movement and subsequent relapse: A randomized controlled animal study. Int Orthod. 2026;24:101112. (본 발표의 원 논문)",
+    "Baofeng L, Zhi Y, Bei L, Guolin M, Qingshui Y. Characterization of a rabbit osteoporosis model induced by ovariectomy and glucocorticoid. Bone 2010;46(3):396-401.",
+    "Abtahi M, Shafaee H, Saghravania N, Peel S, Giddon D, Sohrabi K. Effect of corticosteroids administration in rabbit model. J Clin Pediatr Dent 2014;38:285-9.",
+    "Yamane A, Fukui T, Chiba M. In vitro measurement of orthodontic tooth movement in rats given beta-aminopropionitrile or hydrocortisone. Eur J Orthod 1997;19(1):21-8.",
+    "Molina Da Silva JP, et al. Studying orthodontic tooth movement in mice. J Vis Exp 2024;(66884):210.",
+    "Gowda NC, Kumar P, Swasti KM. Vitamin D3 versus prostaglandin E1: a comparative clinical study on rate of orthodontic tooth movement. Int J Sci Res 2017;6:98-100.",
+    "Varughese ST, et al. Effect of Vitamin D on canine distalization and alveolar bone density using multi-slice spiral CT. J Contemp Dent Pract 2019;20(12):1430-5.",
+    "Al-Attar A, Abid M. The effect of vitamin D3 on the alignment of mandibular anterior teeth. Int J Dent 2022;2022.",
+    "Kale S, Kocadereli I, Atilla P, Aşan E. Comparison of 1,25-dihydroxycholecalciferol and prostaglandin E2 on orthodontic tooth movement. Am J Orthod Dentofacial Orthop 2004;125:607-14.",
+    "Cağlaroğlu M, Erdem A. Histopathologic investigation of prostaglandin E2 administered on tooth movement and bone metabolism. Korean J Orthod 2012;42:118-28.",
+    "Seifi M, Hamedi R, Khavandegar Z. The effect of thyroid hormone, prostaglandin E2, and calcium gluconate on orthodontic tooth movement and root resorption in rats. J Dent 2015;16(1 Suppl):35.",
+  ];
+  s.addText(refs.map((t, i) => ({ text: `[${i === 0 ? "원 논문" : i}] ${t}`, options: { breakLine: i < refs.length - 1 } })),
+    { x: 0.6, y: 2.0, w: 12.1, h: 5.0, fontFace: BODY_FONT, fontSize: 11, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.35, valign: "top" });
+  s.addText("※ 슬라이드 4(선행연구 비교)에서 이름으로 인용한 문헌만 수록. 전체 참고문헌(28건)은 원 논문 References 참고.", {
+    x: 0.6, y: 7.1, w: 12.1, h: 0.35, fontFace: BODY_FONT, fontSize: 10, italic: true, color: C.muted, isTextBox: true, margin: 0,
+  });
+  pageNum(s, 12);
+  s.addNotes("교수님이 '그 인용 어디서 났나' 물으면 이 슬라이드로 바로 답 가능. 전체 28개 문헌은 원 논문 References 섹션에 있음.");
+}
+
+// ---------- Slide 13: Q&A ----------
 {
   const s = baseSlide(C.ink);
   s.addText("질의응답", { x: 0.9, y: 2.9, w: 11, h: 1.3, fontFace: TITLE_FONT, fontSize: 54, bold: true, color: C.white, isTextBox: true, margin: 0 });
@@ -351,7 +382,7 @@ function pageNum(s, n) {
   ].join("\n"));
 }
 
-// ---------- Slide 13: Appendix A - Q&A backup (relapse "lowest" statistical nuance) ----------
+// ---------- Slide 14: Appendix A - Q&A backup (relapse "lowest" statistical nuance) ----------
 {
   const s = baseSlide();
   s.addText("APPENDIX A · Q&A 백업", {
@@ -394,7 +425,7 @@ function pageNum(s, n) {
   s.addText("- Results 본문·Conclusions: \"PGE2가 최소 재발\"이라 서술\n- Discussion 'Interpretation of findings': \"대조군이 최소, 그 다음 PGE2\"라 서술\n※ 둘 다 raw mean 순위와 통계적 유의성 서술을 혼용한 단순화 - 정확한 결론은 위 표대로 '대조군·PGE2군 통계적 동률'임", {
     x: 0.6, y: 6.15, w: 12.1, h: 1.1, fontFace: BODY_FONT, fontSize: 11.5, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
   });
-  pageNum(s, 13);
+  pageNum(s, 14);
   s.addNotes("Q&A 대비용 백업 슬라이드. 교수가 '원문 Discussion엔 대조군이 최저라고 되어있는데?' 라고 물으면 이 슬라이드를 띄우고: (1) Table III의 p3(CPG vs PGE2G)=0.605로 두 군이 통계적으로 구분 안 됨을 보여주고, (2) 원문 스스로도 Results/Conclusion과 Discussion에서 서술이 갈린다는 점을 지적하며, (3) '정확히는 대조군과 PGE2군이 재발 억제 면에서 통계적으로 동급'이라고 답변할 것. 임상적으로는 'PGE2가 가속 효과를 내면서도 재발은 무처치 수준으로 억제한다'는 게 이 발견의 가장 흥미로운 지점.");
 }
 
