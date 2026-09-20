@@ -23,14 +23,9 @@ function baseSlide(bg) {
   return s;
 }
 
-function titleBar(s, kicker, title) {
-  s.addText(kicker, {
-    x: 0.6, y: 0.45, w: 10, h: 0.4,
-    fontFace: BODY_FONT, fontSize: 13, bold: true,
-    color: C.secondary, charSpacing: 1, isTextBox: true, margin: 0,
-  });
+function titleBar(s, title) {
   s.addText(title, {
-    x: 0.6, y: 0.82, w: 12.1, h: 1.0,
+    x: 0.6, y: 0.55, w: 12.1, h: 1.0,
     fontFace: TITLE_FONT, fontSize: 28, bold: true,
     color: C.ink, isTextBox: true, margin: 0,
   });
@@ -77,7 +72,7 @@ function pageNum(s, n) {
 // ---------- Slide 2: Background ----------
 {
   const s = baseSlide();
-  titleBar(s, "배경", "교정 치아이동 가속과 재발, 두 마리 토끼");
+  titleBar(s, "교정 치아이동 가속과 재발, 두 마리 토끼");
 
   const items = [
     ["재발(relapse)과 고정력 상실", "교정장치 제거 후 남아있던 결합력이 풀리면서 치아가 원래 위치로 돌아가려는 재발 현상 — 원인은 아직 명확히 규명되지 않음"],
@@ -100,7 +95,7 @@ function pageNum(s, n) {
 // ---------- Slide 3: Pharmacological mechanism ----------
 {
   const s = baseSlide();
-  titleBar(s, "약리기전", "세 약물, 서로 다른 경로로 파골세포를 깨우다");
+  titleBar(s, "세 약물, 서로 다른 경로로 파골세포를 깨우다");
 
   const rows = [
     ["코르티코스테로이드", "염증유전자 발현 억제 + 파골세포형성(osteoclastogenesis) 직접 자극 + 콜라게나아제 활성 증가 → 골흡수 강하게 촉진"],
@@ -115,7 +110,7 @@ function pageNum(s, n) {
     s.addText(d, { x: 3.6, y: y + 0.15, w: 8.8, h: 1.05, fontFace: BODY_FONT, fontSize: 12.5, color: C.ink, isTextBox: true, margin: 0, valign: "middle", lineSpacingMultiple: 1.25 });
     y += 1.55;
   });
-  s.addText("→ 세 약물 모두 '파골세포 활성화'라는 종착점은 같지만, 도달 경로(직접 자극 vs RANKL 매개 vs 면역조절)가 달라 가속 강도와 부작용(재발)이 다르게 나타남", {
+  s.addText("※ 세 약물 모두 '파골세포 활성화'라는 종착점은 같지만, 도달 경로(직접 자극 vs RANKL 매개 vs 면역조절)가 달라 가속 강도와 부작용(재발)이 다르게 나타남", {
     x: 0.6, y: 6.6, w: 12.1, h: 0.6, fontFace: BODY_FONT, fontSize: 12.5, italic: true, color: C.primary, isTextBox: true, margin: 0,
   });
   pageNum(s, 3);
@@ -125,7 +120,7 @@ function pageNum(s, n) {
 // ---------- Slide 4: Prior evidence ----------
 {
   const s = baseSlide();
-  titleBar(s, "선행연구 비교", "왜 결과가 엇갈리는가, 그리고 이 연구의 공백");
+  titleBar(s, "왜 결과가 엇갈리는가, 그리고 이 연구의 공백");
 
   const rows = [
     ["코르티코스테로이드", "Baofeng·Abtahi 등은 골흡수·파골세포형성 증가로 가속 보고 / 반대로 Yamane·Molina 등은 오히려 치아이동 감소 보고", C.muted],
@@ -140,7 +135,7 @@ function pageNum(s, n) {
     y += 1.4;
   });
 
-  s.addText("→ 저자들은 상반된 결과가 연구기간(1-2주 vs 8주)·용량·가해진 힘·표본수 차이에서 온다고 설명. 무엇보다 '재발(relapse)까지 세 약물을 나란히 비교한 연구는 이번이 최초' — 이것이 이 논문의 진짜 공백", {
+  s.addText("※ 상반된 결과는 연구기간(1~2주 vs 8주)·용량·힘·표본수 차이 때문(저자 설명) - 재발까지 세 약물을 비교한 연구는 이번이 최초, 진짜 공백은 여기 있음", {
     x: 0.6, y: 6.55, w: 12.1, h: 0.7, fontFace: BODY_FONT, fontSize: 12.5, italic: true, color: C.primary, isTextBox: true, margin: 0,
   });
   pageNum(s, 4);
@@ -150,13 +145,12 @@ function pageNum(s, n) {
 // ---------- Slide 5: Objective & Hypothesis ----------
 {
   const s = baseSlide(C.primary);
-  s.addText("목적 및 가설", { x: 0.6, y: 0.45, w: 10, h: 0.4, fontFace: BODY_FONT, fontSize: 13, bold: true, color: C.accent, charSpacing: 1, isTextBox: true, margin: 0 });
-  s.addText("연구 목적 및 가설", { x: 0.6, y: 0.82, w: 12, h: 0.9, fontFace: TITLE_FONT, fontSize: 28, bold: true, color: C.white, isTextBox: true, margin: 0 });
+  s.addText("연구 목적 및 가설", { x: 0.6, y: 0.55, w: 12, h: 0.9, fontFace: TITLE_FONT, fontSize: 28, bold: true, color: C.white, isTextBox: true, margin: 0 });
 
   s.addShape(pres.ShapeType.roundRect, { x: 0.6, y: 2.1, w: 12.1, h: 1.9, rectRadius: 0.1, fill: { color: C.white, transparency: 8 }, line: { type: "none" } });
   s.addText("연구 목적", { x: 1.0, y: 2.35, w: 4, h: 0.4, fontFace: BODY_FONT, fontSize: 14, bold: true, color: C.accent, isTextBox: true, margin: 0 });
   s.addText("랫드 모델에서 코르티코스테로이드·비타민D·PGE2의 국소(점막하) 주입이 교정 치아이동 가속 및 보정 후 재발에 미치는 영향을 비교한다. (귀무가설: 세 약물 간 가속기·재발기 효과에 차이가 없다)", {
-    x: 1.0, y: 2.8, w: 11.3, h: 1.1, fontFace: BODY_FONT, fontSize: 14.5, color: C.white, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
+    x: 1.0, y: 2.8, w: 11.3, h: 1.1, fontFace: BODY_FONT, fontSize: 14.5, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
   });
 
   s.addShape(pres.ShapeType.roundRect, { x: 0.6, y: 4.3, w: 12.1, h: 1.9, rectRadius: 0.1, fill: { color: C.accent }, line: { type: "none" } });
@@ -171,7 +165,7 @@ function pageNum(s, n) {
 // ---------- Slide 6: Methods ----------
 {
   const s = baseSlide();
-  titleBar(s, "연구방법", "5군 랫드 모델, 4주 가속 + 2주 보정 + 2주 재발");
+  titleBar(s, "5군 랫드 모델, 4주 가속 + 2주 보정 + 2주 재발");
 
   const cards = [
     ["설계", "무작위배정, 눈가림(2번 저자),\n랫드 105마리 → 5군(군당 21마리)"],
@@ -191,7 +185,7 @@ function pageNum(s, n) {
   s.addText("장치: 상악 절치 사이에 스테인리스 open-coil loop(25g 힘, tipping 이동) · 측정: 디지털캘리퍼(0.01mm)로 절치 간 거리 · 조직: PDL 폭, ALP·TRAP 염색(조골·파골세포 활성)", {
     x: 0.6, y: 5.55, w: 12.1, h: 0.85, fontFace: BODY_FONT, fontSize: 12.5, bold: true, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
   });
-  s.addText("일정: 가속기 4주 → 보정기 2주(장치 재부착, passive) → 재발기 2주(장치 완전 제거)", {
+  s.addText("- 일정: 가속기 4주 → 보정기 2주(장치 재부착, passive) → 재발기 2주(장치 완전 제거)", {
     x: 0.6, y: 6.5, w: 12.1, h: 0.5, fontFace: BODY_FONT, fontSize: 12.5, italic: true, color: C.primary, isTextBox: true, margin: 0,
   });
   pageNum(s, 6);
@@ -201,7 +195,7 @@ function pageNum(s, n) {
 // ---------- Slide 7: Results - acceleration ----------
 {
   const s = baseSlide();
-  titleBar(s, "결과 ①", "가속기(4주) — 치아이동량 비교");
+  titleBar(s, "가속기(4주) — 치아이동량 비교");
 
   const stats = [
     ["6.22 ± 0.90", "mm · 코르티코스테로이드", C.primary],
@@ -216,7 +210,7 @@ function pageNum(s, n) {
     s.addText(label, { x, y: 3.15, w: cw, h: 0.6, fontFace: BODY_FONT, fontSize: 13.5, bold: true, color: C.ink, align: "center", isTextBox: true, margin: 0 });
     x += cw + 0.2;
   });
-  s.addText("→ 대조군(장치만, 1.03±0.11mm) 대비 세 약물 모두 유의하게 가속(p<0.001). 가속 순위: 코르티코스테로이드 > 비타민D > PGE2 — 조직검사(ALP·TRAP)에서도 같은 순서로 파골세포 활성 확인", {
+  s.addText("※ 대조군(1.03±0.11mm) 대비 세 약물 모두 유의하게 가속(p<0.001) - 가속 순위: 코르티코스테로이드>비타민D>PGE2, 조직검사(ALP·TRAP)도 동일 순서로 확인됨", {
     x: 0.6, y: 4.15, w: 12.1, h: 0.55, fontFace: BODY_FONT, fontSize: 13, italic: true, color: C.primary, isTextBox: true, margin: 0,
   });
 
@@ -228,7 +222,7 @@ function pageNum(s, n) {
     x: 0.6, y: 4.9, w: 12.1, h: 1.3, fontFace: BODY_FONT, fontSize: 12, color: C.ink,
     border: { type: "solid", color: "D8E8E6", pt: 1 }, autoPage: false, valign: "middle", align: "center",
   });
-  s.addText("모든 군간 비교 p<0.001 (One-way ANOVA + Tukey)", { x: 0.6, y: 6.35, w: 12.1, h: 0.4, fontFace: BODY_FONT, fontSize: 11.5, color: C.muted, isTextBox: true, margin: 0 });
+  s.addText("※ 모든 군간 비교 p<0.001 (One-way ANOVA + Tukey)", { x: 0.6, y: 6.35, w: 12.1, h: 0.4, fontFace: BODY_FONT, fontSize: 11.5, color: C.muted, isTextBox: true, margin: 0 });
   pageNum(s, 7);
   s.addNotes("원문 Table I·II 기준. 보정기(2주) 동안은 모든 군에서 유의한 변화 없음(장치를 다시 수동적으로 부착해 이동량을 '고정') — 질문 나오면 이 부분도 설명 가능.");
 }
@@ -236,7 +230,7 @@ function pageNum(s, n) {
 // ---------- Slide 8: Results - relapse ----------
 {
   const s = baseSlide();
-  titleBar(s, "결과 ②", "재발기(2주) — 가속이 컸던 약물이 더 많이 되돌아간다");
+  titleBar(s, "재발기(2주) — 가속이 컸던 약물이 더 많이 되돌아간다");
 
   s.addShape(pres.ShapeType.roundRect, { x: 0.6, y: 2.05, w: 5.85, h: 4.3, rectRadius: 0.1, fill: { color: C.white }, line: { type: "none" }, shadow: { type: "outer", color: "000000", opacity: 0.1, blur: 5, offset: 2, angle: 90 } });
   s.addText("2주 재발 후 이동량 변화 (T0 대비)", { x: 0.95, y: 2.3, w: 5.2, h: 0.5, fontFace: TITLE_FONT, fontSize: 15, bold: true, color: C.ink, isTextBox: true, margin: 0 });
@@ -246,7 +240,7 @@ function pageNum(s, n) {
     { text: "비타민D  ", options: { bold: true, color: C.primary } }, { text: "-2.75 ± 0.15 mm\n", options: {} },
     { text: "PGE2  ", options: { bold: true, color: C.primary } }, { text: "-0.86 ± 0.23 mm  (양성대조와 통계적 동률 최소)", options: { bold: true } },
   ], { x: 0.95, y: 2.9, w: 5.2, h: 3.3, fontFace: BODY_FONT, fontSize: 13.5, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.5 });
-  s.addText("* 양성대조 vs PGE2 재발량 차이는 통계적으로 유의하지 않음 (p=0.605) — Appendix 참고", {
+  s.addText("※ 양성대조 vs PGE2 재발량 차이 - 통계적으로 유의하지 않음(p=0.605), Appendix 참고", {
     x: 0.95, y: 5.95, w: 5.2, h: 0.35, fontFace: BODY_FONT, fontSize: 10, italic: true, color: C.muted, isTextBox: true, margin: 0,
   });
 
@@ -264,7 +258,7 @@ function pageNum(s, n) {
 // ---------- Slide 9: Critical appraisal ----------
 {
   const s = baseSlide();
-  titleBar(s, "비평적 고찰", "비평적 고찰 (본인 의견 작성)");
+  titleBar(s, "비평적 고찰 (본인 의견 작성)");
 
   const cols = [
     ["강점", [
@@ -293,7 +287,7 @@ function pageNum(s, n) {
     s.addText(h, { x: x + 0.3, y: 2.35, w: cw - 0.6, h: 0.5, fontFace: TITLE_FONT, fontSize: 16, bold: true, color: C.primary, isTextBox: true, margin: 0 });
     s.addText(lines.map((t, i) => ({ text: t, options: { breakLine: i < lines.length - 1 } })),
       { x: x + 0.3, y: 2.95, w: cw - 0.6, h: 2.9, fontFace: BODY_FONT, fontSize: 11, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3 });
-    s.addText("(발표 시 본인 의견 추가)", { x: x + 0.3, y: 5.95, w: cw - 0.6, h: 0.3, fontFace: BODY_FONT, fontSize: 10.5, italic: true, color: C.muted, isTextBox: true, margin: 0 });
+    s.addText("- 발표 시 본인 의견 추가", { x: x + 0.3, y: 5.95, w: cw - 0.6, h: 0.3, fontFace: BODY_FONT, fontSize: 10.5, italic: true, color: C.muted, isTextBox: true, margin: 0 });
     for (let i = 0; i < 2; i++) {
       s.addShape(pres.ShapeType.line, { x: x + 0.3, y: 6.3 + i * 0.45, w: cw - 0.6, h: 0, line: { color: C.muted, width: 0.75, transparency: 40, dashType: "dash" } });
     }
@@ -307,12 +301,11 @@ function pageNum(s, n) {
 {
   const s = baseSlide(C.primary);
   s.addShape(pres.ShapeType.ellipse, { x: -3, y: -3, w: 8, h: 8, fill: { color: C.secondary, transparency: 60 }, line: { type: "none" } });
-  s.addText("핵심 결론", { x: 0.9, y: 1.6, w: 10, h: 0.4, fontFace: BODY_FONT, fontSize: 13, bold: true, color: C.accent, charSpacing: 1, isTextBox: true, margin: 0 });
   s.addText("치아이동을 가장 많이 가속하는 약물이,\n보정 후 가장 많이 되돌아가기도 한다.", {
-    x: 0.9, y: 2.15, w: 11.3, h: 2.0, fontFace: TITLE_FONT, fontSize: 27, bold: true, color: C.white, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
+    x: 0.9, y: 3.0, w: 11.3, h: 2.0, fontFace: TITLE_FONT, fontSize: 27, bold: true, color: C.white, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
   });
-  s.addText("코르티코스테로이드=최대가속·최대재발 / PGE2=최소가속·최소재발 / 비타민D=중간 — '빠른 이동'과 '안정적 결과' 사이의 트레이드오프를 보여준 첫 3약물 비교 연구", {
-    x: 0.9, y: 4.3, w: 11.3, h: 0.9, fontFace: BODY_FONT, fontSize: 14, italic: true, color: C.paper, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
+  s.addText("코르티코스테로이드=최대가속·최대재발 / PGE2=최소가속·최소재발 / 비타민D=중간 - '빠른 이동'과 '안정적 결과'의 트레이드오프를 보여준 첫 3약물 비교연구임", {
+    x: 0.9, y: 5.15, w: 11.3, h: 0.9, fontFace: BODY_FONT, fontSize: 14, italic: true, color: C.paper, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
   });
   pageNum(s, 10);
   s.addNotes("치과약리학1 20장(PGE2/COX)과 구강생화학(치아이동의 생화학) 두 과목 내용이 이 논문 하나로 이어진다는 점을 다시 언급하며 마무리. Q&A로 전환.");
@@ -359,7 +352,7 @@ function pageNum(s, n) {
     x: 0.6, y: 2.05, w: 12.1, h: 1.1, fontFace: BODY_FONT, fontSize: 11.5, color: C.ink,
     border: { type: "solid", color: "D8E8E6", pt: 1 }, autoPage: false, valign: "middle", align: "center",
   });
-  s.addText("같은 문자(a, a)는 그 두 군 사이에 통계적 유의차가 없다는 뜻 (Table III, Tukey post-hoc)", {
+  s.addText("※ 같은 문자(a, a) - 두 군간 통계적 유의차 없음 (Table III, Tukey post-hoc)", {
     x: 0.6, y: 3.25, w: 12.1, h: 0.4, fontFace: BODY_FONT, fontSize: 11, italic: true, color: C.muted, isTextBox: true, margin: 0,
   });
 
@@ -369,10 +362,10 @@ function pageNum(s, n) {
     { text: "양성대조 vs PGE2군의 2주 재발량 차이는 통계적으로 유의하지 않음 (p = 0.605, Table III). 반면 비타민D·코르티코스테로이드는 서로 및 위 두 군과 모두 유의하게 다름(p<0.001).", options: { color: C.ink } },
   ], { x: 0.95, y: 4.05, w: 11.4, h: 1.15, fontFace: BODY_FONT, fontSize: 13.5, isTextBox: true, margin: 0, lineSpacingMultiple: 1.35 });
 
-  s.addText("→ 통계적으로 유의미한 계층 구조:  {양성대조, PGE2} < 비타민D < 코르티코스테로이드  (재발 적은 순)", {
+  s.addText("※ 통계적으로 유의미한 계층 구조 :  {양성대조, PGE2} < 비타민D < 코르티코스테로이드  (재발 적은 순)", {
     x: 0.6, y: 5.55, w: 12.1, h: 0.5, fontFace: BODY_FONT, fontSize: 14, bold: true, color: C.primary, isTextBox: true, margin: 0,
   });
-  s.addText("원문 안에서도 서술이 갈린다 — Results 본문·Conclusions는 \"PGE2가 최소 재발\"이라 쓰고, Discussion \"Interpretation of findings\"는 \"대조군이 최소, 그 다음 PGE2\"라고 씀. 둘 다 raw mean 순위 서술과 통계적 유의성 서술을 섞어 쓴 단순화이며, 정확한 결론은 위 표와 같이 '대조군·PGE2군 통계적 동률'이다.", {
+  s.addText("- Results 본문·Conclusions: \"PGE2가 최소 재발\"이라 서술\n- Discussion 'Interpretation of findings': \"대조군이 최소, 그 다음 PGE2\"라 서술\n※ 둘 다 raw mean 순위와 통계적 유의성 서술을 혼용한 단순화 - 정확한 결론은 위 표대로 '대조군·PGE2군 통계적 동률'임", {
     x: 0.6, y: 6.15, w: 12.1, h: 1.1, fontFace: BODY_FONT, fontSize: 11.5, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
   });
   pageNum(s, 12);
