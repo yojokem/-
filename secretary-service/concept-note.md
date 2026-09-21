@@ -66,6 +66,17 @@
 
 ---
 
+## 인수인계 — 플러그인 설치 관련 (2026-09-21)
+
+사용자가 `/plugin marketplace add` + `/plugin install` (humanize-korean, superpowers, easy-hwp) 요청 → 이 세션에서는 불가능. 원인 조사 결과:
+
+- 이 세션(`Secretary service 구상`, `container_cc_version: 2.1.258`, 2026-09-02 생성)은 CLI 컨테이너가 오래돼서 `/plugin` 네이티브 명령 자체가 없음 → 텍스트로 그대로 전달됨.
+- 같은 계정의 더 최신 세션들(`container_cc_version 2.1.268~2.1.275`, `dankook-dentistry` 브랜치 계열)에서는 동일 명령이 실제로 성공함 — CLI 버전 차이가 원인으로 추정.
+- 이 세션에서 git clone으로 직접 흉내내려는 시도는 `permission_mode: auto`의 "Untrusted Code Integration" 자동 차단에 걸림 (default 모드였어도 이 경로 자체가 우회는 아님).
+- **결론/권장**: 플러그인 설치가 필요하면 새 세션을 열거나(최신 CLI 컨테이너 발급됨), 이미 성공한 세션에서 계속 진행. 이 세션은 이 용도에 부적합.
+
+---
+
 ## TODO (다음에 정하면 좋은 것)
 
 - [x] 캘린더 연동 — Google Calendar 커넥터로 해결됨 (2026-09-21). `frost.q@icloud.com` 캘린더 읽기·쓰기 가능
