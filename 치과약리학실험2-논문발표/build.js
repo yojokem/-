@@ -324,24 +324,7 @@ function pageNum(s, n) {
   s.addNotes("동물실험이라는 한계를 정면으로 짚어주는 게 신뢰도를 높임 — 숨기지 말고 먼저 말할 것. 코르티코스테로이드의 상반된 선행연구 결과는 발표 중 Q&A로 넘어가기 좋은 지점.");
 }
 
-// ---------- Slide 11: Take-home ----------
-{
-  const s = baseSlide(C.primary);
-  s.addShape(pres.ShapeType.ellipse, { x: -3, y: -3, w: 8, h: 8, fill: { color: C.secondary, transparency: 60 }, line: { type: "none" } });
-  s.addText("치아이동을 가장 많이 가속하는 약물이,\n보정 후 가장 많이 되돌아가기도 한다.", {
-    x: 0.9, y: 3.0, w: 11.3, h: 2.0, fontFace: TITLE_FONT, fontSize: 27, bold: true, color: C.white, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
-  });
-  s.addText("코르티코스테로이드=최대가속·최대재발 / PGE2=최소가속·최소재발(대조군과 통계적 동률) / 비타민D=중간 - '빠른 이동'과 '안정적 결과'의 트레이드오프를 보여준 첫 3약물 비교연구임", {
-    x: 0.9, y: 5.15, w: 11.3, h: 0.9, fontFace: BODY_FONT, fontSize: 14, italic: true, color: C.paper, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
-  });
-  s.addText("※ PGE2·대조군 relapse 차이 p=0.605(유의하지 않음) - Appendix A 참고", {
-    x: 0.9, y: 6.05, w: 11.3, h: 0.35, fontFace: BODY_FONT, fontSize: 10, color: C.paper, isTextBox: true, margin: 0,
-  });
-  pageNum(s, 11);
-  s.addNotes("치과약리학1 20장(PGE2/COX)과 구강생화학(치아이동의 생화학) 두 과목 내용이 이 논문 하나로 이어진다는 점을 다시 언급하며 마무리. Q&A로 전환.");
-}
-
-// ---------- Slide 12: References ----------
+// ---------- Slide 11: References ----------
 {
   const s = baseSlide();
   titleBar(s, "참고문헌");
@@ -364,8 +347,25 @@ function pageNum(s, n) {
   s.addText("※ 슬라이드 4(선행연구 비교)에서 이름으로 인용한 문헌만 수록. 전체 참고문헌(28건)은 원 논문 References 참고.", {
     x: 0.6, y: 7.1, w: 12.1, h: 0.35, fontFace: BODY_FONT, fontSize: 10, italic: true, color: C.muted, isTextBox: true, margin: 0,
   });
-  pageNum(s, 12);
+  pageNum(s, 11);
   s.addNotes("교수님이 '그 인용 어디서 났나' 물으면 이 슬라이드로 바로 답 가능. 전체 28개 문헌은 원 논문 References 섹션에 있음.");
+}
+
+// ---------- Slide 12: Take-home (결론 — Q&A 중에도 이 슬라이드가 마지막으로 남아있도록 References 뒤로 이동) ----------
+{
+  const s = baseSlide(C.primary);
+  s.addShape(pres.ShapeType.ellipse, { x: -3, y: -3, w: 8, h: 8, fill: { color: C.secondary, transparency: 60 }, line: { type: "none" } });
+  s.addText("치아이동을 가장 많이 가속하는 약물이,\n보정 후 가장 많이 되돌아가기도 한다.", {
+    x: 0.9, y: 3.0, w: 11.3, h: 2.0, fontFace: TITLE_FONT, fontSize: 27, bold: true, color: C.white, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
+  });
+  s.addText("코르티코스테로이드=최대가속·최대재발 / PGE2=최소가속·최소재발(대조군과 통계적 동률) / 비타민D=중간 - '빠른 이동'과 '안정적 결과'의 트레이드오프를 보여준 첫 3약물 비교연구임", {
+    x: 0.9, y: 5.15, w: 11.3, h: 0.9, fontFace: BODY_FONT, fontSize: 14, italic: true, color: C.paper, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
+  });
+  s.addText("※ PGE2·대조군 relapse 차이 p=0.605(유의하지 않음) - Appendix A 참고", {
+    x: 0.9, y: 6.05, w: 11.3, h: 0.35, fontFace: BODY_FONT, fontSize: 10, color: C.paper, isTextBox: true, margin: 0,
+  });
+  pageNum(s, 12);
+  s.addNotes("치과약리학1 20장(PGE2/COX)과 구강생화학(치아이동의 생화학) 두 과목 내용이 이 논문 하나로 이어진다는 점을 다시 언급하며 마무리. Q&A로 전환. 이 결론 슬라이드가 질의응답 동안 계속 화면에 남아있도록 References 뒤, Q&A 슬라이드 바로 앞으로 옮김.");
 }
 
 // ---------- Slide 13: Q&A ----------
