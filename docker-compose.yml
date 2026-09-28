@@ -1,0 +1,19 @@
+services:
+  localai:
+    # AMD 그래픽카드 가속을 지원하는 공식 Vulkan 이미지
+    image: localai/localai:latest-gpu-vulkan
+    container_name: localai-engine
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:8080"
+    devices:
+      - /dev/dxg:/dev/dxg
+    environment:
+      - MODELS_PATH=/models
+      - THREADS=6
+      - CONTEXT_SIZE=8192
+      - LOCALAI_DISABLE_GUESSING=true
+      - LD_LIBRARY_PATH=/usr/lib/wsl/lib
+    volumes:
+      - ./models:/models
+      - /usr/lib/wsl:/usr/lib/wsl:ro
