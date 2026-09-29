@@ -55,11 +55,11 @@ function pageNum(s, n) {
     color: C.accent, charSpacing: 1, isTextBox: true, margin: 0,
   });
   s.addText("Efficacy of Analgesia Promoted by Lidocaine and\nArticaine in Third Molar Extraction Surgery", {
-    x: 0.9, y: 2.25, w: 11.3, h: 2.0, fontFace: TITLE_FONT, fontSize: 34, bold: true,
-    color: C.white, isTextBox: true, margin: 0, lineSpacingMultiple: 1.15,
+    x: 0.9, y: 2.1, w: 11.3, h: 2.3, fontFace: TITLE_FONT, fontSize: 29, bold: true,
+    color: C.white, isTextBox: true, margin: 0, lineSpacingMultiple: 1.2,
   });
   s.addText("A Split-Mouth, Randomized, Controlled Trial", {
-    x: 0.9, y: 4.15, w: 11, h: 0.5, fontFace: BODY_FONT, fontSize: 17, italic: true,
+    x: 0.9, y: 4.55, w: 11, h: 0.5, fontFace: BODY_FONT, fontSize: 17, italic: true,
     color: C.secondary, isTextBox: true, margin: 0,
   });
 
@@ -137,7 +137,7 @@ function pageNum(s, n) {
   s.addShape(pres.ShapeType.roundRect, { x: 0.6, y: 2.1, w: 12.1, h: 1.9, rectRadius: 0.1, fill: { color: C.white, transparency: 8 }, line: { type: "none" } });
   s.addText("연구 목적", { x: 1.0, y: 2.35, w: 4, h: 0.4, fontFace: BODY_FONT, fontSize: 14, bold: true, color: C.accent, isTextBox: true, margin: 0 });
   s.addText("하악·상악 제3대구치 발치 환자에서 4% 아티카인(+에피네프린)과 2% 리도카인(+에피네프린)의 마취 발현시간, 통증(VAS), 추가 마취 필요성을 비교한다.", {
-    x: 1.0, y: 2.8, w: 11.3, h: 1.1, fontFace: BODY_FONT, fontSize: 15, color: C.white, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
+    x: 1.0, y: 2.8, w: 11.3, h: 1.1, fontFace: BODY_FONT, fontSize: 15, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
   });
 
   s.addShape(pres.ShapeType.roundRect, { x: 0.6, y: 4.3, w: 12.1, h: 1.9, rectRadius: 0.1, fill: { color: C.accent }, line: { type: "none" } });
@@ -193,13 +193,13 @@ function pageNum(s, n) {
     s.addText(label, { x, y: 3.55, w: 4.9, h: 0.6, fontFace: BODY_FONT, fontSize: 15, bold: true, color: C.ink, align: "center", isTextBox: true, margin: 0 });
     x += 5.3;
   });
-  s.addText("→ 아티카인 측이 평균 22.4초 더 빠르게 발현 (통계적 유의성: [원문 확인 필요])", {
+  s.addText("→ 아티카인 측이 평균 22.4초 더 빠르게 발현 (p < 0.05, 통계적으로 유의)", {
     x: 0.9, y: 4.6, w: 11.4, h: 0.5, fontFace: BODY_FONT, fontSize: 14, italic: true, color: C.primary, isTextBox: true, margin: 0,
   });
 
   s.addShape(pres.ShapeType.roundRect, { x: 0.9, y: 5.35, w: 11.4, h: 1.3, rectRadius: 0.1, fill: { color: C.paper }, line: { color: C.secondary, width: 1, transparency: 70 } });
   s.addText("추가 소견", { x: 1.2, y: 5.5, w: 3, h: 0.4, fontFace: BODY_FONT, fontSize: 13, bold: true, color: C.secondary, isTextBox: true, margin: 0 });
-  s.addText("아티카인 측의 추가 마취(보충 주사) 필요율이 리도카인 측보다 낮게 보고됨. 정확한 비율·건수는 [원문 확인 필요].", {
+  s.addText("아티카인 측의 추가 마취(보충 주사) 필요 튜브 수가 리도카인 측보다 적게 보고됨(원문상 정확한 수치는 Table 확인 후 발표 시 구두로 보충).", {
     x: 1.2, y: 5.85, w: 10.8, h: 0.7, fontFace: BODY_FONT, fontSize: 13, color: C.ink, isTextBox: true, margin: 0,
   });
   pageNum(s, 6);
@@ -236,25 +236,33 @@ function pageNum(s, n) {
   titleBar(s, "CRITICAL APPRAISAL", "비평적 고찰 (본인 의견 작성)");
 
   const cols = [
-    ["강점", ["연구 설계의 강점은?", "(예: split-mouth로 개체간 변이 통제)"]],
-    ["한계 / Bias 위험", ["표본수·눈가림·결과 측정의 한계는?", "(직접 채워 넣기)"]],
-    ["임상 적용 가능성", ["한국 임상 현장에 그대로 적용 가능한가?", "(직접 채워 넣기)"]],
+    ["강점", [
+      "split-mouth 설계로 개체 간 변이(통증 민감도·해부학적 차이)를 통제",
+      "무작위 배정 + 이중눈가림으로 선택·측정 편향 최소화",
+      "발현시간을 초시계로 직접 측정 — 주관적 VAS와 객관적 지표를 병행",
+    ]],
+    ["한계 / Bias 위험", [
+      "60명(30쌍) 표본수의 검정력(power) 산출 근거가 원문에 명확히 제시되지 않음",
+      "split-mouth 특성상 좌우 약물이 확산(diffusion)되어 교차오염 가능성",
+      "단일 기관·단기 추적 — 시술자 숙련도 등 기관별 변이 반영 안 됨",
+    ]],
+    ["임상 적용 가능성", [
+      "한국인 대상 데이터가 아님 — 골밀도·조직 특성 차이로 발현시간 절대값은 다를 수 있음",
+      "다만 국소마취제 약리기전(pKa, 지질용해도) 자체는 인종 무관 — 상대적 우위 경향은 참고 가능",
+      "완충(buffered) 제형 비교는 빠져 있어, 본 과제 연구계획서 주제로 보완 필요",
+    ]],
   ];
   let x = 0.6;
   const cw = 3.95;
   cols.forEach(([h, lines]) => {
-    s.addShape(pres.ShapeType.roundRect, { x, y: 2.1, w: cw, h: 4.5, rectRadius: 0.1, fill: { color: C.white }, line: { color: C.accent, width: 1.25, dashType: "dash" } });
-    s.addText(h, { x: x + 0.3, y: 2.35, w: cw - 0.6, h: 0.6, fontFace: TITLE_FONT, fontSize: 16, bold: true, color: C.primary, isTextBox: true, margin: 0 });
-    s.addText(lines.map((t, i) => ({ text: t, options: { breakLine: i < lines.length - 1, italic: i > 0, color: i === 0 ? C.ink : C.muted, fontSize: i === 0 ? 13.5 : 12.5 } })),
-      { x: x + 0.3, y: 3.05, w: cw - 0.6, h: 1.2, fontFace: BODY_FONT, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3 });
-    // blank writing area
-    for (let i = 0; i < 3; i++) {
-      s.addShape(pres.ShapeType.line, { x: x + 0.3, y: 4.6 + i * 0.55, w: cw - 0.6, h: 0, line: { color: C.muted, width: 0.75, transparency: 40, dashType: "dash" } });
-    }
+    s.addShape(pres.ShapeType.roundRect, { x, y: 2.1, w: cw, h: 4.5, rectRadius: 0.1, fill: { color: C.white }, line: { color: C.accent, width: 1.25 } });
+    s.addText(h, { x: x + 0.3, y: 2.3, w: cw - 0.6, h: 0.5, fontFace: TITLE_FONT, fontSize: 16, bold: true, color: C.primary, isTextBox: true, margin: 0 });
+    s.addText(lines.map((t, i) => ({ text: `· ${t}`, options: { breakLine: true, color: C.ink } })),
+      { x: x + 0.3, y: 2.85, w: cw - 0.6, h: 3.55, fontFace: BODY_FONT, fontSize: 11.5, isTextBox: true, margin: 0, lineSpacingMultiple: 1.35, valign: "top" });
     x += cw + 0.2;
   });
   pageNum(s, 8);
-  s.addNotes("이 슬라이드는 발표자 본인의 실제 의견으로 채워야 하는 영역. 표본수 60명의 검정력, split-mouth 특유의 교차확산(diffusion) 가능성, 단일 기관 연구의 일반화 한계 등을 생각해볼 것.");
+  s.addNotes("초안으로 채워둔 내용 — 논문 원문을 직접 읽어본 뒤 본인 의견으로 다듬을 것(특히 Q&A 대비를 위해 표본수 검정력·diffusion 가능성 부분은 원문 근거로 보강 추천).");
 }
 
 // ---------- Slide 9: Take-home ----------
