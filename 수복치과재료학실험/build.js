@@ -5,19 +5,19 @@ const SERIF_FONT = "Cambria";
 const BODY_FONT = "맑은 고딕";
 const PHOTO_DIR = __dirname + "/dental_photos/insert";
 
-// palette — deep teal + warm coral + warm paper (Figma 시안 기준)
+// palette — navy + sky blue, kept low-saturation/monochrome (no coral/warm accent)
 const C = {
-  primary: "114B3F",     // deep teal
-  primaryDark: "0B332A",
-  accent: "F2704A",      // warm coral
-  ink: "1C2321",
-  paper: "F5F6F5",       // near-white cool-gray background (light content slides) — cards sit on this in pure white
+  primary: "1B3A5C",     // deep navy
+  primaryDark: "10253D",
+  accent: "4A90C2",      // muted sky blue
+  ink: "1C2733",
+  paper: "F5F6F8",       // near-white cool-gray background (light content slides) — cards sit on this in pure white
   card: "FFFFFF",
-  muted: "6B7568",
-  line: "E4DED2",
-  headerFill: "114B3F",
+  muted: "5B6B7A",
+  line: "DCE3EA",
+  headerFill: "1B3A5C",
   headerText: "FFFFFF",
-  rowAlt: "F3EFE4",
+  rowAlt: "EDF2F7",
 };
 
 const pres = new pptxgen();
