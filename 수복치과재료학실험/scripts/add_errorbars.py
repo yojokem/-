@@ -5,7 +5,7 @@ option anywhere in its dist bundle). This script post-processes the
 generated .pptx and injects <c:errBars> (custom, symmetric SD) into the
 two bar charts on the "조별 데이터 종합 비교" slide (chart1/chart2) and the
 "전체 평균" series of the two comparison charts on "조별 경향성 & 우리 조(A2)
-위치" (chart3, Setting time) and "결과 해석 ② Film Thickness" (chart4) —
+위치" (chart3, Setting time) and "조별 경향성 & 우리 조(A2) 위치 — Film Thickness" (chart4, 슬라이드 13) —
 errBars go on the FIRST <c:cat> found in each file, which is the first
 series in the XML, i.e. "전체 평균"; "우리 조(A2)" is left without error
 bars by design since it's a single measurement, not an aggregate — per

@@ -1,8 +1,8 @@
 const pptxgen = require("pptxgenjs");
 
-const TITLE_FONT = "맑은 고딕";
+const TITLE_FONT = "Pretendard";
 const SERIF_FONT = "Cambria";
-const BODY_FONT = "맑은 고딕";
+const BODY_FONT = "Pretendard";
 const PHOTO_DIR = __dirname + "/dental_photos/insert";
 
 // palette — navy + sky blue, kept low-saturation/monochrome (no coral/warm accent)
@@ -188,24 +188,24 @@ function card(s, x, y, w, h) {
   const s = baseSlide();
   titleBar(s, "이론적 배경 · 01", "Dental Cement의 용도와 유지 인자");
 
-  sectionLabel(s, "Dental Cement의 용도", MX, 1.7, 5.8);
-  iconRows(s, MX, 2.15, 5.8, 0.82, [
+  sectionLabel(s, "Dental Cement의 용도", MX, 1.39, 5.8);
+  iconRows(s, MX, 1.84, 5.8, 0.82, [
     { icon: "🔗", text: "Luting agent — 인레이, 금관, 수복물, 교정장치 등의 합착·고정" },
     { icon: "🛡", text: "Cement base — 치수 보호 및 수복물 하부 구조(와동 이장재·베이스)" },
     { icon: "◆", text: "Restorative materials — 형성된 와동의 영구/임시 충전" },
     { icon: "✚", text: "수술용 드레싱재" },
   ], C.primary);
 
-  sectionLabel(s, "Cement의 유지(retention) 인자", MX + 6.1, 1.7, 5.8);
-  iconRows(s, MX + 6.1, 2.15, 5.8, 0.82, [
+  sectionLabel(s, "Cement의 유지(retention) 인자", MX + 6.1, 1.39, 5.8);
+  iconRows(s, MX + 6.1, 1.84, 5.8, 0.82, [
     { icon: "▾", text: "피막도(film thickness)가 작을수록 우수" },
     { icon: "★", text: "기계적 성질이 우수해야 함" },
     { icon: "≈", text: "경화 중 크기 변화(수축·팽창)가 작아야 함" },
     { icon: "⚗", text: "치질과 화학적 결합능이 있으면 우수" },
   ], C.accent);
 
-  sectionLabel(s, "Cement의 분류 (결합 기전 기준)", MX, 5.3, CW);
-  chipRow(s, MX, 5.78, CW, 1.55, 0.25, [
+  sectionLabel(s, "Cement의 분류 (결합 기전 기준)", MX, 4.99, CW);
+  chipRow(s, MX, 5.47, CW, 1.55, 0.25, [
     { label: "인산염계", sub: "phosphate-bonded\nZPC" },
     { label: "페놀염계", sub: "phenolate-bonded\nZOE, 수산화칼슘" },
     { label: "폴리카복실레이트계", sub: "polycarboxylate-bonded\nPC, GI(GIC)" },
@@ -221,14 +221,14 @@ function card(s, x, y, w, h) {
   titleBar(s, "이론적 배경 · 02", "오늘 다루는 시멘트: ZPC · PC · GIC · RMGI");
 
   const cols = [
-    ["ZPC", "(Zinc Phosphate Cement)", "Powder: ZnO, MgO\nSolution: 인산, 물", "간접 수복물 영구 합착, 교정용 밴드 접착,\n고강도 베이스, 임시수복재", "Glass slab 위, metal spatula", null, null],
+    ["ZPC", "(Zinc Phosphate Cement)", "Powder: ZnO, MgO\nSolution: 인산, 물", "간접 수복물 영구 합착, 교정용 밴드 접착,\n고강도 베이스, 임시수복재", "Glass slab 위, metal spatula", "photo_zpc_elite_cement.jpg", "ZPC 재료 — Elite Cement 100", 382 / 274],
     ["PC", "(Polycarboxylate)", "Powder: ZnO, MgO\nSolution: 폴리아크릴산, 물", "영구 합착용, 이장용, 베이스용,\n교정용 밴드 정착", "Paper pad 위, plastic spatula", "photo_09.jpg", "PC 재료 — Hy-Bond Carbo Plus"],
     ["GIC", "(Glass Ionomer)", "Powder: F-Al-실리케이트 글라스\nSolution: 폴리아크릴산 등, 물", "수복물 영구 합착, 유치 수복, 임시 수복,\n소와열구전색, 교정용 밴드 합착", "Paper pad 위, plastic spatula", "photo_10.jpg", "GIC 재료 — GC Fuji I"],
   ];
   let x = MX;
   const cw = 3.95;
-  const cardTop = 1.65, cardH = 4.6;
-  cols.forEach(([name, sub, comp, purpose, mix, photo, cap]) => {
+  const cardTop = 1.47, cardH = 4.6;
+  cols.forEach(([name, sub, comp, purpose, mix, photo, cap, photoRatio]) => {
     card(s, x, cardTop, cw, cardH);
     s.addShape(pres.ShapeType.roundRect, { x: x + 0.28, y: cardTop + 0.22, w: 0.7, h: 0.32, rectRadius: 0.06, fill: { color: C.primary }, line: { type: "none" } });
     s.addText(name, { x: x + 0.28, y: cardTop + 0.22, w: 0.7, h: 0.32, fontFace: SERIF_FONT, fontSize: 14, bold: true, color: C.card, align: "center", valign: "middle", isTextBox: true, margin: 0 });
@@ -239,11 +239,12 @@ function card(s, x, y, w, h) {
     if (photo) {
       const pw = 1.5;
       const px = x + (cw - pw) / 2;
-      const RATIO = 4 / 3;
-      const ph = pw / RATIO;
-      s.addImage({ path: `${PHOTO_DIR}/${photo}`, x: px, y: bodyY, w: pw, h: ph, sizing: { type: "cover", w: pw, h: ph } });
-      s.addShape(pres.ShapeType.rect, { x: px, y: bodyY, w: pw, h: ph, fill: { type: "none" }, line: { color: C.line, width: 1 } });
-      s.addText(cap, { x: x + 0.28, y: bodyY + ph + 0.03, w: cw - 0.56, h: 0.24, fontFace: BODY_FONT, fontSize: 10, italic: true, color: C.muted, isTextBox: true, margin: 0, align: "center" });
+      const slotH = pw / (4 / 3); // 캡션 위치는 모든 카드에서 동일하게 유지
+      const ph = pw / (photoRatio || 4 / 3);
+      const py = bodyY + (slotH - ph) / 2;
+      s.addImage({ path: `${PHOTO_DIR}/${photo}`, x: px, y: py, w: pw, h: ph, sizing: { type: "cover", w: pw, h: ph } });
+      s.addShape(pres.ShapeType.rect, { x: px, y: py, w: pw, h: ph, fill: { type: "none" }, line: { color: C.line, width: 1 } });
+      s.addText(cap, { x: x + 0.28, y: bodyY + slotH + 0.03, w: cw - 0.56, h: 0.24, fontFace: BODY_FONT, fontSize: 10, italic: true, color: C.muted, isTextBox: true, margin: 0, align: "center" });
       bodyY += ph + 0.03 + 0.24 + 0.1;
       bodyH = cardTop + cardH - 0.2 - bodyY;
       lineSpacing = 1.1;
@@ -259,15 +260,15 @@ function card(s, x, y, w, h) {
     x += cw + 0.2;
   });
 
-  s.addShape(pres.ShapeType.roundRect, { x: MX, y: 6.35, w: CW, h: 0.85, rectRadius: 0.08, fill: { color: C.card }, line: { type: "none" } });
+  s.addShape(pres.ShapeType.roundRect, { x: MX, y: 6.17, w: CW, h: 0.85, rectRadius: 0.08, fill: { color: C.card }, line: { type: "none" } });
   s.addText([
     { text: "냉각판 혼합법(frozen slab method): ", options: { bold: true, color: C.primary } },
     { text: "냉동고에 보관해 둔 유리판. 15% 높은 분액비 조건에서 사용 — 작업시간은 길고 경화 시간은 짧음, 필요 분말량은 보통보다 50~70% 많으나 결로는 분액비로 보상. 압축·인장강도·용해도는 상온 혼합과 큰 차이 없음.\n", options: {} },
     { text: "RMGI(Resin-Modified GI): ", options: { bold: true, color: C.primary } },
     { text: "GIC 개량형 — 1:1 auto-mixing tip으로 혼합, 광중합/화학중합 병행(dual-cure) 가능.", options: {} },
-  ], { x: MX + 0.25, y: 6.47, w: CW - 0.5, h: 0.65, fontFace: BODY_FONT, fontSize: 11, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.25 });
+  ], { x: MX + 0.25, y: 6.27, w: CW - 0.5, h: 0.65, fontFace: BODY_FONT, fontSize: 11, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.25 });
   pageNum(s, 4);
-  s.addNotes("[대본 1:30~2:30]\nZPC는 분말이 산화아연, 용액이 인산인 구조로, 간접 수복물을 영구 합착하거나 고강도 베이스로 씁니다. PC는 폴리아크릴산 용액을 쓰는 게 ZPC와 다른 점이고, GIC는 불소·알루미늄 실리케이트 글라스 분말을 씁니다.\n\n한 가지 짚고 넘어갈 부분이 냉각판 혼합법인데요, 냉동고에 보관해 둔 유리판 위에서 혼합하는 방식으로, 분액비를 15% 높게 쓸 때 함께 적용합니다. 작업시간은 늘리면서 경화시간은 줄이는 효과를 노린 방법입니다. RMGI는 GIC를 레진으로 개량한 재료로, 오늘은 1:1 auto-mixing tip으로 혼합했습니다.");
+  s.addNotes("[대본 1:30~2:30]\nZPC는 분말이 산화아연, 용액이 인산인 구조로, 간접 수복물을 영구 합착하거나 고강도 베이스로 씁니다. PC는 폴리아크릴산 용액을 쓰는 게 ZPC와 다른 점이고, GIC는 불소·알루미늄 실리케이트 글라스 분말을 씁니다.\n\n한 가지 짚고 넘어갈 부분이 냉각판 혼합법인데요, 냉동고에 보관해 둔 유리판 위에서 혼합하는 방식으로, 분액비를 15% 높게 쓸 때 함께 적용합니다. 작업시간은 늘리면서 경화 시간은 줄이는 효과를 노린 방법입니다. RMGI는 GIC를 레진으로 개량한 재료로, 오늘은 1:1 auto-mixing tip으로 혼합했습니다.");
 }
 
 // ---------- Slide 5: ISO 9917-1:2007 측정 규격 & 제조사 공식 값 ----------
@@ -304,16 +305,21 @@ function card(s, x, y, w, h) {
     rowH: [0.6, 0.65, 0.65, 0.6],
     fontSize: 9.5, valign: "middle",
   });
-  s.addText(
-    "* mixing 종료(합착) 기준  † mixing 시작 기준  ‡ 수복물 장착 이후 최종 마무리 가능 시점\n— 제품마다 기준 시점이 다르므로 직접 비교 시 유의.",
-    { x: MX + 6.55, y: 4.85, w: 5.1, h: 0.45, fontFace: BODY_FONT, fontSize: 9, italic: true, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.2 }
-  );
+  s.addText([
+    { text: "*", options: { color: "000000" } },
+    { text: " mixing 종료(합착) 기준  " },
+    { text: "†", options: { color: "000000" } },
+    { text: " mixing 시작 기준  " },
+    { text: "‡", options: { color: "000000" } },
+    { text: " 수복물 장착 이후 최종 마무리 가능 시점", options: { breakLine: true } },
+    { text: "— 제품마다 기준 시점이 다르므로 직접 비교 시 유의." },
+  ], { x: MX + 6.55, y: 4.85, w: 5.1, h: 0.45, fontFace: BODY_FONT, fontSize: 9, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.2 });
 
-  s.addShape(pres.ShapeType.roundRect, { x: MX, y: 6.05, w: CW, h: 0.95, rectRadius: 0.08, fill: { color: "EAF2EE" }, line: { type: "none" } });
+  s.addShape(pres.ShapeType.roundRect, { x: MX, y: 5.77, w: CW, h: 0.95, rectRadius: 0.08, fill: { color: "EAF2EE" }, line: { type: "none" } });
   s.addText([
     { text: "실습 조건 vs ISO 표준:  ", options: { bold: true, color: C.primary } },
     { text: "실습실은 ISO 표준 조건(37±1°C·습도 90%)이 아닌 상온(약 23°C, 습도 통제 없음)에서 진행 — 온도가 낮을수록 반응속도가 느려지므로, 실측 setting time이 제조사 공식 값보다 전반적으로 길게 나온 주요 원인으로 추정됨.", options: {} },
-  ], { x: MX + 0.3, y: 6.2, w: CW - 0.55, h: 0.7, fontFace: BODY_FONT, fontSize: 11, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.25 });
+  ], { x: MX + 0.3, y: 5.89, w: CW - 0.55, h: 0.7, fontFace: BODY_FONT, fontSize: 11, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.25 });
   pageNum(s, 5);
   s.addNotes("[대본 2:30~3:30]\n측정 기준이 된 ISO 9917-1:2007 규격을 보면, setting time은 400±5g 무게의 indentor로 압입해서 완전한 원형 압흔이 안 남는 시점까지의 시간입니다. film thickness는 유리판 사이에 시멘트를 끼우고 150N 하중을 10분간 가한 뒤 두께 변화를 재는 방식이고요.\n\n오른쪽 표는 제조사가 공식적으로 제시한 값인데, 저희 실측값과 비교해 보면 꽤 차이가 큽니다. 이유는 아래 박스에 정리했듯이, ISO 규격은 37도·습도 90%를 기준으로 하는데 저희 실습실은 상온 23도 정도였거든요. 온도가 낮으면 반응이 느려지니까, 이게 실측이 더 느리게 나온 주된 이유로 보입니다.\n\n[발표 팁] 출처: ISO 9917-1:2007 규격 원문(강의 자료 인용) 및 각 제품 설명서(Elite Cement 100 / Hy-Bond Carbo Plus / GC Fuji I, 첨부 설명서 원문 기준).");
 }
@@ -323,9 +329,9 @@ function card(s, x, y, w, h) {
   const s = baseSlide();
   titleBar(s, "실험 개요 · 01", "실험 목적 및 시행 항목");
 
-  sectionLabel(s, "9월 22일 A분반 실험", MX, 1.65, 6);
+  sectionLabel(s, "9월 22일 A분반 실험", MX, 1.47, 6);
   s.addText("오늘 실습은 ZPC를 중심으로 분액비(P/L ratio)를 정상·±15%·냉각판 네 조건으로 바꿔가며 mixing·setting time을 측정하고, 슬라이드글라스 사이에 시멘트를 끼워 피막도(film thickness)를 재는 두 갈래로 진행됨. 같은 틀로 PC·GIC·RMGI·ZOE도 함께 다룸.", {
-    x: MX, y: 2.0, w: CW, h: 0.6, fontFace: BODY_FONT, fontSize: 12, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.25,
+    x: MX, y: 1.82, w: CW, h: 0.6, fontFace: BODY_FONT, fontSize: 12, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.25,
   });
 
   const overview = [
@@ -336,26 +342,26 @@ function card(s, x, y, w, h) {
     ["RMGI", "1:1 auto-mixing tip", "setting time, film thickness"],
     ["ZOE", "적당량(구경·시연만)", "-"],
   ];
-  dataTable(s, overview, { x: MX, y: 2.65, w: CW, h: 1.9, colW: [2.4, 5.7, 3.9], rowH: [0.38, 0.305, 0.305, 0.305, 0.305, 0.305], fontSize: 12 });
+  dataTable(s, overview, { x: MX, y: 2.47, w: CW, h: 1.9, colW: [2.4, 5.7, 3.9], rowH: [0.38, 0.305, 0.305, 0.305, 0.305, 0.305], fontSize: 12 });
 
-  sectionLabel(s, "실험 목적 (수업 슬라이드 원문)", MX, 4.75, CW);
+  sectionLabel(s, "실험 목적 (수업 슬라이드 원문)", MX, 4.57, CW);
   bulletBlock(s, [
     "시멘트의 혼합 방법의 차이",
     "시멘트 혼합 시 점도의 차이",
     "분액비의 차이가 경화 시간에 미치는 영향",
-  ], { x: MX, y: 5.1, w: 5.9, h: 1.05, fontSize: 12 });
+  ], { x: MX, y: 4.92, w: 5.9, h: 1.05, fontSize: 12 });
   bulletBlock(s, [
     "냉각판 사용의 의미",
     "피막도 측정오류의 이유",
     "각 시멘트 혼합물의 특징",
-  ], { x: MX + 6.1, y: 5.1, w: 5.8, h: 1.05, fontSize: 12 });
+  ], { x: MX + 6.1, y: 4.92, w: 5.8, h: 1.05, fontSize: 12 });
 
-  sectionLabel(s, "측정 원리", MX, 6.3, 6);
+  sectionLabel(s, "측정 원리", MX, 6.12, 6);
   bulletBlock(s, [
     "ISO 9917-1:2007 규격의 indentor(400±5g, 끝 지름 1±0.1mm)로 압입 — 일정 간격(초기 30초 → 임박 시 10초)으로 눌러 완전한 원형 압흔이 안 남는 시점을 setting time으로 기록",
-  ], { x: MX, y: 6.65, w: CW, h: 0.55, fontSize: 11.5 });
+  ], { x: MX, y: 6.47, w: CW, h: 0.55, fontSize: 11.5 });
   pageNum(s, 6);
-  s.addNotes("[대본 3:30~4:15]\n오늘 실습은 ZPC를 중심으로 분액비를 정상, 15% 높게, 15% 낮게, 그리고 냉각판까지 네 조건으로 바꿔가며 setting time을 재고, 같은 재료로 film thickness도 측정했습니다. PC·GIC·RMGI는 정상 조건에서 setting time만 쟀고, ZOE는 시연만 진행했습니다.\n\n수업에서 제시된 실험 목적은 혼합 방법·점도 차이, 분액비가 경화시간에 미치는 영향, 냉각판의 의미, 그리고 재료별 특성을 확인하는 것이었습니다.\n\n[발표 팁] 출처: Notion 수업일지 9.22 (수복치과재료학실험) + 강의 슬라이드 「Aims of experiment」 원문. 수업 초반 하이브리드 콤포짓 Q&A는 지난 주 복습 성격이라 요약에서 제외, 오늘의 재료실험 파트만 정리함.");
+  s.addNotes("[대본 3:30~4:15]\n오늘 실습은 ZPC를 중심으로 분액비를 정상, 15% 높게, 15% 낮게, 그리고 냉각판까지 네 조건으로 바꿔가며 setting time을 재고, 같은 재료로 film thickness도 측정했습니다. PC·GIC·RMGI는 정상 조건에서 setting time만 쟀고, ZOE는 시연만 진행했습니다.\n\n수업에서 제시된 실험 목적은 혼합 방법·점도 차이, 분액비가 경화 시간에 미치는 영향, 냉각판의 의미, 그리고 재료별 특성을 확인하는 것이었습니다.\n\n[발표 팁] 출처: Notion 수업일지 9.22 (수복치과재료학실험) + 강의 슬라이드 「Aims of experiment」 원문. 수업 초반 하이브리드 콤포짓 Q&A는 지난 주 복습 성격이라 요약에서 제외, 오늘의 재료실험 파트만 정리함.");
 }
 
 // ---------- Slide 7: 실험 재료 ----------
@@ -390,8 +396,11 @@ function card(s, x, y, w, h) {
     "하중장치(150N, load compressor)",
   ], { x: x + 0.32, y: 2.3, w: cw - 0.64, h: 1.75, fontSize: 12.5 });
   {
-    const pw = 2.9;
-    photoCard(s, `${PHOTO_DIR}/photo_05.jpg`, x + (cw - pw) / 2, 4.15, { w: pw }, "피막도 측정 장치 (하중장치, 조립 전)");
+    const pw = 2.267, ph = 2.175; // 직접 크롭한 사진(photo_film_apparatus.jpg) 크기
+    const px = x + (cw - pw) / 2;
+    s.addImage({ path: `${PHOTO_DIR}/photo_film_apparatus.jpg`, x: px, y: 4.15, w: pw, h: ph, sizing: { type: "cover", w: pw, h: ph } });
+    s.addShape(pres.ShapeType.rect, { x: px, y: 4.15, w: pw, h: ph, fill: { type: "none" }, line: { color: C.line, width: 1 } });
+    s.addText("피막도 측정 장치 (하중장치, 조립 전)", { x: x + (cw - 2.9) / 2, y: 4.15 + ph + 0.03, w: 2.9, h: 0.46, fontFace: BODY_FONT, fontSize: 11, italic: true, color: C.muted, isTextBox: true, margin: 0, align: "center", valign: "top", lineSpacingMultiple: 1.1 });
   }
   pageNum(s, 7);
   s.addNotes("[대본 4:15~4:45]\n재료는 이렇게 구성했습니다. setting time 쪽은 시멘트 다섯 종류와 유리판, 스파툴라, 금속 몰드, indentor를 썼고, film thickness 쪽은 슬라이드글라스 두 장과 마이크로미터, 그리고 150N 하중을 가하는 장치를 사용했습니다.");
@@ -433,23 +442,30 @@ function card(s, x, y, w, h) {
   const s = baseSlide();
   titleBar(s, "실험 개요 · 04", "실험 방법 ② — Setting time / Film thickness 측정");
 
-  sectionLabel(s, "Setting time 측정 절차", MX, 1.8, 8.3);
-  s.addText("검정 사각 금속 주형을 Al foil로 덮은 metal block에 올리고 mix 완료 재료를 채움 → 표준 혼합 시간 종료 후부터 indentor를 수직으로 5초간 압입, 30초 간격 반복 → 예상 경화 시점 30초 전부터 10초 간격으로 전환 → 완전한 원형 압흔이 안 남는 시점을 기록", {
-    x: MX, y: 2.25, w: 8.3, h: 2.0, fontFace: BODY_FONT, fontSize: 15, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.45,
+  sectionLabel(s, "Setting time 측정 절차", MX, 1.71, 8.3);
+  s.addText("검정 사각 금속 주형을 Al foil로 덮은 metal block에 올리고 mix 완료 재료를 채움\n→ 표준 혼합 시간 종료 후부터 indentor를 수직으로 5초간 압입, 30초 간격 반복\n→ 예상 경화 시점 30초 전부터 10초 간격으로 전환\n→ 완전한 원형 압흔이 안 남는 시점을 기록", {
+    x: MX, y: 2.16, w: 8.3, h: 2.0, fontFace: BODY_FONT, fontSize: 15, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.45,
   });
 
-  sectionLabel(s, "Film thickness 측정 절차", MX, 4.5, 8.3);
-  s.addText("유리판 2매를 포개어 접촉 상태 두께 선측정(A) → 혼합 종료 cement 0.10mL을 유리판 사이 중앙에 위치 → 작업 시간 10초 전부터 하중 장치로 150N을 1분간 적용 → 재측정(B) → 피막도 = B − A", {
-    x: MX, y: 4.95, w: 8.3, h: 1.7, fontFace: BODY_FONT, fontSize: 15, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.45,
-  });
+  sectionLabel(s, "Film thickness 측정 절차", MX, 4.41, 8.3);
+  s.addText([
+    { text: "유리판 2매를 포개어 접촉 상태 두께 선측정(A)", options: { breakLine: true } },
+    { text: "→ 혼합 종료 cement 0.10mL을 유리판 사이 중앙에 위치", options: { breakLine: true } },
+    { text: "→ 작업 시간 10초 전부터 하중 장치로 " },
+    { text: "150N", options: { bold: true } },
+    { text: "을 " },
+    { text: "1분", options: { bold: true } },
+    { text: "간 적용", options: { breakLine: true } },
+    { text: "→ 재측정(B) → 피막도 = B − A" },
+  ], { x: MX, y: 4.86, w: 8.3, h: 1.7, fontFace: BODY_FONT, fontSize: 15, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.45 });
 
-  photoCard(s, `${PHOTO_DIR}/photo_02.jpg`, MX + 8.7, 1.8, { w: 2.53 }, "Scene applying cement for measuring film thickness");
+  photoCard(s, `${PHOTO_DIR}/photo_02.jpg`, MX + 8.7, 1.71, { w: 2.53 }, "Scene applying cement for measuring film thickness");
 
   s.addText("※ ISO 9917-1 규격 문서는 시멘트량을 0.1g으로 표기하나, 실제 강의 프로토콜은 0.10mL 기준 — 실질량은 유사한 것으로 간주한다.", {
-    x: MX, y: 6.85, w: CW, h: 0.4, fontFace: BODY_FONT, fontSize: 10.5, italic: true, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.2,
+    x: MX, y: 6.6, w: CW, h: 0.4, fontFace: BODY_FONT, fontSize: 10.5, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.2,
   });
   pageNum(s, 9);
-  s.addNotes("[대본 5:20~6:00]\n측정은, setting time의 경우 혼합 종료 90초 뒤부터 indentor로 30초 간격으로 눌러보다가 경화가 임박하면 10초 간격으로 좁혀서 완전한 원형 압흔이 안 남는 시점을 기록했고, film thickness는 유리판 두께를 먼저 재고(A) 시멘트를 끼운 뒤 150N을 10분간 가한 상태에서 다시 재서(B) 그 차이를 피막도로 계산했습니다.");
+  s.addNotes("[대본 5:20~6:00]\n측정은, setting time의 경우 표준 혼합 시간이 끝난 뒤부터 indentor로 30초 간격으로 눌러보다가 경화가 임박하면 10초 간격으로 좁혀서 완전한 원형 압흔이 안 남는 시점을 기록했고, film thickness는 유리판 두께를 먼저 재고(A) 시멘트를 끼운 뒤 작업 시간 10초 전부터 150N을 1분간 가한 상태에서 다시 재서(B) 그 차이를 피막도로 계산했습니다.");
 }
 
 // ---------- Slide 10: 실험 결과 ----------
@@ -468,18 +484,18 @@ function card(s, x, y, w, h) {
     ["ZOE", "적당량(시연만)", "-", "-", "-", "-", "-", "-"],
   ];
   dataTable(s, table, {
-    x: MX, y: 1.85, w: CW, h: 3.85,
-    colW: [0.9, 1.9, 1.15, 2.05, 1.35, 1.5, 1.2, 1.6],
+    x: MX, y: 1.67, w: CW, h: 3.85,
+    colW: [0.9, 1.686, 1.117, 2.013, 1.634, 1.5, 1.2, 1.6],
     rowH: [0.55, 0.365, 0.365, 0.365, 0.365, 0.365, 0.365, 0.365, 0.365],
     fontSize: 11.5, altRow: true,
   });
 
   s.addText("※ Setting time(경화 시간) = Total time − Mixing time.\nZPC, PC, GIC는 표준 혼합 시간으로 간주. RMGI는 auto-mixing으로 0으로 간주.", {
-    x: MX, y: 5.95, w: CW, h: 0.5, fontFace: BODY_FONT, fontSize: 11, italic: true, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.2,
+    x: MX, y: 5.21, w: CW, h: 0.4, fontFace: BODY_FONT, fontSize: 11, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.2,
   });
-  s.addShape(pres.ShapeType.roundRect, { x: MX, y: 6.5, w: CW, h: 0.55, rectRadius: 0.08, fill: { color: C.card }, line: { type: "none" } });
+  s.addShape(pres.ShapeType.roundRect, { x: MX, y: 6.03, w: CW, h: 0.55, rectRadius: 0.08, fill: { color: C.card }, line: { type: "none" } });
   s.addText("Setting time 빠른 순:  RMGI(6:24) < GIC(8:43) < PC(9:41) < ZPC 냉각판(12:03) < ZPC 15%↑(12:45) < ZPC 정상(16:20) < ZPC 15%↓(16:46)", {
-    x: MX + 0.25, y: 6.5, w: CW - 0.5, h: 0.55, fontFace: BODY_FONT, fontSize: 12, bold: true, color: C.primary, valign: "middle", isTextBox: true, margin: 0,
+    x: MX + 0.25, y: 6.03, w: CW - 0.5, h: 0.55, fontFace: BODY_FONT, fontSize: 12, bold: true, color: C.primary, valign: "middle", isTextBox: true, margin: 0,
   });
   pageNum(s, 10);
   s.addNotes("[대본 6:00~7:00]\n저희 조 실측 결과입니다. setting time이 빠른 순으로 보면 RMGI가 6분 24초로 가장 빨랐고, 그다음이 GIC, PC 순이었습니다. ZPC 네 조건 중에서는 15% 높음이 가장 빨랐고, 15% 낮음이 가장 느렸습니다.");
@@ -488,7 +504,7 @@ function card(s, x, y, w, h) {
 // ---------- Slide 11: 조별 데이터 종합 비교 ----------
 {
   const s = baseSlide();
-  titleBar(s, "실험 결과 · 02", "조별 데이터 종합 비교 — A분반");
+  titleBar(s, "실험 결과 · 02", "조별 데이터 종합 비교 —A분반");
 
   // 평균·SD는 Results.xlsx(9/29, A1~A6 6개조 원자료)를 분 단위로 정규화해 직접 재계산.
   // SD는 build.js에서 직접 그리지 않고, node build.js 이후 scripts/add_errorbars.py가
@@ -552,23 +568,51 @@ function card(s, x, y, w, h) {
   s.addNotes("[대본 7:00~8:00]\n이건 저희 조만이 아니라 A반 6개 조 데이터를 다 모아서 평균 낸 결과입니다. setting time 그래프를 보면 ZPC는 분액비가 높을수록(15%↑) 빨리 굳고 낮을수록(15%↓) 느리게 굳는 경향이 반 전체 평균에서도 비슷하게 나타났습니다. 막대 위에 그려진 세로선은 표준편차, 그러니까 조별로 값이 얼마나 흩어져 있는지를 보여주는 오차 막대입니다.\n\nfilm thickness 그래프를 보면 ZPC 세 조건 모두 오차 막대가 유독 긴 걸 볼 수 있는데요, 한 조(A3)의 값이 다른 조보다 3~10배 높게 나온 영향입니다. 같은 조의 냉각판 조건 값은 정상 범위였던 걸 보면 측정이나 단위 표기 과정에서 오류가 있었을 가능성이 있어 보이고, 이 부분은 참고용으로만 봐주시면 좋겠습니다.\n\n[발표 팁] 출처: Results.xlsx(반 전체 취합 데이터, 6개 조 A1~A6, 9/29 최종본). Notion 9.22 수업일지의 '보고서: 전체조 데이터 평균/비교' 지시에 따라 구성. 오차 막대(에러바)는 표준편차 1개 폭.");
 }
 
-// ---------- Slide 12: 조별 경향성 & 우리 조(A2) 위치 ----------
-{
+// ---------- Slide 12 · 13: 조별 경향성 & 우리 조(A2) 위치 (Setting time / Film thickness) ----------
+// 두 슬라이드는 같은 레이아웃 — 왼쪽: 해석 텍스트, 오른쪽: 비교 그래프 + 표. 오차 막대는
+// node build.js 이후 scripts/add_errorbars.py가 "전체 평균" 시리즈에만 주입함
+// (chart3 = 슬라이드 12 Setting time → TREND_SD, chart4 = 슬라이드 13 Film thickness → FILM_TREND_SD).
+function trendSlide(o) {
   const s = baseSlide();
-  titleBar(s, "실험 결과 · 03", "조별 경향성 & 우리 조(A2) 위치");
+  titleBar(s, o.kicker, o.title);
+  const LW = 5.78;
+  sectionLabel(s, o.sec1, MX, 1.6, LW);
+  bulletBlock(s, o.bullets1, { x: MX, y: 1.98, w: LW, h: 1.25, fontSize: 12.5 });
+  sectionLabel(s, o.sec2, MX, 4.19, LW);
+  bulletBlock(s, o.bullets2, { x: MX, y: 4.57, w: LW, h: 1.1, fontSize: 12.5 });
 
-  sectionLabel(s, "전체 조 경향성 (Setting time, 6개 조 평균)", MX, 1.55, CW);
-  bulletBlock(s, [
-    "분액비(P/L ratio)가 높을수록(15%↑) 평균 7:40으로 가장 빠르고, 낮을수록(15%↓) 13:13으로 가장 느림 — high < normal < low 순으로 느려질 것이라는 이론적 예측이 반 전체 데이터에서도 일관되게 확인됨",
-    "재료 간 경향도 일관됨: GIC(6:05)·RMGI(6:24)가 가장 빠르고, ZPC 계열이 전반적으로 가장 느림 — 재료 자체의 반응 속도 차이가 조건 차이보다 더 크게 작용",
-  ], { x: MX, y: 1.9, w: CW, h: 1.05, fontSize: 12, lineSpacingMultiple: 1.3 });
+  dataTable(s, o.table, {
+    x: 6.67, y: 4.455, w: 5.965, colW: [1.75, 1.405, 1.405, 1.405],
+    rowH: [0.32, ...Array(o.table.length - 1).fill(0.28)], fontSize: 11,
+  });
 
-  sectionLabel(s, "우리 조(A2)는 전체 평균 대비 어디에 위치하는가", MX, 3.05, CW);
-  bulletBlock(s, [
-    "6개 조건 중 5개에서 전체 평균보다 느리게 경화 — 유일하게 PC 정상 조건만 평균과 거의 같음(평균 대비 −0.2 SD)",
-    "편차가 가장 큰 조건은 ZPC 15%↑(+1.9 SD)와 GIC(+1.7 SD) — 우리 조가 indentor 판정 기준을 다른 조보다 보수적으로(늦게 경화로 판단) 적용했거나, 혼합 속도가 상대적으로 느렸을 가능성을 시사",
-  ], { x: MX, y: 3.4, w: CW, h: 1.0, fontSize: 12, lineSpacingMultiple: 1.3 });
+  card(s, 6.57, 1.58, 6.36, 2.74);
+  s.addChart(pres.ChartType.bar, [
+    { name: "전체 평균", labels: o.labels, values: o.mean },
+    { name: "우리 조(A2)", labels: o.labels, values: o.a2 },
+  ], {
+    x: 6.68, y: 1.7, w: 6.14, h: 2.26,
+    barDir: "col", barGrouping: "clustered", barGapWidthPct: 35,
+    showTitle: true, title: o.chartTitle, titleFontSize: 12, titleColor: C.primary, titleFontFace: TITLE_FONT,
+    showLegend: true, legendPos: "t", legendFontSize: 9, legendColor: C.muted,
+    chartColors: [C.primary, C.accent],
+    showValue: true, dataLabelFormatCode: o.labelFmt, dataLabelPosition: "outEnd", dataLabelFontSize: o.labelSize, dataLabelColor: C.ink,
+    catAxisLabelFontSize: 9, catAxisLabelColor: C.muted, catAxisLabelFontFace: BODY_FONT,
+    valAxisLabelFontSize: 9, valAxisLabelColor: C.muted,
+    valGridLine: { color: C.line, size: 0.75 }, catGridLine: { style: "none" },
+    valAxisMinVal: 0, valAxisMaxVal: o.valMax,
+  });
+  s.addText(
+    "※ 오차 막대는 전체 평균의 표준편차(SD) 1개. " +
+    o.table.slice(1).map((r) => `${r[0]} ${r[1].replace("(mm)", "")}→${r[2]}(${r[3]})`).join("  ·  "),
+    { x: 6.68, y: 3.89, w: 6.14, h: 0.45, fontFace: BODY_FONT, fontSize: 7.5, italic: true, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.15 }
+  );
+  pageNum(s, o.pageNo);
+  s.addNotes(o.notes);
+}
 
+// 슬라이드 12 — Setting time
+{
   const cmpTable = [
     ["조건", "전체 평균", "우리 조(A2)", "차이(SD 배수)"],
     ["ZPC 15%↓", "13:13", "16:46", "+0.9 SD"],
@@ -578,65 +622,89 @@ function card(s, x, y, w, h) {
     ["PC 정상", "10:17", "9:41", "−0.2 SD"],
     ["GIC 정상", "6:05", "8:43", "+1.7 SD"],
   ];
-
-  // 비교 그래프 — 슬라이드 11과 같은 형식(막대+오차막대). "전체 평균" 시리즈에만
-  // scripts/add_errorbars.py가 SD를 주입함(TREND_SD, chart3.xml) — 순서를 cmpTable과 맞출 것.
-  const trendLabels = ["ZPC\n15%↓", "ZPC\n정상", "ZPC\n15%↑", "ZPC\n15%↑+냉각판", "PC\n정상", "GIC\n정상"];
-  const trendOverallMean = [13.21, 11.22, 7.67, 10.12, 10.29, 6.08]; // = settingAvgMin[0..5] (슬라이드 11)
-  const trendA2 = [16.77, 16.33, 12.75, 12.05, 9.68, 8.72]; // cmpTable "우리 조(A2)" 열을 분 단위로 환산
-
-  card(s, MX, 4.5, CW, 2.45);
-  s.addChart(pres.ChartType.bar, [
-    { name: "전체 평균", labels: trendLabels, values: trendOverallMean },
-    { name: "우리 조(A2)", labels: trendLabels, values: trendA2 },
-  ], {
-    x: MX + 0.2, y: 4.62, w: CW - 0.4, h: 1.75,
-    barDir: "col", barGrouping: "clustered", barGapWidthPct: 35,
-    showTitle: true, title: "Setting time — 전체 평균 vs 우리 조(A2)", titleFontSize: 12, titleColor: C.primary, titleFontFace: TITLE_FONT,
-    showLegend: true, legendPos: "t", legendFontSize: 9, legendColor: C.muted,
-    chartColors: [C.primary, C.accent],
-    showValue: true, dataLabelFormatCode: "0.0", dataLabelPosition: "outEnd", dataLabelFontSize: 8.5, dataLabelColor: C.ink,
-    catAxisLabelFontSize: 9, catAxisLabelColor: C.muted, catAxisLabelFontFace: BODY_FONT,
-    valAxisLabelFontSize: 9, valAxisLabelColor: C.muted,
-    valGridLine: { color: C.line, size: 0.75 }, catGridLine: { style: "none" },
-    valAxisMinVal: 0, valAxisMaxVal: 20,
+  trendSlide({
+    kicker: "실험 결과 · 03", title: "조별 경향성 & 우리 조(A2) 위치",
+    sec1: "전체 조 경향성 (Setting time, 6개 조 평균)",
+    bullets1: [
+      "분액비(P/L ratio)가 높을수록(15%↑) 평균 7:40으로 가장 빠르고, 낮을수록(15%↓) 13:13으로 가장 느림 — high < normal < low 순으로 느려질 것이라는 이론적 예측이 반 전체 데이터에서도 일관되게 확인됨",
+      "재료 간 경향도 일관됨: GIC(6:05)·RMGI(6:24)가 가장 빠르고, ZPC 계열이 전반적으로 가장 느림 — 재료 자체의 반응 속도 차이가 조건 차이보다 더 크게 작용",
+    ],
+    sec2: "우리 조(A2)는 전체 평균 대비 어디에 위치하는가",
+    bullets2: [
+      "6개 조건 중 5개에서 전체 평균보다 느리게 경화 — 유일하게 PC 정상 조건만 평균과 거의 같음(평균 대비 −0.2 SD)",
+      "편차가 가장 큰 조건은 ZPC 15%↑(+1.9 SD)와 GIC(+1.7 SD) — 우리 조가 indentor 판정 기준을 다른 조보다 보수적으로(늦게 경화로 판단) 적용했거나, 혼합 속도가 상대적으로 느렸을 가능성을 시사",
+    ],
+    table: cmpTable,
+    chartTitle: "Setting time — 전체 평균 vs 우리 조(A2)",
+    labels: ["ZPC\n15%↓", "ZPC\n정상", "ZPC\n15%↑", "ZPC\n15%↑+냉각판", "PC\n정상", "GIC\n정상"],
+    mean: [13.21, 11.22, 7.67, 10.12, 10.29, 6.08], // = 슬라이드 11의 settingAvgMin[0..5]
+    a2: [16.77, 16.33, 12.75, 12.05, 9.68, 8.72],   // cmpTable "우리 조(A2)" 열을 분 단위로 환산
+    labelFmt: "0.0", labelSize: 8.5, valMax: 20,
+    pageNo: 12,
+    notes: "[대본 8:00~8:50]\n이번엔 저희 조가 전체 평균과 비교해서 어디쯤 있는지를 짚어보겠습니다. 저희 조는 6개 조건 중 5개에서 전체 평균보다 느리게 경화됐습니다. 유일하게 PC 정상 조건만 평균과 거의 비슷했고요.\n\n특히 ZPC 15% 높음 조건과 GIC에서 편차가 가장 컸는데, 표준편차 기준으로 각각 1.9배, 1.7배 정도 평균에서 벗어나 있습니다. 저희가 indentor로 경화 여부를 판단할 때 다른 조보다 좀 더 보수적으로, 그러니까 조금 더 늦게 \"다 굳었다\"고 판단했거나, 혼합 속도 자체가 상대적으로 느렸을 가능성이 있다고 봅니다.\n\n[발표 팁] SD 배수 = (A2 값 − 전체 평균) ÷ 표준편차. 일반적으로 ±1 SD 이내면 정상 범위, 그 밖이면 눈에 띄는 편차로 해석. ZPC 15%↑·GIC 두 조건에서 A2가 유독 느린 이유는 Q&A에서 나올 수 있으니, 혼합 균질도·indentor 판정 시점 등 슬라이드 14(결과 해석 ①)의 오차 요인과 연결지어 답변할 것.",
   });
-  s.addText(
-    "※ 오차 막대는 전체 평균의 표준편차(SD) 1개. " +
-    cmpTable.slice(1).map((r) => `${r[0]} ${r[1]}→${r[2]}(${r[3]})`).join("  ·  "),
-    { x: MX + 0.2, y: 6.44, w: CW - 0.4, h: 0.45, fontFace: BODY_FONT, fontSize: 7.5, italic: true, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.15 }
-  );
-  pageNum(s, 12);
-  s.addNotes("[대본 8:00~8:50]\n이번엔 저희 조가 전체 평균과 비교해서 어디쯤 있는지를 짚어보겠습니다. 저희 조는 6개 조건 중 5개에서 전체 평균보다 느리게 경화됐습니다. 유일하게 PC 정상 조건만 평균과 거의 비슷했고요.\n\n특히 ZPC 15% 높음 조건과 GIC에서 편차가 가장 컸는데, 표준편차 기준으로 각각 1.9배, 1.7배 정도 평균에서 벗어나 있습니다. 저희가 indentor로 경화 여부를 판단할 때 다른 조보다 좀 더 보수적으로, 그러니까 조금 더 늦게 \"다 굳었다\"고 판단했거나, 혼합 속도 자체가 상대적으로 느렸을 가능성이 있다고 봅니다.\n\n[발표 팁] SD 배수 = (A2 값 − 전체 평균) ÷ 표준편차. 일반적으로 ±1 SD 이내면 정상 범위, 그 밖이면 눈에 띄는 편차로 해석. ZPC 15%↑·GIC 두 조건에서 A2가 유독 느린 이유는 Q&A에서 나올 수 있으니, 혼합 균질도·indentor 판정 시점 등 슬라이드 13(결과 해석)의 오차 요인과 연결지어 답변할 것.");
 }
 
-// ---------- Slide 13: 결과 해석 ① Setting time ----------
+// 슬라이드 13 — Film thickness
+{
+  const ftTable = [
+    ["조건", "전체 평균(mm)", "우리 조(A2)", "차이(SD 배수)"],
+    ["ZPC 15%↓", "0.035", "0.004", "−0.7 SD"],
+    ["ZPC 정상", "0.047", "0.016", "−0.6 SD"],
+    ["ZPC 15%↑", "0.049", "0.010", "−0.5 SD"],
+    ["ZPC 15%↑+냉각판", "0.012", "0.020", "+1.1 SD"],
+    ["RMGI", "0.015", "0.014", "−0.3 SD"],
+  ];
+  trendSlide({
+    kicker: "실험 결과 · 04", title: "조별 경향성 & 우리 조(A2) 위치 — Film Thickness",
+    sec1: "전체 조 경향성 (Film thickness, 5개 조건 반 평균)",
+    bullets1: [
+      "분액비가 높을수록 피막도가 커지는 경향 — 15%↓ 0.035mm < 정상 0.047mm < 15%↑ 0.049mm로 이론과 부합. 다만 세 조건 모두 표준편차가 매우 커서(한 조(A3)의 이상치 영향, 슬라이드 11 참고) 경향성만 참고",
+      "냉각판 조건(0.012mm)과 RMGI(0.015mm)는 나머지 ZPC 조건보다 훨씬 얇게 측정됨 — 낮은 온도·레진 개량형의 낮은 초기 점도 영향으로 추정",
+    ],
+    sec2: "우리 조(A2)는 전체 평균 대비 어디에 위치하는가",
+    bullets2: [
+      "5개 조건 중 4개에서 전체 평균보다 얇게 측정 — 냉각판 조건만 평균보다 두꺼움(+1.1 SD)",
+      "ZPC 15%↓·정상·15%↑는 −0.7~−0.5 SD, RMGI는 −0.3 SD로 모두 ±1 SD 이내라 눈에 띄는 편차는 아님 — 냉각판 조건(+1.1 SD)만 소폭 벗어나며, 표본이 한 조뿐이라 해석에 한계",
+    ],
+    table: ftTable,
+    chartTitle: "Film thickness — 전체 평균 vs 우리 조(A2)",
+    labels: ["ZPC\n15%↓", "ZPC\n정상", "ZPC\n15%↑", "ZPC\n15%↑+냉각판", "RMGI"],
+    mean: [0.0352, 0.0470, 0.0492, 0.0123, 0.0152], // = 슬라이드 11의 ftAvg
+    a2: [0.004, 0.016, 0.010, 0.020, 0.014],         // 슬라이드 10 원자료 피막도(B−A), labels 순서에 맞춤
+    labelFmt: "0.000", labelSize: 8, valMax: 0.14,
+    pageNo: 13,
+    notes: "[대본 8:50~9:20]\n피막도도 같은 방식으로 반 평균과 비교해 봤습니다. 반 평균에서는 분액비가 높을수록 피막도가 두꺼워지는 경향이 이론대로 나왔고, 냉각판 조건과 RMGI가 가장 얇았습니다. 다만 ZPC 세 조건은 표준편차가 워낙 커서, 한 조 이상치의 영향이 크다는 점은 슬라이드 11에서 말씀드린 그대로입니다.\n\n저희 조는 다섯 조건 중 네 조건에서 반 평균보다 얇게 측정됐고, 냉각판 조건에서만 평균보다 두꺼웠습니다. 표준편차로 환산하면 대부분 ±1 SD 이내라서 눈에 띄는 편차는 아니고, 냉각판 조건만 1.1 SD로 살짝 벗어나 있습니다.\n\n[발표 팁] SD 배수 = (A2 값 − 전체 평균) ÷ 표준편차. 피막도는 반 평균의 SD 자체가 커서 A2와의 차이가 상대적으로 작게 보이는 점을 함께 언급. 슬라이드 15(결과 해석 ②)의 냉각판·RMGI 논의와 이어서 설명.",
+  });
+}
+
+// ---------- Slide 14: 결과 해석 ① Setting time ----------
 {
   const s = baseSlide();
   titleBar(s, "고찰 · 01", "결과 해석 ① — Setting Time");
 
-  sectionLabel(s, "① P/L ratio와 경화 시간", MX, 1.7, CW);
+  sectionLabel(s, "① P/L ratio와 경화 시간", MX, 1.57, CW);
   bulletBlock(s, [
     "이론: 분액비(P/L)가 높을수록 반응할 ZnO 양이 많아 겔 형성이 빠르고 점도가 증가 → 경화가 빨라짐 (high < normal < low 순으로 setting time이 길어질 것으로 예상)",
     "실측: 15%↑(setting 12:45)가 정상(setting 16:20)보다 빠르게 나온 점은 이론과 대체로 부합하나, 정상 조건이 예상보다 오래 걸림 — 혼합 균질도, 실험실 온습도, indentor 판정의 주관성 등이 오차 요인으로 추정",
-  ], { x: MX, y: 2.1, w: CW, h: 1.5, fontSize: 13 });
+  ], { x: MX, y: 1.98, w: CW, h: 1.5, fontSize: 13 });
 
-  sectionLabel(s, "② 냉각판(frozen slab) 효과", MX, 3.75, CW);
+  sectionLabel(s, "② 냉각판(frozen slab) 효과", MX, 3.62, CW);
   bulletBlock(s, [
     "이론: 온도가 낮을수록 분자 운동성·반응성이 저하되어 작업시간은 길어지고 경화 시간도 길어질 것으로 예상됨",
     "실측: 냉각판(setting 12:03)이 동일 조건 상온(setting 12:45)보다 오히려 짧게 나옴 — 예상과 반대 방향. 다만 작업시간(working time) 자체는 별도로 측정하지 못해 직접 비교는 어려움, 경화 시간만으로 임의 추정한 결과",
-  ], { x: MX, y: 4.15, w: CW, h: 1.4, fontSize: 13 });
+  ], { x: MX, y: 4.03, w: CW, h: 1.4, fontSize: 13 });
 
-  sectionLabel(s, "③ 재료별 특성 · 제조사 공식 값과의 비교", MX, 5.7, CW);
+  sectionLabel(s, "③ 재료별 특성 · 제조사 공식 값과의 비교", MX, 5.58, CW);
   bulletBlock(s, [
     "RMGI(6:24)가 전 재료 중 가장 빠르게 경화 — auto-mixing으로 균질 혼합, 이중경화(dual-cure) 특성 영향으로 추정",
     "제조사 공식 값 대비 실측이 전반적으로 느림: ZPC(제조사 7:10 vs 실측 정상 16:20, 약 2.3배) · PC(제조사 4:00 vs 실측 9:41, 약 2.4배) · GIC(제조사 4:30 vs 실측 8:43, 약 1.9배) — ISO 표준 조건(37±1°C)이 아닌 상온(약 23°C)에서 실습했기 때문으로 추정",
-  ], { x: MX, y: 6.1, w: CW, h: 1.3, fontSize: 12.5 });
-  pageNum(s, 13);
-  s.addNotes("[대본 8:50~9:35]\n먼저 분액비와 경화시간 관계를 보면, 이론상으로는 분액비가 높을수록 반응할 산화아연이 많아져서 빨리 굳어야 하는데, 저희 실측도 15% 높음이 정상보다 빠르게 나와서 이론과 대체로 맞았습니다. 다만 정상 조건 자체가 예상보다 오래 걸린 건, 혼합 균질도나 실험실 온습도, indentor 판정 시점의 주관성 같은 요인이 작용했을 것으로 봅니다.\n\n냉각판 효과는 저희 예상과 반대로 나왔는데요, 온도가 낮으면 반응이 느려져서 경화도 늦어질 거라 생각했지만, 실측은 오히려 상온보다 짧게 나왔습니다. 다만 저희가 작업시간을 따로 측정하지 못해서 경화시간만으로 비교한 한계가 있습니다.\n\n마지막으로 제조사 공식 값과 비교하면 전반적으로 실측이 1.9배에서 2.4배 정도 느린데, 이건 ISO 표준 조건인 37도가 아니라 상온에서 실습했기 때문으로 보입니다.\n\n[발표 팁] 참고 PPT(박수진 외, A반 5조) 고찰 구조를 참고해 재구성 — 다만 수치·조건은 오늘 A반 본인 실측 기준으로 새로 정리한 것.");
+  ], { x: MX, y: 5.97, w: CW, h: 1.3, fontSize: 12.5 });
+  pageNum(s, 14);
+  s.addNotes("[대본 9:20~10:05]\n먼저 분액비와 경화 시간 관계를 보면, 이론상으로는 분액비가 높을수록 반응할 산화아연이 많아져서 빨리 굳어야 하는데, 저희 실측도 15% 높음이 정상보다 빠르게 나와서 이론과 대체로 맞았습니다. 다만 정상 조건 자체가 예상보다 오래 걸린 건, 혼합 균질도나 실험실 온습도, indentor 판정 시점의 주관성 같은 요인이 작용했을 것으로 봅니다.\n\n냉각판 효과는 저희 예상과 반대로 나왔는데요, 온도가 낮으면 반응이 느려져서 경화도 늦어질 거라 생각했지만, 실측은 오히려 상온보다 짧게 나왔습니다. 다만 저희가 작업시간을 따로 측정하지 못해서 경화 시간만으로 비교한 한계가 있습니다.\n\n마지막으로 제조사 공식 값과 비교하면 전반적으로 실측이 1.9배에서 2.4배 정도 느린데, 이건 ISO 표준 조건인 37도가 아니라 상온에서 실습했기 때문으로 보입니다.\n\n[발표 팁] 참고 PPT(박수진 외, A반 5조) 고찰 구조를 참고해 재구성 — 다만 수치·조건은 오늘 A반 본인 실측 기준으로 새로 정리한 것.");
 }
 
-// ---------- Slide 14: 결과 해석 ② Film thickness (NEW) ----------
+// ---------- Slide 15: 결과 해석 ② Film thickness ----------
 {
   const s = baseSlide();
   titleBar(s, "고찰 · 02", "결과 해석 ② — Film Thickness");
@@ -651,46 +719,11 @@ function card(s, x, y, w, h) {
   bulletBlock(s, [
     "냉각판 조건은 반 평균 피막도(0.012mm)가 나머지 ZPC 조건보다 훨씬 얇게 나옴 — 낮은 온도가 압착 시 유동성을 오히려 개선했을 가능성(표본이 적어 단정하기는 어려움). RMGI(0.015mm)도 ZPC 대비 얇은 편 — 레진 개량형 특유의 낮은 초기 점도 영향으로 추정",
   ], { x: MX, y: 3.45, w: CW, h: 0.75, fontSize: 12, lineSpacingMultiple: 1.3 });
-
-  // 비교 그래프 — 슬라이드 12와 같은 형식. "전체 평균" 시리즈에만
-  // scripts/add_errorbars.py가 SD를 주입함(FILM_TREND_SD, chart4.xml).
-  const ftTrendLabels = ["ZPC\n15%↓", "ZPC\n정상", "ZPC\n15%↑", "ZPC\n15%↑+냉각판", "RMGI"];
-  const ftTrendOverallMean = [0.0352, 0.0470, 0.0492, 0.0123, 0.0152]; // = ftAvg (슬라이드 11)
-  const ftA2ByLabel = [0.004, 0.016, 0.010, 0.020, 0.014]; // 슬라이드 10 원자료 피막도(B−A), ftTrendLabels 순서(15%↓·정상·15%↑·냉각판·RMGI)에 맞춤
-  const ftCmp = [
-    ["ZPC 15%↓", "0.035", "0.004", "−0.7 SD"],
-    ["ZPC 정상", "0.047", "0.016", "−0.6 SD"],
-    ["ZPC 15%↑", "0.049", "0.010", "−0.5 SD"],
-    ["ZPC 15%↑+냉각판", "0.012", "0.020", "+1.1 SD"],
-    ["RMGI", "0.015", "0.014", "−0.3 SD"],
-  ];
-
-  card(s, MX, 4.25, CW, 2.35);
-  s.addChart(pres.ChartType.bar, [
-    { name: "전체 평균", labels: ftTrendLabels, values: ftTrendOverallMean },
-    { name: "우리 조(A2)", labels: ftTrendLabels, values: ftA2ByLabel },
-  ], {
-    x: MX + 0.2, y: 4.37, w: CW - 0.4, h: 1.65,
-    barDir: "col", barGrouping: "clustered", barGapWidthPct: 35,
-    showTitle: true, title: "Film thickness — 전체 평균 vs 우리 조(A2)", titleFontSize: 12, titleColor: C.primary, titleFontFace: TITLE_FONT,
-    showLegend: true, legendPos: "t", legendFontSize: 9, legendColor: C.muted,
-    chartColors: [C.primary, C.accent],
-    showValue: true, dataLabelFormatCode: "0.000", dataLabelPosition: "outEnd", dataLabelFontSize: 8, dataLabelColor: C.ink,
-    catAxisLabelFontSize: 9, catAxisLabelColor: C.muted, catAxisLabelFontFace: BODY_FONT,
-    valAxisLabelFontSize: 9, valAxisLabelColor: C.muted,
-    valGridLine: { color: C.line, size: 0.75 }, catGridLine: { style: "none" },
-    valAxisMinVal: 0, valAxisMaxVal: 0.14,
-  });
-  s.addText(
-    "※ 오차 막대는 전체 평균의 표준편차(SD) 1개. " +
-    ftCmp.map((r) => `${r[0]} ${r[1]}→${r[2]}(${r[3]})`).join("  ·  "),
-    { x: MX + 0.2, y: 6.18, w: CW - 0.4, h: 0.4, fontFace: BODY_FONT, fontSize: 7.5, italic: true, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.15 }
-  );
-  pageNum(s, 14);
-  s.addNotes("[대본 9:35~10:10]\n피막도 결과도 짚고 가겠습니다. 이론상으로는 분액비가 높을수록 반죽이 되직해져서 압착할 때 잘 안 퍼지니까 피막도가 두꺼워질 거라 예상했는데, 반 평균을 보면 실제로 15% 낮음이 가장 얇고 15% 높음이 가장 두꺼워서 이론과 맞았습니다. 다만 세 조건 모두 표준편차가 워낙 커서, 이건 한 조의 이상치 영향이 크다는 걸 슬라이드 11에서 이미 말씀드렸으니 경향성만 참고해 주시면 됩니다.\n\n냉각판 조건은 반 평균이 오히려 가장 얇게 나왔고, RMGI도 ZPC보다 얇은 편이었습니다. 저희 조 실측은 ZPC 세 조건에서는 반 평균보다 얇게, 냉각판에서는 오히려 평균보다 두껍게 나왔는데, 이것도 setting time 때와 비슷하게 저희가 측정하는 과정에서 판정 기준이 다른 조와 조금 달랐을 가능성이 있다고 봅니다.\n\n[발표 팁] 슬라이드 11의 Film thickness 차트·각주(A3 이상치)를 화면에 띄워두고 같이 설명하면 좋음. SD가 커서 통계적으로 단정짓기 어렵다는 점을 솔직히 인정하고 넘어갈 것.");
+  pageNum(s, 15);
+  s.addNotes("[대본 10:05~10:40]\n피막도 결과도 짚고 가겠습니다. 이론상으로는 분액비가 높을수록 반죽이 되직해져서 압착할 때 잘 안 퍼지니까 피막도가 두꺼워질 거라 예상했는데, 반 평균을 보면 실제로 15% 낮음이 가장 얇고 15% 높음이 가장 두꺼워서 이론과 맞았습니다. 다만 세 조건 모두 표준편차가 워낙 커서, 이건 한 조의 이상치 영향이 크다는 걸 슬라이드 11에서 이미 말씀드렸으니 경향성만 참고해 주시면 됩니다.\n\n냉각판 조건은 반 평균이 오히려 가장 얇게 나왔고, RMGI도 ZPC보다 얇은 편이었습니다. 저희 조 실측은 ZPC 세 조건에서는 반 평균보다 얇게, 냉각판에서는 오히려 평균보다 두껍게 나왔는데, 이것도 setting time 때와 비슷하게 저희가 측정하는 과정에서 판정 기준이 다른 조와 조금 달랐을 가능성이 있다고 봅니다.\n\n[발표 팁] 슬라이드 11의 Film thickness 차트·각주(A3 이상치)를 화면에 띄워두고 같이 설명하면 좋음. SD가 커서 통계적으로 단정짓기 어렵다는 점을 솔직히 인정하고 넘어갈 것.");
 }
 
-// ---------- Slide 15: 결론 ----------
+// ---------- Slide 16: 결론 ----------
 {
   const s = baseSlide();
   s.addShape(pres.ShapeType.rect, { x: 0, y: 0, w: W, h: H, fill: { color: C.primary }, line: { type: "none" } });
@@ -704,11 +737,11 @@ function card(s, x, y, w, h) {
     "냉각판(저온) 조건은 이론상 경화 지연을 예상했으나 실측은 반대 — 작업시간·경화 시간을 분리 측정하지 못한 한계",
     "임상에서는 합착 목적·필요 작업시간에 따라 재료와 분액비를 조절해 사용해야 함 — 예: 빠른 경화가 필요하면 high P/L, 여유 있는 작업시간이 필요하면 low P/L 또는 냉각판 활용",
   ], { x: 0.9, y: 2.85, w: 11.3, h: 2.6, color: C.card, fontSize: 14 });
-  pageNum(s, 15);
-  s.addNotes("[대본 10:10~10:25]\n정리하면, 분액비와 혼합 온도, 재료 종류 모두 dental cement의 경화시간과 피막도에 유의한 영향을 줍니다. 임상에서는 이 특성을 이용해서, 빠른 경화가 필요하면 분액비를 높게, 여유 있는 작업시간이 필요하면 낮은 분액비나 냉각판을 활용하는 식으로 조절해서 쓸 수 있겠습니다.\n\n이상으로 발표를 마치겠습니다. 감사합니다.");
+  pageNum(s, 16);
+  s.addNotes("[대본 10:40~10:55]\n정리하면, 분액비와 혼합 온도, 재료 종류 모두 dental cement의 경화 시간과 피막도에 유의한 영향을 줍니다. 임상에서는 이 특성을 이용해서, 빠른 경화가 필요하면 분액비를 높게, 여유 있는 작업시간이 필요하면 낮은 분액비나 냉각판을 활용하는 식으로 조절해서 쓸 수 있겠습니다.\n\n이상으로 발표를 마치겠습니다. 감사합니다.");
 }
 
-// ---------- Slide 16: 참고 문헌 ----------
+// ---------- Slide 17: 참고 문헌 ----------
 {
   const s = baseSlide();
   titleBar(s, "REFERENCE", "참고 문헌");
@@ -720,7 +753,7 @@ function card(s, x, y, w, h) {
   ];
   s.addText(refs.map((t, i) => ({ text: `[${i + 1}] ${t}`, options: { breakLine: i < refs.length - 1 } })),
     { x: MX, y: 2.0, w: CW, h: 4.0, fontFace: BODY_FONT, fontSize: 13.5, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.6, valign: "top" });
-  pageNum(s, 16);
+  pageNum(s, 17);
   s.addNotes([
     "[예상 질문 메모]",
     "",
@@ -731,7 +764,7 @@ function card(s, x, y, w, h) {
     "→ 온도(37°C vs 23°C)가 가장 크지만, 습도(90% vs 통제 없음)도 함께 작용했을 가능성이 있고, indentor 판정 시점의 주관성, 개인별 혼합 속도 차이도 오차 요인으로 볼 수 있다고 답하면 됩니다.",
     "",
     "Q. 냉각판 조건이 이론과 반대로 나온 것을 어떻게 설명할 것인가?",
-    "→ 작업시간(working time)을 따로 측정하지 못해 경화시간만으로 판단한 한계라고 솔직히 인정하는 게 가장 무난합니다. 냉각판은 분액비를 높게 쓰면서도 여유 있는 작업시간을 확보하기 위한 방법이라, 경화시간 자체보다 작업시간 지표로 봐야 더 정확한 비교가 될 것 같다고 덧붙이면 좋습니다.",
+    "→ 작업시간(working time)을 따로 측정하지 못해 경화 시간만으로 판단한 한계라고 솔직히 인정하는 게 가장 무난합니다. 냉각판은 분액비를 높게 쓰면서도 여유 있는 작업시간을 확보하기 위한 방법이라, 경화 시간 자체보다 작업시간 지표로 봐야 더 정확한 비교가 될 것 같다고 덧붙이면 좋습니다.",
     "",
     "Q. 우리 조만 유독 느리게 나온 이유가 뭐라고 생각하는가?",
     "→ 가장 그럴듯한 설명은 indentor 판정 기준입니다. \"완전한 원형 압흔이 안 남는 시점\"이라는 기준 자체가 다소 주관적이라, 저희 조가 다른 조보다 조금 더 보수적으로(늦게) 판단했을 가능성이 있습니다. 혼합 속도나 실험실 내 위치별 온도 차이도 부차적 요인으로 들 수 있습니다.",
