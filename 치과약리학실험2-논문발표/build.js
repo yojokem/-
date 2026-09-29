@@ -512,6 +512,9 @@ function statCallout(s, x, y, w, h, num, label, color) {
     "→ 다만 동물 치아이동 문헌 자체가 용량·기간에 따라 엇갈립니다. 코르티코스테로이드 동물 연구 리뷰에서는 실험 기간 3~49일, 용량 0.5~15mg/kg 범위에서 감소 2편·무영향 2편·증가 2편으로 갈렸고, 고용량 히드로코르티손(15mg/kg)을 쓴 토끼 연구에서는 치아이동이 3~4배 빨랐습니다. 또 장기 투여에서는 파골세포 수명은 늘지만 흡수 능력 자체는 떨어진다는 보고도 있어서, 이 연구의 고용량·매일 국소주입 조건이 가속 쪽으로 작용했다고 해석할 수 있습니다(이 해석은 추정입니다).",
     "→ 정리하면 '기전은 문헌에 근거한 추정이고, 이 연구가 직접 검증한 건 아니어서 COX-2·PGE2·RANKL/OPG 측정이 후속 연구 과제'라고 답하면 됩니다.",
     "[Q6 근거 문헌] (1) Pathogenic mechanisms of glucocorticoid-induced osteoporosis (PMC10518688) — RANKL·M-CSF 상승, OPG 감소. (2) Cortical bone loss caused by glucocorticoid excess requires RANKL production by osteocytes, Am J Physiol Endocrinol Metab (doi:10.1152/ajpendo.00219.2016). (3) Influence of corticosteroid therapy on orthodontic tooth movement: a narrative review of studies in animal-models, Orthod Craniofac Res (doi:10.1111/ocr.12243). (4) Glucocorticoids suppress bone formation via the osteoclast, J Clin Invest (jci.org/articles/view/28084).",
+    "",
+    "Q7. 가속이 클수록 재발도 크다는데, 많이 움직였으니 많이 되돌아가는 건 당연한 것 아닌가? 이동량 대비 비율로 보면 어떤가?",
+    "→ 맞는 지적입니다. 논문의 재발량은 mm 절대값이라 이동량이 큰 군일수록 커지기 쉽습니다. 논문 표 II(이동량)와 표 VII(재발량) 수치로 이동량 대비 재발 비율을 계산해 보면 대조군 약 106%, 코르티코스테로이드 약 82%, 비타민D 약 80%, PGE2 약 34%입니다. 즉 비율로는 코르티코스테로이드가 대조군보다 나쁘지 않고 PGE2만 뚜렷하게 낮아서, '트레이드오프'는 절대량 기준의 요약이고 비율 기준으로는 'PGE2가 얻은 이동을 가장 잘 유지했다'가 더 정확합니다. 이 비율은 논문이 직접 제시한 값이 아니라 표 수치로 계산한 것이라고 밝히고 답하면 됩니다.",
   ].join("\n"));
 }
 
