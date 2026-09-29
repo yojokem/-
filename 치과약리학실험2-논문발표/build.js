@@ -110,7 +110,7 @@ function statCallout(s, x, y, w, h, num, label, color) {
     { text: "김민성", options: { color: C.card } },
   ], { x: 0.9, y: 5.15, w: 9, h: 1.5, fontFace: BODY_FONT, fontSize: 14, isTextBox: true, margin: 0, lineSpacingMultiple: 1.5 });
 
-  s.addNotes("발표 시작 인사. 이 연구는 랫드(쥐) 동물실험이라는 점을 처음부터 명확히 밝힐 것. 저널 출처(International Orthodontics, Elsevier)와 선정 사유(치과약리학1의 PGE2/COX 경로 + 구강생화학의 칼슘항상성·치아이동 생화학 두 과목 내용이 한 논문에서 만난다는 점)를 한 줄로 언급.");
+  s.addNotes("발표 시작 인사. 이 연구는 랫드(쥐) 동물실험이라는 점을 처음부터 명확히 밝힐 것. 저널 출처(International Orthodontics, Elsevier)와 선정 사유(치과약리학1의 PGE2/COX 경로 + 구강생화학의 골대사·칼슘 항상성 두 과목 내용이 한 논문에서 만난다는 점)를 한 줄로 언급.");
 }
 
 // ---------- Slide 2: Two rabbits ----------
@@ -311,9 +311,9 @@ function statCallout(s, x, y, w, h, num, label, color) {
   titleBar(s, "PHARMACOLOGICAL SIGNIFICANCE", "치과약리학적 의의 — 왜 이 세 약물인가");
 
   const cols = [
-    ["코르티코스테로이드", DRUG.cortico, "스테로이드성 항염증제\n(역설적 골흡수 촉진)", "본래 '항염증 = 골흡수 억제'로 알려져 있지만, 국소 고용량에서는 오히려 염증유전자 억제와 동시에 파골세포형성을 직접 자극 — 약물의 작용이 용량·투여경로·표적조직에 따라 정반대로 나타날 수 있음을 보여주는 사례"],
-    ["비타민D", DRUG.vitD, "지용성 호르몬\n(핵수용체 리간드)", "비타민D수용체(VDR)를 매개로 유전자 발현(osteocalcin 등)을 조절 — 전신 칼슘·인 대사를 조절하는 호르몬이 국소 골개조에도 관여한다는 점에서 구강생화학의 칼슘 항상성 파트와 직접 연결됨"],
-    ["PGE₂", DRUG.pge2, "지질 매개체(autacoid)\n= 교정력의 자연 신호물질", "교정력이 가해지면 PDL세포가 COX 경로로 스스로 PGE2를 만들어 RANKL을 유도하는데, 이 실험은 그 경로를 외부 주입으로 '재현' — 치과약리학1의 '교정력→COX→PGE2→RANKL→파골세포' 축을 실험적으로 검증"],
+    ["코르티코스테로이드", DRUG.cortico, "스테로이드성 항염증제\n(역설적 골흡수 촉진)", "국소 고용량 투여 ▷ 염증유전자 억제 + 파골세포형성 직접 자극 ▷ 골흡수 급가속\n\n통념(항염증=골흡수 억제)과 반대 — 용량·투여경로·표적조직에 따라 작용이 뒤바뀌는 사례"],
+    ["비타민D", DRUG.vitD, "지용성 호르몬\n(핵수용체 리간드)", "VDR(비타민D수용체) 결합 ▷ 골개조 관련 유전자 발현 조절 ▷ 파골세포 활성 + 면역매개체 동시 조절 ▷ 완만한 가속\n\n전신 칼슘 대사 호르몬이 국소 골개조에도 관여하는 사례"],
+    ["PGE₂", DRUG.pge2, "지질 매개체(autacoid)\n= 교정력의 자연 신호물질", "[자연 경로] 교정력 ▷ COX-2 ▷ PGE2 자체 생성 ▷ RANKL ▷ 파골세포\n\n이 실험은 PGE2를 외부 직접 주입 — 경로 중간부터 재현·검증"],
   ];
   let x = MX;
   const cw = 3.95, cardTop = 1.75, cardH = 3.35;
@@ -429,14 +429,14 @@ function statCallout(s, x, y, w, h, num, label, color) {
   s.addText("코르티코스테로이드 = 최대가속·최대재발  ·  비타민D = 중간  ·  PGE₂ = 최소가속·최소재발(대조군과 통계적 동률)", {
     x: MX, y: 3.85, w: 11.3, h: 0.6, fontFace: BODY_FONT, fontSize: 14.5, italic: true, color: "CFE0EC", isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
   });
-  s.addText("'빠른 이동'과 '안정적 결과' 사이의 트레이드오프를 보여준 첫 3약물 비교 연구 — 치과약리학1(PGE2/COX)과 구강생화학(치아이동의 생화학)의 내용이 이 논문 하나로 이어진다.", {
+  s.addText("'빠른 이동'과 '안정적 결과' 사이의 트레이드오프를 보여준 첫 3약물 비교 연구 — 치과약리학1(PGE2/COX 경로)과 구강생화학(골대사·칼슘 항상성)의 내용이 이 논문 하나로 이어진다.", {
     x: MX, y: 4.6, w: 11.3, h: 1.0, fontFace: BODY_FONT, fontSize: 13.5, color: C.card, isTextBox: true, margin: 0, lineSpacingMultiple: 1.35,
   });
   s.addText("※ PGE₂·대조군 relapse 차이 p = 0.605(유의하지 않음) — Appendix A 참고", {
     x: MX, y: 5.75, w: 11.3, h: 0.4, fontFace: BODY_FONT, fontSize: 11.5, italic: true, color: "AECBDC", isTextBox: true, margin: 0,
   });
   pageNum(s, 13);
-  s.addNotes("이 결론 슬라이드는 Q&A 동안 화면에 계속 띄워둘 것(원 저자 의도). 치과약리학1과 구강생화학 두 과목 내용이 이 논문 하나로 이어진다는 점을 다시 언급하며 마무리 후 Q&A로 전환.");
+  s.addNotes("이 결론 슬라이드는 Q&A 동안 화면에 계속 띄워둘 것(원 저자 의도). 치과약리학1(PGE2/COX)과 구강생화학(골대사·칼슘 항상성) 두 과목 내용이 이 논문 하나로 이어진다는 점을 다시 언급하며 마무리 후 Q&A로 전환.");
 }
 
 // ---------- Slide 14: Q&A ----------
