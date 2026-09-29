@@ -40,12 +40,12 @@ function baseSlide(bg) {
 function titleBar(s, kicker, title, opts = {}) {
   const dark = !!opts.dark;
   s.addText(kicker, {
-    x: MX, y: 0.4, w: CW, h: 0.32,
+    x: MX, y: opts.kickerY || 0.4, w: CW, h: 0.32,
     fontFace: BODY_FONT, fontSize: 12, bold: true, charSpacing: 1,
     color: dark ? C.accent : C.secondary, isTextBox: true, margin: 0,
   });
   s.addText(title, {
-    x: MX, y: 0.7, w: CW, h: 0.7,
+    x: opts.titleX || MX, y: 0.7, w: CW, h: 0.7,
     fontFace: TITLE_FONT, fontSize: 24, bold: true,
     color: dark ? C.card : C.primary, isTextBox: true, margin: 0,
   });
@@ -88,7 +88,7 @@ function statCallout(s, x, y, w, h, num, label, color) {
   s.addShape(pres.ShapeType.ellipse, { x: 9.4, y: -2.3, w: 7, h: 7, fill: { color: C.primary, transparency: 45 }, line: { type: "none" } });
   s.addShape(pres.ShapeType.ellipse, { x: -2.6, y: 4.6, w: 5.5, h: 5.5, fill: { color: C.secondary, transparency: 60 }, line: { type: "none" } });
 
-  s.addText("치과약리학실험2 · 논문 발표", {
+  s.addText("2026-2 〈치과약리학실험2〉", {
     x: 0.9, y: 1.55, w: 10, h: 0.45, fontFace: BODY_FONT, fontSize: 15, bold: true,
     color: C.accent, charSpacing: 1, isTextBox: true, margin: 0,
   });
@@ -128,7 +128,7 @@ function statCallout(s, x, y, w, h, num, label, color) {
     card(s, MX, y, CW, 1.5);
     s.addShape(pres.ShapeType.ellipse, { x: MX + 0.3, y: y + 0.42, w: 0.66, h: 0.66, fill: { color: C.primary }, line: { type: "none" } });
     s.addText(String(i + 1), { x: MX + 0.3, y: y + 0.42, w: 0.66, h: 0.66, fontFace: TITLE_FONT, fontSize: 18, bold: true, color: C.card, align: "center", valign: "middle", isTextBox: true, margin: 0 });
-    s.addText(h, { x: MX + 1.25, y: y + 0.2, w: 4.5, h: 0.5, fontFace: TITLE_FONT, fontSize: 16, bold: true, color: C.ink, isTextBox: true, margin: 0, valign: "middle" });
+    s.addText(h, { x: MX + 1.25, y: y + 0.5, w: 4.5, h: 0.5, fontFace: TITLE_FONT, fontSize: 16, bold: true, color: C.ink, isTextBox: true, margin: 0, valign: "middle" });
     s.addText(d, { x: MX + 5.9, y: y + 0.15, w: CW - 6.15, h: 1.2, fontFace: BODY_FONT, fontSize: 13, color: C.muted, isTextBox: true, margin: 0, valign: "middle" });
     y += 1.68;
   });
@@ -139,12 +139,15 @@ function statCallout(s, x, y, w, h, num, label, color) {
 // ---------- Slide 3: mechanism cards ----------
 {
   const s = baseSlide();
-  titleBar(s, "MECHANISM", "약물별 파골세포 형성 경로");
+  titleBar(s, "MECHANISM", "약물별 파골세포 형성 경로", { kickerY: 0.36, titleX: 0.71 });
 
   const cols = [
-    ["코르티코스테로이드", DRUG.cortico, "세포질 수용체와 결합→이량체화→핵 이동, COX-2 등 염증유전자 전사 억제 + 파골세포형성 직접 자극 + 콜라게나아제 활성 증가 (조골세포↓·파골세포↑는 교과서에 명시된 골대사 작용)", "→ 골흡수 강하게 촉진"],
-    ["비타민D", DRUG.vitD, "비타민D수용체(VDR)와 결합→표적유전자 발현 조절로 파골세포 활성 자체를 증가시키고 면역매개체를 조절", "→ 골개조 촉진 + osteocalcin·VDR 유전자 발현에도 관여"],
-    ["PGE₂", DRUG.pge2, "아라키돈산이 유도형 COX-2를 거쳐 PGE₂로 전환 → EP2/EP4 수용체 통해 RANKL 발현 유도, 파골세포형성 자극 + 국소 골흡수 강화", "— 교정력에 의한 내인성 경로(COX→PGE2→RANKL)를 외부에서 직접 보충"],
+    ["코르티코스테로이드", DRUG.cortico, "세포질 수용체와 결합→이량체화→핵 이동,\nCOX-2 등 염증유전자 전사 억제 + 파골세포형성 직접 자극 + collagenase 활성 증가 (조골세포↓·파골세포↑)", "→ 골흡수 강하게 촉진"],
+    ["비타민D", DRUG.vitD, "비타민D수용체(VDR)와 결합\n→ 표적 유전자 발현 조절로 파골세포 활성 자체를 증가시키고 면역 매개체를 조절", "→ 골개조 촉진\n+ osteocalcin·비타민D수용체 유전자 발현 관여"],
+    ["PGE₂", DRUG.pge2, [
+      { text: "(아라키돈산이 유도형 COX-2를 거쳐 PGE₂로 전환)", options: { fontSize: 10, breakLine: true } },
+      { text: "→ EP 수용체 통해 RANKL 발현 유도, 파골세포형성 자극 + 국소 골흡수 강화", options: {} },
+    ], "— 교정력에 의한 내인성 경로(COX→PGE2→RANKL)를 외부에서 직접 보충"],
   ];
   let x = MX;
   const cw = 3.95, cardTop = 1.8, cardH = 3.9;
@@ -160,7 +163,7 @@ function statCallout(s, x, y, w, h, num, label, color) {
     x: MX, y: cardTop + cardH + 0.15, w: CW, h: 0.5, fontFace: BODY_FONT, fontSize: 12.5, italic: true, color: C.muted, isTextBox: true, margin: 0,
   });
   pageNum(s, 3);
-  s.addNotes("[대본 1:10~2:00]\n세 약물이 파골세포를 활성화하는 경로부터 보겠습니다.\n\n코르티코스테로이드는 세포질 수용체와 결합한 뒤 이량체화되어 핵으로 이동하고, COX-2를 비롯한 염증유전자의 전사를 억제합니다. 그런데 동시에 파골세포형성을 직접 자극하고 콜라게나아제 활성도 높여서, 골흡수를 가장 강하게 촉진합니다. 교과서에도 코르티코스테로이드의 골격계 작용으로 조골세포 활성은 감소시키고 파골세포 활성은 증가시킨다고 명시돼 있습니다.\n\n비타민D는 비타민D수용체, VDR에 결합해서 표적유전자 발현을 조절하는 방식으로 파골세포 활성 자체를 높이면서 면역매개체를 조절합니다. PGE2는 아라키돈산이 유도형 COX-2를 거쳐 PGE2로 전환된 뒤 EP2·EP4 수용체를 통해 RANKL 발현을 유도해서 파골세포형성을 자극합니다 — 사실 이건 교정력이 가해졌을 때 우리 몸이 스스로 만들어내는 경로를 외부에서 그대로 보충하는 방식입니다.\n\n세 약물 모두 결국 파골세포를 활성화시키지만, 가는 길이 다르다는 점을 기억해 주시면 됩니다. 이 부분은 슬라이드 10에서 더 자세히 다루겠습니다.\n\n[발표 팁] 구강생화학 '뼈와 치아의 석회화, 혈청칼슘 항상성' 챕터에서 배운 칼슘/인 대사 조절호르몬(비타민D, PTH 등) 내용과 연결지어 설명하면 좋음. 세 경로의 차이는 슬라이드 10(치과약리학적 의의)에서 더 깊게 다룸.");
+  s.addNotes("[대본 1:10~2:00]\n세 약물이 파골세포를 활성화하는 경로부터 보겠습니다.\n\n코르티코스테로이드는 세포질 수용체와 결합한 뒤 이량체화되어 핵으로 이동하고, COX-2를 비롯한 염증유전자의 전사를 억제합니다. 그런데 동시에 파골세포형성을 직접 자극하고 콜라게나아제 활성도 높여서, 골흡수를 가장 강하게 촉진합니다. 치과약리학 교안(34장)에도 코르티코스테로이드의 골격계 작용으로 조골세포 활성은 감소시키고 파골세포 활성은 증가시킨다고 나와 있습니다.\n\n비타민D는 비타민D수용체, VDR에 결합해서 표적유전자 발현을 조절하는 방식으로 파골세포 활성 자체를 높이면서 면역매개체를 조절합니다. PGE2는 아라키돈산이 유도형 COX-2를 거쳐 PGE2로 전환된 뒤 EP 수용체를 통해 RANKL 발현을 유도해서 파골세포형성을 자극합니다 — 사실 이건 교정력이 가해졌을 때 우리 몸이 스스로 만들어내는 경로를 외부에서 그대로 보충하는 방식입니다.\n\n세 약물 모두 결국 파골세포를 활성화시키지만, 가는 길이 다르다는 점을 기억해 주시면 됩니다. 이 부분은 슬라이드 10에서 더 자세히 다루겠습니다.\n\n[발표 팁] 구강생화학 '뼈와 치아의 석회화, 혈청칼슘 항상성' 챕터에서 배운 칼슘/인 대사 조절호르몬(비타민D, PTH 등) 내용과 연결지어 설명하면 좋음. 세 경로의 차이는 슬라이드 10(치과약리학적 의의)에서 더 깊게 다룸.");
 }
 
 // ---------- Slide 4: Objective & Hypothesis ----------
@@ -192,7 +195,7 @@ function statCallout(s, x, y, w, h, num, label, color) {
   card(s, MX, 1.75, 6.6, 4.9);
   s.addText("설계", { x: MX + 0.35, y: 1.95, w: 5.9, h: 0.4, fontFace: TITLE_FONT, fontSize: 15, bold: true, color: C.primary, isTextBox: true, margin: 0 });
   bulletBlock(s, [
-    "무작위배정, 눈가림(2번째 저자가 배정) — 최종 배정 후엔 주 연구자 1인이 개입·측정·평가 전부 수행",
+    "무작위배정, 눈가림(2번째 저자가 배정)— 최종 배정 후엔 주 연구자 1인이 개입·측정·평가 전부 수행",
     "Sprague–Dawley 랫드 105마리(수컷, 6–12주령) → 5군, 군당 21마리",
     "장치: 상악 절치 사이 스테인리스 open-coil loop, 25g 힘, tipping 이동",
     "측정: 디지털 캘리퍼(0.01mm)로 절치 간 거리",
@@ -205,7 +208,7 @@ function statCallout(s, x, y, w, h, num, label, color) {
     ["IV", "비타민D(VDG)", "20µL 10⁻¹⁰mol/L, 3일마다 주입", DRUG.vitD],
     ["V", "PGE₂(PGE₂G)", "0.1µg/0.1mL, 매주 주입", DRUG.pge2],
   ];
-  let gy = 4.65;
+  let gy = 4.39;
   groups.forEach(([n, name, dose, color]) => {
     s.addShape(pres.ShapeType.roundRect, { x: MX + 0.35, y: gy, w: 0.38, h: 0.33, rectRadius: 0.06, fill: { color }, line: { type: "none" } });
     s.addText(n, { x: MX + 0.35, y: gy, w: 0.38, h: 0.33, fontFace: TITLE_FONT, fontSize: 11, bold: true, color: C.card, align: "center", valign: "middle", isTextBox: true, margin: 0 });
@@ -227,10 +230,10 @@ function statCallout(s, x, y, w, h, num, label, color) {
   titleBar(s, "STATISTICS 101", "이 논문은 어떻게 통계로 검증했나");
 
   const cols = [
-    ["Shapiro–Wilk 검정", C.secondary, "정규성 검정", "데이터의 정규 분포성 확인 ▷ ANOVA 등 모수적 검정 가능"],
-    ["One-way ANOVA", C.primary, "일원분산분석", "3개 이상 군의 평균을 한 번에 비교 ▷ \"군 사이에 적어도 하나는 다르다\"까지만 알려줌, 어느 군끼리 다른지는 모름"],
-    ["Tukey post-hoc", C.accent, "사후검정", "ANOVA가 유의하면 모든 군을 쌍(pair)으로 나눠 비교 ▷ 정확히 어느 군과 어느 군이 다른지 확정 — 이 논문의 '군간 비교' 표가 전부 이 결과"],
-    ["Paired t-test", C.secondary, "대응표본 t-검정", "같은 개체를 두 시점에서 비교 ▷ 예: 같은 랫드의 '가속기 직후' vs '보정 1주 후' 위치 비교(군 내 비교)"],
+    ["Shapiro–Wilk 검정", C.secondary, "정규성 검정", "데이터의 정규 분포성 확인\n▷ ANOVA 등 모수적 검정 가능"],
+    ["One-way ANOVA", C.primary, "일원분산분석", "3개 이상 군의 평균을 한 번에 비교\n▷ \"군 사이에 적어도 하나는 다르다\"까지만 알려줌, 어느 군끼리 다른지는 모름"],
+    ["Tukey post-hoc", C.accent, "사후검정", "ANOVA가 유의하면 모든 군을 쌍(pair)으로 나눠 비교\n▷ 정확히 어느 군과 어느 군이 다른지 확정 — 이 논문의 '군간 비교' 표가 전부 이 결과"],
+    ["Paired t-test", C.secondary, "대응표본 t-검정", "같은 개체를 두 시점에서 비교\n▷ 예: 같은 랫드의 '가속기 직후' vs '보정 1주 후' 위치 비교(군 내 비교)"],
   ];
   let x = MX;
   const cw = 2.9, cardTop = 1.75, cardH = 3.6;
@@ -270,8 +273,8 @@ function statCallout(s, x, y, w, h, num, label, color) {
     statCallout(s, x, 1.85, cw, 2.0, num, label, color);
     x += cw + gap;
   });
-  s.addText("→ 대조군(1.29±0.11mm) 대비 세 약물 모두 유의하게 가속 (p < 0.001) — 가속 순위: 코르티코스테로이드 > 비타민D > PGE₂, 조직검사(ALP·TRAP)도 동일 순서로 확인됨", {
-    x: MX, y: 4.05, w: CW, h: 0.6, fontFace: BODY_FONT, fontSize: 13, italic: true, color: C.primary, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
+  s.addText("→ 대조군(1.29±0.11mm) 대비 세 약물 모두 유의하게 가속 (p < 0.001)\n— 가속 순위: 코르티코스테로이드 > 비타민D > PGE₂, 조직검사(ALP·TRAP)도 동일 순서로 확인됨", {
+    x: MX, y: 4.05, w: CW, h: 0.6, fontFace: BODY_FONT, fontSize: 13, color: C.primary, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
   });
 
   const table = [
@@ -292,11 +295,15 @@ function statCallout(s, x, y, w, h, num, label, color) {
   const s = baseSlide();
   titleBar(s, "RESULTS · 02", "재발기(2주) — 가속이 컸던 약물이 더 많이 되돌아간다");
 
+  const twoLine = (mean, sd) => [
+    { text: mean, options: { fontSize: 40, breakLine: true } },
+    { text: sd, options: { fontSize: 20 } },
+  ];
   const stats = [
-    ["-1.09 ± 0.17", "mm · 양성대조", DRUG.control],
-    ["-0.86 ± 0.23", "mm · PGE₂ (최소)", DRUG.pge2],
-    ["-2.75 ± 0.15", "mm · 비타민D", DRUG.vitD],
-    ["-5.07 ± 0.87", "mm · 코르티코스테로이드 (최대)", DRUG.cortico],
+    [twoLine("-1.09", "± 0.17"), "mm · 양성대조", DRUG.control],
+    [twoLine("-0.86", "± 0.23"), "mm · PGE₂ (최소)", DRUG.pge2],
+    [twoLine("-2.75", "± 0.15"), "mm · 비타민D", DRUG.vitD],
+    [twoLine("-5.07", "± 0.87"), "mm · 코르티코스테로이드 (최대)", DRUG.cortico],
   ];
   let x = MX;
   const cw = 2.83, gap = 0.18;
@@ -388,7 +395,7 @@ function statCallout(s, x, y, w, h, num, label, color) {
     ]],
     ["임상 적용 가능성", [
       "코르티코스테로이드는 가속 효과 크지만 재발 위험도 가장 큼 — 전신 스테로이드 복용 중인 교정환자에서 특히 신중한 판단 필요",
-      "전신 코르티코스테로이드의 골 관련 부작용(골다공증·골괴사, 조골세포↓·파골세포↑, 성장억제)은 이 연구의 국소 주입과 별개로 교과서에 명시된 위험 — 장기 전신 스테로이드 환자의 치아이동 계획 시 반드시 고려",
+      "전신 코르티코스테로이드의 골 관련 부작용(골다공증·골괴사, 조골세포↓·파골세포↑, 성장억제)은 이 연구의 국소 주입과 별개로 교안에 명시된 위험 — 장기 전신 스테로이드 환자의 치아이동 계획 시 반드시 고려",
       "비타민D·PGE₂는 가속은 온건해도 재발이 적어 상대적으로 안전한 보조제일 수 있음 — 다만 PGE2는 고용량 시 치근흡수 위험 보고 있음(타 문헌)",
       "동물(랫드)실험 — 종간 차이로 사람에 그대로 적용은 어려움(저자도 인정), 용량-반응 확립을 위한 후속 임상연구 필요",
     ]],
@@ -403,7 +410,7 @@ function statCallout(s, x, y, w, h, num, label, color) {
     x += cw + 0.2;
   });
   pageNum(s, 11);
-  s.addNotes("[대본 8:00~9:00]\n강점으로는 ARRIVE 가이드라인 준수, 윤리위 승인, 무작위 배정과 눈가림, 그리고 임상 측정과 조직학을 함께 사용한 이중 검증을 들 수 있습니다.\n\n한계로는, 배정만 눈가림했고 실제 측정은 한 명의 연구자가 다 했다는 점, 약물마다 용량을 하나씩만 테스트해서 용량-반응 분석이 불가능하다는 점, 그리고 투여 빈도도 매일·3일마다·매주로 제각각이라 공정한 비교인지 의문이 남는다는 점을 지적할 수 있습니다.\n\n임상 적용 측면에서는, 코르티코스테로이드는 가속 효과는 크지만 재발 위험이 가장 크기 때문에, 전신 스테로이드를 복용 중인 교정 환자라면 특히 신중해야 합니다. 이건 이 연구의 국소 주입과는 별개로, 전신 코르티코스테로이드 자체가 골다공증·골괴사, 조골세포 활성 감소·파골세포 활성 증가, 성장억제 같은 부작용을 갖는다고 교과서에 명시돼 있기 때문인데요, 장기간 전신 스테로이드를 복용 중인 환자의 치아이동 계획을 세울 때는 이 부분도 함께 고려해야 합니다. 반면 비타민D와 PGE2는 온건한 가속에 재발도 적어서 상대적으로 안전한 보조제가 될 수 있어 보입니다. 다만 PGE2는 고용량에서 치근흡수 위험이 있다는 보고도 있어서, 안전성과 효능 사이의 균형이 필요합니다.\n\n[발표 팁] 발표자 본인 의견으로 최종 다듬을 것 — 특히 Q&A 대비를 위해 표본수 검정력·비맹검 측정 부분은 원문 근거로 보강 추천.");
+  s.addNotes("[대본 8:00~9:00]\n강점으로는 ARRIVE 가이드라인 준수, 윤리위 승인, 무작위 배정과 눈가림, 그리고 임상 측정과 조직학을 함께 사용한 이중 검증을 들 수 있습니다.\n\n한계로는, 배정만 눈가림했고 실제 측정은 한 명의 연구자가 다 했다는 점, 약물마다 용량을 하나씩만 테스트해서 용량-반응 분석이 불가능하다는 점, 그리고 투여 빈도도 매일·3일마다·매주로 제각각이라 공정한 비교인지 의문이 남는다는 점을 지적할 수 있습니다.\n\n임상 적용 측면에서는, 코르티코스테로이드는 가속 효과는 크지만 재발 위험이 가장 크기 때문에, 전신 스테로이드를 복용 중인 교정 환자라면 특히 신중해야 합니다. 이건 이 연구의 국소 주입과는 별개로, 전신 코르티코스테로이드 자체가 골다공증·골괴사, 조골세포 활성 감소·파골세포 활성 증가, 성장억제 같은 부작용을 갖는다고 치과약리학 교안(34장)에 명시돼 있기 때문인데요, 장기간 전신 스테로이드를 복용 중인 환자의 치아이동 계획을 세울 때는 이 부분도 함께 고려해야 합니다. 반면 비타민D와 PGE2는 온건한 가속에 재발도 적어서 상대적으로 안전한 보조제가 될 수 있어 보입니다. 다만 PGE2는 고용량에서 치근흡수 위험이 있다는 보고도 있어서, 안전성과 효능 사이의 균형이 필요합니다.\n\n[발표 팁] 발표자 본인 의견으로 최종 다듬을 것 — 특히 Q&A 대비를 위해 표본수 검정력·비맹검 측정 부분은 원문 근거로 보강 추천.");
 }
 
 // ---------- Slide 12: Comparison with prior studies ----------
@@ -498,6 +505,9 @@ function statCallout(s, x, y, w, h, num, label, color) {
     "",
     "Q5. 암컷 랫드는 왜 제외했는가?",
     "→ 수컷만 사용한 이유는 호르몬 주기에 의한 변동을 배제하기 위해서입니다. 다만 이로 인해 성별에 따른 차이는 이 연구로는 알 수 없고, 여성 환자에게 그대로 적용할 수 있는지는 후속 연구가 필요하다는 한계로 이어집니다.",
+    "",
+    "Q6. 코르티코스테로이드는 COX-2 발현을 억제해서 PGE2 생성을 줄일 텐데, 왜 치아이동 가속이 가장 컸는가?",
+    "→ 논문은 코르티코스테로이드의 가속 기전을 '염증유전자 발현 억제 + 파골세포형성 자극 + 콜라게나아제 활성 증가'로 설명하고, PGE2 경로를 거친다고는 하지 않습니다. 치과약리학 교안(34장)에도 코르티코스테로이드가 조골세포 활성은 낮추고 파골세포 활성은 높인다고 나와 있어서, COX-2·PGE2를 거치지 않는 경로로 골흡수가 촉진됐을 가능성이 있습니다. 다만 이 연구는 COX-2나 PGE2 수치를 직접 측정하지 않았기 때문에, 정확한 기전은 문헌에 근거한 추정이고 후속 연구가 필요하다고 답하면 됩니다.",
   ].join("\n"));
 }
 
