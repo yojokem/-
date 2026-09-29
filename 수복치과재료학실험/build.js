@@ -11,7 +11,7 @@ const C = {
   primaryDark: "0B332A",
   accent: "F2704A",      // warm coral
   ink: "1C2321",
-  paper: "FBF8F3",       // warm paper background
+  paper: "F5F6F5",       // near-white cool-gray background (light content slides) — cards sit on this in pure white
   card: "FFFFFF",
   muted: "6B7568",
   line: "E4DED2",
@@ -43,10 +43,9 @@ function titleBar(s, kicker, title, sub) {
     fontFace: TITLE_FONT, fontSize: 24, bold: true,
     color: C.primary, isTextBox: true, margin: 0,
   });
-  s.addShape(pres.ShapeType.rect, { x: MX, y: 1.32, w: 0.55, h: 0.05, fill: { color: C.accent }, line: { type: "none" } });
   if (sub) {
     s.addText(sub, {
-      x: MX, y: 1.42, w: CW, h: 0.35,
+      x: MX, y: 1.38, w: CW, h: 0.35,
       fontFace: BODY_FONT, fontSize: 12.5, italic: true, color: C.muted, isTextBox: true, margin: 0,
     });
   }
@@ -61,7 +60,6 @@ function pageNum(s, n) {
 
 function sectionLabel(s, text, x, y, w) {
   s.addText(text, { x, y, w, h: 0.38, fontFace: TITLE_FONT, fontSize: 14.5, bold: true, color: C.primary, isTextBox: true, margin: 0 });
-  s.addShape(pres.ShapeType.rect, { x, y: y + 0.34, w: 0.35, h: 0.035, fill: { color: C.accent }, line: { type: "none" } });
 }
 
 function bulletBlock(s, items, opts) {
@@ -154,7 +152,6 @@ function card(s, x, y, w, h) {
     x: 0.9, y: 2.25, w: 11, h: 0.5, fontFace: SERIF_FONT, fontSize: 20, italic: true,
     color: "CFE0D8", isTextBox: true, margin: 0,
   });
-  s.addShape(pres.ShapeType.rect, { x: 0.9, y: 2.95, w: 0.7, h: 0.06, fill: { color: C.accent }, line: { type: "none" } });
 
   s.addText([
     { text: "실험일  ", options: { bold: true, color: C.accent } },
@@ -307,8 +304,7 @@ function card(s, x, y, w, h) {
     { x: MX + 6.55, y: 4.85, w: 5.1, h: 0.45, fontFace: BODY_FONT, fontSize: 9, italic: true, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.2 }
   );
 
-  s.addShape(pres.ShapeType.roundRect, { x: MX, y: 6.05, w: CW, h: 0.95, rectRadius: 0.08, fill: { color: C.card }, line: { type: "none" } });
-  s.addShape(pres.ShapeType.rect, { x: MX, y: 6.05, w: 0.08, h: 0.95, fill: { color: C.accent }, line: { type: "none" } });
+  s.addShape(pres.ShapeType.roundRect, { x: MX, y: 6.05, w: CW, h: 0.95, rectRadius: 0.08, fill: { color: "EAF2EE" }, line: { type: "none" } });
   s.addText([
     { text: "실습 조건 vs ISO 표준:  ", options: { bold: true, color: C.primary } },
     { text: "실습실은 ISO 표준 조건(37±1°C·습도 90%)이 아닌 상온(약 23°C, 습도 통제 없음)에서 진행 — 온도가 낮을수록 반응속도가 느려지므로, 실측 setting time이 제조사 공식 값보다 전반적으로 길게 나온 주요 원인으로 추정됨.", options: {} },
@@ -424,7 +420,6 @@ function card(s, x, y, w, h) {
   ], { x: MX + 6.4, y: 2.05, w: 3.3, h: 3.0, fontSize: 11.5 });
   photoCard(s, `${PHOTO_DIR}/photo_04.jpg`, MX + 9.9, 2.05, { w: 2.35 }, "Mixing 과정 (spatula)");
 
-  s.addShape(pres.ShapeType.rect, { x: MX, y: 5.28, w: CW, h: 0.03, fill: { color: C.line }, line: { type: "none" } });
   sectionLabel(s, "③ Setting time / Film thickness 측정", MX, 5.42, CW);
   bulletBlock(s, [
     "Setting time: 검정 사각 금속 주형을 Al foil로 덮은 metal block에 올리고 mix 완료 재료를 채움 → 혼합 종료 90초 후부터 indentor를 수직으로 5초간 압입, 30초 간격 반복 → 예상 경화시점 30초 전부터 10초 간격으로 전환 → 완전한 원형 압흔이 안 남는 시점 기록",
