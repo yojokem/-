@@ -221,7 +221,40 @@ function statCallout(s, x, y, w, h, num, label, color) {
   s.addNotes("[대본 2:40~3:40]\n연구 방법입니다. 수컷 랫드 105마리를 5개 군(음성대조·양성대조·코르티코스테로이드·비타민D·PGE2)으로 무작위 배정하고, 상악 절치 사이에 open-coil loop를 걸어 25g 힘으로 치아를 이동시켰습니다.\n\n투여 빈도가 약물마다 다른 점이 특이한데요, 코르티코스테로이드는 매일, 비타민D는 3일마다, PGE2는 매주 주입했습니다. 이 부분은 나중에 비평적 고찰에서 다시 짚겠습니다.\n\n전체 일정은 가속기 4주, 보정기 2주, 재발기 2주로 진행됐습니다.\n\n[발표 팁] 동물실험이므로 Q&A에서 '왜 랫드를 썼나' 물으면 '골개조·치아이동을 통제된 조건에서 관찰하기 위해 — 사람 대상으론 이 정도의 개입·조직검사가 불가능'이라고 답변. 세 약물의 투여 빈도가 매일·3일마다·매주로 서로 다르다는 점은 비평적 고찰(한계)에서 다시 짚음.");
 }
 
-// ---------- Slide 6: Acceleration results ----------
+// ---------- Slide 6: Statistical methods primer (NEW) ----------
+{
+  const s = baseSlide();
+  titleBar(s, "STATISTICS 101", "이 논문은 어떻게 통계로 검증했나");
+
+  const cols = [
+    ["Shapiro–Wilk 검정", C.secondary, "정규성 검정", "데이터가 정규분포를 따르는지 확인하는 사전 점검 ▷ 통과해야 ANOVA 같은 모수적 검정을 쓸 수 있음"],
+    ["One-way ANOVA", C.primary, "일원분산분석", "3개 이상 군의 평균을 한 번에 비교 ▷ \"군 사이에 적어도 하나는 다르다\"까지만 알려줌, 어느 군끼리 다른지는 모름"],
+    ["Tukey post-hoc", C.accent, "사후검정", "ANOVA가 유의하면 모든 군을 쌍(pair)으로 나눠 비교 ▷ 정확히 어느 군과 어느 군이 다른지 확정 — 이 논문의 '군간 비교' 표가 전부 이 결과"],
+    ["Paired t-test", C.secondary, "대응표본 t-검정", "같은 개체를 두 시점에서 비교 ▷ 예: 같은 랫드의 '가속기 직후' vs '보정 1주 후' 위치 비교(군 내 비교)"],
+  ];
+  let x = MX;
+  const cw = 2.9, cardTop = 1.75, cardH = 3.6;
+  cols.forEach(([name, color, sub, body]) => {
+    card(s, x, cardTop, cw, cardH);
+    s.addShape(pres.ShapeType.roundRect, { x: x + 0.2, y: cardTop + 0.2, w: cw - 0.4, h: 0.85, rectRadius: 0.08, fill: { color }, line: { type: "none" } });
+    s.addText(name, { x: x + 0.22, y: cardTop + 0.25, w: cw - 0.44, h: 0.42, fontFace: TITLE_FONT, fontSize: 12.5, bold: true, color: C.card, align: "center", valign: "middle", isTextBox: true, margin: 0 });
+    s.addText(sub, { x: x + 0.22, y: cardTop + 0.63, w: cw - 0.44, h: 0.35, fontFace: BODY_FONT, fontSize: 10, italic: true, color: C.card, align: "center", isTextBox: true, margin: 0 });
+    s.addText(body, { x: x + 0.2, y: cardTop + 1.15, w: cw - 0.4, h: cardH - 1.3, fontFace: BODY_FONT, fontSize: 10.5, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3, valign: "top" });
+    x += cw + 0.15;
+  });
+
+  card(s, MX, cardTop + cardH + 0.2, CW, 1.25, "EAF2F7");
+  s.addText([
+    { text: "이 논문의 분석 흐름  ", options: { bold: true, color: C.primary } },
+    { text: "Shapiro–Wilk(정규성 확인) ▷ One-way ANOVA(군간 전체 비교) ▷ 유의하면 Tukey post-hoc(어느 쌍이 다른지 확정) — 같은 군의 시점 전후(가속 후 vs 보정 후 등) 비교는 paired t-test로 별도 진행.\n", options: { color: C.ink } },
+    { text: "p < 0.05의 의미  ", options: { bold: true, color: C.primary } },
+    { text: "이 차이가 우연히 생겼을 확률이 5% 미만이라는 뜻 — 관행적으로 이 기준을 넘으면 '통계적으로 유의하다'고 판단. 이 논문 대부분의 비교는 p < 0.001로, 우연일 확률이 매우 낮음.", options: { color: C.ink } },
+  ], { x: MX + 0.3, y: cardTop + cardH + 0.37, w: CW - 0.6, h: 1.0, fontFace: BODY_FONT, fontSize: 11, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3 });
+  pageNum(s, 6);
+  s.addNotes("[대본 — 결과 슬라이드 진입 전 삽입]\n결과를 보기 전에 이 논문이 쓴 통계 방법을 간단히 짚고 가겠습니다.\n\n먼저 Shapiro-Wilk 검정으로 데이터가 정규분포를 따르는지 확인했고, 그다음 One-way ANOVA로 5개 군 평균을 한꺼번에 비교했습니다. ANOVA는 '군 사이에 차이가 있다'까지만 알려주기 때문에, 정확히 어느 군과 어느 군이 다른지는 Tukey post-hoc 검정으로 하나하나 다시 비교합니다. 그리고 같은 군을 시점별로 비교할 때는 — 예를 들어 같은 랫드의 가속기 직후와 보정 1주 후를 비교할 때는 — paired t-test를 썼습니다.\n\np값은 이 차이가 우연히 나왔을 확률을 뜻하는데, 관행적으로 5% 미만이면 '통계적으로 유의하다'고 봅니다. 이 논문은 대부분 p<0.001로 나와서, 우연일 가능성이 매우 낮다고 볼 수 있습니다.\n\n[발표 팁] 이 슬라이드는 통계를 잘 모르는 청중을 위한 배경 설명 슬라이드. 너무 길게 끌지 말고 1분 이내로 넘어갈 것 — 핵심은 'ANOVA는 전체 비교, Tukey는 쌍별 비교, paired t-test는 같은 군의 전후 비교'라는 역할 구분.");
+}
+
+// ---------- Slide 7: Acceleration results ----------
 {
   const s = baseSlide();
   titleBar(s, "RESULTS · 01", "가속기(4주) — 치아이동량 비교");
@@ -250,11 +283,11 @@ function statCallout(s, x, y, w, h, num, label, color) {
   s.addText("※ 모든 군간 비교 p < 0.001 (One-way ANOVA + Tukey post-hoc). 원문 Table I·II 기준.", {
     x: MX, y: 6.05, w: CW, h: 0.4, fontFace: BODY_FONT, fontSize: 11, italic: true, color: C.muted, isTextBox: true, margin: 0,
   });
-  pageNum(s, 6);
+  pageNum(s, 7);
   s.addNotes("[대본 3:40~4:20]\n가속기 4주 결과입니다. 코르티코스테로이드군이 6.50mm로 가장 많이 이동했고, 비타민D 3.73mm, PGE2 2.80mm 순이었습니다. 대조군은 1.29mm에 그쳤고요. 세 약물 모두 대조군 대비 유의하게 가속됐고(p<0.001), 조직검사 결과도 같은 순서로 나왔습니다.\n\n[발표 팁] 원문 Table I·II 기준. 보정기(2주) 동안은 모든 군에서 유의한 변화 없음(장치를 다시 수동적으로 부착해 이동량을 '고정') — 질문 나오면 이 부분도 설명 가능.");
 }
 
-// ---------- Slide 7: Relapse results ----------
+// ---------- Slide 8: Relapse results ----------
 {
   const s = baseSlide();
   titleBar(s, "RESULTS · 02", "재발기(2주) — 가속이 컸던 약물이 더 많이 되돌아간다");
@@ -280,11 +313,11 @@ function statCallout(s, x, y, w, h, num, label, color) {
   s.addText("※ 양성대조 vs PGE₂ 재발량 차이 — 통계적으로 유의하지 않음(p = 0.605). 자세한 내용은 부록(Appendix A) 참고.", {
     x: MX, y: 6.15, w: CW, h: 0.4, fontFace: BODY_FONT, fontSize: 11, italic: true, color: C.muted, isTextBox: true, margin: 0,
   });
-  pageNum(s, 7);
+  pageNum(s, 8);
   s.addNotes("[대본 4:20~5:10]\n이제 진짜 흥미로운 부분, 재발기 결과입니다. 2주간 재발량을 보면 코르티코스테로이드군이 -5.07mm로 가장 많이 되돌아갔고, 비타민D가 -2.75mm, 그리고 PGE2는 -0.86mm로 가장 적게 재발했습니다. 참고로 대조군은 -1.09mm였는데, PGE2와 거의 비슷한 수준이죠 — 이 부분은 나중에 부록에서 다시 설명하겠습니다.\n\n즉 가속기에서 가장 많이 이동했던 코르티코스테로이드군이, 재발기에서도 가장 많이 되돌아간 겁니다. 조직학적으로도 코르티코스테로이드군의 치주인대 폭이 가장 넓게 유지된 게 확인돼서, 임상 측정과 조직 소견이 서로 맞아떨어집니다.\n\n[발표 팁] 가속량이 클수록(코르티코스테로이드) 재발량도 크고, 가속량이 작을수록(PGE2) 재발도 작다는 '가속-재발 트레이드오프' 패턴이 핵심 메시지. 원문 Table III·VI·VII 기준.");
 }
 
-// ---------- Slide 8: Histology ----------
+// ---------- Slide 9: Histology ----------
 {
   const s = baseSlide();
   titleBar(s, "RESULTS · 03", "조직학적 소견 — 코르티코스테로이드군에서 PDL 폭 가장 넓게 유지");
@@ -301,11 +334,11 @@ function statCallout(s, x, y, w, h, num, label, color) {
     "캘리퍼 임상 측정 결과와 조직 소견이 서로 뒷받침함",
     "동일한 순서 패턴이 ALP·TRAP 염색(원문 Figure 4, 5)에서도 확인됨",
   ], { x: MX + 5.6, y: 1.9, w: CW - 5.6, h: 4.0, fontSize: 13.5 });
-  pageNum(s, 8);
+  pageNum(s, 9);
   s.addNotes("[대본 5:10~5:40]\nH&E 염색 결과를 보면, 코르티코스테로이드군(C)의 치주인대 폭이 압박측·긴장측 모두에서 가장 넓게 유지된 반면, 대조군(A, B)은 가장 좁았습니다. 비타민D와 PGE2는 중간 수준이었고요. 같은 패턴이 ALP·TRAP 염색에서도 똑같이 나타났습니다.\n\n[발표 팁] 원문 Figure 3(H&E)·4(ALP)·5(TRAP) 모두 같은 순서(코르티코스테로이드 > 비타민D > PGE2 > 대조군)로 조직학적 활성을 보여줌. 임상측정치와 조직 소견이 일치한다는 점이 이 논문의 방법론적 강점.");
 }
 
-// ---------- Slide 9: Pharmacological significance (NEW — core synthesis) ----------
+// ---------- Slide 10: Pharmacological significance (NEW — core synthesis) ----------
 {
   const s = baseSlide();
   titleBar(s, "PHARMACOLOGICAL SIGNIFICANCE", "치과약리학적 의의 — 왜 이 세 약물인가");
@@ -333,11 +366,11 @@ function statCallout(s, x, y, w, h, num, label, color) {
     { text: "치과교정학 기본원칙과의 연결  ", options: { bold: true, color: C.primary } },
     { text: "압박-긴장설(pressure-tension theory)에서 치아이동은 골흡수뿐 아니라 흡수 이후의 '구조적 재조직화'가 뒤따라야 안정된다 — 코르티코스테로이드처럼 흡수만 급가속하면 재조직화가 못 따라가 재발이 커진다. 이 논문의 '가속↑ = 재발↑' 결과는 곧 \"치아이동 속도는 생물학적 재형성 속도가 제한한다\"는 교정학 기본원칙을 약리학적으로 재확인한 것이다.", options: { color: C.ink } },
   ], { x: MX + 0.3, y: cardTop + cardH + 0.42, w: CW - 0.6, h: 1.3, fontFace: BODY_FONT, fontSize: 12, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3 });
-  pageNum(s, 9);
+  pageNum(s, 10);
   s.addNotes("[대본 5:40~7:00 — 발표의 핵심]\n이 논문이 저희 수업들과 왜 연결되는지 설명드리겠습니다.\n\n세 약물은 사실 완전히 다른 종류의 약입니다. 코르티코스테로이드는 원래 항염증제로 알려져 있어서, 보통 '염증을 줄이면 골흡수도 줄어든다'고 생각하기 쉽습니다. 그런데 이 연구에서는 국소로 고용량 주입했을 때 오히려 파골세포형성을 직접 자극해서 골흡수를 가장 강하게 촉진했습니다. 같은 약물이라도 용량과 투여 경로, 표적 조직에 따라 정반대 효과가 날 수 있다는 걸 보여주는 사례입니다.\n\n비타민D는 지용성 호르몬이죠. 비타민D 수용체를 통해 유전자 발현을 조절하는 방식으로 작용하는데, 이건 저희가 구강생화학에서 배운 칼슘·인 대사 조절 호르몬이 전신뿐 아니라 국소 골개조에도 관여한다는 걸 실제로 보여주는 사례입니다.\n\n그리고 PGE2가 제일 흥미로운데요, 이건 원래 교정력이 가해지면 치주인대 세포가 COX 경로를 통해 스스로 만들어내는 물질입니다. 그러니까 이 실험에서 PGE2를 외부에서 주입한 건, 우리 몸이 자연적으로 하는 과정을 그대로 재현해본 거예요. 치과약리학1에서 배운 '교정력 → COX → PGE2 → RANKL → 파골세포'라는 신호전달 축을 이 실험이 직접 검증한 셈입니다.\n\n정리하면, 세 약물은 서로 다른 경로 — 유전자 억제, 호르몬 수용체, 지질 매개체 — 로 가지만 결국 같은 목적지인 파골세포 활성화에 도달합니다. 그런데 경로가 다르면 부작용과 재발 위험도 달라진다는 게 이 연구의 핵심입니다.\n\n여기서 교정학 기본 원칙과 연결되는 지점이 나옵니다. 압박-긴장설에 따르면 치아이동은 단순히 뼈가 흡수되는 것만으로 끝나는 게 아니라, 그 이후에 조직이 구조적으로 재조직화되는 과정이 뒤따라야 안정됩니다. 그런데 코르티코스테로이드처럼 흡수만 급격하게 밀어붙이면, 재조직화가 그 속도를 따라가지 못해서 조직이 불안정한 상태로 남고, 결국 장치를 제거했을 때 재발이 커지는 겁니다.\n\n그러니까 이 논문의 '가속이 클수록 재발도 크다'는 결과는, \"치아이동 속도는 결국 생물학적 조직 재형성 속도가 제한한다\"는 교정학의 기본 원리를 약리학적으로 다시 확인해준 셈입니다.\n\n[발표 팁] 이 슬라이드가 발표의 핵심 — 단순 결과 요약이 아니라 '왜 이 세 약물을 비교했는가'를 치과약리학·구강생화학·치과교정학 세 과목의 언어로 설명하는 지점. 발표 중 가장 천천히, 자신의 말로 설명할 것.");
 }
 
-// ---------- Slide 10: Critical appraisal ----------
+// ---------- Slide 11: Critical appraisal ----------
 {
   const s = baseSlide();
   titleBar(s, "CRITICAL APPRAISAL", "비평적 고찰");
@@ -368,11 +401,11 @@ function statCallout(s, x, y, w, h, num, label, color) {
       { x: x + 0.3, y: cardTop + 0.75, w: cw - 0.6, h: cardH - 0.95, fontFace: BODY_FONT, fontSize: 11, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.35, valign: "top" });
     x += cw + 0.2;
   });
-  pageNum(s, 10);
+  pageNum(s, 11);
   s.addNotes("[대본 7:00~8:00]\n강점으로는 ARRIVE 가이드라인 준수, 윤리위 승인, 무작위 배정과 눈가림, 그리고 임상 측정과 조직학을 함께 사용한 이중 검증을 들 수 있습니다.\n\n한계로는, 배정만 눈가림했고 실제 측정은 한 명의 연구자가 다 했다는 점, 약물마다 용량을 하나씩만 테스트해서 용량-반응 분석이 불가능하다는 점, 그리고 투여 빈도도 매일·3일마다·매주로 제각각이라 공정한 비교인지 의문이 남는다는 점을 지적할 수 있습니다.\n\n임상 적용 측면에서는, 코르티코스테로이드는 가속 효과는 크지만 재발 위험이 가장 크기 때문에, 전신 스테로이드를 복용 중인 교정 환자라면 특히 신중해야 합니다. 반면 비타민D와 PGE2는 온건한 가속에 재발도 적어서 상대적으로 안전한 보조제가 될 수 있어 보입니다. 다만 PGE2는 고용량에서 치근흡수 위험이 있다는 보고도 있어서, 안전성과 효능 사이의 균형이 필요합니다.\n\n[발표 팁] 발표자 본인 의견으로 최종 다듬을 것 — 특히 Q&A 대비를 위해 표본수 검정력·비맹검 측정 부분은 원문 근거로 보강 추천.");
 }
 
-// ---------- Slide 11: Comparison with prior studies ----------
+// ---------- Slide 12: Comparison with prior studies ----------
 {
   const s = baseSlide();
   titleBar(s, "DISCUSSION", "기타 연구와의 결과 비교");
@@ -393,11 +426,11 @@ function statCallout(s, x, y, w, h, num, label, color) {
   s.addText("※ 상반된 결과는 연구기간·용량·힘·표본수 차이 때문(저자 설명) — 재발까지 세 약물을 비교한 연구는 이번이 최초, 진짜 공백은 여기 있음.", {
     x: MX, y: 6.45, w: CW, h: 0.5, fontFace: BODY_FONT, fontSize: 11.5, italic: true, color: C.primary, isTextBox: true, margin: 0,
   });
-  pageNum(s, 11);
+  pageNum(s, 12);
   s.addNotes("[대본 8:00~8:30]\n코르티코스테로이드는 선행연구마다 결과가 엇갈리는데, 이건 연구 기간이나 용량 차이 때문으로 보입니다. 비타민D는 여러 선행연구와 일관되게 가속 효과가 확인됐고, PGE2도 마찬가지로 가속 효과를 보고한 연구는 많지만 '효과 없음'을 보고한 연구는 없었습니다.\n\n[발표 팁] 원문 Discussion 'Comparison with previous studies' 문단 재구성. 코르티코스테로이드만 문헌 간 결과가 정반대인 이유(연구기간·용량 차이)를 짚으면 비평적 고찰과 자연스럽게 연결됨.");
 }
 
-// ---------- Slide 12: References ----------
+// ---------- Slide 13: References ----------
 {
   const s = baseSlide();
   titleBar(s, "REFERENCE", "참고문헌");
@@ -414,11 +447,11 @@ function statCallout(s, x, y, w, h, num, label, color) {
   s.addText("※ 슬라이드 11(선행연구 비교)에서 이름으로 인용한 문헌만 수록. 전체 참고문헌(28건)은 원 논문 References 참고.", {
     x: MX, y: 6.6, w: CW, h: 0.4, fontFace: BODY_FONT, fontSize: 10.5, italic: true, color: C.muted, isTextBox: true, margin: 0,
   });
-  pageNum(s, 12);
+  pageNum(s, 13);
   s.addNotes("교수님이 '그 인용 어디서 났나' 물으면 이 슬라이드로 바로 답 가능. 전체 28개 문헌은 원 논문 References 섹션에 있음.");
 }
 
-// ---------- Slide 13: Conclusion (moved right before Q&A, per author note) ----------
+// ---------- Slide 14: Conclusion (moved right before Q&A, per author note) ----------
 {
   const s = baseSlide(C.primary);
   s.addShape(pres.ShapeType.ellipse, { x: -3, y: -3, w: 8, h: 8, fill: { color: C.secondary, transparency: 55 }, line: { type: "none" } });
@@ -435,11 +468,11 @@ function statCallout(s, x, y, w, h, num, label, color) {
   s.addText("※ PGE₂·대조군 relapse 차이 p = 0.605(유의하지 않음) — Appendix A 참고", {
     x: MX, y: 5.75, w: 11.3, h: 0.4, fontFace: BODY_FONT, fontSize: 11.5, italic: true, color: "AECBDC", isTextBox: true, margin: 0,
   });
-  pageNum(s, 13);
+  pageNum(s, 14);
   s.addNotes("[대본 8:30~9:15]\n정리하면, 치아이동을 가장 많이 가속하는 약물이 보정 후 가장 많이 되돌아가기도 합니다. 코르티코스테로이드는 최대 가속·최대 재발, PGE2는 최소 가속·최소 재발, 비타민D는 그 중간입니다.\n\n'빠른 이동'과 '안정적인 결과' 사이의 트레이드오프를 보여준 첫 3약물 비교 연구이고, 치과약리학1의 PGE2/COX 내용과 구강생화학의 골대사·칼슘 항상성 내용이 이 논문 하나로 이어진다는 점에서 오늘 발표 논문으로 선정했습니다.\n\n[발표 팁] 이 결론 슬라이드는 Q&A 동안 화면에 계속 띄워둘 것(원 저자 의도). 치과약리학1(PGE2/COX)과 구강생화학(골대사·칼슘 항상성) 두 과목 내용이 이 논문 하나로 이어진다는 점을 다시 언급하며 마무리 후 Q&A로 전환.");
 }
 
-// ---------- Slide 14: Q&A ----------
+// ---------- Slide 15: Q&A ----------
 {
   const s = baseSlide(C.primaryDark);
   s.addText("Q & A", { x: MX, y: 2.9, w: 11, h: 1.3, fontFace: TITLE_FONT, fontSize: 54, bold: true, color: C.card, isTextBox: true, margin: 0 });
@@ -467,7 +500,7 @@ function statCallout(s, x, y, w, h, num, label, color) {
   ].join("\n"));
 }
 
-// ---------- Slide 15: Appendix A ----------
+// ---------- Slide 16: Appendix A ----------
 {
   const s = baseSlide();
   titleBar(s, "APPENDIX A · Q&A 백업", "재발이 '가장 적은' 군은 대조군도 PGE₂군도 아닌, 둘의 통계적 동률이다");
@@ -492,7 +525,7 @@ function statCallout(s, x, y, w, h, num, label, color) {
     { text: "원문 서술 간 불일치 주의  ", options: { bold: true, color: C.primary } },
     { text: "Results 본문·Conclusions는 \"PGE2가 최소 재발\"이라 서술하지만, Discussion 'Interpretation of findings'는 \"대조군이 최소, 그 다음 PGE2\"라 서술 — 둘 다 raw mean 순위와 통계적 유의성 서술을 혼용한 단순화이며, 정확한 결론은 위 표대로 '대조군·PGE2군 통계적 동률'이다.", options: { color: C.ink } },
   ], { x: MX + 0.35, y: 3.95, w: CW - 0.7, h: 2.55, fontFace: BODY_FONT, fontSize: 12.5, isTextBox: true, margin: 0, lineSpacingMultiple: 1.35 });
-  pageNum(s, 15);
+  pageNum(s, 16);
   s.addNotes("[Appendix A 사용법 — 교수님 질문 대비]\nQ&A 대비용 백업 슬라이드. 만약 \"원문 Discussion엔 대조군이 재발이 제일 적다고 되어 있는데?\"라는 질문이 나오면 이 슬라이드를 띄우고:\n1. Table III에서 양성대조 vs PGE2군의 p값이 0.605로, 통계적으로 두 군이 구분되지 않는다는 점을 보여주고,\n2. 원문 스스로도 Results/Conclusions와 Discussion에서 서술이 갈린다는 점을 지적하고,\n3. 정확히는 \"대조군과 PGE2군이 통계적으로 동률\"이라고 답하면 됩니다.");
 }
 

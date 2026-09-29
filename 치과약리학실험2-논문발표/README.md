@@ -3,7 +3,7 @@
 논문: *Three Pharmacological Agents for Acceleratory Orthodontic Tooth Movement and Subsequent Relapse: A Randomized Controlled Animal Study* (Hamed SA, et al., 2026, International Orthodontics, Elsevier)
 
 - `build.js` — pptxgenjs 기반 슬라이드 생성 스크립트 (Node.js)
-- `치과약리학실험2_논문발표.pptx` — 생성된 결과물 (15슬라이드: Title / Background / Mechanism / Objective·가설 / Methods / Results×3 / **치과약리학적 의의** / Critical appraisal / Discussion 비교 / References / Conclusion / Q&A / Appendix)
+- `치과약리학실험2_논문발표.pptx` — 생성된 결과물 (16슬라이드: Title / Background / Mechanism / Objective·가설 / Methods / **통계 방법 개념(Statistics 101)** / Results×3 / **치과약리학적 의의** / Critical appraisal / Discussion 비교 / References / Conclusion / Q&A / Appendix)
 - `발표대본.md` — 발표 대본 (10분 분량, 예상 질문·Appendix 사용법 포함)
 - `assets/` — 원 논문 Figure 1(loop 장착), Figure 3(H&E 조직 사진)
 
