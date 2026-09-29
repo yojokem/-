@@ -469,9 +469,13 @@ function card(s, x, y, w, h) {
   const s = baseSlide();
   titleBar(s, "실험 결과 · 02", "조별 데이터 종합 비교 — 6개 조 평균(A반 취합)");
 
+  // 평균·SD는 Results.xlsx(9/29, A1~A6 6개조 원자료)를 분 단위로 정규화해 직접 재계산.
+  // SD는 build.js에서 직접 그리지 않고, node build.js 이후 scripts/add_errorbars.py가
+  // 이 순서 그대로 각 차트의 <c:errBars>로 주입함 — 두 배열의 순서를 반드시 맞출 것.
   const settingLabels = ["ZPC\n15%↓", "ZPC\n정상", "ZPC\n15%↑", "ZPC\n15%↑+냉각판", "PC\n정상", "GIC\n정상", "RMGI"];
-  const settingAvgMin = [13.13, 11.20, 7.63, 10.08, 10.29, 6.03, 6.4];
-  const settingAvgLabel = ["13:08", "11:12", "7:38", "10:05", "10:17", "6:02", "6:24*"];
+  const settingAvgMin = [13.21, 11.22, 7.67, 10.12, 10.29, 6.08, 6.4];
+  const settingAvgLabel = ["13:13", "11:13", "7:40", "10:07", "10:17", "6:05", "6:24*"];
+  const settingSD = [4.02, 3.85, 2.73, 2.17, 4.04, 1.58, 0]; // RMGI: 취합 표에 항목 없어 A2조 단독값, SD=0
 
   card(s, MX, 1.6, 6.0, 3.7);
   s.addChart(pres.ChartType.bar, [{
@@ -488,7 +492,7 @@ function card(s, x, y, w, h) {
     catAxisLabelFontSize: 9.5, catAxisLabelColor: C.muted, catAxisLabelFontFace: BODY_FONT,
     valAxisLabelFontSize: 9.5, valAxisLabelColor: C.muted, valAxisTitle: "분", showValAxisTitle: false,
     valGridLine: { color: C.line, size: 0.75 }, catGridLine: { style: "none" },
-    valAxisMinVal: 0,
+    valAxisMinVal: 0, valAxisMaxVal: 18,
     barGapWidthPct: 40,
   });
   s.addText(
@@ -498,6 +502,7 @@ function card(s, x, y, w, h) {
 
   const ftLabels = ["ZPC\n15%↓", "ZPC\n정상", "ZPC\n15%↑", "ZPC\n15%↑+냉각판", "RMGI"];
   const ftAvg = [0.0352, 0.0470, 0.0492, 0.0123, 0.0152];
+  const ftSD = [0.0433, 0.0531, 0.0727, 0.0072, 0.0040]; // Results.xlsx SD열 그대로
 
   card(s, MX + 6.3, 1.6, 5.8, 3.7);
   s.addChart(pres.ChartType.bar, [{
@@ -514,19 +519,55 @@ function card(s, x, y, w, h) {
     catAxisLabelFontSize: 9.5, catAxisLabelColor: C.muted, catAxisLabelFontFace: BODY_FONT,
     valAxisLabelFontSize: 9.5, valAxisLabelColor: C.muted,
     valGridLine: { color: C.line, size: 0.75 }, catGridLine: { style: "none" },
-    valAxisMinVal: 0,
+    valAxisMinVal: 0, valAxisMaxVal: 0.13,
     barGapWidthPct: 40,
   });
 
   s.addText(
-    "※ 9/28 A1~A6 전체 취합 raw data 기준 재계산(본인 조 A2는 원 노트 mm:ss 표기, 나머지 조는 소수점 표기 — 자릿수가 60을 넘는 사례를 근거로 \"분 단위 소수\"로 환산, 콜론(:)으로 명확히 표기된 값은 그대로 사용). ⚠️ ZPC 15%↓·정상·15%↑ 세 조건 모두 한 조(A3)의 Film thickness 값이 다른 조 대비 3~10배 높게 나와(0.117/0.153/0.196) 평균을 끌어올림 — 같은 조의 냉각판 조건 값은 정상 범위인 점을 볼 때 측정·단위 오류 가능성 있음, 발표 전 해당 조에 재확인 권장. RMGI Setting time은 취합 표 자체에 항목이 없어 A2조 단독 값(6:24)만 반영.",
+    "※ Results.xlsx(9/29, A1~A6 6개조 원자료) 기준 재계산 — 오차 막대는 표준편차(SD) 1개. 막대가 길수록 조별 편차가 크다는 뜻. ZPC 15%↓·정상·15%↑ 세 조건의 Film thickness SD가 특히 큰 것은 한 조(A3)의 값이 다른 조 대비 3~10배 높게 나온 영향(0.117/0.153/0.196) — 같은 조의 냉각판 조건 값은 정상 범위라 측정·단위 오류 가능성 있음, 발표 전 해당 조에 재확인 권장. RMGI Setting time은 취합 표 자체에 항목이 없어 A2조 단독 값(6:24)만 반영, 오차 막대 없음.",
     { x: MX, y: 5.5, w: CW, h: 1.4, fontFace: BODY_FONT, fontSize: 9.5, italic: true, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.25 }
   );
   pageNum(s, 10);
-  s.addNotes("출처: 반 전체 취합 데이터(6개 조, A1~A6). Notion 9.22 수업일지의 '보고서: 전체조 데이터 평균/비교' 지시에 따라 구성. 시간 단위 해석에 가정이 포함되어 있으므로 발표 전 원본 스프레드시트로 재확인 필요.");
+  s.addNotes("출처: Results.xlsx(반 전체 취합 데이터, 6개 조 A1~A6, 9/29 최종본). Notion 9.22 수업일지의 '보고서: 전체조 데이터 평균/비교' 지시에 따라 구성. 오차 막대(에러바)는 표준편차 1개 폭.");
 }
 
-// ---------- Slide 11: 결과 해석 ----------
+// ---------- Slide 11: 조별 경향성 & 우리 조(A2) 위치 ----------
+{
+  const s = baseSlide();
+  titleBar(s, "실험 결과 · 03", "조별 경향성 & 우리 조(A2) 위치");
+
+  sectionLabel(s, "전체 조 경향성 (Setting time, 6개 조 평균)", MX, 1.6, CW);
+  bulletBlock(s, [
+    "분액비(P/L ratio)가 높을수록(15%↑) 평균 7:40으로 가장 빠르고, 낮을수록(15%↓) 13:13으로 가장 느림 — high < normal < low 순으로 느려질 것이라는 이론적 예측이 반 전체 데이터에서도 일관되게 확인됨",
+    "재료 간 경향도 일관됨: GIC(6:05)·RMGI(6:24)가 가장 빠르고, ZPC 계열이 전반적으로 가장 느림 — 재료 자체의 반응 속도 차이가 조건 차이보다 더 크게 작용",
+  ], { x: MX, y: 1.98, w: CW, h: 1.25, fontSize: 12.5 });
+
+  sectionLabel(s, "우리 조(A2)는 전체 평균 대비 어디에 위치하는가", MX, 3.3, CW);
+  bulletBlock(s, [
+    "6개 조건 중 5개에서 전체 평균보다 느리게 경화 — 유일하게 PC 정상 조건만 평균과 거의 같음(평균 대비 −0.2 SD)",
+    "편차가 가장 큰 조건은 ZPC 15%↑(+1.9 SD)와 GIC(+1.7 SD) — 우리 조가 indentor 판정 기준을 다른 조보다 보수적으로(늦게 경화로 판단) 적용했거나, 혼합 속도가 상대적으로 느렸을 가능성을 시사",
+  ], { x: MX, y: 3.68, w: CW, h: 1.1, fontSize: 12.5 });
+
+  const cmpTable = [
+    ["조건", "전체 평균", "우리 조(A2)", "차이(SD 배수)"],
+    ["ZPC 15%↓", "13:13", "16:46", "+0.9 SD"],
+    ["ZPC 정상", "11:13", "16:20", "+1.3 SD"],
+    ["ZPC 15%↑", "7:40", "12:45", "+1.9 SD"],
+    ["ZPC 15%↑+냉각판", "10:07", "12:03", "+0.9 SD"],
+    ["PC 정상", "10:17", "9:41", "−0.2 SD"],
+    ["GIC 정상", "6:05", "8:43", "+1.7 SD"],
+  ];
+  dataTable(s, cmpTable, {
+    x: MX, y: 4.95, w: CW, h: 2.0,
+    colW: [3.5, 2.81, 2.81, 2.81],
+    rowH: [0.32, 0.28, 0.28, 0.28, 0.28, 0.28, 0.28],
+    fontSize: 11,
+  });
+  pageNum(s, 11);
+  s.addNotes("SD 배수 = (A2 값 − 전체 평균) ÷ 표준편차. 일반적으로 ±1 SD 이내면 정상 범위, 그 밖이면 눈에 띄는 편차로 해석. ZPC 15%↑·GIC 두 조건에서 A2가 유독 느린 이유는 Q&A에서 나올 수 있으니, 혼합 균질도·indentor 판정 시점 등 슬라이드 12(결과 해석)의 오차 요인과 연결지어 답변할 것.");
+}
+
+// ---------- Slide 12: 결과 해석 ----------
 {
   const s = baseSlide();
   titleBar(s, "고찰", "결과 해석 및 고찰");
@@ -548,11 +589,11 @@ function card(s, x, y, w, h) {
     "RMGI(6:24)가 전 재료 중 가장 빠르게 경화 — auto-mixing으로 균질 혼합, 이중경화(dual-cure) 특성 영향으로 추정",
     "제조사 공식 값 대비 실측이 전반적으로 느림: ZPC(제조사 7:10 vs 실측 정상 16:20, 약 2.3배) · PC(제조사 4:00 vs 실측 9:41, 약 2.4배) · GIC(제조사 4:30 vs 실측 8:43, 약 1.9배) — ISO 표준 조건(37±1°C)이 아닌 상온(약 23°C)에서 실습했기 때문으로 추정",
   ], { x: MX, y: 6.1, w: CW, h: 1.3, fontSize: 12.5 });
-  pageNum(s, 11);
+  pageNum(s, 12);
   s.addNotes("참고 PPT(박수진 외, A반 5조) 고찰 구조를 참고해 재구성 — 다만 수치·조건은 오늘 A반 본인 실측 기준으로 새로 정리한 것.");
 }
 
-// ---------- Slide 12: 결론 ----------
+// ---------- Slide 13: 결론 ----------
 {
   const s = baseSlide();
   s.addShape(pres.ShapeType.rect, { x: 0, y: 0, w: W, h: H, fill: { color: C.primary }, line: { type: "none" } });
@@ -566,10 +607,10 @@ function card(s, x, y, w, h) {
     "냉각판(저온) 조건은 이론상 경화 지연을 예상했으나 실측은 반대 — 작업시간·경화시간을 분리 측정하지 못한 한계",
     "임상에서는 합착 목적·필요 작업시간에 따라 재료와 분액비를 조절해 사용해야 함 — 예: 빠른 경화가 필요하면 high P/L, 여유 있는 작업시간이 필요하면 low P/L 또는 냉각판 활용",
   ], { x: 0.9, y: 2.85, w: 11.3, h: 2.6, color: C.card, fontSize: 14 });
-  pageNum(s, 12);
+  pageNum(s, 13);
 }
 
-// ---------- Slide 13: 참고 문헌 ----------
+// ---------- Slide 14: 참고 문헌 ----------
 {
   const s = baseSlide();
   titleBar(s, "REFERENCE", "참고 문헌");
@@ -581,7 +622,7 @@ function card(s, x, y, w, h) {
   ];
   s.addText(refs.map((t, i) => ({ text: `[${i + 1}] ${t}`, options: { breakLine: i < refs.length - 1 } })),
     { x: MX, y: 2.0, w: CW, h: 4.0, fontFace: BODY_FONT, fontSize: 13.5, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.6, valign: "top" });
-  pageNum(s, 13);
+  pageNum(s, 14);
 }
 
 pres.writeFile({ fileName: "수복치과재료학실험_DentalCements_20260922.pptx" }).then(() => {
