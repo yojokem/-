@@ -1,7 +1,7 @@
 const pptxgen = require("pptxgenjs");
 
-const TITLE_FONT = "맑은 고딕";
-const BODY_FONT = "맑은 고딕";
+const TITLE_FONT = "Pretendard";
+const BODY_FONT = "Pretendard";
 const SERIF_FONT = "Cambria";
 
 // palette — deep clinical blue + warm amber accent (bone/orthodontic tone)
@@ -282,7 +282,7 @@ function statCallout(s, x, y, w, h, num, label, color) {
     ["4주 후 이동량(직후 대비 증가분)", "1.29 ± 0.11 mm", "6.50 ± 0.88 mm", "3.73 ± 0.14 mm", "2.80 ± 0.15 mm"],
   ];
   const formatted = table.map((row, ri) => row.map((c) => ri === 0 ? { text: c, options: { bold: true, color: C.card, fill: { color: C.primary } } } : { text: c, options: { color: C.ink } }));
-  s.addTable(formatted, { x: MX, y: 4.8, w: CW, h: 1.1, colW: [3.4, 2.3, 2.7, 2.3, 1.23], fontFace: BODY_FONT, fontSize: 11.5, border: { type: "solid", color: C.line, pt: 0.5 }, autoPage: false, valign: "middle", align: "center" });
+  s.addTable(formatted, { x: MX, y: 4.8, w: CW, h: 1.1, colW: [3.0, 2.3, 2.7, 2.3, 1.63], fontFace: BODY_FONT, fontSize: 11.5, border: { type: "solid", color: C.line, pt: 0.5 }, autoPage: false, valign: "middle", align: "center" });
   s.addText("※ 모든 군간 비교 p < 0.001 (One-way ANOVA + Tukey post-hoc). 원문 Table I·II 기준.", {
     x: MX, y: 6.05, w: CW, h: 0.4, fontFace: BODY_FONT, fontSize: 11, italic: true, color: C.muted, isTextBox: true, margin: 0,
   });
