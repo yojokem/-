@@ -227,7 +227,7 @@ function statCallout(s, x, y, w, h, num, label, color) {
   titleBar(s, "STATISTICS 101", "이 논문은 어떻게 통계로 검증했나");
 
   const cols = [
-    ["Shapiro–Wilk 검정", C.secondary, "정규성 검정", "데이터가 정규분포를 따르는지 확인하는 사전 점검 ▷ 통과해야 ANOVA 같은 모수적 검정을 쓸 수 있음"],
+    ["Shapiro–Wilk 검정", C.secondary, "정규성 검정", "데이터의 정규 분포성 확인 ▷ ANOVA 등 모수적 검정 가능"],
     ["One-way ANOVA", C.primary, "일원분산분석", "3개 이상 군의 평균을 한 번에 비교 ▷ \"군 사이에 적어도 하나는 다르다\"까지만 알려줌, 어느 군끼리 다른지는 모름"],
     ["Tukey post-hoc", C.accent, "사후검정", "ANOVA가 유의하면 모든 군을 쌍(pair)으로 나눠 비교 ▷ 정확히 어느 군과 어느 군이 다른지 확정 — 이 논문의 '군간 비교' 표가 전부 이 결과"],
     ["Paired t-test", C.secondary, "대응표본 t-검정", "같은 개체를 두 시점에서 비교 ▷ 예: 같은 랫드의 '가속기 직후' vs '보정 1주 후' 위치 비교(군 내 비교)"],
@@ -246,9 +246,9 @@ function statCallout(s, x, y, w, h, num, label, color) {
   card(s, MX, cardTop + cardH + 0.2, CW, 1.25, "EAF2F7");
   s.addText([
     { text: "이 논문의 분석 흐름  ", options: { bold: true, color: C.primary } },
-    { text: "Shapiro–Wilk(정규성 확인) ▷ One-way ANOVA(군간 전체 비교) ▷ 유의하면 Tukey post-hoc(어느 쌍이 다른지 확정) — 같은 군의 시점 전후(가속 후 vs 보정 후 등) 비교는 paired t-test로 별도 진행.\n", options: { color: C.ink } },
+    { text: "Shapiro–Wilk ▷ One-way ANOVA ▷ 유의하면 Tukey post-hoc — 군내 시점별 비교(가속 후 vs 보정 후 등)는 paired t-test로 별도 진행\n", options: { color: C.ink } },
     { text: "p < 0.05의 의미  ", options: { bold: true, color: C.primary } },
-    { text: "이 차이가 우연히 생겼을 확률이 5% 미만이라는 뜻 — 관행적으로 이 기준을 넘으면 '통계적으로 유의하다'고 판단. 이 논문 대부분의 비교는 p < 0.001로, 우연일 확률이 매우 낮음.", options: { color: C.ink } },
+    { text: "이 차이가 우연히 생겼을 확률이 5% 미만이라는 뜻 — 관행적 기준; 이 논문 대부분의 비교는 p < 0.001로, 우연일 확률이 매우 낮다.", options: { color: C.ink } },
   ], { x: MX + 0.3, y: cardTop + cardH + 0.37, w: CW - 0.6, h: 1.0, fontFace: BODY_FONT, fontSize: 11, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3 });
   pageNum(s, 6);
   s.addNotes("[대본 — 결과 슬라이드 진입 전 삽입]\n결과를 보기 전에 이 논문이 쓴 통계 방법을 간단히 짚고 가겠습니다.\n\n먼저 Shapiro-Wilk 검정으로 데이터가 정규분포를 따르는지 확인했고, 그다음 One-way ANOVA로 5개 군 평균을 한꺼번에 비교했습니다. ANOVA는 '군 사이에 차이가 있다'까지만 알려주기 때문에, 정확히 어느 군과 어느 군이 다른지는 Tukey post-hoc 검정으로 하나하나 다시 비교합니다. 그리고 같은 군을 시점별로 비교할 때는 — 예를 들어 같은 랫드의 가속기 직후와 보정 1주 후를 비교할 때는 — paired t-test를 썼습니다.\n\np값은 이 차이가 우연히 나왔을 확률을 뜻하는데, 관행적으로 5% 미만이면 '통계적으로 유의하다'고 봅니다. 이 논문은 대부분 p<0.001로 나와서, 우연일 가능성이 매우 낮다고 볼 수 있습니다.\n\n[발표 팁] 이 슬라이드는 통계를 잘 모르는 청중을 위한 배경 설명 슬라이드. 너무 길게 끌지 말고 1분 이내로 넘어갈 것 — 핵심은 'ANOVA는 전체 비교, Tukey는 쌍별 비교, paired t-test는 같은 군의 전후 비교'라는 역할 구분.");
@@ -307,7 +307,7 @@ function statCallout(s, x, y, w, h, num, label, color) {
 
   card(s, MX, 4.1, CW, 1.9);
   s.addText("조직학적 소견이 임상 측정을 뒷받침", { x: MX + 0.35, y: 4.3, w: CW - 0.7, h: 0.4, fontFace: TITLE_FONT, fontSize: 14, bold: true, color: C.primary, isTextBox: true, margin: 0 });
-  s.addText("치주인대(PDL) 폭이 코르티코스테로이드군에서 가장 넓게 유지(압박·긴장측 모두) — 대조군이 가장 좁음, 비타민D·PGE₂군은 중간 수준. 임상측정 결과와 조직 소견이 서로를 뒷받침한다.", {
+  s.addText("치주인대(PDL) 폭이 코르티코스테로이드군에서 가장 넓게 유지(압박·긴장측 모두) — 대조군이 가장 좁음, 비타민D·PGE₂군은 중간 수준.", {
     x: MX + 0.35, y: 4.75, w: CW - 0.7, h: 1.15, fontFace: BODY_FONT, fontSize: 13, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
   });
   s.addText("※ 양성대조 vs PGE₂ 재발량 차이 — 통계적으로 유의하지 않음(p = 0.605). 자세한 내용은 부록(Appendix A) 참고.", {
