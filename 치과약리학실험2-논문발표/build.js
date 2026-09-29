@@ -1,21 +1,35 @@
 const pptxgen = require("pptxgenjs");
 
-const TITLE_FONT = "Wanted Sans";
-const BODY_FONT = "Pretendard";
+const TITLE_FONT = "맑은 고딕";
+const BODY_FONT = "맑은 고딕";
+const SERIF_FONT = "Cambria";
 
+// palette — deep clinical blue + warm amber accent (bone/orthodontic tone)
 const C = {
-  primary: "028090",
-  secondary: "00A896",
-  accent: "02C39A",
-  ink: "0B2E33",
-  paper: "F7FBFB",
-  white: "FFFFFF",
-  muted: "5B7A7E",
+  primary: "1B4965",     // deep blue
+  primaryDark: "102C3A",
+  secondary: "3D7EA6",   // mid blue
+  accent: "D97706",      // amber (used for corticosteroid / danger signal)
+  ink: "16232E",
+  paper: "F5F6F8",       // neutral cool gray background
+  card: "FFFFFF",
+  muted: "5B6B7A",
+  line: "E1E5EA",
+};
+
+// categorical drug colors — reused across every chart/callout in the deck
+const DRUG = {
+  control: "9AA5B1",     // gray — positive control (CPG)
+  cortico: "D97706",     // amber — corticosteroid (COG) — biggest accel & biggest relapse
+  vitD: "3D7EA6",        // blue — vitamin D (VDG)
+  pge2: "2F855A",        // green — PGE2 (PGE2G) — mildest, safest
 };
 
 const pres = new pptxgen();
-pres.layout = "LAYOUT_WIDE"; // 13.3 x 7.5
+pres.layout = "LAYOUT_WIDE";
 const W = 13.33, H = 7.5;
+const MX = 0.7;
+const CW = W - MX * 2;
 
 function baseSlide(bg) {
   const s = pres.addSlide();
@@ -26,269 +40,446 @@ function baseSlide(bg) {
 function titleBar(s, kicker, title, opts = {}) {
   const dark = !!opts.dark;
   s.addText(kicker, {
-    x: 0.6, y: 0.45, w: 10, h: 0.4,
-    fontFace: BODY_FONT, fontSize: 13, bold: true,
-    color: dark ? C.accent : C.secondary, charSpacing: 1, isTextBox: true, margin: 0,
+    x: MX, y: 0.4, w: CW, h: 0.32,
+    fontFace: BODY_FONT, fontSize: 12, bold: true, charSpacing: 1,
+    color: dark ? C.accent : C.secondary, isTextBox: true, margin: 0,
   });
   s.addText(title, {
-    x: 0.6, y: 0.82, w: 12.1, h: 1.0,
-    fontFace: TITLE_FONT, fontSize: 30, bold: true,
-    color: dark ? C.white : C.ink, isTextBox: true, margin: 0,
+    x: MX, y: 0.7, w: CW, h: 0.7,
+    fontFace: TITLE_FONT, fontSize: 24, bold: true,
+    color: dark ? C.card : C.primary, isTextBox: true, margin: 0,
   });
 }
 
 function pageNum(s, n) {
   s.addText(String(n), {
-    x: W - 0.9, y: H - 0.55, w: 0.5, h: 0.35,
-    fontFace: BODY_FONT, fontSize: 11, color: C.muted, align: "right", isTextBox: true, margin: 0,
+    x: W - 0.9, y: H - 0.5, w: 0.5, h: 0.35,
+    fontFace: SERIF_FONT, fontSize: 11, color: C.muted, align: "right", isTextBox: true, margin: 0,
   });
+}
+
+function sectionLabel(s, text, x, y, w, color) {
+  s.addText(text, { x, y, w, h: 0.38, fontFace: TITLE_FONT, fontSize: 14.5, bold: true, color: color || C.primary, isTextBox: true, margin: 0 });
+}
+
+function bulletBlock(s, items, opts) {
+  s.addText(
+    items.map((t, i) => ({ text: "•  " + t, options: { breakLine: i < items.length - 1 } })),
+    Object.assign({ fontFace: BODY_FONT, fontSize: 13, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.4, valign: "top" }, opts)
+  );
+}
+
+function card(s, x, y, w, h, fill) {
+  s.addShape(pres.ShapeType.roundRect, {
+    x, y, w, h, rectRadius: 0.1, fill: { color: fill || C.card }, line: { type: "none" },
+    shadow: { type: "outer", color: "16232E", opacity: 0.1, blur: 6, offset: 2, angle: 90 },
+  });
+}
+
+function statCallout(s, x, y, w, h, num, label, color) {
+  card(s, x, y, w, h);
+  s.addText(num, { x, y: y + 0.25, w, h: h * 0.55, fontFace: TITLE_FONT, fontSize: 40, bold: true, color, align: "center", isTextBox: true, margin: 0 });
+  s.addText(label, { x, y: y + h - 0.6, w, h: 0.5, fontFace: BODY_FONT, fontSize: 14, bold: true, color: C.ink, align: "center", isTextBox: true, margin: 0 });
 }
 
 // ---------- Slide 1: Title ----------
 {
-  const s = baseSlide(C.ink);
-  s.addShape(pres.ShapeType.ellipse, { x: 9.6, y: -2.2, w: 7, h: 7, fill: { color: C.primary, transparency: 55 }, line: { type: "none" } });
-  s.addShape(pres.ShapeType.ellipse, { x: -2.5, y: 4.5, w: 5.5, h: 5.5, fill: { color: C.secondary, transparency: 65 }, line: { type: "none" } });
+  const s = baseSlide(C.primaryDark);
+  s.addShape(pres.ShapeType.ellipse, { x: 9.4, y: -2.3, w: 7, h: 7, fill: { color: C.primary, transparency: 45 }, line: { type: "none" } });
+  s.addShape(pres.ShapeType.ellipse, { x: -2.6, y: 4.6, w: 5.5, h: 5.5, fill: { color: C.secondary, transparency: 60 }, line: { type: "none" } });
 
   s.addText("치과약리학실험2 · 논문 발표", {
-    x: 0.9, y: 1.7, w: 10, h: 0.5, fontFace: BODY_FONT, fontSize: 15, bold: true,
+    x: 0.9, y: 1.55, w: 10, h: 0.45, fontFace: BODY_FONT, fontSize: 15, bold: true,
     color: C.accent, charSpacing: 1, isTextBox: true, margin: 0,
   });
-  s.addText("Efficacy of Analgesia Promoted by Lidocaine and\nArticaine in Third Molar Extraction Surgery", {
-    x: 0.9, y: 2.1, w: 11.3, h: 2.3, fontFace: TITLE_FONT, fontSize: 29, bold: true,
-    color: C.white, isTextBox: true, margin: 0, lineSpacingMultiple: 1.2,
+  s.addText("Three Pharmacological Agents for Acceleratory\nOrthodontic Tooth Movement and Subsequent Relapse", {
+    x: 0.9, y: 2.05, w: 11.3, h: 1.9, fontFace: TITLE_FONT, fontSize: 27, bold: true,
+    color: C.card, isTextBox: true, margin: 0, lineSpacingMultiple: 1.25,
   });
-  s.addText("A Split-Mouth, Randomized, Controlled Trial", {
-    x: 0.9, y: 4.55, w: 11, h: 0.5, fontFace: BODY_FONT, fontSize: 17, italic: true,
-    color: C.secondary, isTextBox: true, margin: 0,
+  s.addText("A Randomized Controlled Animal Study — 코르티코스테로이드 · 비타민D · PGE₂ 비교", {
+    x: 0.9, y: 4.0, w: 11.3, h: 0.5, fontFace: BODY_FONT, fontSize: 16, italic: true,
+    color: "AECBDC", isTextBox: true, margin: 0,
   });
 
   s.addText([
     { text: "저널  ", options: { bold: true, color: C.accent } },
-    { text: "Oral and Maxillofacial Surgery (Springer), 2024\n", options: { color: C.white } },
+    { text: "International Orthodontics, 2026;24:101112 (Elsevier)\n", options: { color: C.card } },
+    { text: "저자  ", options: { bold: true, color: C.accent } },
+    { text: "Hamed SA, et al. (Mansoura University, Egypt)\n", options: { color: C.card } },
     { text: "발표자  ", options: { bold: true, color: C.accent } },
-    { text: "[이름 입력]", options: { color: C.white } },
-  ], { x: 0.9, y: 5.6, w: 8, h: 1.0, fontFace: BODY_FONT, fontSize: 14, isTextBox: true, margin: 0, lineSpacingMultiple: 1.4 });
+    { text: "김민성", options: { color: C.card } },
+  ], { x: 0.9, y: 5.15, w: 9, h: 1.5, fontFace: BODY_FONT, fontSize: 14, isTextBox: true, margin: 0, lineSpacingMultiple: 1.5 });
 
-  s.addNotes("발표 시작 인사. 논문 출처(Springer, Oral and Maxillofacial Surgery, 2024), 선정 사유(치과약리학 직결, 최근 5년 이내, 국제학술지 Original article)를 한 줄로 언급.");
+  s.addNotes("발표 시작 인사. 이 연구는 랫드(쥐) 동물실험이라는 점을 처음부터 명확히 밝힐 것. 저널 출처(International Orthodontics, Elsevier)와 선정 사유(치과약리학1의 PGE2/COX 경로 + 구강생화학의 칼슘항상성·치아이동 생화학 두 과목 내용이 한 논문에서 만난다는 점)를 한 줄로 언급.");
 }
 
-// ---------- Slide 2: Clinical background ----------
+// ---------- Slide 2: Two rabbits ----------
 {
   const s = baseSlide();
-  titleBar(s, "BACKGROUND", "왜 국소마취제 선택이 중요한가");
+  titleBar(s, "BACKGROUND", "교정 치아 이동 가속과 재발, 두 마리 토끼");
 
   const items = [
-    ["하악 제3대구치 발치", "가장 흔한 구강악안면외과 시술 중 하나 — 마취 실패/지연 시 환자 불안·통증 급증"],
-    ["리도카인 (Lidocaine)", "가장 널리 쓰이는 표준 국소마취제, 2% 농도 + 에피네프린 병용이 일반적"],
-    ["아티카인 (Articaine)", "티오펜 고리 구조로 조직 침투력이 높다고 알려진 4세대 아마이드계 마취제"],
+    ["재발(relapse)과 고정력 상실", "교정 장치 제거 후 잔재 결합력이 풀리며 치아가 원래 위치로 되돌아가는 현상 — 원인은 아직 명확히 규명되지 않음"],
+    ["치아 이동 가속의 필요성", "치료 기간 단축을 위해 수술적·기계적·약리학적 방법으로 치아 이동을 가속하는 연구가 활발 — 국소 주사·전신 투여 모두 시도됨"],
+    ["미해결 과제", "가속 효과를 낸 약물들이 보정(retention) 후 재발에 어떤 영향을 주는지는 선행연구가 거의 없음 — 이 논문이 처음으로 3개 약물의 재발까지 비교"],
   ];
-  let y = 2.1;
+  let y = 1.85;
   items.forEach(([h, d], i) => {
-    s.addShape(pres.ShapeType.roundRect, { x: 0.6, y, w: 12.1, h: 1.35, rectRadius: 0.08, fill: { color: C.white }, line: { color: C.secondary, width: 0.75, transparency: 70 }, shadow: { type: "outer", color: "000000", opacity: 0.12, blur: 6, offset: 2, angle: 90 } });
-    s.addShape(pres.ShapeType.ellipse, { x: 0.85, y: y + 0.35, w: 0.65, h: 0.65, fill: { color: C.primary }, line: { type: "none" } });
-    s.addText(String(i + 1), { x: 0.85, y: y + 0.35, w: 0.65, h: 0.65, fontFace: TITLE_FONT, fontSize: 18, bold: true, color: C.white, align: "center", valign: "middle", isTextBox: true, margin: 0 });
-    s.addText(h, { x: 1.75, y: y + 0.15, w: 4.6, h: 0.5, fontFace: TITLE_FONT, fontSize: 17, bold: true, color: C.ink, isTextBox: true, margin: 0, valign: "middle" });
-    s.addText(d, { x: 6.5, y: y + 0.15, w: 5.9, h: 1.05, fontFace: BODY_FONT, fontSize: 13.5, color: C.muted, isTextBox: true, margin: 0, valign: "middle" });
-    y += 1.55;
+    card(s, MX, y, CW, 1.5);
+    s.addShape(pres.ShapeType.ellipse, { x: MX + 0.3, y: y + 0.42, w: 0.66, h: 0.66, fill: { color: C.primary }, line: { type: "none" } });
+    s.addText(String(i + 1), { x: MX + 0.3, y: y + 0.42, w: 0.66, h: 0.66, fontFace: TITLE_FONT, fontSize: 18, bold: true, color: C.card, align: "center", valign: "middle", isTextBox: true, margin: 0 });
+    s.addText(h, { x: MX + 1.25, y: y + 0.2, w: 4.5, h: 0.5, fontFace: TITLE_FONT, fontSize: 16, bold: true, color: C.ink, isTextBox: true, margin: 0, valign: "middle" });
+    s.addText(d, { x: MX + 5.9, y: y + 0.15, w: CW - 6.15, h: 1.2, fontFace: BODY_FONT, fontSize: 13, color: C.muted, isTextBox: true, margin: 0, valign: "middle" });
+    y += 1.68;
   });
   pageNum(s, 2);
-  s.addNotes("발치 시 통증 조절 실패가 환자 경험과 시술 효율에 미치는 영향을 도입부에서 강조. 리도카인/아티카인의 약리학적 차이(조직 침투력, pKa 등)는 다음 슬라이드로 연결.");
+  s.addNotes("발치 시 통증 조절 실패가 환자 경험에 미치는 영향과 유사하게, 재발도 교정 치료의 장기 성공을 좌우하는 문제임을 도입부에서 강조.");
 }
 
-// ---------- Slide 3: Evidence gap ----------
+// ---------- Slide 3: mechanism cards ----------
 {
   const s = baseSlide();
-  titleBar(s, "EVIDENCE GAP", "기존 근거의 공백");
+  titleBar(s, "MECHANISM", "약물별 파골세포 형성 경로");
 
-  s.addText("완충(Buffered) 제형 효과는 연구마다 결과가 엇갈림", {
-    x: 0.6, y: 1.95, w: 12, h: 0.5, fontFace: BODY_FONT, fontSize: 16, bold: true, color: C.ink, isTextBox: true, margin: 0,
-  });
-
-  const rows = [
-    ["성인 · 제3대구치 발치 (2024, Springer)", "아티카인 발현시간 유의하게 단축", C.accent],
-    ["성인 · 발치 시 완충 리도카인 (2024, JOMS/Cincinnati)", "완충 처리 효과 통계적 유의성 없음", C.muted],
-    ["소아 · 침윤/전달마취 (2019, 2024)", "완충 제형이 주사통·발현시간 유의하게 개선", C.accent],
+  const cols = [
+    ["코르티코스테로이드", DRUG.cortico, "염증 유전자 발현 억제 + 파골세포형성(osteoclastogenesis) 직접 자극 + 콜라게나아제 활성 증가", "→ 골흡수 강하게 촉진"],
+    ["비타민D", DRUG.vitD, "파골세포 활성 자체를 증가시키고 면역매개체를 조절", "→ 골개조 촉진 + osteocalcin·비타민D수용체 유전자 발현에도 관여"],
+    ["PGE₂", DRUG.pge2, "RANKL 매개 파골세포형성 자극 + 국소 골흡수 강화", "— 교정력에 의한 내인성 경로(COX→PGE2→RANKL)를 외부에서 직접 보충"],
   ];
-  let y = 2.65;
-  rows.forEach(([label, res, color]) => {
-    s.addShape(pres.ShapeType.roundRect, { x: 0.6, y, w: 12.1, h: 1.05, rectRadius: 0.06, fill: { color: C.white }, line: { type: "none" }, shadow: { type: "outer", color: "000000", opacity: 0.1, blur: 5, offset: 2, angle: 90 } });
-    s.addText(label, { x: 0.95, y: y + 0.12, w: 7.3, h: 0.8, fontFace: BODY_FONT, fontSize: 13.5, bold: true, color: C.ink, isTextBox: true, margin: 0, valign: "middle" });
-    s.addShape(pres.ShapeType.roundRect, { x: 8.5, y: y + 0.22, w: 4.0, h: 0.6, rectRadius: 0.3, fill: { color: color, transparency: 85 }, line: { type: "none" } });
-    s.addText(res, { x: 8.5, y: y + 0.22, w: 4.0, h: 0.6, fontFace: BODY_FONT, fontSize: 12, bold: true, color: color === C.muted ? C.muted : "047857", align: "center", valign: "middle", isTextBox: true, margin: 0 });
-    y += 1.25;
+  let x = MX;
+  const cw = 3.95, cardTop = 1.8, cardH = 3.9;
+  cols.forEach(([name, color, l1, l2]) => {
+    card(s, x, cardTop, cw, cardH);
+    s.addShape(pres.ShapeType.roundRect, { x: x + 0.28, y: cardTop + 0.25, w: cw - 0.56, h: 0.5, rectRadius: 0.08, fill: { color }, line: { type: "none" } });
+    s.addText(name, { x: x + 0.28, y: cardTop + 0.25, w: cw - 0.56, h: 0.5, fontFace: TITLE_FONT, fontSize: 15, bold: true, color: C.card, align: "center", valign: "middle", isTextBox: true, margin: 0 });
+    s.addText(l1, { x: x + 0.28, y: cardTop + 1.0, w: cw - 0.56, h: 1.7, fontFace: BODY_FONT, fontSize: 12.5, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.35, valign: "top" });
+    s.addText(l2, { x: x + 0.28, y: cardTop + 2.85, w: cw - 0.56, h: 0.9, fontFace: BODY_FONT, fontSize: 12, bold: true, italic: true, color, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3, valign: "top" });
+    x += cw + 0.2;
   });
-
-  s.addText("→ 연령대·시술 종류에 따라 결과가 불일치 — 한국인 성인·제3대구치 발치 상황에 특화된 head-to-head 비교 데이터는 부재", {
-    x: 0.6, y: 6.5, w: 12.1, h: 0.7, fontFace: BODY_FONT, fontSize: 13, italic: true, color: C.primary, isTextBox: true, margin: 0,
+  s.addText("※ 세 약물 모두 '파골세포 활성화'를 유발하지만, 도달 경로가 서로 달라 가속 강도와 재발이 나타나는 양상이 다르다.", {
+    x: MX, y: cardTop + cardH + 0.15, w: CW, h: 0.5, fontFace: BODY_FONT, fontSize: 12.5, italic: true, color: C.muted, isTextBox: true, margin: 0,
   });
   pageNum(s, 3);
-  s.addNotes("이 슬라이드는 오늘 소개할 논문이 채우는 공백을 시각적으로 보여주는 목적. 세 연구 결과가 서로 다르다는 점을 강조.");
+  s.addNotes("구강생화학 '뼈와 치아의 석회화, 혈청칼슘 항상성' 챕터에서 배운 칼슘/인 대사 조절호르몬(비타민D, PTH 등) 내용과 연결지어 설명하면 좋음. 세 경로의 차이는 슬라이드 9(치과약리학적 의의)에서 더 깊게 다룸.");
 }
 
 // ---------- Slide 4: Objective & Hypothesis ----------
 {
   const s = baseSlide(C.primary);
-  s.addText("OBJECTIVE & HYPOTHESIS", { x: 0.6, y: 0.45, w: 10, h: 0.4, fontFace: BODY_FONT, fontSize: 13, bold: true, color: C.accent, charSpacing: 1, isTextBox: true, margin: 0 });
-  s.addText("연구 목적 및 가설", { x: 0.6, y: 0.82, w: 12, h: 0.9, fontFace: TITLE_FONT, fontSize: 30, bold: true, color: C.white, isTextBox: true, margin: 0 });
+  s.addText("OBJECTIVE & HYPOTHESIS", { x: MX, y: 0.4, w: 10, h: 0.32, fontFace: BODY_FONT, fontSize: 12, bold: true, color: C.accent, charSpacing: 1, isTextBox: true, margin: 0 });
+  s.addText("연구 목적 및 가설", { x: MX, y: 0.7, w: 12, h: 0.8, fontFace: TITLE_FONT, fontSize: 26, bold: true, color: C.card, isTextBox: true, margin: 0 });
 
-  s.addShape(pres.ShapeType.roundRect, { x: 0.6, y: 2.1, w: 12.1, h: 1.9, rectRadius: 0.1, fill: { color: C.white, transparency: 8 }, line: { type: "none" } });
-  s.addText("연구 목적", { x: 1.0, y: 2.35, w: 4, h: 0.4, fontFace: BODY_FONT, fontSize: 14, bold: true, color: C.accent, isTextBox: true, margin: 0 });
-  s.addText("하악·상악 제3대구치 발치 환자에서 4% 아티카인(+에피네프린)과 2% 리도카인(+에피네프린)의 마취 발현시간, 통증(VAS), 추가 마취 필요성을 비교한다.", {
-    x: 1.0, y: 2.8, w: 11.3, h: 1.1, fontFace: BODY_FONT, fontSize: 15, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
+  card(s, MX, 1.9, CW, 2.2, C.card);
+  s.addText("연구 목적", { x: MX + 0.4, y: 2.15, w: 4, h: 0.4, fontFace: BODY_FONT, fontSize: 14, bold: true, color: C.accent, isTextBox: true, margin: 0 });
+  s.addText("랫드 모델에서 코르티코스테로이드·비타민D·PGE₂의 국소(점막하) 주입이 교정 치아이동 가속 및 보정 후 재발에 미치는 영향을 비교한다.\n귀무가설(H0): 세 약물 간 가속기·재발기 효과에 차이가 없다.", {
+    x: MX + 0.4, y: 2.6, w: CW - 0.8, h: 1.4, fontFace: BODY_FONT, fontSize: 14.5, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.35,
   });
 
-  s.addShape(pres.ShapeType.roundRect, { x: 0.6, y: 4.3, w: 12.1, h: 1.9, rectRadius: 0.1, fill: { color: C.accent }, line: { type: "none" } });
-  s.addText("가설 (H1)", { x: 1.0, y: 4.55, w: 4, h: 0.4, fontFace: BODY_FONT, fontSize: 14, bold: true, color: C.ink, isTextBox: true, margin: 0 });
-  s.addText("아티카인 측 부위가 리도카인 측 부위보다 마취 발현시간이 유의하게 짧고, 추가 마취 필요율이 유의하게 낮을 것이다.", {
-    x: 1.0, y: 5.0, w: 11.3, h: 1.0, fontFace: BODY_FONT, fontSize: 15, bold: true, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
+  s.addShape(pres.ShapeType.roundRect, { x: MX, y: 4.35, w: CW, h: 2.2, rectRadius: 0.1, fill: { color: C.accent }, line: { type: "none" } });
+  s.addText("가설 (H1) — 발표자 재구성", { x: MX + 0.4, y: 4.6, w: 6, h: 0.4, fontFace: BODY_FONT, fontSize: 14, bold: true, color: C.primaryDark, isTextBox: true, margin: 0 });
+  s.addText("세 약물 모두 대조군보다 치아이동을 가속하되, 가속 정도가 큰 약물일수록 보정 후 재발량도 클 것이다 (가속–재발 트레이드오프).", {
+    x: MX + 0.4, y: 5.05, w: CW - 0.8, h: 1.3, fontFace: BODY_FONT, fontSize: 15, bold: true, color: C.primaryDark, isTextBox: true, margin: 0, lineSpacingMultiple: 1.35,
   });
   pageNum(s, 4);
-  s.addNotes("가설은 저자들이 명시한 연구가설이 아니라 발표자가 선행연구 흐름을 근거로 재구성한 것임을 언급하면 좋음.");
+  s.addNotes("이 가설은 저자들이 명시한 공식 가설이 아니라, 발표자가 결과 패턴(코르티코스테로이드=최대가속·최대재발, PGE2=최소가속·최소재발)을 보고 재구성한 것임을 반드시 언급.");
 }
 
-// ---------- Slide 5: Methods - design ----------
+// ---------- Slide 5: Study design ----------
 {
   const s = baseSlide();
-  titleBar(s, "METHODS", "연구 설계 및 대상");
+  titleBar(s, "METHODS", "5군 랫드 모델 — 4주 가속 + 2주 보정 + 2주 재발");
 
-  const cards = [
-    ["설계", "Split-mouth, 이중눈가림,\n무작위 대조 연구"],
-    ["대상자 수", "60명\n(양측 상·하악 제3대구치 발치)"],
-    ["개입 (좌우 무작위 배정)", "4% 아티카인 + 에피네프린 1:100,000\nvs\n2% 리도카인 + 에피네프린 1:100,000"],
+  card(s, MX, 1.75, 6.6, 4.9);
+  s.addText("설계", { x: MX + 0.35, y: 1.95, w: 5.9, h: 0.4, fontFace: TITLE_FONT, fontSize: 15, bold: true, color: C.primary, isTextBox: true, margin: 0 });
+  bulletBlock(s, [
+    "무작위배정, 눈가림(2번째 저자가 배정) — 최종 배정 후엔 주 연구자 1인이 개입·측정·평가 전부 수행",
+    "Sprague–Dawley 랫드 105마리(수컷, 6–12주령) → 5군, 군당 21마리",
+    "장치: 상악 절치 사이 스테인리스 open-coil loop, 25g 힘, tipping 이동",
+    "측정: 디지털 캘리퍼(0.01mm)로 절치 간 거리",
+  ], { x: MX + 0.35, y: 2.4, w: 5.9, h: 1.9, fontSize: 12 });
+
+  const groups = [
+    ["I", "음성대조", "무처치, OTM 없음", DRUG.control],
+    ["II", "양성대조(CPG)", "OTM만, 약물 없음", DRUG.control],
+    ["III", "코르티코스테로이드(COG)", "50µL 8mg/kg, 매일 주입", DRUG.cortico],
+    ["IV", "비타민D(VDG)", "20µL 10⁻¹⁰mol/L, 3일마다 주입", DRUG.vitD],
+    ["V", "PGE₂(PGE₂G)", "0.1µg/0.1mL, 매주 주입", DRUG.pge2],
   ];
-  let x = 0.6;
-  const cw = 3.95, gap = 0.2;
-  cards.forEach(([h, d]) => {
-    s.addShape(pres.ShapeType.roundRect, { x, y: 2.1, w: cw, h: 3.4, rectRadius: 0.1, fill: { color: C.white }, line: { color: C.secondary, width: 1, transparency: 75 }, shadow: { type: "outer", color: "000000", opacity: 0.12, blur: 6, offset: 2, angle: 90 } });
-    s.addShape(pres.ShapeType.roundRect, { x: x + 0.35, y: 2.45, w: cw - 0.7, h: 0.55, rectRadius: 0.28, fill: { color: C.primary, transparency: 88 }, line: { type: "none" } });
-    s.addText(h, { x: x + 0.35, y: 2.45, w: cw - 0.7, h: 0.55, fontFace: BODY_FONT, fontSize: 13, bold: true, color: C.primary, align: "center", valign: "middle", isTextBox: true, margin: 0 });
-    s.addText(d, { x: x + 0.3, y: 3.2, w: cw - 0.6, h: 2.1, fontFace: BODY_FONT, fontSize: 14.5, color: C.ink, align: "center", valign: "middle", isTextBox: true, margin: 0, lineSpacingMultiple: 1.35 });
+  let gy = 4.65;
+  groups.forEach(([n, name, dose, color]) => {
+    s.addShape(pres.ShapeType.roundRect, { x: MX + 0.35, y: gy, w: 0.38, h: 0.33, rectRadius: 0.06, fill: { color }, line: { type: "none" } });
+    s.addText(n, { x: MX + 0.35, y: gy, w: 0.38, h: 0.33, fontFace: TITLE_FONT, fontSize: 11, bold: true, color: C.card, align: "center", valign: "middle", isTextBox: true, margin: 0 });
+    s.addText(name, { x: MX + 0.86, y: gy - 0.03, w: 2.5, h: 0.4, fontFace: BODY_FONT, fontSize: 11, bold: true, color: C.ink, valign: "middle", isTextBox: true, margin: 0 });
+    s.addText(dose, { x: MX + 3.4, y: gy - 0.03, w: 2.9, h: 0.4, fontFace: BODY_FONT, fontSize: 10.5, color: C.muted, valign: "middle", isTextBox: true, margin: 0 });
+    gy += 0.39;
+  });
+
+  s.addImage({ path: __dirname + "/assets/fig1_loop.jpg", x: 7.6, y: 1.75, w: 5.0, h: 4.35, sizing: { type: "cover", w: 5.0, h: 4.35 } });
+  s.addShape(pres.ShapeType.rect, { x: 7.6, y: 1.75, w: 5.0, h: 4.35, fill: { type: "none" }, line: { color: C.line, width: 1 } });
+  s.addText("Figure 1 원문 — Orthodontic loop in place", { x: 7.6, y: 6.15, w: 5.0, h: 0.35, fontFace: BODY_FONT, fontSize: 10.5, italic: true, color: C.muted, align: "center", isTextBox: true, margin: 0 });
+  pageNum(s, 5);
+  s.addNotes("동물실험이므로 Q&A에서 '왜 랫드를 썼나' 물으면 '골개조·치아이동을 통제된 조건에서 관찰하기 위해 — 사람 대상으론 이 정도의 개입·조직검사가 불가능'이라고 답변. 세 약물의 투여 빈도가 매일·3일마다·매주로 서로 다르다는 점은 비평적 고찰(한계)에서 다시 짚음.");
+}
+
+// ---------- Slide 6: Acceleration results ----------
+{
+  const s = baseSlide();
+  titleBar(s, "RESULTS · 01", "가속기(4주) — 치아이동량 비교");
+
+  const stats = [
+    ["6.50 ± 0.88", "mm · 코르티코스테로이드", DRUG.cortico],
+    ["3.73 ± 0.14", "mm · 비타민D", DRUG.vitD],
+    ["2.80 ± 0.15", "mm · PGE₂", DRUG.pge2],
+  ];
+  let x = MX;
+  const cw = 3.87, gap = 0.2;
+  stats.forEach(([num, label, color]) => {
+    statCallout(s, x, 1.85, cw, 2.0, num, label, color);
+    x += cw + gap;
+  });
+  s.addText("→ 대조군(1.29±0.11mm) 대비 세 약물 모두 유의하게 가속 (p < 0.001) — 가속 순위: 코르티코스테로이드 > 비타민D > PGE₂, 조직검사(ALP·TRAP)도 동일 순서로 확인됨", {
+    x: MX, y: 4.05, w: CW, h: 0.6, fontFace: BODY_FONT, fontSize: 13, italic: true, color: C.primary, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
+  });
+
+  const table = [
+    ["군", "양성대조(CPG)", "코르티코스테로이드(COG)", "비타민D(VDG)", "PGE₂(PGE₂G)"],
+    ["4주 후 이동량(직후 대비 증가분)", "1.29 ± 0.11 mm", "6.50 ± 0.88 mm", "3.73 ± 0.14 mm", "2.80 ± 0.15 mm"],
+  ];
+  const formatted = table.map((row, ri) => row.map((c) => ri === 0 ? { text: c, options: { bold: true, color: C.card, fill: { color: C.primary } } } : { text: c, options: { color: C.ink } }));
+  s.addTable(formatted, { x: MX, y: 4.8, w: CW, h: 1.1, colW: [3.4, 2.3, 2.7, 2.3, 1.23], fontFace: BODY_FONT, fontSize: 11.5, border: { type: "solid", color: C.line, pt: 0.5 }, autoPage: false, valign: "middle", align: "center" });
+  s.addText("※ 모든 군간 비교 p < 0.001 (One-way ANOVA + Tukey post-hoc). 원문 Table I·II 기준.", {
+    x: MX, y: 6.05, w: CW, h: 0.4, fontFace: BODY_FONT, fontSize: 11, italic: true, color: C.muted, isTextBox: true, margin: 0,
+  });
+  pageNum(s, 6);
+  s.addNotes("원문 Table I·II 기준. 보정기(2주) 동안은 모든 군에서 유의한 변화 없음(장치를 다시 수동적으로 부착해 이동량을 '고정') — 질문 나오면 이 부분도 설명 가능.");
+}
+
+// ---------- Slide 7: Relapse results ----------
+{
+  const s = baseSlide();
+  titleBar(s, "RESULTS · 02", "재발기(2주) — 가속이 컸던 약물이 더 많이 되돌아간다");
+
+  const stats = [
+    ["-1.09 ± 0.17", "mm · 양성대조", DRUG.control],
+    ["-0.86 ± 0.23", "mm · PGE₂ (최소)", DRUG.pge2],
+    ["-2.75 ± 0.15", "mm · 비타민D", DRUG.vitD],
+    ["-5.07 ± 0.87", "mm · 코르티코스테로이드 (최대)", DRUG.cortico],
+  ];
+  let x = MX;
+  const cw = 2.83, gap = 0.18;
+  stats.forEach(([num, label, color]) => {
+    statCallout(s, x, 1.8, cw, 2.0, num, label, color);
     x += cw + gap;
   });
 
-  s.addText("측정변수  마취 발현시간(초시계) · 통증(VAS 0-10) · 마취 지속시간 · 추가 마취 필요 여부/횟수", {
-    x: 0.6, y: 5.85, w: 12.1, h: 0.6, fontFace: BODY_FONT, fontSize: 13.5, bold: true, color: C.muted, isTextBox: true, margin: 0,
+  card(s, MX, 4.1, CW, 1.9);
+  s.addText("조직학적 소견이 임상 측정을 뒷받침", { x: MX + 0.35, y: 4.3, w: CW - 0.7, h: 0.4, fontFace: TITLE_FONT, fontSize: 14, bold: true, color: C.primary, isTextBox: true, margin: 0 });
+  s.addText("치주인대(PDL) 폭이 코르티코스테로이드군에서 가장 넓게 유지(압박·긴장측 모두) — 대조군이 가장 좁음, 비타민D·PGE₂군은 중간 수준. 임상측정 결과와 조직 소견이 서로를 뒷받침한다.", {
+    x: MX + 0.35, y: 4.75, w: CW - 0.7, h: 1.15, fontFace: BODY_FONT, fontSize: 13, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
   });
-  pageNum(s, 5);
-  s.addNotes("split-mouth 설계의 장점(대상자 본인이 대조군 — 개체 간 변이 통제)을 설명. 이중눈가림이 어떻게 이뤄졌는지(투여자/평가자 분리 등) 원문에서 확인해 보충하면 좋음.");
-}
-
-// ---------- Slide 6: Results - onset time ----------
-{
-  const s = baseSlide();
-  titleBar(s, "RESULTS", "마취 발현시간 비교");
-
-  // Stat callouts
-  const stats = [
-    ["122.1 ± 52.9", "초 · 아티카인", C.accent],
-    ["144.5 ± 68.9", "초 · 리도카인", C.muted],
-  ];
-  let x = 0.9;
-  stats.forEach(([num, label, color]) => {
-    s.addShape(pres.ShapeType.roundRect, { x, y: 2.05, w: 4.9, h: 2.3, rectRadius: 0.12, fill: { color: C.white }, line: { type: "none" }, shadow: { type: "outer", color: "000000", opacity: 0.12, blur: 6, offset: 2, angle: 90 } });
-    s.addText(num, { x, y: 2.3, w: 4.9, h: 1.15, fontFace: TITLE_FONT, fontSize: 44, bold: true, color, align: "center", isTextBox: true, margin: 0 });
-    s.addText(label, { x, y: 3.55, w: 4.9, h: 0.6, fontFace: BODY_FONT, fontSize: 15, bold: true, color: C.ink, align: "center", isTextBox: true, margin: 0 });
-    x += 5.3;
+  s.addText("※ 양성대조 vs PGE₂ 재발량 차이 — 통계적으로 유의하지 않음(p = 0.605). 자세한 내용은 부록(Appendix A) 참고.", {
+    x: MX, y: 6.15, w: CW, h: 0.4, fontFace: BODY_FONT, fontSize: 11, italic: true, color: C.muted, isTextBox: true, margin: 0,
   });
-  s.addText("→ 아티카인 측이 평균 22.4초 더 빠르게 발현 (p < 0.05, 통계적으로 유의)", {
-    x: 0.9, y: 4.6, w: 11.4, h: 0.5, fontFace: BODY_FONT, fontSize: 14, italic: true, color: C.primary, isTextBox: true, margin: 0,
-  });
-
-  s.addShape(pres.ShapeType.roundRect, { x: 0.9, y: 5.35, w: 11.4, h: 1.3, rectRadius: 0.1, fill: { color: C.paper }, line: { color: C.secondary, width: 1, transparency: 70 } });
-  s.addText("추가 소견", { x: 1.2, y: 5.5, w: 3, h: 0.4, fontFace: BODY_FONT, fontSize: 13, bold: true, color: C.secondary, isTextBox: true, margin: 0 });
-  s.addText("아티카인 측의 추가 마취(보충 주사) 필요 튜브 수가 리도카인 측보다 적게 보고됨(원문상 정확한 수치는 Table 확인 후 발표 시 구두로 보충).", {
-    x: 1.2, y: 5.85, w: 10.8, h: 0.7, fontFace: BODY_FONT, fontSize: 13, color: C.ink, isTextBox: true, margin: 0,
-  });
-  pageNum(s, 6);
-  s.addNotes("숫자는 초록/검색 스니펫 기준(122.1±52.90초 vs 144.5±68.85초)이며, p-value·95% CI 등 정확한 통계치는 원문 Results 섹션에서 직접 확인해 채울 것.");
-}
-
-// ---------- Slide 7: Results - pain / summary ----------
-{
-  const s = baseSlide();
-  titleBar(s, "RESULTS", "통증(VAS) 및 종합 소견");
-
-  s.addShape(pres.ShapeType.roundRect, { x: 0.6, y: 2.1, w: 5.85, h: 4.5, rectRadius: 0.1, fill: { color: C.white }, line: { type: "none" }, shadow: { type: "outer", color: "000000", opacity: 0.1, blur: 5, offset: 2, angle: 90 } });
-  s.addText("주사통 / 술 중·후 VAS", { x: 0.95, y: 2.35, w: 5.2, h: 0.5, fontFace: TITLE_FONT, fontSize: 16, bold: true, color: C.ink, isTextBox: true, margin: 0 });
-  s.addText("[원문 확인 필요 — VAS 평균값·표준편차, 군간 비교 결과]", {
-    x: 0.95, y: 2.95, w: 5.2, h: 3.4, fontFace: BODY_FONT, fontSize: 13.5, italic: true, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.4,
-  });
-
-  s.addShape(pres.ShapeType.roundRect, { x: 6.85, y: 2.1, w: 5.85, h: 4.5, rectRadius: 0.1, fill: { color: C.ink }, line: { type: "none" } });
-  s.addText("저자 결론 요약", { x: 7.2, y: 2.35, w: 5.2, h: 0.5, fontFace: TITLE_FONT, fontSize: 16, bold: true, color: C.accent, isTextBox: true, margin: 0 });
-  s.addText([
-    { text: "4% 아티카인이 2% 리도카인 대비 ", options: {} },
-    { text: "마취 발현이 더 빠르고", options: { bold: true, color: C.accent } },
-    { text: ", 추가 마취 필요성이 ", options: {} },
-    { text: "더 낮아", options: { bold: true, color: C.accent } },
-    { text: " 제3대구치 발치 시 유리한 선택지가 될 수 있음을 시사한다.", options: {} },
-  ], { x: 7.2, y: 2.95, w: 5.2, h: 3.4, fontFace: BODY_FONT, fontSize: 14.5, color: C.white, isTextBox: true, margin: 0, lineSpacingMultiple: 1.45 });
   pageNum(s, 7);
-  s.addNotes("VAS 관련 정량 수치는 검색 스니펫만으로 확보되지 않아 플레이스홀더로 남김 — 원문 Table/Figure를 확인해 직접 채워 넣을 것.");
+  s.addNotes("가속량이 클수록(코르티코스테로이드) 재발량도 크고, 가속량이 작을수록(PGE2) 재발도 작다는 '가속-재발 트레이드오프' 패턴이 핵심 메시지. 원문 Table III·VI·VII 기준.");
 }
 
-// ---------- Slide 8: Critical appraisal ----------
+// ---------- Slide 8: Histology ----------
 {
   const s = baseSlide();
-  titleBar(s, "CRITICAL APPRAISAL", "비평적 고찰 (본인 의견 작성)");
+  titleBar(s, "RESULTS · 03", "조직학적 소견 — 코르티코스테로이드군에서 PDL 폭 가장 넓게 유지");
+
+  s.addImage({ path: __dirname + "/assets/fig3_he.jpg", x: MX, y: 1.75, w: 5.2, h: 4.9, sizing: { type: "contain", w: 5.2, h: 4.9 } });
+  s.addText("원문 Figure 3 (H&E, ×40) — A: 음성대조, B: 양성대조, C: 코르티코스테로이드, D: 비타민D, E: PGE₂", {
+    x: MX, y: 6.65, w: 5.2, h: 0.5, fontFace: BODY_FONT, fontSize: 10, italic: true, color: C.muted, align: "center", isTextBox: true, margin: 0, lineSpacingMultiple: 1.15,
+  });
+
+  bulletBlock(s, [
+    "코르티코스테로이드군(C) — 압박·긴장측 모두 치주인대(PDL) 폭 가장 넓게 유지",
+    "대조군(A, B) — PDL 폭 가장 좁음, 재발을 흡수할 조직 여유가 적음을 시사",
+    "비타민D(D)·PGE₂(E)군 — 중간 수준의 PDL 폭",
+    "캘리퍼 임상 측정 결과와 조직 소견이 서로 뒷받침함",
+    "동일한 순서 패턴이 ALP·TRAP 염색(원문 Figure 4, 5)에서도 확인됨",
+  ], { x: MX + 5.6, y: 1.9, w: CW - 5.6, h: 4.0, fontSize: 13.5 });
+  pageNum(s, 8);
+  s.addNotes("원문 Figure 3(H&E)·4(ALP)·5(TRAP) 모두 같은 순서(코르티코스테로이드 > 비타민D > PGE2 > 대조군)로 조직학적 활성을 보여줌. 임상측정치와 조직 소견이 일치한다는 점이 이 논문의 방법론적 강점.");
+}
+
+// ---------- Slide 9: Pharmacological significance (NEW — core synthesis) ----------
+{
+  const s = baseSlide();
+  titleBar(s, "PHARMACOLOGICAL SIGNIFICANCE", "치과약리학적 의의 — 왜 이 세 약물인가");
+
+  const cols = [
+    ["코르티코스테로이드", DRUG.cortico, "스테로이드성 항염증제\n(역설적 골흡수 촉진)", "본래 '항염증 = 골흡수 억제'로 알려져 있지만, 국소 고용량에서는 오히려 염증유전자 억제와 동시에 파골세포형성을 직접 자극 — 약물의 작용이 용량·투여경로·표적조직에 따라 정반대로 나타날 수 있음을 보여주는 사례"],
+    ["비타민D", DRUG.vitD, "지용성 호르몬\n(핵수용체 리간드)", "비타민D수용체(VDR)를 매개로 유전자 발현(osteocalcin 등)을 조절 — 전신 칼슘·인 대사를 조절하는 호르몬이 국소 골개조에도 관여한다는 점에서 구강생화학의 칼슘 항상성 파트와 직접 연결됨"],
+    ["PGE₂", DRUG.pge2, "지질 매개체(autacoid)\n= 교정력의 자연 신호물질", "교정력이 가해지면 PDL세포가 COX 경로로 스스로 PGE2를 만들어 RANKL을 유도하는데, 이 실험은 그 경로를 외부 주입으로 '재현' — 치과약리학1의 '교정력→COX→PGE2→RANKL→파골세포' 축을 실험적으로 검증"],
+  ];
+  let x = MX;
+  const cw = 3.95, cardTop = 1.75, cardH = 3.35;
+  cols.forEach(([name, color, sub, body]) => {
+    card(s, x, cardTop, cw, cardH);
+    s.addShape(pres.ShapeType.roundRect, { x: x + 0.25, y: cardTop + 0.22, w: cw - 0.5, h: 0.85, rectRadius: 0.08, fill: { color }, line: { type: "none" } });
+    s.addText(name, { x: x + 0.25, y: cardTop + 0.28, w: cw - 0.5, h: 0.35, fontFace: TITLE_FONT, fontSize: 14, bold: true, color: C.card, align: "center", isTextBox: true, margin: 0 });
+    s.addText(sub, { x: x + 0.25, y: cardTop + 0.62, w: cw - 0.5, h: 0.42, fontFace: BODY_FONT, fontSize: 10.5, italic: true, color: C.card, align: "center", isTextBox: true, margin: 0, lineSpacingMultiple: 1.1 });
+    s.addText(body, { x: x + 0.25, y: cardTop + 1.2, w: cw - 0.5, h: cardH - 1.4, fontFace: BODY_FONT, fontSize: 11.5, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.32, valign: "top" });
+    x += cw + 0.2;
+  });
+
+  card(s, MX, cardTop + cardH + 0.25, CW, 1.6, "EAF2F7");
+  s.addText([
+    { text: "핵심 시사점  ", options: { bold: true, color: C.primary } },
+    { text: "세 약물은 서로 다른 약리학적 경로(유전자 억제·호르몬 수용체·지질 매개체)로 결국 같은 종착점인 '파골세포 활성화'에 도달한다 — 그러나 경로가 다르면 부작용·재발 위험도 달라진다.\n", options: { color: C.ink } },
+    { text: "치과교정학 기본원칙과의 연결  ", options: { bold: true, color: C.primary } },
+    { text: "압박-긴장설(pressure-tension theory)에서 치아이동은 골흡수뿐 아니라 흡수 이후의 '구조적 재조직화'가 뒤따라야 안정된다 — 코르티코스테로이드처럼 흡수만 급가속하면 재조직화가 못 따라가 재발이 커진다. 이 논문의 '가속↑ = 재발↑' 결과는 곧 \"치아이동 속도는 생물학적 재형성 속도가 제한한다\"는 교정학 기본원칙을 약리학적으로 재확인한 것이다.", options: { color: C.ink } },
+  ], { x: MX + 0.3, y: cardTop + cardH + 0.42, w: CW - 0.6, h: 1.3, fontFace: BODY_FONT, fontSize: 12, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3 });
+  pageNum(s, 9);
+  s.addNotes("이 슬라이드가 발표의 핵심 — 단순 결과 요약이 아니라 '왜 이 세 약물을 비교했는가'를 치과약리학·구강생화학·치과교정학 세 과목의 언어로 설명하는 지점. 발표 중 가장 천천히, 자신의 말로 설명할 것.");
+}
+
+// ---------- Slide 10: Critical appraisal ----------
+{
+  const s = baseSlide();
+  titleBar(s, "CRITICAL APPRAISAL", "비평적 고찰");
 
   const cols = [
     ["강점", [
-      "split-mouth 설계로 개체 간 변이(통증 민감도·해부학적 차이)를 통제",
-      "무작위 배정 + 이중눈가림으로 선택·측정 편향 최소화",
-      "발현시간을 초시계로 직접 측정 — 주관적 VAS와 객관적 지표를 병행",
+      "ARRIVE 가이드라인 준수 + 윤리위 승인 + 배정 눈가림(무작위 배정)",
+      "임상측정(캘리퍼) + 조직학(PDL 폭, ALP/TRAP)으로 이중 검증",
+      "가속기·보정기·재발기를 모두 추적한 최초의 3약물 비교 — 선행연구 공백을 직접 채움",
     ]],
     ["한계 / Bias 위험", [
-      "60명(30쌍) 표본수의 검정력(power) 산출 근거가 원문에 명확히 제시되지 않음",
-      "split-mouth 특성상 좌우 약물이 확산(diffusion)되어 교차오염 가능성",
-      "단일 기관·단기 추적 — 시술자 숙련도 등 기관별 변이 반영 안 됨",
+      "배정만 눈가림, 측정(outcome assessment)은 비맹검 — 원문: 주 연구자 1인이 개입·측정·평가를 전부 수행",
+      "약물당 용량 1개뿐 + 투여빈도도 매일·3일마다·매주로 제각각 — 공정 비교인지 불확실(용량-반응 분석 불가)",
+      "수컷 랫드만 사용 — 호르몬 변동은 배제했지만 여성(암컷) 적용 가능성은 미확인",
     ]],
     ["임상 적용 가능성", [
-      "한국인 대상 데이터가 아님 — 골밀도·조직 특성 차이로 발현시간 절대값은 다를 수 있음",
-      "다만 국소마취제 약리기전(pKa, 지질용해도) 자체는 인종 무관 — 상대적 우위 경향은 참고 가능",
-      "완충(buffered) 제형 비교는 빠져 있어, 본 과제 연구계획서 주제로 보완 필요",
+      "코르티코스테로이드는 가속 효과 크지만 재발 위험도 가장 큼 — 전신 스테로이드 복용 중인 교정환자에서 특히 신중한 판단 필요",
+      "비타민D·PGE₂는 가속은 온건해도 재발이 적어 상대적으로 안전한 보조제일 수 있음 — 다만 PGE2는 고용량 시 치근흡수 위험 보고 있음(타 문헌)",
+      "동물(랫드)실험 — 종간 차이로 사람에 그대로 적용은 어려움(저자도 인정), 용량-반응 확립을 위한 후속 임상연구 필요",
     ]],
   ];
-  let x = 0.6;
-  const cw = 3.95;
+  let x = MX;
+  const cw = 3.95, cardTop = 1.75, cardH = 4.85;
   cols.forEach(([h, lines]) => {
-    s.addShape(pres.ShapeType.roundRect, { x, y: 2.1, w: cw, h: 4.5, rectRadius: 0.1, fill: { color: C.white }, line: { color: C.accent, width: 1.25 } });
-    s.addText(h, { x: x + 0.3, y: 2.3, w: cw - 0.6, h: 0.5, fontFace: TITLE_FONT, fontSize: 16, bold: true, color: C.primary, isTextBox: true, margin: 0 });
-    s.addText(lines.map((t, i) => ({ text: `· ${t}`, options: { breakLine: true, color: C.ink } })),
-      { x: x + 0.3, y: 2.85, w: cw - 0.6, h: 3.55, fontFace: BODY_FONT, fontSize: 11.5, isTextBox: true, margin: 0, lineSpacingMultiple: 1.35, valign: "top" });
+    card(s, x, cardTop, cw, cardH);
+    s.addText(h, { x: x + 0.3, y: cardTop + 0.22, w: cw - 0.6, h: 0.45, fontFace: TITLE_FONT, fontSize: 15.5, bold: true, color: C.primary, isTextBox: true, margin: 0 });
+    s.addText(lines.map((t) => ({ text: "•  " + t, options: { breakLine: true } })),
+      { x: x + 0.3, y: cardTop + 0.75, w: cw - 0.6, h: cardH - 0.95, fontFace: BODY_FONT, fontSize: 11, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.35, valign: "top" });
     x += cw + 0.2;
   });
-  pageNum(s, 8);
-  s.addNotes("초안으로 채워둔 내용 — 논문 원문을 직접 읽어본 뒤 본인 의견으로 다듬을 것(특히 Q&A 대비를 위해 표본수 검정력·diffusion 가능성 부분은 원문 근거로 보강 추천).");
+  pageNum(s, 10);
+  s.addNotes("발표자 본인 의견으로 최종 다듬을 것 — 특히 Q&A 대비를 위해 표본수 검정력·비맹검 측정 부분은 원문 근거로 보강 추천.");
 }
 
-// ---------- Slide 9: Take-home ----------
+// ---------- Slide 11: Comparison with prior studies ----------
+{
+  const s = baseSlide();
+  titleBar(s, "DISCUSSION", "기타 연구와의 결과 비교");
+
+  const rows = [
+    ["코르티코스테로이드", DRUG.cortico, "Baofeng·Abtahi 등은 골흡수·파골세포형성 증가로 가속 보고 / 반대로 Yamane·Molina 등은 오히려 치아이동 감소 보고 — 연구기간(1–2주 vs 8주)·용량·힘·표본수 차이로 추정"],
+    ["비타민D", DRUG.vitD, "Gowda·Varughese·Al-Attar·Moradinejad 등 다수가 골개조 증가·염증성 사이토카인 감소로 가속 효과를 일관되게 보고 — 본 연구 결과와 부합"],
+    ["PGE₂", DRUG.pge2, "Kale·Cağlaroğlu·Seifi 등이 RANKL 발현·파골활성 증가를 보고 — 'PGE2 효과 없음'을 보고한 연구는 없음(저자 확인)"],
+  ];
+  let y = 1.85;
+  rows.forEach(([label, color, text]) => {
+    card(s, MX, y, CW, 1.35);
+    s.addShape(pres.ShapeType.roundRect, { x: MX + 0.3, y: y + 0.2, w: 2.3, h: 0.95, rectRadius: 0.08, fill: { color }, line: { type: "none" } });
+    s.addText(label, { x: MX + 0.3, y: y + 0.2, w: 2.3, h: 0.95, fontFace: TITLE_FONT, fontSize: 13.5, bold: true, color: C.card, align: "center", valign: "middle", isTextBox: true, margin: 0 });
+    s.addText(text, { x: MX + 2.9, y: y + 0.15, w: CW - 3.15, h: 1.05, fontFace: BODY_FONT, fontSize: 12, color: C.ink, valign: "middle", isTextBox: true, margin: 0, lineSpacingMultiple: 1.25 });
+    y += 1.5;
+  });
+  s.addText("※ 상반된 결과는 연구기간·용량·힘·표본수 차이 때문(저자 설명) — 재발까지 세 약물을 비교한 연구는 이번이 최초, 진짜 공백은 여기 있음.", {
+    x: MX, y: 6.45, w: CW, h: 0.5, fontFace: BODY_FONT, fontSize: 11.5, italic: true, color: C.primary, isTextBox: true, margin: 0,
+  });
+  pageNum(s, 11);
+  s.addNotes("원문 Discussion 'Comparison with previous studies' 문단 재구성. 코르티코스테로이드만 문헌 간 결과가 정반대인 이유(연구기간·용량 차이)를 짚으면 비평적 고찰과 자연스럽게 연결됨.");
+}
+
+// ---------- Slide 12: References ----------
+{
+  const s = baseSlide();
+  titleBar(s, "REFERENCE", "참고문헌");
+  const refs = [
+    "[원 논문] Hamed SA, Mohammad MH, Grawish ME, Fouda AM, Montasser MA. Three pharmacological agents for acceleratory orthodontic tooth movement and subsequent relapse: A randomized controlled animal study. Int Orthod. 2026;24:101112.",
+    "Baofeng L, et al. Characterization of a rabbit osteoporosis model induced by ovariectomy and glucocorticoid. Bone 2010;46(3):396-401.",
+    "Abtahi M, et al. Effect of corticosteroids administration in rabbit model. J Clin Pediatr Dent 2014;38:285-9.",
+    "Yamane A, Fukui T, Chiba M. In vitro measurement of orthodontic tooth movement in rats given beta-aminopropionitrile or hydrocortisone. Eur J Orthod 1997;19(1):21-8.",
+    "Kale S, et al. Comparison of 1,25-dihydroxycholecalciferol and prostaglandin E2 on orthodontic tooth movement. Am J Orthod Dentofacial Orthop 2004;125:607-14.",
+    "Seifi M, Hamedi R, Khavandegar Z. The effect of thyroid hormone, prostaglandin E2, and calcium gluconate on orthodontic tooth movement and root resorption in rats. J Dent 2015;16(1 Suppl):35.",
+  ];
+  s.addText(refs.map((t, i) => ({ text: `[${i + 1}] ${t}`, options: { breakLine: i < refs.length - 1 } })),
+    { x: MX, y: 1.8, w: CW, h: 4.6, fontFace: BODY_FONT, fontSize: 12, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.55, valign: "top" });
+  s.addText("※ 슬라이드 11(선행연구 비교)에서 이름으로 인용한 문헌만 수록. 전체 참고문헌(28건)은 원 논문 References 참고.", {
+    x: MX, y: 6.6, w: CW, h: 0.4, fontFace: BODY_FONT, fontSize: 10.5, italic: true, color: C.muted, isTextBox: true, margin: 0,
+  });
+  pageNum(s, 12);
+  s.addNotes("교수님이 '그 인용 어디서 났나' 물으면 이 슬라이드로 바로 답 가능. 전체 28개 문헌은 원 논문 References 섹션에 있음.");
+}
+
+// ---------- Slide 13: Conclusion (moved right before Q&A, per author note) ----------
 {
   const s = baseSlide(C.primary);
-  s.addShape(pres.ShapeType.ellipse, { x: -3, y: -3, w: 8, h: 8, fill: { color: C.secondary, transparency: 60 }, line: { type: "none" } });
-  s.addText("TAKE-HOME MESSAGE", { x: 0.9, y: 1.6, w: 10, h: 0.4, fontFace: BODY_FONT, fontSize: 13, bold: true, color: C.accent, charSpacing: 1, isTextBox: true, margin: 0 });
-  s.addText("발치 시 빠른 마취 발현이 필요한 상황이라면,\n아티카인이 리도카인보다 유리한 선택지일 수 있다.", {
-    x: 0.9, y: 2.15, w: 11.3, h: 2.0, fontFace: TITLE_FONT, fontSize: 27, bold: true, color: C.white, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
+  s.addShape(pres.ShapeType.ellipse, { x: -3, y: -3, w: 8, h: 8, fill: { color: C.secondary, transparency: 55 }, line: { type: "none" } });
+  s.addText("TAKE-HOME MESSAGE", { x: MX, y: 1.4, w: 10, h: 0.4, fontFace: BODY_FONT, fontSize: 12, bold: true, color: C.accent, charSpacing: 1, isTextBox: true, margin: 0 });
+  s.addText("치아이동을 가장 많이 가속하는 약물이,\n보정 후 가장 많이 되돌아가기도 한다.", {
+    x: MX, y: 1.9, w: 11.3, h: 1.9, fontFace: TITLE_FONT, fontSize: 27, bold: true, color: C.card, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
   });
-  s.addText("단, 근거는 특정 인구집단·단일 연구 기준 — 한국인 대상 재현/후속 연구로 확인이 필요함 (→ 본 과제의 연구계획서 참고)", {
-    x: 0.9, y: 4.3, w: 11.3, h: 0.9, fontFace: BODY_FONT, fontSize: 14, italic: true, color: C.paper, isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
+  s.addText("코르티코스테로이드 = 최대가속·최대재발  ·  비타민D = 중간  ·  PGE₂ = 최소가속·최소재발(대조군과 통계적 동률)", {
+    x: MX, y: 3.85, w: 11.3, h: 0.6, fontFace: BODY_FONT, fontSize: 14.5, italic: true, color: "CFE0EC", isTextBox: true, margin: 0, lineSpacingMultiple: 1.3,
   });
-  pageNum(s, 9);
-  s.addNotes("연구계획서 과제(완충 아티카인 vs 리도카인, 한국인 대상)와 자연스럽게 연결하며 마무리. Q&A로 전환.");
+  s.addText("'빠른 이동'과 '안정적 결과' 사이의 트레이드오프를 보여준 첫 3약물 비교 연구 — 치과약리학1(PGE2/COX)과 구강생화학(치아이동의 생화학)의 내용이 이 논문 하나로 이어진다.", {
+    x: MX, y: 4.6, w: 11.3, h: 1.0, fontFace: BODY_FONT, fontSize: 13.5, color: C.card, isTextBox: true, margin: 0, lineSpacingMultiple: 1.35,
+  });
+  s.addText("※ PGE₂·대조군 relapse 차이 p = 0.605(유의하지 않음) — Appendix A 참고", {
+    x: MX, y: 5.75, w: 11.3, h: 0.4, fontFace: BODY_FONT, fontSize: 11.5, italic: true, color: "AECBDC", isTextBox: true, margin: 0,
+  });
+  pageNum(s, 13);
+  s.addNotes("이 결론 슬라이드는 Q&A 동안 화면에 계속 띄워둘 것(원 저자 의도). 치과약리학1과 구강생화학 두 과목 내용이 이 논문 하나로 이어진다는 점을 다시 언급하며 마무리 후 Q&A로 전환.");
 }
 
-// ---------- Slide 10: Q&A ----------
+// ---------- Slide 14: Q&A ----------
 {
-  const s = baseSlide(C.ink);
-  s.addText("Q & A", { x: 0.9, y: 2.9, w: 11, h: 1.3, fontFace: TITLE_FONT, fontSize: 54, bold: true, color: C.white, isTextBox: true, margin: 0 });
-  s.addText("감사합니다", { x: 0.9, y: 4.1, w: 8, h: 0.6, fontFace: BODY_FONT, fontSize: 18, color: C.accent, isTextBox: true, margin: 0 });
+  const s = baseSlide(C.primaryDark);
+  s.addText("Q & A", { x: MX, y: 2.9, w: 11, h: 1.3, fontFace: TITLE_FONT, fontSize: 54, bold: true, color: C.card, isTextBox: true, margin: 0 });
+  s.addText("감사합니다", { x: MX, y: 4.1, w: 8, h: 0.6, fontFace: BODY_FONT, fontSize: 18, color: C.accent, isTextBox: true, margin: 0 });
   s.addNotes([
-    "예상 질문 1: split-mouth 설계에서 두 마취제가 서로 확산되어 결과를 교란할 가능성은 없는가?",
-    "예상 질문 2: 표본수 60명이 통계적으로 충분한가 (검정력 계산 근거)?",
-    "예상 질문 3: 에피네프린 농도가 동일(1:100,000)한데 순수 약물 자체의 효과 차이로 볼 수 있는가, 농도(4% vs 2%) 차이의 영향은 아닌가?",
-    "예상 질문 4: 이 결과를 한국인 임상 현장에 그대로 적용할 수 있는가(연구계획서 주제와 연결)?",
+    "예상 질문 1: 동물실험 결과를 사람에게 그대로 적용할 수 있는가?",
+    "예상 질문 2: 코르티코스테로이드 결과가 일부 선행연구(Yamane, Molina 등)와 정반대인데, 이 연구가 더 신뢰할 만한 이유는?",
+    "예상 질문 3: 왜 세 약물의 용량을 하나씩만 테스트했는가? 용량을 늘리면 결과가 달라질 수 있지 않은가?",
+    "예상 질문 4: PGE2가 치근흡수를 유발할 수 있다는데, 이 연구에서는 그런 부작용을 확인했는가?",
+    "예상 질문 5: 암컷 랫드는 왜 제외했는가? 성별에 따라 결과가 다를 가능성은?",
   ].join("\n"));
+}
+
+// ---------- Slide 15: Appendix A ----------
+{
+  const s = baseSlide();
+  titleBar(s, "APPENDIX A · Q&A 백업", "재발이 '가장 적은' 군은 대조군도 PGE₂군도 아닌, 둘의 통계적 동률이다");
+
+  const table = [
+    ["", "양성대조\n(CPG)", "PGE₂\n(PGE₂G)", "비타민D\n(VDG)", "코르티코스테로이드\n(COG)"],
+    ["2주 재발량(T0 대비)", "-1.09 ± 0.17 mm", "-0.86 ± 0.23 mm", "-2.75 ± 0.15 mm", "-5.07 ± 0.87 mm"],
+    ["원문 유의성 문자", "a", "a", "b", "c"],
+  ];
+  const formatted = table.map((row, ri) => row.map((c) => ri === 0 ? { text: c, options: { bold: true, color: C.card, fill: { color: C.primary } } } : { text: c, options: { color: C.ink } }));
+  s.addTable(formatted, { x: MX, y: 1.8, w: CW, h: 1.3, colW: [2.3, 2.4, 2.4, 2.3, 2.53], fontFace: BODY_FONT, fontSize: 11, border: { type: "solid", color: C.line, pt: 0.5 }, autoPage: false, valign: "middle", align: "center" });
+  s.addText("※ 같은 문자(a, a) — 두 군간 통계적 유의차 없음 (Table III, Tukey post-hoc)", {
+    x: MX, y: 3.2, w: CW, h: 0.4, fontFace: BODY_FONT, fontSize: 11.5, italic: true, color: C.muted, isTextBox: true, margin: 0,
+  });
+
+  card(s, MX, 3.75, CW, 2.9);
+  s.addText([
+    { text: "핵심 수치  ", options: { bold: true, color: C.primary } },
+    { text: "양성대조 vs PGE2군의 2주 재발량 차이는 통계적으로 유의하지 않음(p = 0.605, Table III). 반면 비타민D·코르티코스테로이드는 서로 및 위 두 군과 모두 유의하게 다름(p < 0.001).\n\n", options: { color: C.ink } },
+    { text: "통계적으로 유의미한 계층 구조  ", options: { bold: true, color: C.primary } },
+    { text: "{양성대조, PGE2} < 비타민D < 코르티코스테로이드 (재발 적은 순)\n\n", options: { color: C.ink } },
+    { text: "원문 서술 간 불일치 주의  ", options: { bold: true, color: C.primary } },
+    { text: "Results 본문·Conclusions는 \"PGE2가 최소 재발\"이라 서술하지만, Discussion 'Interpretation of findings'는 \"대조군이 최소, 그 다음 PGE2\"라 서술 — 둘 다 raw mean 순위와 통계적 유의성 서술을 혼용한 단순화이며, 정확한 결론은 위 표대로 '대조군·PGE2군 통계적 동률'이다.", options: { color: C.ink } },
+  ], { x: MX + 0.35, y: 3.95, w: CW - 0.7, h: 2.55, fontFace: BODY_FONT, fontSize: 12.5, isTextBox: true, margin: 0, lineSpacingMultiple: 1.35 });
+  pageNum(s, 15);
+  s.addNotes("Q&A 대비용 백업 슬라이드. 교수가 '원문 Discussion엔 대조군이 최저라고 되어있는데?' 라고 물으면 이 슬라이드를 띄우고: (1) Table III의 p(CPG vs PGE2G)=0.605로 두 군이 통계적으로 구분 안 됨을 보여주고, (2) 원문 스스로도 Results/Conclusion과 Discussion에서 서술이 갈린다는 점을 지적하며, (3) 정확히는 대조군과 PGE2군이 통계적 동률이라고 답변.");
 }
 
 pres.writeFile({ fileName: "치과약리학실험2_논문발표.pptx" }).then(() => {
