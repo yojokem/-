@@ -641,23 +641,51 @@ function card(s, x, y, w, h) {
   const s = baseSlide();
   titleBar(s, "고찰 · 02", "결과 해석 ② — Film Thickness");
 
-  sectionLabel(s, "① P/L ratio와 피막도", MX, 1.7, CW);
+  sectionLabel(s, "① P/L ratio와 피막도", MX, 1.55, CW);
   bulletBlock(s, [
     "이론: 분액비(P/L)가 높을수록 반죽의 점도가 증가해 압착 시 유동성이 떨어지고, 그만큼 얇게 눌리지 못해 피막도가 커질 것으로 예상됨",
     "실측(반 평균): 이론과 부합 — 15%↓(0.035mm) < 정상(0.047mm) < 15%↑(0.049mm) 순으로 분액비가 높을수록 피막도 증가. 다만 세 조건 모두 표준편차가 매우 커서(한 조(A3)의 이상치 영향, 슬라이드 11 참고) 경향성 해석에는 주의가 필요함",
-  ], { x: MX, y: 2.1, w: CW, h: 1.55, fontSize: 13 });
+  ], { x: MX, y: 1.9, w: CW, h: 1.1, fontSize: 12, lineSpacingMultiple: 1.3 });
 
-  sectionLabel(s, "② 냉각판·RMGI 효과, 그리고 우리 조(A2)의 위치", MX, 3.85, CW);
+  sectionLabel(s, "② 냉각판·RMGI 효과", MX, 3.1, CW);
   bulletBlock(s, [
     "냉각판 조건은 반 평균 피막도(0.012mm)가 나머지 ZPC 조건보다 훨씬 얇게 나옴 — 낮은 온도가 압착 시 유동성을 오히려 개선했을 가능성(표본이 적어 단정하기는 어려움). RMGI(0.015mm)도 ZPC 대비 얇은 편 — 레진 개량형 특유의 낮은 초기 점도 영향으로 추정",
-    "우리 조 실측은 ZPC 세 조건(정상·15%↑·15%↓) 모두 반 평균보다 얇게 나왔고(−0.5~−0.7 SD), 냉각판만 평균보다 두껍게 나옴(+1.1 SD) — Setting time과 마찬가지로 개인별 측정 판정 차이(글라스판 접촉 상태 확인, 하중 적용 타이밍 등)가 영향을 줬을 가능성을 고려할 수 있음",
-  ], { x: MX, y: 4.23, w: CW, h: 2.0, fontSize: 13 });
+  ], { x: MX, y: 3.45, w: CW, h: 0.75, fontSize: 12, lineSpacingMultiple: 1.3 });
 
-  s.addShape(pres.ShapeType.roundRect, { x: MX, y: 6.45, w: CW, h: 0.8, rectRadius: 0.08, fill: { color: "EAF2EE" }, line: { type: "none" } });
-  s.addText([
-    { text: "정리: ", options: { bold: true, color: C.primary } },
-    { text: "Setting time과 마찬가지로 피막도도 분액비·냉각판 조건에 따라 유의한 차이를 보이며, 개별 조의 측정·판정 방식 차이가 재료 자체의 특성만큼이나 결과에 영향을 줄 수 있음을 시사함.", options: {} },
-  ], { x: MX + 0.25, y: 6.58, w: CW - 0.5, h: 0.55, fontFace: BODY_FONT, fontSize: 11, color: C.ink, isTextBox: true, margin: 0, lineSpacingMultiple: 1.25 });
+  // 비교 그래프 — 슬라이드 12와 같은 형식. "전체 평균" 시리즈에만
+  // scripts/add_errorbars.py가 SD를 주입함(FILM_TREND_SD, chart4.xml).
+  const ftTrendLabels = ["ZPC\n15%↓", "ZPC\n정상", "ZPC\n15%↑", "ZPC\n15%↑+냉각판", "RMGI"];
+  const ftTrendOverallMean = [0.0352, 0.0470, 0.0492, 0.0123, 0.0152]; // = ftAvg (슬라이드 11)
+  const ftA2ByLabel = [0.004, 0.016, 0.010, 0.020, 0.014]; // 슬라이드 10 원자료 피막도(B−A), ftTrendLabels 순서(15%↓·정상·15%↑·냉각판·RMGI)에 맞춤
+  const ftCmp = [
+    ["ZPC 15%↓", "0.035", "0.004", "−0.7 SD"],
+    ["ZPC 정상", "0.047", "0.016", "−0.6 SD"],
+    ["ZPC 15%↑", "0.049", "0.010", "−0.5 SD"],
+    ["ZPC 15%↑+냉각판", "0.012", "0.020", "+1.1 SD"],
+    ["RMGI", "0.015", "0.014", "−0.3 SD"],
+  ];
+
+  card(s, MX, 4.25, CW, 2.35);
+  s.addChart(pres.ChartType.bar, [
+    { name: "전체 평균", labels: ftTrendLabels, values: ftTrendOverallMean },
+    { name: "우리 조(A2)", labels: ftTrendLabels, values: ftA2ByLabel },
+  ], {
+    x: MX + 0.2, y: 4.37, w: CW - 0.4, h: 1.65,
+    barDir: "col", barGrouping: "clustered", barGapWidthPct: 35,
+    showTitle: true, title: "Film thickness — 전체 평균 vs 우리 조(A2)", titleFontSize: 12, titleColor: C.primary, titleFontFace: TITLE_FONT,
+    showLegend: true, legendPos: "t", legendFontSize: 9, legendColor: C.muted,
+    chartColors: [C.primary, C.accent],
+    showValue: true, dataLabelFormatCode: "0.000", dataLabelPosition: "outEnd", dataLabelFontSize: 8, dataLabelColor: C.ink,
+    catAxisLabelFontSize: 9, catAxisLabelColor: C.muted, catAxisLabelFontFace: BODY_FONT,
+    valAxisLabelFontSize: 9, valAxisLabelColor: C.muted,
+    valGridLine: { color: C.line, size: 0.75 }, catGridLine: { style: "none" },
+    valAxisMinVal: 0, valAxisMaxVal: 0.14,
+  });
+  s.addText(
+    "※ 오차 막대는 전체 평균의 표준편차(SD) 1개. " +
+    ftCmp.map((r) => `${r[0]} ${r[1]}→${r[2]}(${r[3]})`).join("  ·  "),
+    { x: MX + 0.2, y: 6.18, w: CW - 0.4, h: 0.4, fontFace: BODY_FONT, fontSize: 7.5, italic: true, color: C.muted, isTextBox: true, margin: 0, lineSpacingMultiple: 1.15 }
+  );
   pageNum(s, 14);
   s.addNotes("[대본 9:35~10:10]\n피막도 결과도 짚고 가겠습니다. 이론상으로는 분액비가 높을수록 반죽이 되직해져서 압착할 때 잘 안 퍼지니까 피막도가 두꺼워질 거라 예상했는데, 반 평균을 보면 실제로 15% 낮음이 가장 얇고 15% 높음이 가장 두꺼워서 이론과 맞았습니다. 다만 세 조건 모두 표준편차가 워낙 커서, 이건 한 조의 이상치 영향이 크다는 걸 슬라이드 11에서 이미 말씀드렸으니 경향성만 참고해 주시면 됩니다.\n\n냉각판 조건은 반 평균이 오히려 가장 얇게 나왔고, RMGI도 ZPC보다 얇은 편이었습니다. 저희 조 실측은 ZPC 세 조건에서는 반 평균보다 얇게, 냉각판에서는 오히려 평균보다 두껍게 나왔는데, 이것도 setting time 때와 비슷하게 저희가 측정하는 과정에서 판정 기준이 다른 조와 조금 달랐을 가능성이 있다고 봅니다.\n\n[발표 팁] 슬라이드 11의 Film thickness 차트·각주(A3 이상치)를 화면에 띄워두고 같이 설명하면 좋음. SD가 커서 통계적으로 단정짓기 어렵다는 점을 솔직히 인정하고 넘어갈 것.");
 }

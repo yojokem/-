@@ -4,12 +4,13 @@ pptxgenjs has no native error-bar support (confirmed: no errBars/errorBar
 option anywhere in its dist bundle). This script post-processes the
 generated .pptx and injects <c:errBars> (custom, symmetric SD) into the
 two bar charts on the "조별 데이터 종합 비교" slide (chart1/chart2) and the
-"전체 평균" series of the comparison chart on "조별 경향성 & 우리 조(A2) 위치"
-(chart3 — errBars go on the FIRST <c:cat> found, which is the first series
-in the XML, i.e. "전체 평균"; "우리 조(A2)" is left without error bars by
-design since it's a single measurement, not an aggregate), per the pptx
-skill's guidance: "compute the extra series yourself or post-process the
-generated OOXML — do not fall back to a rendered image."
+"전체 평균" series of the two comparison charts on "조별 경향성 & 우리 조(A2)
+위치" (chart3, Setting time) and "결과 해석 ② Film Thickness" (chart4) —
+errBars go on the FIRST <c:cat> found in each file, which is the first
+series in the XML, i.e. "전체 평균"; "우리 조(A2)" is left without error
+bars by design since it's a single measurement, not an aggregate — per
+the pptx skill's guidance: "compute the extra series yourself or
+post-process the generated OOXML — do not fall back to a rendered image."
 
 Run after `node build.js`:
     python3 scripts/add_errorbars.py 수복치과재료학실험_DentalCements_20260922.pptx
@@ -25,6 +26,7 @@ from pathlib import Path
 SETTING_SD = [4.02, 3.85, 2.73, 2.17, 4.04, 1.58, 0]  # 7 categories, minutes
 FILM_SD = [0.0433, 0.0531, 0.0727, 0.0072, 0.0040]     # 5 categories, mm
 TREND_SD = [4.02, 3.85, 2.73, 2.17, 4.04, 1.58]        # 6 categories, minutes (= SETTING_SD[:6])
+FILM_TREND_SD = [0.0433, 0.0531, 0.0727, 0.0072, 0.0040]  # 5 categories, mm (= FILM_SD)
 
 ERR_COLOR = "5B6B7A"  # C.muted
 
@@ -72,7 +74,8 @@ def main():
 
     inject(work / "ppt/charts/chart1.xml", SETTING_SD)  # 평균 Setting time
     inject(work / "ppt/charts/chart2.xml", FILM_SD)      # 평균 Film thickness
-    inject(work / "ppt/charts/chart3.xml", TREND_SD)     # 전체 평균 vs 우리 조(A2)
+    inject(work / "ppt/charts/chart3.xml", TREND_SD)     # 전체 평균 vs 우리 조(A2) — Setting time
+    inject(work / "ppt/charts/chart4.xml", FILM_TREND_SD) # 전체 평균 vs 우리 조(A2) — Film thickness
 
     tmp_out = pptx_path.with_suffix(".errbar.pptx")
     if tmp_out.exists():
