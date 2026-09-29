@@ -63,8 +63,6 @@ function pageNum(s, n) {
     color: C.secondary, isTextBox: true, margin: 0,
   });
 
-  s.addShape(pres.ShapeType.rect, { x: 0.9, y: 5.35, w: 11.3, h: 0.02, fill: { color: C.muted, transparency: 60 }, line: { type: "none" } });
-
   s.addText([
     { text: "저널  ", options: { bold: true, color: C.accent } },
     { text: "Oral and Maxillofacial Surgery (Springer), 2024\n", options: { color: C.white } },
