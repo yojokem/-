@@ -300,7 +300,7 @@ function card(s, x, y, w, h) {
   ];
   dataTable(s, specTable, {
     x: MX + 6.55, y: 2.2, w: 5.1, h: 2.5,
-    colW: [0.55, 1.55, 0.95, 0.75, 0.65, 0.65],
+    colW: [0.5, 1.3, 0.85, 0.8, 0.85, 0.8],
     rowH: [0.6, 0.65, 0.65, 0.6],
     fontSize: 9.5, valign: "middle",
   });
