@@ -5,22 +5,22 @@
 - 대상 슬라이드(9종): **Muscle #7 #58 #73 #19 / Cartilage #28 #5 / Bone #2 #OH26 #80**
   - 실습 교안에서 위 9종이 모두 노란색 하이라이트(시험 대상 표시)
 - 야마(★) 판정 기준: **선배 실습노트(족보) 자료 존재 여부** — 내용 중요도 아님(CLAUDE.md 원칙)
-  - 이번 회차는 선배 자료 **접수 대기 중** → 아래 표의 야마 칸은 비워둠. 자료 접수 후 ★ 판정 및 "선배들 그림" 섹션 추가 예정.
-  - 그때까지 9종 모두 야마 수준(정의·분류·기전 + 암기 포인트)으로 풀 서술해 둠(절삭 없음).
+  - 이번 회차 선배 자료 : **오아름(22학번·2023학년도, jpg 9장)** · **김은기(23학번, pdf)** · **김선우(23학번, jpg 7장)** — 9종 슬라이드 모두에 선배 자료가 존재하므로 **9종 전부 야마(★)**.
+  - 슬라이드별 선배 자료 수 : #7·#58·#73·#19·#5 = 3종(오아름·김은기·김선우) / #28·#2·#OH26·#80 = 1종(오아름)
 
 ## 오늘 실습 범위 요약
 
 | Slide # | Organ | Species | Stain | 배율 | 주제 | 야마 |
 |---|---|---|---|---|---|---|
-| #7 | Skeletal muscle | Rat | Modified Gomori trichrome | ×40~400 | Neuromuscular spindle (신경근육방추) | |
-| #58 | Uterus | Human | HE | ×40~400 | Smooth muscle (cross / longitudinal) | |
-| #73 | Heart | Monkey | HE | ×40~400 | Cardiac muscle (longitudinal / cross) | |
-| #19 | Heart | Dog | HE | ×40~400 | Purkinje fiber | |
-| #28 | Trachea | Monkey | HE | ×40~400 | Hyaline cartilage | |
-| #5 | Intervertebral disc | Human | HE | ×40~400 | Fibrocartilage | |
-| #2 | Bone (cross, ground) | Human | Ground preparation (연마표본) | ×40~400 | Haversian system (osteon) | |
-| #OH26 | Bone development (palate) | Human | HE | ×40~400 | Intramembranous ossification | |
-| #80 | Bone development | Human | (Azan-)Mallory | ×50~400 | Endochondral ossification | |
+| #7 | Skeletal muscle | Rat | Modified Gomori trichrome | ×40~400 | Neuromuscular spindle (신경근육방추) | ★ |
+| #58 | Uterus | Human | HE | ×40~400 | Smooth muscle (cross / longitudinal) | ★ |
+| #73 | Heart | Monkey | HE | ×40~400 | Cardiac muscle (longitudinal / cross) | ★ |
+| #19 | Heart | Dog | HE | ×40~400 | Purkinje fiber | ★ |
+| #28 | Trachea | Monkey | HE | ×40~400 | Hyaline cartilage | ★ |
+| #5 | Intervertebral disc | Human | HE | ×40~400 | Fibrocartilage | ★ |
+| #2 | Bone (cross, ground) | Human | Ground preparation (연마표본) | ×40~400 | Haversian system (osteon) | ★ |
+| #OH26 | Bone development (palate) | Human | HE | ×40~400 | Intramembranous ossification | ★ |
+| #80 | Bone development | Human | (Azan-)Mallory | ×50~400 | Endochondral ossification | ★ |
 
 ---
 
@@ -53,11 +53,10 @@
 
 ---
 
-## Slide #7 — Skeletal muscle, Rat, Modified Gomori trichrome, ×40→×400 — Neuromuscular spindle (신경근육방추)
+## Slide #7 — Skeletal muscle, Rat, Modified Gomori trichrome, ×40→×400 — Neuromuscular spindle (신경근육방추) ★야마
+이미지(교안): `../../images/교안/7_nmspindle_YAMA-gomori-overview_x40.jpg`, `../../images/교안/7_nmspindle_YAMA-gomori-overview_x100.jpg`, `../../images/교안/7_nmspindle_YAMA-gomori-intrafusal-extrafusal_x400.jpg`
 
-이미지(교안): `../../images/교안/7_nmspindle_gomori-overview_x40.jpg`, `../../images/교안/7_nmspindle_gomori-overview_x100.jpg`, `../../images/교안/7_nmspindle_gomori-intrafusal-extrafusal_x400.jpg`
-
-### 조직 소견 [필수]
+### 조직 소견(야마 우선 서술) [필수]
 - Modified Gomori trichrome 염색상 골격근 섬유 단면은 **청록색**의 큰 다각형 profile로 보이고, 그 사이를 Endomysium(근섬유막)·Perimysium(근다발막)의 결합조직이 가늘게 가른다. (교안 라벨: ×100 — Endomysium, Perimysium)
 - ×400: 큰 **Extrafusal muscle fiber** 사이에 결합조직 capsule로 싸인 작은 원형 구조가 **Neuromuscular spindle** — 내부에 가는 **Intrafusal muscle fiber** 다발과 신경 단면(보라색 핵)이 보인다. (교안 라벨: Intrafusal / Extrafusal muscle fiber, Perimysium, Endomysium)
 - 감별 : Extrafusal fiber = 굵고 많은 일반 근섬유 / Intrafusal fiber = spindle 안쪽의 가늘고 적은 근섬유.
@@ -85,13 +84,17 @@
 - spindle = **intrafusal(안, 얇음) vs extrafusal(밖, 굵음)** / nuclear bag·chain / Ia·II(감각), γ(운동).
 - Muscle spindle = 길이, Golgi tendon organ = 장력(Ib).
 
+### 선배들 그림
+- 선배 오아름(22학번·2023학년도) ×400 : 혈관·신경다발·Intrafusal muscle fiber·Perimysium(*)·Endomysium 라벨, "핵이 가장자리에 치우쳐 있다". Endomysium = muscle fiber를 감싸는 막, reticular fiber + basal lamina로 구성, muscle fiber를 구분. Perimysium = muscle fascicle을 감싸는 막, less dense irregular CT, collagen 풍부(bundles of muscle fibers). Skeletal muscle = 줄무늬·수의근, 다핵·핵 가장자리, A-band·I-band 경계의 T-tubule을 통해 Ca²⁺ 이동(sarcomere 중 myosin filament 존재 / actin filament만 존재하는 부분 구분). 이미지: `../../images/선배그림/7_nmspindle_YAMA-senior-ahreum_x400.jpg`
+- 선배 김은기(23학번) ×200 : Perimysium(muscle fascicle을 둘러싸는 CT), Endomysium(muscle fiber를 둘러싸는 CT), Intrafusal / Extrafusal muscle fiber, "가장자리로 치우친 핵", "일반적으로 fiber 크기가 큰 fiber가 white fiber". Skeletal muscle = 긴 원통형 다핵 muscle fiber, 근육 재생은 satellite cell에서. Muscle spindle = 근육 수축(신장) 정도 확인, muscle fiber + nerve fiber 구성, nerve fiber의 α-motor neuron을 통해 extrafusal fiber에 신호 전달. 이미지: `../../images/선배그림/7_nmspindle_YAMA-senior-eungi_x200.jpg`
+- 선배 김선우(23학번) ×200 : Extrafusal / Intrafusal muscle fiber(spindle) 라벨, Perimysium(실선) = muscle fascicle을 감싸는 막, Endomysium(점선) = muscle fiber를 감싸는 막. Skeletal muscle = striation / voluntary / long cylindrical / multinucleated / 30~150μm. Muscle spindle = Capsule, Intrafusal fiber 8~10개(nuclear bag·nuclear chain), Nerve fibers = sensory(Ia, II), motor(γ). 이미지: `../../images/선배그림/7_nmspindle_YAMA-senior-sunwoo_x200.jpg`
+
 ---
 
-## Slide #58 — Uterus, Human, HE, ×40→×400 — Smooth muscle (평활근)
+## Slide #58 — Uterus, Human, HE, ×40→×400 — Smooth muscle (평활근) ★야마
+이미지(교안): `../../images/교안/58_uterus_YAMA-smoothmuscle-wall_x40.jpg`, `../../images/교안/58_uterus_YAMA-smoothmuscle-myometrium_x100.jpg`, `../../images/교안/58_uterus_YAMA-smoothmuscle-cross-longitudinal_x400.jpg`
 
-이미지(교안): `../../images/교안/58_uterus_smoothmuscle-wall_x40.jpg`, `../../images/교안/58_uterus_smoothmuscle-myometrium_x100.jpg`, `../../images/교안/58_uterus_smoothmuscle-cross-longitudinal_x400.jpg`
-
-### 조직 소견 [필수]
+### 조직 소견(야마 우선 서술) [필수]
 - ×40 : 자궁벽 3층 — **Endometrium(자궁내막) / Myometrium(자궁근육층) / Perimetrium(자궁외막)**. 표본 대부분을 차지하는 두꺼운 분홍색 층이 Myometrium(평활근).
 - ×100 : Myometrium 내 **BV(혈관)** 가 보이고, 평활근 다발이 서로 다른 방향으로 엇갈려 배열(줄무늬 없음).
 - ×400 : 같은 시야에서 **횡단(Cross sectioned)** 과 **종단(Longitudinally sectioned)** 이 공존 — 횡단에서는 둥근 profile과 중심의 둥근 핵, 종단에서는 가늘고 긴 방추형 세포와 길쭉한(시가형) 핵이 관찰된다. **줄무늬(striation) 없음**, 핵은 중심.
@@ -117,13 +120,17 @@
 - 평활근 = **줄무늬 ✕ / 핵 1개·중심 / T-tubule ✕(caveola) / troponin ✕ → calmodulin**.
 - 횡단 vs 종단 구분 : 횡단(둥근 단면, 핵 중심) / 종단(방추형, 시가형 핵).
 
+### 선배들 그림
+- 선배 오아름(22학번·2023학년도) ×400 : 횡단(Cross sectioned) / 종단(Longitudinally sectioned) 구분, 주행방향 화살표. Smooth muscle = 줄무늬 없는 불수의근, 세포 1개당 핵 1개·세포 중앙, 방추형, 혈관·복합샘·피부 진피층 등에 위치, gap junction 다수·T-tubule 대신 caveolae로 Ca²⁺ 이동, 세포 사이에 basal lamina와 reticular fiber. 이미지: `../../images/선배그림/58_uterus_YAMA-senior-ahreum_x400.jpg`
+- 선배 김은기(23학번) ×200 : Longitudinally / Cross sectioned. Smooth muscle = 무늬 없는 불수의근, 세포 분열 가능, 세포막의 연장인 T-tubule은 없지만 caveolae로 신호 전달, 세포 내 "dense body"가 있어 actin filament와 연결, 세포막에 Ca²⁺ channel 존재(Ca²⁺는 calmodulin과 결합). 이미지: `../../images/선배그림/58_uterus_YAMA-senior-eungi_x200.jpg`
+- 선배 김선우(23학번) ×100 : Longitudinally / Cross sectioned, blood vessel 라벨. Smooth muscle = 20~500μm long, 5~10μm dia, spindle shape, one central nucleus, no striation, basal lamina + reticular fiber, involuntary. 이미지: `../../images/선배그림/58_uterus_YAMA-senior-sunwoo_x100.jpg`
+
 ---
 
-## Slide #73 — Heart, Monkey, HE, ×40→×400 — Cardiac muscle (심장근)
+## Slide #73 — Heart, Monkey, HE, ×40→×400 — Cardiac muscle (심장근) ★야마
+이미지(교안): `../../images/교안/73_heart_YAMA-cardiacmuscle-wall_x40.jpg`, `../../images/교안/73_heart_YAMA-cardiacmuscle-myocardium_x100.jpg`, `../../images/교안/73_heart_YAMA-cardiacmuscle-longitudinal-intercalateddisk_x400.jpg`, `../../images/교안/73_heart_YAMA-cardiacmuscle-cross-centralnucleus_x400.jpg`
 
-이미지(교안): `../../images/교안/73_heart_cardiacmuscle-wall_x40.jpg`, `../../images/교안/73_heart_cardiacmuscle-myocardium_x100.jpg`, `../../images/교안/73_heart_cardiacmuscle-longitudinal-intercalateddisk_x400.jpg`, `../../images/교안/73_heart_cardiacmuscle-cross-centralnucleus_x400.jpg`
-
-### 조직 소견 [필수]
+### 조직 소견(야마 우선 서술) [필수]
 - ×40 : 심장벽 3층 — **Endocardium(심장내막) / Myocardium(심장근육층) / Pericardium(심장막)**.
 - ×100 : Myocardium — 심근섬유 다발 사이로 **Connective tissue**(가는 결합조직)가 지나감.
 - ×400 종단(longitudinal) : **줄무늬** 있는 원통형 세포, **핵 1~2개가 세포 중심**에 위치, 인접 세포를 잇는 **사이원반(Intercalated disk)** 이 짙은 가로선(계단상)으로 관찰.
@@ -154,13 +161,17 @@
 - 심장근 = **줄무늬 ○ / 중심 핵 1~2개 / 사이원반(desmosome·fascia adherens·gap junction) / Diad / 불수의**.
 - 사이원반 : **가로=desmosome+fascia adherens, 세로=gap junction**.
 
+### 선배들 그림
+- 선배 오아름(22학번·2023학년도) ×450 : 심근세포 경계, **Intercalated disk(사이원반)** = 세포 사이 물질이 이동하는 gap junction + 심근세포를 서로 고정하는 fascia adherens + desmosomes. 가로부분에 desmosome·fascia adherens, 세로부분에 gap junction. 심근세포의 핵은 골격근과 달리 세포 중앙에 위치, 세포가 분지·갈라지는 형태도 존재. 이미지: `../../images/선배그림/73_heart_YAMA-senior-ahreum_x450.jpg`
+- 선배 김은기(23학번) ×400 : 혈관, Intercalated disk 라벨(원문 표기 "#13", 실습 번호 #73으로 판단). Cardiac muscle = 1~2개의 핵을 가진 가로무늬 불수의근, 세포 사이 junction에 intercalated disk, 혈관·미토콘드리아 많음, 골격근의 T-tubule+SR이 triad인 것과 달리 **diad**. Intercalated disk : 가로부분 desmosome(부착반)·fascia adherens(부착대), 세로부분 gap junction. 이미지: `../../images/선배그림/73_heart_YAMA-senior-eungi_x400.jpg`
+- 선배 김선우(23학번) ×200 : Intercalated disk(cells joined end-to-end; 가로 = desmosome, fascia adherens / 세로 = gap junction). Cardiac muscle = 15μm dia·80μm long, 1~2 central nuclei, striation, SR less in number and small terminal(Not triad but diad). 이미지: `../../images/선배그림/73_heart_YAMA-senior-sunwoo_x200.jpg`
+
 ---
 
-## Slide #19 — Heart, Dog, HE, ×40→×400 — Purkinje fiber (푸르키네 섬유)
+## Slide #19 — Heart, Dog, HE, ×40→×400 — Purkinje fiber (푸르키네 섬유) ★야마
+이미지(교안): `../../images/교안/19_heart_YAMA-purkinjefiber-overview_x40.jpg`, `../../images/교안/19_heart_YAMA-purkinjefiber-endocardium_x100.jpg`, `../../images/교안/19_heart_YAMA-purkinjefiber-cell_x400.jpg`
 
-이미지(교안): `../../images/교안/19_heart_purkinjefiber-overview_x40.jpg`, `../../images/교안/19_heart_purkinjefiber-endocardium_x100.jpg`, `../../images/교안/19_heart_purkinjefiber-cell_x400.jpg`
-
-### 조직 소견 [필수]
+### 조직 소견(야마 우선 서술) [필수]
 - ×40 / ×100 : **Endocardium(심장내막)** 바로 아래 층에 Purkinje fiber 무리가 있고, 그 아래에 **Myocardium(심장근육층)**. (교안 라벨: Endocardium, Myocardium)
 - ×400 : **Purkinje fiber** 는 주변의 일반 **Cardiac muscle fiber** 보다 **크고**, 세포질이 **옅게(pale)** 염색된다(glycogen 풍부). 핵은 1~2개 중심, 근원섬유가 적어 **줄무늬가 약하다**.
 - 층 구분(교안 라벨) : Endocardium = **Endothelium → Subendothelial layer → Subendocardial layer(= Purkinje fiber가 위치)**, 그 아래 Myocardium.
@@ -193,6 +204,11 @@
 - Purkinje fiber = **endocardium 쪽 / 일반 심근보다 큼 / 세포질 pale(glycogen) / 줄무늬 약함 / 자극 전도**.
 - 전도계 순서 : **SA node → AV node → AV bundle(His) → Purkinje fiber**.
 
+### 선배들 그림
+- 선배 오아름(22학번·2023학년도) ×400 : Endocardium(Endothelium → Subendothelial layer → Subendocardial layer) / Myocardium 구분. Purkinje fiber = 심방·심실벽의 심근세포, endocardium에 위치, 심근세포보다 크고 세포질에 glycogen 함유로 염색이 연함(glycogen·미토콘드리아 함유 세포질), 심근세포의 전기적 충격 촉발. Cardiac muscle cells = 1개당 1~2개 핵, 가로무늬, basal lamina·reticular fiber, myoglobin·glycogen, 미토콘드리아 많음, SR 수가 적어 triad 대신 **diad**, terminal cisterna가 덜 발달. 이미지: `../../images/선배그림/19_heart_YAMA-senior-ahreum_x400.jpg`
+- 선배 김은기(23학번) ×200 : Purkinje fiber = endocardium에서 관찰, cardiac muscle fiber보다 크고 세포질 내 glycogen 함유, 세포 간 연결은 intercalated disk, 심장근에 전기 신호 전달. cf. 신경은 Purkinje fiber와 cardiac muscle fiber 모두에 연결되나 Purkinje fiber에 신경이 매우 많음. 이미지: `../../images/선배그림/19_heart_YAMA-senior-eungi_x200.jpg`
+- 선배 김선우(23학번) ×150 : Endocardium(endothelium, subendothelial layer, subendocardial layer) / myocardium. Purkinje fiber = in endocardium, larger than cardiac muscle cells, contains glycogen inside cytoplasm → stained pale. Cardiac muscle = 15μm dia·80μm long, 1~2 central nuclei, striation, basal lamina + reticular fiber. 이미지: `../../images/선배그림/19_heart_YAMA-senior-sunwoo_x150.jpg`
+
 ---
 
 # PART 2. Cartilage (연골)
@@ -224,11 +240,10 @@
 
 ---
 
-## Slide #28 — Trachea, Monkey, HE, ×40→×400 — Hyaline cartilage (유리연골)
+## Slide #28 — Trachea, Monkey, HE, ×40→×400 — Hyaline cartilage (유리연골) ★야마
+이미지(교안): `../../images/교안/28_trachea_YAMA-hyalinecartilage-stereo_whole.jpg`, `../../images/교안/28_trachea_YAMA-hyalinecartilage-wall_x40.jpg`, `../../images/교안/28_trachea_YAMA-hyalinecartilage-perichondrium_x100.jpg`, `../../images/교안/28_trachea_YAMA-hyalinecartilage-isogenousgroup_x400.jpg`
 
-이미지(교안): `../../images/교안/28_trachea_hyalinecartilage-stereo_whole.jpg`, `../../images/교안/28_trachea_hyalinecartilage-wall_x40.jpg`, `../../images/교안/28_trachea_hyalinecartilage-perichondrium_x100.jpg`, `../../images/교안/28_trachea_hyalinecartilage-isogenousgroup_x400.jpg`
-
-### 조직 소견 [필수]
+### 조직 소견(야마 우선 서술) [필수]
 - 실체현미경(Stereomicroscopic view) : 기관 단면에서 짙은 청보라색 **C자형 hyaline cartilage ring** 이 관찰.
 - ×40 : 기관벽 층 구조 — **T(unica) mucosa → T. submucosa → Cartilage layer → T. adventitia**.
 - ×100 : **Cartilage matrix** 양쪽 가장자리에 **Perichondrium**(TS = submucosa 쪽, TA = adventitia 쪽에서 맞닿음). 기질은 호염기성이며 **Territorial matrix(세포영역기질, 진하게 염색)** 와 **Interterritorial matrix(영역사이기질, 연하게 염색)** 구분.
@@ -256,13 +271,15 @@
 - **Territorial(진함, CS 풍부) vs Interterritorial(연함, type II collagen 풍부)** 구분.
 - Isogenous cell group = 한 chondrocyte가 분열해 생긴 세포군.
 
+### 선배들 그림
+- 선배 오아름(22학번·2023학년도) ×80 : Cartilage matrix, **Isogenous cell group(동형세포집단)**, **Territorial matrix(세포영역기질)** = Interterritorial matrix보다 활동이 활발해 염색 시 더 진하게 관찰, Chondrocyte(연골세포), Lacuna(연골소강), **Interterritorial matrix(영역사이기질)**. Hyaline cartilage = 코·기관·복장뼈와 갈비뼈 사이 결합부 등에 존재, 건조중량의 40%가 Type II collagen이라 기질이 basophilic. 기질은 Pericellular matrix(기질에 부착하기 위한 integrin, type VI collagen 포함) / Territorial matrix(chondroitin sulfate 다량, collagen 함량 적음) / Interterritorial matrix(proteoglycan 적고 type II collagen 다량)로 구분. 발생 : proliferation → condensation → chondrification center → differentiation → secretion → matrix formation, 성장 : interstitial + appositional growth. 이미지: `../../images/선배그림/28_trachea_YAMA-senior-ahreum_x80.jpg`
+
 ---
 
-## Slide #5 — Intervertebral disc, Human, HE, ×40→×400 — Fibrocartilage (섬유연골)
+## Slide #5 — Intervertebral disc, Human, HE, ×40→×400 — Fibrocartilage (섬유연골) ★야마
+이미지(교안): `../../images/교안/5_intervertebraldisc_YAMA-fibrocartilage-stereo_whole.jpg`, `../../images/교안/5_intervertebraldisc_YAMA-fibrocartilage-overview_x40.jpg`, `../../images/교안/5_intervertebraldisc_YAMA-fibrocartilage-herringbone_x100.jpg`, `../../images/교안/5_intervertebraldisc_YAMA-fibrocartilage-isogenousgroup_x400.jpg`
 
-이미지(교안): `../../images/교안/5_intervertebraldisc_fibrocartilage-stereo_whole.jpg`, `../../images/교안/5_intervertebraldisc_fibrocartilage-overview_x40.jpg`, `../../images/교안/5_intervertebraldisc_fibrocartilage-herringbone_x100.jpg`, `../../images/교안/5_intervertebraldisc_fibrocartilage-isogenousgroup_x400.jpg`
-
-### 조직 소견 [필수]
+### 조직 소견(야마 우선 서술) [필수]
 - 실체현미경 : 추간판의 두 부분 — **Annulus fibrosus(연골성 섬유테)** 와 **Nucleus pulposus(용액성 수질핵)**. (교안 라벨)
 - ×40 : 분홍~보라의 **호산성** 기질, **Matrix = Collagen fiber type I**. 세포는 **Chondroblast(연골 형성)** 와 **Fibroblast** 가 관찰.
 - ×100 : **Chondrocytes가 줄(rows)로 배열**, 섬유다발이 **Herringbone pattern(청어뼈 무늬)** 으로 교차.
@@ -287,6 +304,11 @@
 ### 암기 포인트
 - Fibrocartilage = **Type I collagen / 호산성 / 줄 배열 / perichondrium ✕**.
 - 추간판 : **Annulus = 섬유연골(인장), Nucleus pulposus = notochord 유래(압축)**, **Herring-bone**.
+
+### 선배들 그림
+- 선배 오아름(22학번·2023학년도) ×160 : Chondrocytes = 줄을 따라 일렬로 나열, **Isogenous cell group** = chondrocyte가 ECM에 둘러싸인 채 그 안에서 분열해 1~8개의 세포가 모인 구조, Herringbone pattern. Fibrocartilage = 척추원반 사이·두덩결합·무릎 반월판의 연골, 교차방향 섬유로 외력에 견딤, Type I collagen 다량(type II보다 proteoglycan 부착력 낮음), 기질 acidophilic·콜라겐 다발이 평행, dense regular CT 혹은 유리연골과 결합해 존재. 이미지: `../../images/선배그림/5_intervertebraldisc_YAMA-senior-ahreum_x160.jpg`
+- 선배 김은기(23학번) ×100 : 45°~90° 각도의 herringbone pattern을 만드는 type I collagen(type II보다 proteoglycan과 접착력 ↓), 일렬로 나열된 chondrocyte. Fibrocartilage = Annulus fibrosus(herringbone appearance) / Nucleus pulposus(hyaluronic acid 풍부), cf. 추간판은 유리연골 사이에 존재. 이미지: `../../images/선배그림/5_intervertebraldisc_YAMA-senior-eungi_x100.jpg`
+- 선배 김선우(23학번) ×80 : Chondrocytes(arranged in rows), Herringbone pattern. Fibrocartilage = Type I collagen, Perichondrium 없음(collagen에 의해 고정), Intervertebral disk = between hyaline cartilage, two parts(Annulus fibrosus, Nucleus pulposus). 이미지: `../../images/선배그림/5_intervertebraldisc_YAMA-senior-sunwoo_x80.jpg`
 
 ---
 
@@ -334,11 +356,10 @@
 
 ---
 
-## Slide #2 — Bone (cross), Ground preparation, Human, ×40→×400 — Haversian system (osteon)
+## Slide #2 — Bone (cross), Ground preparation, Human, ×40→×400 — Haversian system (osteon) ★야마
+이미지(교안): `../../images/교안/2_bone_YAMA-ground-osteon_x40.jpg`, `../../images/교안/2_bone_YAMA-ground-haversiansystem_x100.jpg`, `../../images/교안/2_bone_YAMA-ground-lacuna-canaliculi_x400.jpg`
 
-이미지(교안): `../../images/교안/2_bone_ground-osteon_x40.jpg`, `../../images/교안/2_bone_ground-haversiansystem_x100.jpg`, `../../images/교안/2_bone_ground-lacuna-canaliculi_x400.jpg`
-
-### 조직 소견 [필수]
+### 조직 소견(야마 우선 서술) [필수]
 - ×40 : 연마표본이라 염색 없이 회갈색으로 보이며 **Osteon(Haversian system)** 들이 단면에 흩어져 있다. (교안 라벨: Osteon, Haversian system)
 - ×100 : 중심의 **Haversian canal** 을 둘러싼 **동심원상 lamellae** = Osteon. Osteon 사이의 불규칙 판 = **Interstitial lamella(간질층판 = intermediate lamellae)**. **Volkmann's canal** 이 Haversian canal 사이를 가로로 연결. 층판 사이의 점 = **Lacuna**.
 - ×400 : **Haversian canal** 주위로 **Lacuna** 와 거기서 방사상으로 뻗는 가는 **Canaliculi(뼈세관)**, 옆으로 지나는 **Volkmann canal** 관찰.
@@ -369,13 +390,15 @@
 - **Haversian(장축 평행) vs Volkmann(수직 연결)**, interstitial lamella = 오래된 osteon 잔여.
 - Ground bone = **세포 없음, 빈 공간(lacuna·canaliculi)만 보임**.
 
+### 선배들 그림
+- 선배 오아름(22학번·2023학년도) ×320 (원문 표기 "#2 Bone, monkey" / ground preparation) : **Osteon(Haversian system, 골단위)**, Haversian canal, Lacuna, **Canaliculi(뼈세관)** = osteocyte끼리 연결되는 관(gap junction으로 연결), cement(line) 라벨, **Volkmann's canal** = Haversian canal끼리 연결하는 관, **Interstitial lamella(= intermediate lamellae, 간질층판)** = osteon 사이의 공간. Osteon = 뼈의 기능적 단위, 원통형 동심원 구조, 여러 층의 concentric lamellae로 구성되며 각 층의 주행방향이 서로 엇갈림, 뼈와 그 방향이 일치. 이미지: `../../images/선배그림/2_bone_YAMA-senior-ahreum_x320.jpg`
+
 ---
 
-## Slide #OH26 — Bone development (palate), Human, HE, ×40→×400 — Intramembranous ossification (막내골화)
+## Slide #OH26 — Bone development (palate), Human, HE, ×40→×400 — Intramembranous ossification (막내골화) ★야마
+이미지(교안): `../../images/교안/OH26_bonedevelopment_YAMA-intramembranous-palatal_x40.jpg`, `../../images/교안/OH26_bonedevelopment_YAMA-intramembranous-mesenchyme_x100.jpg`, `../../images/교안/OH26_bonedevelopment_YAMA-intramembranous-osteoblast-osteoid_x400.jpg`, `../../images/교안/OH26_bonedevelopment_YAMA-intramembranous-osteoclast-howship_x400.jpg`
 
-이미지(교안): `../../images/교안/OH26_bonedevelopment_intramembranous-palatal_x40.jpg`, `../../images/교안/OH26_bonedevelopment_intramembranous-mesenchyme_x100.jpg`, `../../images/교안/OH26_bonedevelopment_intramembranous-osteoblast-osteoid_x400.jpg`, `../../images/교안/OH26_bonedevelopment_intramembranous-osteoclast-howship_x400.jpg`
-
-### 조직 소견 [필수]
+### 조직 소견(야마 우선 서술) [필수]
 - ×40 : 구개 단면 — 위쪽 **Oral cavity(구강)**, 가운데 **Palatal bone(구개골)**, 아래 **Nasal cavity(비강)**, 그 사이 **Nasal septum bone**.
 - ×100 : 좌우의 **Palatal bone** 두 개가 정중선 쪽으로 자라고 있고, 그 사이 정중선에 아직 뼈가 되지 않은 **Mesenchyme(중간엽)** 이 남아 있다.
 - ×400 (osteoid 부위) : 뼈 표면에 **Osteoblast**(입방~원주형, 호염기성 세포가 시트 모양으로 배열, 뼈 형성 중), 그 바로 아래 **Osteoid**(미석회화 기질, 연한 색), 기질 속 **Osteocyte in lacuna**, 안쪽 **Bone matrix**(광화된 짙은 분홍).
@@ -396,13 +419,15 @@
 - **Osteoblast(표면, 뼈 형성) / Osteoid(미석회화) / Osteocyte(lacuna) / Osteoclast(다핵, Howship's lacuna, 뼈 흡수)** 위치 구분.
 - 정중선의 **Mesenchyme** = 아직 뼈가 되지 않은 부분.
 
+### 선배들 그림
+- 선배 오아름(22학번·2023학년도) ×400 (원문 표기 "#26 Hard palate from fet, human") : Bone matrix, **Osteocyte in lacuna**, Bone marrow, 표면을 덮는 **Osteoblast** = 뼈 표면에 위치해 뼈를 만듦, mesenchymal cell 기원·cuboidal/columnar, **osteoid(Type I collagen, proteoglycan, glycoprotein, RANKL)** 분비, 표면에 PTH 수용체와 integrin. **Osteoclast** = 뼈 표면에 위치, 여러 개의 핵, **Howship's lacunae(침식소강)** = osteoclast가 갉아먹으며 만든 주머니 모양. (lacuna 안에서 기질의 미네랄 상태를 감지하고 손상 뼈 복구에 관여한다는 필기는 osteocyte에 대한 설명으로 판단.) Bone marrow : Red bone marrow(적색골수) = 혈구를 만드는 골수, 나이 들며 줄지만 장골에는 적색골수가 남음 / Yellow bone marrow(황색골수) = 지방 성분이 많고 혈구 생성 기능 없음. 이미지: `../../images/선배그림/OH26_bonedevelopment_YAMA-senior-ahreum_x400.jpg`
+
 ---
 
-## Slide #80 — Bone development, Human, (Azan-)Mallory, ×50→×400 — Endochondral ossification (연골내골화)
+## Slide #80 — Bone development, Human, (Azan-)Mallory, ×50→×400 — Endochondral ossification (연골내골화) ★야마
+이미지(교안): `../../images/교안/80_bonedevelopment_YAMA-endochondral-stereo_whole.jpg`, `../../images/교안/80_bonedevelopment_YAMA-endochondral-epiphysealplate_x50.jpg`, `../../images/교안/80_bonedevelopment_YAMA-endochondral-overview_x100.jpg`, `../../images/교안/80_bonedevelopment_YAMA-endochondral-reserve-proliferation_x400.jpg`, `../../images/교안/80_bonedevelopment_YAMA-endochondral-maturation-hypertrophy_x400.jpg`, `../../images/교안/80_bonedevelopment_YAMA-endochondral-calcification-erosion_x400.jpg`, `../../images/교안/80_bonedevelopment_YAMA-endochondral-ossification_x400.jpg`
 
-이미지(교안): `../../images/교안/80_bonedevelopment_endochondral-stereo_whole.jpg`, `../../images/교안/80_bonedevelopment_endochondral-epiphysealplate_x50.jpg`, `../../images/교안/80_bonedevelopment_endochondral-overview_x100.jpg`, `../../images/교안/80_bonedevelopment_endochondral-reserve-proliferation_x400.jpg`, `../../images/교안/80_bonedevelopment_endochondral-maturation-hypertrophy_x400.jpg`, `../../images/교안/80_bonedevelopment_endochondral-calcification-erosion_x400.jpg`, `../../images/교안/80_bonedevelopment_endochondral-ossification_x400.jpg`
-
-### 조직 소견 [필수]
+### 조직 소견(야마 우선 서술) [필수]
 - **Azan-Mallory 염색(교안)** : **핵 = 빨강(Red), Collagen = 파랑(Blue)**, 뼈는 **초기 = 파랑, 성숙 = 빨강**. (교안 #80 표기는 Azan-Mallory / Mallory 혼용)
 - 실체현미경·×50 : 위에서 아래로 **Epiphysis(뼈끝, bone)** → **Epiphyseal plate(뼈끝판, cartilage)** → **Metaphysis(뼈몸통끝)** → **Diaphysis(뼈몸통, endochondral ossification 진행)**.
 - ×400 영역별(교안 라벨, 위 → 아래 = 골단판에서 골간 쪽)
@@ -444,6 +469,9 @@
 - **Azan-Mallory : 핵 빨강 / collagen 파랑 / 초기 뼈 파랑 → 성숙 뼈 빨강 / 석회화 연골 파랑 vs 석회화 뼈 빨강**.
 - **막내골화 vs 연골내골화**(위 비교표) — "연골 모형 유무"와 "bone collar는 막내골화 방식" 포인트.
 
+### 선배들 그림
+- 선배 오아름(22학번·2023학년도) ×160 (Azan-Mallory) : 붉은색 = 핵 & 성숙한 뼈세포(chondrocyte 핵과 성숙한 뼈세포 모두 붉게 염색되나, 성숙한 뼈세포는 침식~뼈형성 구역에서 보임). Epiphysis(뼈끝) / Epiphyseal plate(cartilage, 뼈끝판 = 성장판) / Diaphysis(뼈몸통). **Reserve zone** = 크기 작은 chondrocyte가 하나씩 lacuna에 존재 / **Zone of proliferation** = 더 크고 편평한 chondrocyte 여러 개가 한 lacuna 안에서 isogenous cell group 형성 / **Zone of maturation** = chondrocyte가 커짐 / **Zone of hypertrophy** / **Zone of calcification** = chondrocyte가 죽으며 석회화 시작 / **Zone of erosion** / **Zone of ossification** = 석회화된 기질 위에서 뼈 형성, 성숙한 뼈세포가 붉게 염색(침식구역보다 붉은색이 진함). 화살표 : 연골이 뼈로 대체되며 이 방향으로 뼈 발생. 석회화 기전 : proteoglycan·calcium-binding glycoprotein에 의해 촉진, matrix vesicle theory → 이후 heterogenous nucleation theory(판독 일부 불확실). 이미지: `../../images/선배그림/80_bonedevelopment_YAMA-senior-ahreum_x160.jpg`
+
 ---
 
 ## 오늘 정리 — 시험 대비 비교 핵심 3종
@@ -452,7 +480,7 @@
 2. **연골 3종 비교표** (collagen type·perichondrium 유무·위치 / hyaline #28, fibro #5)
 3. **막내골화 vs 연골내골화** + 골단판 5~7구역 순서 + 뼈 세포 4종(osteoprogenitor / osteoblast / osteocyte / osteoclast)
 
-(야마(★) 지정 및 선배 예시 보강은 선배 자료 접수 후 반영 예정)
+(9종 모두 야마(★) — 선배 자료 3종 중 오아름·김은기·김선우의 필기를 슬라이드별 "선배들 그림"에 정리)
 
 <details>
 <summary>참고 자료 출처</summary>
