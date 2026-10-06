@@ -1,0 +1,19 @@
+{
+  "extraKnownMarketplaces": {
+    "im-not-ai": { "source": { "source": "github", "repo": "epoko77-ai/im-not-ai" } },
+    "easy-hwp": { "source": { "source": "github", "repo": "nathankim0/easy-hwp" } }
+  },
+  "enabledPlugins": {
+    "humanize-korean@im-not-ai": true,
+    "easy-hwp@easy-hwp": true
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          { "type": "command", "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/ensure-plugins.sh" }
+        ]
+      }
+    ]
+  }
+}
