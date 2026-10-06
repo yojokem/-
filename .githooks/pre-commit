@@ -1,0 +1,7 @@
+#!/bin/sh
+# node_modules·대용량 파일 커밋 차단
+bad=$(git diff --cached --name-only --diff-filter=ACM | grep -E '(^|/)node_modules/' || true)
+if [ -n "$bad" ]; then echo "pre-commit: node_modules 커밋 금지:"; echo "$bad"; exit 1; fi
+big=$(git diff --cached --name-only --diff-filter=ACM | while read -r f; do [ -f "$f" ] && [ "$(wc -c <"$f")" -gt 20000000 ] && echo "$f"; done)
+if [ -n "$big" ]; then echo "pre-commit: 20MB 초과 파일:"; echo "$big"; exit 1; fi
+exit 0
