@@ -1,0 +1,147 @@
+══════════════════════════════════════════════════════════════
+국소의치의 구성요소 및 기능 · 2026-2 중간 — 자료 현황 + 전체 경로
+══════════════════════════════════════════════════════════════
+표기: [읽음] 내용 확보 / [미독] 못 읽음 / [일부] 일부만 / ★ 올해 교수 교안(촬영본)
+Drive 루트 약칭:  MD = My Drive (루트 ID 0ACgbgg_iEloPUk9PVA)
+                  D26 = MD / 2026 / 2학기        (폴더 ID 1hT-3E5PFYQCcPKyY3DoFPlrhmkdmMVtc)
+       D26 아래:  원본 / #야마 / (그 아래 학번·조 폴더들)
+※ 이전 보고의 경로 오류 정정은 맨 아래 「정정」 참고.
+
+
+══════════════════════════════════════════════════════════════
+A. ★ 올해 교수 교안 촬영본 (총 115장, 모두 [읽음]) — 근거 1순위
+══════════════════════════════════════════════════════════════
+Drive 경로: MD / 2026 / 2학기 / 원본 / 국소의치의구성요소및기능
+            (원본 폴더 ID 1jP5jUlTiLXtzMXo6zgFpNW4uTkYfMsuO)
+            (과목 폴더 ID 15lHOKn9fra2sAps4G6aIZzQYor1x1YUa)
+
+ 장  | Drive 하위 폴더 (ID)                              | 사진 파일명 패턴                                  | 장수 | 전사본(저장소, 열람용)
+ 1장 | 1장 20260907 (1JZRwSyn7l0hRVTmNQrllmTkFGRg5z8BH)   | KakaoTalk_20260922_061007707[_01~_29].jpg + 061014520[_01,_02].jpg | 33 | /home/user/-/교안전사/원본_1장.txt
+ 2장 | 2장 20260914 (1iGUHvTwhYBuq4RJbnDTlQqbIw_f72Y8Q)   | KakaoTalk_20260922_061030611[_01~_19].jpg          | 20 | /home/user/-/교안전사/원본_2장.txt
+ 3장 | 3장 20260921 (1FQUNINhqPEdVNe7dxgrBIFwqRNsQ3KZ2)   | KakaoTalk_20260921_172616200[_01~_12].jpg          | 13 | /home/user/-/교안전사/원본_3장.txt
+ 4장 | 4장 20260928 (17Bh-De5ETtt6FZkq_DWp86y7yFdFMboh)   | A: KakaoTalk_20260928_125853947[_01~_29].jpg       | 30 | /home/user/-/교안전사/원본_4장A.txt
+     |                                                    | B: KakaoTalk_20260928_125905994[_01~_18].jpg       | 19 | /home/user/-/교안전사/원본_4장B.txt
+ 5장~ | (폴더 없음)                                       |                                                   |  0 | —  ← Ch.5 이후 올해 교안 없음
+ ※ 폴더명 날짜(0907 등)는 업로드 기준이고 파일명 날짜(0921·0922·0928)는 촬영일. 장 내용은 파일 내용 기준으로 분류.
+ ※ 사진 1장당 약 2.2~3.1MB (4032×3024 JPG).
+
+로컬 작업본(세션 임시 저장소 — 사용자 화면에서는 직접 열 수 없음):
+  /tmp/claude-0/-home-user--/c0071cb8-c1c6-54a0-8c3a-420929762d52/scratchpad/orig/
+    ch1/        p00~p32.jpg (원본) · q00~q32.jpg (1600px) · c18,19,20,22,23,28,29,31 (확대)   91MB
+    ch2_0922/   p00~p19 · q00~q19 · c00~c19                                                    62MB  (2장)
+    ch3/        p00~p12 · q00~q12                                                              37MB
+    ch4a/       p00~p29 · q00~q29 · c00~c29                                                    92MB  (4장 A)
+    ch4b/       p00~p18 · q00~q18 · c00~c18                                                    59MB  (4장 B)
+    ch2/        p00~p29 · q00~q29 (81MB) ← 이름과 달리 4장 A(125853947 묶음) 사진의 중복 사본. 2장 사진은 ch2_0922
+  전사본 원본 위치(위 저장소 복사본과 동일):
+    /tmp/claude-0/-home-user--/c0071cb8-c1c6-54a0-8c3a-420929762d52/scratchpad/txt/원본_{1장,2장,3장,4장A,4장B}.txt
+
+정리본(내용 요약):  /home/user/-/국소의치_2026-2_교안정리.txt
+  (Git: yojokem/- 저장소, 브랜치 dankook-dentistry)
+
+
+══════════════════════════════════════════════════════════════
+B. 선배 자료 — 읽은 것 (T4†: 교안 대용, 타 학번)
+══════════════════════════════════════════════════════════════
+Drive 경로: D26 / #야마 / 본1-2 캐츠·CMF 오아름 / 국소의치의 기능 및 구성요소 - 신수연 / 수업자료 및 필기
+   (#야마 ID 1jkmdkYknB_cCpl6o8tmT5Eqwzbvx8Jab · 오아름 ID 12jywPtkf4J30zuANNUoR_fQMH0RMoqLR
+    · 신수연 ID 1kbHWQ9o4xzVqzJnlxIpimfB-qB0AYCPm · 수업자료 및 필기 ID 1Vh_HL9jPCj5shO2G7dEn3MBHYR-C8oLX)
+ ┌ 국소의치 1-2주차.pdf  (2.1MB)  ID 18wMzAKap1TVh47OvaF1KgcYFbl7M4sIw   → 텍스트 txt/국소의치_1-2주차.txt
+ ├ 국소의치 3주차.pdf    (4.1MB·3.2MB 두 판) ID 1aIIU49b0y4eeoQSrbCa7hRZB7bIqc3TA / 1hKr0qPIxhnrmh3a-GBtXNbasdhV9s5wZ → 국소의치_3주차.txt
+ ├ 국소의치 4주차.pdf    (2.4MB)  ID 1wGi-j4oNHoZRSnGCBhKXDIxPs-Y462DU  → 국소의치_4주차.txt
+ ├ 국소의치 5주차.pdf    (2.0MB)  ID 1zmEqDTbpWNFS8GW0ahYMPk9CCz6t6S3z  → 국소의치_5주차.txt
+ ├ 국소의치 6주차.pdf    (3.1MB)  ID 1BugVDQ0z0563GakmyotEF0tmi3lWG4_0  → 국소의치_6주차.txt
+ └ 국소의치 7주차.pdf    (1.5MB)  ID 1Ce_VM7X5AJwDPd0ohUZ3Sfw29j-tzXDl  → 국소의치_7주차.txt
+   (※ 이 4·5주차는 용량이 작은 텍스트본이며, 아래 C의 18·23MB 4·5주차와는 다른 판.
+      2주차(5.9MB, ID 1SAMR1kbrjXzeR7uKpt0dl4dnfRQuufdu)는 이미지 PDF라 [미독] — C-2 참고)
+
+그 외 [읽음] (정확한 Drive 하위 폴더는 일부 미확인 — 로컬 파일명 앞부분이 Drive 파일 ID):
+  ◦ 국소의치 중간고사 서술형 정리.pdf (133KB) ID 1yWZU0CTaRcEfpqv6iIkxVVJb0H8PUi1s
+  ◦ RPD 중간 넘버링 정리.pdf (111KB)           ID 1Zmomi1RfXlKurBDMuuwQoio3JaPwSJO2
+  ◦ 국소의치 classification 연습.pdf (596KB)   ID(로컬 접두 1RRLtHHzCWi6bekQ3H-lrBYiXmNgWnY_Y)
+  ◦ 국소의치의구성요소및기능 야마(객관식).pdf (197KB) ID 1DJUOPY7SXZFWapBtGOxOTwkERXN1gZyL
+  ◦ 국소의치의구성요소및기능 야마(Blank).pdf (61KB)   ID 1GYpjx_3z-LLmegJmA85Dlkkz-YFbgAci
+  ◦ 국소의치의구성요소및기능 국시.pdf (1.9MB)          ID 1OTddCg78PCIPL_-T279HXY3zc9ZQG-vk
+  ◦ 23학번 본1-2 국소의치의 구성요소와 기능 중간고사.docx (2.8MB) ID 142D7Is_mfI2A_H5fKd14IHkVBeLlDPPF
+  ◦ 치과의사 국가고시 RPD 중간.pdf (4.4MB) ID 1iIA6tG4Fqc6xV6j1iSzFjgBbAvdQ3Rg3 · RPD 기말.pdf (4.7MB) ID 1Q3ux4RxON1cDyIQTBzr_L5bm4dbrlcDt
+  ◦ 국가시험 최종답안: 74회(2022, 1.07MB) ID 1xcyyKtxgFFTW9iCcxe6UMLj7Vi0LCtMj · 75회(2023, 1.00MB) ID 1zHXN7xijoSztonQ7a2SLbe5iFvn7nz77
+      · 76회(2024, 1.0MB) ID 15O-dQQB6WTy-g3GTRaZFDVwuV3w8FXbd · 77회(2025, 0.96MB) ID 1VsV6lIqdZLoJcOrii7ujDxqrZ8fCQWq7
+      · 78회(2026.1, 1.01MB) ID 1FSU3PvJ-_pYn0_Y2UVxTMZqPuywDS05A
+  로컬 다운로드 폴더: /tmp/claude-0/-home-user--/c0071cb8-c1c6-54a0-8c3a-420929762d52/scratchpad/src/  (파일명 = <Drive ID>_<원래 제목>)
+  로컬 텍스트 폴더:   /tmp/claude-0/-home-user--/c0071cb8-c1c6-54a0-8c3a-420929762d52/scratchpad/txt/
+
+
+══════════════════════════════════════════════════════════════
+C. [미독] 못 읽은 파일 — 사유별 전체 경로
+══════════════════════════════════════════════════════════════
+사유 ① = Drive 열람·다운로드 한도 10MB 초과 / ② = 이미지 PDF(텍스트 없음, 판독 필요)
+
+C-1 ① 중간·기말 합본 (가장 중요)
+  경로: D26 / #야마 / 본1-2 캐츠 박수진 / 국소의치 - 박재한 / PPT
+        (박수진 ID 1kM2v8pQpaaGyWhNK_Rll52Z3n56urgII · 국소의치-박재한 ID 1RDB76BFY-_1NaLTFtfVRMfXHxKB3_Vzw · PPT ID 1bHBojkElAaJSHz3EE2Apjnn8PO02kSOE)
+  ◦ 국소치 중간 합본 3-6주.pdf  73.2MB  ID 1MK37oYQNiAaYDBMkhBTLycZKidkt5YlS
+  ◦ 국소치 기말 합본.pdf        71.7MB  ID 1ylCjnkQhW3oA3HzEcWWpii9HJr-le--3
+
+C-2 ① 수업 PDF (4·5주차 및 날짜별 수업)
+  경로 a: D26 / #야마 / 본1-2 CMF 김선우 / 국소의치      (김선우 ID 1VCewEH33qBkTJI1pyAVWVG4-PnG1Lvr7 · 국소의치 ID 1w1DG1-8Zg1wAdDewUywEoLQ26wTHsOsN)
+   ◦ 국소의치 4주차.pdf 18.1MB  ID 16DkL6OAcnUvobOaChf1c0boVAGDcW0Ge
+   ◦ 국소의치 5주차.pdf 23.7MB  ID 1pkQrwWQZk_x8mK5PANrcfxLFQonEG1ZI
+   ◦ 국소의치 251027·251110·251117·251124·251201 수업.pdf  각 31~41MB (251117은 4.9MB로 한도 이하)
+     251027 ID 1nRz48SWgd3GGaTOu1uUcOmp3XklHrf45  (※ 이 ID는 폴더 a 사본의 것)
+  경로 b (같은 수업 파일의 다른 사본): D26 / #야마 / 본1-2 캐츠 김은기 / 국소의치의구성요소및기능 / 수업 자료
+        (김은기 ID 1nAdh0ksQqlG_c1gr7IiyBQN5FiDK3qOv · 과목 폴더 ID 12e1ttu6S0FoojwE0XWtk9rp-XYUiBbHJ · 수업 자료 ID 1yoENjFoNS31bS5sGkIMiK9VznBnflP8l)
+   ◦ 251027 ID 1ZkXyK-UDeBIlHODvAirwT3vNcg4RYMC_ · 251110 ID 11FkoCO6qOTkKo4JMC-WWaaxPJGIcUioL
+   ◦ 251124 ID 1svR1dopUV2__o6o9T0KEf5hsA0oiXUd1 · 251201 ID 18TS4ThtauNDxP21iXBBwxfFM2pl1DGnu
+   ◦ (이 폴더에 2·3·7주차 이미지 PDF도 있음 → C-5)
+  ※ 파일명 날짜(251027 등)로 보아 2025학년도 수업으로 추정(미개봉이라 확정 아님). 올해(2026) 교안은 A의 촬영본.
+
+C-3 ① 정리본·기출
+  경로: D26 / #야마 / 본1-2 캐츠 박수진 / 국소의치 - 박재한 / 야마 + 공부자료   (폴더 ID 1SyAhTC5Y4y64D5nNh_Ur7OBWezSCUlNO)
+   ◦ [국소의치] 정리본.pdf의 사본.pdf 33.3MB  ID 1vn_B5vPMwvl6qLFcdJfsr4a9q1HOuCJu
+   ◦ 국소치 빈칸 기말.pdf 21.3MB               ID 1KM9mLjSil5KGVhJ_2Pxug0ttBUdjMLkO
+   ◦ 국소치 중간 야마 22-10 (답X).pdf 13.7MB   ID 1Xh-Vq_LPiUT8lTs_WP81o9ImU5_J4DMa
+   ◦ 치과의사 국가고시 RPD 문제해설 (1).pdf 15.4MB ID 1Yp_Fe-rcwTLyayraMjIPn2RPxNbF1dX4
+
+C-4 ① 교과서
+  경로: MD / #공부 / 교과서(전공 관련)       (#공부 ID 1kCLt_j2SC8ROUH-nMzaPa5blISVlwyFP · 교과서 폴더 ID 1Rtpl9wQ8wVRa6Cf_C9JklnFTtKlomPdI)
+   ◦ 국소의치 교과서.pdf 228MB                 ID 1oxfEgG80qYPiAPq6RpxW56yib12ilKsh
+
+C-5 ② 이미지 PDF (10MB 이하라 내려받을 수는 있으나 텍스트 없음 → 페이지 렌더링 후 판독 필요, 미실시)
+  경로 b와 같은 폴더(수업 자료) 및 국소의치 폴더(경로 a)
+   ◦ 국소의치 2주차.pdf 5.9MB(16쪽) ID 1SAMR1kbrjXzeR7uKpt0dl4dnfRQuufdu
+   ◦ 국소의치 3주차 스캔 4.1MB(18쪽) ID 1aIIU49b0y4eeoQSrbCa7hRZB7bIqc3TA
+   ◦ 국소의치 7주차.pdf 7.4MB · 251117 수업.pdf 4.9MB
+
+C-6 ① 필기·내용정리·기출
+   ◦ 5주차 국소의치 필기.pdf 59MB  ID 1XZOjWYgG9Q5T5CW3NIyssATEShHFOz25
+     경로: D26 / #야마 / 본1-2 CMF 이지환 / 국소의치의 설계요소 / 피피티
+           (이지환 ID 1SFY0OcKEWkrscEcj3_mTHuWlPjvfNUfd · 설계요소 ID 1GBLgvQnKcoC9VFmxnx1H2Qim1ZN4X9WL · 피피티 ID 1YwkBrr02IG1jDI6tK9IH1t3jy3buS5lZ)
+   ◦ 국소의치 중간 내용정리.pdf 14.4MB  ID 1F4U4NUS_4GwcqQoiqwQqGBMNXeeZdLgS
+     경로: D26 / #야마 / 본1-2 캐츠·CMF 오아름 / 국소의치의 기능 및 구성요소 - 신수연      (폴더 ID 1kbHWQ9o4xzVqzJnlxIpimfB-qB0AYCPm)
+   ◦ 10-21 국소의치 중간고사.pdf 13.3MB  ID 1aTgP-brcvz0OuFe4SkTO3TUEwUP0B0vc
+     경로: D26 / #야마 / 본1-2 캐츠·CMF 오아름 / 국소의치의 기능 및 구성요소 - 신수연 / 야마 / 중간
+           (야마 ID 1HlBa0jqpLjIx4SWKg_-P9_DkvQCXSnSj · 중간 ID 1_Bz7aFniD8R4-bgeWNEPWUimFFEZOZpn)
+
+
+══════════════════════════════════════════════════════════════
+D. 산출물 경로
+══════════════════════════════════════════════════════════════
+  ◦ 이전 artifact(선배 자료 기반, 아직 올해 교안 미반영):
+      https://claude.ai/artifact/7ikvkiwnoQ72G5YVq2NaMS
+      로컬 원본 /tmp/claude-0/-home-user--/c0071cb8-c1c6-54a0-8c3a-420929762d52/scratchpad/rpd_midterm.html (2.0MB)
+      빌드: .../scratchpad/tools/{template.html,build.py,build_data.py,data_*.py} · .../scratchpad/src/{data.json,images.json}
+  ◦ 저장소(열람 가능) /home/user/-/ :
+      국소의치_2026-2_교안정리.txt      ← 1~4장 내용 정리
+      국소의치_2026-2_자료현황_경로.txt ← 이 파일
+      교안전사/원본_{1장,2장,3장,4장A,4장B}.txt  ← 쪽별 전사 원문
+  ◦ Notion: 3bfae3d0-c565-814c-9f22-ce3b3e8d4c78 (학사 일람 1줄 갱신 완료)
+
+
+══════════════════════════════════════════════════════════════
+E. 정정 (이전 보고의 잘못)
+══════════════════════════════════════════════════════════════
+  ① 폴더 "국소의치"(1w1DG1-…)의 상위는 "본1-2 신문편집회 계열"이 아니라 「본1-2 CMF 김선우」였음.
+  ② "10-21 국소의치 중간고사.pdf"는 박재한 폴더가 아니라 「신수연 폴더 / 야마 / 중간」에 있음.
+  ③ 4·5주차 큰 PDF(18·23MB)는 「본1-2 CMF 김선우 / 국소의치」에 있음 (이전엔 위치 모호하게 보고).
+  ④ 상위 폴더 이름을 이제 전부 확인함: #야마(1jkmdk…) · #공부(1kCLt_…). 둘 다 MD/2026/2학기 또는 MD 바로 아래.
+  ⑤ 위 B의 크기·폴더 일부는 로컬 파일 목록 기반이며, 개별 파일이 정확히 어느 하위 폴더에 있는지는 Drive에서 파일별 parentId를 조회해야 확정됨(미조회분은 "정확한 Drive 하위 폴더 미확인"으로 표기).

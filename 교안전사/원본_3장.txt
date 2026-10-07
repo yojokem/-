@@ -1,0 +1,112 @@
+원본 3장 (2026-09-21 교수 교안 촬영본, 총 13장) - 부분 무치악의 분류 (박재한, 단국대 치과보철학교실)
+이미지 경로: /tmp/claude-0/-home-user--/c0071cb8-c1c6-54a0-8c3a-420929762d52/scratchpad/orig/ch3/ (pNN.jpg 원본, qNN.jpg 1600px 사본)
+참고: 모두 강의실 스크린을 비스듬히 촬영한 사진. 슬라이드 외 교수의 이동/제스처 사진 포함.
+
+## p00 KakaoTalk_20260921_172616200.jpg  (표지)
+제목: 부분 무치악의 분류
+부제: Classification of Partially Edentulous Arches
+소속: 단국대학교치과대학 치과보철학교실 박재한
+
+## p01 KakaoTalk_20260921_172616200_01.jpg  (Goals)
+Goals
+▶ Kennedy 분류법 숙지   (Kennedy 굵게)
+▶ Kennedy 분류에 추가 적용되는 Applegate의 원칙
+
+## p02 _02.jpg  (분류체계의 요구조건, 기본 슬라이드)
+분류체계의 요구조건
+▶ 부분 무치악의 형태를 쉽게 가시화하고 인식할 수 있어야 한다.   (굵게: 쉽게 가시화)
+▶ 치아지지 상태인지 또는 치아와 조직 지지상태인지 쉽게 분간할 수 있어야 한다.   (굵게: 치아지지, 치아와 조직 지지)
+▶ 보편적이며 널리 응용될 수 있어야 한다.   (굵게: 보편적)
+▶ 설계의 유형을 제시해 줄 수 있어야 한다.   (굵게: 설계의 유형)
+
+## p03 _03.jpg  (분류체계의 요구조건, 교수 표시 추가 슬라이드)  [시험 강조]
+분류체계의 요구조건 (동일 내용, 순서가 p02와 다르게 배열되어 보임: 치아지지... 항목이 맨 위, 그 아래 형태 가시화, 보편적, 설계의 유형)
+- 항목 1(치아지지 상태인지 또는 치아와 조직 지지상태인지 쉽게 분간) : 빨간 밑줄(치아지지, 치아와 조직 지지)
+- 항목 2~3(부분 무치악의 형태를 쉽게 가시화 / 보편적이며 널리 응용): 빨간 사각 박스로 묶어 강조
+- 항목 4(설계의 유형): 빨간 밑줄
+- 우측에 빨간 아래 화살표(↓)
+- 우하단 영문 교재 인용(작은 글씨, 밑줄 있음): "The most familiar classifications are those originally proposed by Kennedy, Cammer, and Bailyn. Beckett, Godfrey, Swenson, Friedman, Wilson, Skinner, Applegate, Avant, Miller, and others have also proposed classifications. It is evident that an attempt should be made to combine the best features of all classifications so that a universal classification can be adopted."  (밑줄: Kennedy, Cammer, Bailyn / Beckett~Miller 인명 줄 등) [일부 밑줄 범위 불확실]
+
+## p04 _04.jpg  (Kennedy Classification - 전체 표)  [도식, 중요: q04.jpg]
+제목: Kenndy Classification (슬라이드 원문 철자 그대로 "Kenndy") / For Partial Edentulous Arches
+구조: 좌측 4개 라운드 박스 → 가운데 빨간 세로 화살표 "1st" → 노란 테두리 열(Class I~IV 아치 그림) → 우측 열 Mod 1, Mod 2
+좌측 박스 ↔ Class:
+- 양측성 → Class I
+- 편측성 → Class II
+- 전후방 치아 잔존 → Class III
+- 정중선 포함 전치 → Class IV
+격자(3열 x 4행):
+ Class I | Class I Mod 1 | Class I Mod 2
+ Class II | Class II Mod 1 | Class II Mod 2
+ Class III | Class III Mod 1 | Class III Mod 4   (그림 라벨은 "Mod 4"로 보임)
+ Class IV | "No Modification"(빈칸)
+(하악 그림: Class I, II 행 / 상악 그림: Class III, IV 행)
+
+## p05 _05.jpg  (Kennedy, 1st 열만)
+p04와 동일하나 우측 Mod 열 제거, Class I~IV 열과 좌측 박스만 표시. 교수 손(제스처) 보임.
+(양측성/편측성/전후방 치아 잔존/정중선 포함 전치)
+
+## p06 _06.jpg  (Kennedy, 유머 슬라이드)
+같은 도식에 Class I, II 우측에 빨간 괄호 화살표와 생각하는 이모지, 오른쪽에 하무타로 풍 햄스터 애니메이션 캡처(영상 플레이어 바 보임).
+말풍선: "왜 1쪽이 없는데 2지?"  (Class I = 양측, Class II = 편측인데 편측이 '2'인 점에 대한 의문/농담. 즉 Class I은 양측성, Class II는 편측성이라는 번호 배정 질문으로 해석됨 [해석 불확실])
+교수 본인이 촬영되어 있음(스크린 좌측에서 시선).
+
+## p07 _07.jpg  (Kennedy + 빈도 그래프)  [도식: q07.jpg]
+좌측 p05와 같은 1st 도식. 우측에 Skinner에 따른 발생 빈도 그래프(축 눈금: 71%, 14%, 8.5%, 3%, 2.5%; 하단 "Incidence of occurrence (according to Skinner)").
+행 구성: 최상단 71% 행에 Kennedy Class I (Bailyn Class II)(Skinner Class II) 와 변형들, 그 다음 14% 행(Class II 계열), 8.5%(Class III), 3%(Class IV 쪽?), 2.5% ... 각 아치 그림 아래 소문자 라벨(Kennedy Class / Bailyn Class / Skinner Class). 해상도상 개별 라벨 판독 불가.
+% 값의 대응 클래스 및 정확한 숫자 [불확실]: 71%, 14%, 8.5%, 3%, 2.5% 만 확실.
+
+## p08 _08.jpg  (Kennedy, 1st/2nd 격자 + 설명)  [중요: q08.jpg]
+(상단 제목 일부 잘림) Kenndy Classification / For Partial Edentulous Arches
+격자: 세로 빨간 화살표 "1st"(위→아래), 가로 보라 화살표 "2nd"(좌→우).
+ Class I | Class I Mod 1 | Class I Mod 2
+ Class II | Class II Mod 1 | Class II Mod 2
+ Class III | Class III Mod 1 | Class III Mod 4 (Mod 4 로 보임)
+ Class IV | No Modification
+우측 보라 테두리 박스 텍스트:
+"주분류 하기 위한 부위 제외
+무치악 부위 갯수
+= modification space (추가결손부)"
+
+## p09 _09.jpg  (Kennedy, 질문 슬라이드)
+p08 격자 + 좌측 햄스터 그림과 말풍선(보라 테두리):
+"어디를 주분류로 하지? 여러군데 없는데?
+7번치아 RPD수복 계획 없는데?
+Class IV에서 중간에 없으면?"
+우측 박스는 p08과 동일("주분류 하기 위한 부위 제외 / 무치악 부위 갯수 = modification space (추가결손부)").
+
+## p10 _10.jpg  (Applegate 원칙 1)
+Applegate 원칙 / Kennedy classification에 추가적용
+▶ 주분류를 변경시킬 수 있는 어떠한 발치도 발치를 시행한 후 분류에 포함
+   • 발치 후 분류 (굵게)
+▶ 제3대구치가 결손되고 회복시켜 주지 않는 경우에는 분류에 포함시키지 않는다.
+   • 사랑니 발치 후 수복 X → 제외 (굵게)
+▶ 제3대구치가 존재해 있을 경우, 이것을 지대치로 사용할 때에만 분류에 포함시킨다.
+   • 사랑니 지대치 사용 예정 → 포함 (굵게)
+
+## p11 _11.jpg  (Applegate 원칙 2)  [시험 강조: 빨간 글씨]
+Applegate 원칙 / Kennedy classification에 추가적용
+▶ 제2대구치가 결손되었어도 수복하지 않는다면 분류에 포함하지 않는다.
+   • 제2대구치 결손 시 수복 X → 제외
+▶ 하나 이상의 결손부위가 있을 때에는 최후방 결손부위(무치악부분)가 항상 주분류를 결정
+   • 최후방 결손부위 가 주분류를 결정   (빨간색 강조)
+▶ 주분류를 결정하고 남은 다른 결손부위는 modification으로 표시, 그 수만 기록
+▶ Modification의 크기와 위치는 고려되지 않으며, 단지 수만 표기
+   • mod는 결손치아 갯수 상관 없음, 부위 수로 표기
+▶ Class IV는 modification이 없다.   (빨간색 강조)
+교수가 스크린 가리키는 사진.
+
+## p12 _12.jpg  (Kennedy Classification With Applegate's Rules 요약표)  [도식: q12.jpg]
+제목: Kenndy Classification / With Applegate's Rules (슬라이드 원문 철자)
+좌측: 1st(빨간 세로 화살표) / 2nd(보라 가로 화살표) 격자 (Class I~IV, Mod 1/2/4, No Modification) - p08과 동일
+우측 표:
+ 노란 헤더: Applegate's Rules
+  - 최후방 결손 부위가 주분류 결정
+  - Mod는 결손치아 갯수 상관 없이, 결손부위의 수로만 표기
+  - Class IV는 mod가 없다
+ 청록 헤더: [분류 포함 | 분류 제외]
+  - 분류 포함: 필요부위 발치 후
+  - 분류 제외: 사랑니 발치 후 수복 X
+  - 분류 포함: 사랑니 지대치 사용 예정
+  - 분류 제외: 제2대구치 결손 수복 X
+  (표 셀 위치 대로: 포함 열 = "필요부위 발치 후", "사랑니 지대치 사용 예정" / 제외 열 = "사랑니 발치 후 수복 X", "제2대구치 결손 수복 X")
