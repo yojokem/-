@@ -1,0 +1,3243 @@
+표지
+
+목차
+
+코멘트
+
+1주차 세포학
+
+목차
+
+I. Histology
+
+II. Cell
+
+1\. Plasma membrane
+
+2\. Nucleus
+
+3\. Cytoplasm
+
+\- Organelles, Cytoskeleton
+
+III. Cell cycle & death
+
+\- Mitosis, Meiosis, Apoptosis, Necrosis
+
+IV. Preparation & Microscopy
+
+I. HISTOLOGY
+
+1\. 조직학
+
+1\) HISTOS(조직) + LOGOS(학문)
+
+2\) Cell → Tissue → Organ → System 구성
+
+3\) Tissue = Cell + Extracellular matrix + Extracellular fluid
+
+\- 종류: Epithelial(상피), Muscular(근육), Nervous(신경), Connective(결합)
+
+★ 앞 3개에 해당하지 않는 조직은 모두 Connective tissue이다(뼈, 혈액, 피하조직 등)
+
+II. CELL
+
+\*세포의 구성 = Plasma membrane + Nucleus + Cytoplasm
+
+1\. Plasma membrane(세포막)
+
+역할: 세포 보호, 선택적 투과, 부착, 신호전달 등 역할
+
+1\) 인지질 이중층 (Phospholipid bilayer)
+
+2\) 막단백질
+
+2\. Nucleus(핵)
+
+1\) Nuclear envelope (핵막)
+
+2\) Nuclear pore (핵공)
+
+3\) Chromatin (염색질)
+
+\- Euchromatin(진정염색질): 염색질이 풀려 있음. 연하게 염색, 전사↑
+
+\- Heterochromatin(이질염색질): 염색질이 응축돼 있음. 진하게 염색, 전사↓
+
+\- Barr body(바소체): 여성의 X염색체 1개가 불활성화 된 것
+
+4\) Nucleolus (핵인, 핵소체)
+
+5\) Nuclear matrix (핵기질)
+
+3\. Cytoplasm(세포질)
+
+1\) Organelles (세포소기관)
+
+① Mitochondria
+
+② Ribosome
+
+③ Endoplasmic reticulum(소포체) cf) reticulum=그물 구조
+
+\- rough ER: ribosome 존재 → 단백질 합성
+
+\- smooth ER: Ca2+ 등 무기이온 저장. 부신 겉질, 간, 근육세포에 多
+
+④ Golgi complex: 단백질, 지질 수송, 가공, 포장
+
+⑤ Lysosome
+
+⑥ Proteasome
+
+⑦ Peroxisome
+
+⑧ Granules (Secretory vesicles)
+
+2\) Cytoskeleton (세포골격)
+
+(1) Microtubule (미세소관)
+
+\- Cilia (섬모)
+
+\- Flagella (편모)
+
+\- Centriole (중심소체)
+
+\- Mitotic spindle (유사분열방추)
+
+\- Basal body (바닥소체)
+
+(2) Filament (세사, 미세섬유)
+
+① Thin filaments(가는세사)
+
+\- Actin: microvilli(미세융모), stereocilia(부동모) 등
+
+② Intermediate filaments(중간세사)
+
+\- Cytokeratin, Desmin, Glial filament, Neurofilament 등
+
+③ Thick filaments(굵은세사)
+
+\- Myosin: 근육 수축에 관여
+
+Microtubule
+
+1\) Microtubule 한 가닥
+
+α tubulin + β tubulin인 tubulin dimer가 기본단위
+
+13개가 원통 모양을 만들고 길게 이어짐 → 1가닥의 microtubule
+
+2\) Cilia: microtubule doublet이 9+2구조를 형성
+
+\* dimer와 doublet은 다름
+
+Doublet 9개가 바깥에 있고 안쪽에 두 가닥의 microtubule이 있는 형태
+
+오른쪽 사진은 술잔세포(Goblet cell) 표면에 있는 cilia
+
+3\) Centrosome: microtubule triplet이 9+0구조를 형성
+
+Filament
+
+1\) Thin filament; actin filament 초록색으로 염색된 actin filament
+
+2\) Intermediate filament
+
+Monomer x2 = fibrous subunit (dimer)
+
+Dimer x2 = tetramer
+
+Tetramer x8 = intermediate filament
+
+(사량체 8개가 말려서 만들어짐)
+
+Cytokeratin
+
+\- Intermediate filament에 의한 cell
+
+junction으로 세포들끼리 붙어있음
+
+3\) Thick filament; myosin filament
+
+초록색 = myosin filament (두께 15nm)
+
+기본단위인 myosin molecule (두께 2\~3nm)들이 얽혀서 만들어짐
+
+III. CELL CYCLE & DEATH
+
+1\. Mitosis
+
+\- 세포 주기에는 간기(interphase)와 분열기 존재, 대부분 간기에 있음
+
+\- Prophase(전기) → Metaphase(중기) → Anaphase(후기) → Telophase(말기)
+
+2\. Meiosis
+
+\- 2번의 분열기 가짐, 생식세포에서 관찰
+
+(testis에서의 meiosis)
+
+3\. Cell death
+
+1\) Necrosis(세포괴사): 외부 충격 등으로 인해 세포가 터져 내부 물질이 흘러나옴
+
+2\) Apoptosis(세포사멸): 세포가 특정 신호를 받아 자멸함
+
+IV. PREPARATION & MICROSCOPY
+
+1\. Tissue preparation
+
+\- Fixation → Dehydration\&Clearing → Embedding → Sectioning → Mounting → Staining
+
+\*
+
+Sectioning Staining
+
+자르는 방향 및 위치에 따라 같은 조직이어도 다 른 모양의 시료가 나올 수 있다. 상피조직을 HE염색한 사진. 술잔세포(Goblet cell)
+
+은 mucin으로 차있어서 HE염색이 잘 되지 않는다.
+
+PAS염색 등으로 이를 보강할 수 있다.
+
+2\. Microscope
+
+1\) Light microscope (광학현미경): 빛→시료→눈 경로, 일반적인 현미경
+
+2\) Virtual microscope (가상현미경): 샘플을 스캔해 저장한 후 디지털로 관찰
+
+3\) Phase-contrast microscope (위상차현미경): 조직의 위상차를 명암으로 바꿔 관찰
+
+4\) Polarization microscope (편광현미경): 편광을 이용하여 조직 관찰
+
+5\) Confocal microscope (공초점현미경): 높이에 따라 초점을 여러 곳에 맞추어 관찰 가능
+
+6\) Electron microscope (전자현미경): 매우 작은 규모에서 관찰 가능
+
+\- SEM(주사전자현미경), TEM(투과전자현미경)
+
+\* Immunohistochemistry: 항체에 표지물질을 붙여 항원과 반응할 경우 이를 추적할 수 있음
+
+고농도 알코올에 탈수
+
+1주차 상피조직
+
+목차
+
+I. Tissue (4대 기본조직)
+
+II. Epithelium
+
+1\. 상피조직의 기능
+
+2\. 상피조직의 특징
+
+3\. 상피조직의 분류
+
+III. Epithelia (Sheet)
+
+1\. 덮개상피의 종류
+
+2\. 덮개상피조직 관찰
+
+IV. Glands
+
+1\. 샘상피의 구성
+
+2\. 샘의 종류
+
+3\. 샘상피의 형성과정
+
+V. Exocrine gland
+
+1\. 외분비샘의 분류
+
+2\. 근상피세포
+
+VI. Endocrine gland
+
+1\. 내분비샘의 특징과 종류
+
+2\. 내분비샘의 분류
+
+VII. Structure of polar epithelial cell
+
+0\. 수송세포
+
+1\. 상피세포의 극성
+
+2\. 정단영역
+
+3\. 기저외측영역
+
+4\. Basal surface specialization
+
+VIII. Review
+
+I. TISSUE
+
+1\. 4대 기본조직
+
+\*\* Tissue = Cells(세포) + Extracellular matrix(ECM, 세포외기질) + Extracellular fluid(세포외액)
+
+\*\* ECM 양은 세포 사이 간격과 직결됨
+
+Tissue Cell ECM Function
+
+Epithelial(상피) 서로 모여있음(aggregated) 거의 X (세포 간격 조밀) 보호, 분비, 흡수 등
+
+Connective(결합) 고정되어있거나 돌아다님 풍부 (세포 간격 멀음) 조직간 결합 등 매우 다양
+
+Nervous(신경) 긴 세포돌기 가짐 X 신경 신호 전달
+
+Muscular(근육) 수축성 세포 조금 O 동작에 관여
+
+\* 사진 위주로 가볍게 참고할 것. 각 조직 전부 공부하고 다시보기
+
+Epithelium
+
+\- 분비물로 채워진 lumen 주위를 상피조직이 둘러
+
+싸고 있음.
+
+\- Simple cuboidal epithelium
+
+\*\* Lumen(내강): 관 또는 대롱과 같은 구조의 안쪽
+
+의 비어있는 공간.
+
+\- 조직 윗부분에 세포가 빼곡하게 배열된 상피조직
+
+이 관찰된다.
+
+\- 붉은색으로 염색된 부분은 적혈구가 지나다니는
+
+혈관이고, 분홍색은 콜라겐 섬유이다.
+
+\- Simple columnar epithelium
+
+\- 푸른색 선을 기준으로 윗부분이 세포가 빼곡하게
+
+있는 상피조직이다.
+
+\- 상피세포들이 층층이 쌓여있다.
+
+\- Stratified squamous epithelium
+
+\- 상피세포는 항상 결합조직을 달고다닌다
+
+\- 핵간, 세포 사이 분홍색으로 염색된 부분은 ECM이다
+
+Muscle
+
+\- 섬유가 규칙적으로 배열되어있는 골격근 조직이다.
+
+줄무늬가 관찰된다.
+
+\- 핵이 가장자리에 몰려 있다.
+
+\- 심장근 조직이며 줄무늬가 관찰된다.
+
+\- 내장근 조직이며 줄무늬가 관찰되지 않는다.
+
+\- 가장 위쪽의 상피조직 아래에 성긴결합조직(LCT)와
+
+치밀결합조직(DCT)가 관찰된다.
+
+Connective
+
+\- 섬유를 초록색으로 염색한 조직
+
+\- 섬유가 빽빽하게 차있으며 중간중간에 혈관(BV)와
+
+신경(N)이 들어와있다.
+
+Nervous
+
+\- 신경섬유가 모여 다발을 이룬 모습(Neuron fiber
+
+bundle)
+
+\- 신경섬유다발과 그 사이의 신경절세포(Ganglion
+
+cell)이 관찰됨
+
+II. EPITHELIUM
+
+1\. 상피조직의 기능
+
+1\) 보호(protection)
+
+2\) 수송(transportation): 능동적으로 물질을 수송함
+
+3\) 분비(secretion): 점액, 호르몬, 효소 등이 샘에서 분비된다.
+
+4\) 흡수(absorption): 소화과정 중 장 상피 등에서 물질을 흡수한다.
+
+5\) 선택적 투과(selective permeability)
+
+6\) 감각 감지(detection of sensations): 피부에서 감각을 감지함
+
+2\. 상피조직의 특징
+
+1\) 빽빽한 조직: 세포들끼리 탄탄하게 연결되어있고 세포 간 공간과 ECM이 거의 없다.
+
+2\) 결합조직과의 연결: 상피조직은 결합조직을 통해 다른 조직과 연결된다.
+
+\*\* 바닥판(basal lamina): Ep(상피)와 CT(결합조직) 사이에 존재하는 부분이다.
+
+\- 바닥판은 상피에 붙어있으며 Ep와 CT가 7:3 정도로 분비하는 ECM이다.
+
+\- CT층을 지나는 혈관이 확산으로 basal lamina를 통해 상피로 영양을 공급한다.
+
+3\. 상피조직의 분류
+
+1\) 형태에 따라
+
+① 덮개, 판(sheet, epithelia): 표면을 덮어 봉합, 보호 등의 기능 수행
+
+② 샘(acinus): 결합조직 안에 파묻힌 상피. 다양한 물질을 분비함
+
+2\) 기원에 따라
+
+\- 외배엽, 중배엽, 내배엽에서 상피세포로 분화할 수 있음
+
+① Ectoderm(외배엽): 입/코의 점막, 각막, 피부 표피, 분비샘, 젖샘 등 피부의 모든 상피
+
+② Mesoderm(중배엽): 신장의 요세관, 생식기관, 혈관 등 순환계 내피세포, 체강(흉강, 복강 등)을 둘러
+
+싸는 상피
+
+③ Endoderm(내배엽): 간. 이자, 쓸개 등 소화관 기원 장기와 위장관, 호흡관의 상피
+
+\* 상피(-thelium)과 배엽(-derm) 헷갈리지 않게 주의
+
+\* 상피(epithelium), 중피(mesothelium), 내피(endothelium) 모두 상피조직(epithelial tissue)임
+
+\* 분비샘의 경우 상피조직에서 떨어져나왔기 때문에 원래 상피의 기원을 그대로 따라감
+
+III. EPITHELIA(SHEET)
+
+1\. 덮개상피의 종류
+
+1\) 단순상피(Simple): 단층으로 되어있음
+
+① 편평(Squamous): 세포들이 납작한 형태
+
+② 입방(Cuboidal): 세포들이 정육면체 형태
+
+③ 원주(Columnar): 세포들이 긴 기둥 형태, 핵이 보통 아래쪽으로 쏠려 있음.
+
+\- 미세융모(microvilli), 섬모(cilia) 구조를 가질 수 있음
+
+Simple squamous Simple cuboidal Simple columnar
+
+2\) 거짓중층상피(Pseudostratified): 중층으로 보이지만 단층으로 되어있음
+
+\* 중층으로 보이는 이유: 세포막이 잘 관찰되지 않은 상태에서 세포핵들의 높이가 서로 다름
+
+① 원주(Columnar)
+
+\- 거짓중층상피는 형태상 columnar임 (좁은 곳에 세포들이 몰려있기 때문)
+
+\- 세포들의 핵 위치가 서로 달라 여러 층을 이룬 것 같지만 모든 세포가 lamina propria에 부착됨
+
+\- 섬모 유무에 따라 Pseudostratified ciliated columnar(PCCE), Pseudostratified columnar(PCE) 있음
+
+\- 모든 세포가 바닥판에 부착되어있지만, 모든 세포가 lumen쪽에 직접 맞닿아있지는 않음
+
+3\) 중층상피(Stratified): 상피세포들이 여러 층을 이루고 있음 (중重층)
+
+\* 중층상피 종류 = 가장 바깥쪽 세포층의 모양으로 결정
+
+① 각질편평(Keratinized squamous): 가장 바깥층 세포가 편평하며 각질층이 존재(핵X)
+
+② 입방(Cuboidal): 가장 바깥쪽 세포가 정육면체 형태
+
+③ 비각질편평(Nonkeratinized squamous): 가장 바깥층 세포가 편평하며 각질층 없음
+
+④ 원주(Columnar): 가장 바깥쪽 세포가 원주형태. 아래쪽 세포는 눌려서 입방모양으로 보임.
+
+\- 섬모(cilia)가 관찰되지 않음
+
+Stratified keratinized squamous
+
+진한 분홍색 부분이 각질 Stratified nonkeratinized squamous Stratified cuboidal
+
+4\) 이행상피(Transitional): 조직 내 상피세포의 형태가 조건에 따라 달라짐. 기본적으로 중층 구조
+
+\- 방광, 요관 등에서 관찰됨
+
+\- 돔 형태(relaxed), 평평한 형태(distended)가 존재. Relaxed 형태가 우산처럼 생김 → umbrella cell
+
+\- 방광에서 평상시에는 relaxed 상태였다가 소변 양이 많아지면 distended 상태로 바뀜
+
+2\. 덮개상피조직 관찰
+
+\- Pseudostratified Ciliated Columnar Epithelium의 모습
+
+\- CT층이 상피조직을 파고들어가있는 papilla 형태가 관찰됨
+
+\- 화살표머리는 simple columnar, 화살표는 simple squamous
+
+\- 입방세포들이 동그랗게 lumen을 형성하고 있으며 lumen으로 물
+
+질이 분비됨
+
+\- 모세혈관도 일부 관찰됨
+
+\- Simple columnar epithelium
+
+\- 섬모가 있는 것으로 보아 호흡기 조직일 가능성이 높음
+
+\- 중간에 보이는 다른 세포핵들로 인해 중층으로 생각할 수 있으
+
+나 Goblet cell(술잔세포)과 상피조직으로 올라온 lymphocyte임
+
+\- Goblet cell과 기타 세포들은 층수에 계산하지 않는다
+
+\- Pseudostratified columnar epithelium
+
+\- 중층처럼 보이지만 마찬가지로 cilia가 있으므로 거짓중층임을 알
+
+수 있음
+
+\* 상피의 위치 (★=야마)
+
+단순편평 혈관, 심장, 폐, 등의 내강 표면, 중피, 폐포
+
+단순입방★ 분비샘의 도관, 난소의 난포
+
+단순원주 대부분의 위장관, 세기관지, 담낭
+
+PCCE★ 기관, 기관지, 비강
+
+중층입방 땀샘관
+
+중층원주 결막
+
+중층비각질편평★ 구강, 식도, 후두, 질, 항문관
+
+중층각질편평 피부 표피, 치은, 경구개
+
+이행★ 방광, 요관
+
+\* 상피조직의 기능에 적합한 형태
+
+\- 보호: 두꺼울수록 유리 → 중층, 거짓중층
+
+\- 분비: 물질 입출입이 편해야 하므로 단순상피가 유리, 에너지가 많이 필요해 세포가 커야 유리
+
+→ 단순입방, 단순원주, 거짓중층
+
+\- 흡수: 분비와 비슷한 이유 → 단순입방, 단순원주, 거짓중층 유리
+
+\- 수송: 확산이 쉬워야 함 → 단순상피가 유리. 특히 단순편평상피는 기체교환에 유리함
+
+IV. GLANDS
+
+\* 샘 파트 구성이 좀 이상하게 되어있는데, 조직에 대한 설명과 세포에 대한 설명이 혼재되어서 그렇습니
+
+다. 중간에 이상하다 싶으면 조직과 세포의 관계에 대해 잘 생각해보세요. 예를들어 샘세포가 따로 있는
+
+게 아니라(goblet cell 제외) 분비세포가 샘포와 샘을 형성하는겁니다
+
+1\. 샘상피의 구성
+
+\* 샘은 하나의 독립된 기관이다.
+
+1\) Parenchyma(실질): 샘의 실질적 역할 수행
+
+① Acinus(샘포)
+
+\- 물질 합성 & 분비
+
+\- 분비물질에는 호르몬, 왁스 형태 물질(귀지 등), mucinogen, 모유, 혈관 삼출액 등이 있음
+
+② Duct(도관)
+
+\- 분비물의 이동 경로
+
+\- 특정 부분에서 분비물질의 modification이 일어나기도 함
+
+2\) Stroma(지질): CT로 이루어져 있으며 샘의 형태를 유지
+
+① Capsule
+
+\- 가장 외부에서 샘 형태를 유지
+
+\- collagenous CT로 이루어져있음
+
+② Septum(중격, 격벽, 격막)
+
+\- 샘 조직 안으로 파고든 벽 같은 구조물
+
+\- 샘을 lobe(엽)과 lobule(소엽)으로 구분시킴
+
+\- 치밀결합조직(dense CT, DCT)로 이루어져있음
+
+③ Trabecula(장기둥, 지주)
+
+\- 샘의 기둥 같은 구조물
+
+\- septum과 개념은 비슷하지만 막 형태가 아닌 기둥, 막대기 형태임
+
+\- DCT로 이루어져있음
+
+2\. 샘의 분류
+
+1\) 분비 방식에 따라 (=도관의 유무)
+
+① Exocrine gland(외분비샘)
+
+\- 도관을 따라 분비됨
+
+\- lumen, 내부 상피쪽으로 눈물, 땀, 모유, 소화효소 등 분비
+
+② Endocrine gland(내분비샘)
+
+\- 도관이 없음
+
+\- 혈관, 림프관 등에 붙어서 분비
+
+\- 호르몬, 스테로이드 등 분비
+
+2\) 분비 거리에 따라
+
+① Autocrine(자가분비): 자기 자신에게 분비
+
+② Paracrine(곁분비): 확산을 통해 주변 세포를 자극
+
+③ Endocrine(내분비): 혈관을 통해 멀리 떨어진 세포를 자극
+
+3\) 분비 조절 방식에 따라
+
+① 계속분비형(continuous secretion): 신호 없이 분비물을 지속적으로 분비함. 예) 피지
+
+② 조절분비형(regulated secretion): 분비물을 저장했다 신호 받으면 분비함. 예) 호르몬
+
+4\) 분비물 성분에 따라
+
+① Serous cell(장액세포): 단백질(효소) 성분↑(r-ER, Golgi a. 발달). 췌장, 이하선
+
+② Mucus-secreting cell: Goblet cell, mucous cell에 존재. 소화관, 호흡관, 생식관. 침샘 등
+
+③ Steroid-secreting cell: 지질성분↑(s-ER, mitochondria 발달). 정소, 난소, 부신
+
+3\. 샘상피의 형성과정
+
+\- 샘상피는 덮개상피로부터 생성된다.
+
+\- 상피조직이 CT를 파고들며 샘이 형성되는데, 이때 상피가 표면과 연결되면 exocrine, 표면과 분리되면
+
+endocrine gland가 된다.
+
+\- endocrine gland의 경우 영양공급을 위해 혈관이 새로 들어온다.
+
+V. EXOCRINE GLAND
+
+1\. 외분비샘의 분류
+
+1\) 분비 방식에 따라
+
+① Holocrine(온분비)
+
+\- 세포 자체가 터지면서 세포 물질이 분비됨
+
+\- 바닥층에서 세포가 새로 자라나기 때문에 연속성이 유지된다.
+
+\- 예: sebaceous gland(피지선)
+
+② Merocrine(샘분비)
+
+\- 세포에서 분비물질만 분비함 (exocytosis)
+
+\- 예: 대부분의 샘, eccrine sweat gland(에크린샘 - 몸 대부분의 땀샘이 해당)
+
+③ Apocrine(부분분비)
+
+\- merocrine의 일종이지만 세포의 일부(세포질 끝부분)가 떨어져나가 함께 분비됨
+
+\- 예: 젖샘, apocrine sweat gland(아포크린샘 - 겨드랑이, 항문쪽 땀샘에 해당)
+
+Sebaceous gland Mammary gland
+
+2\) 분비 물질에 따라
+
+① Serous gland(장액샘): 효소가 많고 유동성이 큼. 이하선(parotid gland), 췌장 등에 위치
+
+② Mucous gland(점액샘): 점성이 높고 불투명한 mucin 분비. 술잔세포(Goblet cell), 작은침샘(minor
+
+salivary gland) 등에 위치
+
+③ Mixed gland(혼합샘): 장액세포, 점액세포가 모두 있음. 설하선(sublingual gland), 악하선
+
+(submandibular gland) 등에 위치
+
+\- 장액성반달(serous demilunes) 관찰: 장액세포가 반달모양으로 배열되어있다
+
+\- 악하선 조직의 모습. 가장 위쪽에는 duct부분이
+
+있고(분비과립 관찰X) 아래쪽에 장액세포와 점액세
+
+포가 관찰됨
+
+\- 장액세포는 진하게 염색되었고, 점액세포는 잘
+
+염색되지 않음 (mucin은 염색 잘 X)
+
+\- 대체로 serous acinus는 동그랗고 mucous acinus
+
+는 타원임 (샘세포들이 모여 acinus를 이룸)
+
+\* mixed gland에서 장액샘이 많으면
+
+submandibular, 점액샘이 많으면 sublingual
+
+\- 노란색 그물같은 구조=근상피세포 조직 (샘을
+
+짜주는 역할)
+
+\- 장액샘포(보라색)과 점액샘포(노란색)이 관찰됨.
+
+점액샘포 끝에는 serous demilunes 존재
+
+\* 샘\>샘포\>샘세포
+
+3\) 세포의 수에 따라
+
+① Unicellular: 가장 단순한 형태
+
+\- 술잔세포(Goblet cell): 유일한 단세포샘. 소화/호흡기 내벽을 보호하는 mucin 분비
+
+Goblet cell
+
+\- 핵이 stem쪽에 납작하게 존재, 윗부분에 수많
+
+은 mucinogen droplet이 존재함
+
+\- 분비부에 미세융모(microvilli) 존재, 표면적 증가
+
+\- 장 상피에서 Goblet cell들이 나열되어있음
+
+\- Goblet cell들이 일자로 나열된 조직(simple
+
+columnar)이 구부러져 융모를 이루고 있음
+
+\- Goblet cell들의 핵은 lamina propria 쪽으로 몰
+
+려있고, lamina propria 아래에 CT가 관찰됨
+
+\- 염색이 안 된 mucinogen droplet들이 lumen쪽
+
+으로 위치함
+
+② Multicellular: 분비세포의 모임. 독립적으로 작동하지 않음
+
+\- 세부분류 기준
+
+i) 도관의 분지 여부 → simple(단순) / compound(복합)
+
+ii) 분비단위의 형태 → tubular(관상) / acinar=alveolar(포상) / tubuloacinar=tubuloalveolar(관포상)
+
+\* 구분 기준 잘 확인하기\! 도관(분홍색)&분비부위(검은색)
+
+Simple Compound
+
+Tubular
+
+i) 도관이 거의 없거나 관 1개
+
+ii) 분비단위가 긴 관처럼 생김
+
+i) 도관이 분지됨
+
+ii) 각 분비단위가 긴 관처럼 생김
+
+Acinar
+
+i) 도관이 1개의 관
+
+ii) 분비단위가 포도송이처럼 생김(포
+
+상)
+
+i) 도관이 분지됨
+
+ii) 각 분비단위가 포상임
+
+\* tubulocinar과 구분하기(관상부위 없
+
+음)
+
+Tubuloacinar -
+
+i) 도관이 분지됨
+
+ii) 각 분비단위에서 관상부위(도관 근심
+
+부)와 포상부위(말단부)가 관찰됨
+
+2\. 근상피세포
+
+\- 땀샘, 큰침샘에 존재하는 근육성 상피세포(근육
+
+세포 X)
+
+\- 샘조직을 쥐어짜서 분비물이 잘 분비되도록 함
+
+VI. ENDOCRINE GLAND
+
+1\. 내분비샘의 특징과 종류
+
+1\) 특징: 도관 없이 분비물질을 주변 혈관이나 림프관 등에 분비함
+
+2\) 종류: 대표적인 내분비샘으로 부신, 갑상선, 흉선, 난소, 정소, 송과선 등이 있음
+
+2\. 내분비샘의 분류
+
+1\) 분비세포 배열에 따라
+
+① Cord type
+
+\- 가장 일반적인 형태 (갑상선 제외 내분비선에서 관찰)
+
+\- 내분비세포들이 확장된 모세혈관 사이에 일렬로 배열됨
+
+② Follicle type
+
+\- 분비물이 들어있는 소포를 세포들이 둘러싸고 있는 형태
+
+\- 소포에 저장된 물질이 신호를 받고 다시 샘세포에 흡수되었다가 샘세포가 혈관으로 방출함
+
+\- 이는 물질을 분비하는 과립세포의 크기가 너무 크기 때문임
+
+\- 갑상선에서 관찰
+
+\+③ Mixed gland (endo+exo)
+
+\- Exocrine과 Endocrine 둘다 가능한 샘(도관과 분비 혈관이 모두 있음)
+
+\- 췌장(인슐린 등 호르몬+소화액), 생식기(성호르몬+점액성분) 등
+
+VII. STRUCTURE OF POLAR EPITHELIAL CELL
+
+0\. 수송세포
+
+1\) Transcellular transport (대부분 능동수송)
+
+\- 주로 상피세포, 그중 Simple columnar/cuboidal에서 잘 일어남
+
+\- 흡수 효율을 위해 microvilli 존재, 조직 자체도 주름진 형태를 띤 경우가 많음
+
+\- 흡수는 lumen → 세포 내부, 분비는 세포 내부 → lumen 및 외부 표피 등 방향으로 일어남
+
+2\) Pinocytosis(음세포작용)
+
+\- 물질교환이 잘 일어나는 Simple squamous에서 주로 발생
+
+\- Endothelium, Mesothelium, Type I alveolar cell에서 발생 (기체교환 등)
+
+\* 상피세포의 기능 중 하나는 물질의 수송이다. 물질의 입출입이 가능하려면 세포의 머리쪽(apical
+
+surface)에서의 물질 출입, 바닥쪽(basal surface)에서의 물질 출입, 그리고 apical surface와 basal surface
+
+사이의 물질 출입이 가능해야 한다.
+
+\- apical surface→basal surface: 장 lumen에서 암죽관, 혈관으로 물질 수송 등등..
+
+\- basal surface→apical surface: 맥락얼기에서 뇌척수액 분비, 섬모체에서 안구방수 분비 등등..
+
+→→ 이를 가능하게 하는 apical, basal 쪽 세포의 특정 구조들이 다음에 나옵니다
+
+1\. 상피세포의 극성(Polarity of epithelial cell)
+
+1\) 극성 상피세포
+
+\- 극성 = 비대칭. 즉 세포 구조가 비대칭적이면 극성을 가진다고 함
+
+\- 대부분의 상피세포는 극성을 가짐
+
+\- 원주상피와 같이 세포핵이 basal lamina에 몰려있고 세포소기관이 그 반대쪽에 몰려있으면 극성이 더
+
+커지고 이를 highly polarized되었다고 한다
+
+2\) 구조
+
+\- Tight junction에 의해 정단영역(apical domain)과 기저외측영역(basolateral domain)으로 나뉨
+
+① 정단영역
+
+\- lumen과 맞닿고 있음
+
+\- 이온채널, 수송단백질, ATP 합성효소, 당단백질 등이 매우 풍부
+
+\- 분비물질을 내보내는 부분
+
+\- 구조물로 microvilli(미세융모), stereocilia(부동모), cilia(섬모), flagella(편모)가 존재
+
+② 기저외측영역
+
+\- tight junction 기준 정단영역 아래의 부위
+
+\- 가장 아래쪽은 basal lamina와 접함
+
+\- 구분이 힘들지만 lateral domain과 basal domain으로 나눌 수 있음
+
+\- 신호전달, 세포간연결 등 다양한 역할을 수행하는 연접 복합체(junctional complex) 존재
+
+\- 연접에는 Occluding junction, Anchoring junction, Communicating junction이 있음
+
+2\. 정단영역(Apical domain) ★★★
+
+(세포골격 파트 복습 추천)
+
+1\) Microvilli(미세융모)
+
+\- 세포의 lumen 방향 표면에서 뻗어나오는 돌기
+
+\- 세포 표면적을 넓혀 흡수, 분비 효율 높임
+
+\- 콩팥의 Brush border, 장세포의 Striated border(미세융모가 매우 밀집된 상피 표면의 경계들) 등 흡수
+
+작용이 활발한 곳에서 잘 관찰됨
+
+\- Actin filament 기반, 운동성 거의 없음 (myosin 거의 X)
+
+Cf) Villi(융모): 상피조직 자체가 구불구불하게 접혀 표면적을 늘림. 세포단위의 구조가 아니다
+
+2\) Stereocilia(부동모)
+
+\- microvilli의 일종이지만 일반적인 microvilli보다 더 길다. Cilia(섬모)가 아님
+
+\- 길고 뻣뻣하며 microvilli와 마찬가지로 actin filament가 축을 이룸
+
+\- epididymis(부고환관)에서 정자를 성숙시키기 위해 잘 발달됨 (물질 흡수, 분비 활발해야 함)
+
+\- 이외에도 세포 표면적을 넓히는 게 유리한 반고리관, 달팽이관의 신호 발생 부위 등에 존재
+
+(stereocilia 가진 부고환관 상피의 모습)
+
+3\) Cilia(섬모)
+
+\- Microtubule 기반, 상피세포 표면의 길고 운동성 있는 구조 가짐
+
+\- Axoneme가 9x2+2 구조이며 뿌리쪽에 9x3+0 구조인 기저체(basal body) 존재
+
+\- 세포마다 가지고 있는 섬모의 수가 다를 수 있음.
+
+예) 기관지, 수란관 등의 세포는 수백개의 cilia가 있지만 반고리관의 털세포는 1개의 cilium만 가짐
+
+\- 빠르고 규칙적이게 진동하듯 움직임 → 호흡기에서 점액, 노폐물을 내보내거나 수정란을 자궁으로 이
+
+동시키는 등의 역할 수행
+
+\* cilia 구조 참고
+
+\- Axoneme의 microtubule dimer들은 dynein 단
+
+백질을 통해 운동성을 얻음 (dynein이 옆의 미
+
+세소관을 타고 올라감)
+
+\- Basal body 부분에는 microtubule trimer들이
+
+9+0 구조를 하고 있음
+
+\- Axoneme의 가로절단면을 관찰하면 구조를 잘
+
+볼 수 있다
+
+4\) Flagella(편모)
+
+\- Spermatozoon(정자세포, pl. spermatozoa)의 꼬리에 위치
+
+\- cilia와 같이 microtubule 기반 (운동성 O)
+
+\* Kartagener’s syndrome: 유전적으로 dynein 단백질에 이상이 생겨 섬모의 운동성 상실
+
+→ 폐 감염에 취약, 정자 운동성 없어서 불임
+
+3\. 기저외측영역(Basolateral domain) ★★★
+
+\* 알아두면 좋은 단어 어원
+
+Zonula(pl.zonulae): 연접구조가 세포를 한바퀴 감싸고 있다는 뜻
+
+Lamina: 얇은 막, 판 → basal lamina = ‘기저층에 있는 얇은 층’
+
+1\) Junctional complex의 분류
+
+① Occluding junction(폐쇄연접)
+
+\- 완전한 차단
+
+\- zonulae occludens(=tight junction, 폐쇄띠)
+
+② Anchoring junction(부착연접)
+
+\- 세포-세포, 세포-기저막 부착
+
+\- zonulae adherens(부착띠), desmosome(=maculae adherens, 부착반점), hemidesmosome(반부착반점)
+
+③ Communicating junction(교통연접)
+
+\- 세포 사이 이온, 신호물질 이동
+
+\- gap junction(교통반점)
+
+2\) Zonulae occludens (=tight junction)
+
+\- 세포의 첨단부(lumen 방향)에 위치, 세포의 정단영역과 기저외측영역을 구분시킴
+
+\- occludin, claudin, ZO1/2/3, cadherin 등 단백질이 관여(0.1\~0.3μm 간격)
+
+\- 세포막끼리 바느질 or 벨트처럼 견고하게 결속됨
+
+\- apical domain → basolateral domain으로의 막단백질 이동 및 세포간 수용성 물질 이동 방지
+
+3\) Zonulae adherens
+
+\- Zonulae occludens보다 세포 기저쪽에서 비슷한 원리로 E-cadherin이 세포막끼리 연접 (E-cadherin이
+
+칼슘 이온을 매개로 서로 붙음)
+
+\- vinculin, catenin, actin 등 단백질이 관여 (15\~20nm 간격)
+
+4\) Desmosomes (=Maculae adherens)
+
+\- 세포막 사이에서 desmoglein, desmocollin이 서로 결합함. 이 단백질들은 세포막 내부에 있는 원반모
+
+양의 부착판(attachment plaque)에 박혀있음.
+
+\- 부착판은 cadherin 계열 단백질인 desmoplakin, plakoglobin들로 구성됨
+
+\- 부착판에는 세포막 내부의 cytokeratin(intermediate filament)들도 박혀있음. 이 중간세사들은 장력을
+
+형성해 세포막간의 전단력을 분산시켜 Tonofilament(장세사) 라고도 함
+
+\- 기계적 자극을 강하게 받는 상피에서 잘 관찰됨
+
+※ Pemphigus vulgaris: desmosome 구성 단백질에 대한 항체를 형성해 세포간 부착 방해, 지속적으로
+
+ECM이 누출됨
+
+\* 중층편평상피에서 관찰되는 유극층, 가시층(prickle cell layer, stratum spinosum)
+
+\- desmosome으로 연접된 부분이 깍지를 낀 모양임 (가시 모양)
+
+5\) Gap junctions(=nexus, communicating junctions)
+
+\- 인접 세포에 전기신호, 분자 전달
+
+\- 상피조직, 평활근세포, 심장근세포, 뉴런에 많이 분포, 골격근에는 없음
+
+\- 6개의 connexin 단백질이 통로 모양의 connexon 형성. 일반적으로 한곳에 몰려있음
+
+\- 세포간 친수성 채널 역할 → 이온, 아미노산, 비타민, cAMP, 호르몬 등 물질이 이동, 세포간 동기화
+
+\*\*
+
+\- 세포에서 관찰되는 각 연접들의 모습.
+
+\- 정단영역에는 microvilli(MV)와 그 아래의 zonula occludens(ZO)가 있음
+
+\- ZO 바로 아래부터 시작되는 기저외측영역에는 zonula adherens(ZA)가
+
+있고, 그 아래에 desmosome(D)가 관찰됨
+
+4\. Basal surface specialization
+
+일반적으로 lateral domain과 basal domain은 구분이 힘들어 기저외측영역이라고 묶어서 부르지만 세포의
+
+가장 기저측에는 basal lamina와의 결합으로 인한 특징적인 구조들이 있다.
+
+1\) Basal lamina (앞 내용 참고)
+
+\- 세포 바깥에서 세포를 지지
+
+\- 근육세포, 지방세포, 슈반세포에도 존재
+
+\- lamina lucida(투명층), lamina densa(치밀층), collagen fiber층 등으로 구성 (다음단원에 자세하게 나옴)
+
+2\) Hemidesmosome
+
+\- desmosome과 원리가 비슷하나 세포-바닥판 사이의 연접이므로 한쪽만 있어도 됨
+
+\- desmosome은 세포막과 세포막이 cadherin 계열 단백질(desmoglein 등)을 통해 연결되지만,
+
+hemidesmosome은 세포막과 바닥판의 일부가 integrin-laminin 결합을 통해 연결됨.
+
+★야마 (단백질 이름은 안외워도 될줄알았는데 야마에 나와서 어쩔수없이 넣었습니다)
+
+부착판 구성 물질 (각 세포 안) 연결 단백질 구성물질 (세포 사이)
+
+Desmosome desmoplakin, plakoglobin 등 desmoglein, desmocollin
+
+Hemidesmosome plectin, erbin, BP230 등 integrin
+
+\* 참고
+
+Type 17 collagen: basal lamina\~부착판 연결
+
+Type 4 collagen: basal lamina 주 구성물질
+
+Type 7 collagen: CT를 견고하게 하는 anchoring fibril 구성 (손잡이 모양)
+
+Type 3 collagen: reticular fiber 구성 → anchoring fibril 사이 지나감
+
+VIII. REVIEW
+
+4대조직
+
+근육 신경 결합 \*상피세포와의 결합
+
+상피
+
+기원 내배엽기원상피, 중배엽기원상피, 외배엽기원상피
+
+형태
+
+단순 편평, 입방, 원주
+
+덮개상피
+
+거짓중층 중층 PCE, 편평(각질, 이행 PCCE
+
+비각질), 입방, 원주
+
+샘상피
+
+분비방식? 온분비, 샘분비, 부분분비
+
+분류
+
+분비물질? 장액샘, 점액샘, 혼합샘
+
+도관여부? 외분비
+
+Unicellular Goblet cell
+
+세포수?
+
+Multicellular 도관분지? 분비부 모양? 단순
+
+관상, 포상, 관포상
+
+내분비 세포배열? Cord, Follicle (+Mixed)
+
+분비거리? 자가분비, 곁분비, 내분비
+
+분비조절? 계속분비형, 조절분비형
+
+물질조성? 장액성, 점액성, 스테로이드(지질)성
+
+구조
+
+정단 Microvilli, Stereocilia, Cilia, Flagella
+
+기저외측
+
+폐쇄연접 Zonulae occludens
+
+부착연접 Zonulae (Basal surface) adherens, Hemidesmosome Desmosome
+
+(+Basal lamina)
+
+교통연접 Gap junction
+
+2주차 결합조직
+
+목차
+
+I. Connective tissue
+
+1\. 결합조직의 구성성분
+
+2\. 결합조직의 종류 개괄
+
+II. Connective tissue proper
+
+1\. 고유결합조직의 기능
+
+2\. 고유결합조직의 종류
+
+3\. 고유결합조직의 구성 개괄
+
+III. 고유결합조직의 세포성분
+
+1\. 결합조직 연관 줄기세포
+
+2\. 고유결합조직의 세포 구성
+
+3\. Fibroblast/Fibrocyte
+
+4\. Adipocyte
+
+5\. Macrophage
+
+6\. Mast cell
+
+7\. Plasma cell
+
+IV. 고유결합조직의 섬유성분
+
+1\. 고유결합조직 내 섬유의 종류
+
+2\. Collagen
+
+3\. Collagen fiber
+
+4\. Reticular fiber
+
+5\. Elastic fiber
+
+V. 고유결합조직의 바탕질
+
+1\. 바탕질
+
+2\. Proteoglycans
+
+3\. Glycoproteins
+
+VI. 특수결합조직
+
+1\. Adipose tissue
+
+2\. Elastic tissue
+
+3\. Reticular tissue
+
+4\. Supporting CT
+
+VII. Review
+
+I. CONNECTIVE TISSUE
+
+결합조직 구성 세포는 종류가 많고 돌아다니는 세포들도 있어서 조직단위, 세포단위를 잘 구분해서 봐야
+
+함.(근육 신경 상피 아니면 다 결합조직으로 넣어버려서..) +같은 성분의 조직이어도 위치에 따라 이름이
+
+달라질 수 있음
+
+1\. 결합조직의 구성성분
+
+\* 결합조직: 두 개 이상의 부위(세포, 조직, 기관 등)을 결합, 연결해주는 조직. 형태 유지, 영양 공급 등의
+
+역할을 함.
+
+\* 결합조직도 조직이므로 Cell + ECM + 세포외액 구성을 가진다.
+
+1\) 세포성분
+
+① Fixed cells: 특정 결합조직에 머무름
+
+② Wandering cells: 조직 사이를 이동함
+
+2\) ECM
+
+① Fibers 현미경으로 시각적 확인 가능
+
+\- Collagen fiber, Elastic fiber, Reticular fiber
+
+② Ground substance 세포와 섬유 이외의 부분, 현미경으로 관찰 불가
+
+\- Proteoglycan(단백당), Glycoprotein(당단백질), Lipoprotein(지질단백질) 등
+
+3\) 세포외액(=Tissue fluid)
+
+\- 혈장과 성분이 유사 (Zole 형태의 물질 존재)
+
+Cf) zole: 형태 유지 X, 물처럼 흘러내림 / gel: 형태 유지 O
+
+\- 정수압(Hydrostatic pressure)과 삼투압(Osmotic pressure)에 의해 흐름. 정수압은 동맥에서, 삼투압은
+
+정맥에서 강함
+
+\- 동맥 → 모세혈관 → 정맥 과정에서 혈장이 조직으로 빠져나갔다가 다시 들어오는데, 이때 조직에 유
+
+입되는 양이 조직에서 빠져나가는 양보다 많음. 초과분은 CT 내 림프관으로 빠져나감 → 균형 유지
+
+\- Edema(부종): 염증반응 등으로 인해 CT 내 조직액이 많아진 병적 상태
+
+2\. 결합조직의 종류 개괄
+
+1\) Connective tissue proper(고유결합조직): 관 형태의 장기, 독립된 기관, 피부 등
+
+(1) Loose CT(성긴결합조직)
+
+(2) Dense CT(치밀결합조직)
+
+① Regular DCT: 규칙성 있는 구조의 DCT
+
+② Irregular DCT: 비규칙적 구조의 DCT
+
+2\) CT with special properties(특수결합조직)
+
+(1) Adipose tissue(지방조직)
+
+① White adipose tissue
+
+② Brown adipose tissue
+
+(2) Elastic tissue(탄력조직)
+
+(3) Reticular tissue(세망조직)
+
+(4) Hematopoietic tissue(조혈조직): Lymphatic & Myeloid tissue
+
+(5) Mucous tissue(점액조직)
+
+3\) Supporting CT
+
+(1) Cartilage(연골)
+
+(2) Bone(뼈)
+
+(잘 기억해서 중간에 길을 잃지 말자)
+
+II. CONNECTIVE TISSUE PROPER
+
+cf) Lamina = 얇은 막, Proper = 고유의
+
+1\. 고유결합조직의 기능
+
+1\) 구조 결정: Capsule, Septum, Trabecula 등 (샘상피 참조)
+
+2\) Intercellular substance의 합성 및 순환 조절: Fibroblast
+
+3\) 에너지, 양분 저장: Adipocyte
+
+4\) 면역작용: Macrophage(MΦ), Mast cell, Plasma cell, Lymphocyte
+
+5\) 혈액-세포간 영양-노폐물 교환
+
+6\) 재생: Stem cells
+
+2\. 고유결합조직의 종류
+
+1\) Loose connective tissue(LCT)
+
+\- 섬유가 적고 세포가 많음(성기다, 느슨하다) → 유연하고 부드러운 조직
+
+\- 소장의 Lamina propria(점막고유판), Hypodermis(피하층), 점액막층, 혈관 및 림프관 주위, 복강과 흉강
+
+의 중피 바로 아래 등에 위치
+
+\- 주변에 많은 혈관이 분포
+
+\- fibroblast와 MΦ가 제일 많음
+
+\- 상피를 받쳐주는 역할 (상피 바로 아래의 CT층을 lamina propria, 고유판이라고 부름)
+
+2\) Dense connective tissue(DCT)
+
+\- 섬유가 많고 세포가 적음(치밀하다, 빽빽하다) → 단단하고 저항성이 큰 조직
+
+\- 섬유의 배열 규칙성에 따라 irregular, regular DCT가 있음
+
+① Irregular DCT: Dermis(진피층), 간/정소/림프절의 capsule, 뼈, 연골 등에 위치
+
+② Regular DCT: Tendon(건), Ligament(인대), Aponeuroses(널힘줄) 등에 위치
+
+\* 피부에서 관찰되는 여러 CT조직들
+
+3\) Embryonic connective tissue
+
+\- LCT의 일종으로 볼 수 있고 Mesenchyme(중간엽, 간엽)과 Mucous CT가 있음.
+
+① Mesenchyme
+
+② Mucous CT: 탯줄의 Wharton’s jelly (hyaluronic acid 풍부), 유치의 치수(pulp)에 존재
+
+\- 세포나 섬유는 거의 없고 거의 다 ground substance로 이루어진 ECM임
+
+\- 세포는 거의 전부 방추형의 mesenchymal stem cell이며 극히 적은 MΦ 존재
+
+(세포가 거의 없어서 투명하게 보임)
+
+3\. 고유결합조직의 구성 개괄
+
+1\) Cellular components: 줄기세포를 포함한 여러 세포들이 고유결합조직에 존재
+
+2\) Fibrous components: 여러 종류의 섬유들이 결합조직을 지탱함
+
+3\) Ground substance: 세포, 섬유 이외에 현미경으로 관찰되지 않는 당, 단백질, 액체 등 여러 물질들
+
+III. CELLULAR COMPONENTS OF CT PROPER
+
+1\. 결합조직 연관 줄기세포
+
+1\) Mesenchymal stem cell(미분화간엽세포)
+
+\- Mesenchyme(간엽, 중간엽): 세포들이 듬성듬성 있는 배아성 결합조직. 이후 다양한 결합조직으로 분
+
+화함. 대부분 mesoderm(중배엽) 기원이며 일부는 ectoderm(외배엽), endoderm(내배엽) 기원임
+
+\- 모든 결합조직에 존재하며 Pluripotent(다능성)하기 때문에 여러 종류의 세포로 분화할 수 있는 성체
+
+줄기세포
+
+\- Fusiform(방추형), Stellate(성상) 모양 = 돌기(spindle)들이 여러 방향으로 뻗어나가있음
+
+\- 평상시 활동성 없이 숫자를 유지하다가 신호를 받으면 여려 종류의 세포로 분화함 → 세포질이 잘
+
+발달되지 않음
+
+\- 성인의 장골능선(Iliac crest), 척수, 혈관 주변 등에서 특히 잘 관찰됨
+
+2\) 간엽줄기세포의 분화
+
+① Chondroblast(연골모세포): 이후 Chondrocyte(연골세포)
+
+② Adipocyte(지방세포)
+
+③ Fibroblast(섬유아세포)
+
+④ Mesothelial cell(중피세포)
+
+⑤ Endothelial cell(내피세포)
+
+\* Mesoderm(중배엽) 기원의 상피이다. 중피는 복강을 따라 장기를 둘러싸는 상피이고 내피는 모세혈
+
+관, 림프관 등에 있는 상피 (derm과 thelia 헷갈리지 않도록 주의\!)
+
+⑥ Osteoblast(조골세포): 이후 Osteocyte(골세포)
+
+3\) 조혈줄기세포의 분화
+
+① Lymphocyte(림프구): 면역반응에 관여하는 T, B cell로 분화. B cell은 Plasma cell로 분화해 항체 생성
+
+② Monocyte(단핵구): 조직으로 나와 대식세포(MΦ)로 분화됨. 여러 개의 MΦ가 융합되어 Osteoclast(파
+
+골세포)를 형성하기도 함
+
+③ Megakaryocyte(거대핵세포): Megakaryocyte에서 떨어져 나간 세포질 조각들은 혈소판이 됨
+
+④ Mast cell(비만세포): Hematopoietic stem cell이 CT 내에서 분화
+
+⑤ Leukocytes(백혈구): Neutrophil(호중구), Eosinophil(호산구), Basophil(호염기구) 등
+
+2\. 고유결합조직의 세포 구성
+
+1\) Fibroblast ↔ Fibrocyte(섬유세포)
+
+\- 모든 결합조직에 존재
+
+\- active 상태(Fibroblast)와 resting 상태(fibrocyte)가 존
+
+재. 섬유의 합성, 분비, 제거
+
+2\) Adipocyte: 세포질 내에 지방질 축적
+
+3\) Macrophage(MΦ)
+
+4\) Mast cell: 과립 다량 함유, 염증반응 등에 관여함
+
+5\) Plasma cell
+
+6\) Blood cells (Leukocytes, Lymphocytes, Monocytes)
+
+\- 혈관을 타고다니다가 chemotaxis(화학적 유인)에 의해
+
+밖으로 빠져나가는 diapedesis(혈구유출)이 일어나기도 함
+
+7\) Stem cells: mesenchymal stem cell들이 다른 세포들 주
+
+변에 있다가 손상될 경우 분화해서 자리를 채움 (주변에
+
+있어서 pericyte라고 함)
+
+3\. Fibroblast/Fibrocyte
+
+1\) 특징
+
+\- 각종 섬유 ECM들을 주변으로 계속 분비함 (collagen, elastin, proteoglycan 등)
+
+\- 성장인자(Growth factor)를 주변으로 분비
+
+\- 세포 형태: Stellate(성상), Spindle shape(방추형)
+
+\- 핵: 긴 타원형, 1\~2개의 인을 가짐
+
+\- 세포질: 활발한 Fibrocyte는 Golgi complex, r-ER이 풍부
+
+\- 세포 골격: plasmalemma(세포막)에 actin, 세포질에 myosin/intermediate filament 있고 중심체 존재
+
+(세포막은 구분되지 않고 염색이 잘 되지 않은 아교질이 주변에 풍부)
+
+2\) 분화 - Fibroblast는 ECM 합성을 활발하게 하며 주변으로 분비
+
+\- Fibroblast가 자신이 분비한 기질에 갇히게 되면 쪼그라들어서 핵만 남은 형태의 fibrocyte가 됨
+
+\- Fibrocyte의 예로 Tenocyte(힘줄세포)가 있음
+
+\* 이러한 blast-cyte 분화 기전은 osteoblast, chondroblast에서도 나타남
+
+4\. Adipose cell (Adipocyte, Fat cell)
+
+\- 기본적으로 에너지를 저장하는 역할을 함, 혈관이 많이 지나가는 곳에 존재
+
+1\) White adipose cell
+
+\- 한 개의 지방 방울을 가지는 Uniocular(단소포) 형태이며 세포 가장자리에 핵이 있음. 반지처럼 생겨
+
+서 ring cell이라고도 함
+
+\- 지방은 중성이라 HE염색이 안되므로 사산화오스뮴(OsO4), 수단 용액 등으로 염색
+
+\- 지방을 저장함, 이후 에너지 필요할 때 다시 분해해서 혈관으로 분비
+
+\- 포만감 느끼게 하는 Leptin 호르몬 분비 → 비만세포 많으면 렙틴 분비가 많아져 렙틴에 대한 역치가
+
+올라가 포만감을 잘 느끼지 못하게 됨
+
+\*\* Obesity
+
+\- Hypertrophic(비대): 주로 성인에게 발생. 지방세포 크기가 커짐
+
+\- Hyperplasia(증식, 과형성): 주로 소아에서 발생, 지방세포 수가 많아짐 → 쉽게 살찜
+
+2\) Brown adipose cell
+
+\- 여러 개의 작은 지방 방울을 가지는 Multiocular 형태
+
+\- Mitochondria가 많아 갈색을 띰
+
+\- 열 발생(에너지 생성 X): UCP-1(Uncoupling protein, thermogenin) 단백질이 미토콘드리아에 구멍을
+
+뚫어 ATP를 합성하기 위한 에너지가 전부 열로 발산됨
+
+\- 소아, 동면하는 동물 등 열이 많이 필요한 생물에 발달, 인간 성인에게는 거의 없음
+
+3\) Beige adipose cell
+
+\- White와 Brown adipose cell 섞여있는 형태. 인위적으로 White → Beige 유도하여 비만 치료에 활용
+
+5\. Macrophage(MΦ)
+
+1\) 특징
+
+\- Monocyte가 CT로 들어와 분화해 MΦ가 됨
+
+\- 크기가 10\~14μm로 큰 편이고 핵은 조금 작음
+
+\- CT에 있는 대부분의 포식세포는 MΦ이고 부정형이어서 유동성이 큼
+
+\- 고정된 세포(Fixed cell)인 Histiocyte가 있고, 대부분은 Wandering/Free MΦ임
+
+2\) 기능
+
+\- Phagocytosis(포식): 죽은 세포 물질이나 병원체를 포식하여 제거
+
+\- Antigen presenting(항원제시): 항원물질을 면역세포에 제시해 면역작용에 관여
+
+3\) Mononuclear Phagocyte system(단핵식세포계통): Monocyte에서 분화된 여러 종류의 Phagocyte
+
+\* 야마 빈출인데 22야마에는 없고 수업때 가볍게 짚고 넘어감
+
+\- MΦ는 위치에 따라 이름이 달라짐.
+
+\- 간-Kupffer cell, 중추신경-Microglial cell(미세아교세포), 폐-Dust cell(진애세포)가 있음.
+
+\- 먹어야 하는 물질이 너무 크면 여러 MΦ들이 모여 하나의 phagocyte를 만드는데, 이를 Multinuclear
+
+giant cell(다핵거세포)라고 함. 뼈조직에 존재하는 파골세포(Osteoclast)도 다핵거세포의 일종이며
+
+Epitheloid cell 등도 있음
+
+6\. Mast cell
+
+1\) 특징
+
+\- 크기가 20\~30μm으로 크고 핵은 작음
+
+\- 분비과립(secretory granules)를 풍부하게 가짐 → 골지체도 잘 발달
+
+\- 미토콘드리아와 r-ER은 적음
+
+\- 고유결합조직 이외에 장, 폐 점액층 등에도 존재
+
+2\) 기능
+
+\- Allergic reaction: Histamine, Heparin 등을 분비해 알러지 반응, 염증 반응에 관여함
+
+\- 혈액 속 항체(IgE 분자)가 항원에 노출된 후 비만세포에 붙으면 항원 재노출 시 비만세포가 과립을
+
+즉시 분비하게 됨
+
+\- Histamine: 과도하게 분비되면 건초열, 천식, 아나필락시스 쇼크 발생 가능
+
+3\) 염색
+
+\- 비만세포는 Metachromasia(변색성)을 가짐 → 분비과립과 세포가 다르게 염색됨
+
+\- Toluidine blue 염색할 경우 핵은 연한 파란색, Heparin은 진한 보라색(Magenta)로 염색됨
+
+\- 이는 Heparin의 분자구조가 빛을 여러 번 굴절시키기 때문임
+
+※ (단22) Heparin도 GAG의 일종이므로 GAG를 Toluidine blue로 염색할 수 있음
+
+7\. Plasma cell
+
+1\) 특징
+
+\- B세포가 분화하여 형성
+
+\- 항체(Antibody) 형성 → 체액성 면역에 관여
+
+\- 특징적인 형태 관찰됨
+
+① Cartwheel Nuclei: 핵의 안쪽은 euchromatin, 바깥쪽은 heterochromatin
+
+② Basophilic cytoplasm: 항체를 많이 생산해야 하므로 rER 발달, 세포질이 호산성이고 HE염색 잘됨
+
+③ Perinuclear halo: 염색되지 않는 golgi complex가 핵 주위에 모여있어 halo처럼 관찰됨
+
+\- cartwheel nucleus(clock face)와 perinuclear halo
+
+가 관찰됨
+
+(22단)
+
+그림의 세포에 대한 설명으로 옳은 것은?
+
+1\. 헤파린과 히스타민을 분비한다 (=Mast cell)
+
+2\. 열을 생성한다 (=Brown adipocyte)
+
+3\. 항체를 생성한다
+
+4\. 항원을 제공한다 (=APCs)
+
+IV. FIBROUS COMPONENTS OF CT PROPER
+
+1\. 고유결합조직 내 섬유의 종류
+
+1\) Collagen fiber(아교섬유)
+
+\- 주로 collagen type I으로 구성됨
+
+2\) Reticular fiber(세망섬유)
+
+\- 주로 collagen type III으로 구성됨
+
+\- 그물 모양 (reticular = 그물 모양의)
+
+3\) Elastic fiber(탄력섬유)
+
+\- Elastin과 미세섬유성 단백질 등으로 구성됨
+
+2\. Collagen(아교질)
+
+1\) 특징
+
+\- 여러 섬유를 구성하는 물질이며 여러 종류의 collagen이 존재
+
+\- 포유류를 구성하는 단백질 중 25%를 차지 (가장 많음)
+
+2\) Collagen의 종류
+
+(1) 기능 (1\~5정도만 알아도 됨)
+
+① 섬유를 구성하는 주 물질: type 1, 2, 3, 5, 11
+
+\- type 1은 두꺼운 fiber에, type 2&3은 얇은 fibril에 사용됨
+
+② 섬유 연관 아교질: type 9, 12, 14, 16, 19
+
+\- ECM 내 섬유들끼리 연결시키는 역할
+
+③ 네트워크 구축: type 4, 8, 10
+
+★ collagen type IV = basal lamina를 구성하는 주 물질
+
+(1-1) type I\~V collagen 자세한 내용
+
+I 뼈의 유기질부분 구성 피부, 힘줄, 장기, 뼈 등
+
+II 연골 구성요소 연골
+
+III 세망섬유 주요 물질 림프절, 비장 등
+
+IV Basal lamina 구성물질. 상피세포나 fibroblast 등이 분비 Basal lamina
+
+V - 세포 표면, 머리카락, 태반
+
+(2) 합성 세포
+
+① Fibroblast(섬유아세포): type 1, 2, 3
+
+② Chondrocyte(연골세포): type 2
+
+\* collagen type II는 거의 연골에만 존재함
+
+③ Osteocyte(골세포): type I
+
+④ Smooth muscle cell(평활근세포): type 1, 3, 4
+
+⑤ Epithelial cell(상피세포): type 4
+
+(연21) 원섬유를 형성하
+
+는 아교질이 아닌 것은?
+
+Collagen type
+
+I II III IV V
+
+(연21) Collagen type I
+
+분비하지 않는 세포는?
+
+Fibroblast
+
+Odontoblast
+
+Chondroblast
+
+Epithelial cell
+
+Cementoblast
+
+3\. Collagen fiber(아교섬유)
+
+1\) 특징
+
+\- Type I collagen들의 꼬임으로 만들어짐
+
+\- Tendon(힘줄, 건), Ligament(인대)에 많이 분포하여 장력과 인장강도를 높임
+
+\- 굵고 두꺼움(직경 1.0\~20μm)
+
+2\) 합성
+
+\- procollagen → tropocollagen → fibril → fiber → fiber bundle 순으로 성숙되고 두꺼워짐
+
+\- (glycine, proline, hydroxyproline, hydroxylysine이) procollagen 사슬 형성
+
+→ 세 개의 procollagen이 서로 나선형으로 꼬여 tropocollagen 형성
+
+→ tropocollagen들이 간격을 두고 나란하게 연결돼 collagen fibril
+
+→ 여러 collagen fibril들이 뭉쳐 collagen fiber
+
+→ 이후 fiber 여러가닥이 뭉쳐 fiber bundle을 형성할 수 있음
+
+\- tropocollagen들이 fibril을 만들 때 배치로 인해 가로무늬가 생김
+
+\*\*\* 수업에선 넘어갔는데 야마에 콜라겐 합성 관련 질환들이 나오니 야마 반드시 봐주세요\!\! \*\*\*
+
+3\) 염색법
+
+\- 일반적으로 HE, Mallory trichrome, Masson trichrome이 사용됨
+
+Hematoxylin & Eosin (Pink) Mallory’s trichrome (Blue) Masson’s trichrome (Green)
+
+4\. Reticular fiber(세망섬유, 그물섬유)
+
+1\) 특징
+
+\- 얇은 fibril들이 느슨하게 배열됨(직경\~35nm)
+
+\- 비교적 말랑말랑한 장기들에서 관찰 (형태를 유지시켜줌)
+
+① 조혈장기의 뼈대: Spleen(비장), Lymph node(림프절), Red bone marrow(적골수)
+
+② 실질장기의 주변세포: Liver(간), Endocrine gland(내분비샘)
+
+③ Smooth muscle(평활근), Endoneurium(신경섬유막)
+
+2\) 구성물질
+
+\- Type III collagen, glycoprotein(당단백질), proteoglycan(단백당)으로 구성됨
+
+\- 당단백질이 6\~12%로 풍부하게 존재
+
+3\) 염색법
+
+\- Type III collagen은 호은성(은 친화성, argyrophilic)을 가져 은 시약들에 잘 염색됨
+
+5\. Elastic fiber(탄력섬유)
+
+1\) 특징
+
+\- 아교섬유보다 얇고 구부러짐
+
+\- microfibril에 많은 elastin 분자들이 cross-linking되어 얽혀있음
+
+\- 신장과 수축이 가능해 탄력을 제공
+
+\- 대동맥 내벽, 폐 및 호흡관, 성대, 흉막(Pleura), 탄력연골, 고유결합조직 등에 위치
+
+2\) 구성
+
+\- Elastin + Microfibril
+
+\- Microfibril: fibrillin이라는 당단백질로 구성됨(직경\~10μm)
+
+\- Elastin: 고분자 물질(glycine, proline 풍부)
+
+\- Elastin의 침착 정도에 따라 oxytalan-elaunin-elastic fiber
+
+로 구분하기도 함. Elaunin은 땀샘 주위, 진피, 치은 등에 있음
+
+\- Marfan syndrome: fibrillin 유전자 이상 → 대동맥박리, 심장판막 처짐 등 심혈관계에 이상 발생
+
+3\) 염색법
+
+\- 너무 가늘어서 HE염색이 불가능, 다른 시약 사용
+
+Elastin 염색 Microfibrillar protein 염색
+
+Orcein (Brown) Resorcin-fuchsin (Purple) Verhoeff’s elastic
+
+(Blue black) Van Gieson (Black)
+
+V. GROUND SUBSTANCE OF CT PROPER
+
+1\. Ground substance(바탕질)
+
+1\) 정의: CT에서 세포, 섬유를 제외한 수분을 많이 함유하고 무색투명한 거대 분자들의 복합혼합물
+
+2\) 구성성분
+
+① Proteoglycan(단백당): Glycosaminoglycan(GAG) + core protein
+
+② Glycoprotein(당단백질): 다기능 접착 단백질
+
+\* 이름 뒤쪽이 주 물질
+
+3\) 기능
+
+\- 세포와 섬유 사이 공간을 채움
+
+\- 점성이 있어 윤활유 역할 & 장벽 역할 수행
+
+2\. Proteoglycans
+
+1\) 바탕질의 단백당 구조
+
+\- 많은 GAG들이 core protein에 붙어있음 (청소솔처럼 생김)
+
+2\) GAG의 구조
+
+\- 이당류(Hexose+Hexosamine)가 반복되서 결합된 형태
+
+\- Hexose(우론산): glucuronic acid, iduronic acid
+
+\- Hexosamine: glucosamine, galactosamine
+
+\- 세포 표면과 ECM에 가장 많이 있는 탄수화물
+
+\- 대표적인 GAG에는 Hyaluronic acid, Heparin, Chondroitin sulfate가 있음 (탯줄, 연골 등에 존재)
+
+3\. Glycoproteins
+
+1\) 당단백질의 종류
+
+\- 여러 종류의 당단백질들이 존재하며 서로 다른 곳에서 여러 역할 수행
+
+①Fibronectin: Fibroblast, 상피세포에서 합성. Collagen fiber을 세포에 연결시켜줌
+
+②Tenascin: 태아조직에서 발견
+
+③Chondronectin: 연골에서 연골세포와 type II collagen 붙게 함
+
+④Laminin: 여러 binding site들이 있어서 CT의 접착제 역할
+
+(Trimer의 모습)
+
+⑤ Entactin: laminin과 type IV collagen에 결합
+
+⑥ Osteonectin: 아교질에 칼슘이 붙게함
+
+(야마) GAG 염색법
+
+Mast cell의 Heparin도
+
+GAG이므로 Toluidine
+
+blue로 염색가능
+
+2\) 상피\~고유결합조직 구조
+
+\- Lamina lucida(투명층): 섬유가 없어서 투명하게 보임. Laminin, entactin, integrin 등
+
+\- Lamina densa(치밀층): 상피와 고유결합조직의 경계. Type IV collagen, heparin sulfate, fibronectin 등
+
+\* Lamina lucida + Lamina densa = Basal lamina. 1주차에서 basal lamina를 상피와 CT가 7:3비율로 만든다고 한 이유 - Anchoring fibril: 손잡이 모양으로 CT를 단단하게 함. Type VII collagen & Type IV collagen
+
+\- Reticular fiber: anchoring fibril 사이로 지나가서 CT를 단단하게 함. Type III collagen
+
+VI. CONNECTIVE TISSUE WITH SPECIAL PROPERTIES
+
+지금까지 고유결합조직에 대해 했고, 이제 특수결합조직으로 넘어갑니다
+
+1\. Adipose tissue(지방조직)
+
+\- Adipocyte 파트 참고. 각 지방세포들이 조직을 이루면 white/beige/brown adipose tissue가 됩니다
+
+\* Brown adipose tissue는 호르몬이 아닌 신경의 직접적인 제어를 받음
+
+2\. Elastic tissue(탄력조직)
+
+\- 두껍고 평행한 구조를 가진 탄력섬유로 구성됨.
+
+\- 노란색을 띠며 척주, 탄력연골, 탄력동맥 등에 존재. 척주의 움직임을 가능하게 함
+
+3\. Reticular tissue(그물조직)
+
+\- 골수, 림프절, 비장 등에 존재
+
+\- 기관의 형태 유지
+
+\- Type III collagen 분비하는 fibroblast의 일종인 reticular cell 존재
+
+4\. Supporting CT
+
+\- Supporting CT도 특수결합조직의 일종임
+
+\- Cartilage(연골)
+
+\- Bone(뼈)
+
+\- Blood(혈액)
+
+※ 특수결합조직에 대한 자세한 내용은 나중에 나와서 2주차 수업은 거의 하지 않습니다
+
+VII. REVIEW
+
+결합조직
+
+DCT Irregular DCT, Regular DCT
+
+종류
+
+LCT Lamina propria 등
+
+Embryonic CT(Mesenchyme, Mucous CT)
+
+구성 고유결합조직
+
+세포성분 줄기세포 Mesenchymal stem cell
+
+Hematopoietic stem cell
+
+Fibroblast, Fibrocyte, Adipocyte, Macrophage, Mast cell, Plasma cell
+
+섬유성분 Collagen fiber, Reticular fiber, Elastic fiber
+
+바탕질 Proteoglycan Hyaluronic acid, Chondroitin Glycoprotein Fibronectin, Laminin 등
+
+sulfate
+
+특수결합조직 Adipose tissue, Elastic tissue, Reticular tissue, Bone, Cartilage, Blood
+
+3주차 근육
+
+목차
+
+I. Muscle
+
+0\. 용어정리
+
+1\. 근육의 종류
+
+2\. 근육세포의 형성
+
+3\. 근육세포의 재생
+
+II. Skeletal muscle
+
+1\. 골격근과 골격근섬유의 구조
+
+2\. 골격근섬유의 종류
+
+3\. 골격근의 결합조직
+
+4\. 골격근의 다른 세포들
+
+5\. 골격근섬유의 구성요소
+
+6\. 골격근의 수축
+
+7\. 고유감각수용체
+
+III. Cardiac muscle
+
+1\. 심장근과 심장근섬유의 구조
+
+2\. 심장에서의 신호 전달
+
+IV. Smooth muscle
+
+1\. 평활근과 평활근세포의 구조
+
+2\. 평활근에서의 신호 전달
+
+3\. 평활근세포의 수축
+
+V. Review
+
+I. MUSCLE
+
+0\. 용어정리
+
+근육세포 일반세포
+
+Muscle cell, Muscle fiber (근섬유) -cell
+
+Sarcoplasm (근형질) Cytoplasm (원형질)
+
+Sarcolemma (근형질막) Plasma membrane, Plasmalemma (원형질막)
+
+Sarcoplasmic reticulum (SR, 근형질그물) Smooth endoplasmic reticulum
+
+Sarcosome (근사립체) Mitochondria
+
+\* Sarco = 살코기(肉)
+
+1\. 근육의 종류 Skeletal muscle(골격근) Cardiac muscle(심장근) Smooth muscle(평활근)
+
+줄무늬 가로무늬 있음 가로무늬 있음 없음
+
+핵의 수 다핵 (가장자리) 1\~2개 (중앙) 1개 (중앙)
+
+조절 수의근 불수의근 불수의근
+
+모식도
+
+조직
+
+2\. 근육세포의 형성
+
+1\) 근섬유
+
+\- 근섬유(Muscle fiber=근세포)는 여러 개의 Myofibril(근원섬유)들로 구성됨
+
+\- Myofibril은 수많은 Myofilament들로 구성됨
+
+\- Myofilament에는 Actin filament(Thin myofilament)와 Myosin filament(Thick myofilament)이 있음
+
+2\) 세포핵
+
+\- 골격근은 형성 과정에서 수백개의 myoblast(근모세포)들이 융합(fusion)되어 여러 개의 세포핵을 가짐
+
+\* 심장근의 핵이 2개인 경우는 분열하다 만 경우임. Fusion은 골격근에서만 일어남
+
+3\. 근육의 재생
+
+1\) 골격근: Satellite cell이 근세포로 분화 (뒤에 나오는 세포)
+
+\* 운동하면 다양한 myokine 분비해서 전신에 이로운 효과 준다. 일종의 내분비 기관 역할
+
+2\) 심장근: 재생 X, 손상된 부위를 fibroblast가 섬유조직으로 메움 (scar tissue 됨)
+
+3\) 평활근: 평활근세포는 자체적으로 세포분열이 조금 가능
+
+II. SKELETAL MUSCLE
+
+1\. 골격근과 골격근섬유의 구조
+
+1\) 골격근의 구조
+
+골격근의 구성
+
+\- Actin, myosin myofilament는 기본단위인
+
+sarcomere(근단위, 근원섬유마디) 형성
+
+→ sarcomere이 반복되며 얇은 myofibril 형성
+
+→ myofibril 여러 개를 가지는 muscle fiber(=cell)
+
+\* myofibril이 두껍고 많을수록 강한 근세포임
+
+→ muscle fiber들이 모여 muscle fascicle(근다발)
+
+→ fascicle들이 모여 더 큰 근육을 이루기도 함
+
+(사진: biceps branchii muscle의 모습임)
+
+골격근의 절단면
+
+\- 섬유들이 나란히 묶여있음
+
+1\) 가로단면: fibril들이 빽빽하게 차있음
+
+2\) 세로단면: 줄무늬가 관찰되고 세포핵이 가장자
+
+리에 몰려있음 → 세포 경계 예측 가능
+
+2\) 골격근섬유의 대략적인 구조
+
+골격근세포 1개의 구조 (근섬유)
+
+1\) 여러 개의 Myofibril 가지며 각 fibril들은 그물
+
+같은 형태의 Sarcoplasmic reticulum(SR)에 둘러싸
+
+여 있음
+
+2\) Sarcolemma 바깥에 basal lamina 존재 (CT)
+
+3\) Sarcolemma가 세포 안쪽으로 파고든 T tubule
+
+4\) 미토콘드리아 풍부
+
+5\) 다른 근섬유보다 김 (50cm짜리도 있음)
+
+→ 골격근세포의 구조는 크게 Myofibril +
+
+Sarcolemma(+T-tubule) + Sarcoplasmic reticulum
+
+\+ 기타 세포질 로 되어있다.
+
+2\. 골격근섬유의 종류
+
+\- 근육의 사용 목적에 따라 Red muscle fiber, White muscle fiber 있음
+
+Red muscle fiber White muscle fiber
+
+수축 느리고 약함
+
+지속적 작동 가능 (장거리)
+
+빠르고 강함, 폭발적인 작용
+
+에너지 빨리 고갈됨 (단거리)
+
+섬유 직경 가늘다 두껍다
+
+에너지 공급 유산소 (지방, 탄수화물) 무산소 (해당과정)
+
+혈액 공급 혈관 많이 분포 (산소 많이필요) 혈관 덜 발달
+
+미토콘드리아 많음 적음
+
+Myoglobin 많음 적음
+
+SR 덜 발달 많이 발달 (칼슘 많이필요)
+
+신경분포 얇은 신경섬유 두꺼운 신경섬유
+
+\* 미토콘드리아 차이로 Red muscle fiber가 진하게, White muscle fiber가 연하게 염색됨
+
+3\. 골격근의 결합조직
+
+1\) 근육 내 CT
+
+\- Muscle fiber가 세포이므로 근섬유와 더 큰 단위들은 각각 CT에 감싸져있음
+
+(1) Endomysium: 근섬유(세포) 감쌈. Reticular
+
+fiber+Basal lamina (세포 감싸니까 당연)
+
+(2) Perimysium: 근다발 감쌈. Collagenous
+
+(3) Epimysium: 근육 하나를 통째로 감쌈.
+
+Collagenous
+
+\- 세 CT 모두 Irregular DCT이지만, 안쪽 CT일수
+
+록 섬유 밀도가 낮음(‘less dense’). Epimysium이
+
+가장 두껍고 단단하다
+
+2\) 근육-뼈 연결
+
+(1) Direct
+
+근육이 직접 뼈(뼈막)에 붙음
+
+(머리근육에서) 근육(M)과 뼈(B)가 뼈
+
+막(Periosteum, P)를 통
+
+해 직접 연결되어있음
+
+\* Sharpey’s fiber(S)
+
+\* 뼈막 = 얇은 CT층
+
+(2) Indirect
+
+근육이 힘줄(Tendon), 널힘줄
+
+(Aponeurosis)를 통해 연결됨
+
+(대부분 근육)
+
+근섬유(MF)와 힘줄(T)
+
+가 연결되어있음. 힘줄
+
+에는 섬유세포의 핵(N)
+
+이 관찰됨
+
+(Myotendinous
+
+junction(근육힘줄결합)
+
+으로 결합함)
+
+\- 조직들이 서로 결합할 때 사이에서 여러 CT물질들이 결합 (basal lamina, collagen, laminin, integrin…)
+
+\*\* Sharpey’s fiber: 뼈막에서 뼈 기질에 수직으로 박힌 섬유. 뼈막(CT)와 뼈가 단단하게 결합하도록 하며
+
+근육이 뼈와 결합하며 생기는 장력을 견딜 수 있게 해준다
+
+(Sharpey’s fiber가 깍지낀것처럼 뼈에 들어와있음)
+
+이외에도 Perimysium 사이사이에 박힌 혈관 등 여러 CT들이 있다.
+
+4\. 골격근의 다른 세포들
+
+Satellite cell
+
+(위성세포)
+
+\- 미분화된 근세포 (myogenic cell)
+
+\- 작고 heterochromatic한 핵 1개
+
+\- 근육섬유 재생 필요할 때 muscle cell
+
+로 분화해서 기존 섬유에 융합됨
+
+Endothelial cell
+
+(내피세포) - 근육 내부의 모세혈관을 감쌈
+
+Fibroblast (섬유아세포) - 섬유물질 분비
+
+5\. 골격근섬유의 구성요소
+
+1\) Filaments
+
+\- Actin filament: actin 분자들이 다른 단백질들과 함께 모여 만들어지는 thin filament(6nm)
+
+\- Actin에 붙는 단백질들은 근수축에 중요한 역할을 한다. (뒤에 자세한 내용)
+
+\- Myosin filament: myosin 분자들이 얽혀서 만드는 thick filament(15nm)
+
+\- Myosin 분자는 머리쪽에 actin이 달라붙는 결합자리가 있음
+
+2\) Sarcomere
+
+\- Sarcomere = actin, myosin filament로
+
+이루어진 기본단위
+
+\- actin filament들 사이에 myosin
+
+filament가 들어있는 구조
+
+\- filament들의 배치로 인해 골격근섬유
+
+주행방향의 수직으로 줄무늬가 관찰됨
+
+① H대: myosin filament만 있는 구간
+
+② A대: 두 filament가 모두 있는 구간
+
+③ I대: actin filament만 있는 구간
+
+④ Z선: I대 중간에 actin filament들이 묶
+
+여있는 수직선
+
+⑤ M선: H대 중간에 있는 수직선
+
+\- 이러한 sarcomere의 구조로 인해 자
+
+르는 위치에 따라 서로 다른 모양이 관
+
+찰됨
+
+\- 사진은 순서대로 I대, H대, M line, A대
+
+를 수직으로 자른 모습임
+
+(cf. M line에는 myosin filament들 묶는
+
+연결단백질들이 있다)
+
+\- Sarcomere에 있는 여러 단백질들.
+
+\- 각 단백질들은 actin, myosin filament
+
+들의 움직임과 지탱 등에 관여
+
+\- titin: 용수철 모양, 각 세사들이 너무
+
+가깝거나 멀지 않게 유지함
+
+\* 근형질막과도 연결되어있어서 근수축
+
+시 근형질막도 같이 수축한다.
+
+\*\* 잡다한 단백질 이름 암기 X
+
+\- 근섬유의 수직단면 모습. 두꺼운
+
+myosin filament와 얇은 actin filament가
+
+모두 관찰됨 (A대)
+
+\- 근섬유를 비스듬하게(obique) 자른 단
+
+면. 3개의 단면이 모두 관찰됨
+
+∴ 여기까지 내용: Filament들이 Sarcomere 구성, Sarcomere들이 Myofibril를 만든다.
+
+3\) Sarcolemma (근형질막)
+
+\- 다른 세포와 마찬가지로 인지질 이중층 구조를 가짐
+
+★ T-tubule: Sarcolemma 일부가 세포 안으로 함입된 터널 같은 구멍, 통로
+
+\- 보통 A band의 가장자리 (myosin filament 끝부분)에 위치함
+
+\- 탈분극 신호가 들어오는 곳, 신호 전달
+
+4\) Sarcoplasmic reticulum (근형질그물)
+
+\- 근육세포에서의 s-ER
+
+\- 칼슘 이온의 저장소 역할, 근수축에 필요
+
+\- Terminal cisterna(종말수조): ER 끝 부분에 팽대된 부분. 칼슘이 이곳으로 방출됨
+
+5\) ★Triad(삼조체)
+
+\- 골격근은 1개의 T-tubule과 양쪽에 terminal cisterna가 있는 삼조체 구조를 가짐
+
+\- 종말수조를 통해 방출된 칼슘이 T-tubule을 통해 A-band 가장자리 부위(T-tubule 위치)로 들어간다.
+
+∴ 여기까지 복습: 근육세포의 세포막과 ER에는 특이한 구조들이 있고, 얘네들이 삼조체 구조를 이룬다.
+
+6\. 골격근의 수축
+
+1\) Actin, Myosin 자세한 구조
+
+(1) Actin filament
+
+\- Actin filament가 만들어질 때 Troponin과 Tropomyosin도 들어간다.
+
+① Troponin: 세 개의 소단위(TnC, TnI, TnT)로 구성된다.
+
+\- TnC: Ca 이온과 붙음
+
+\- TnI: Actin과 붙어서 아무때나 움직이는걸 억제(Inhibit)함
+
+\- TnT: Tropomyosin과 붙음
+
+② Tropomyosin: 긴 끈 형태, 신호 없을때 액틴과 마이오신세사가 결합하는걸 막음
+
+③ Myosin binding site: 액틴 단백질에 마이오신세사가 붙는 자리가 있음
+
+(2) Myosin filament
+
+\- Actin이 붙는 곳과 ATP가 붙는 곳이 있음
+
+2\) Sliding filament theory (활주설)
+
+\- 근육 수축, 이완 시 각 filament의 길이가 변
+
+하는게 아니라 Z선\~myosin filament 사이 간격
+
+이 변하면서 수축, 이완한다는 이론
+
+\- Titin: 탄성을 가져서(용수철) 길이 원래대로 돌
+
+아올 때 도움
+
+\- 결과적으로 근육이 수축하면 A대를 제외한 모
+
+든 band 길이가 줄어든다.
+
+3\) 근육-신경 연결
+
+① Innervation: 골격근은 모든 근육세포에 신경이 하나하나 들어가있음
+
+\- 골격근은 신경자극이 있어야 움직임. 심장근/평활근은 없어도 운동 가능
+
+② All or none: 특정 근육에 있는 골격근세포는 신호 받으면 한번에 움직임 (세포가 따로따로 작동X)
+
+③ Neuromuscular junction: 운동신경의 말단(Motor end plate)이 근섬유에 닿아있다.
+
+\- 신경세포 가닥들이 골격근마다 붙어있다.
+
+\* 사진은 한 nerve에서 갈라져서 들어가는게 아니라
+
+골격근마다 연결된 신경이 뭉쳐있는 모습임
+
+∴ 여기까지 내용: 액틴과 마이오신세사는 근수축에 필요한 여러 단백질과 결합자리들을 갖는다. 근육세포
+
+에는 신경이 붙어있다. 이제 지금까지 배운 삼조체, 세사, 신경 파트가 합쳐져서 근수축 과정이 됩니다.
+
+4\) 근수축 과정
+
+신경\~근세
+
+포막표면
+
+1\) 뉴런의 탈분극
+
+2\) 뉴런 축삭말단(axon terminal)이 탈분극
+
+3\) 축삭말단의 전압의존성 칼슘 채널이 열림
+
+4\) 축삭말단으로 칼슘 이온이 들어옴
+
+5\) 신호를 받고 시냅스소포와 축삭말단의 세포막이 융합됨
+
+6\) 소포에 차있는 신경전달물질(Acetylcholin, ACh)이 시냅스 틈으로 쏟아져나옴
+
+근세포막
+
+표면\~세포
+
+질
+
+7\) ACh가 근세포에 있는 ACh receptor에 붙
+
+음. 이 수용기는 이온채널 역할을 함
+
+(여기가 Motor end plate 부위임)
+
+8\) ACh receptor가 열림
+
+9\) 열린 채널로 Na 이온이 근세포로 들어감
+
+10\) 근육세포가 탈분극돼 세포막을 따라 신
+
+호 전달됨
+
+11\) 이 action potential이 T-tubule에 도달
+
+12\) 신호가 종말수조까지 퍼짐
+
+13\) 신호를 받은 종말수조가 열려 안에 있
+
+던 칼슘 이온이 세포질 내부로 들어감
+
+\* 부연설명: 이 신호가 삼조체의 T-tubule쪽 DHP receptor(이온채널의 일종)에 도달하면 SR
+
+쪽 채널을 개방함 (그림 참조)
+
+액틴세사
+
+의 구조
+
+변화
+
+14\) 칼슘 이온이 TnC에 결합
+
+15\) TnI의 구조 변화, 원래 억제하던거 멈춤
+
+16\) Troponin이 Tropomyosin을 당겨서 옮김
+
+17\) Tropomyosin에 의해 가려져있던 액틴의
+
+Myosin binding site가 개방됨
+
+18\) 마이오신 머리에 ATP 결합
+
+19\) ATP→ADP+Pi 되며 나오는 에
+
+너지가 마이오신 머리쪽의 각도를
+
+꺾음
+
+20\) 액틴과 마이오신이 결합함
+
+반복되는
+
+21\) Pi가 떨어져나가면서 한번 당김
+
+수축
+
+22\) ADP가 떨어져나가면서 한번더
+
+당김
+
+\* 당겨진 상태에서 새로운 ATP가
+
+붙으면 actin과 분리되고 다시 18
+
+번\~22번 과정을 반복한다.
+
+이렇게 마이오신이 액틴을 잡고-당기고-놓는 과정이 반복되면서 수축이 일어난다.
+
+∴ 요약: 신경에서 신호 전달 → ACh가 근섬유 수용체에 붙음 → 삼조체에 신호 도달
+
+→ SR 안에 있던 칼슘이 세포질로 들어감 → Troponin 구조 변화해서 액틴, 마이오신 결합
+
+→ 마이오신에 ATP 붙고 떨어지면서 액틴을 당기고 놓는 과정이 반복됨
+
+5\) 근이완
+
+\- 수축이 다 끝나면 다시 원상태로 돌아가야함: 골격근 수축은 신경자극이 있을때만 일어나므로(single
+
+stimulus single response) 신호를 없애면 멈춘다
+
+(1) Sarcoplasm 외부에서: ACh를 분해하면 ACh-receptor 결합이 끝나서 탈분극 멈춤
+
+(2) Sarcoplasm 내부에서: 종말수조에 있는 칼슘 이온 펌프가 세포질에 퍼져있는 칼슘 이온을 SR로 다
+
+시 회수 → TnC에서 칼슘이 떨어지면서 TnI가 원래대로 돌아감 → myosin-binding site 다시 가려짐
+
+7\. 고유감각수용체
+
+1\) 고유감각수용체(Proprioceptor)
+
+\- Capsule에 싸여있으며 근육, 힘줄, 관절 등에서 근육의 움직임, 위치, 상태 등을 세밀하게 감지함
+
+\- 대표적인 고유감각수용체로 Muscle spindle(근방추)와 Golgi tendon Organ(골지힘줄기관)이 있음
+
+2\) Muscle spindle (근육에 위치)
+
+(1) 기능: 근육의 이완 정도와 속도 감지, 근육의 과도 이완을 방지함
+
+(너무 이완되면 myosin head들이 잡을 actin이 없어짐)
+
+(2) 구조: Capsule에 둘러싸인 근세포+신경세포
+
+① External, Internal capsule에 싸여있음. 두 capsule 사이에는 GAG 풍부한 세포외액 흐름
+
+② Internal capsule 안에 Intrafusal muscle fiber(방추내섬유) 존재
+
+\- Intrafusal muscle fiber 종류: Nuclear bag fiber, Nuclear chain fiber
+
+cf) Extrafusal muscle fiber: 일반적인 Muscle fiber
+
+③ Ia형 & II형 감각신경섬유: Ia형이 근육 늘어나는 속도, II형이 근육 늘어나는 정도 감지
+
+④ α형 운동신경섬유: 척수에서 뻗어나와 Extrafusal fiber을 수축시킴
+
+⑤ γ형 운동신경섬유: 근방추를 팽팽하게 유지시킴
+
+(3) Stretch reflex: 근육 과도하게 이완되면 다시 수축시키는 반사 (예: patellar reflex, 무릎반사)
+
+\- 근방추가 늘어나면 Ia, II sensory neuron 자극됨
+
+→ 척수를 거쳐 α motor neuron으로 자극 전달
+
+→ Extrafusal fiber(일반 근섬유들) 수축시킴
+
+3\) Golgi tendon organ (힘줄에 위치)
+
+(1) 기능: 힘줄의 장력 감지 = 연결된 근육 수축 감지, 근육의 과도 수축을 방지함
+
+(너무 수축하면 신경 손상됨)
+
+(2) 구조: Capsule에 둘러싸인 신경세포
+
+① Capsule: 힘줄에 위치하며 안에 Collagen fiber들이 빽빽하게 차있음
+
+② Ib형 감각신경섬유: collagen fiber 사이사이에 끼어있음. α motor neuron 억제하는 역할
+
+3\) Inverse stretch reflex
+
+\- 근육 과도하게 수축하면 힘줄에 걸리는 장력 증가
+
+→ type Ib sensory nerve 자극
+
+→ α motor neuron 억제, 근육이 다시 이완됨
+
+3\) 근경련 (Exercise-related muscle cramps, ERMC = 쥐)
+
+\- 최근 연구결과에서 쥐나는 이유 = muscle spindle과 golgi tendon organ이 동시에 작동해서
+
+\- 원래는 동시에 작동하면 안됨
+
+\* 덤: 신경섬유의 종류
+
+\- α가 가장 빠름. Erianger-Gasser classification: 섬유의 직경, 속도로 구분한 기준
+
+Type Erianger-Gasser classification 관련 근섬유
+
+Motor α γ Aα Aγ Extrafusal muscle fiber Intrafusal muscle fiber
+
+Sensory
+
+Ia Aα Muscle spindle(짜릿한 통증)
+
+Ib Aα Golgi tendon organ
+
+II Aβ Muscle spindle
+
+IV C Nociceptor(지속되는 dull pain)
+
+III. CARDIAC MUSCLE
+
+1\. 심장근과 심장근섬유의 구조
+
+1\) 대략적 구조
+
+\- 1\~2개의 세포핵 (fusion X)
+
+\- 줄무늬 나타남 (골격근같은 sarcomere 배열)
+
+\- 사이원반(Intercalated disc) 존재: 근섬유끼리 연결
+
+된 부위임
+
+\- 혈관 많이 들어옴
+
+\- 핵주위테(halo): 미토콘드리아가 많아서 핵 주변이
+
+밝게 보임
+
+\- Myofibril: 골격근보다 두껍고 개수 적음
+
+\- T-tubule: 골격근보다 두꺼움
+
+\- SR: 골격근보다 덜 발달됨
+
+\- Diad: 삼조체가 아닌 이조체 (1 tubule + 1 SR)
+
+\- 심장에는 Purkinje fiber(푸르키니에 섬유) 존재
+
+2\) Intercalated disc(사이원반)
+
+\- 심장근세포들은 fusion 없이 서로 연결되어있음. 이때 가로방향, 세로방향 결합이 다름
+
+① 가로방향(Transverse): Desmosome, Fascia adherens(Zonula adherens랑 비슷)으로 연결
+
+② 세로방향(Lateral): Gap junction으로 연결
+
+\- 가로, 세로방향이 계단처럼 번갈아 나타나는 경우가 많음
+
+(좌) 계단모양의 가로, 세로방향 disc
+
+(우) Desmosome(Macula adherens)로 울퉁불퉁
+
+하게 연결된 심장근섬유 가로접합부
+
+3\) Diad(이조체)
+
+\- 심장근은 T tubule은 잘 발달했지만 SR은 덜 발달함 (심장에서는 칼슘을 T-tubule이 주로 공급)
+
+\- terminal cisternae도 잘 발달 안해서 이조체로 관찰됨 (사진 참고)
+
+\- T tubule이 Z line 쪽으로 들어옴
+
+\- Myofibril에서의 차이도 볼 수 있음
+
+4\) Purkinje fibers
+
+\- 일반 심장근세포보다 크기가 큰 특수한 심장근세포
+
+(intercalated disc 등은 다 있음)
+
+\- 심장의 심방, 심실벽에 있음 (심근\~상피 사이)
+
+\- myofibril이 적어서 줄무늬 연함 + 연하게 염색됨
+
+(glycogen, mitochondria 많아서)
+
+\- 근육세포이지만 신경을 전달함. Purkinje fiber에 붙는 신
+
+경의 신호는 매우 빠르게 심장으로 전달됨
+
+2\. 심장에서의 신호전달
+
+1\) 심장의 신경적 특징
+
+\- 골격근은 세포마다 신경이 꽂혀있지만 심장근은 듬성듬성 일부 세포에만 있음
+
+\- 다른 심장근섬유들은 Gap junction 등으로 신호를 전달받음 = T tubule이 주요 Ca 공급원인 이유
+
+2\) 심장 박동
+
+\- SA node - AV node - bundle of His - Purkinje fiber로 신호가 전달됨
+
+\- 심장근세포의 신경 전달은 한꺼번에(all or none)가 아닌 순차적으로 일어남 = 심장박동
+
+IV. SMOOTH MUSCLE
+
+1\. 평활근과 평활근세포의 구조
+
+1\) 대략적 구조
+
+평활근세포
+
+\- 방추형(fusiform): 끝이 뾰족
+
+\- 세포핵이 중앙에 위치
+
+평활근조직
+
+\- 한 방향으로 잘라도 가로단면과 세로단면이 번갈
+
+아서 관찰됨
+
+\- 줄무늬 없음 (세사들이 불규칙하게 배열)
+
+\- 혈관이 사이사이에 들어와있음
+
+2\) 세포간 연결
+
+\- 평활근도 대부분 gap junction으로 소통함
+
+\- Caveolae: T tubule을 대신함. 세포가 작기 때문에
+
+세포막이 얕게만 들어옴
+
+\- Dense body(치밀소체): Sarcomere에 있는 단백질
+
+들이 달라붙어있음(filament 포함), 다른 근세포에
+
+서의 Z line과 비슷한 역할을 함
+
+\- 평활근에서 SR은 신호 전달 역할 잘 안함
+
+2\. 평활근에서의 신호전달
+
+1\) 평활근의 종류: Single-unit smooth muscle, Multiunit smooth muscle
+
+2\) Single-unit smooth muscle(단일단위평활근)
+
+\- 신경이 듬성듬성 꽂혀있는데 Purkinje fiber도 없어서 신호가 순차적이고 느리게 전달됨
+
+→ 연동운동(Peristalsis) 가능. 전형적인 평활근 (식도 등)
+
+3\) Multiunit smooth muscle(다단위평활근)
+
+\- 각각의 세포에 신경섬유 분포되어있음 → gap junction 없고 세포 단위로 움직임 (몇군데 없다)
+
+3\. 평활근세포의 수축
+
+1\) 수축 형태
+
+\- 세포 분열 어느정도 가능
+
+\- T tubule 없음
+
+\- Sarcomere의 빽빽한 구조가 아니라 Dense body에 섬유들이 여러 방향으로 붙어있는 구조
+
+\- 이 구조 때문에 세포가 특정 방향으로 수축하는게 아니라 전체적으로 찌그러짐
+
+2\) 수축 기전
+
+\- 평활근세포의 actin filament에는 troponin이
+
+없음 → 수축 기전이 다르다
+
+\- Myosin filament는 head들이 비대칭적으로
+
+달려있는 side-polar 형태 (sarcomere에서는
+
+bipolar한 형태임)
+
+\- Myosin filament는 불활성일 때 동그랗게 말
+
+려있다가 칼슘 들어와서 활성화되면 펴지고
+
+actin binding site도 개방됨
+
+\* 칼슘이 Calmodulin에 붙음
+
+V. REVIEW
+
+Skeletal Cardiac Smooth
+
+Sacromere(줄무늬) O O X
+
+형태 긴 원통 짧고 분지됨 방추형
+
+직경 큼(30-150μm) 중간(10-15μm) 작음(5-10μm)
+
+핵 다핵, 가장자리 1\~2개, 중심 1개, 중심
+
+SR 발달 발달X 발달X
+
+T tubule 얇은 tubule, triad 두꺼운 tubule, diad X, Caveola 대체
+
+Cell junction X (fusion됨, 신경 따로) Intercalated disc Gap junction
+
+수축 수의, 동시에 모두 불수의, 거의 동시 불수의, 연동
+
+재생 O (위성세포) X (섬유화) O (세포분열)
+
+분열 X X O
+
+CT Epi, Peri, Endomysium Endomysium + 기타 Endomysium + 기타
+
+특이점 Proprioceptors Purkinje fiber Dense body
+
+3주차 연골, 뼈
+
+목차
+
+I. Introduction
+
+1\. 뼈와 연골
+
+II. Cartilage
+
+1\. 연골의 특성
+
+2\. 연골의 형성
+
+3\. 연골의 분류
+
+4\. 유리연골
+
+5\. 탄력연골
+
+6\. 섬유연골
+
+7\. 관절
+
+8\. 연골의 조직생리학
+
+III. Bone
+
+1\. 뼈의 특징
+
+2\. 뼈의 분류
+
+3\. 긴뼈의 구조
+
+4\. 뼈 구성 세포
+
+5\. 혈소판
+
+IV. Bone modification
+
+1\. Osteogenesis
+
+2\. Intramembranous ossification
+
+3\. Endochondral ossification
+
+4\. Calcification
+
+5\. Bone remodeling
+
+V. Review
+
+I. INTRODUCTION
+
+1\. 뼈와 연골
+
+(2주차 결합조직 도표)
+
+뼈와 연골은 특수결합조직에 해당함
+
+\- 뼈 vs 연골
+
+Bone Cartilage
+
+Cells Osteoblast, Osteocyte, Osteoclast Chondroblast, Chondrocyte
+
+Inorganic ECM 67% (변형 불가, 단단) 0% (변형 가능, 충격흡수)
+
+Organic ECM 대부분 Collagen fiber 대부분 Collagen fibril
+
+Ground substance 당단백, 단백당(GAG 포함)
+
+기능 미네랄 저장, 지지, 보호, 조혈 탄성 제공, 충격 흡수
+
+하위분류 Compact, Spongy / Lamellar, Woven Hyaline, Elastic, Fibrous
+
+주변 CT Periosteum, Endosteum Perichondrium
+
+II. CARTILAGE
+
+1\. 연골의 특성
+
+0\) 기원
+
+\- Mesenchymal stem cell
+
+1\) 기능
+
+\- 지지 + 충격 흡수
+
+\- Sliding 가능 (유연한 움직임)
+
+\- Long bone 형성 (연골이 뼈로 굳어짐)
+
+2\) 구성
+
+① 세포성분: Chondrogenic cell, Chondroblast(연골모세포), Chondrocyte(연골세포)
+
+② ECM
+
+\- Organic ECM(Fibers): Collagen fiber, Elastic fiber
+
+\- Ground substance: Hyaluronic acid, collagen, GAG, proteoglycan, glycoprotein
+
+③ Extracellular fluid: 물 (wet weight의 75%)
+
+3\) 특징
+
+\- Collagen fibril과 ground substance들이 그물같이 얽혀있어 Solid, 물이 많아 gel-like
+
+\- 혈관, 신경, 림프관이 없음 (확산을 통해 영양공급)
+
+\- Perichondrium(연골막)에 싸여있음
+
+• 바깥쪽: Fibrous layer (fibroblast, type I collagen, 혈관 들어옴)
+
+• 안쪽: Cellular layer (chondrogenic cell: chondroblast로 분화하려고 준비중인 세포)
+
+\- 동형세포집단(Isogenic cell group): 하나의 chondrocyte가 분열해서 8개 이하의 세포 집단을 구성함
+
+2\. 연골의 형성
+
+1\) Chondrogenic cell이 chondroblast로 분화
+
+2\) Chondroblast가 주변으로 섬유를 계속 만들어서 방출
+
+3\) Chondroblast가 자신이 분비한 matrix 안에 갇히게 됨
+
+\- Lacuna: 세포를 둘러싸는 방 구조의 matrix 주머니
+
+\- Chondroblast가 lacuna에 갇히면 Chondrocyte가 됨 (cyte가 되어도 euchromatic하다)
+
+\- Chondrocyte는 3번정도 더 분열할 수 있음 → 하나의 lacuna에 최대 8개 세포 (동형세포집단)
+
+4\) Chondroblast와 Chondrocyte가 matrix를 계속 만들어 연골조직이 형성됨
+
+\- Appositional growth: Chondroblast가 밖에서 안쪽으로 matrix 분비
+
+\- Interstitial growth: 갇힌 Chondrocyte가 안에서 밖으로 matrix 분비
+
+(참고: 유리연골에서의 appositional & interstitial growth. GAG로 차있던 공간이 점점 연골이 됨)
+
+3\. 연골의 분류
+
+Type Collagen Perichondrium 위치
+
+Hyaline
+
+cartilage
+
+(유리연골)
+
+Collagen type II (Collagen type I 없음) 대부분 O 가장 흔함
+
+코, 후두, 기관, 폐포, long bone 관절 끝
+
+Elastic
+
+cartilage
+
+(탄력연골)
+
+Collagen type II + Elastic fiber O 귓바퀴, 외이도, 후두덮개, 유스타키오관,
+
+후두의 쐐기연골
+
+Fibrous
+
+cartilage
+
+(섬유연골)
+
+Collagen type I + II 사실상 없음 추간판, 무릎 반월판, 치골결합(출산)
+
+4\. Hyaline cartilage 유리연골
+
+1\) 특징
+
+① 색: 청백색, 투명
+
+② Collagen type II 풍부: dry weight의 40% 차지
+
+③ 위치: 코, 후두, 기관, 폐포, 긴뼈의 관절 끝부분 (기관의 고리 모양 연골도 유리연골)
+
+2\) ECM
+
+\- Fibrous ECM: Type II collagen을 주 물질로 하는 fibril 형성 (fiber까지는 잘 안감)
+
+\- Ground substance: Aggrecan(단백당 일종), Hyaluronic acid, Chondronectin(당단백 일종)
+
+\- 위치상 구분
+
+① Pericellular matrix (Capsular matrix)
+
+세포를 감싸는 가장 진하게 염색된 부분
+
+단백당 풍부함
+
+Type VI collagen, integrin 존재
+
+(Type VI는 여기에만 있음)
+
+② Territorial matrix
+
+동형세포집단을 감싸는 진한 보라색 부분
+
+GAG 많고 Collagen 적음
+
+③ Interterritorial matrix
+
+동형세포집단 사이를 채우고 있는 연한 부분
+
+Collagen이 많고 GAG 적음
+
+3\) 형태
+
+\- 사방으로 분열한 Isogenic cell group → 동그란 형태, lacuna도 동글동글
+
+5\. Elastic cartilage 탄력연골
+
+1\) 특징
+
+① 색: 노란색, 불투명 (elastic fiber 때문)
+
+② 유연성: hyaline cartilage보다 더 유연함
+
+③ 위치: 귓바퀴, 외이도, 유스타키오관, 후두덮개, 후두의 쐐기연골
+
+2\) ECM
+
+\- 유리연골보다 세포 비율이 더 높음
+
+\- hyaline cartilage와 비슷한 형태의 ECM 구조를 가짐 (lacuna 안에 세포들)
+
+\- 중간중간에 Elastic fiber들이 들어와있음
+
+3\) 형태
+
+\- 사방으로 분열한 Isogenic cell group
+
+6\. Fibrous cartilage 섬유연골
+
+1\) 특징
+
+① 기원: Mesenchymal stem cell → Fibroblast → Chondrocyte
+
+⇒ 기본적으로 Fibroblast와 Chondrocyte의 기능을 모두 가짐
+
+② Perichondrium이 사실상 없음 (구분 안됨)
+
+③ HE로 염색 잘됨: Type I collagen이 eosinophilic해서 분홍색으로 염색됨
+
+④ Hyaline cartilage에 fiber들이 섞인 구성
+
+⑤ 위치: 추간판(Intervertebral disc), 치골결합, 무릎 반월판 등 하중을 많이 받는 곳
+
+2\) ECM
+
+\- Type I collagen fiber로 구성 (Type II는 fibril 단위로 조금 있음) ⇒ Regular CT와 비슷
+
+\- GAG에 chondroitin sulfate, keratan sulfate 풍부
+
+3\) 형태
+
+\- 섬유를 따라 일렬로 분열한 Isogenic cell group → 길쭉한 lacuna
+
+\- 조직 안으로 섬유들(DCT)이 들어와있어서 Perichondrium과 구분 안됨
+
+4\) 척추에서의 섬유연골
+
+\- 척추 사이의 구조: 척추뼈 양쪽에 유리연골이 붙어있고, 두 연골 사이에 섬유연골이 존재
+
+\- 이 섬유연골의 외부, 내부 구조가 다름
+
+① Annulus fibrisus(섬유테)
+
+\- 섬유연골이 존재, 섬유들이 Herring-bone pattern
+
+\- 섬유들이 여러 층으로 존재
+
+\- 서로 45\~90도 각도로 엇갈
+
+려 배치 (청어 뼈 모양)
+
+\- 일렬로 배열된 Isogenic cell
+
+group도 관찰됨
+
+② Nucleus pulposus(수질핵)
+
+\- notochord 세포에서 기원
+
+\- Hyaluronic acid 등 GAG 매우 풍부
+
+\- Ruptured disc: 수질핵이 터져서 변형된 연골이 척수신경을 누름
+
+\- Slipped disc: 연골이 너무 미끄러져 제자리로 안돌아감. Ex) 턱빠짐
+
+7\. Joints 관절
+
+※ 관절 = 뼈와 뼈 사이 모든 곳
+
+1\) 관절의 분류
+
+(1) Synarthrosis (부동관절): 움직임을 거의 허용X
+
+① Synostosis (뼈유착결합): 뼈끼리 섬유성 CT로 연결됐다가 CT가 뼈로 바뀜
+
+ex) 머리뼈봉합: 머리뼈 사이 작은 틈이 DCT로 연결됨
+
+② Synchondrosis (유리연골성결합): 뼈와 뼈가 유리연골만으로 연결
+
+ex) 성장판: 나중에 뼈로 대체됨
+
+③ Syndesmosis (인대결합): 뼈와 뼈가 섬유성 CT(특히 인대)로 연결
+
+ex) 노뼈-자뼈 사이
+
+④ Gomphosis (설상결합, 못박이관절): 뼈와 다른 조직이 못처럼 결합
+
+ex) 치아-치조골 결합
+
+(2) Diarthrosis (가동관절) = 윤활관절
+
+2\) 윤활관절의 구조
+
+Articular cavity(관절강) + Articular cartilage(관절연골) + Joint capsule(관절주머니)
+
+(1) Articular cavity
+
+\- Synovial membrane과 Articular cartilage로 둘
+
+러싸인 공간
+
+(2) Articular cartilage
+
+\- 연골막 없는 유리연골로 구성 (대신 collagen
+
+type I이 머리카락처럼 들어와있음)
+
+\- Synovial fluid를 통해 영양 공급받음
+
+\- Elastic fiber 없지만 탄성 있음
+
+(3) Joint capsule
+
+① Synovial membrane(활액막)
+
+\- 활액(Synovial fluid) 생성
+
+\- MΦ 역할인 M-cell과 Fibroblast같은 F-cell
+
+② Synovial fluid
+
+\- 혈장성분과 비슷
+
+\- 관절이 눌리면(걷기 등) 스펀지 눌린것처럼
+
+액체가 빠져나와 연골로 들어감
+
+③ Fibrous layer
+
+\- F-cell이 만든 섬유층이 Capsule 형성
+
+8\. 연골의 조직생리학
+
+1\) Cartilage regeneration (연골재생)
+
+\- Chondrogenic cell, fibroblast들이 재생시킴
+
+2\) Cartilage degeneration (연골퇴행)
+
+\- 나이가 들면서 연골조직 재생이 잘 안됨
+
+\- 연골조직이 비정상적으로 비대되어 죽고 석회화됨 (뼈로 대체됨) → 통증, 퇴행성관절염
+
+III. BONE
+
+1\. 뼈의 특징
+
+0\) 기원
+
+\- Mesenchymal stem cell
+
+1\) 기능
+
+\- 강력한 지지, 보호작용
+
+\- 미네랄 저장 (체내 칼슘이온의 99%가 뼈에있다)
+
+\- 조혈 (PHSC와 MSC가 혈구와 mesenchymal cell 만듦)
+
+참고
+
+PHSC: Postnatal hematopoietic stem cell (5주차 혈액)
+
+MSC: Mesenchymal stem cell (2주차 결합조직)
+
+2\) 구성
+
+① 세포성분: Osteoprogenitor cell, Osteoblast(골모세포), Osteocyte(골세포), Osteoclast(파골세포), Bone
+
+lining cell(뼈덮개세포)
+
+cf) Osteoclast는 뼈와 연골을 둘다 녹일수 있어서 Chondroclast는 따로 없음
+
+② ECM: Inorganic + Organic
+
+\- Organic ECM: Collagen type I(80\~90%), ground substance (GAG 등 단백당+당단백 등)
+
+\- Inorganic ECM(dry weight 67%): 석회화된 무기질 결정(Hydroxyapatite)
+
+3\) 특징
+
+\- 칼슘이 수산화인회석(Hydroxyapatite) 결정 형태로 저장됨
+
+\- 혈관이 들어옴
+
+\- Perichondrium(뼈막, 골막)과 Endosteum(뼈속막, 골내막) 존재
+
+\- Bone marrow(Myelin, 골수): endosteum 안에서 조혈작용
+
+\* Red bone marrow에서 조혈작용이 있고 나이가 들며 지방으로 찬 Yellow bone marrow로 바뀜
+
+2\. 뼈의 분류
+
+1\) 모양에 따라
+
+① Long bones(긴뼈, 장골): 팔다리 등
+
+② Short bones(짧은뼈, 단골): 손목, 발목뼈 등
+
+③ Flat bones(납작뼈, 편평골): 두개골 등
+
+④ Irregular bones(불규칙골): 이소골(망치뼈, 모루뼈, 등자뼈) 등
+
+⑤ Sesamoid bones(종자골): 콩알뼈 등
+
+2\) 육안 관찰 형태에 따라
+
+① Compact bone(치밀뼈)
+
+\- 가장 바깥쪽를 둘러싸는 단단하고 두꺼운 뼈
+
+\- 빈틈없이 메워져있어서 하중을 견딤
+
+② Spongy bone(해면뼈, Cancellous bone)
+
+\- 골수강(Marrow cavity)와 잔기둥뼈(Trabecular bone)로 구성된 스펀지 같은 구조
+
+\- 골수강에는 골수(bone marrow)가 차있음
+
+3\) 현미경 관찰 형태에 따라 (뼈의 성숙도 구분)
+
+① Primary bone (Woven bone, 무층뼈)
+
+\- 미성숙한 뼈. 석회화 미완료, 불규칙한 섬유다발 존재
+
+\- 층판구조 X
+
+\- 태아 발생, 뼈 재생 과정에서 관찰됨
+
+② Secondary bone (Lamellar bone, 층판뼈)
+
+\- 성숙한 뼈. 석회화 잘됨, 규칙적인 섬유다발 관찰
+
+\- 동심원 모양의 층판구조 잘 발달

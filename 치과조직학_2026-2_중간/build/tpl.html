@@ -1,0 +1,484 @@
+<title>치과조직학 중간 대비</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* 배치: 상단 탭 + 좌측 OMR 사이드바 + 문항 카드 열. 시험지형은 흑백 세리프 단일 열. */
+:root{
+  --bg:#f4f6f6; --surface:#ffffff; --fg:#16201f; --muted:#566562; --line:#d7dedd; --soft:#e9eeed;
+  --accent:#0e6b66; --accent-fg:#ffffff; --accent-weak:#d8edeb;
+  --ok:#1b7a43; --bad:#b0352b; --ok-bg:#e0f1e6; --bad-bg:#f8e2df;
+  --s-conf:#1b7a43; --s-cross:#2b64a8; --s-est:#9a6200; --s-conflict:#b0352b; --s-undec:#69736f; --s-infer:#6a4ca0; --s-user:#1b7a43;
+  --font-body:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --font-serif:"Noto Serif KR","Batang","Nanum Myeongjo",serif;
+  --font-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e1514; --surface:#162120; --fg:#e3ebea; --muted:#9db0ad; --line:#2a3a38; --soft:#1e2c2b;
+  --accent:#5fcbc2; --accent-fg:#06211f; --accent-weak:#173c39;
+  --ok:#62c88a; --bad:#f0857b; --ok-bg:#163826; --bad-bg:#40201d;
+  --s-conf:#62c88a; --s-cross:#79aef0; --s-est:#e0aa4a; --s-conflict:#f0857b; --s-undec:#9aa6a3; --s-infer:#b79df0; --s-user:#62c88a;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e1514; --surface:#162120; --fg:#e3ebea; --muted:#9db0ad; --line:#2a3a38; --soft:#1e2c2b;
+  --accent:#5fcbc2; --accent-fg:#06211f; --accent-weak:#173c39;
+  --ok:#62c88a; --bad:#f0857b; --ok-bg:#163826; --bad-bg:#40201d;
+  --s-conf:#62c88a; --s-cross:#79aef0; --s-est:#e0aa4a; --s-conflict:#f0857b; --s-undec:#9aa6a3; --s-infer:#b79df0; --s-user:#62c88a;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:15px;line-height:1.6;padding-inline:16px;padding-block:0 48px;margin:0}
+button,select,input,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1180px;margin-inline:auto}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);padding-block:12px 0;border-bottom:1px solid var(--line)}
+.title-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
+h1{font-size:1.2rem;margin:0;font-weight:700;letter-spacing:-.01em;text-wrap:balance}
+.sub{color:var(--muted);font-size:.82rem}
+.ver{font-family:var(--font-mono);font-size:.74rem;border:1px solid var(--line);border-radius:4px;padding:1px 6px;color:var(--muted)}
+.tabs{display:flex;gap:2px;overflow-x:auto;margin-top:10px;scrollbar-width:thin}
+.tab{border:0;background:none;padding:9px 14px;color:var(--muted);border-bottom:3px solid transparent;white-space:nowrap;font-weight:500}
+.tab[aria-selected="true"]{color:var(--fg);border-bottom-color:var(--accent);font-weight:700}
+.tools{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin:14px 0}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:3px 12px;font-size:.84rem}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:6px;padding:5px 12px;font-size:.88rem}
+.btn.primary{background:var(--accent);color:var(--accent-fg);border-color:var(--accent);font-weight:700}
+.btn[aria-pressed="true"]{background:var(--accent-weak);border-color:var(--accent)}
+select,input[type=number],input[type=text]{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:4px 8px}
+.layout{display:grid;grid-template-columns:200px minmax(0,1fr);gap:20px;align-items:start}
+@media (max-width:820px){.layout{grid-template-columns:minmax(0,1fr)}}
+aside.omr{position:sticky;top:calc(env(safe-area-inset-top,0px) + 96px);max-height:calc(100vh - 120px);overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px}
+@media (max-width:820px){aside.omr{position:static;max-height:260px}}
+.omr h3{margin:0 0 6px;font-size:.8rem;color:var(--muted);font-weight:500}
+.omr-row{display:flex;align-items:center;gap:4px;padding:2px 0}
+.omr-row a{font-family:var(--font-mono);font-size:.68rem;color:var(--muted);width:34px;text-decoration:none;flex:none}
+.bub{width:22px;height:22px;border-radius:50%;border:1px solid var(--muted);background:none;font-size:.68rem;padding:0;line-height:20px;text-align:center;color:var(--muted)}
+.bub.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.cards{display:flex;flex-direction:column;gap:14px;min-width:0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px;min-width:0}
+.card.ok{border-color:var(--ok);box-shadow:inset 3px 0 0 var(--ok)}
+.card.bad{border-color:var(--bad);box-shadow:inset 3px 0 0 var(--bad)}
+.card-h{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;margin-bottom:8px}
+.cid{font-family:var(--font-mono);font-weight:500;font-size:.8rem}
+.tag{font-size:.74rem;border:1px solid var(--line);border-radius:4px;padding:0 6px;color:var(--muted);white-space:nowrap}
+.tag.mono{font-family:var(--font-mono)}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:.76rem;border:1px solid var(--line);border-radius:4px;padding:0 7px;white-space:nowrap}
+.badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--s-undec)}
+.badge[data-s="확정"]::before,.badge[data-s="사용자 확정"]::before{background:var(--s-conf)}
+.badge[data-s="교차확인"]::before{background:var(--s-cross)}
+.badge[data-s="추정"]::before{background:var(--s-est)}
+.badge[data-s="충돌"]::before{background:var(--s-conflict)}
+.badge[data-s="추론"]::before{background:var(--s-infer)}
+.badge.plain::before{display:none}
+.stem{font-family:var(--font-serif);font-size:1rem;margin:0 0 8px;white-space:pre-line;text-wrap:pretty}
+.opts{display:flex;flex-direction:column;gap:4px;margin:0 0 8px;padding:0;list-style:none}
+.opt{display:flex;gap:8px;text-align:left;width:100%;border:1px solid transparent;background:none;border-radius:6px;padding:4px 8px;font-family:var(--font-serif)}
+.opt:hover{background:var(--soft)}
+.opt .mk{flex:none;min-width:1.7em;color:var(--muted);font-family:var(--font-body)}
+.opt.on{background:var(--accent-weak);border-color:var(--accent)}
+.opt.key{background:var(--ok-bg);border-color:var(--ok)}
+.opt.wrong{background:var(--bad-bg);border-color:var(--bad)}
+figure{margin:0 0 10px}
+figure img{border:1px solid var(--line);border-radius:6px;max-width:100%;height:auto;display:block}
+figcaption{font-size:.76rem;color:var(--muted);margin-top:3px}
+.ans-box{border-top:1px dashed var(--line);margin-top:8px;padding-top:8px;font-size:.9rem;display:flex;flex-direction:column;gap:8px}
+.keyline{font-weight:700}
+.evs{display:flex;flex-direction:column;gap:6px;margin:0;padding:0;list-style:none}
+.evs li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px;align-items:start;font-size:.84rem}
+.tier{font-family:var(--font-mono);font-size:.72rem;border:1px solid var(--line);border-radius:4px;padding:0 5px;background:var(--soft);white-space:nowrap}
+.src{color:var(--muted)}
+blockquote{margin:2px 0 0;padding-left:10px;border-left:2px solid var(--line);color:var(--muted);font-size:.82rem;overflow-wrap:anywhere}
+.note{font-size:.84rem;color:var(--muted)}
+.warn{font-size:.84rem;border-left:3px solid var(--s-conflict);padding-left:8px}
+.row-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin-bottom:14px;min-width:0}
+.box h2{font-size:1rem;margin:0 0 8px}
+.box h3{font-size:.9rem;margin:12px 0 4px}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;font-size:.84rem;min-width:520px}
+th,td{border:1px solid var(--line);padding:4px 8px;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:500}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+pre.code{background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:10px;overflow-x:auto;font-family:var(--font-mono);font-size:.78rem;white-space:pre-wrap;margin:0}
+ul.plain{margin:4px 0;padding-left:20px}
+ul.plain li{margin:3px 0}
+.kv{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:4px 14px;font-size:.88rem}
+.kv dt{color:var(--muted)}
+.kv dd{margin:0}
+.res{font-size:1rem;padding:10px 14px;border:1px solid var(--accent);background:var(--accent-weak);border-radius:8px;margin-bottom:12px}
+.link{color:var(--accent);text-decoration:underline;cursor:pointer;background:none;border:0;padding:0;font-size:inherit}
+.foot{margin-top:24px;font-size:.76rem;color:var(--muted);border-top:1px solid var(--line);padding-top:10px}
+/* 시험지형 */
+body.exam{--bg:#ffffff;--surface:#ffffff;--fg:#000000;--muted:#000000;--line:#000000;--soft:#ffffff;--accent:#000000;--accent-weak:#ffffff;--accent-fg:#ffffff;color-scheme:light;font-family:var(--font-serif)}
+body.exam .meta,body.exam .ans-box,body.exam .card-h .badge,body.exam .card-h .tag:not(.keep),body.exam .row-actions,body.exam figcaption,body.exam .dupl{display:none!important}
+body.exam .card{border-radius:0;border-width:0 0 1px 0}
+body.exam .opt.on{background:#fff;border-color:#000;text-decoration:underline}
+body.exam aside.omr{border-radius:0}
+.timer{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:no-preference){.card{transition:border-color .15s}}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <div class="title-row">
+    <h1>치과조직학 중간 대비</h1>
+    <span class="sub">단국대 치과대학 치의예과 · 2026-2 · 중간고사 · 25학번</span>
+    <span class="ver" id="ver"></span>
+    <button class="btn" id="themeBtn" type="button" style="margin-left:auto">테마</button>
+  </div>
+  <nav class="tabs" id="tabs" role="tablist" aria-label="탭"></nav>
+</header>
+<main id="main" style="padding-top:6px"></main>
+<div class="foot" id="diag"></div>
+</div>
+
+<script>
+const DB = __DATA__;
+const IMG = __IMG__;
+const LS = {
+  get(k, d){ try{ const v = localStorage.getItem('hist26.' + k); return v ? JSON.parse(v) : d; }catch(e){ return d; } },
+  set(k, v){ try{ localStorage.setItem('hist26.' + k, JSON.stringify(v)); return true; }catch(e){ return false; } }
+};
+const TABS = [["status","현황·범위"],["mc","객관식"],["sum","내용 정리"],["new","예상 문제"],["mock","모의고사"]];
+const S = { tab: LS.get('tab','status'), ch: 0, hak: 'all', st: 'all', group: true, exam: false, showAll: false,
+  omr: LS.get('omr', {}), ua: LS.get('ua', {}), uaWhy: LS.get('uaWhy', {}), open: {}, graded: null, inclEst: false,
+  mock: null, newOpen: {}, newMarks: {} };
+const MKS = {c:'①②③④⑤⑥⑦⑧', ga:'가나다라마바', g:'ㄱㄴㄷㄹㅁㅂ'};
+const mark = (mk, i) => mk === 'n' ? (i+1)+'.' : mk === 'ga' ? MKS.ga[i]+')' : mk === 'g' ? MKS.g[i]+'.' : MKS.c[i];
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const TIER = {T1:'T1 정답지', T2:'T2 타 선배 원본 야마', T2p:'T2′ 선배 필기', T4:'T4 교안', T5:'T5 추론', T6:'T6 교재'};
+const Q = DB.Q, NEW = DB.NEW;
+const qById = Object.fromEntries(Q.map(q => [q.id, q]));
+const uaOf = id => S.ua[id];
+const statusOf = q => uaOf(q.id) ? '사용자 확정' : q.status;
+const ansOf = q => uaOf(q.id) || q.ans;
+const times = q => q.srcs.length;
+const haks = q => [...new Set(q.srcs.map(s => s.k))];
+const ansLabel = (q, a) => a && a.length ? a.map(i => mark(q.mk, i-1) + (q.opts[i-1] ? ' ' + q.opts[i-1] : '')).join(' / ') : '';
+
+function badge(q){
+  const s = statusOf(q);
+  return `<span class="badge" data-s="${esc(s)}">${esc(s)}${q.conf ? ' · 신뢰도 ' + esc(q.conf) : ''}</span>`;
+}
+function srcTags(q){
+  return q.srcs.map(s => `<span class="tag mono keep" title="${esc(s.n || '')}">${esc(s.k)}학번 ${esc(s.no)}</span>`).join('');
+}
+function evHtml(list){
+  return `<ul class="evs">` + list.map(e => `<li><span class="tier">${esc(TIER[e.t] || e.t)}</span><div><span class="src">${esc(e.s)}</span>${e.p ? ' <span class="tag">요약·개념 수준</span>' : ''}<blockquote>${esc(e.q)}</blockquote></div></li>`).join('') + `</ul>`;
+}
+function imgHtml(q){
+  if(!q.img) return '';
+  const cap = {plasma:'그림: 형질세포 전자현미경 사진(23학번 docx 이미지, 문항 번호 2-07)',
+    em:'그림: 골격근 세로 전자현미경 사진(23학번 docx). a~e 라벨은 원본에 없음, 손글씨 표시는 지웠으나 흔적이 일부 남아 있음',
+    cardiac:'그림: 근육 세로 단면(24학번 docx, 화살표 = 사이원반)'}[q.img];
+  return `<figure><img src="${IMG[q.img]}" alt="${esc(q.id + ' ' + cap)}"><figcaption>${esc(cap)}</figcaption></figure>`;
+}
+function cardHtml(q, ctx){
+  ctx = ctx || 'mc';
+  const marks = ctx === 'mc' ? (S.omr[q.id] || []) : [];
+  const opts = q.opts.length
+    ? `<div class="opts" role="group" aria-label="선지">` + q.opts.map((o, i) =>
+      `<button type="button" class="opt" data-act="opt" data-q="${q.id}" data-i="${i+1}"><span class="mk">${esc(mark(q.mk, i))}</span><span>${esc(o)}</span></button>`).join('') + `</div>`
+    : `<p class="note meta">선지가 복기되지 않은 문항입니다.</p>`;
+  const times_ = times(q);
+  const dup = times_ > 1 ? `<span class="badge plain dupl" title="학번 간 동일 문항 묶음 · 같은 시험 내 반복 포함">동일 문항 ${times_}회 출제</span>` : '';
+  const vars = q.var && q.var.length ? `<div class="note meta"><b>타 학번 표기</b><ul class="plain">${q.var.map(v => `<li>${esc(v.k)}학번: ${esc(v.stem)}${v.ans ? ' → ' + esc(v.ans) : ''}</li>`).join('')}</ul></div>` : '';
+  const ex = ctx === 'mc' ? `
+    <div class="row-actions meta">
+      <button class="btn" type="button" data-act="ans" data-q="${q.id}" aria-expanded="${!!(S.open[q.id] || S.showAll)}">정답·근거 ${S.open[q.id] || S.showAll ? '접기' : '보기'}</button>
+      <button class="btn" type="button" data-act="ua" data-q="${q.id}">정답 지정</button>
+    </div>
+    <div class="ans-box meta" ${S.open[q.id] || S.showAll ? '' : 'hidden'} id="ans-${q.id}">${ansBox(q)}</div>
+    <div class="ans-box meta" hidden id="ua-${q.id}">${uaBox(q)}</div>` : '';
+  return `<article class="card" id="c-${q.id}" data-card="${q.id}">
+    <div class="card-h"><span class="cid">${q.id}</span><span class="tag meta">Ch${q.ch} ${esc(DB.CH[q.ch])}</span>${badge(q)}${dup}${srcTags(q)}</div>
+    <p class="stem">${esc(q.stem)}</p>${imgHtml(q)}${opts}${vars}${ex}</article>`;
+}
+function ansBox(q){
+  const a = ansOf(q);
+  let h = '';
+  const line = a && a.length ? ansLabel(q, a) : (q.anstext || (q.proposed ? '정답 없음(판정 보류)' : '정답 없음'));
+  h += `<div class="keyline">${esc(statusOf(q))}: ${esc(line)}</div>`;
+  if(q.proposed) h += `<div class="note"><b>추론·잠정:</b> ${esc(q.proposed)} <span class="tag">채점 제외</span></div>`;
+  if(q.cand) h += `<div class="note"><b>후보:</b> ${esc(q.cand)}</div>`;
+  const ref = q.ev.filter(e => e.t !== 'T2p'), nb = q.ev.filter(e => e.t === 'T2p');
+  if(ref.length) h += `<div><b>근거</b>${evHtml(ref)}</div>`;
+  if(nb.length) h += `<div><b>선배 필기 대조</b> <span class="note">타 학번 기준이라 올해와 다를 수 있음 · 정답을 바꾸지 않음</span>${evHtml(nb)}</div>`;
+  if(q.cf.length) h += `<div class="warn"><b>충돌·불일치(보존)</b><ul class="plain">${q.cf.map(c => `<li>${esc(c.s)}: ${esc(c.a)} — ${esc(c.n)}</li>`).join('')}</ul></div>`;
+  if(q.note) h += `<div class="note">${esc(q.note)}</div>`;
+  const rel = DB.REL[q.id] || [];
+  if(rel.length) h += `<div class="note"><b>관련 단원 요약:</b> <button class="link" type="button" data-act="gosum" data-ch="${q.ch}">Ch${q.ch} ${esc(DB.CH[q.ch])}</button> · 예상 문제 ${rel.map(n => `<button class="link" type="button" data-act="gonew" data-id="${n}">${n}</button>`).join(' ')}</div>`;
+  return h;
+}
+function uaBox(q){
+  const cur = uaOf(q.id) || [];
+  return `<div class="note">사용자가 정답을 지정하면 어떤 상태든 '사용자 확정'이 되어 최우선 적용됩니다. 이 브라우저에만 저장됩니다.</div>
+  <div class="chips">${q.opts.map((o, i) => `<button type="button" class="chip" data-act="uapick" data-q="${q.id}" data-i="${i+1}" aria-pressed="${cur.includes(i+1)}">${esc(mark(q.mk, i))}</button>`).join('')}
+  <button type="button" class="chip" data-act="uaclear" data-q="${q.id}">해제</button></div>
+  <label>이유(선택) <input type="text" id="why-${q.id}" value="${esc(S.uaWhy[q.id] || '')}" data-act="uawhy" data-q="${q.id}" style="width:min(100%,360px)"></label>`;
+}
+
+/* ───────── 탭: 현황 ───────── */
+function statusTab(){
+  const st = DB.STATS;
+  const dist = Object.entries(st.dist).map(([k, v]) => `<tr><td>${esc(k)}</td><td class="n">${v}</td></tr>`).join('');
+  const conf = Object.entries(st.conf).map(([k, v]) => `<tr><td>${esc(k)}</td><td class="n">${v}</td></tr>`).join('');
+  const hak = DB.HAK.map(r => `<tr>${r.map((c, i) => `<td class="${i >= 3 && i <= 4 ? '' : ''}">${esc(c)}</td>`).join('')}</tr>`).join('');
+  const cross = DB.CROSS.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('');
+  const files = DB.FILES.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('');
+  const refs = DB.REFS.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('');
+  return `
+  <div class="box"><h2>이번 시험</h2><dl class="kv">
+    <dt>대상</dt><dd>단국대 치과대학 치의예과 · 2026-2(2026학년도 2학기) · 중간고사 · 치과조직학(이동준 교수)</dd>
+    <dt>내 학번</dt><dd>25학번(사용자 확정). 25학번 응시본은 아직 없어 '내 학번' 강조 대상 문항이 없습니다. 자료의 학번 구분은 그대로 둡니다.</dd>
+    <dt>일정</dt><dd>2026.10.23 10:00–12:00(사용자 지정). 강의계획서에는 10/24로 적혀 있고 2026-10-24는 토요일, 강의 요일은 금요일이라 불일치로 기록합니다.</dd>
+    <dt>형식</dt><dd>객관식(선택형) 위주(24학번 복기본 번호 최대 81, 2025 선배 정리본 표제 '선택형에 한하여'). 문항 수·시간·배점 공지는 확인하지 못했습니다. 성적 비중: 중간 30%, 기말 30%, 실습시험 20%, 실습과제 10%, 출석 10%.</dd>
+    <dt>프롬프트</dt><dd>v6.2 · 2026-10-10 (현행). 별도 개정안 블록이 없어 현행 유지로 진행했습니다. 제안 L-1~L-3은 승인 전이라 규칙을 바꾸지 않았습니다.</dd>
+  </dl></div>
+  <div class="box"><h2>문항 현황</h2>
+    <p>고유 <b>${st.uniq}</b>건(중복 <b>${st.dupBundles}</b>묶음 포함 총 <b>${st.total}</b>건). 예상 문제 <b>${NEW.length}</b>건. 정답이 확정·교차확인인 문항은 ${st.dist['확정'] || 0 + 0}건과 ${st.dist['교차확인'] || 0}건이며, 나머지는 추정·추론·미확정입니다.</p>
+    <div class="tw"><table><thead><tr><th>상태</th><th class="n">건수</th></tr></thead><tbody>${dist}</tbody></table></div>
+    <h3>신뢰도 분포(추정·추론 문항)</h3>
+    <div class="tw"><table><thead><tr><th>신뢰도</th><th class="n">건수</th></tr></thead><tbody>${conf}</tbody></table></div>
+    <p class="note">공식 정답지(T1)와 국가시험 키(T3)는 없습니다. 치과조직학은 국가시험 문항 매핑 자료가 없어 국시 탭과 T3 근거는 생략했습니다. 정답은 24·23·22학번 복기본에 남은 정답 표기(T2), 선배 필기(T2′), 2026 교안(T4)으로 판정했고, 필기는 정답을 바꾸지 않습니다.</p>
+  </div>
+  <div class="box"><h2>범위 기록(§12)</h2>
+    <pre class="code">${esc(JSON.stringify(DB.SCOPE, null, 1))}</pre>
+    <h3>교차 확인 표</h3>
+    <div class="tw"><table><thead><tr><th>단원</th><th>교안</th><th>공지</th><th>과목 일람</th><th>기출 범위(24학번)</th><th>가공본</th><th>판정</th></tr></thead><tbody>${cross}</tbody></table></div>
+  </div>
+  <div class="box"><h2>학번 × 자료원 반영 현황</h2>
+    <div class="tw"><table><thead><tr><th>학번</th><th>자료원</th><th>열람</th><th class="n">반영 문항</th><th>원문 대조</th><th>누락·비고</th></tr></thead><tbody>${hak}</tbody></table></div>
+    <h3>블라인드본·완전본 짝(§15)</h3>
+    <ul class="plain">${DB.BLIND.map(b => `<li>${esc(b)}</li>`).join('')}</ul>
+  </div>
+  <div class="box"><h2>자료 현황표(§3)</h2>
+    <div class="tw"><table><thead><tr><th>학년도</th><th>폴더</th><th>폴더 id</th><th>내용</th><th>최종 수정</th></tr></thead><tbody>${files}</tbody></table></div>
+  </div>
+  <div class="box"><h2>미해결 외부 참조(§19)</h2>
+    <div class="tw"><table><thead><tr><th>항목</th><th>가리키는 자료</th><th>상태</th></tr></thead><tbody>${refs}</tbody></table></div>
+  </div>
+  <div class="box"><h2>정답 지정 내보내기</h2>
+    <p class="note">객관식 탭에서 지정한 정답을 JSON으로 복사합니다. 파일 저장과 외부 전송은 하지 않습니다. OMR 마킹은 담기지 않습니다.</p>
+    <div class="row-actions"><button class="btn primary" type="button" data-act="export">정답 지정 JSON 복사</button></div>
+    <textarea id="expOut" rows="4" style="width:100%;margin-top:8px" hidden></textarea>
+  </div>
+  <div class="box"><h2>알려진 한계 목록</h2><pre class="code" id="limits">${esc(DB.LIMITS)}</pre>
+    <div class="row-actions"><button class="btn" type="button" data-act="copylim">복사</button></div></div>`;
+}
+
+/* ───────── 탭: 객관식 ───────── */
+function listFor(){
+  let L = Q.filter(q => (S.ch === 0 || q.ch === S.ch) && (S.st === 'all' || statusOf(q) === S.st));
+  if(S.hak !== 'all'){
+    const rows = [];
+    for(const q of L) for(const s of q.srcs) if(s.k === S.hak) rows.push({q, s});
+    rows.sort((a, b) => (parseInt(a.s.no) || 999) - (parseInt(b.s.no) || 999));
+    return rows.map(r => ({q: r.q, label: r.s.k + '학번 ' + r.s.no}));
+  }
+  if(!S.group){
+    const rows = [];
+    for(const q of L) for(const s of q.srcs) rows.push({q, label: s.k + '학번 ' + s.no});
+    return rows;
+  }
+  return L.map(q => ({q}));
+}
+function mcTab(){
+  const L = listFor();
+  const hakOpts = ['24', '23', '22'];
+  const chips = [0,1,2,3,4,5,6,7,8].map(c => `<button type="button" class="chip" data-act="ch" data-ch="${c}" aria-pressed="${S.ch === c}">${c ? 'Ch' + c + ' ' + esc(DB.CH[c]) : '전체'}</button>`).join('');
+  const sts = ['all','확정','교차확인','추정','추론','미확정','충돌'];
+  return `<div class="tools meta">
+    <div class="chips" role="group" aria-label="단원">${chips}</div></div>
+  <div class="tools">
+    <label>학번 <select id="hakSel"><option value="all">전체(묶음)</option>${hakOpts.map(h => `<option value="${h}" ${S.hak === h ? 'selected' : ''}>${h}학번 원본</option>`).join('')}</select></label>
+    <label class="meta">상태 <select id="stSel">${sts.map(s => `<option value="${s}" ${S.st === s ? 'selected' : ''}>${s === 'all' ? '전체' : s}</option>`).join('')}</select></label>
+    <button class="btn meta" type="button" data-act="group" aria-pressed="${S.group}">중복 묶기</button>
+    <button class="btn" type="button" data-act="exam" aria-pressed="${S.exam}">시험지형</button>
+    <button class="btn meta" type="button" data-act="showall" aria-pressed="${S.showAll}">전체 정답·근거</button>
+    <button class="btn primary" type="button" data-act="grade">채점하기</button>
+    <label class="meta"><input type="checkbox" id="estChk" ${S.inclEst ? 'checked' : ''}> 추정 포함 보조 점수</label>
+    <button class="btn" type="button" data-act="resetomr">OMR 지우기</button>
+    <span class="sub">${L.length}개 표시${S.hak !== 'all' ? ' · 학번 필터 중에는 묶지 않고 원본 번호순' : ''}</span>
+  </div>
+  <div id="gradeBox"></div>
+  <div class="layout"><aside class="omr" aria-label="OMR"><h3>OMR · 답안 ${Object.keys(S.omr).filter(k => (S.omr[k] || []).length).length}/${L.length}</h3>${
+    L.map(({q, label}, n) => `<div class="omr-row"><a href="#c-${q.id}" data-act="jump" data-q="${q.id}" title="${esc(q.id)}">${esc(label ? label.replace('학번 ', '-') : q.id)}</a>${
+      Array.from({length: Math.max(q.opts.length, 1)}, (_, i) => q.opts.length ? `<button type="button" class="bub" data-act="opt" data-q="${q.id}" data-i="${i+1}" aria-label="${q.id} ${i+1}번">${i+1}</button>` : `<span class="bub" aria-hidden="true">–</span>`).join('')}</div>`).join('')}</aside>
+  <div class="cards">${L.map(({q, label}) => label ? cardHtml(q).replace('<span class="cid">' + q.id + '</span>', `<span class="cid">${q.id}</span><span class="tag mono keep">${esc(label)}</span>`) : cardHtml(q)).join('')}</div></div>`;
+}
+
+/* ───────── 탭: 내용 정리 ───────── */
+function sumTab(){
+  const cf = Q.filter(q => q.cf.length);
+  const nb = Q.reduce((n, q) => n + q.ev.filter(e => e.t === 'T2p').length, 0);
+  const top = `<div class="box"><h2>선배 필기 대조 요약</h2>
+    <p class="note">필기·표시(T2′) 근거 ${nb}건이 ${Q.filter(q => q.ev.some(e => e.t === 'T2p')).length}개 문항에 붙어 있습니다. 모두 타 학번 기준이라 올해 출제와 다를 수 있고, 정답과 상태를 바꾸지 않습니다. 필기와 교안이 어긋난 문항 ${cf.length}건은 어느 쪽도 지우지 않고 보존했습니다.</p>
+    <ul class="plain">${cf.map(q => `<li><button class="link" type="button" data-act="gomc" data-q="${q.id}">${q.id}</button> ${esc(q.key)} — ${esc(q.cf[0].s)}: ${esc(q.cf[0].a)}</li>`).join('')}</ul></div>`;
+  const body = Object.keys(DB.CH).map(c => {
+    const u = DB.SUM[c];
+    return `<section class="box" id="sum-${c}"><h2>Ch${c} ${esc(DB.CH[c])}</h2><p class="note">근거: ${esc(DB.CH_SRC[c])}</p>
+    <ul class="plain">${u.pts.map(p => `<li>${esc(p[0])} <span class="note">[${esc(p[1])}]</span> ${p[2].map(id => `<button class="link" type="button" data-act="gomc" data-q="${id}">${id}</button>`).join(' ')}</li>`).join('')}</ul>
+    ${u.tbl ? `<div class="tw"><table><thead><tr>${u.tbl.h.map(h => `<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${u.tbl.r.map(r => `<tr>${r.map(c2 => `<td>${esc(c2)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>` : ''}
+    <p class="note meta">기출 연계: ${Q.filter(q => q.ch == c).map(q => `<button class="link" type="button" data-act="gomc" data-q="${q.id}">${q.id} ${esc(q.key.replace(/^\d\./, ''))}</button>`).join(' · ')}</p></section>`;
+  }).join('');
+  return top + body;
+}
+
+/* ───────── 탭: 예상 문제 ───────── */
+function newCard(n, mode){
+  const opened = S.newOpen[n.id];
+  const key = (S.newMarks[n.id] || []);
+  const ch = `<div class="opts">${n.opts.map((o, i) => `<button type="button" class="opt ${key.includes(i+1) ? 'on' : ''} ${opened && n.ans.includes(i+1) ? 'key' : ''}" data-act="nopt" data-id="${n.id}" data-i="${i+1}"><span class="mk">${esc(mark(n.mk, i))}</span><span>${esc(o)}</span></button>`).join('')}</div>`;
+  return `<article class="card" id="n-${n.id}"><div class="card-h"><span class="cid">${n.id}</span><span class="tag">Ch${n.ch} ${esc(DB.CH[n.ch])}</span><span class="badge plain">예상 문제</span><span class="tag">${n.multi ? '모두 고르시오' : '단일 선택'}</span></div>
+    <p class="stem">${esc(n.stem)}</p>${ch}
+    <div class="row-actions meta"><button class="btn" type="button" data-act="nans" data-id="${n.id}">정답·해설 ${opened ? '접기' : '보기'}</button></div>
+    <div class="ans-box meta" ${opened ? '' : 'hidden'}>
+      <div class="keyline">정답: ${n.ans.map(i => esc(mark(n.mk, i-1))).join(' ')}</div>
+      <div>${esc(n.expl)}</div>
+      <div><b>근거</b><ul class="evs"><li><span class="tier">T4 교안</span><div><span class="src">${esc(n.ev[0])}</span><blockquote>${esc(n.ev[1])}</blockquote></div></li></ul></div>
+      <div class="note">파생 기출: ${n.der.length ? n.der.map(id => `<button class="link" type="button" data-act="gomc" data-q="${id}">${id}</button>`).join(' ') : '해당 단원 교안 기반 신규(직접 파생 기출 없음)'}</div>
+    </div></article>`;
+}
+function newTab(){
+  const chips = [0,1,2,3,4,5,6,7,8].map(c => `<button type="button" class="chip" data-act="nch" data-ch="${c}" aria-pressed="${(S.nch||0) === c}">${c ? 'Ch' + c : '전체'}</button>`).join('');
+  const L = NEW.filter(n => !(S.nch) || n.ch === S.nch);
+  return `<div class="box"><p class="note">단원당 기출 수와 같은 수(${NEW.length}건)를 만들었습니다. 기출 문장을 베끼지 않았고 모든 문항에 교안 인용을 붙였습니다. Ch7·Ch8은 2025학년도판 04 교안 기준입니다. 이 문항은 정답 판정과 대장에 영향을 주지 않습니다.</p><div class="chips">${chips}</div></div>
+  <div class="cards">${L.map(n => newCard(n)).join('')}</div>`;
+}
+
+/* ───────── 탭: 모의고사 ───────── */
+function mockTab(){
+  const m = S.mock;
+  const head = `<div class="box"><h2>모의고사</h2>
+    <p class="note">24학번 복기본은 번호가 최대 81입니다. 시험 시간·문항 수가 확인되기 전이라 카운트다운 없이 경과 시간만 보입니다. 단원 비중은 기출 문항 수에 비례한다고 가정했고, 대표 1건 기준으로 뽑아 같은 문항이 두 번 나오지 않습니다. 추론·충돌·미확정은 제외합니다.</p>
+    <div class="tools"><label>문항 수 <input type="number" id="mockN" min="5" max="60" value="${m ? m.n : 20}" style="width:70px"></label>
+    <label><input type="checkbox" id="mockNew" ${m && m.useNew ? 'checked' : ''}> 예상 문제 포함</label>
+    <button class="btn primary" type="button" data-act="mockstart">새로 뽑기</button>
+    ${m ? `<span class="timer" id="timer">00:00</span><button class="btn" type="button" data-act="mockend">채점</button>` : ''}</div></div>`;
+  if(!m) return head;
+  const res = m.done ? `<div class="res">확정·교차확인 기준 ${m.s1}/${m.j1}점, 추정 포함 ${m.s2}/${m.j2}점 (추정 문항은 보조 점수입니다)</div>` : '';
+  return head + res + `<div class="cards">${m.items.map((q, n) => {
+    const ks = m.marks[q.id] || [];
+    const ok = m.done ? (JSON.stringify([...ansOfAny(q)].sort()) === JSON.stringify([...ks].sort())) : null;
+    return `<article class="card ${m.done ? (ok ? 'ok' : 'bad') : ''}"><div class="card-h"><span class="cid">${n+1}번</span><span class="tag mono">${esc(q.id)}</span>${m.done ? `<span class="badge" data-s="${esc(q.status || '예상')}">${esc(q.status || '예상 문제')}</span>` : ''}</div>
+      <p class="stem">${esc(q.stem)}</p>${q.img ? imgHtml(q) : ''}<div class="opts">${q.opts.map((o, i) => `<button type="button" class="opt ${ks.includes(i+1) ? 'on' : ''} ${m.done && ansOfAny(q).includes(i+1) ? 'key' : ''}" data-act="mopt" data-q="${q.id}" data-i="${i+1}"><span class="mk">${esc(mark(q.mk, i))}</span><span>${esc(o)}</span></button>`).join('')}</div></article>`;
+  }).join('')}</div>`;
+}
+const ansOfAny = q => (ansOf(q) || []);
+
+/* ───────── 렌더·이벤트 ───────── */
+const $ = s => document.querySelector(s);
+function refreshMarks(){
+  document.querySelectorAll('.bub[data-q], .card[data-card] .opt[data-q]').forEach(b => {
+    const q = b.dataset.q, i = +b.dataset.i, on = (S.omr[q] || []).includes(i);
+    b.classList.toggle('on', on); b.setAttribute('aria-pressed', on);
+  });
+  if(S.graded) document.querySelectorAll('.card[data-card]').forEach(c => {
+    const r = S.graded.rs[c.dataset.card];
+    c.classList.toggle('ok', !!(r && r.judged && r.ok)); c.classList.toggle('bad', !!(r && r.judged && !r.ok));
+  });
+}
+function render(){
+  document.body.classList.toggle('exam', S.exam);
+  $('#tabs').innerHTML = TABS.map(([k, n]) => `<button class="tab" role="tab" type="button" data-act="tab" data-k="${k}" aria-selected="${S.tab === k}">${n}</button>`).join('');
+  $('#main').innerHTML = ({status: statusTab, mc: mcTab, sum: sumTab, new: newTab, mock: mockTab}[S.tab] || statusTab)();
+  refreshMarks();
+  if(S.tab === 'mc' && S.graded) renderGrade();
+}
+function renderGrade(){
+  const g = S.graded, b = $('#gradeBox'); if(!b) return;
+  b.innerHTML = `<div class="res">확정·교차확인·사용자 확정 기준 <b>${g.s1}/${g.j1}</b>점${S.inclEst ? ` · 추정 포함 보조 <b>${g.s2}/${g.j2}</b>점` : ''} · 추론·충돌·미확정은 제외했습니다.</div>`;
+}
+function grade(){
+  const rs = {}; let s1 = 0, j1 = 0, s2 = 0, j2 = 0;
+  for(const q of Q){
+    const a = ansOf(q), m = S.omr[q.id] || [];
+    const st = statusOf(q);
+    const strong = ['확정', '교차확인', '사용자 확정'].includes(st), est = st === '추정';
+    if(!a || !a.length || !(strong || est)) continue;
+    const ok = JSON.stringify([...a].sort()) === JSON.stringify([...m].sort());
+    if(strong){ j1++; if(ok) s1++; rs[q.id] = {judged: true, ok}; }
+    if(strong || est){ j2++; if(ok) s2++; if(est) rs[q.id] = {judged: S.inclEst, ok}; }
+  }
+  S.graded = {rs, s1, j1, s2, j2};
+}
+function toggleMark(id, i){
+  const q = qById[id], cur = new Set(S.omr[id] || []);
+  if(cur.has(i)) cur.delete(i); else { if(!q.multi && !(q.opts.length && /모두/.test(q.stem))) cur.clear(); cur.add(i); }
+  S.omr[id] = [...cur].sort(); LS.set('omr', S.omr); refreshMarks();
+  const h = document.querySelector('.omr h3'); if(h) h.textContent = 'OMR · 답안 ' + Object.keys(S.omr).filter(k => (S.omr[k] || []).length).length + '/' + document.querySelectorAll('.omr-row').length;
+}
+function goto(tab, fn){ S.tab = tab; LS.set('tab', tab); render(); if(fn) fn(); window.scrollTo({top: 0}); }
+let timerH = null;
+function startTimer(){
+  clearInterval(timerH);
+  timerH = setInterval(() => { const t = $('#timer'); if(!t || !S.mock || S.mock.done) return; const s = Math.floor((Date.now() - S.mock.t0) / 1000); t.textContent = String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0'); }, 1000);
+}
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-act]'); if(!t) return;
+  const a = t.dataset.act, id = t.dataset.q || t.dataset.id;
+  if(a === 'tab'){ S.tab = t.dataset.k; LS.set('tab', S.tab); render(); window.scrollTo({top: 0}); }
+  else if(a === 'ch'){ S.ch = +t.dataset.ch; S.graded = null; render(); }
+  else if(a === 'nch'){ S.nch = +t.dataset.ch; render(); }
+  else if(a === 'group'){ S.group = !S.group; render(); }
+  else if(a === 'exam'){ S.exam = !S.exam; render(); }
+  else if(a === 'showall'){ S.showAll = !S.showAll; render(); }
+  else if(a === 'opt'){ toggleMark(id, +t.dataset.i); }
+  else if(a === 'ans'){ S.open[id] = !S.open[id]; const box = document.getElementById('ans-' + id); box.hidden = !S.open[id] && !S.showAll; t.textContent = '정답·근거 ' + (box.hidden ? '보기' : '접기'); t.setAttribute('aria-expanded', !box.hidden); }
+  else if(a === 'ua'){ const b = document.getElementById('ua-' + id); b.hidden = !b.hidden; }
+  else if(a === 'uapick'){ const cur = new Set(S.ua[id] || []); const i = +t.dataset.i; cur.has(i) ? cur.delete(i) : cur.add(i); if(cur.size) S.ua[id] = [...cur].sort(); else delete S.ua[id]; LS.set('ua', S.ua); render(); document.getElementById('c-' + id)?.scrollIntoView({block: 'center'}); }
+  else if(a === 'uaclear'){ delete S.ua[id]; delete S.uaWhy[id]; LS.set('ua', S.ua); LS.set('uaWhy', S.uaWhy); render(); }
+  else if(a === 'grade'){ S.inclEst = !!($('#estChk') && $('#estChk').checked); grade(); refreshMarks(); renderGrade(); }
+  else if(a === 'resetomr'){ S.omr = {}; LS.set('omr', S.omr); S.graded = null; render(); }
+  else if(a === 'jump'){ e.preventDefault(); document.getElementById('c-' + id)?.scrollIntoView({block: 'start', behavior: 'smooth'}); }
+  else if(a === 'gosum'){ goto('sum', () => document.getElementById('sum-' + t.dataset.ch)?.scrollIntoView()); }
+  else if(a === 'gomc'){ S.ch = 0; S.hak = 'all'; S.st = 'all'; S.group = true; goto('mc', () => { const c = document.getElementById('c-' + id); if(c){ c.scrollIntoView({block: 'center'}); S.open[id] = true; const b = document.getElementById('ans-' + id); if(b) b.hidden = false; } }); }
+  else if(a === 'gonew'){ S.nch = 0; goto('new', () => document.getElementById('n-' + id)?.scrollIntoView({block: 'center'})); }
+  else if(a === 'nopt'){ const cur = new Set(S.newMarks[id] || []); const n = NEW.find(x => x.id === id); const i = +t.dataset.i; if(cur.has(i)) cur.delete(i); else { if(!n.multi) cur.clear(); cur.add(i); } S.newMarks[id] = [...cur]; render(); document.getElementById('n-' + id)?.scrollIntoView({block: 'center'}); }
+  else if(a === 'nans'){ S.newOpen[id] = !S.newOpen[id]; render(); document.getElementById('n-' + id)?.scrollIntoView({block: 'center'}); }
+  else if(a === 'mockstart'){
+    const n = Math.max(5, Math.min(60, +($('#mockN').value) || 20)), useNew = $('#mockNew').checked;
+    let pool = Q.filter(q => q.opts.length && ansOf(q) && ansOf(q).length && ['확정', '교차확인', '추정', '사용자 확정'].includes(statusOf(q)));
+    if(useNew) pool = pool.concat(NEW.map(x => ({...x, key: x.id, status: '예상 문제', conf: '', srcs: []})));
+    const byCh = {}; pool.forEach(q => (byCh[q.ch] = byCh[q.ch] || []).push(q));
+    const tot = pool.length, items = [];
+    Object.values(byCh).forEach(g => g.sort(() => Math.random() - .5));
+    const chs = Object.keys(byCh);
+    chs.forEach(c => { const k = Math.max(1, Math.round(n * byCh[c].length / tot)); items.push(...byCh[c].slice(0, k)); });
+    items.sort(() => Math.random() - .5);
+    S.mock = {n, useNew, items: items.slice(0, n), marks: {}, t0: Date.now(), done: false}; startTimer(); render();
+  }
+  else if(a === 'mopt'){ const m = S.mock; if(m.done) return; const q = m.items.find(x => x.id === id), cur = new Set(m.marks[id] || []), i = +t.dataset.i; if(cur.has(i)) cur.delete(i); else { if(!(q.multi || /모두/.test(q.stem))) cur.clear(); cur.add(i); } m.marks[id] = [...cur]; const y = window.scrollY; render(); window.scrollTo({top: y}); }
+  else if(a === 'mockend'){
+    const m = S.mock; m.done = true; let s1 = 0, j1 = 0, s2 = 0, j2 = 0;
+    m.items.forEach(q => { const a2 = ansOfAny(q), k = m.marks[q.id] || [], ok = JSON.stringify([...a2].sort()) === JSON.stringify([...k].sort()); const strong = ['확정', '교차확인', '사용자 확정'].includes(statusOf(q)); if(strong){ j1++; if(ok) s1++; } j2++; if(ok) s2++; });
+    Object.assign(m, {s1, j1, s2, j2}); render();
+  }
+  else if(a === 'export'){
+    const arr = Object.keys(S.ua).map(id => ({id, alias: qById[id].srcs.map(s => s.k + '-' + s.no).join(','), answer: S.ua[id], reason: S.uaWhy[id] || ''}));
+    const txt = JSON.stringify({exported_at: new Date().toISOString().slice(0, 10), user_answers: arr});
+    const ta = $('#expOut'); ta.value = txt; ta.hidden = false;
+    (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject()).catch(() => { ta.select(); });
+  }
+  else if(a === 'copylim'){ const txt = $('#limits').textContent; (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject()).catch(() => {}); }
+});
+document.addEventListener('change', e => {
+  if(e.target.id === 'hakSel'){ S.hak = e.target.value; render(); }
+  else if(e.target.id === 'stSel'){ S.st = e.target.value; render(); }
+  else if(e.target.id === 'estChk'){ S.inclEst = e.target.checked; if(S.graded){ grade(); refreshMarks(); renderGrade(); } }
+});
+document.addEventListener('input', e => { const t = e.target; if(t.dataset && t.dataset.act === 'uawhy'){ S.uaWhy[t.dataset.q] = t.value; LS.set('uaWhy', S.uaWhy); } });
+$('#themeBtn').addEventListener('click', () => {
+  const r = document.documentElement, cur = r.getAttribute('data-theme');
+  const next = cur === 'dark' ? 'light' : cur === 'light' ? null : 'dark';
+  next ? r.setAttribute('data-theme', next) : r.removeAttribute('data-theme');
+  $('#themeBtn').textContent = '테마: ' + (next === 'dark' ? '어둡게' : next === 'light' ? '밝게' : '시스템');
+});
+$('#themeBtn').textContent = '테마: 시스템';
+$('#ver').textContent = DB.VER;
+const lsOk = LS.set('probe', 1);
+$('#diag').textContent = '화면 진단 · 프롬프트 ' + DB.VER + ' · 문항 ' + DB.STATS.uniq + '건 · AI: 미구현(요청 없음) · 브라우저 저장: ' + (lsOk ? '사용 가능' : '사용 불가(OMR 새로고침 시 초기화)') + ' · 생성 ' + DB.BUILT;
+render();
+</script>

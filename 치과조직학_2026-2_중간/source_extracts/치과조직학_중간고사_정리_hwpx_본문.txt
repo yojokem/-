@@ -1,0 +1,202 @@
+2025학년도 예2-2 〈치과조직학〉 중간고사 대비 정리
+2025.10.23.
+선택형에 한하여
+Cytology·Epithelial Tissue
+Endoplasmic Reticulum(세포질 세망 = 소포체)의 발달
+rough ER (조면)
+smooth ER (활면)
+protein synthesizing cells
+-roughness: 
+ribosome을 부착
+하여 핵막과 연결-
+adrenal cortex(부신 피질), liver, muscle
+Golgi apparatus(=complex)의 기능:Post-translational modification(PTM; 번역 후 수정)&amp;포장
+glycosylation(당화)
+phosphorylation(인산화)
+sulfation(황화)
+proteolysis(절단→활성화)
+lipid synthesis
+exocytosis 개시
+Cytoskeleton and Filaments(세포 골격과 섬유)
+-Microtubule 미세 소관-
+Tubulin 단백질 단량체 α, β의 heterodimer 구성에 의하여 α+ end(연장·소실부), β- end(고정부)
+- α+ end GTP 접합 시 연장
+- GTP/GDP&lt;1 → GTP cap diminishes; 해체
+요약
+명칭
+조성
+폭
+유의점
+microtubule
+tubulin heterodimer …
+circle ×13 + 10(n-1)
+*cilia, flagella, centriole, mitotic spindle, basal body
+cilium
+｢Axoneme(축사)｣
+A-B doublets × 9
+two microtubule in the central sheath
+=====
+transitional zone beginning downward at alar sheet, triplet; 
+C after B
+A-B doublets
+1, 2, 3 doublet
+1B-2A = dynein + medial nexin
+central sheath – each A = radial spoke
+A(13) + B(10)
+centriole
+A-C triplet × 9
+len0.5
+㎛
+세포 분열 중 관찰.
+centrosome
+mictotic spindle
+basal body
+Two centriole
+(mother and daughter)
+centrosome 간기
+daughter &amp; basal body이 cilium 하부.
+centrosome &amp; mitotic spindle-
+세포분열기관찰
+actin
+6
+㎚
+*microvilli, stereocilia
+intermediate filaments
+8-10
+㎚
+*cytokeratin(tonofilament; 상피), vimentin(chymal CT cell), desmin(muscle 기원 CT),glial filaments, neurofilaments
+monomer-coiled dimer-tetramer-(staggered)-eight tetramers 
+thick filaments
+Myosin Ⅱ×200
+Cell cycle
+Tissue Preparation
+Fixation – Dehydration and Clearing – Embedding – Sectioning – Mounting – Staining
+Microscopes
+명칭
+분해능
+원리
+염색 대상
+특징
+Light
+0.2 ㎛
+염색됨
+Virtual
+음... 때마다 다름
+아마 염색됨?
+편하다..
+Phase Contrast
+0.2 ㎛
+밀도 차의 위상차를 위상판으로 명암차로
+unstained 시료
+염색X, 세포 윤곽 및 내부 구조 관찰.
+구조물 주변 halo.
+Polarized Light
+0.2 ㎛
+polarizer, analyzer 씀
+복굴절성 유발 편광 포착
+콜라겐 섬유
+아밀로이드
+근육 섬유
+요산 결정
+편광판 직교 조건, 검은 배경에 복굴절성 물질만 밝음
+Differential Interference
+0.2 ㎛
+Nomarski prism으로 광분해 후 미세한 굴절률(미도) 차에 따른 간섭 현상
+unstained 시료
+위상차 현미경의 halo 발생하지 않음
+pseudo-3D
+Confocal
+≤ 0.2 ㎛
+초점 집중 핀홀 통과
+fluorescence 물질
+immunofluoro-
+optical section and 3D image recover.
+SEM
+0.5-2㎚
+주사
+약간 금속 코팅?
+샘플 현미경 중간
+TEM
+0.05-0.2 ㎚
+투과. 시료 ultrathin
+Os, U 중금속 염색
+샘플 현미경 끝
+histochemistry
+일반적 화학 요법을 통한 염색 [일반 시약]
+immunohistochemistry
+immunohistochemistry의 직접법과 간접법
+항원-항체 반응에 기초한 화학 요법 염색법 [항체]
+in situ
+ hybridization – DNA/RNA 확인. 
+DNA/RNA의 탐침 확인 [탐침
+probe
+]
+Epithelium [Introduction]
+Epithelium [Morphology]: Classification
+Epithelium [Structure]: Extracellular Contact
+― 〔Cytoskeleton and Filaments〕 참고―
+Epithelium [Function]: Gland
+Epithelium [Function]: Secreting cells
+Epithelium [Function]: Transporting cells
+Basal lamina
+-
+-
+Connective Tissue
+Introduction
+Connective Tissue Proper
+Muscle Tissue·Cartilage&amp;Bone
+myofilament
+근육 필라멘트
+myofibril
+근육 원섬유
+muscle fiber
+근육 섬유
+muscle fascicle
+근육 섬유 다발
+biceps brachii
+위팔두갈래근
+endomysium
+reticular f. &amp; basal lamina
+perimysium
+less 
+D.irr. CT col.
+epimysium
+D. irr CT col.
+Types of Muscles
+Skeletal 골격근
+Cardiac 심근
+Smooth 평활근
+striation
+multi N
+voluntary
+striation
+one-two N
+involuntary
+no striation
+one N
+involuntary
+특성
+Red fiber
+White fiber
+수축
+느리고 약함. 반복적. 지치지 않음.
+빠르고 강함. 일회성. 쉽게 지침
+직경
+thin
+혈관화
+rich
+poorer
+mt.
+numerous
+few
+myoglobin
+rich
+poor
+SR
+not extensive
+extensive
+신경 지배
+smaller ones
+larger ones
+Nervous Tissue·Blood Cells
+Lymph·The Circulatory System
