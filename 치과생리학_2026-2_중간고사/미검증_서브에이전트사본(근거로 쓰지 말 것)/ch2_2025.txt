@@ -1,0 +1,511 @@
+슬라이드 1
+
+치과생리학
+
+담당교수 : 오충훈
+
+분자생물학과 세포 내 신호전달
+
+유전자로부터 단백질합성
+
+DNA의 한쪽 가닥에 상보적인 RNA
+
+세포들에서 만들어지는 RNA
+
+RNA중합효소의 전사개시 및 종결 부위를 알려주는 DNA 배열
+
+RNA중합효소의 전사개시 및 종결 부위를 알려주는 DNA 배열
+
+전사와 동시에 가공되는 진핵세포의 RNA
+
+전사와 동시에 가공되는 진핵세포의 RNA
+
+비암호화 서열에 의한 진핵세포 유전자의 중절(interruption)
+
+RNA 짜깁기 과정에 의해 제거되는 인트론
+
+5' 짜집기 부위
+
+3' 짜집기 부위
+
+BBP U2AF
+
+엑손 1
+
+인트론
+
+엑손 2
+
+51
+
+3'
+
+pre-mRNA 전사체 부분
+
+3 OH
+
+50
+
+13
+
+51
+
+U1 snRNP
+
+BBP
+
+U2 snRNP
+
+U2AF
+
+U1 snRNP
+
+U2 snRNP
+
+인트론
+
+3'
+
+U4/U6⚫ U5
+
+삼중 snRNP
+
+3 짜집기 부위
+
+절단 및 두 엑손
+
+서열 연결
+
+올가미 형태로 제거된
+
+인트론 서열
+
+3
+
+OH
+
+엑손1 엑손2
+
+5
+
+3' mRNA 부분
+
+U4/U6
+
+snRNP
+
+5'1
+
+13'
+
+올가미 형성 및
+
+5' 짜집기 부위
+
+U5 snRNP
+
+U1, U4
+
+절단
+
+올가미
+
+그림 2-8. snRNP (채색된 원)와 여러 단백질이 조합되어 형성된 스플라이 소좀에 의해 촉매되는 RNA 짜집기. 스플라이소좀은 mRNA 전구체에 있 는 짜집기 신호를 인식하고 인트론의 양 끝을 당겨서 다음의 2개 반응에 대 한효소적 활성을 제공한다. 가지점 부위는 BBP(branch-point-binding protein, 가지점 결합단백질)와 보조단백질 U2AF에 의해 처음 인식된다. 다음 단계에서 U2 snRNP BBP U2AF를 대치하고 가지점 부위의 공 통서열과 염기쌍을 형성하며, U1 snRNP는 5' 짜집기 경계면과 염기쌍을 형성한다. 바로 여기에서 U4/U6 및 U5의 삼중 snRNP가 스플라이소좀에 들어간다. 이 삼중의 snRNP에서 U4와 U6 snRNP는 염기쌍 상호작용에 의해 단단히 함께 연결되어 있으며 U5 snRNP는 다소 느슨하게 붙어 있다. 다음으로, 여러 RNA-RNA 재배열이 일어나 U4/U6 염기쌍을 깨고 U6 snRNP가 5' 짜집기 경계면에서 U1을 대치한다. 이후에 또 다른 재배열이 일어나 스플라이소좀의 활성부위가 만들어지며 짜집기 반응이 또다시 일어 나도록 mRNA 전구체 기질의 적당한 부위가 여기에 자리를 잡게 된다.
+
+세포질로 수송되는 성숙한 mRNA
+
+세포에 의해 결국 분해되는 mRNA
+
+• 세균(약 3분 정도)보다 진핵 세포에서 만들어지는 mRNA의 수명은 보통 더 길다.
+
+• mRNA의 수명이 각기 다르기 때문에 세포는 자기가 합성하는 각 단백질 의 양을 결정할 수 있다.
+
+• β-globin처럼 많이 만들어지는 단백질들은 일반적으로 수명이 긴 mRNA로부터 유전암호해독
+
+3개의 뉴클레오티드가 한 세트로 해독되는 mRNA 서열
+
+3개의 뉴클레오티드가 한 세트로 해독되는 mRNA 서열
+
+mRNA 내 유전자부호와 아미노산을 맺어 주는 tRNA 분자
+
+tRNA를 정확하게 아미노산과 연결시키는 특정 효소
+
+리보솜에서 해독되는 RNA 정보
+
+리보솜에서 해독되는 RNA 정보
+
+리보솜에서 해독되는 RNA 정보
+
+단백질 합성의 시작과 종결을 알려 주는 mRNA의 유전자부호
+
+단백질 합성의 시작과 종결을 알려 주는 mRNA의 유전자부호
+
+무리리보솜(polyribosome)에서 만들어지는 단백질
+
+단백질 분해조절에 의한 세포 내 단백질량 조절
+
+• 단백질은 종류에 따라 수명 이 다양
+
+• 뼈, 근육 등 구조단백질 : 수개월 혹은 수년 생존
+
+• 대사에 관여하는 효소 : 수일 혹은 수초
+
+유전자발현의 조절
+
+• 어느 유전자를 발현시킬까?
+
+• 세포는 어떻게 수많은 유전자 중에서 특정 유전자만을 지정하여 단백질로 발생시킬까? 1. 언제 얼마나 자주 특정 유전자를 전사시킬 것인가? 2. RNA 전사체를 어떤 방식으로 짜깁기할것이며, 그 밖의 어떤 다른 가공 과정을 거칠 것인가? 3. 리보솜에서 어떤 mRNA를 유전암호 해독(translation)할 것인가? 4. 합성된 단백질을 활성화시킬 것인가?
+
+조절성 DNA 염기서열에 결합하는 단백질에 의해 조절되는 전사
+
+• 개시부위(initiation site)와 개시부위 상단 약 50 뉴클레오티드
+
+• 조절성 DNA 염기서열 : DNA 결합성 유전자조절단백질
+
+복잡한 과정을 통한 진핵생물의 유전자 전사
+
+1\. 다양한 RNA 중합효소가 존재 2. 여러 보조 단백질이 필요 3. 조절을 위해 다양한 촉진자와 억제자가 존재 4. DNA 응축 혹은 뉴클레오좀 상태
+
+보편전사인자를 필요로 하는 진핵생물의 RNA중합효소
+
+RNA중합효소 Ⅱ가 촉진자를 인지하고 결합 하려면 이러한 전사인자 단백질이 공통적으 로 필요하다는 사실로부터 유래된 것
+
+원거리에서도 조절되는 유전자발현
+
+전사개시에 영향을 미치는 촉진자 DNA
+
+• 진핵세포 DNA는 염색질 구조로 응축
+
+• 히스톤아세틸전이효소
+
+• 염색질 구조조정복합체
+
+단백질의 여러 조합에 의해 조절되는 진핵생물 유전자
+
+억제인자 / 활성인자
+
+서로 다른 여러 유전자의 발현을 통합적으로 조절할 수 있는 단백질
+
+조합조절에 의한 서로 다른 세포 유형의 형성
+
+세포분화
+
+세포막 수용체와 세포내 수용체
+
+세포표면 수용체 :
+
+\- 막단백질 (세포막을 걸쳐 있음)
+
+\- 신호분자 결합시 활성화
+
+\- 세포내 신호 흐름 변화 세포내수용체
+
+Ligand : Steroid hormone(부신피질 호르몬, 성호르몬), 갑상선호르몬,
+
+Retinoid, Vitamin D
+
+Steroid hormone, Steroid sex hormone, Vitamin D : Cholesterol Thyroid hormone : Tyrosine Retinoid : Retinoic acid (Vitamin A)
+
+Action mode : 세포내 수용체에 결합 → 수용체단백질 활성화 →
+
+특정유전자 전사 조절
+
+ligand 의 작용지속기간이 길다 – 수 시간 \~ 수 일
+
+Primary response – 30분 내에 특정유전자 전사 유도 Secondary response – 1차 반응 산물이 차례로 다른 유전자 활성화 → 지속적인 반응 유발
+
+세포신호전달 (Intercellular Communication)
+
+2\. 신호전달물질
+
+1\. Gap Junction
+
+분비신호전달물질에 의한 신호전달체계
+
+Paracrine Secretion Neurtransmitter Secretion Endocrine Secretion
+
+Autocrine regulation : 인접한 동일 type의 세포에 작용
+
+바로 인접한 세포에서 분비되어 작용
+
+약간 떨어진 세포에서 분비되어 인접 세포에 작용
+
+신경세포 : 신경호르몬의 분비
+
+시상하부의 뇌하수체분비촉진 호르몬, 항이뇨호르몬
+
+세포막 수용체의 종류
+
+Rapid Synaptic Signal
+
+\- 7 pass protein
+
+효소 혹은 이온통로 활 성화
+
+\- 3개의 단백질로 구성
+
+Single-pass transmembrane protein
+
+Protein kinase
+
+신호전달의 기본적인 기전
+
+Dephosphorylation : Phosphatase Phosphorylation : Protein kinase
+
+Protein Kinase(단백질 인산화효소) :
+
+\- 100 여 종 존재(유전자중 1%) - Serine/threonine Kinase - Tyrosine Kinase – 0.1%
+
+guanosine G-단백 연계 수용체(GPCR)의 모식도
+
+nucleotide binding protein,G-protein
+
+G-protein coupled receptor
+
+Adrenergic receptor(α, β), Muscarinic acetylcholine receptor, Serotonin receptor, Adenosine receptor, Olfactory receptor, Rhodopsin Peptide hormone
+
+G 단백 연계 수용체를 통한 신호전달 경로
+
+Adenylyl cyclase Phospholipase C
+
+IP3
+
+trimeric G-단백질
+
+GPCR로부터 세포 내부 신호를 전달하는 trimeric G-단백질
+
+Activity cycle of G-protein
+
+α sununit : High affinity for GTP
+
+β, γ subunit : lower affinity
+
+Dissociated α subunit interacts
+
+with the next protein in signal-transduction
+
+G-단백연계 수용체를 통한 신호전달
+
+G 단백에 의한 Adenylyl Cyclase의 활성화와 억제
+
+Direct Modulation of Ion Channel by G-protein
+
+Cyclic AMP-dependent Protein Kinase A
+
+cAMP : 근육 글리코겐 분해 촉진
+
+흥분 스트레스 → 아데르날린 → β-아드레날린성 수용체 → cAMP → A-kinase
+
+cAMP : 특정 유전자 전사 활성화
+
+• 성장억제호르몬 유전자의 조절부위 : cAMP 반응 요소(cAMP response element; CRE)
+
+CRE 결합단백질(CRE-binding protein; CREB)
+
+세린/트레오닌 단백질 인산분해효소 serine/threonine protein phosphatases
+
+세포 내 이차전령물질인 유리상태의 칼슘이온
+
+Phospholipase C
+
+IP3 Protein Kinase C
+
+IP3
+
+IP3
+
+PIP2가 분해되어 생성되는 이차 전령과 그 작용
+
+DAG와 C-kinase(PKC)의 작용
+
+세포내 칼슘농도의 조절
+
+Calmodulin-dependent protein kinases phosphorylate specific effector protein
+
+calmodulin-의존성 인산화효소
+
+CaM-kinase
+
+CaM-kinase Ⅱ의 활성화
+
+서로 상호작용하는 cAMP와 Ca2+의 신호전달경로
+
+PKA
+
+효소 연계 수용체를 통한 신호전달
+
+• guanylyl cyclase 수용체
+
+• 티로신 키나아제 수용체
+
+• 티로신 인산분해효소 수용체
+
+• 세린/트레오닌 키나아제 수용체
+
+Protein Kinase G
+
+티로신 키나아제 수용체
+
+• 표피성장인자 (epidermal growth factor) 수용체
+
+• 혈소판유래성장인자(platelet-derived growth factor) 수용체
+
+• 섬유모세포성장인자(fibroblast growth factor) 수용체
+
+• 간세포 성장인자(hepatocyte growth factor) 수용체
+
+• 인슐린(insulin) 수용체
+
+• 인슐린유사성장인자(insulin-like growth factor-1) 수용체
+
+• 신경성장인자(nerve growth factor) 수용체
+
+• 대식세포집락자극인자(macrophage colony stimulating factor) 수용체
+
+티로신 키나아제 수용체
+
+혈소판유래성장인자(platelet-derived growth factor)
+
+자가인산화(autophosphorylation)
+
+교차인산화(cross-phosphorylation)
+
+티로신 키나아제 수용체에 의해 활성화되는 Ras 단백질과 MAP-kinase의 활성화
+
+Inactivation
+
+Activation
+
+GTPase-activating protein(GAPS)
+
+Guanine nucleotide-
+
+releasing proteins(GNRPs)
+
+세포막
+
+비활성 상태의 C-Kinase
+
+세포질
+
+C-Kinase
+
+Ras
+
+GTP
+
+C-Kinase
+
+K-B
+
+ATP
+
+ADP
+
+MAP
+
+Kinase
+
+NF-KB
+
+세포질
+
+세포막
+
+ATP
+
+ADP
+
+활성화 상태의 C-Kinase
+
+ATP
+
+ADP
+
+(P)
+
+MAP
+
+Kinase
+
+\+
+
+INF-kB
+
+SRF
+
+MAP-kinase-kinase-kinase
+
+Ek-1
+
+ATP
+
+ADP
+
+유전자
+
+유전자1
+
+SRE
+
+ATP
+
+암호화된 부위
+
+mRNA
+
+ADP
+
+NF-KB
+
+유전자2
+
+유전자2
+
+NF-KB
+
+MAP-kinase-kinase
+
+결합부위
+
+암호화된 부위
+
+mRNA
+
+ATP
+
+ADP
+
+MAP-kinase
+
+ATP
+
+ADP
+
+Jun
+
+(P) Elk-1 SAF P
+
+단백질 인산화효소
+
+다른
+
+단백질들
+
+유전자 1과 2는 전사되지 않는다.
+
+유전자 1과 2는 전시된다.
+
+그림 2-43. 활성화된 C-kinase가 특정 유전자진사를 유도하는 세포내부 경로 2가지. (빨간 화살표) C-kinase는 인산화 연쇄반응 (phosphorylation cascade)을 활성화시킨다. 이러한 인산화 연쇄반응은 MAP-kinase의 인산화를 유도하고 이어서 Elk-1이라는 유전자 조절단백질(gene regulatory proteins)의 인산화와 활성화를 야기한다. EK-1은 혈청반응인자(serum response factor. SRF)라는 DNA 결합단백질(DNA-binding protein)과 먼저 결합한 후 혈청반응요소(serum response element, SRE)라는 짧은 DNA서열에 결합한다. (초록색 화살표) 다른 하나의 경로는 C-kinase의 활성이 1-B의 인산화를 유도하여 유전자 조절단백질 중 하나인 NFB의 방출을 유도한다. 방출된 NF-kB는 핵 내로 이동해서 특정 유전자를 활성화시킨다.
+
+효소 연계 수용체를 통한 신호전달
+
+• guanylyl cyclase 수용체
+
+• 티로신 키나아제 수용체
+
+• 티로신 인산분해효소 수용체 - 티로신키나아제 길항작용
+
+• 세린/트레오닌 키나아제 수용체 - Transforming growth factor-β (TGF-β) - activin → BMP
+
+분자생물학과 세포 내 신호전달

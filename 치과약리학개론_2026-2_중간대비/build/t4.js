@@ -1,0 +1,10 @@
+const {chromium}=require('playwright');
+(async()=>{const b=await chromium.launch({executablePath:'/opt/pw-browsers/chromium'}).catch(()=>chromium.launch());
+const p=await b.newPage();const errs=[];p.on('pageerror',e=>errs.push(e.message));p.on('console',m=>m.type()==='error'&&errs.push(m.text()));
+await p.goto('file://'+process.cwd()+'/page.html');await p.waitForTimeout(800);
+const n1=await p.$$eval('article.card',a=>a.length);
+await p.click('[data-act=dedup]');const n2=await p.$$eval('article.card',a=>a.length);
+await p.click('[data-act=dedup]');
+await p.click('[data-act=cls][data-v="19"]');const n3=await p.$$eval('article.card',a=>a.length);
+const bd=await p.$$eval('.badge',a=>a.map(x=>x.textContent).filter(t=>t.includes('동일')).length);
+console.log({dedupOn:n1,dedupOff:n2,cls19:n3,sameBadges:bd,errs});await b.close()})();

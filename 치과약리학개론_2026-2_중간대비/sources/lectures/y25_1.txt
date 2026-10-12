@@ -1,0 +1,166 @@
+2025
+
+
+
+
+       PHARMACOLOGY
+
+          Dental Pharmacology
+What is pharmacology?
+
+  Pharmacology : the study of the effects of drugs on the
+    function of living systems
+
+
+   Pharmakon (drug) + logos (science)
+
+
+
+
+                                                        2
+                    Dose of drug
+                    administered
+
+
+
+
+                Drug concentration in                     Drug in tissues of          Pharmacokinetics
+                 systemic circulation                        distribution
+
+
+
+
+                 Drug concentration              Drug metabolized or excreted
+                   at site of action
+
+
+               Pharmacologic effect
+
+                                                                                       Pharmacodynamics
+                   Clinical response
+
+
+               Toxicity         Efficacy
+
+
+
+◆ Every drug is potentially toxic.
+◆ The only difference between a beneficial drug and a poison is the way in which the agent is used.
+
+                    3
+                               약이란 무엇인가?
+
+
+Drug : a chemical applied to a physiological system that affect its function in a
+ specific way
+
+                               Drug vs         Poison
+
+
+
+
+                                             Exendin-4 (GLP-1 Analog)
+Histology
+  • Paracelsus (1493-1541): "All things are poison and nothing is without poison, only
+      the dose permits something not to be poisonous."
+
+  • Robert Boyle : 17세기 중반 화학의 과학적 근거를 마련함.
+        그러나 그의 저서 ‘A Collection of Choice Remedies (1692)＇에서 조차도
+      concoctions of worm, dung, urine and the moss from a dead man's skull을 약용으
+      로 기술
+  Physiology, pathology, chemistry의 기초가 세워진 후 약리학이 학문으로 인정됨
+  •    1858년, Virchow에 의한 cell theory 제안
+  •    1868년, 화학물질(chemicals)의 작용을 설명하는데 그 구조와의 관련성을 주장
+  •    1878년, Pasteur에 의하여 질병의 원인으로 bacteria 발견
+                                                                                 5
+      Histology
+• 약리학의 태동 전후에는 plant extract의 효과에 초점 ---> 화학의 발전으로 활성성분의 분리가능
+
+• 1805년, Friedrich Sertürner : opium에서 morphine 정제
+
+•     이후로 구조가 밝혀지지 않아도 약리작용을 나타내는 데는 plant에 함유되는 chemical에 의한다
+    는 설명이 확고해짐
+
+• 초기의 plant-derived drug : quinine, digitalis, atropine, ephedrine, strychnine 등
+
+• Rudolf Buchheim : 1847년 Estonia에 처음으로 pharmacology institute를 설립. 최초의 약리학 교수
+
+• Oswald Schmiedeberg (1838~1921): 현대약리학을 확립하고 전 세계에 전파
+
+• John Abel (1857~1938): 미국 약리학의 아버지. 부신에서 epinephrine을 순수 분리
+
+
+                                                                                   6
+   Histology
+
+• Diethyl ether (16세기), N2O (웃음개스, 1799년)가 합성되어 party용으로 사용. 마
+ 취제로서는 19세기 중반에 도입됨
+
+• 1859년, amyl nitrite 합성; 첫 번째의 rational therapeutics 로서 협심증에 이용
+
+  이의 생리학적 효과 (physiological effect, 혈관확장)에 근거하여 약리작용을 설
+ 명, 현재에도 nitrovasodilator는 많이 이용되고 있음
+• Aspirin : 1853년에 합성되었으나 약리학적 이용은 되지 않았고, 1899년 Bayer에
+ 서 상품화 크게 성공
+
+
+
+
+                                                               7
+    Histology
+• 20세기에 들어서 합성화학의 도입이 제약산업의 혁명을 일으킴; barbiturate (1903), local anesthetics
+
+
+• Paul Ehrlich (1909) ; 매독(syphilis)에 비소제가 유효함을 밝힘
+   - antimicrobial chemotherapy의 시초
+
+• Gerhard Domagk (1935) ; sulfonamides
+
+
+• Chain and Florey (1939) ; penicillin
+
+
+• 결핵치료제 streptomycin (Waksman) 등 화학요법제 생산
+
+
+• 화학의 발전에 힘입어 많은 치료제 생산 --> 생리학 발전 (chemical mediator의 개념 도입) -->
+ neurotransmitter, hormone, inflammatory mediator의 발견 --> chemical substance와 living system과의
+ interaction에 의한 작용임이 확실 (생리 약리가 공유)
+                                                                                           8
+     Histology
+• John N Langley (1905); Chemical mediator가 작용하는 living system의 부분을 receptor로서
+ 개념 확립
+
+• Receptor (Henry Dale은 자율신경계에서의 chemical transmission확립, James Black는 β수
+ 용체 및 H2-receptor antagonist 발견)의 발견은 역으로 약물개발을 가속화
+
+• 20세기초 생화학발전은 생체내 효소 및 biochemical pathway의 발견으로 약물효과에 대한
+ 이해를 증폭시킴
+
+• 현대의학은 치료의 main tool로서 주로 약에 의존 --> 그 외 surgery, diet, exercise,
+ psychological treatment가 보조
+
+• 합성물질의 한계에 이르러 천연물로부터의 치료제 개발 및 대체의학도 선보이고 있음
+
+                                                                         9
+     The development of pharmacology
+10
+Pharmacology today with its various subdivisions. Interface disciplines (brown boxes) link pharmacology
+to other mainstream biomedical disciplines (green boxes).                                            11
+  약물의 명칭
+
+
+
+
+기호명   SKF-92334                    ICI-45520
+화학명   2-cyano-1-methyl-3-[2-(5-    (±)-1-isopropylamino-3-(1-   5-{2-Ethoxy-5-[(4-methylpiperazin-
+      methylimidazolyl-4-          naphthyloxy)propan-2-ol      1-yl)sulfonyl]phenyl}-1-methyl-3-
+      methylthio)ethyl]guanidine                                propyl-1,6-dihydro-7H-
+                                                                pyrazolo[4,3-d]pyrimidin-7-one
+일반명   Cimetidine                   Propranolol                  Sildenafil
+상품명   TAGAMET, ACILOC, ACINIL,     INDERAL, ANGILOL,            Viagra, 팔팔, 누리그라
+      CIMETIN, DYSPAMET,           AVLOCARDYL, APSOLOL,
+      EDALENE, 시메티딘, 에취-           BERKOLOL, INDOBLOC, 인
+      투, 타가메트                      데놀, 프라놀, 인데랄
+                                                                                        12
+

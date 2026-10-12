@@ -1,0 +1,861 @@
+슬라이드 1
+
+Equal Equal Equal
+
+\+,-
+
+Vm (mv)
+
+\+60
+
+\+30
+
+0
+
+\-30
+
+Action
+
+potential
+
+gNa
+
+Na
+
+Extracellular side
+
+9K
+
+18
+
+8%
+
+IND
+
+END
+
+Ecl
+
+Ex
+
+\-60
+
+\-90
+
+Electrotonic potentials
+
+Na+-K+ pump
+
+Cytoplasmic side
+
+Membrane
+
+current
+
+Outward
+
+Inward
+
+\+30
+
+50 ms
+
+\+10
+
+Time-
+
+0
+
+re 7-2C Depolarization.
+
+막전압(mV)
+
+\-10
+
+\-30-
+
+\-50-
+
+Cytosol
+
+Extracellular
+
+fluid
+
+Membrane
+
+Permeability of Potassium
+
+Gas constant
+
+분극현상
+
+Temperature
+
+RT
+
+Em
+
+In
+
+F 1
+
+Faraday constant
+
+Concentration of potassium outside the cell
+
+Pk\[K\]+ Po\[Na\] + Pa\[CH\];
+
+Pk\[K\]; + PN₂\[Na\]; + Pa\[CH\].
+
+Concentration of potassium inside the cell
+
+\-역치
+
+\-70
+
+\-901
+
+(8)
+
+시간(msec)
+
+후전압(과분극)
+
+안정상태
+
+\-활동전압
+
+이온 투과성
+
+\-Nat 투과성
+
+\-K 투과성
+
+4
+
+시간(msec)
+
+시냅스
+
+개요
+
+시냅스의 개념
+
+• 시냅스의 종류
+
+전기시냅스
+
+화학시냅스
+
+시냅스 후막전압
+
+종판전압
+
+시냅스 후막전압
+
+흥분성 시냅스
+
+억제성 시냅스
+
+시냅스 신호의 가중과 억제
+
+•신경전달물질
+
+신경물질의 합성과 분비
+
+신경물질의 제거
+
+15장
+
+최세영
+
+Biological spikes
+
+ллл
+
+Artificial spikes
+
+VVV
+
+수용체
+
+수용체 신호의 다양성
+
+수용체 신호 간 상호작용
+
+●신경네트워크 시냅스의 형성
+
+신경계의 발달 과정
+
+시냅스 미세조정
+
+Biological EPSC
+
+Artificial EPSC
+
+● 시냅스 가소성
+
+기억은 어떻게 저장되는가
+
+장기강화와 장기저하
+
+시냅스 가소성의 조절
+
+시냅스 가소성과 뇌의 고등 기능
+
+시냅스의 개념
+
+규칙적인 움직임 걷기 / 저작 / 배변 / 배뇨
+
+클리오네(clione)
+
+해마의 피라미드세포 (Hippocampal pyramidal cell) 장기기억 형성, 공간 학습, 시냅스 가소성(LTP, LTD)
+
+spine
+
+시냅스 전 신경세포
+
+시냅스 후 신경세포
+
+신경세포들은 서로 연결되어 네트워크를 이룬다. 시냅스(신경연접, synapse) 시냅스 전 신경세포 (presynaptic neuron) 시냅스 후 신경세포 (postsynaptic neuron) 축삭 (axon) / 가지돌기 (dendrite) 아교세포 (glial cell)
+
+시냅스의 종류 – 전기시냅스 (Electrical Synapse)
+
+•
+
+간극 연접 (gap junction) : 코넥신(connexin) 단백질 6개 가 뭉쳐서 이루는 코넥손(connexon)
+
+빠른 반응, 동시적 반응 시냅스 지연이 없음
+
+Glial cell(아교세포) : Astrocyte간에서도 형성됨
+
+시냅스의 종류 – 화학시냅스 (Chemical Synapse)
+
+•신경종말 (nerve ending) : 축삭 끝이 여러갈래로 갈
+
+라진 후 약간 팽창되는 부위
+
+•신경전섬유 (presynaptic fiber) : 다른 신경 섬유에
+
+접근하는 신경 섬유
+
+•신경후섬유 (postsynaptic fiber): 시냅스 후 뻗어나
+
+가는 신경섬유
+
+축삭-수상돌기 시냅스 axodendritic synapse
+
+축삭-세포체 시냅스 axosomatic synapse
+
+축삭-축삭 시냅스 axoaxonic synapse
+
+근위 축삭-축삭 시냅스 proximal axoaxonic synapse
+
+원위 축삭-축삭 시냅스 distal axoaxonic synapse
+
+Postsynaptic Density
+
+Dendrite
+
+soma
+
+Axon Hillock
+
+Axon
+
+Synaptic TerminalSynaptic Vesicle
+
+B
+
+D
+
+펩티드 전구체
+
+시냅스 소포
+
+신경전달물질
+
+분비과립
+
+・리보솜
+
+골지체
+
+조면소포체
+
+시냅스 소포
+
+전구체 분자
+
+① 합성효소
+
+신경전달물질분자
+
+② 운반단백질
+
+그림 5-4. 신경세포의 모식도. A, 신경세포의 각 부분 명칭과 위치 및 기능을 나타내었다. B. 신경전달물질의 분비에 관련된 단계별 기전을 보여준다.
+
+Type of
+
+synapse
+
+Distance between
+
+pre- and
+
+postsynaptic
+
+표 14-1. 전기시냅스와 화학시냅스의 비교
+
+Ultrastructural
+
+components
+
+Agent of
+
+transmission
+
+Cytoplasmic
+
+continuity
+
+between
+
+pre- and
+
+synaptic
+
+delay
+
+Direction of transmission
+
+cell
+
+membranes
+
+postsynaptic
+
+cells
+
+Electrical
+
+3.5 nm
+
+Yes
+
+Gap-junction
+
+lon current
+
+Virtually
+
+channels
+
+absent
+
+Chemical
+
+20\~40 mm
+
+No
+
+Presynaptic
+
+Chemical
+
+Significant:
+
+vesicles and
+
+transmitter
+
+at least 0.3
+
+Usually bidirectional
+
+Unidirectional
+
+active zones:
+
+ms, usually
+
+postsynaptic
+
+receptors
+
+1-5 ms
+
+or longer
+
+→ 시냅스에서의 신호전달 (근육 / 종판전압)
+
+종판전압 : 전기시냅스, 화학시냅스를 막론하 고 결과적으로 시냅스 전 세포로부터의 신호 는 시냅스 후 세포의 막전압을 변화시킨다
+
+시냅스 후 막전압 (Postsynaptic potential)
+
+시냅스 후 막전압 (Postsynaptic potential)
+
+종판전압 : 전기시냅스, 화학시냅스를 막론하고 결과적으로 시냅스 전 세포로부터의 신호는 시냅스 후 세포의 막전압을 변화시킨다
+
+신경근육접합부 (neuromuscular junction)
+
+1\. 신경흥분 → 신경전달물질 유리 2. 니코틴 수용체 활성화 3. 세포내 Na+ 유리 4. 세포막 탈분극
+
+종판전압(endplate potential) → 근육세포에서 생성되는 전압
+
+화학적 시냅스 전도 과정
+
+Excitatory Postsynaptic Potential(EPSP) 흥분성 시냅스 후 막전압
+
+시냅스 후 막전압(Postsynaptic potential) → 시냅스에서 의 신호전달 (근육 / 종판전압) 탈분극/ 과분극
+
+신경전달물질의 종류와 이를 인식하는 수용체가 어떠한 이온을 주로 투과
+
+흥분성 신경전달물질로는 아세틸콜린, 노르아드레날린, 글루탐산염, 신경펩티드 → Na+, Ca2+ 통로를 활성화 탈분극
+
+Inhibitory Postsynaptic Potential (IPSP) 억제성 시냅스 후 막전압
+
+신경전달물질로 글리신(glycine), γ-aminobutyric acid(GABA) 등을 분비하는데 이들은 시냅스 후 세포에서 Cl-통로 활성화 과분극
+
+화학적 시냅스의 구조
+
+시냅스신호의 가중과 억제
+
+탈분극 신호가 축삭을 통해 전달될 때는 신경세포체의 탈분극의 크기(amplitude) : 활동전압 발생 빈 도(firing frequency) 가지돌기에는 이런 기전이 없으며, 얼마든지 탈분극의 크기가 더해지고 모이고 또는 감소될 수 있다.
+
+가중(summation) : EPSP를 유발하는 흥분성 신경의 활동전압이 동시에 여러 개가 전달되면 형성되 는 EPSP의 크기는 1개의 활동전압이 전달되었을 때보다 크게 나타난다.
+
+공간적 가중(spatial summation) / 시간적 가중(temporal summation)
+
+흥분성 시냅스와 억제성 시냅스의 상호작용
+
+Postsynaptic potential in neuron C
+
+Presynaptic Inhibition
+
+A+B
+
+D
+
+D+B
+
+Time (msec)
+
+Recording potential of postsynaptic cell C
+
+Threshold potential
+
+\-50
+
+Resting potential
+
+\-70
+
+Postsynaptic Inhibition
+
+Presynaptic inputs
+
+Ex2
+
+Ex1
+
+Postsynaptic cell
+
+Recording potential of postsynaptic cell
+
+A
+
+B
+
+Temporal
+
+Spatial
+
+summation
+
+Ex1
+
+Ex1
+
+Ex1
+
+Ex1
+
+EPSP-IPSP
+
+summation cancellation
+
+Ex1 Ex1-Ex2
+
+Ex2
+
+In1
+
+Ex1 Ex1+ In1
+
+\-Figure 4-20 Presynaptic Inhibition
+
+Time (msec)
+
+\-Figure 4-19 Determination of the Grand Postsynaptic Potential by the Sum of Activity in the Presynaptic Inputs
+
+Threshold
+
+potential
+
+Resting
+
+potential
+
+Convergence
+
+Rough endoplasmic
+
+reticulum
+
+The Neuron With Its Four Structures
+
+Dendrites (Na- and Cat-channels)
+
+Golgi
+
+Terminals
+
+Nucleus with nucleolus
+
+70 mV
+
+Na K
+
+Axon
+
+Axon
+
+hillock
+
+Action
+
+Divergence
+
+Mitochondrion
+
+potential
+
+Cell body: Ligand-gated channels
+
+Axon: Voltage-gated channels
+
+Postsynaptic Membranes and Ion Channels
+
+Dendrite Axone
+
+화학시냅스에서 세포 간의 정보 전달을 매 개하는 화학물질
+
+신경전달물질
+
+신경전달물질의 합성
+
+대부분의 신경전달물질은 여러 단계의 효소들에 의해 합성된다. 신경세포가 어떤 종류의 신경전달물질을 분비할지는 어떤 신경전달물질 합성 효소가 세포에 존재하는지에 달려 있다
+
+예를 들어 어떤 신경이 주로 아세틸콜린을 분비한다고 하면 이들 세포는 choline acetyltransferase를 가진다. 도파민을 분비하는 세포에는 tyrosine hydroxylase를 포함한 몇 가지 효소가 존재한다. 해당 신경전달물질을 분비하지 않는 신경에는 해당 합성 효소가 발현되지 않는다.
+
+신경전달물질의 제거
+
+아세틸콜린 : 콜린에스터라아제 아드레날린 : catecholamine-O-methyltransferase, monoamine oxidase 글루탐산염, 카테콜라민, 세로토닌 ; 시냅스 전 막 에 존재하는 재흡수 효소에 흡수 재사용
+
+수용체
+
+이온투과성 수용체 대사성 수용체
+
+신경전달물질 : 세포막을 투과할 수 없다.
+
+시냅스에서 빠른 신경신호전달(fast neurotransmission)을 담당하는 수용체는 대부분 이온 투과성 수용체이다 대사성 수용체 : 느린반응 지속반응
+
+이온투과성 수용체
+
+이온 투과성 수용체는 신경전달물질이 결합할 때 이온통 로를 열어 주는 수용체들이다
+
+대사성수용체
+
+A
+
+NE
+
+NE
+
+흥분성 수용체
+
+억제성 수용체
+
+Adenylyl
+
+cyclase
+
+GTP
+
+SGTP
+
+GTP
+
+GTP
+
+Stimulatory, G-protein
+
+GDP
+
+ATP
+
+CAMP
+
+GDP
+
+Inhibitory G-protein
+
+B
+
+G-protein 연결 수용체
+
+단백질
+
+인산화효소 A
+
+신경세포막
+
+PKC
+
+DAG
+
+PLC
+
+IP3
+
+PIP2 GTP
+
+Ca
+
+활성화된
+
+G-protein
+
+활면소포체
+
+Ca
+
+수용체 신호의 다양성
+
+수용체 신호의 다양성 (세레토닌)
+
+수용체 신호 간의 상호 작용
+
+신경네트워크 시냅스의 형성 – 신경계의 발달과장
+
+시냅스 미세조정
+
+시냅스 가소성 신경의 가소성
+
+Spine apparatus
+
+Round synaptic
+
+Type I
+
+vesicles
+
+Axodendritic
+
+Spine
+
+synapse
+
+Shaft synapse
+
+Actin
+
+Axosomatic
+
+Type I
+
+Dense basement
+
+membrane.
+
+Type II
+
+Type II
+
+Axosomatic
+
+Flattened synaptic vesicles
+
+synapse
+
+Modest
+
+basement
+
+membrane.
+
+STHO
+
+Large active zone
+
+Prominent
+
+presynaptic
+
+dense projections
+
+Wide synaptic cleft
+
+Postsynaptic density
+
+Less obvious dense projections
+
+Narrow synaptic cleft
+
+Small active
+
+zone
+
+Postsynaptic density
+
+시냅스 가소성 신경의 가소성
+
+시냅스 가소성 – 장기 강화 Long term potential (LTP)
+
+– 장기 저화 Long term depression (LTD)
+
+Schaffer 곁가지 경로
+
+관통로
+
+Schaffer 곁가지 경로
+
+A
+
+시냅스
+
+전세포
+
+Glu
+
+B
+
+시냅스
+
+시냅스
+
+전세포
+
+LTP
+
+전세포
+
+시냅스 전세포
+
+LTD
+
+Glu
+
+Glu
+
+Glu
+
+NMDA 수용체
+
+\-AMPA 수용체
+
+AMPA 수용체
+
+시냅스
+
+시냅스
+
+시냅스
+
+후세포
+
+후세포
+
+후세포
+
+Silent 시냅스-NMDA 수용체만 시냅스 후세포막에 존재
+
+활성화 시냅스-AMPA 수용체의 세포막 삽입 이후
+
+활성화 시냅스
+
+시냅스
+
+후세포
+
+AMPA 수용체의 회수에 따른 활성 억제된 시냅스
+
+그림 5-21. 글루탐산염 수용체와 LTP, LTD. (A) 만약 시냅스 후 막단백질이 인산화되면 이들은 세포 내 소포에 보관되어 있는 AMPA 수용체를 세포막으로 노출시킨다. 이렇게 되면 같은 시냅스 전 세포의 자극에 의해서 보다 큰 시냅스 후 세포의 반응이 유도 된다. 이것이 LTP의 기전이다. (B) 반대로 LTD의 경우 AMPA 수용체를 세포 내로 끌어 내리는 기전이 작용하여 반응이 감소된다.
+
+Lateral
+
+diffusion
+
+AMPAR
+
+PSD-95
+
+TARP
+
+NMDAR
+
+AP2
+
+o
+
+Endocytic
+
+Endocytosis
+
+zone
+
+Presynaptic bouton
+
+Palm
+
+SNAP47
+
+Stx3/4
+
+Ca2+
+
+Ca2+
+
+AKAP79
+
+• Ca2+
+
+o
+
+o
+
+Ca2+
+
+PKA
+
+VAMP2
+
+Exocytosis
+
+PKC
+
+CaMKII
+
+Postsynaptic site
+
+C
+
+LTD
+
+LTP
+
+Lateral diffusion
+
+시냅스

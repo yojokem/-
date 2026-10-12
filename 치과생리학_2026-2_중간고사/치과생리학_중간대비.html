@@ -1,0 +1,923 @@
+<title>치과생리학 중간 대비</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;700&display=swap">
+<style>
+/* Layout: 좌측 OMR 사이드바 + 본문 카드 열. 모노톤 + 청록 강조 1개. 시험지형은 흑백 세리프 단일 컬럼 */
+:root{
+  --bg:#f4f6f7; --surface:#ffffff; --fg:#1a2023; --muted:#5a666d; --line:#d6dde1;
+  --accent:#17697a; --accent-weak:#dfeef1; --accent-fg:#ffffff;
+  --ok:#1d7a46; --ok-bg:#e2f3e9; --ng:#b3322b; --ng-bg:#f8e4e2;
+  --font-body:"Noto Sans KR",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-serif:"Noto Serif KR","Batang",Georgia,serif;
+  --font-mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121618; --surface:#1a2024; --fg:#e4e9ec; --muted:#98a5ac; --line:#2c353a;
+  --accent:#6fc2d2; --accent-weak:#1d3a42; --accent-fg:#0d1a1e;
+  --ok:#62c78c; --ok-bg:#16301f; --ng:#f0948d; --ng-bg:#3a1c1a; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#121618; --surface:#1a2024; --fg:#e4e9ec; --muted:#98a5ac; --line:#2c353a;
+  --accent:#6fc2d2; --accent-weak:#1d3a42; --accent-fg:#0d1a1e;
+  --ok:#62c78c; --ok-bg:#16301f; --ng:#f0948d; --ng-bg:#3a1c1a; color-scheme:dark;}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:15px;line-height:1.65;padding-inline:16px;padding-block:0 48px}
+*{box-sizing:border-box}
+button,select,input{font:inherit;color:inherit}
+button{cursor:pointer}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);padding-block:10px 8px;border-bottom:1px solid var(--line);margin-inline:-16px;padding-inline:16px}
+.titlebar{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline}
+h1{font-size:18px;margin:0;font-weight:700;text-wrap:balance}
+.ver{font-size:12px;color:var(--muted)}
+nav.tabs{display:flex;gap:4px;flex-wrap:wrap;margin-top:8px}
+nav.tabs button{border:1px solid var(--line);background:var(--surface);padding:5px 12px;border-radius:6px;font-size:13px}
+nav.tabs button[aria-selected="true"]{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.tools{display:flex;flex-wrap:wrap;gap:6px 12px;margin-top:8px;font-size:13px;align-items:center}
+.tools label{display:inline-flex;gap:5px;align-items:center}
+.btn{border:1px solid var(--line);background:var(--surface);padding:4px 11px;border-radius:6px;font-size:13px}
+.btn.pri{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.shell{display:grid;grid-template-columns:200px minmax(0,1fr);gap:20px;margin-top:16px;align-items:start}
+aside#omr{position:sticky;top:calc(env(safe-area-inset-top,0px) + 112px);max-height:calc(100vh - 140px);overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px;font-size:12px}
+aside#omr h2{font-size:12px;margin:0 0 6px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.omr-row{display:flex;align-items:center;gap:4px;padding:2px 0;flex-wrap:nowrap}
+.omr-row .no{width:30px;flex:none;text-align:right;color:var(--muted);font-variant-numeric:tabular-nums;background:none;border:0;padding:0;font-size:11px}
+.bub{width:22px;height:22px;border-radius:50%;border:1px solid var(--muted);background:transparent;font-size:11px;line-height:1;padding:0;flex:none}
+.bub.on{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.omr-row.ok .no{color:var(--ok)} .omr-row.ng .no{color:var(--ng)}
+main{min-width:0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin-bottom:12px}
+.card.ok{border-color:var(--ok)} .card.ng{border-color:var(--ng)}
+.chead{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;margin-bottom:6px}
+.cid{font-family:var(--font-mono);font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+.stem{font-size:15px;font-weight:500;overflow-wrap:anywhere;white-space:pre-line}
+ol.opts{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:4px}
+ol.opts li{display:flex;gap:8px;border:1px solid transparent;border-radius:6px;padding:3px 6px;cursor:pointer;overflow-wrap:anywhere}
+ol.opts li:hover{background:var(--accent-weak)}
+ol.opts li.sel{border-color:var(--accent);background:var(--accent-weak)}
+ol.opts li.corr{border-color:var(--ok);background:var(--ok-bg)}
+.opts .n{flex:none;width:1.4em}
+.st,.tag{display:inline-block;font-size:11px;line-height:1.5;padding:0 7px;border-radius:99px;border:1px solid var(--muted);color:var(--muted);white-space:nowrap}
+.st-x{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
+.st-user{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+.st-e{border-color:var(--accent);color:var(--accent)}
+.st-p{border-style:dashed;border-color:var(--accent);color:var(--accent)}
+.st-c{border-color:var(--ng);color:var(--ng)}
+.st-u{border-style:dotted}
+.tag.warn{border-color:var(--ng);color:var(--ng)}
+.meta{margin-top:8px;font-size:12.5px;color:var(--muted);display:grid;gap:3px}
+.ansbox{margin-top:8px;padding:8px 10px;border-radius:6px;background:var(--accent-weak);font-size:14px;overflow-wrap:anywhere}
+.ansbox.prov{background:transparent;border:1px dashed var(--accent)}
+.expl{margin-top:6px;font-size:13.5px;overflow-wrap:anywhere}
+details{margin-top:6px;font-size:13px}
+details>summary{cursor:pointer;color:var(--accent)}
+details ul{margin:6px 0 0;padding-left:18px;display:grid;gap:4px}
+.q{font-family:var(--font-mono);font-size:12px}
+.acts{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;margin-top:8px}
+.own{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12.5px;margin-top:6px}
+.own select,.own input{border:1px solid var(--line);background:var(--bg);border-radius:6px;padding:3px 6px;max-width:100%}
+.typo{border-left:3px solid var(--ng);padding:4px 8px;margin-top:6px;font-size:12.5px;background:var(--ng-bg);border-radius:0 6px 6px 0;overflow-wrap:anywhere}
+h2.sec{font-size:16px;margin:22px 0 8px;text-wrap:balance}
+h3.sub{font-size:14px;margin:16px 0 6px;color:var(--accent)}
+.strip{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin-bottom:12px;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.tblwrap{overflow-x:auto;margin:8px 0}
+table{border-collapse:collapse;font-size:12.5px;min-width:560px;width:100%}
+th,td{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+th{background:var(--accent-weak);font-weight:700}
+pre.code{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow-x:auto;font-size:12px;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere}
+.pts{margin:6px 0;padding-left:18px;display:grid;gap:3px;font-size:13.5px}
+.diag{margin-top:24px;font-size:12px;color:var(--muted)}
+.jump{background:none;border:0;color:var(--accent);padding:0;text-decoration:underline;font-size:12px}
+/* 시험지형: 흑백 세리프 단일 컬럼. 배지·근거·인용·빈도·AI·정답 지정 등은 숨기고 해설은 정답 보기 이후에만 보임 */
+body.paper{--bg:#ffffff;--surface:#ffffff;--fg:#000000;--muted:#000000;--line:#000000;--accent:#000000;--accent-weak:#eeeeee;--accent-fg:#ffffff;--ok:#000;--ok-bg:#eee;--ng:#000;--ng-bg:#eee;font-family:var(--font-serif)}
+body.paper .shell{grid-template-columns:200px minmax(0,640px);justify-content:center}
+body.paper .st,body.paper .tag,body.paper .meta,body.paper .own,body.paper .typo,body.paper details,body.paper .cid,body.paper .jump,body.paper .strip.paperhide,body.paper .sumcard{display:none!important}
+body.paper .card{border:0;border-bottom:1px solid #000;border-radius:0;padding-inline:0}
+@media (max-width:820px){
+  .shell{grid-template-columns:minmax(0,1fr)}
+  aside#omr{position:static;max-height:150px}
+  body.paper .shell{grid-template-columns:minmax(0,1fr)}
+  aside#omr .omr-body{display:flex;flex-wrap:wrap;gap:2px 14px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+
+<header class="top">
+  <div class="titlebar">
+    <h1>치과생리학 중간 대비</h1>
+    <span class="ver">단국대 치과대학 치의예과 · 2026-2 중간고사 · 25학번 · 규칙 v6.1 (2026-10-10) · 1~5장(사용자 전달)</span>
+  </div>
+  <nav class="tabs" id="tabs" role="tablist" aria-label="탭"></nav>
+  <div class="tools">
+    <label><input type="checkbox" id="optAll"> 정답 전체 보기</label>
+    <label><input type="checkbox" id="optPaper"> 시험지형</label>
+    <label><input type="checkbox" id="optOut"> 범위 외 문항 보기</label>
+    <button class="btn" id="btnTheme" type="button">테마 전환</button>
+  </div>
+</header>
+
+<div class="shell">
+  <aside id="omr" aria-label="OMR"><h2>OMR</h2><div class="omr-body" id="omrBody"></div></aside>
+  <main id="main"></main>
+</div>
+<p class="diag" id="diag"></p>
+
+<script>
+"use strict";
+/* ===== 자료 출처 ===== */
+const SRC={
+  s24:{n:"2025학년도 24학번 예2-2 치과생리학 중간 야마.pdf",id:"1g41LINF849pz8M5Y0GrQPn0-g5VAo4dT"},
+  s21:{n:"2022학년도 21학번 예과2학년1학기 치과생리학 중간 - 정답.docx",id:"1njw2iw5tF6y7pwionZacU6eInDljxg0X"},
+  s22:{n:"2023학년도 22학번 예2-1 생리학 중간 야마.docx",id:"1rkTjDvUQusOAJQMzoh-kNkKVov8a45ef"},
+  s22b:{n:"2023학년도 22학번 예2 1학기 치과생리학 중간 야마.docx",id:"1mmoULVlegX6SUFTJ1cIa1_dNnG768lwU"},
+  s23:{n:"23학번 치과생리학 중간.docx",id:"1wGOS6auMz7PfNPCaN0P8we89NywzCf9U"},
+  s21b:{n:"2022학년도 21학번 예과2학년1학기 치과생리학 중간.docx (무정답판)",id:"1CyQbbZUN-DG_JKU_3qUrRR11TfXee_OE"},
+  s24b:{n:"2025학년도 24학번 예2-2 치과생리학 중간 야마.docx (1s9AH6)",id:"1s9AH6kXi-RQfDwHoleGCgInVMwNjLk-V"},
+  s24c:{n:"2025학년도 24학번 예2-2 치과생리학 중간 야마.docx (1oNf4i)",id:"1oNf4i-RUT9CbUtXczM79Oje8QlBR5-56"},
+  s24d:{n:"2025학년도 24학번 예2-2 치과생리학 중간 야마.pdf (1Cglb)",id:"1CglbLMB1ZYB_z2CMAY_m7ocOXt6CjDAG"},
+  s16:{n:"치과생리학 야마 중간.pdf (17·18·20·22학번 합본, Ch7~9)",id:"1li-AwNVUILNlE0rc_eSOQulTHPEQrzlz"},
+  k74q:{n:"2022년도 제74회 치과의사 국가시험 2교시 기출문제.pdf",id:"1ZDGB6QIpe2A732S3woVKpQyKNE4SCLwN"},
+  k74a:{n:"2022년도 제74회 치과의사 국가시험 1~4교시 최종답안.pdf",id:"1xcyyKtxgFFTW9iCcxe6UMLj7Vi0LCtMj"},
+  k75q:{n:"2023년도 제75회 치과의사 국가시험 2교시 기출문제.pdf",id:"12tuHWGBmPke9AMwL8CohrSDnsIpGogrh"},
+  k75a:{n:"2023년도 제75회 치과의사 국가시험 1~4교시 최종답안.pdf",id:"1zHXN7xijoSztonQ7a2SLbe5iFvn7nz77"},
+  k76q:{n:"2024년도 제76회 치과의사 국가시험 2교시 기출문제.pdf",id:"1OBF-_M-Afamuy40hJ5H7iuVzAad7r0Mw"},
+  k76a:{n:"2024년도 제76회 치과의사 국가시험 1~4교시 최종답안.pdf",id:"15O-dQQB6WTy-g3GTRaZFDVwuV3w8FXbd"},
+  k77q:{n:"2025년도 제77회 치과의사 국가시험 2교시.pdf",id:"192lyXsrfPraSo309YB757jYTXiCXu2x-"},
+  k77a:{n:"2025년도 제77회 치과의사 국가시험 1~4교시 최종답안.pdf",id:"1VsV6lIqdZLoJcOrii7ujDxqrZ8fCQWq7"},
+  k78q:{n:"2026년도 제78회 치과의사 국가시험 2교시.pdf",id:"1WS4o5vOHVjJyEV1_2ctOwUMwOQ-3Thxs"},
+  k78a:{n:"2026년도 제78회 치과의사 국가시험 1~4교시 최종답안.pdf",id:"1FSU3PvJ-_pYn0_Y2UVxTMZqPuywDS05A"},
+  s21f:{n:"생리학 야마.docx (21학번 기말, 답 일부 포함)",id:"1c9Bd1OkClI8Wf4DJ4bGF1WDChQxfduzf"},
+  s21fb:{n:"2022학년도 21학번 예과2학년1학기 치과생리학 기말.docx (답 없는 사본)",id:"1_s9qYVZBmd6WMTe1qLaqcycFD3n3-Ypb"},
+  s22f:{n:"2023학년도 22학번 예2-1 생리학 기말 야마.docx",id:"1YeahPy7L7ONlncvXrkQ3zHNsebcKP-4W"},
+  s21p:{n:"2022학년도 21학번 예과2학년1학기 치과생리학 중간 - 정답.pdf",id:"1712Gh2zPsfZrVeWluHJ4oFcjjpnEHnTD"},
+  s21g:{n:"21학번 치과생리학개론 중간고사.pdf",id:"1dYItSybyMSS_0iZly3fvSqnIYNDxtHCp"},
+  g1:{n:"교안 1장 항상성과 세포기능.pdf (2026-2)",id:"1puJKWEnrj6_YVCkwHvhW1vOks66IqfPb"},
+  g2:{n:"교안 2장 분자생물학과 세포내 신호전달.pdf (2026-2)",id:"1aJZJYE0G5K5HcTYsppzK4v-gh6DQ_Wi7"},
+  g3:{n:"교안 03_세포막을_통한_물질이동.pdf (2026-2)",id:"1XFCDorqCzru2yPntZvTNC5syyR7Yt3hT"},
+  g3b:{n:"교안 3장 세포막을 통한 물질이동.pdf (2026-2, 10-12 추가 원본 슬라이드)",id:"1kmQhgJXQX-XtSAPJLoYHoDXwouOL5qhD"},
+  g4:{n:"교안 4장 흥분성 세포신경1.pdf (2026 폴더 1udnm8…, 2025판과 해시 동일)",id:"1udnm8FVq13oRy9QeuXViEayzqb642n4t"},
+  g5:{n:"교안 5장 시냅스.pdf (2025 판, 잠정)",id:"1Hmtw3Pgpx42TVkyvE-1-_AYXH0DZSUxJ"}
+};
+const TIERN={T2:"T2 타 선배 원본 야마",T4:"T4 교안·교재 본문",T5:"T5 추론"};
+const CIRC=["①","②","③","④","⑤","⑥"];
+const GRADED=["확정","사용자 확정","교차확인"];
+const CH=[1,2,3,4,5];
+const CHN={1:"1장 항상성과 세포기능",2:"2장 분자생물학과 세포 내 신호전달",3:"3장 세포막을 통한 물질이동",4:"4장 흥분성 세포: 신경",5:"5장 시냅스 (2025 교안 잠정)"};
+
+/* ===== 기출 (범위 내 42건) =====
+ ev: [등급, 출처키, 인용, 요약문여부]  srcs: [학번, 학년도, 고사, 원번호표기, 출처키] */
+const Q=[
+/* ---- 1장 ---- */
+{id:"24-2025-M-DS-01",ch:1,form:"DS",key:"1.항상성",stem:"생명체의 내부 환경이 일정한 상태로 유지되는 것은?",atext:"항상성",status:"교차확인",
+ ev:[["T2","s24","1 생명체의 내부 환경이 일정한 상태로 유지되는 것은? 항상성"],["T2","s21","생명체의 내부환경을 일정하게 유지하게 하는 것은? 정답) 항상성"],["T4","g1","항상성(homeostasis)이란? 내부환경(internal environment)이 일정한 상태로 유지되게 하는 것"]],
+ srcs:[["24",2025,"M","Q1","s24"],["21",2022,"M","#1","s21"]]},
+{id:"24-2025-M-MC-02",ch:1,form:"MC",key:"1.체액구성",stem:"다음 중 우리 몸을 구성하는 세포액이 가장 많은 곳은?",opts:["세포내액","혈장","간질액","림프액"],ans:[0],status:"교차확인",
+ ev:[["T2","s21","정답) 가 _ 세포내액은 전체 세포액의 67%, 혈장은 세포외액의 20%"],["T4","g1","체액 구분 표: Intracellular fluid (ICF) 28 L · 67% · 체중 40% / Extracellular fluid (ECF) 14 L · 33% · 체중 20%",true]],
+ srcs:[["24",2025,"M","Q2","s24"],["21",2022,"M","#2","s21"]],note:"24학번 판본에는 정답 표기가 없고, 정답은 21학번 정답본과 교안 표로 확인했습니다."},
+{id:"24-2025-M-DS-03",ch:1,form:"DS",key:"1.체액구성",stem:"체액 중 혈액이 몇 %인가?",atext:null,status:"미확정",cand:["약 6.6% (교안 표의 혈장 기준이며 '혈액'과 같다고 단정할 수 없음)"],
+ ev:[["T4","g1","Plasma 2.8 L · 체액의 6.6% · 체중의 4% (20% of ECF)",true]],
+ srcs:[["24",2025,"M","Q3","s24"]],note:"교안 표에는 혈장(plasma)만 있고 혈액 전체의 비율은 없습니다. 문항의 '혈액'이 혈장을 뜻하는지 확인이 필요합니다."},
+{id:"24-2025-M-DS-04",ch:1,form:"DS",key:"1.이온분포",stem:"세포 내에 가장 많은 양이온은?",atext:"K⁺ (칼륨 이온)",status:"추정",conf:"중",
+ ev:[["T4","g3","세포 내부 K+, 인산기 농도 높고, Na+, Cl−, Ca2+는 외부에 더 높음"],["T2","s21","[관련 문항] 세포외액보다 세포내액에 더 많이 존재하는 이온은? 정답) 가(칼륨)"]],
+ srcs:[["24",2025,"M","Q4","s24"]],note:"같은 개념의 다른 문항(21학번 #4)은 미검증 근거라 '추정'으로 둡니다. 교안 문장은 직접적입니다."},
+{id:"24-2025-M-MC-05",ch:1,form:"MC",key:"1.이온분포",stem:"세포내외 이온 분포 설명 중 옳은 것은?",opts:["세포 내 음이온은 주로 Cl-이다","간질액에는 음으로 전하된 단백질이 존재한다","세포 내에는 주로 양으로 하전된 단백질이 존재한다","Plasma membrane은 plasma와 간질액을 구분하는 막이다","혈액 내 양이온은 주로 Na+이다"],ans:[4],status:"추정",conf:"중",
+ ev:[["T4","g1","그림: Ionic composition of the major body fluid compartments (Plasma / Interstitial fluid / Intracellular: Na, K, Protein anions 등)",true],["T4","g3","세포 내부 K+, 인산기 농도 높고, Na+, Cl−, Ca2+는 외부에 더 높음"],["T2","s21","[관련 문항] 음으로 전하된 단백질이 존재하지 않는 곳은? 정답) 다(간질액)"]],
+ srcs:[["24",2025,"M","Q5","s24"]],note:"소거 판단입니다. ①은 세포 내 음이온이 Cl-이 아니라 단백질 음이온·인산기이고, ②는 간질액에 단백질 음이온이 없으며, ③은 반대이고, ④는 모세혈관벽이 혈장과 간질액을 구분하는 구조입니다. 이 서술은 동일 문항의 정답 근거는 아닙니다."},
+{id:"24-2025-M-DS-06",ch:1,form:"DS",key:"1.되먹임",stem:"어떠한 인자가 변화를 일으켰을 때 변화에 반대되는 방향으로 변화 인자가 조절을 받아 정상으로 회복되는 항상성 조절 기전을 무엇이라 하는가?",atext:"음성 되먹임",status:"교차확인",
+ ev:[["T2","s24","음성 되먹임"],["T2","s21","정답) 음성되먹임"],["T4","g1","음성되먹임(negative feedback system) – 어떠한 인자가 변화를 일으켰을 때 변화에 반대되는 방향으로 변화 인자가 조절을 받아 정상으로 회복"]],
+ srcs:[["24",2025,"M","Q6","s24"],["21",2022,"M","#5","s21"]]},
+{id:"24-2025-M-DS-07",ch:1,form:"DS",key:"1.해당과정",stem:"해당 과정의 결과로 포도당이 분해되어 생기는 3탄당 물질",atext:"피루브산",status:"교차확인",
+ ev:[["T2","s21","해당과정의 결과, 포도당이 분해되어 생산되는 3탄당 물질은 무엇인가? 정답) 피루브산"],["T4","g1","1개의 6탄당 10단계 분해 과정 2개의 3탄당 포도당 분자 피루브산 분자",true]],
+ srcs:[["24",2025,"M","Q7","s24"],["21",2022,"M","#7","s21"]],note:"24학번 판본에는 정답 표기가 없습니다."},
+{id:"24-2025-M-DS-09",ch:1,form:"DS",key:"1.소기관",stem:"여러 층의 납작하고 약한 굴곡이 있으며 막으로 둘러싸인 주머니, 즉 수조로 구성되어 있고, 단백질 분비에 고도로 특성화된 기관?(문제는 정확하지 않음)",atext:"골지체",status:"교차확인",
+ ev:[["T2","s24","골지체"],["T4","g1","여러 층의 납작하고 약한 굴곡 막으로 둘러싸인 주머니, 즉 수조(cisternae)로 구성 당화 단백질, 지질화 단백질"]],
+ srcs:[["24",2025,"M","Q9","s24"]],note:"괄호의 '(문제는 정확하지 않음)'은 복기자의 원문 메모입니다."},
+{id:"24-2025-M-MC-11",ch:1,form:"MC",key:"1.해당과정",stem:"호흡에 대한 설명으로 옳은 것은?",opts:["기질산화인산화..","한 분자의 6탄당이 세 분자의 이탄당으로 분해된다.","전자전달계에서 환원력을 얻는다.","해당과정만 거칠 경우 호기적 호흡에 해당한다.","혐기적 호흡에서 포도당 1분자가 6분자의 이산화탄소로 분해된다."],ans:null,
+ prop:{ans:[0],text:"① (선지 원문이 \"기질산화인산화..\"에서 끊겨 확정 불가)",conf:"하",alt:"없음(②~⑤는 아래 소거)",recheck:"①의 원문이 복원되면 재판정"},status:"추론",
+ ev:[["T4","g1","1개의 6탄당 10단계 분해 과정 2개의 3탄당 … 구연산 회로 … 전자전달계",true]],
+ srcs:[["24",2025,"M","Q11","s24"]],note:"교안은 해당과정에서 6탄당 1분자가 3탄당 2분자(피루브산)로 분해된다고 보여 주므로 ②는 오답으로 보입니다. ③~⑤는 교안만으로는 직접 판정하기 어려워 일반 지식(T5)으로 소거했습니다."},
+{id:"21-2022-M-MC-#03",ch:1,form:"MC",key:"1.이온분포",stem:"음으로 전하된 단백질이 존재하지 않는 곳은?",opts:["세포 내액","혈장","간질액"],ans:[2],status:"추정",conf:"중",
+ ev:[["T2","s21","정답) 다 _ 혈장(plasma)과 세포 내액(intracellular fluid)에는 protein anions 등이 있다."],["T4","g1","그림 1-1 하단 이온 조성 그림의 라벨: Protein anions (Plasma / Interstitial fluid / Intracellular)",true]],
+ srcs:[["21",2022,"M","#3","s21"]],note:"원문 번호가 없어 문서 내 출현 순서로 표기했습니다. 교안 근거가 그림 라벨이라 '추정'입니다."},
+{id:"21-2022-M-MC-#04",ch:1,form:"MC",key:"1.이온분포",stem:"다음 중 세포외액보다 세포내액에 더 많이 존재하는 이온은?",opts:["칼륨","칼슘","나트륨","염소"],ans:[0],status:"교차확인",
+ ev:[["T2","s21","정답) 가"],["T4","g3","세포 내부 K+, 인산기 농도 높고, Na+, Cl−, Ca2+는 외부에 더 높음"]],
+ srcs:[["21",2022,"M","#4","s21"]]},
+{id:"21-2022-M-DS-#06",ch:1,form:"DS",key:"1.세포막",stem:"인체를 구성하는 세포의 구성성분 중 세포의 외부와 내부를 구분 짓는 물질은?",atext:"세포막",status:"교차확인",
+ ev:[["T2","s21","정답) 세포막"],["T4","g1","지질 성분의 이 막은 주변으로부터 세포 내용물들을 분리시켜 세포 외액과 내액이 섞이는 것을 방지"]],
+ srcs:[["21",2022,"M","#6","s21"]]},
+{id:"21-2022-M-DS-#08",ch:1,form:"DS",key:"1.구연산·전자전달",stem:"구연산 회로에서 생산되는 환원력이 강한 물질은 무엇인가?",atext:"NADH, FADH2",status:"교차확인",
+ ev:[["T2","s21","정답) NADH, FADH2"],["T4","g1","구연산 회로 그림 라벨: NADH + H+ … FADH2",true]],
+ conflicts:[["s21b","정답: NADH (FADH2 표기 없음)","같은 시험지의 무정답판 표기입니다. 정답본은 'NADH, FADH2'이고 교안 그림도 둘 다 보여 주므로 후자를 기준으로 두되 어느 쪽도 지우지 않습니다."]],
+ srcs:[["21",2022,"M","#8","s21"]]},
+{id:"21-2022-M-MC-#09",ch:1,form:"MC",key:"1.구연산·전자전달",stem:"전자전달계는 세포의 어느 부분에 존재하나요?",opts:["원형질막","미토콘드리아 외막","미토콘드리아 내막","미토콘드리아 내기질","세포질"],ans:[2],status:"추정",conf:"낮음",
+ ev:[["T2","s21","정답) 다"],["T4","g1","그림 1-15. 전자전달계, 화살표는 시작 전자공여자(NADH 또는 FADH)에서 마지막 전자 수여자인 산소분자로의 전자 흐름의 경로를 표시한다."]],
+ srcs:[["21",2022,"M","#9","s21"]],note:"교안에 전자전달계의 위치(내막)를 직접 밝힌 문장이 없어 T2 단독 근거입니다."},
+{id:"21-2022-M-DS-#10",ch:1,form:"DS",key:"1.세포접합",stem:"소화관의 상피세포에 존재하는 연결부위는?",atext:"치밀이음부 (tight junction)",status:"교차확인",
+ ev:[["T2","s21","정답) 치밀이음부 (tight junction)"],["T2","s22","9. 치밀이음부 ? (정답 표기 없이 문항 이력만 있음)"],["T4","g3","소장과 신장의 상피세포는 … 치밀이음부로 연결되어 있어"]],
+ srcs:[["21",2022,"M","#10","s21"],["22",2023,"M","9","s22"]]},
+/* ---- 2장 ---- */
+{id:"24-2025-M-MC-12",ch:2,form:"MC",key:"2.전사",stem:"다음 중 central dogma 중 전사 과정에 사용되는 효소는 무엇인가?",opts:["DNA polymerase","RNA polymerase","리보솜"],ans:[1],status:"교차확인",
+ ev:[["T2","s21","정답) 나"],["T4","g2","RNA중합효소 Ⅱ가 촉진자를 인지하고 결합하려면 이러한 전사인자 단백질이 공통적으로 필요"]],
+ srcs:[["24",2025,"M","Q12","s24"],["21",2022,"M","#11","s21"]],note:"교안의 문장은 개념 수준 근거입니다."},
+{id:"24-2025-M-MC-13",ch:2,form:"MC",key:"2.전사",stem:"유전자로부터 단백질합성기전의 설명으로 옳은 것은?",opts:["DNA를 RNA로 만드는 과정을 전사라고 한다.","RNA를 DNA로 만드는 과정을 역전사라고 한다.","rRNA에 단백질에 대한 암호를 가진다","전사는 DNA 촉진자 부위에서 시작된다","전사는 복제에 비해 DNA unwinding 부위가 넓다."],ans:null,status:"미확정",cand:[0,1,3],
+ ev:[["T4","g1","중심원리 그림 라벨: Transcription · Replication · Reverse transcription · Translation",true]],
+ srcs:[["24",2025,"M","Q13","s24"]],note:"①②④가 모두 일반 서술과 맞아 보여 단일 정답을 정할 수 없습니다(복수 정답 가능성). ③은 mRNA가 암호를 갖는다는 점에서 틀려 보입니다."},
+{id:"24-2025-M-DS-14",ch:2,form:"DS",key:"2.RNA종류",stem:"세포에서 만들어지는 RNA중 유전자 발현을 조절하는 RNA는?",atext:null,status:"추론",
+ prop:{text:"miRNA 등 조절 RNA (일반 지식)",conf:"하",alt:"siRNA 등",recheck:"교안 2장 'RNA 종류' 슬라이드 원본(이미지) 확인 시"},
+ ev:[["T4","g2","슬라이드 제목: 세포들에서 만들어지는 RNA (본문 텍스트 없음)",true]],
+ srcs:[["24",2025,"M","Q14","s24"]],note:"교안의 해당 슬라이드는 제목만 추출되어 근거 문장을 확인하지 못했습니다."},
+{id:"24-2025-M-DS-15",ch:2,form:"DS",key:"2.스플라이싱",stem:"진핵세포의 유전(자) 중에서 암호화된 부위는?",atext:"Exon (엑손)",status:"교차확인",
+ ev:[["T2","s24","Exon"],["T2","s21","정답) 엑손 (exon)"],["T4","g2","비암호화 서열에 의한 진핵세포 유전자의 중절(interruption)"]],
+ srcs:[["24",2025,"M","Q15","s24"],["21",2022,"M","13","s21"]]},
+{id:"24-2025-M-MC-16",ch:2,form:"MC",key:"2.리보솜",stem:"리보솜에 대한 설명으로 옳은 것은?",opts:["ㅇ","펩타이드 결합 E site","A site는 작은 리보솜 단위에 존재한다","단백질 합성의 시작을 uua uag uga","단백질 합성 종결을 aug"],ans:null,status:"미확정",
+ ev:[["T4","g1","AUG (개시 코돈) / UAA 종결 코돈 / UAG 종결 코돈 / UGA 종결 코돈 (코돈표)",true]],
+ srcs:[["24",2025,"M","Q16","s24"]],
+ typo:[["④ 단백질 합성의 시작을 uua uag uga / ⑤ 단백질 합성 종결을 aug","④ 종결을 uaa uag uga / ⑤ 시작을 aug","교안 코돈표에서 AUG는 개시 코돈이고 UAA·UAG·UGA는 종결 코돈입니다. 원문 그대로는 두 선지 모두 틀립니다(확인 필요)."]],
+ note:"①이 복기되지 않아 정답을 정할 수 없습니다. 원문은 그대로 두었습니다."},
+{id:"24-2025-M-DS-17",ch:2,form:"DS",key:"2.전사",stem:"진핵세포의 전사인자 중 mRNA의 전사를 담당하는 중합 효소는?",atext:"RNA 중합효소 Ⅱ (잠정)",status:"추정",conf:"낮음",
+ ev:[["T2","s24","- mRNA 중합 효소1~4 (원문 그대로이며 의미가 불명확하여 정답 표기로 쓰지 않음)"],["T4","g2","RNA중합효소 Ⅱ가 촉진자를 인지하고 결합하려면 이러한 전사인자 단백질이 공통적으로 필요"]],
+ srcs:[["24",2025,"M","Q17","s24"]],note:"교안에는 'mRNA 전사를 담당'이라는 직접 문장이 없고 RNA 중합효소 Ⅱ의 촉진자 인지만 서술돼 있습니다."},
+{id:"24-2025-M-MC-18",ch:2,form:"MC",key:"2.유전자조절",stem:"진핵세포 원거리 유전자 조절에서 활성인자 단백질이 붙어서 개시를 촉진하는 부위는?",opts:["증강인자","tatabox","개시부위","종결부위"],ans:[0],status:"추정",conf:"낮음",
+ ev:[["T2","s21","정답) 가 (증강인자 – 진행생물에서 유전자 활성인자가 결합하는 부위 / TATA box – 보편전사인자 TFID가 결합하는 부위)"],["T2","s22","가. 증강인자 (답)"],["T4","g2","슬라이드 제목: 원거리에서도 조절되는 유전자발현 (본문에 '증강인자' 직접 문장 없음)",true]],
+ srcs:[["24",2025,"M","Q18","s24"],["21",2022,"M","15","s21"],["22",2023,"M","15","s22"]],note:"21·22학번 자료는 같은 계열이라 독립 근거 1건으로 셉니다. 교안 직접 문장이 없어 낮음입니다."},
+{id:"24-2025-M-MC-20",ch:2,form:"MC",key:"2.신호전달방식",stem:"분비신호전달물질에 의한 신호전달체계 중 인접한 동일 타입의 세포에 작용하는 것은?",opts:["paracrine secretion (regulation)","endocrine secretion (regulation)","neurotransmitter secretion (regulation)","autocrine secretion (regulation)"],ans:[3],status:"교차확인",
+ ev:[["T2","s21","정답 ) 4 (paracrine secretion : 주변분비 신호전달, 신호물질이 멀리 확산되지 못한다 …)"],["T4","g2","Autocrine regulation : 인접한 동일 type의 세포에 작용"]],
+ srcs:[["24",2025,"M","Q20","s24"],["21",2022,"M","17","s21"]]},
+{id:"24-2025-M-MC-21",ch:2,form:"MC",key:"2.막수용체",stem:"세포막 수용체 중 가장 느리게 작용하는 수용체는?",opts:["효소 연계 수용체","G단백질 연계 수용체","이온통로 연계 수용체"],ans:null,
+ prop:{ans:[0],text:"① 효소 연계 수용체 (일반 지식)",conf:"중",alt:"② G단백질 연계 수용체",recheck:"수업·교재에서 수용체별 반응 속도 서술 확인 시"},status:"추론",
+ ev:[["T4","g2","세포막 수용체의 종류: Rapid Synaptic Signal / 7 pass protein / 효소 혹은 이온통로 활성화 / 3개의 단백질로 구성 / Single-pass transmembrane protein / Protein kinase",true],["T2","s21","[관련 문항] 가장 빠르게 반응하는 수용체는? 정답 나(이온통로 수용체)"]],
+ srcs:[["24",2025,"M","Q21","s24"]],note:"교안은 속도를 'Rapid Synaptic Signal'로만 언급해 '가장 느린 것'은 직접 근거가 없습니다."},
+{id:"24-2025-M-MC-22",ch:2,form:"MC",key:"2.세포내수용체",stem:"다음 중 옳은 것은?",opts:["이온 수용체에 스테로이드 호르몬이 작용한다.","갑상샘 호르몬은 세포막에 있는 수용체에 작용한다.","GPCR에 Vit. D가 작용한다.","레티노이드는 상대적으로 오랜 시간동안 작용한다.","동일 수용체에 붙으면 동일한 작용이 나타난다."],ans:[3],status:"추정",conf:"상",
+ ev:[["T4","g2","Ligand : Steroid hormone(부신피질 호르몬, 성호르몬), 갑상선호르몬, Retinoid, Vitamin D"],["T4","g2","Action mode : 세포내 수용체에 결합 → 수용체단백질 활성화 → 특정유전자 전사 조절"],["T4","g2","ligand 의 작용지속기간이 길다 – 수 시간 ~ 수 일"]],
+ srcs:[["24",2025,"M","Q22","s24"]],note:"교안 직접 문장으로 ④가 맞고 ①②③은 세포내 수용체 서술과 어긋납니다. 동일 문항의 T1~T3 정답은 없습니다."},
+{id:"24-2025-M-MC-23",ch:2,form:"MC",key:"2.G단백",stem:"G단백 연계 수용체를 통한 신호 전달 통로 중 GTP에 고친화도를 보이는 부위인 것은?",opts:["알파 서브 유니트","베타 서브 유니트","감마 서브 유니트","델타 서브 유니트"],ans:[0],status:"교차확인",
+ ev:[["T2","s21","정답) 가"],["T4","g2","α sununit : High affinity for GTP (원문 표기 그대로)"]],
+ srcs:[["24",2025,"M","Q23","s24"],["21",2022,"M","19","s21"]]},
+{id:"24-2025-M-MC-24",ch:2,form:"MC",key:"2.이차전령",stem:"G단백 연계 수용체를 통한 신호 전달 경로 중 DAG 관련 활성화되는 인산화효소는?",opts:["Protein kinase A","Protein kinase B","Protein kinase C","Protein kinase D"],ans:[2],status:"추정",conf:"상",
+ ev:[["T4","g2","DAG와 C-kinase(PKC)의 작용"]],
+ srcs:[["24",2025,"M","Q24","s24"],["22",2023,"M","22","s22"],["22",2023,"M","-","s22b"]],note:"22학번 자료에는 문항만 있고 정답 표기가 없습니다."},
+{id:"24-2025-M-MC-25",ch:2,form:"MC",key:"2.효소연계수용체",stem:"효소 연계 수용체를 통한 신호전달 중 혈소판성장유래인자가 관련된 수용체는?",opts:["guanylyl cyclase 수용체","티로신 키나아제 수용체","티로신 인산분해효소 수용체","세린/트레오닌 수용체"],ans:[1],status:"추정",conf:"상",
+ ev:[["T4","g2","티로신 키나아제 수용체 … 혈소판유래성장인자(platelet-derived growth factor) 수용체"]],
+ srcs:[["24",2025,"M","Q25","s24"],["22",2023,"M","-","s22"],["22",2023,"M","-","s22b"]],note:"22학번 자료에는 문항만 있고 정답 표기가 없습니다."},
+{id:"21-2022-M-MC-#14",ch:2,form:"MC",key:"2.리보솜",stem:"다음 리보솜 부위 중 아미노아실이 결합되는 부위는",opts:["A","P","E"],ans:[0],status:"추정",conf:"낮음",
+ ev:[["T2","s21","정답) 가 – A(아미노아실-tRNA), P(펩티딜-tRNA), E(exit)이 리보솜과 tRNA가 결합하는 부위"],["T2","s22","가. A (답)"]],
+ srcs:[["21",2022,"M","14","s21"],["22",2023,"M","-","s22"]],note:"교안 2장의 해당 슬라이드는 제목만 추출되어 T4 근거가 없습니다."},
+{id:"21-2022-M-MC-#16",ch:2,form:"MC",key:"2.유전자조절",stem:"다능성 조상세포가 뼈모세포로 분화될 수 있도록 하는 인자는?",opts:["Runx2/osterix","Myo D","Sox4/5/6","PPAR 감마"],ans:[0],status:"추정",conf:"중",
+ ev:[["T2","s21","정답) 1 (Myo D : 근육세포 분화에 영향 / SOX 5/6/9 : 연골세포 분화에 영향 / PPAR감마 : 지방세포 분화에 영향)"],["T3","k76a","제76회 2교시 55번(중간엽줄기세포가 뼈모세포로 분화·기능하는 데 필수적인 전사인자) 최종답안 ⑤ RUNX2, OSTERIX — 개념 유사 문항",true],["T4","g2","슬라이드 제목: 조합조절에 의한 서로 다른 세포 유형의 형성 / 세포분화 (본문 없음)",true]],
+ srcs:[["21",2022,"M","16","s21"]],
+ typo:[["선지 ③ Sox4/5/6","SOX 5/6/9 (해설 표기)","선지와 해설의 표기가 다릅니다. 원문은 그대로 두고 병기합니다."]]},
+{id:"21-2022-M-MC-#18",ch:2,form:"MC",key:"2.막수용체",stem:"세포막수용체의 종류 중 가장 빠르게 반응하는 수용체는?",opts:["효소 수용체","이온통로 수용체","G단백 수용체"],ans:[1],status:"추정",conf:"중",
+ ev:[["T2","s21","정답 나. (이온 통로 수용체 – rapid synaptic signal / …)"],["T4","g2","세포막 수용체의 종류: Rapid Synaptic Signal",true]],
+ srcs:[["21",2022,"M","18","s21"]]},
+{id:"21-2022-M-MC-#20",ch:2,form:"MC",key:"2.G단백",stem:"이노시톨인산 신호전달경로와 관련이 있는 G단백 연계 수용체 매개 세포성 반응 중간에서 글리코겐 분해에 관여하는 신호전달 물질은 무엇인가요?",opts:["바소프레신","아세틸콜린","프롬빈","항원"],ans:[0],status:"추정",conf:"낮음",
+ ev:[["T2","s21","정답) 가"]],srcs:[["21",2022,"M","20","s21"]],
+ typo:[["프롬빈","트롬빈(thrombin) 의심","철자 오기 의심입니다."],["반응 중간에서","반응 중 간에서 의심","띄어쓰기 오기 의심입니다."]],note:"교안에서 같은 문장을 찾지 못해 T2 단독 근거입니다."},
+{id:"22-2023-M-MC-n01",ch:2,form:"MC",key:"2.이차전령",stem:"G단백 연계 수용체를 통한 신호전달 경로 중 cAMP관련 억제되거나 활성화되는 인산화효소는?",opts:["Protein kinase A","Protein kinase B","Protein kinase C","Protein kinase D"],ans:[0],status:"추정",conf:"상",
+ ev:[["T4","g2","Cyclic AMP-dependent Protein Kinase A"]],srcs:[["22",2023,"M","-","s22b"]],note:"22학번 자료는 문항만 있고 정답 표기가 없습니다. 24학번 판본에는 나오지 않았습니다."},
+{id:"22-2023-M-MC-n02",ch:2,form:"MC",key:"2.mRNA수명",stem:"mRNA의 수명을 결정하는 인자는?",opts:["5'-capping","3'-tailing","intron removing"],ans:null,
+ prop:{ans:[1],text:"② 3'-tailing (poly-A 꼬리, 일반 지식)",conf:"하",alt:"① 5'-capping",recheck:"교안·수업에서 mRNA 수명 결정 인자 서술 확인 시"},status:"추론",
+ ev:[["T4","g2","mRNA의 수명이 각기 다르기 때문에 세포는 자기가 합성하는 각 단백질의 양을 결정할 수 있다."]],
+ srcs:[["22",2023,"M","14","s22"],["22",2023,"M","-","s22b"]],note:"교안은 수명의 의미만 서술하고 결정 인자는 밝히지 않습니다."},
+/* ---- 3장 ---- */
+{id:"24-2025-M-DS-30",ch:3,form:"DS",key:"3.삼투",stem:"정상적인 생리환경에서 세포내액과 세포외액의 삼투농도는?",atext:null,status:"추론",
+ prop:{text:"서로 같다 (등삼투, 일반 지식)",conf:"중",alt:"없음",recheck:"교안의 정상 삼투농도 서술 확인 시"},
+ ev:[["T4","g3b","정상 생리환경 세포내·외액의 삼투농도 : 300 mOsm/L"],["T4","g3","세포 내외의 삼투농도 차이에 따라 세포 용적이 변화하며, 적혈구는 고장성 용액에서 위축되고 저장성 용액에서 부종 일으킴"]],
+ srcs:[["24",2025,"M","Q30","s24"]]},
+{id:"24-2025-M-MC-32",ch:3,form:"MC",key:"3.도나평형",stem:"도나평형에 대한 설명으로 옳은것은?",opts:["세포 용적의 항상성은 Na-K pump에 의해 유지된다.","주로 세포의 고분자 물질이 삼투 농도를 결정한다.","세포 내의 음으로 전하된 단백질은 동일 수의 양이온을 끌어들인다.","도나평형에 의해 세포 내의 삼투 농도가 낮아진다.","도나평형에 의해 세포의 용혈이 일어난다."],ans:[0],status:"교차확인",conf:"중",
+ ev:[["T2","s21f","3. 도나 평형에 대한 설명으로 옳은 것은? … 마. 세포용적의 항상성은 Na-K pump에 의해 유지된다. 답 : 마"],["T4","g3","Donnan 평형은 세포 내외의 전하 분포 차이로 인해 이온 농도가 균형을 이루는 현상 (요약형에는 세포 용적 항상성 직접 문장 없음)"],["T4","g3b","Donnan Excess … Cell swelling 유발 → Na-K Pump 활동으로 세포용적 유지"]],
+ srcs:[["24",2025,"M","Q32","s24"],["21",2022,"F","3","s21f"]],note:"21학번 기말 3번과 같은 문항입니다(선지 순서만 다르고 24학번 ①이 21학번 마). 정답은 T2(21학번 기말 답 마) 1건과 2026 교안 3장 원본 슬라이드(T4, Na-K Pump로 세포용적 유지)의 일치로 교차확인입니다. 1단계의 잠정 답 ③은 T5 추론이었고 T2 정답 표기와 달라 폐기했습니다."},
+{id:"24-2025-M-MC-34",ch:3,form:"MC",key:"3.상피수송",stem:"소장 상피 세포를 통한 물질 이동에 대한 설명으로 옳은 것은?",opts:["기저막에서는 Na-K pump가 작동한다.","포도당은 내막강에서 세포 내로 이동할 때 포도당 운반체에 의해 이동한다.","포도당은 세포에서 간질액으로 이동할 때 Na-포도당 운반체에 의해 이동한다.","포도당 농도는 세포 내보다 간질에서의 농도가 높아 능동 수송 된다.","포도당 농도는 세포 내보다 간질에서의 농도가 높아 수동 수송 된다."],ans:null,
+ prop:{ans:[0],text:"① ('기저막'을 기저측막으로 해석할 때)",conf:"하",alt:"② ('포도당 운반체'가 Na-포도당 공동운반체를 뜻할 때)",recheck:"선지 용어의 원 표기 확인 시"},status:"추론",
+ ev:[["T4","g3","공동운반(symport): Na+과 함께 세포 내로 이동하는 물질 (예: 포도당, 아미노산)"],["T4","g3","Na+-K+ 펌프는 세포 내 Na+ 농도를 낮추고 세포 밖으로 Na+를 이동시켜 삼투압을 통해 물과 영양분의 흡수를 촉진"]],
+ srcs:[["24",2025,"M","Q34","s24"],["21",2022,"F","5","s21f"]],note:"선지의 용어('내막강', '기저막', '포도당 운반체')가 모호해 단일 정답을 확정할 수 없습니다. 21학번 기말 5번과 선지가 같지만 정답 표기는 없습니다."},
+/* ---- 4장 ---- */
+{id:"24-2025-M-DS-38",ch:4,form:"DS",key:"4.활동전압",stem:"신경에서 전압이 존재하는데, 특정한 전압을 넘으면 상승하여 활동이 진행되고, 그 전압을 도달하지 못하면 국소 반응에 머무르게 되는데, 이 전압은 무엇인가?",atext:"역치전압 (threshold potential)",status:"추정",conf:"상",
+ ev:[["T4","g4","역치전압, threshold potential : 상승하여 활동전압을 형성"],["T4","g4","막전압 변화가 역치전압에 도달하지 못하면 국소반응(local response)"]],
+ srcs:[["24",2025,"M","Q38","s24"]]},
+{id:"24-2025-M-DS-39",ch:4,form:"DS",key:"4.이온통로",stem:"활동전압 생성시 탈분극 시 자동하는 이온채널의 이름은?",atext:"전압 의존성 Na⁺ 통로 (voltage-gated Na channel)",status:"추정",conf:"상",
+ ev:[["T4","g4","Na 통로는 막전압이 저분극되면 신속하게 활성화되는데 비해 K 통로는 약 1msec 정도 시간 소요"],["T3","k74a","제74회 2교시 65번(막전압이 빠르게 탈분극되고 과도 전압을 보일 때 주로 기여하는 이온 통로) 최종답안 ② 막전압의존성 Na⁺ 통로 — 개념 유사 문항(동일 문항 아님)",true]],
+ srcs:[["24",2025,"M","Q39","s24"]],
+ typo:[["자동하는","작동하는","문맥상 오기 의심입니다."]],note:"K 통로도 탈분극에서 활성화되지만 느립니다. 문항이 '먼저 작동하는' 채널을 묻는다고 보면 Na 통로입니다."},
+{id:"24-2025-M-MC-41",ch:4,form:"MC",key:"4.이온통로",stem:"세포막의 이온 통로에 대한 설명으로 옳은 것을 고르시오.",opts:["리도카인은 Na 이온 통로를 통해 신경 전달을 비활성화한다.","TTX는 저분극 상태에서 이온 통로를 활성화시켜 신경 전달에 혼성시킨다.","K 통로는 한 개의 단백질 사슬로 구성되어 있다.","M type K 통로는 빠르게 활성화된다.","Ca 통로가 열리면 전기화학경사에 의해 세포 외로 이동한다."],ans:[0],status:"추정",conf:"상",
+ ev:[["T4","g4","리도카인과 기타 국소마취제는 막전압 의존성 Na+ 통로 (voltage-gated Na channel)에 결합함으로써 활동전압이 일어나지 않게 한다."],["T4","g4","K 통로는 4개의 단백질 소단위(subunit)로 구성"],["T3","k77a","제77회 2교시 74번(국소마취제의 작용기전) 최종답안 ② 주된 작용기전은 전압의존성 Na⁺ 통로를 억제하는 것이다 — 개념 유사 문항",true]],
+ srcs:[["24",2025,"M","Q41","s24"],["21",2022,"F","9","s21f"]],
+ typo:[["② 신경 전달에 혼성시킨다","(불명)","'혼성'은 오기 의심입니다. 교안에 TTX 서술이 없어 ②는 판단하지 않았습니다."]]},
+/* ---- 5장 ---- */
+{id:"24-2025-M-DS-42",ch:5,form:"DS",key:"5.전기시냅스",stem:"코넥신 단백질 6개가 뭉쳐 전기적 시냅스를 형성하는 통로는?",atext:"코넥손 (connexon, 간극 연접)",status:"추정",conf:"상",
+ ev:[["T4","g5","간극 연접 (gap junction) : 코넥신(connexin) 단백질 6개가 뭉쳐서 이루는 코넥손(connexon)"]],
+ srcs:[["24",2025,"M","Q42","s24"]]},
+{id:"24-2025-M-DS-45",ch:5,form:"DS",key:"5.시냅스가소성",stem:"글루탐산 수용체 중 장기강화에 세포 밖으로 노출되어 어쩌고 수용체는?",atext:"AMPA 수용체",status:"추정",conf:"상",
+ ev:[["T4","g5","시냅스 후 막단백질이 인산화되면 이들은 세포 내 소포에 보관되어 있는 AMPA 수용체를 세포막으로 노출시킨다. … 이것이 LTP의 기전이다."]],
+ srcs:[["24",2025,"M","Q45","s24"]],
+ typo:[["어쩌고","(원문 미복기)","복기가 생략된 표시로 보입니다."]]},
+/* ---- 21·22학번 기말 중 3~5장 겹침분 (예2-1 기말은 3~5장 + 근육 범위) ---- */
+{id:"21-2022-F-MC-#01",ch:3,form:"MC",key:"3.확산",stem:"(문두 미복기: 번호만 남음)",opts:["확산속도는 분자 반경에 비례한다.","확산속도는 반응 계수에 비례한다.","확산속도는 막의 두께에 비례한다.","분리계수는 수용액의 농도에 비례한다.","수용성 물질은 fick의 법칙을 따른다."],ans:null,status:"미확정",
+ ev:[["T4","g3","막을 통한 확산 속도는 확산계수, 농도 차이, 막 면적, 두께에 의해 결정"],["T4","g3","세포막 확산은 물질의 지질 용해도(분리계수)가 클수록 증가"]],
+ srcs:[["21",2022,"F","1","s21f"]],note:"문두가 복기되지 않아 정답을 정하지 않았습니다."},
+{id:"21-2022-F-MC-#02",ch:3,form:"MC",key:"3.통로",stem:"통로단백질에 대한 설명으로 옳은 것은?",opts:["세포막은 분자량 200이상의 분자에 대해서 투과성이다","모든 이온통로는 비특이적이다.","물리적 힘으로 단백질 구조가 변형되는 경우 리간드 의존성 통로라 한다","활성 역치에 의해 열리는 통로를 리간드 의존성 통로라 한다","탈분극에 의해 열리는 통로를 전압의존성 통로라 한다"],ans:[4],status:"추정",conf:"상",
+ ev:[["T4","g3","통로 단백질은 선택적 투과성과 열림/닫힘 기능을 가짐"],["T4","g3","전압 의존성 통로: 막전압 변화에 따라 열림/닫힘"],["T4","g3","기계적 통로: 물리적 힘에 의해 구조 변형 및 열림/닫힘"]],
+ srcs:[["21",2022,"F","2","s21f"]],note:"정답 표기는 없습니다. 교안 직접 문장으로 ②③④가 틀리고 ⑤가 합치합니다."},
+{id:"21-2022-F-MC-#04",ch:3,form:"MC",key:"3.능동수송",stem:"다음 중 이차능동수송인 것은?",opts:["Na - Ca 통로","Na - K 통로","Na - K Atpase pump","K pump","H pump"],ans:null,status:"미확정",cand:[0],
+ ev:[["T4","g3","역방향운반(antiport): Na+은 세포 내로 이동, 다른 물질은 세포 외로 이동 (예: Ca2+, H+)"]],
+ srcs:[["21",2022,"F","4","s21f"]],note:"①이 역방향운반에 해당할 수 있으나 '통로' 표기가 모호하고 교안은 H+ 펌프를 일차 능동수송으로 서술해 확정하지 않습니다."},
+{id:"22-2023-F-MC-n01",ch:3,form:"MC",key:"3.능동수송",stem:"이차능동수송인것은?",opts:["na k 펌프","na glucose 펌프","na k atpase","H 펌프","Ca 펌프"],ans:[1],status:"추정",conf:"상",
+ ev:[["T4","g3","공동운반(symport): Na+과 함께 세포 내로 이동하는 물질 (예: 포도당, 아미노산)"],["T4","g3","일차 능동수송은 직접 에너지를 소비하며 (예: Na+/K+ 펌프)"]],
+ srcs:[["22",2023,"F","-","s22f"]],note:"22학번 자료는 21학번 대비 추가 문항만 수록하며 정답 표기는 없습니다."},
+{id:"21-2022-F-MC-#06",ch:4,form:"MC",key:"4.막전압",stem:"안정막전압과 평형전압에 관해서 옳은 설명은?",opts:["Na의 전기적 힘이 밖으로 작용한다.","Na의 화학적 힘이 밖으로 작용한다.","K의 전기적 힘이 밖으로 작용한다.","K의 화학적 힘이 밖으로 작용한다.","K보다 Na에 더 강한 전기적 힘이 작용한다."],ans:[3],status:"추정",conf:"중",
+ ev:[["T4","g3","세포 내부 K+, 인산기 농도 높고, Na+, Cl−, Ca2+는 외부에 더 높음"],["T4","g4","신경세포 -60~-70mV (안정막전압: 세포내 음전압)",true]],
+ srcs:[["21",2022,"F","6","s21f"]],note:"정답 표기는 없습니다. K+는 세포 내 농도가 높아 화학적 힘이 밖으로 작용하고, 세포 내가 음전압이라 전기적 힘은 안으로 작용한다는 소거 판단입니다."},
+{id:"21-2022-F-MC-#10",ch:4,form:"MC",key:"4.전도",stem:"신경에 대한 설명으로 옳은것은?",opts:["운동신경의 전도속도가 가장 빠르다","신경의 평균직경과 전도속도는 반비례한다","국소마취제는 운동신경에 가장 먼저 작용한다","압력에 의한 작용은 운동신경에 가장 늦게 작용한다","무수신경의 전도속도가 유수신경의 전도속도보다 빠르다"],ans:[0],status:"추정",conf:"중",
+ ev:[["T3","k75a","제75회 2교시 57번(도약전도가 일어날 수 없어 전도속도가 가장 느린 신경 섬유) 최종답안 ⑤ C 신경 — 신경섬유별 전도속도 개념 유사 문항",true],["T4","g4","활동전압 전도속도를 크게 하는 방법 1) 축삭직경 증가 2) Myelin화"],["T4","g4","가는 신경축삭이 굵은 축삭보다 국소마취제에 의해 먼저 작용을 받는다."],["T4","g4","표 4-2 신경섬유 분류: Aα 운동신경(골격근) 평균직경 15, 평균전도속도 100(70~120) / 표 4-3 압력: A 신경 감수성 큼, 국소마취제: C 신경 감수성 큼",true]],
+ srcs:[["21",2022,"F","10","s21f"]],note:"정답 표기는 없습니다. ②는 직경↑ 전도속도↑와 어긋나고, ⑤는 유수신경이 빠르다는 서술과 어긋납니다. ①은 표(이미지 추출)에 기반해 신뢰도를 중으로 둡니다."},
+{id:"21-2022-F-MC-#14",ch:4,form:"MC",key:"4.이온통로",stem:"신경세포의 이온통로에 대한 설명으로 옳은 것은?",opts:["축삭에는 주로 ligand gated Na통로가 존재한다","축삭에는 주로 ligand gated Ca통로가 존재한다","축삭에는 주로 signal gated Na통로가 존재한다","ligand gated Na통로는 외부 신호를 통해 개폐가 조절된다","누출채널이 열려 축삭을 따라 전기신호가 전달된다"],ans:[3],status:"추정",conf:"중",
+ ev:[["T4","g3","리간드 의존성 통로: 특정 물질 결합으로 열림/닫힘"],["T4","g5","뉴런 그림 라벨: Dendrites (Na- and Ca2+-channels) / Cell body: Ligand-gated channels / Axon: Voltage-gated channels",true]],
+ srcs:[["21",2022,"F","14","s21f"]],note:"정답 표기는 없습니다. 축삭에는 전압 의존성 통로가 있다고 보면 ①②③이 틀립니다."},
+{id:"21-2022-F-DS-#19",ch:4,form:"DS",key:"4.이온통로",stem:"근육세포 활동전압시 탈분극시에 열리는 이온통로는?",atext:"Na 통로",status:"교차확인",
+ ev:[["T2","s21f","19. 근육세포 활동전압시 탈분극시에 열리는 이온통로는? Na 통로"],["T4","g4","Na 통로는 막전압이 저분극되면 신속하게 활성화되는데 비해 K 통로는 약 1msec 정도 시간 소요"],["T3","k74a","제74회 2교시 65번 최종답안 ② 막전압의존성 Na⁺ 통로 — 개념 유사 문항",true]],
+ srcs:[["21",2022,"F","19","s21f"]],note:"24학번 Q39와 같은 개념입니다. 문항이 근육세포로 한정돼 있어 별개 문항으로 두었습니다."},
+{id:"21-2022-F-MC-#11",ch:5,form:"MC",key:"5.시냅스비교",stem:"전기적 시냅스와 화학적 시냅스 비교",opts:["전기적 시냅스의 길이가 짧다","전기적 시냅스는 공간적으로 세포 간이 있다 (확실하지 않아요…)","화학적 시냅스는 gap junction으로 구성되어 있다","화학적 시냅스는 시냅스 지연이 있다","화학적 시냅스는 양방향 통신한다."],ans:null,status:"미확정",cand:[0,3],
+ ev:[["T4","g5","표 14-1 전기시냅스와 화학시냅스의 비교: 전기 3.5 nm · 지연 거의 없음 · 보통 양방향 / 화학 지연 최소 0.3 ms, 보통 1~5 ms · 일방향",true]],
+ srcs:[["21",2022,"F","11","s21f"]],typo:[["(확실하지 않아요…)","(복기자 메모)","복기자 메모이므로 원문 그대로 보존합니다."]],note:"①④가 모두 교안과 합치해 단일 정답을 정할 수 없습니다. 22학번 변형 문항(별도 카드)에서는 정답이 하나로 가려집니다."},
+{id:"22-2023-F-MC-n02",ch:5,form:"MC",key:"5.시냅스비교",stem:"전기적 시냅스와 화학적 시냅스를 비교한 것 중 옳은 것은?",opts:["전기적 시냅스는 거리가 길다","전기적 시냅스는 공간적으로 두 세포가 연결되어있다","화학적 시냅스는 gap junction으로 이루어져있다","전기적 시냅스는 시냅스 지연이 있다","화학적 시냅스는 양방향 통신한다"],ans:[1],status:"추정",conf:"상",
+ ev:[["T4","g5","표 14-1: 세포질 연속성 전기 Yes / 화학 No · 전기 3.5 nm · 전기 지연 없음 · 화학 일방향",true]],
+ srcs:[["22",2023,"F","-","s22f"]],note:"정답 표기는 없습니다. ①③④⑤가 교안 표와 어긋납니다."},
+{id:"21-2022-F-MC-#13",ch:5,form:"MC",key:"5.시냅스후전압",stem:"시냅스 후 막전압에 대한 설명으로 옳은 것은?",opts:["신경전달물질이 무스카린성 수용체에 결합한다.","흥분성 시냅스는 Na 통로가 관여한다.","억제성 시냅스는 막전압의 변화가 있을 때 탈분극된다.","억제성 시냅스는 치밀막이 잘 발달되어있다.","축삭-축삭 시냅스는 주로 흥분성 시냅스이다."],ans:[1],status:"교차확인",
+ ev:[["T2","s21f","13. 시냅스 후 막전압에 대한 설명으로 옳은 것은? … 답: 나"],["T4","g5","흥분성 신경전달물질로는 아세틸콜린, 노르아드레날린, 글루탐산염, 신경펩티드 → Na+, Ca2+ 통로를 활성화 탈분극"]],
+ srcs:[["21",2022,"F","13","s21f"]]},
+{id:"21-2022-F-MC-#17",ch:5,form:"MC",key:"5.시냅스가소성",stem:"시냅스 가소성에 관한 설명으로 옳은 것은?",opts:["장기기억저하에 의해 축삭에서 ca2+이온의 유출이 증가한다.","장기기억억제가 ampa의 세포외유출이 증가된다","장기기억저하에 의해 nmda의 세포외유출이 증가된다","장기기억강화에 의해 ampa 세포외유출이 증가된다.","장기기억강화에 의해 nmda 세포외유출이 증가된다"],ans:[3],status:"추정",conf:"중",
+ ev:[["T4","g5","시냅스 후 막단백질이 인산화되면 이들은 세포 내 소포에 보관되어 있는 AMPA 수용체를 세포막으로 노출시킨다. … 이것이 LTP의 기전이다. (LTD는 AMPA 수용체를 세포 내로 끌어 내리는 기전)"]],
+ srcs:[["21",2022,"F","17","s21f"]],note:"정답 표기는 없습니다. 선지의 '세포외유출'은 AMPA 수용체가 세포막으로 노출되는 것(exocytosis)을 뜻하는 것으로 해석했습니다."},
+{id:"21-2022-F-DS-#20",ch:5,form:"DS",key:"5.시냅스후전압",stem:"시냅스의 형성 과정에서 억제성 시냅스 후 막전압의 형성에 기여하는 이온투과성 수용체는 무엇인가?",atext:"GABA 수용체",status:"교차확인",
+ ev:[["T2","s21f","20. 시냅스의 형성 과정에서 억제성 시냅스 후 막전압의 형성에 기여하는 이온투과성 수용체는 무엇인가? GABA 수용체"],["T4","g5","신경전달물질로 글리신(glycine), γ-aminobutyric acid(GABA) 등을 분비하는데 이들은 시냅스 후 세포에서 Cl-통로 활성화 과분극"]],
+ srcs:[["21",2022,"F","20","s21f"]]},
+{id:"22-2023-F-MC-n03",ch:5,form:"MC",key:"5.수용체",stem:"수용체에 대해 옳은것은?",opts:["니코틴수용체는 무스카린수용체보다 작다","니코틴수용체는 이온통로를 가지고있다","니코틴수용체는 G단백질수용체와 연계되어있다","큐라레는 무스카린성수용체의 억제물질이다","아트로핀은 무스카린성 수용체를 억제한다"],ans:null,status:"미확정",cand:[1,4],
+ ev:[["T4","g5","신경근육접합부: 1. 신경흥분 → 신경전달물질 유리 2. 니코틴 수용체 활성화 3. 세포내 Na+ 유리 4. 세포막 탈분극"]],
+ srcs:[["22",2023,"F","-","s22f"]],note:"②는 교안(니코틴 수용체 활성화로 Na+ 유입)과 합치합니다. ⑤는 교안에 서술이 없어 판정하지 않았고 단일 정답을 정할 수 없습니다."}
+];
+
+/* ===== 범위 외 (23학번 중간: 혈액·순환 중심, 블라인드형) ===== */
+const OUT=[
+{id:"23-2024-M-DS-02",stem:"혈액을 원심분리 할 경우 백혈구와 혈소판이 모여있는 층은?"},
+{id:"23-2024-M-DS-03",stem:"히스타민 분비를 하여 알레르기 반응을 유발하는 백혈구는?"},
+{id:"23-2024-M-DS-05",stem:"세균의 LPS는 백혈구의 diapedesis와 화학주성을 유발한다."},
+{id:"23-2024-M-DS-06",stem:"적혈구로 분화시키는 신장분비 호르몬"},
+{id:"23-2024-M-MC-08",stem:"적혈구 관련 질병에 관한 설명으로 옳은 것을 고르시오.",opts:["영양성 빈혈은 출혈로 인한 철분 부족으로 발생한다.","용혈성 빈혈은 비타민 B12와 위산으로 인해 발생한다.","악성빈혈은 비정상적인 아미노산 배열로 인해 발생하며 주로 유전질환에서 기인한다","고산지대에 사는 사람은 빈혈이 있다","신장 질환으로 인한 적혈구 형성 인자 부족으로 생성된다."]},
+{id:"23-2024-M-DS-09",stem:"적혈구의 글로빈 아미노산 배열 1개 바뀌어서 생기는 질병?",atext:"겸상적혈구빈혈증"},
+{id:"23-2024-M-DS-11",stem:"내피세포층이 파괴되었을 때 거대핵세포,혈소판이 분비하는 폰빌레브란트인자가 부착하는 단백질은?"},
+{id:"23-2024-M-MC-12",stem:"혈액 응고에 대해 옳은것은?",opts:["일차지혈은 피브린","혈관 손상은 혈소판 응집을 억제한다","트롬빈은 혈소판 응집도 촉진한다","손상된 혈관에서는 산화질소의 양이 증가한다","초기 혈관 수축시 프로스타글라딘이 관여"]},
+{id:"23-2024-M-DS-15",stem:"혈소판이 부족한 사람에서 산재성 모세혈관 출혈이 자줏빛을 띤 반점으로 나타나는 질환은 무엇인가?"},
+{id:"23-2024-M-DS-16",stem:"혈액 응고가 일어날 때 피떡과 분리되는 노란빛의 투명한 액체는?",dup:"37번과 같은 개념으로 보입니다."},
+{id:"23-2024-M-DS-17",stem:"인체 장기 중 혈액응고인자를 가장 많이 생성하는 장기는?"},
+{id:"23-2024-M-DS-18",stem:"섬유소를 용해성 섬유조각으로 용해하는 물질은?"},
+{id:"23-2024-M-DS-21",stem:"심방과 심실을 구별하는 섬유성 조직?"},
+{id:"23-2024-M-DS-26",stem:"심박조율기로 작동하는 funny sodium pump는 (과분극,탈분극)에 의해 활성화된다",atext:"탈분극"},
+{id:"23-2024-M-DS-31",stem:"어떤 심장 질환?"},
+{id:"23-2024-M-DS-32",stem:"phase2에서 어떤 막전압의존성 통로가 활성화되나?"},
+{id:"23-2024-M-DS-35",stem:"자동조절기전에 대한 설명",atext:"frank-starling"},
+{id:"23-2024-M-DS-36",stem:"동맥이 확장되면 혈관이 확장하고 혈압이 감소한다. 이때 작용하는 억제성 반사는?"},
+{id:"23-2024-M-DS-37",stem:"혈액응고에서 피떡 제외 노란색 물질의 이름",dup:"16번과 같은 개념으로 보입니다."}
+];
+
+/* ===== 예상 문제 (단원당 기출 수와 같은 42건) ===== */
+const B=[
+/* 1장 15건 */
+{id:"B-1-01",ch:1,form:"MC",stem:"교안 표 기준으로 간질액(interstitial fluid)이 체중에서 차지하는 비율은?",opts:["4%","16%","20%","40%","60%"],ans:[1],
+ expl:"표에서 간질액은 체중의 16%입니다. 혈장은 4%, 세포외액은 20%, 세포내액은 40%, 전체 체액은 60%입니다.",ev:["g1","Interstitial fluid 11.2 L · 체액의 26.4% · 체중의 16% (80% of ECF)",true],der:["24-2025-M-DS-03","24-2025-M-MC-02"]},
+{id:"B-1-02",ch:1,form:"MC",stem:"혈장(plasma)은 세포외액(ECF)의 몇 %를 차지하는가?",opts:["6.6%","20%","33%","67%","80%"],ans:[1],
+ expl:"혈장은 세포외액의 20%이고 간질액이 80%입니다. 6.6%는 전체 체액 대비 혈장 비율입니다.",ev:["g1","Plasma 2.8 L · 체액의 6.6% · 체중의 4% (20% of ECF)",true],der:["24-2025-M-DS-03"]},
+{id:"B-1-03",ch:1,form:"MC",stem:"세포외액보다 세포내액에서 농도가 더 높은 이온의 조합은?",opts:["K⁺, 인산기","Na⁺, Cl⁻, Ca²⁺","K⁺, Na⁺","Cl⁻, 인산기","Ca²⁺, K⁺"],ans:[0],
+ expl:"세포 내부에는 K+와 인산기가 많고 Na+, Cl−, Ca2+는 세포 외부에 더 많습니다.",ev:["g3","세포 내부 K+, 인산기 농도 높고, Na+, Cl−, Ca2+는 외부에 더 높음"],der:["24-2025-M-DS-04","21-2022-M-MC-#04"]},
+{id:"B-1-04",ch:1,form:"DS",stem:"음식물이 소화관에 있을 때 흡수 이후를 예상하여 호르몬 분비를 미리 늘리는 조절 기전은?",atext:"앞먹임 기전 (feed-forward system)",
+ expl:"앞먹임 기전은 변화를 예상하여 반응을 일으키는 것입니다.",ev:["g1","앞먹임 기전(feed-forward system) • 변화를 예상하여 반응을 일으키는 것"],der:["24-2025-M-DS-06"]},
+{id:"B-1-05",ch:1,form:"DS",stem:"RNA를 주형으로 DNA를 합성하는 과정은?",atext:"역전사 (reverse transcription)",
+ expl:"중심원리 그림에서 DNA→RNA는 전사, RNA→DNA는 reverse transcription으로 표시됩니다.",ev:["g1","Transcription Replication Reverse transcription Translation (그림 라벨)",true],der:["24-2025-M-MC-13"]},
+{id:"B-1-06",ch:1,form:"MC",stem:"단백질 합성의 개시 코돈은?",opts:["UAA","UAG","UGA","AUG","UGG"],ans:[3],
+ expl:"AUG가 개시 코돈(메싸이오닌)이고 UAA·UAG·UGA는 종결 코돈, UGG는 트립토판입니다.",ev:["g1","AUG (개시 코돈)"],der:["24-2025-M-MC-16"]},
+{id:"B-1-07",ch:1,form:"MC",stem:"세포막이 세포외액 내 입자를 둘러싼 뒤 식세포소포를 형성하고 용해소체와 융합시키는 세포내이입의 형태는?",opts:["포식작용","포음작용","수용체 매개 세포내이입","세포외유출"],ans:[0],
+ expl:"포식작용은 입자를 둘러싼 식세포소포가 용해소체와 융합해 분해됩니다.",ev:["g1","A, 포식작용. 세포막이 세포외액 내 입자를 둘러 싼 후 식세포소포를 형성하고 용해소체와 융합시킨다."],der:["24-2025-M-DS-09"]},
+{id:"B-1-08",ch:1,form:"MC",stem:"포도당 1분자가 해당과정으로 분해될 때 교안에 제시된 산물은?",opts:["피루브산 1분자와 ATP 2분자","피루브산 2분자와 ATP 2분자","피루브산 2분자와 ATP 4분자","피루브산 2분자와 ATP 36분자","젖산 2분자와 ATP 2분자"],ans:[1],
+ expl:"해당과정은 포도당을 분해하여 2분자의 피루브산과 함께 2분자의 ATP를 산출합니다.",ev:["g1","해당과정은 포도당을 분해하여 2분자의 피루브산과 함께 2분자의 ATP를 산출한다."],der:["24-2025-M-DS-07","24-2025-M-MC-11"]},
+{id:"B-1-09",ch:1,form:"DS",stem:"전자전달계에서 전자가 마지막으로 전달되는 수여자는?",atext:"산소 분자 (O₂)",
+ expl:"전자는 NADH 또는 FADH2에서 시작해 마지막 전자 수여자인 산소분자로 흐릅니다.",ev:["g1","시작 전자공여자(NADH 또는 FADH)에서 마지막 전자 수여자인 산소분자로의 전자 흐름의 경로를 표시한다."],der:["21-2022-M-MC-#09","21-2022-M-DS-#08"]},
+{id:"B-1-10",ch:1,form:"MC",stem:"심근세포의 간극결합(gap junction)에서 인접 세포의 세포질을 연결하는 채널을 이루는 단백질은?",opts:["카드헤린","코넥손","클라스린","히스톤","플라크"],ans:[1],
+ expl:"간극결합은 코넥손이라는 단백질들이 채널을 형성해 이온과 작은 분자를 통과시킵니다.",ev:["g1","간극결합, 코넥손이라는 단백질들이 채널을 형성하고 이 채널에 의해 두 인접한 세포의 세포질을 연결하고 있다."],der:["21-2022-M-DS-#10","24-2025-M-DS-42"]},
+{id:"B-1-11",ch:1,form:"DS",stem:"결합체(스트레스에 노출된 조직 내 세포 사이의 강한 접합)에서 두 플라크를 연결하는 세포간 단백질 섬유는?",atext:"카드헤린",
+ expl:"결합체에서는 카드헤린이라 불리는 세포간 단백질 섬유가 두 세포를 연결합니다.",ev:["g1","세포간 두 플라크를 연결해 주고 있는 카드헤린이라 불리는 세포간 단백질 섬유가 두 세포를 연결하고 있다."],der:["21-2022-M-DS-#10"]},
+{id:"B-1-12",ch:1,form:"MC",stem:"칼슘 저장고로 쓰이고 골수가 여러 혈구세포의 최종 근원지인 기관계는?",opts:["근육계","골격계","순환계","면역계","피부계"],ans:[1],
+ expl:"골격계는 칼슘 저장고로 이용되며 골수는 혈구세포의 최종 근원지입니다.",ev:["g1","골격계(skeletal system)는 연조직과 기관을 지지하고 보호한다. 또한 칼슘 저장고로서 이용되며"],der:["24-2025-M-DS-01"]},
+{id:"B-1-13",ch:1,form:"MC",stem:"주된 두 가지 인체 조절계 중 호르몬을 통해 지속적인 반응을 조절하는 계는?",opts:["신경계","내분비계","면역계","비뇨기계"],ans:[1],
+ expl:"신경계는 즉각적인 반응을, 내분비계는 호르몬을 통한 지속적인 반응을 조절합니다.",ev:["g1","내분비계는 호르몬을 통한 지속적인반응을 조절한 다."],der:["24-2025-M-DS-01"]},
+{id:"B-1-14",ch:1,form:"MC",stem:"산성을 띠는 이산화탄소의 제거율을 조절함으로써 내부환경의 pH를 조절하는 기관계는?",opts:["소화계","호흡계","비뇨기계","순환계"],ans:[1],
+ expl:"호흡계는 산소를 받아들이고 이산화탄소를 배출하며 이 제거율로 pH를 조절합니다.",ev:["g1","산성을 띠는 이산화 탄소의 제거율을 조절함으로써 내부환경의 pH를 조절하고 있다."],der:["24-2025-M-DS-01"]},
+{id:"B-1-15",ch:1,form:"MC",stem:"세포외유출(exocytosis)의 기능이 아닌 것은?",opts:["세포막에 구성 성분을 첨가한다","세포내이입으로 제거된 수용체를 재활용한다","항체를 세포외액으로 분비한다","점액을 세포외액으로 분비한다","세포외액의 입자를 둘러싸 용해소체에서 분해한다"],ans:[4],
+ expl:"입자를 둘러싸 용해소체에서 분해하는 것은 세포내이입(포식작용)입니다.",ev:["g1","세포외유출(Exocytosis) (1)세포막에 구성 성분을 첨가 (2)세포내이입에 의해 세포막으로부터 제거된 수용체를 재활용 (3)특정물질을 세포외액으로 분비 : 항체, 점액, 장 액"],der:["24-2025-M-DS-09"]},
+/* 2장 19건 */
+{id:"B-2-01",ch:2,form:"MC",stem:"RNA 짜깁기 과정에서 제거되는 서열은?",opts:["엑손","인트론","촉진자","증강인자","개시 코돈"],ans:[1],
+ expl:"RNA 짜깁기 과정에 의해 제거되는 것은 인트론이며 남은 엑손이 연결됩니다.",ev:["g2","RNA 짜깁기 과정에 의해 제거되는 인트론",true],der:["24-2025-M-DS-15"]},
+{id:"B-2-02",ch:2,form:"MC",stem:"snRNP와 여러 단백질이 조합되어 형성되어 RNA 짜깁기를 촉매하는 복합체는?",opts:["스플라이소좀","리보솜","뉴클레오솜","프로테아좀","볼트"],ans:[0],
+ expl:"스플라이소좀이 mRNA 전구체의 짜깁기 신호를 인식하고 반응을 촉매합니다.",ev:["g2","snRNP (채색된 원)와 여러 단백질이 조합되어 형성된 스플라이 소좀에 의해 촉매되는 RNA 짜집기"],der:["24-2025-M-DS-15"]},
+{id:"B-2-03",ch:2,form:"MC",stem:"교안에 따르면 세균 mRNA의 수명은 약 얼마인가?",opts:["약 3분","약 30분","약 3시간","약 30시간"],ans:[0],
+ expl:"세균(약 3분)보다 진핵 세포에서 만들어지는 mRNA의 수명이 보통 더 깁니다.",ev:["g2","세균(약 3분 정도)보다 진핵 세포에서 만들어지는 mRNA의 수명은 보통 더 길다."],der:["22-2023-M-MC-n02"]},
+{id:"B-2-04",ch:2,form:"MC",stem:"다음 중 수명이 수일 혹은 수초로 가장 짧은 단백질 부류는?",opts:["뼈의 구조단백질","근육의 구조단백질","대사에 관여하는 효소"],ans:[2],
+ expl:"구조단백질은 수개월~수년 생존하고, 대사에 관여하는 효소는 수일 혹은 수초입니다.",ev:["g2","대사에 관여하는 효소 : 수일 혹은 수초"],der:["22-2023-M-MC-n02"]},
+{id:"B-2-05",ch:2,form:"MC",stem:"교안이 제시한 유전자 발현 조절 질문에 해당하지 않는 것은?",opts:["언제 얼마나 자주 특정 유전자를 전사시킬 것인가","RNA 전사체를 어떤 방식으로 짜깁기할 것인가","리보솜에서 어떤 mRNA를 해독할 것인가","합성된 단백질을 활성화시킬 것인가","DNA를 몇 회 복제할 것인가"],ans:[4],
+ expl:"교안의 4가지는 전사 시기, 짜깁기·가공, 번역할 mRNA, 단백질 활성화입니다. DNA 복제 횟수는 포함되지 않습니다.",ev:["g2","1. 언제 얼마나 자주 특정 유전자를 전사시킬 것인가? 2. RNA 전사체를 어떤 방식으로 짜깁기할것이며"],der:["24-2025-M-MC-18"]},
+{id:"B-2-06",ch:2,form:"MC",stem:"RNA 중합효소 Ⅱ가 촉진자를 인지하고 결합하려면 공통적으로 필요한 단백질은?",opts:["보편전사인자","히스톤 단백질","스플라이소좀","DNA 연결효소","카드헤린"],ans:[0],
+ expl:"보편전사인자를 필요로 하는 진핵생물의 RNA 중합효소라는 슬라이드에서 제시됩니다.",ev:["g2","RNA중합효소 Ⅱ가 촉진자를 인지하고 결합하려면 이러한 전사인자 단백질이 공통적으로 필요"],der:["24-2025-M-MC-12","24-2025-M-DS-17"]},
+{id:"B-2-07",ch:2,form:"MC",stem:"진핵세포 DNA는 염색질 구조로 응축되어 있어 전사개시에 영향을 준다. 교안이 이와 관련해 제시한 효소는?",opts:["히스톤아세틸전이효소","DNA 연결효소","역전사효소","카탈라아제","아데닐산 고리화효소"],ans:[0],
+ expl:"염색질 구조와 관련해 히스톤아세틸전이효소와 염색질 구조조정복합체가 제시됩니다.",ev:["g2","진핵세포 DNA는 염색질 구조로 응축 • 히스톤아세틸전이효소 • 염색질 구조조정복합체"],der:["24-2025-M-MC-18"]},
+{id:"B-2-08",ch:2,form:"MC",stem:"세포내 수용체에 결합하는 리간드가 아닌 것은?",opts:["스테로이드 호르몬","갑상선호르몬","레티노이드","비타민 D","인슐린"],ans:[4],
+ expl:"인슐린은 티로신 키나아제 수용체(세포막 수용체)에 작용하며 나머지는 세포내 수용체 리간드입니다.",ev:["g2","Ligand : Steroid hormone(부신피질 호르몬, 성호르몬), 갑상선호르몬, Retinoid, Vitamin D"],der:["24-2025-M-MC-22"]},
+{id:"B-2-09",ch:2,form:"MC",stem:"세포내 수용체 경로에서 특정 유전자의 전사를 유도하는 1차 반응(primary response)은 약 얼마 안에 나타나는가?",opts:["5분","30분","3시간","1일"],ans:[1],
+ expl:"1차 반응은 30분 내에 특정 유전자 전사를 유도하고, 1차 반응 산물이 다른 유전자를 활성화하는 것이 2차 반응입니다.",ev:["g2","Primary response – 30분 내에 특정유전자 전사 유도"],der:["24-2025-M-MC-22"]},
+{id:"B-2-10",ch:2,form:"MC",stem:"G 단백 연계 수용체(GPCR)의 예로 교안에 제시된 것은?",opts:["무스카린성 아세틸콜린 수용체","인슐린 수용체","PDGF 수용체","TGF-β 수용체","EGF 수용체"],ans:[0],
+ expl:"무스카린성 아세틸콜린 수용체는 GPCR 예로 제시되고 나머지는 효소 연계 수용체 계열입니다.",ev:["g2","Adrenergic receptor(α, β), Muscarinic acetylcholine receptor, Serotonin receptor, Adenosine receptor, Olfactory receptor, Rhodopsin Peptide hormone"],der:["24-2025-M-MC-23"]},
+{id:"B-2-11",ch:2,form:"MC",stem:"G 단백질의 서브유닛 중 GTP에 대한 친화도가 낮은 것은?",opts:["α 서브유닛","β와 γ 서브유닛","모든 서브유닛이 같다"],ans:[1],
+ expl:"α subunit이 GTP에 고친화도이고 β, γ subunit은 상대적으로 친화도가 낮습니다.",ev:["g2","β, γ subunit : lower affinity"],der:["24-2025-M-MC-23"]},
+{id:"B-2-12",ch:2,form:"MC",stem:"아드레날린 → β-아드레날린성 수용체 → cAMP → A-kinase 경로에서 cAMP가 근육에서 촉진하는 것은?",opts:["글리코겐 합성","글리코겐 분해","성장억제호르몬 유전자의 불활성화","세포 내 Na⁺ 증가"],ans:[1],
+ expl:"교안은 cAMP가 근육 글리코겐 분해를 촉진한다고 서술합니다.",ev:["g2","cAMP : 근육 글리코겐 분해 촉진"],der:["22-2023-M-MC-n01","21-2022-M-MC-#20"]},
+{id:"B-2-13",ch:2,form:"MC",stem:"성장억제호르몬 유전자의 cAMP 반응 요소(CRE)에 결합하는 단백질은?",opts:["CREB","NF-κB","Elk-1","SRF","Ras"],ans:[0],
+ expl:"CRE 결합단백질(CREB)이 CRE에 결합합니다. NF-κB, Elk-1, SRF, Ras는 다른 경로의 요소입니다.",ev:["g2","CRE 결합단백질(CRE-binding protein; CREB)"],der:["22-2023-M-MC-n01"]},
+{id:"B-2-14",ch:2,form:"MC",stem:"G 단백 연계 수용체를 통한 신호전달 경로의 두 갈래로 교안에 제시된 효소 쌍은?",opts:["Adenylyl cyclase와 Phospholipase C","Protein kinase A와 Phosphatase","RNA 중합효소와 DNA 중합효소","Ras와 MAP kinase","Calmodulin과 CaM-kinase"],ans:[0],
+ expl:"G 단백 연계 수용체 경로의 슬라이드에 Adenylyl cyclase와 Phospholipase C가 함께 제시됩니다.",ev:["g2","G 단백 연계 수용체를 통한 신호전달 경로 Adenylyl cyclase Phospholipase C",true],der:["24-2025-M-MC-24"]},
+{id:"B-2-15",ch:2,form:"MC",stem:"calmodulin 의존성 인산화효소로서 활성화 과정이 별도 슬라이드로 제시된 것은?",opts:["CaM-kinase Ⅱ","Protein kinase A","Protein kinase C","Protein kinase G","MAP kinase"],ans:[0],
+ expl:"calmodulin-의존성 인산화효소 슬라이드 뒤에 CaM-kinase Ⅱ의 활성화가 제시됩니다.",ev:["g2","CaM-kinase Ⅱ의 활성화",true],der:["24-2025-M-MC-24"]},
+{id:"B-2-16",ch:2,form:"MC",stem:"Transforming growth factor-β(TGF-β)와 관련된 효소 연계 수용체는?",opts:["guanylyl cyclase 수용체","티로신 키나아제 수용체","티로신 인산분해효소 수용체","세린/트레오닌 키나아제 수용체"],ans:[3],
+ expl:"세린/트레오닌 키나아제 수용체 항목에 TGF-β, activin, BMP가 제시됩니다.",ev:["g2","세린/트레오닌 키나아제 수용체 - Transforming growth factor-β (TGF-β) - activin → BMP"],der:["24-2025-M-MC-25"]},
+{id:"B-2-17",ch:2,form:"MC",stem:"티로신 키나아제 수용체에 의해 활성화되는 단백질로 MAP-kinase와 함께 슬라이드 제목에 제시된 것은?",opts:["Ras","CREB","칼모듈린","IP3","Protein kinase A"],ans:[0],
+ expl:"슬라이드 제목이 '티로신 키나아제 수용체에 의해 활성화되는 Ras 단백질과 MAP-kinase의 활성화'입니다.",ev:["g2","티로신 키나아제 수용체에 의해 활성화되는 Ras 단백질과 MAP-kinase의 활성화",true],der:["24-2025-M-MC-25"]},
+{id:"B-2-18",ch:2,form:"MC",stem:"다음 중 티로신 키나아제 수용체의 리간드가 아닌 것은?",opts:["표피성장인자","섬유모세포성장인자","신경성장인자","인슐린","아드레날린"],ans:[4],
+ expl:"아드레날린은 GPCR(adrenergic receptor)에 작용하며 나머지는 티로신 키나아제 수용체 목록에 있습니다.",ev:["g2","티로신 키나아제 수용체 목록: 표피성장인자 (epidermal growth factor) 수용체 · 인슐린(insulin) 수용체 · 신경성장인자(nerve growth factor) 수용체 등",true],der:["24-2025-M-MC-25"]},
+{id:"B-2-19",ch:2,form:"MC",stem:"단백질을 인산화시키는 효소와 탈인산화시키는 효소를 순서대로 고른 것은?",opts:["Protein kinase — Phosphatase","Phosphatase — Protein kinase","Protein kinase — Protein kinase","Adenylyl cyclase — Phospholipase C","GTPase — Kinase"],ans:[0],
+ expl:"인산화는 Protein kinase, 탈인산화는 Phosphatase가 담당합니다.",ev:["g2","Dephosphorylation : Phosphatase Phosphorylation : Protein kinase"],der:["24-2025-M-MC-24","22-2023-M-MC-n01"]},
+/* 3장 3건 */
+{id:"B-3-01",ch:3,form:"MC",stem:"일차 능동수송인 Na⁺/K⁺ 펌프의 이동 방향으로 옳은 것은?",opts:["Na⁺는 세포 안으로, K⁺는 세포 밖으로","Na⁺는 세포 밖으로, K⁺는 세포 안으로","Na⁺와 K⁺ 모두 세포 밖으로","Na⁺와 K⁺ 모두 세포 안으로"],ans:[1],
+ expl:"ATP 가수분해 에너지로 Na+를 세포 밖으로, K+를 세포 안으로 이동시킵니다.",ev:["g3","ATP 가수분해를 통해 에너지를 얻어 Na+를 세포 밖으로, K+를 세포 안으로 이동시킨다"],der:["24-2025-M-MC-34"]},
+{id:"B-3-02",ch:3,form:"MC",stem:"신경세포에서 세포 내 ATP 소비 중 Na⁺/K⁺ 펌프가 사용하는 비율은?",opts:["약 1/10","약 1/3","약 1/2","약 2/3","약 9/10"],ans:[3],
+ expl:"신경세포에서는 세포 내 ATP 소비의 약 2/3가 이 펌프에 사용됩니다.",ev:["g3","신경세포에서는 세포 내 ATP 소비의 약 2/3가 이 펌프에 사용"],der:["24-2025-M-MC-34"]},
+{id:"B-3-03",ch:3,form:"MC",stem:"이차 능동수송 중 Na⁺과 함께 세포 내로 이동하는 공동운반(symport)의 예는?",opts:["포도당","Ca²⁺","H⁺","K⁺"],ans:[0],
+ expl:"공동운반의 예는 포도당·아미노산이고, 역방향운반(antiport)의 예는 Ca2+·H+입니다.",ev:["g3","공동운반(symport): Na+과 함께 세포 내로 이동하는 물질 (예: 포도당, 아미노산)"],der:["24-2025-M-MC-34"]},
+/* 4장 3건 */
+{id:"B-4-01",ch:4,form:"MC",stem:"전압 의존성 Na⁺ 통로에서 막전압 변화를 감지하는 부위(voltage sensor)는?",opts:["S1","S3","S4","S5","S6"],ans:[2],
+ expl:"S4가 막전압 변화를 감지하고, S5와 S6 사이 고리(pore loop)가 Na+ 선택성에 중요합니다.",ev:["g4","S4는 막전압 변화 감지(voltage sensor)"],der:["24-2025-M-DS-39","24-2025-M-MC-41"]},
+{id:"B-4-02",ch:4,form:"MC",stem:"활동전압의 전도속도를 크게 하는 방법은?",opts:["축삭 직경 감소","축삭 직경 증가","수초(myelin) 제거","축저항(ra) 증가","축전용량(cm) 증가"],ans:[1],
+ expl:"전도속도는 축저항과 축전용량의 곱이 작을수록 증가하며, 축삭 직경 증가와 수초화가 방법으로 제시됩니다.",ev:["g4","활동전압 전도속도를 크게 하는 방법 1) 축삭직경 증가 2) Myelin화"],der:["24-2025-M-DS-38"]},
+{id:"B-4-03",ch:4,form:"MC",stem:"굵은 신경축삭과 가는 신경축삭 중 국소마취제에 의해 먼저 작용을 받는 것은?",opts:["굵은 축삭","가는 축삭","차이가 없다"],ans:[1],
+ expl:"가는 신경축삭이 굵은 축삭보다 국소마취제에 먼저 차단됩니다.",ev:["g4","가는 신경축삭이 굵은 축삭보다 국소마취제에 의해 먼저 작용을 받는다."],der:["24-2025-M-MC-41"]},
+/* 5장 2건 */
+{id:"B-5-01",ch:5,form:"MC",stem:"글리신과 GABA가 시냅스 후 세포에서 활성화하는 통로와 그 결과는?",opts:["Na⁺ 통로 — 탈분극","Cl⁻ 통로 — 과분극","Ca²⁺ 통로 — 탈분극","K⁺ 통로 — 탈분극","Cl⁻ 통로 — 탈분극"],ans:[1],
+ expl:"억제성 시냅스 후 막전압(IPSP)은 Cl- 통로 활성화로 과분극이 일어납니다.",ev:["g5","신경전달물질로 글리신(glycine), γ-aminobutyric acid(GABA) 등을 분비하는데 이들은 시냅스 후 세포에서 Cl-통로 활성화 과분극"],der:["24-2025-M-DS-45"]},
+{id:"B-5-02",ch:5,form:"MC",stem:"시냅스 지연이 없고 빠르며 동시적인 반응을 보이는 시냅스는?",opts:["전기시냅스","화학시냅스"],ans:[0],
+ expl:"전기시냅스(간극 연접)는 빠른 반응, 동시적 반응을 보이고 시냅스 지연이 없습니다.",ev:["g5","빠른 반응, 동시적 반응 시냅스 지연이 없음"],der:["24-2025-M-DS-42"]},
+/* 기말 겹침분 반영: 3장 +4, 4장 +4, 5장 +6 */
+{id:"B-3-04",ch:3,form:"MC",stem:"교안에서 막을 통한 확산 속도를 결정하는 요소로 제시되지 않은 것은?",opts:["확산계수","농도 차이","막 면적","막 두께","막 단백질의 개수"],ans:[4],
+ expl:"확산 속도는 확산계수, 농도 차이, 막 면적, 두께로 결정된다고 서술됩니다.",ev:["g3","막을 통한 확산 속도는 확산계수, 농도 차이, 막 면적, 두께에 의해 결정"],der:["21-2022-F-MC-#01"]},
+{id:"B-3-05",ch:3,form:"MC",stem:"물리적 힘에 의해 단백질 구조가 변형되어 열리고 닫히는 통로는?",opts:["전압 의존성 통로","리간드 의존성 통로","기계적 통로","누출통로"],ans:[2],
+ expl:"기계적 통로는 물리적 힘에 의해 구조 변형 및 열림/닫힘이 일어납니다.",ev:["g3","기계적 통로: 물리적 힘에 의해 구조 변형 및 열림/닫힘"],der:["21-2022-F-MC-#02"]},
+{id:"B-3-06",ch:3,form:"MC",stem:"이차 능동수송 중 Na⁺은 세포 내로, 다른 물질은 세포 밖으로 이동하는 역방향운반(antiport)의 예는?",opts:["포도당","아미노산","Ca²⁺","요산"],ans:[2],
+ expl:"역방향운반의 예는 Ca2+와 H+이고, 포도당·아미노산은 공동운반입니다.",ev:["g3","역방향운반(antiport): Na+은 세포 내로 이동, 다른 물질은 세포 외로 이동 (예: Ca2+, H+)"],der:["21-2022-F-MC-#04","22-2023-F-MC-n01"]},
+{id:"B-3-07",ch:3,form:"MC",stem:"적혈구를 고장성 용액에 넣으면 나타나는 변화는?",opts:["위축된다","부종을 일으킨다","변화가 없다"],ans:[0],
+ expl:"적혈구는 고장성 용액에서 위축되고 저장성 용액에서 부종을 일으킵니다.",ev:["g3","적혈구는 고장성 용액에서 위축되고 저장성 용액에서 부종 일으킴"],der:["24-2025-M-DS-30"]},
+{id:"B-4-04",ch:4,form:"MC",stem:"교안에 제시된 골격근의 안정막전압은?",opts:["−10 mV","−40 mV","−65 mV","−90 mV"],ans:[3],
+ expl:"적혈구 −10, 평활근 −40, 골격근 −90, 심장근 −65~−90, 신경세포 −60~−70 mV입니다.",ev:["g4","골격근 -90mV"],der:["21-2022-F-MC-#06"]},
+{id:"B-4-05",ch:4,form:"MC",stem:"K⁺ 통로가 Na⁺ 통로에 비해 활성화되는 데 걸리는 시간으로 교안에 제시된 것은?",opts:["약 0.1 msec","약 1 msec","약 10 msec","약 100 msec"],ans:[1],
+ expl:"Na 통로는 신속하게, K 통로는 약 1msec 정도 시간이 걸려 활성화됩니다.",ev:["g4","K 통로는 약 1msec 정도 시간 소요"],der:["24-2025-M-DS-39","21-2022-F-DS-#19"]},
+{id:"B-4-06",ch:4,form:"MC",stem:"미엘린 판을 형성해 도약전도에 관여하는 세포로 교안에 제시된 것은?",opts:["별아교세포(성상교세포)","희소돌기아교세포와 슈반세포","미세아교세포"],ans:[1],
+ expl:"희소돌기아교세포와 슈반세포가 미엘린 판을 형성하고, 별아교세포는 혈액-뇌장벽 형성·유지, 미세아교세포는 대식세포와 유사합니다.",ev:["g4","희소돌기아교세포(oligodendrocyte) ,슈반세포(Schwann cell) – 미엘린 판(myelin sheath)을 형성하는 역할, 도약전도"],der:["21-2022-F-MC-#10"]},
+{id:"B-4-07",ch:4,form:"MC",stem:"전압 의존성 Na⁺ 통로에서 Na⁺ 선택성에 중요한 역할을 하는 부위는?",opts:["S1과 S2 사이","S3과 S4 사이","S4","S5와 S6 사이 고리(pore loop)"],ans:[3],
+ expl:"S5와 S6 사이 고리가 Na+ 선택성에 중요하고 S4는 막전압 감지 부위입니다.",ev:["g4","S5와 S6 사이 고리(pore loop) : Na+ 선택성 중요한 역할"],der:["24-2025-M-DS-39","21-2022-F-DS-#19"]},
+{id:"B-5-03",ch:5,form:"MC",stem:"화학시냅스의 시냅스 지연으로 교안 표에 제시된 값은?",opts:["거의 없음","최소 0.3 ms 이상, 보통 1~5 ms","약 1초","약 1분"],ans:[1],
+ expl:"전기시냅스는 지연이 거의 없고, 화학시냅스는 최소 0.3 ms 이상 보통 1~5 ms입니다.",ev:["g5","Significant: at least 0.3 ms, usually 1-5 ms or longer",true],der:["21-2022-F-MC-#11","22-2023-F-MC-n02"]},
+{id:"B-5-04",ch:5,form:"MC",stem:"교안 표에서 전기시냅스의 시냅스 전·후 막 사이 거리는?",opts:["3.5 nm","20 nm","40 nm","3.5 μm"],ans:[0],
+ expl:"전기시냅스는 3.5 nm이며 간극 연접 통로를 통해 세포질이 연속됩니다.",ev:["g5","표 14-1 전기시냅스: 막 사이 거리 3.5 nm, 세포질 연속성 Yes",true],der:["22-2023-F-MC-n02"]},
+{id:"B-5-05",ch:5,form:"MC",stem:"흥분성 시냅스 후 막전압(EPSP)을 일으키는 흥분성 신경전달물질로 교안에 제시된 것은?",opts:["글리신","GABA","글루탐산염","히스톤"],ans:[2],
+ expl:"글루탐산염은 Na+, Ca2+ 통로를 활성화해 탈분극을 일으키고, 글리신·GABA는 억제성입니다.",ev:["g5","흥분성 신경전달물질로는 아세틸콜린, 노르아드레날린, 글루탐산염, 신경펩티드"],der:["21-2022-F-MC-#13"]},
+{id:"B-5-06",ch:5,form:"MC",stem:"EPSP를 유발하는 흥분성 신경의 활동전압이 동시에 여러 개 전달되어 EPSP 크기가 더 커지는 현상은?",opts:["가중(summation)","수렴(convergence)","시냅스전 억제","장기저하"],ans:[0],
+ expl:"여러 흥분성 입력이 더해지면 1개일 때보다 EPSP가 커지며 이를 가중이라 합니다.",ev:["g5","가중(summation) : EPSP를 유발하는 흥분성 신경의 활동전압이 동시에 여러 개 전달되면 형성되 는 EPSP의 크기는 1개의 활동전압이 전달되었을 때보다 크게 나타난다."],der:["21-2022-F-MC-#13"]},
+{id:"B-5-07",ch:5,form:"MC",stem:"장기저하(LTD)에서 AMPA 수용체에 일어나는 변화는?",opts:["세포막으로 노출되어 반응이 커진다","세포 안으로 끌어내려져 반응이 줄어든다","NMDA 수용체로 바뀐다","변화가 없다"],ans:[1],
+ expl:"LTD는 AMPA 수용체를 세포 내로 끌어 내리는 기전으로 반응이 감소합니다.",ev:["g5","반대로 LTD의 경우 AMPA 수용체를 세포 내로 끌어 내리는 기전이 작용하여 반응이 감소된다."],der:["21-2022-F-MC-#17","24-2025-M-DS-45"]},
+{id:"B-5-08",ch:5,form:"MC",stem:"신경전달물질 중 아세틸콜린을 제거하는 효소로 교안에 제시된 것은?",opts:["콜린에스터라아제","monoamine oxidase","catecholamine-O-methyltransferase","시냅스 전 막의 재흡수 효소"],ans:[0],
+ expl:"아세틸콜린은 콜린에스터라아제로 제거되고, 아드레날린은 COMT·MAO, 글루탐산염 등은 재흡수됩니다.",ev:["g5","아세틸콜린 : 콜린에스터라아제 아드레날린 : catecholamine-O-methyltransferase, monoamine oxidase"],der:["22-2023-F-MC-n03"]}
+];
+
+B.forEach(b=>{b.exp=true;b.status="예상"});
+
+/* ===== 국시 (제74~78회 2교시 구강생물학, 스캔 이미지 pdf를 직접 보고 옮김 · 최종답안 대조) =====
+ rel: 개념 유사 = 같은 개념이나 지문·선지가 다른 문항(정답 확정 근거가 아니라 추정 근거) */
+const KS=[
+{id:"K-74-2-65",ex:"제74회(2022) 2교시 65번 · 구강생물학",q:"k74q",a:"k74a",ch:4,form:"MC",
+ stem:"사람 신경세포나 근육세포를 문턱치 이상으로 전기 자극하여 막전압이 빠르게 탈분극되고 지나치기 전압을 보일 때 주로 기여하는 이온 통로는?",
+ opts:["막전압의존성 K⁺ 통로","막전압의존성 Na⁺ 통로","막전압의존성 Ca²⁺ 통로","아세틸콜린의존성 Cl⁻ 통로","아세틸콜린의존성 양이온 통로"],ans:[1],
+ map:["24-2025-M-DS-39","21-2022-F-DS-#19"],note:"'지나치기 전압'은 원문 표기 그대로입니다(과도전압을 뜻하는 것으로 보임)."},
+{id:"K-75-2-57",ex:"제75회(2023) 2교시 57번 · 구강생물학",q:"k75q",a:"k75a",ch:4,form:"MC",
+ stem:"신경세포의 활동전압이 축삭을 따라 전달될 때, 도약전도가 일어날 수 없어 전도속도가 가장 느린 신경 섬유는?",
+ opts:["Aα 신경","Aβ 신경","Aδ 신경","B 신경","C 신경"],ans:[4],
+ map:["21-2022-F-MC-#10"],note:"교안 4장은 신경섬유 분류표(C 신경: 자율신경 절후섬유, 평균전도속도 1 m/s)와 도약전도를 다룹니다."},
+{id:"K-76-2-55",ex:"제76회(2024) 2교시 55번 · 구강생물학",q:"k76q",a:"k76a",ch:2,form:"MC",
+ stem:"중간엽줄기세포가 뼈모세포로 분화하고 기능하는 데 필수적인 전사인자들로 옳게 묶인 것은?",
+ opts:["FGF8, SOX9","OPG, PPARγ","M-CSF, BMP2","RANKL, RANK","RUNX2, OSTERIX"],ans:[4],
+ map:["21-2022-M-MC-#16"],note:"21학번 문항의 정답 선지(Runx2/osterix)와 같은 인자입니다."},
+{id:"K-76-2-57",ex:"제76회(2024) 2교시 57번 · 구강생물학",q:"k76q",a:"k76a",ch:5,form:"MC",
+ stem:"사람의 신경근육접합부에 아세틸콜린에스테라아제를 차단하는 약물을 적용했을 때 나타나는 결과는?",
+ opts:["종판 전압이 과분극된다.","신경 흥분 후 근육의 수축력이 증가한다.","신경 흥분 후 근육 수축 속도가 느려진다.","신경세포에서 아세틸콜린 방출이 차단된다.","신경세포의 흥분과 무관한 자발적 근육 수축이 일어난다."],ans:[1],
+ map:["22-2023-F-MC-n03"],note:"교안 5장은 신경근육접합부의 종판전압과 '아세틸콜린: 콜린에스터라아제로 제거'를 서술합니다. 예상 문제 B-5-08과 연결됩니다."},
+{id:"K-77-2-74",ex:"제77회(2025) 2교시 74번 · 구강생물학",q:"k77q",a:"k77a",ch:4,form:"MC",
+ stem:"국소마취제의 작용기전에 관한 설명으로 옳은 것은?",
+ opts:["일반적으로 신경섬유가 굵을수록 국소마취제에 민감하다.","주된 작용기전은 전압의존적 Na⁺통로를 억제하는 것이다.","국소마취제는 활동전위의 빈도가 낮을수록 흥분파를 더욱 잘 차단한다.","국소마취제는 활동전위의 생성은 억제하지만 활동전위의 전도는 차단하지 못한다.","염증부위에서의 마취효과 감소는 국소마취제의 이온형 비율이 감소하기 때문이다."],ans:[1],
+ map:["24-2025-M-MC-41"],note:"교안 4장 Box 4-1: 국소마취제는 막전압 의존성 Na 통로에 결합하고 가는 축삭이 먼저 차단됩니다(①은 이와 반대). ③⑤는 교안에 서술이 없습니다."},
+{id:"K-78-2-57",ex:"제78회(2026) 2교시 57번 · 구강생물학",q:"k78q",a:"k78a",ch:5,form:"MC",
+ stem:"화학시냅스의 시냅스전종말에서 신경전달물질의 방출을 유발하는 이온은?",
+ opts:["H⁺","K⁺","Na⁺","Ca²⁺","Cl⁻"],ans:[3],
+ map:[],note:"기출 대응 문항은 없습니다. 교안 3장은 '신경세포에서는 칼슘 농도 증가가 세포외유출을 유도하여 신경전달물질 분비', 4장은 '축삭말단 – Ca'로 서술합니다."}
+];
+KS.forEach(k=>{k.exp=true;k.status="확정(공식)"});
+
+/* ===== 내용 정리 (교안 기준 요점, 위치는 교안 슬라이드 제목) ===== */
+const SUM=[
+{ch:1,items:[
+ ["1.항상성","항상성(homeostasis)은 내부환경이 일정한 상태로 유지되게 하는 것입니다. 조절은 감지기·효과기·신호전달기전으로 이루어집니다.","교안 1장 '항상성의 개념', '항상성 관련 조절기전'"],
+ ["1.체액구성","전체 체액 42 L(체중의 60%) 중 세포내액 28 L(체액의 67%, 체중의 40%), 세포외액 14 L(33%, 체중의 20%)입니다. 세포외액은 혈장 20%, 간질액 80%이며 혈장은 체액의 6.6%, 체중의 4%입니다.","교안 1장 'Classification of body fluid' 표"],
+ ["1.되먹임","음성되먹임은 변화에 반대되는 방향으로 조절되어 정상으로 회복되는 기전이고, 앞먹임 기전은 변화를 예상하여 반응을 일으키는 것입니다.","교안 1장 '항상성 관련 조절기전'"],
+ ["1.이온분포","세포 내부는 K+·인산기가, 세포 외부는 Na+·Cl−·Ca2+가 더 높습니다. 혈장·세포내액에는 단백질 음이온이 있습니다.","교안 3장 '세포막의 구조 및 역할', 1장 그림 1-1 하단"],
+ ["1.해당과정","해당과정은 포도당 1분자(6탄당)를 10단계로 분해해 피루브산 2분자(3탄당)와 ATP 2분자를 산출합니다. 구연산 회로에서 NADH, FADH2가 생기고 전자는 전자전달계를 거쳐 산소분자로 전달됩니다.","교안 1장 '미토콘드리아' 그림 1-13, 1-15"],
+ ["1.소기관","골지체는 납작한 막성 주머니(수조)로 구성되며 당화·지질화 단백질과 관련됩니다. 과산화소체는 카탈라아제 등 산화 효소로 노폐물을 해독합니다.","교안 1장 '세포질 | 막성 소기관', '골지체'"],
+ ["1.세포접합","결합체는 카드헤린이 두 플라크를 연결하는 강한 접합이고, 간극결합은 코넥손 채널로 인접 세포질을 연결합니다. 소화관·신장 상피세포는 치밀이음부로 연결됩니다.","교안 1장 그림 1-19, 3장 '상피세포를 통한 물질이동'"],
+ ["1.세포내이입","세포내이입은 포식작용·포음작용·수용체 매개 세포내이입으로 나뉩니다. 세포외유출은 막 성분 첨가, 수용체 재활용, 항체·점액 등 분비에 관여합니다.","교안 1장 그림 1-10, '세포외유출'"]]},
+{ch:2,items:[
+ ["2.스플라이싱","진핵세포 RNA는 전사와 동시에 가공됩니다. 인트론은 snRNP와 단백질로 이루어진 스플라이소좀에 의해 제거되고 엑손이 연결됩니다.","교안 2장 '전사와 동시에 가공되는 진핵세포의 RNA', 그림 2-8"],
+ ["2.mRNA수명","진핵세포 mRNA의 수명은 세균(약 3분)보다 길고, 수명이 서로 달라 세포가 단백질의 양을 정합니다. 단백질 수명은 구조단백질이 수개월~수년, 대사 효소가 수일~수초입니다.","교안 2장 '세포에 의해 결국 분해되는 mRNA', '단백질 분해조절에 의한 세포 내 단백질량 조절'"],
+ ["2.유전자조절","유전자 발현 조절은 전사 시기, 짜깁기·가공, 번역, 단백질 활성화 네 질문으로 정리됩니다. 진핵 전사에는 여러 RNA 중합효소와 보편전사인자가 필요하고 염색질 구조(히스톤아세틸전이효소 등)가 영향을 줍니다.","교안 2장 '유전자발현의 조절', '복잡한 과정을 통한 진핵생물의 유전자 전사'"],
+ ["2.세포내수용체","리간드는 스테로이드 호르몬·갑상선호르몬·레티노이드·비타민 D입니다. 세포내 수용체에 결합해 특정 유전자 전사를 조절하고 작용 지속은 수 시간~수 일입니다. 1차 반응은 30분 내 전사를 유도합니다.","교안 2장 '세포막 수용체와 세포내 수용체'"],
+ ["2.신호전달방식","분비 신호전달은 paracrine, neurotransmitter, endocrine 방식이 있고 autocrine regulation은 인접한 동일 type의 세포에 작용합니다.","교안 2장 '분비신호전달물질에 의한 신호전달체계'"],
+ ["2.막수용체","세포막 수용체는 이온통로(Rapid Synaptic Signal), G 단백 연계(7 pass, 3개 단백질), 효소 연계(single-pass) 수용체로 나뉩니다. 인산화는 protein kinase, 탈인산화는 phosphatase가 담당합니다.","교안 2장 '세포막 수용체의 종류', '신호전달의 기본적인 기전'"],
+ ["2.G단백","G 단백의 α subunit은 GTP에 고친화도이고 β, γ는 낮습니다. 경로는 Adenylyl cyclase(cAMP→PKA, 근육 글리코겐 분해·CREB)와 Phospholipase C(IP3, DAG→PKC, Ca2+·칼모듈린·CaM-kinase Ⅱ)로 갈립니다.","교안 2장 'G단백연계 수용체를 통한 신호전달'"],
+ ["2.효소연계수용체","효소 연계 수용체는 guanylyl cyclase, 티로신 키나아제, 티로신 인산분해효소, 세린/트레오닌 키나아제 수용체입니다. 티로신 키나아제 수용체에는 EGF·PDGF·FGF·HGF·인슐린·IGF-1·NGF·M-CSF 수용체가 있고 Ras/MAP-kinase 경로를 활성화합니다. TGF-β는 세린/트레오닌 키나아제 수용체입니다.","교안 2장 '효소 연계 수용체를 통한 신호전달'"]]},
+{ch:3,items:[
+ ["3.막구조","세포막은 인지질 이중층(유동 모자이크)이며 지용성 물질은 단순확산, 그 외는 통로·운반 단백질로 이동합니다. 통로는 전압 의존성·리간드 의존성·기계적 통로가 있습니다.","교안 3장 'Structure and Function of the Cell Membrane', '통로를 통한 확산'"],
+ ["3.삼투","삼투는 반투과성 막을 통해 물이 용질 농도가 낮은 쪽에서 높은 쪽으로 이동하는 현상입니다. 적혈구는 고장성 용액에서 위축되고 저장성 용액에서 부종을 일으킵니다. Donnan 평형은 전하 분포 차이로 이온 농도가 균형을 이루는 현상입니다.","교안 3장 '삼투(Osmosis)'"],
+ ["3.능동수송","일차 능동수송은 ATP를 직접 쓰며(Na+/K+ 펌프, Ca2+ 펌프, H+ 펌프), 신경세포에서는 ATP 소비의 약 2/3가 Na+/K+ 펌프에 쓰입니다. 이차 능동수송은 Na+ 기울기를 이용하며 공동운반(포도당·아미노산)과 역방향운반(Ca2+, H+)이 있습니다.","교안 3장 '능동수송(Active transport)'"],
+ ["3.상피수송","소장·신장 상피세포는 치밀이음부로 연결되고 Na+-K+ 펌프와 운반단백질로 영양분을 흡수합니다. 낭포성 섬유증은 CFTR 변이로 Cl- 분비가 저해됩니다.","교안 3장 'Transport of substances across epithelial cells'"]]},
+{ch:4,items:[
+ ["4.활동전압","안정막전압은 적혈구 −10 mV, 평활근 −40 mV, 골격근 −90 mV, 신경세포 −60~−70 mV 등입니다. 역치전압에 도달하면 활동전압이 형성되고 도달하지 못하면 국소반응입니다.","교안 4장(2025판) '안정막전압', '활동전압'"],
+ ["4.이온통로","Na 통로는 1개의 긴 단백질(4 domain, 각 S1~S6)이며 S4가 전압감지, S5-S6 고리가 Na+ 선택성을 정합니다. K 통로는 4개의 소단위로 구성되고 활성화에 약 1 msec가 걸립니다. 리도카인은 Na 통로 IV영역 S6에 결합합니다.","교안 4장(2025판) '세포막 이온통로', 'Box 4-1 국소마취제의 작용'"],
+ ["4.전도","활동전압 전도속도는 축삭 직경 증가와 수초화로 커집니다. 유수신경은 도약전도로 빠르고 ATP 소모가 적습니다. 가는 축삭이 국소마취제에 먼저 차단됩니다.","교안 4장(2025판) '활동전압 전도', '도약전도'"]]},
+{ch:5,items:[
+ ["5.전기시냅스","전기시냅스는 간극 연접(코넥신 6개가 이루는 코넥손)으로 빠르고 동시적이며 시냅스 지연이 없습니다. 화학시냅스는 시냅스 간격이 더 넓고 지연이 있으며 일방향입니다.","교안 5장(2025판) '시냅스의 종류', '표 14-1'"],
+ ["5.시냅스후전압","흥분성 신경전달물질(아세틸콜린, 노르아드레날린, 글루탐산염 등)은 Na+·Ca2+ 통로를 열어 탈분극(EPSP)을, 글리신·GABA는 Cl- 통로를 열어 과분극(IPSP)을 일으킵니다. 신호는 공간적·시간적 가중됩니다.","교안 5장(2025판) '시냅스 후 막전압'"],
+ ["5.시냅스가소성","LTP는 시냅스 후 막단백질 인산화로 AMPA 수용체가 세포막에 노출되어 반응이 커지는 것이고, LTD는 AMPA 수용체를 세포 안으로 회수해 반응이 줄어드는 것입니다.","교안 5장(2025판) 그림 5-21"]]}
+];
+
+/* ===== 상태 · 저장 ===== */
+const ST={tab:"mc",ch:0,all:false,paper:false,out:false,rev:{},omr:{},user:{},graded:{},mock:null,mockStart:0,timer:null};
+function lsGet(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function lsSet(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+(function load(){
+  try{const o=JSON.parse(lsGet("dp-omr")||"{}");if(o&&typeof o==="object")ST.omr=o}catch(e){}
+  try{const u=JSON.parse(lsGet("dp-user")||"{}");if(u&&typeof u==="object")ST.user=u}catch(e){}
+})();
+const saveOmr=()=>lsSet("dp-omr",JSON.stringify(ST.omr));
+const saveUser=()=>lsSet("dp-user",JSON.stringify(ST.user));
+
+/* ===== 유틸 ===== */
+const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const $=s=>document.querySelector(s);
+const link=k=>{const s=SRC[k];return s?`<a href="https://drive.google.com/file/d/${s.id}/view" target="_blank" rel="noopener">${esc(s.n)}</a>`:esc(k)};
+const stKey={"확정":"x","사용자 확정":"user","교차확인":"x","추정":"e","추론":"p","충돌":"c","미확정":"u","예상":"e"};
+function eff(q){ // 사용자 정정 최우선
+  const u=ST.user[q.id];
+  if(u&&u.ans&&u.ans.length)return Object.assign({},q,{ans:u.ans,status:"사용자 확정",_user:u});
+  if(u&&u.text)return Object.assign({},q,{atext:u.text,status:"사용자 확정",_user:u});
+  return q;
+}
+function freq(q){const s=new Set((q.srcs||[]).map(x=>x[0]));return s.size}
+function ansText(q){
+  if(q.form==="MC"&&q.ans)return q.ans.map(i=>CIRC[i]+" "+q.opts[i]).join(" / ");
+  return q.atext||"";
+}
+function sameSet(a,b){if(!a||!b)return false;const x=[...a].sort().join(","),y=[...b].sort().join(",");return x===y}
+
+/* ===== 카드 ===== */
+function cardHTML(q0,ctx){
+  const q=q0.exp?q0:eff(q0); const isB=!!q0.exp; // 예상 문제는 expl 필드
+  const mc=q.form==="MC";
+  const rev=ST.all||ST.rev[ctx+q.id];
+  const mk=ST.omr[ctx+":"+q.id]||[];
+  const gr=ST.graded[ctx+":"+q.id];
+  let h=`<article class="card${gr==="ok"?" ok":gr==="ng"?" ng":""}" id="c-${ctx}-${esc(q.id)}">`;
+  h+=`<div class="chead"><span class="cid">${esc(q.id)}</span>`;
+  if(isB){h+=`<span class="st st-e">예상 · 교안 근거</span>`}
+  else{
+    h+=`<span class="st st-${stKey[q.status]||"u"}">${esc(q.status)}${q.status==="추정"&&q.conf?" · 신뢰도 "+esc(q.conf):""}</span>`;
+    if(q.prop)h+=`<span class="tag">잠정 · 신뢰도 ${esc(q.prop.conf)}</span>`;
+    if(q.ev)h+=`<span class="tag">${[...new Set(q.ev.map(e=>e[0]))].join("·")}</span>`;
+    const f=freq(q); if(f>1)h+=`<span class="tag">반복 ${f}회 (${[...new Set(q.srcs.map(x=>x[0]))].join("·")}학번)</span>`;
+    if(q.typo)h+=`<span class="tag warn">오기 병기</span>`;
+    if(q.dup)h+=`<span class="tag warn">중복 의심</span>`;
+    if(q.out)h+=`<span class="tag">범위 외</span>`;
+  }
+  h+=`</div><div class="stem">${esc(q.stem)}</div>`;
+  if(mc){
+    h+=`<ol class="opts">`+q.opts.map((o,i)=>{
+      let c=""; if(mk.includes(i))c+=" sel";
+      if(rev&&q.ans&&q.ans.includes(i)&&(isB||GRADED.includes(q.status)||q.status==="추정"))c+=" corr";
+      return `<li class="${c}" data-act="mark" data-ctx="${ctx}" data-id="${esc(q.id)}" data-i="${i}"><span class="n">${CIRC[i]}</span><span>${esc(o)}</span></li>`}).join("")+`</ol>`;
+  }else if(q.form==="DS"){
+    h+=`<div class="own"><input type="text" id="t-${ctx}-${esc(q.id)}" placeholder="내 답 (채점 대상 아님)" aria-label="내 답" style="flex:1;min-width:140px"></div>`;
+  }
+  if(rev){
+    if(isB){h+=`<div class="ansbox">정답: ${esc(ansText(q))}</div><div class="expl">${esc(q.expl)}</div>`}
+    else if(q.status==="미확정"){
+      h+=`<div class="ansbox prov">정답 미확정${q.cand&&mc?" · 후보 "+q.cand.map(i=>CIRC[i]).join(", "):""}${q.cand&&!mc?" · 후보 "+esc(q.cand.join(" / ")):""}</div>`;
+    }else if(q.status==="추론"){
+      h+=`<div class="ansbox prov">잠정 답(추론, 채점 제외): ${esc(q.prop.text)}<br>대안: ${esc(q.prop.alt)} · 재판정 조건: ${esc(q.prop.recheck)}</div>`;
+    }else{
+      h+=`<div class="ansbox">${q.status==="사용자 확정"?"사용자 확정 정답":q.status==="추정"?"정답(추정)":"정답"}: ${esc(ansText(q))}</div>`;
+    }
+    if(q.note&&!isB)h+=`<div class="expl">${esc(q.note)}</div>`;
+  }
+  if(!isB){
+    if(q.typo)h+=q.typo.map(t=>`<div class="typo">[원문] ${esc(t[0])}<br>[수정 제안] ${esc(t[1])}<br>[사유] ${esc(t[2])}</div>`).join("");
+    if(q.dup)h+=`<div class="typo">${esc(q.dup)}</div>`;
+    if(q.conflicts)h+=q.conflicts.map(c=>`<div class="typo">[표기 차이] ${link(c[0])}: ${esc(c[1])}<br>${esc(c[2])}</div>`).join("");
+    if(q.srcs){
+      h+=`<div class="meta"><div>출처: ${q.srcs.map(s=>`${esc(s[0])}학번 ${esc(s[1])} 중간 ${s[3]==="-"?"번호 없음":esc(s[3])}`).join(" · ")}</div></div>`;
+    }
+    if(q.ev){
+      h+=`<details><summary>근거·출처 (${q.ev.length})</summary><ul>`+q.ev.map(e=>`<li><b>${esc(e[0])}</b> ${link(e[1])}<br><span class="q">${e[3]?"[요약] ":""}“${esc(e[2])}”</span></li>`).join("")+`</ul></details>`;
+    }
+    if(q.srcs&&q.srcs.length){
+      h+=`<details><summary>출처 파일</summary><ul>`+[...new Set(q.srcs.map(s=>s[4]))].map(k=>`<li>${link(k)}</li>`).join("")+`</ul></details>`;
+    }
+    if(q.key){
+      const rel=B.filter(b=>b.der.includes(q.id));
+      if(rel.length)h+=`<div class="meta"><div>파생 예상 문제: ${rel.map(b=>`<button class="jump" data-act="gotoB" data-id="${b.id}" type="button">${b.id}</button>`).join(" ")}</div></div>`;
+    }
+    // 정답 지정(사용자)
+    h+=`<div class="own"><label for="u-${ctx}-${esc(q.id)}">내 확정 정답</label>`;
+    if(mc){h+=`<select id="u-${ctx}-${esc(q.id)}" data-act="user" data-id="${esc(q.id)}"><option value="">(지정 안 함)</option>`+q.opts.map((o,i)=>`<option value="${i}"${q._user&&q._user.ans&&q._user.ans.includes(i)?" selected":""}>${CIRC[i]}</option>`).join("")+`</select>`}
+    else{h+=`<input id="u-${ctx}-${esc(q.id)}" data-act="usertext" data-id="${esc(q.id)}" value="${esc(q._user&&q._user.text||"")}" placeholder="정답 텍스트">`}
+    h+=`<input id="r-${ctx}-${esc(q.id)}" data-act="reason" data-id="${esc(q.id)}" value="${esc((ST.user[q.id]&&ST.user[q.id].reason)||"")}" placeholder="이유(선택)"></div>`;
+  }else{
+    h+=`<div class="meta"><div>근거: ${link(q.ev[0])}<br><span class="q">${q.ev[2]?"[요약] ":""}“${esc(q.ev[1])}”</span></div><div>파생 기출: ${q.der.map(d=>`<button class="jump" data-act="gotoQ" data-id="${esc(d)}" type="button">${esc(d)}</button>`).join(" ")}</div></div>`;
+  }
+  h+=`<div class="acts"><button class="btn" data-act="rev" data-ctx="${ctx}" data-id="${esc(q.id)}" type="button">${rev?"정답 숨기기":"정답 보기"}</button></div></article>`;
+  return h;
+}
+
+/* ===== OMR ===== */
+function renderOMR(list,ctx){
+  const el=$("#omrBody");
+  const mcs=list.filter(q=>q.form==="MC");
+  if(!mcs.length){el.innerHTML=`<span style="color:var(--muted)">이 탭에는 OMR 대상(객관식)이 없습니다.</span>`;return}
+  el.innerHTML=mcs.map((q,idx)=>{
+    const mk=ST.omr[ctx+":"+q.id]||[]; const gr=ST.graded[ctx+":"+q.id];
+    return `<div class="omr-row ${gr||""}"><button class="no" data-act="goto" data-ctx="${ctx}" data-id="${esc(q.id)}" type="button" title="${esc(q.id)}">${idx+1}</button>`+
+      q.opts.map((o,i)=>`<button class="bub${mk.includes(i)?" on":""}" data-act="mark" data-ctx="${ctx}" data-id="${esc(q.id)}" data-i="${i}" type="button" aria-label="${idx+1}번 ${i+1}">${i+1}</button>`).join("")+`</div>`;
+  }).join("")+`<div class="acts"><button class="btn" data-act="clearOmr" data-ctx="${ctx}" type="button">마킹 지우기</button></div>`;
+}
+
+/* ===== 채점 ===== */
+function gradeList(list,ctx){
+  let tot=0,ok=0,skipped=0,marked=0;
+  list.forEach(q0=>{
+    if(q0.form!=="MC")return;
+    const q=q0.exp?q0:eff(q0);
+    const key=ctx+":"+q.id; const mk=ST.omr[key]||[];
+    if(mk.length)marked++;
+    if(!(q0.exp||GRADED.includes(q.status))||!q.ans){skipped++;delete ST.graded[key];return}
+    tot++;
+    const r=sameSet(mk,q.ans)?"ok":"ng"; if(r==="ok")ok++;
+    ST.graded[key]=r;
+  });
+  return {tot,ok,skipped,marked};
+}
+
+/* ===== 탭 렌더 ===== */
+const TABS=[["mc","객관식(단원별)"],["ds","단답·서술형"],["ks","국시"],["sum","내용 정리"],["exp","예상 문제"],["mock","모의고사"],["info","현황·범위"]];
+function renderTabs(){
+  $("#tabs").innerHTML=TABS.map(t=>`<button role="tab" aria-selected="${ST.tab===t[0]}" data-act="tab" data-t="${t[0]}" type="button">${t[1]}</button>`).join("");
+}
+function chFilter(){
+  return `<div class="strip">단원: `+[[0,"전체"],...CH.map(c=>[c,c+"장"])].map(c=>`<button class="btn${ST.ch===c[0]?" pri":""}" data-act="ch" data-c="${c[0]}" type="button">${c[1]}</button>`).join("")+`</div>`;
+}
+function outCards(forms){
+  return OUT.filter(o=>(forms==="MC")===!!o.opts).map(o=>{
+    const q={id:o.id,form:o.opts?"MC":"DS",stem:o.stem,opts:o.opts,ans:null,atext:o.atext||null,status:o.atext?"추정":"미확정",conf:"낮음",out:true,dup:o.dup,
+      ev:o.atext?[["T2","s23","23학번 자료에 답이 적힌 문항: "+o.stem+" "+o.atext]]:[["T2","s23","(문항만 있음)"+o.stem]],srcs:[["23",2024,"M",o.id.split("-").pop(),"s23"]],
+      note:"범위 외(혈액·순환). 교안(1~5장)에 근거가 없어 T2 단독이며 정답 판정에 쓰지 않습니다."};
+    return cardHTML(q,"out");
+  }).join("");
+}
+function renderMC(){
+  const list=Q.filter(q=>q.form==="MC"&&(!ST.ch||q.ch===ST.ch));
+  const outL=ST.out?OUT.filter(o=>o.opts).map(o=>({id:o.id,form:"MC",opts:o.opts,status:"미확정",stem:o.stem})):[];
+  let h=chFilter();
+  h+=`<div class="strip paperhide"><span>객관식 ${list.length}문항 · 확정·교차확인만 채점합니다(추정·추론·미확정 제외).</span><button class="btn pri" data-act="grade" data-ctx="mc" type="button">채점하기</button><button class="btn" data-act="export" type="button">내보내기(정답 지정)</button><span id="gres"></span></div>`;
+  CH.filter(c=>!ST.ch||c===ST.ch).forEach(c=>{
+    const L=list.filter(q=>q.ch===c); if(!L.length)return;
+    h+=`<h2 class="sec">${esc(CHN[c])}</h2>`+L.map(q=>cardHTML(q,"mc")).join("");
+  });
+  if(ST.out)h+=`<h2 class="sec">범위 외 (23학번 중간 · 혈액·순환)</h2>`+outCards("MC");
+  $("#main").innerHTML=h; renderOMR(list,"mc");
+}
+function renderDS(){
+  const list=Q.filter(q=>q.form==="DS"&&(!ST.ch||q.ch===ST.ch));
+  let h=chFilter();
+  h+=`<div class="strip paperhide">단답·서술형은 채점하지 않습니다. 개념 카드 단위로 출제 이력(학번·고사·번호)을 보입니다.</div>`;
+  const keys=[...new Set(list.map(q=>q.key))];
+  keys.forEach(k=>{
+    const L=list.filter(q=>q.key===k);
+    const hist=L.flatMap(q=>q.srcs).map(s=>`${s[0]}학번 ${s[3]}`);
+    h+=`<h3 class="sub">개념 ${esc(k)} <span class="tag">출제 이력 ${hist.length}건: ${esc([...new Set(hist)].join(", "))}</span></h3>`+L.map(q=>cardHTML(q,"ds")).join("");
+  });
+  if(ST.out)h+=`<h2 class="sec">범위 외 (23학번 중간 · 혈액·순환)</h2>`+outCards("DS");
+  $("#main").innerHTML=h; renderOMR([],"ds");
+}
+function renderExp(){
+  const list=B.filter(b=>!ST.ch||b.ch===ST.ch);
+  let h=chFilter();
+  h+=`<div class="strip paperhide"><span>예상 문제 ${list.length}문항(전체 ${B.length}건 = 단원별 기출 수와 같음). 근거는 교안 원문 인용이며 선배 필기는 쓰지 않았습니다.</span><button class="btn pri" data-act="grade" data-ctx="exp" type="button">채점하기</button><span id="gres"></span></div>`;
+  CH.filter(c=>!ST.ch||c===ST.ch).forEach(c=>{
+    const L=list.filter(q=>q.ch===c); if(!L.length)return;
+    h+=`<h2 class="sec">${esc(CHN[c])} · ${L.length}문항</h2>`+L.map(q=>cardHTML(q,"exp")).join("");
+  });
+  $("#main").innerHTML=h; renderOMR(list.filter(q=>q.form==="MC"),"exp");
+}
+function ksCard(k){
+  const rev=ST.all||ST.rev["ks"+k.id]; const mk=ST.omr["ks:"+k.id]||[]; const gr=ST.graded["ks:"+k.id];
+  let h=`<article class="card${gr==="ok"?" ok":gr==="ng"?" ng":""}" id="c-ks-${esc(k.id)}"><div class="chead"><span class="cid">${esc(k.id)}</span><span class="st st-x">공식 정답(최종답안)</span><span class="tag">개념 유사 매핑</span></div>`;
+  h+=`<div class="meta" style="margin:0 0 6px"><div>${esc(k.ex)}</div></div><div class="stem">${esc(k.stem)}</div><ol class="opts">`+k.opts.map((o,i)=>{
+    let c=""; if(mk.includes(i))c+=" sel"; if(rev&&k.ans.includes(i))c+=" corr";
+    return `<li class="${c}" data-act="mark" data-ctx="ks" data-id="${esc(k.id)}" data-i="${i}"><span class="n">${CIRC[i]}</span><span>${esc(o)}</span></li>`}).join("")+`</ol>`;
+  if(rev)h+=`<div class="ansbox">정답: ${esc(ansText(k))} (${link(k.a)})</div>`;
+  h+=`<div class="meta"><div>대응 기출·예상: ${k.map.length?k.map.map(d=>`<button class="jump" data-act="gotoQ" data-id="${esc(d)}" type="button">${esc(d)}</button>`).join(" "):"없음"}</div><div>${esc(k.note)}</div></div>`;
+  h+=`<details><summary>출처 파일</summary><ul><li>${link(k.q)}</li><li>${link(k.a)}</li></ul></details>`;
+  h+=`<div class="acts"><button class="btn" data-act="rev" data-ctx="ks" data-id="${esc(k.id)}" type="button">${rev?"정답 숨기기":"정답 보기"}</button></div></article>`;
+  return h;
+}
+function renderKS(){
+  const list=KS.filter(k=>!ST.ch||k.ch===ST.ch);
+  let h=chFilter();
+  h+=`<div class="strip paperhide"><span>제74~78회 치과의사 국가시험 2교시(구강생물학) 중 1~5장 개념과 겹치는 문항 ${KS.length}건입니다. 문제·답안 pdf는 스캔 이미지라 직접 보고 옮겼으며 최종답안과 대조했습니다. 5개 회차 2교시를 키워드로 훑은 결과이며 전수는 아닙니다. 1·3·4교시(임상과목)는 훑지 않았습니다.</span><button class="btn pri" data-act="grade" data-ctx="ks" type="button">채점하기</button><span id="gres"></span></div>`;
+  h+=`<div class="strip paperhide">같은 문항이 아니라 같은 개념의 문항입니다. 그래서 정답 상태를 '확정'으로 올리지 않고 대응 기출의 근거(T3, 개념 유사)로만 사용했습니다.</div>`;
+  h+=list.map(ksCard).join("")||`<div class="card">이 단원에 해당하는 국시 문항이 없습니다.</div>`;
+  $("#main").innerHTML=h; renderOMR(list,"ks");
+}
+function renderSum(){
+  let h=chFilter();
+  h+=`<div class="strip paperhide">교안 원문에서 요약했습니다. 근거 위치는 교안 슬라이드 제목입니다. 4장은 2026 폴더에 올라온 파일(2025판과 동일)이고, 5장은 아직 2026판이 없어 2025판(잠정)입니다. 3장은 두 파일(요약형·원본 슬라이드형)을 모두 근거로 씁니다.</div>`;
+  SUM.filter(s=>!ST.ch||s.ch===ST.ch).forEach(s=>{
+    h+=`<h2 class="sec">${esc(CHN[s.ch])}</h2>`+s.items.map(it=>{
+      const rel=Q.filter(q=>q.key===it[0]);
+      return `<article class="card sumcard"><div class="chead"><span class="cid">${esc(it[0])}</span></div><div class="stem" style="font-weight:400">${esc(it[1])}</div><div class="meta"><div>근거: ${esc(it[2])}</div>${rel.length?`<div>기출 연계: `+rel.map(q=>`<button class="jump" data-act="gotoQ" data-id="${esc(q.id)}" type="button">${esc(q.id)}</button>`).join(" ")+`</div>`:`<div>기출 연계: 없음</div>`}</div></article>`;
+    }).join("");
+  });
+  $("#main").innerHTML=h; renderOMR([],"sum");
+}
+function mockPool(withB){
+  const a=Q.filter(q=>q.form==="MC").map(eff).filter(q=>GRADED.includes(q.status)||q.status==="추정");
+  const b=withB?B.filter(q=>q.form==="MC"):[];
+  return a.concat(b);
+}
+function renderMock(){
+  const m=ST.mock;
+  let h=`<div class="strip paperhide">시험 형식은 '야마대로'입니다. 24학번 판본은 50문항(객관식과 단답 혼합)이었으며, 이 모의고사는 객관식만 출제합니다. 시험 시간이 확인되기 전이므로 경과 시간만 표시합니다.</div>`;
+  h+=`<div class="strip"><label for="mN">문항 수</label><select id="mN"><option value="10">10</option><option value="20">20</option><option value="999">가능한 전체</option></select><label><input type="checkbox" id="mB"${m&&m.withB?" checked":""}> 예상 문제 포함</label><button class="btn pri" data-act="mockNew" type="button">새로 뽑기·시작</button><button class="btn" data-act="mockGrade" type="button">채점하기</button><span id="mtime" class="q"></span></div><div id="mres"></div>`;
+  if(m){h+=m.list.map(q=>cardHTML(q,"mock")).join("")}
+  else h+=`<div class="card">‘새로 뽑기·시작’을 누르면 확정·교차확인(기준 점수)과 추정 문항(보조 점수)에서 무작위로 뽑습니다. 추론·충돌·미확정은 제외합니다. 범위 외 단원은 제외합니다. 단원 비중은 기출 문항 수에 비례하는 가정입니다.</div>`;
+  $("#main").innerHTML=h; renderOMR(m?m.list:[],"mock");
+  if(m){$("#mN").value=String(m.n)}
+  tickMock();
+}
+function tickMock(){
+  const el=$("#mtime"); if(!el)return;
+  if(!ST.mockStart){el.textContent="";return}
+  const s=Math.floor((Date.now()-ST.mockStart)/1000); el.textContent="경과 "+String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");
+}
+function renderInfo(){
+  const cnt={};Q.forEach(q=>{const s=eff(q).status;cnt[s]=(cnt[s]||0)+1});
+  const tbl=(head,rows)=>`<div class="tblwrap"><table><thead><tr>${head.map(x=>`<th>${x}</th>`).join("")}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+  let h=`<div class="strip paperhide">조회일 2026-10-10 · 규칙 버전 v6.1 (개정안 없음, 현행 유지) · 내 학번 25학번</div>`;
+  h+=`<h2 class="sec">요약</h2><ul class="pts"><li>기출 ${Q.length}건(범위 내): ${Object.entries(cnt).map(e=>e[0]+" "+e[1]).join(" · ")}. 확정(국시 동일 문항·공개 정답)은 근거가 없어 0건입니다. 국시 탭에는 개념이 같은 문항 ${KS.length}건(제74~78회 2교시)이 있고 일부 기출의 근거(T3)로 반영했습니다.</li><li>범위 외 23학번 문항 ${OUT.length}건은 기본 화면에서 숨겼습니다(상단 토글).</li><li>예상 문제 ${B.length}건, 내용 정리 ${SUM.reduce((a,s)=>a+s.items.length,0)}카드입니다.</li><li>25학번 응시 기록은 아직 없어 ‘내 학번’ 강조 대상 문항이 없습니다. 정답 지정 값은 이 브라우저에만 저장됩니다.</li></ul>`;
+  h+=`<h2 class="sec">시험 범위 (§12 교차 확인)</h2>`+tbl(["단원","교안","사용자 전달","기출 범위","판정"],[
+    ["1장 항상성과 세포기능","2026-2 있음 (2025 대비 그림 1-16·1-17 삭제 보고)","5장까지","24학번·21학번 출제","포함"],
+    ["2장 분자생물학과 세포 내 신호전달","2026-2 있음 (2025와 같은 파일일 가능성, 해시 미확인)","5장까지","24·22·21학번","포함"],
+    ["3장 세포막을 통한 물질이동","2026-2 있음 (요약형 10-10 + 원본 슬라이드형 10-12)","5장까지","24학번 중간 3문항 + 21·22학번 기말 4문항","포함 (기출은 이전 판 기준일 수 있음)"],
+    ["4장 흥분성 세포: 신경","2026 폴더에 있음 (10-12 추가, 2025판과 해시 동일)","5장까지","24학번 중간 3문항 + 21학번 기말 4문항","포함"],
+    ["5장 시냅스","2026 없음 · 2025판으로 대체","5장까지","24학번 중간 2문항 + 21·22학번 기말 6문항","포함 (잠정)"],
+    ["6장 이후(혈액·순환 등)","2025 폴더에 10장 순환 교안 존재","범위 밖","23학번 중간, 16~20학번 합본(17·18·20·22학번 표기, Ch7~9: 혈액·심장·순환·근육)","범위 외"]
+  ])+`<p class="q">시험 일정·형식: 일정은 이 화면에 표시하지 않습니다(사용자 선택). 범위(1~5장)와 형식(야마대로)은 사용자 전달이며 공지 원문은 Drive·Notion 검색에서 찾지 못해 미확인입니다.</p>`;
+  h+=`<h2 class="sec">자료 현황표</h2>`+tbl(["학번(학년도)","자료","열람","비고"],[
+    ["25(2026) 교안","1·2·3장 PDF, 교재 3편 PDF(178MB)",`1~3장 ✓ · 교재 ✗ (본문이 비어 반환됨)`,"4·5장은 2026판 없음"],
+    ["2025 교안","5장 시냅스(4장은 2026 폴더에 동일 파일)","✓ 원본 열람","5장 2026판 미게시"],
+    ["21(2022)","중간 정답본 docx · 무정답판 docx",`✓ ${link("s21")} · ✓ ${link("s21b")}`,"블라인드/완전 짝 확정(지문 일치): 무정답판은 일부 문항·정답이 없는 사본이고 정답본이 완전본입니다. 독립 근거 1건으로 셉니다. 원번호 12번은 두 판본 모두 없음. pdf 정답본(708KB)과 개론 중간 pdf(1.4MB)도 열람했고 docx 정답본과 문항·정답이 같은 사본이라 독립 근거 1건으로 셉니다"],
+    ["21(2022) 기말(예2-1)","생리학 야마.docx · 답 없는 사본 docx · 스캔 pdf",`✓ ${link("s21f")} · ✓ ${link("s21fb")} · ✗ pdf(텍스트 없음)`,"범위가 3~5장+근육이라 3~5장 문항 11건을 반영했습니다. 12·16번은 복기가 불완전해 카드로 만들지 않았습니다. 답이 적힌 문항은 3·13·19·20번뿐입니다. 두 docx는 같은 시험의 완전본(답 포함)과 사본입니다"],
+    ["22(2023) 기말","추가분 docx",`✓ ${link("s22f")}`,"21학번 대비 추가분만 수록. 이차능동수송·시냅스 비교·수용체 3건 반영, 근육·부종 문항은 범위 외"],
+    ["23(2024) 기말","docx","✓ (읽음)","소화·타액 범위라 범위 외"],
+    ["22(2023)","중간 야마 docx 2건","✓ (21 대비 추가분만 수록)","정답 표기 없는 문항 다수"],
+    ["23(2024)","중간·기말·실험기말 docx","중간 ✓","블라인드형 · 범위 외(혈액·순환). 기말·실험은 미열람"],
+    ["24(2025)","중간 4판본(docx 2, pdf 2)",`4건 ✓ ${link("s24")} · ${link("s24b")} · ${link("s24c")} · ${link("s24d")}`,"짝 확정(지문 대조): 번호가 있는 pdf(1g41LI)와 docx(1s9AH6)는 문항·정답 표기가 같은 사본입니다(독립 근거 1건). docx(1oNf4i)·pdf(1Cglb)는 5·18·23~25·30·32·41번 등이 빠진 블라인드형입니다. 기준 문항 집합은 1g41LI입니다. 기말·실험기말은 미열람"],
+    ["16~20","중간 합본 pdf 1건(17·18·20·22학번 표기)",`✓ ${link("s16")}`,"Ch7~9(혈액·심장·순환·근육)와 일부 단답이어서 이번 범위 밖입니다. 이미지·필기 혼재로 색인만 했고 문항 카드는 만들지 않았습니다"],
+    ["보관소 zip","@야마보관소Global 등","✗ 목록만","후속 단계"],
+    ["대형 PDF","생리학3편 178MB, 실험 기말 야마 183MB, 기말 야마 복사본 900MB","✗","열람 한도 초과 가능, 분할 제공 요청"]
+  ]);
+  h+=`<h2 class="sec">학번 × 자료원 반영 현황</h2>`+tbl(["학번","원본 시험지","원본 야마","가공본","반영 문항(범위 내)"],[
+    ["21","미탐색","중간 정답본·무정답판·pdf 2건 ✓, 기말 docx 2건 ✓ (기말 pdf ✗ 스캔)","없음(미탐색)","33건 (중간 19건 중 24학번과 병합 9건, 기말 11건, 24학번 문항에 기말 출처 병합 3건)"],["22","미탐색","중간 추가분 2건 ✓, 기말 추가분 ✓","없음","10건 (중간 7건 + 기말 3건)"],["23","미탐색","블라인드형 ✓","없음","범위 외 19건"],["24","미탐색","4판본 ✓ (사본 2 + 블라인드형 2)","없음","30건 복기 문항(미복기 20번호)"],["16~20","미탐색","합본 ✓ (색인만)","없음","범위 밖(Ch7~9)"]
+  ])+`<p class="q">24학번 미복기(‘ㅇ’ 또는 빈 번호) 문항: 8, 10, 19, 26, 27, 28, 29, 31, 33, 35, 36, 37, 40, 43, 44, 46, 47, 48, 49, 50번 (20건). 문항 ID는 가공본이 없어 별칭({학번}-{학년도}-{고사}-{문형}-{원번호})을 ID로 썼습니다. 원번호가 없는 21학번 문항은 문서 내 출현 순서(#n)입니다.</p>`;
+  h+=`<h2 class="sec">알려진 한계 목록</h2><pre class="code">A 검증하지 못한 것
+- 21학번 기말 pdf(스캔), 24학번 기말·실험 기말, zip 보관소와 공유 폴더 열거는 아직입니다. 16~20학번 합본은 범위 밖이라 색인만 했습니다.
+- 교안 인용은 원본 열람 시점에 직접 읽은 텍스트를 옮긴 것이며, 파일 대조 스크립트로 자동 검증하지 못했습니다.
+- 교재 3편(178MB)은 본문을 얻지 못했습니다.
+B 근거·정답 쪽 한계
+- 국시(제74~78회)는 스캔 이미지 pdf라 텍스트 추출이 안 되어 내려받아 렌더링·OCR한 뒤 이미지를 직접 보고 확인했습니다. 2교시(구강생물학) 5개 회차를 키워드로 훑어 후보 6건을 찾았고(국시 탭), 1·3·4교시는 훑지 않았습니다. OCR이 한글 표에서 오류가 많아 키워드 검색은 누락이 있을 수 있습니다.
+- 국시 후보는 모두 '개념 유사'이고 동일 문항이 아니어서 확정(T3 동일 문항) 상태 문항은 여전히 0건입니다. 유사 문항은 대응 기출의 근거(T3)와 신뢰도로만 반영했습니다.
+- 시험 공지 원문은 Drive와 Notion 검색에서 찾지 못했습니다(범위 1~5장은 사용자 전달).
+- 정답 표기는 T2(타 선배 야마) 단독인 경우가 많고 24학번 판본의 정답 표기 주체는 불명입니다.
+- 5장은 2025판 교안 기준(잠정)입니다. 3장은 2026 폴더에 요약형(10-10)과 원본 슬라이드형(10-12) 두 파일이 있고, 기출은 이전 판 기준일 수 있습니다.
+- 그림 문항: 텍스트 열람으로는 그림을 얻을 수 없었고 이미지 내장 대상 문항을 식별하지 못했습니다(21학번 정답본 docx 3.8MB는 이미지 포함 가능성). 이미지 내장 실패 목록은 이 점이 전부입니다.
+- 선배 필기 판독(§16), 교안 밖 설명, 약어 풀이, 웹 예시 이미지는 이번 단계에서 하지 않았습니다.
+C 프롬프트와 구현의 불일치(결정 필요, 기본값 병기)
+- 규칙은 학번 전수를 요구하나 사용자 선택에 따라 단계적으로 진행했습니다. 2단계까지 24·23·22·21학번(범위 내 중간)을 반영했고, 남은 것은 기말·zip 보관소·공유 폴더 열거입니다. 기본값: 후속 단계에서 증분 갱신.
+- 개정안 블록이 없어 v6.1 현행으로 진행했습니다.
+D 아직 하지 않은 것
+- 24학번 기말·실험 기말, zip 보관소·공유 폴더 열거, 국시 OCR 후 매핑, 선배 필기 대조.</pre>`;
+  $("#main").innerHTML=h; renderOMR([],"info");
+}
+function render(){
+  document.body.classList.toggle("paper",ST.paper);
+  renderTabs();
+  ({mc:renderMC,ds:renderDS,ks:renderKS,sum:renderSum,exp:renderExp,mock:renderMock,info:renderInfo})[ST.tab]();
+  lsSet("dp-tab",ST.tab);
+}
+
+/* ===== 이벤트 ===== */
+document.addEventListener("click",e=>{
+  const t=e.target.closest("[data-act]"); if(!t)return;
+  const act=t.dataset.act, id=t.dataset.id, ctx=t.dataset.ctx;
+  if(act==="tab"){ST.tab=t.dataset.t;render();window.scrollTo(0,0)}
+  else if(act==="ch"){ST.ch=+t.dataset.c;render()}
+  else if(act==="rev"){const k=ctx+id;ST.rev[k]=!ST.rev[k];render();const c=document.getElementById("c-"+ctx+"-"+id);if(c)c.scrollIntoView({block:"nearest"})}
+  else if(act==="mark"){
+    const q=findQ(id); if(!q)return; const k=ctx+":"+id; const i=+t.dataset.i;
+    const cur=ST.omr[k]||[]; ST.omr[k]=cur.includes(i)?cur.filter(x=>x!==i):cur.concat(i).sort((a,b)=>a-b);
+    delete ST.graded[k]; saveOmr(); render();
+  }
+  else if(act==="goto"){const c=document.getElementById("c-"+ctx+"-"+id);if(c)c.scrollIntoView({behavior:"smooth",block:"start"})}
+  else if(act==="clearOmr"){Object.keys(ST.omr).filter(k=>k.startsWith(ctx+":")).forEach(k=>{delete ST.omr[k];delete ST.graded[k]});saveOmr();render()}
+  else if(act==="grade"){
+    const list=ctx==="mc"?Q.filter(q=>q.form==="MC"&&(!ST.ch||q.ch===ST.ch)):ctx==="ks"?KS.filter(k=>!ST.ch||k.ch===ST.ch):B.filter(b=>!ST.ch||b.ch===ST.ch);
+    const r=gradeList(list,ctx); render();
+    const el=$("#gres"); if(el)el.textContent=`채점 ${r.ok}/${r.tot} (마킹한 문항 ${r.marked}, 채점 제외 ${r.skipped}문항)`;
+  }
+  else if(act==="gotoB"){ST.tab="exp";ST.ch=0;render();const c=document.getElementById("c-exp-"+id);if(c)c.scrollIntoView({block:"start"})}
+  else if(act==="gotoQ"){
+    const q=Q.find(x=>x.id===id); if(!q)return; ST.tab=q.form==="MC"?"mc":"ds"; ST.ch=0; render();
+    const c=document.getElementById("c-"+(q.form==="MC"?"mc":"ds")+"-"+id); if(c)c.scrollIntoView({block:"start"});
+  }
+  else if(act==="export"){
+    const ua=Object.keys(ST.user).map(id=>{const q=Q.find(x=>x.id===id);const u=ST.user[id];return {id:id,alias:id,answer:u.ans&&q?u.ans.map(i=>CIRC[i]):u.text||null,reason:u.reason||""}}).filter(x=>x.answer);
+    const txt=JSON.stringify({exported_at:new Date().toISOString(),user_answers:ua},null,1);
+    const out=$("#gres"); const fb=()=>{if(out)out.innerHTML=`<br><textarea id="expTxt" rows="6" style="width:100%" aria-label="내보내기 JSON">${esc(txt)}</textarea>`;const ta=$("#expTxt");if(ta)ta.select()};
+    try{navigator.clipboard.writeText(txt).then(()=>{if(out)out.textContent="클립보드에 복사했습니다."},fb)}catch(err){fb()}
+  }
+  else if(act==="mockNew"){
+    const withB=$("#mB").checked, n=+$("#mN").value;
+    const pool=mockPool(withB).slice(); for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]]}
+    const list=pool.slice(0,Math.min(n,pool.length));
+    Object.keys(ST.omr).filter(k=>k.startsWith("mock:")).forEach(k=>{delete ST.omr[k];delete ST.graded[k]});
+    ST.mock={list,withB,n}; ST.mockStart=Date.now(); ST.rev={}; saveOmr(); render();
+    clearInterval(ST.timer); ST.timer=setInterval(tickMock,1000);
+  }
+  else if(act==="mockGrade"){
+    if(!ST.mock)return; let a=0,at=0,b=0,bt=0,ex=0,ext=0;
+    ST.mock.list.forEach(q=>{
+      const k="mock:"+q.id; const mk=ST.omr[k]||[]; const ok=sameSet(mk,q.ans);
+      if(q.exp){ext++;if(ok)ex++}
+      else if(GRADED.includes(q.status)){at++;if(ok)a++}
+      else {bt++;if(ok)b++}
+      ST.graded[k]=ok?"ok":"ng";
+    });
+    clearInterval(ST.timer); render(); clearInterval(ST.timer);
+    $("#mres").innerHTML=`<div class="card">확정·교차확인 기준 ${a}/${at} · 추정 포함 보조 점수 ${a+b+ex}/${at+bt+ext} (추정 기출 ${b}/${bt}, 예상 문제 ${ex}/${ext})<br><span class="q">추론·충돌·미확정은 출제하지 않았습니다.</span></div>`;
+  }
+});
+document.addEventListener("change",e=>{
+  const t=e.target; if(!t.dataset||!t.dataset.act)return; const id=t.dataset.id;
+  if(t.dataset.act==="user"){ST.user[id]=ST.user[id]||{}; if(t.value==="")delete ST.user[id].ans; else ST.user[id].ans=[+t.value]; cleanUser(id);saveUser();render()}
+  else if(t.dataset.act==="usertext"){ST.user[id]=ST.user[id]||{}; if(t.value.trim()==="")delete ST.user[id].text; else ST.user[id].text=t.value.trim(); cleanUser(id);saveUser();render()}
+  else if(t.dataset.act==="reason"){ST.user[id]=ST.user[id]||{}; ST.user[id].reason=t.value; cleanUser(id);saveUser()}
+});
+function cleanUser(id){const u=ST.user[id];if(u&&!u.ans&&!u.text&&!u.reason)delete ST.user[id]}
+function findQ(id){return Q.find(q=>q.id===id)||B.find(q=>q.id===id)||KS.find(q=>q.id===id)||(ST.mock&&ST.mock.list.find(q=>q.id===id))||OUT.map(o=>({id:o.id,form:o.opts?"MC":"DS",opts:o.opts})).find(q=>q.id===id)}
+$("#optAll").addEventListener("change",e=>{ST.all=e.target.checked;render()});
+$("#optPaper").addEventListener("change",e=>{ST.paper=e.target.checked;render()});
+$("#optOut").addEventListener("change",e=>{ST.out=e.target.checked;render()});
+$("#btnTheme").addEventListener("click",()=>{
+  const r=document.documentElement; const dark=r.getAttribute("data-theme")==="dark"||(!r.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme: dark)").matches);
+  r.setAttribute("data-theme",dark?"light":"dark"); lsSet("dp-theme",dark?"light":"dark");
+});
+(function init(){
+  const th=lsGet("dp-theme"); if(th==="dark"||th==="light")document.documentElement.setAttribute("data-theme",th);
+  const t=lsGet("dp-tab"); if(t&&TABS.some(x=>x[0]===t))ST.tab=t;
+  $("#diag").textContent="진단: 기출 "+Q.length+"건 · 범위 외 "+OUT.length+"건 · 예상 "+B.length+"건 · AI 기능 미사용 · 저장소 "+(lsGet("dp-omr")===null?"비어 있음 또는 사용 불가":"사용 중");
+  render();
+})();
+</script>

@@ -1,0 +1,11 @@
+AUDIT data.json
+1 unique ids True 249
+2 status-rule violations []
+3 dup clusters 51 one rep each & symmetric True
+4 unique 175 MC unique 126
+5 opts>=2 for MC True
+6 answer idx out of range []
+7 fig refs missing []
+8 new q 30 no ev []
+9 conflicts ['20-2021-M-MC-06', '20-2021-M-MC-09', '20-2021-M-MC-20', '20-2021-M-MC-28', '20-2021-M-MC-31', '20-2021-M-MC-39', '24-2025-M-BK-30']
+10 stats {'교차확인': 135, '추정': 103, '충돌': 7, '추론': 3, '미확정': 1}
