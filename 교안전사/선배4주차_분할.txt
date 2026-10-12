@@ -1,0 +1,101 @@
+# 선배 국소의치 4주차 분할 PDF 전사 (타 학번 수업 기록, 보조 자료) - 총 10쪽
+# 주제: 부분 무치악의 분류(Kennedy 분류, Applegate 원칙, 지대치로서 고립치아). 촬영 사진 위에 검은 손글씨, 일부 분홍 형광펜.
+
+## 부분1-쪽1 w4_b1-1.jpg
+(a) 슬라이드: 제목 "부분 무치악의 분류 / Classification of Partially Edentulous Arches" / 단국대학교 치과대학 치과보철학교실 (교수명 판독불가, 박재원[?])
+(b) 손글씨:
+- 제목 왼쪽에 별표(☆), "통 암기(챕터 운랑 다)" [? 괄호 안 판독 불확실]
+- 우측: "자주 나오는 단어 -> 암속!" ("암속" 판독 불확실 [?], 암기 의미로 추정되나 확정 못함)
+- 하단: "-> 적용증: 이 case는 이런 치료~" (적용증 [?]) 화살표 아래 "분류 체계O"
+(c) [힌트]: "통 암기(챕터 운랑 다)" (별표 표시, 해당 단어 일부 판독 불확실)
+
+## 부분1-쪽2 w4_b1-2.jpg
+(a) 슬라이드 "Goals": ▶ Kennedy 분류법 숙지 / ▶ Kennedy 분류에 추가 적용되는 Applegate의 원칙 (Kennedy, Applegate 부분 음영 강조 처리)
+(b) 손글씨: Applegate 아래 "L 동일 사용" ([?] "동일"은 약간 불확실)
+(c) [힌트]: 없음
+
+## 부분1-쪽3 w4_b1-3.jpg (사진 3장 콜라주: 전체 슬라이드 + 확대 슬라이드 + 교재 원문 사진)
+(a) 슬라이드 "분류체계의 요구조건":
+ ▶ 부분 무치악의 형태를 쉽게 가시화하고 인식할 수 있어야 한다.
+ ▶ 치아지지 상태인지 또는 치아와 조직 지지상태인지 쉽게 분간할 수 있어야 한다.
+ ▶ 보편적이며 널리 응용될 수 있어야 한다.
+ ▶ 설계의 유형을 제시해 줄 수 있어야 한다.
+ 교재 원문(영문): "The most familiar classifications are those originally proposed by Kennedy, Cummer, and Bailyn. Beckett, Godfrey, Swenson, Friedman, Wilson, Skinner, Applegate, Avant, Miller, and others have also proposed classifications. It is evident that an attempt should be made to combine the best features of all classifications so that a universal classification can be adopted."
+(b) 손글씨/표시:
+- 전체 슬라이드 사진: 왼쪽 위 "교재"; "쉽게"에 동그라미 + 화살표 -> "간온[?]디보제[?]" (판독 불확실); 각 항목 끝 번호: 1항(부분 무치악 형태 가시화)에 "2번", 2항(치아지지 상태)에 "1번" 옆에 "L for 치료계획" 아래 화살표 "보철의 핵심!", 3항 "3번", 4항 "4번". (원본에서 첫째 줄 '2번', 둘째 줄 '1번'으로 표기)
+- 확대 슬라이드: 왼쪽 "교재에 [?]되어 있는 좋은 순서" (일부 판독 불확실); 둘째 항목(치아지지...) 분홍 밑줄, 셋째 항목 "보편적" 동그라미, 첫째~셋째 항목 일부를 분홍 사각형으로 묶음, 넷째 "설계의 유형" 밑줄
+- 교재 원문: Kennedy ~ Miller 부분 밑줄, 곡선 화살표가 "Kennedy"를 가리키며 "보충"; 하단 "L 이 문단 블랭크식[?] 출제X"
+(c) [힌트]: "이 문단 블랭크식[?] 출제X" (교재 영문 단락은 빈칸 출제 안 한다는 뜻으로 보이나 글자 불확실). 또 "보철의 핵심!" (요구조건 중 치아지지/조직지지 구분 -> 치료계획용), 번호 1~4번은 요구조건 중요도 순서로 보임.
+
+## 부분2-쪽1 w4_b2-1.jpg (콜라주: 슬라이드 + 교재 그림 2장)
+(a) 슬라이드 "Kenndy Classification For Partial Edentulous Arches" (슬라이드 표기 그대로 Kenndy). 하악 그림 격자 4행x3열: 1행 Class I / Class I Mod 1 / Class I Mod 2; 2행 Class II / Class II Mod 1 / Class II Mod 2; 3행 Class III / Class III Mod 1 / Class III Mod 4[?](쪽3 기준 Mod 4); 4행 Class IV (옆칸 No Modification). 1열(Class I~IV)이 자홍색 박스로 강조. 
+ 교재 그림(우측 2장): 상악 그림 Kennedy Class I ~ Class IV 및 mod, 각 그림에 (Bailyn Class / Skinner Class) 병기. 좌측 y축 빈도(Incidence of occurrence, according to Skinner): 72%, 14%, 8.5%, 3%, 2.5%. 행: 72% = Kennedy Class I, Class II, Class I mod 1 등(첫 행); 14% = Class III 등; 8.5% = Class IV, Class III mod 1; 3% = Class I mod 1 ~; 2.5% = Class II mod 2 등. (행별 정확한 분류 배치는 소형 글씨라 일부 판독불가)
+(b) 손글씨:
+- "major 분류" (1열 위)
+- Class I 옆 "양측성", Class II 옆 "편측성" -> 두 개를 묶어 "뒤에 치아X -> free-end"
+- Class III 옆 "전후방 치아 잔존", Class IV 옆 "정중선 포함 전치"
+- 큰 선 두 개로 Class I, II를 우측 "Q: 왜 양측이 I? A: 유병률!" 로 연결
+- 교재 그림 우측: 72%, 14%에 동그라미, 유병률 열을 연두색 사각형, 하단 "Incidence of occurrence" 밑줄 + "L 유병률"; 두 교재 그림 연결선 "같은 사진"
+(c) [힌트]: "Q: 왜 양측이 I? A: 유병률!" (Class I을 양측성 무치악으로 하는 이유 = 유병률, 72%) ; "major 분류" 열 구조(양측성 free-end=I, 편측성 free-end=II, 전후방 치아 잔존=III, 정중선 포함 전치=IV)
+
+## 부분2-쪽2 w4_b2-2.jpg
+(a) 슬라이드 "Kenndy Classification For Partial Edentulous Arches" - 격자(1st 세로 화살표 / 2nd 가로 화살표) Class I~IV x Mod 1/2/(3,4). 우측 박스: "주분류 하기 위한 부위 제외 / 무치악 부위 갯수 = modification space(추가결손부)"
+(b) 손글씨:
+- 제목에서 우측으로 긴 화살표
+- 왼쪽 "최후방 치아?" 괄호 표시
+- 우측 박스 "부위 갯수"에 동그라미, 아래 "부위의 결손치 개수 -> 중요X"
+- Class IV 하단 "만약 여기X -> Class III mod 1" (Class IV에 동그라미)
+- "암기" + "No Modification" 칸 동그라미
+(c) [힌트]: "암기" (No Modification = Class IV는 mod 없음); "부위의 결손치 개수 -> 중요X"; "만약 여기X -> Class III mod 1" ([?] 문맥은 Class IV 해당 안 되면 Class III mod 1)
+
+## 부분2-쪽3 w4_b2-3.jpg
+(a) 슬라이드 "Kenndy Classification For Partial Edentulous Arches": 좌측 캐릭터 그림 + 말풍선 "[?]를 주분류로 하지? 여러군데 없는데? / 7번치아 RPD 수복 계획 없는데? / Class IV에서 중간에 없으면?" (일부 글자 판독불가) / 격자 Class I~IV x Mod 1/2 / 우측 박스 "주분류 하기 위한 부위 제외 무치악 부위 갯수 = modification space(추가결손부)"
+(b) 손글씨: 없음
+(c) [힌트]: 없음 (말풍선 질문 3개는 슬라이드 원문)
+
+## 부분2-쪽4 w4_b2-4.jpg
+(a) 슬라이드 "Applegate 원칙 - Kennedy classification에 추가적용":
+ ▶ 주분류를 변경시킬 수 있는 어떠한 발치도 발치를 시행한 후 분류에 포함
+  • 발치 후 분류
+ ▶ 제3대구치가 결손되고 회복시켜 주지 않는 경우에는 분류에 포함시키지 않는다.
+  • 사랑니 발치 후 수복 X -> 제외
+ ▶ 제3대구치가 존재해 있을 경우, 이것을 지대치로 사용할 때에만 분류에 포함[시킨다]
+  • 사랑니 지대치 사용 예정 -> 포함
+(b) 손글씨/표시: "발치 후 분류" 밑줄; "발치 후", "수복 X"(수복에 동그라미), "-> 제외" 밑줄; "사랑니 지대치 사용 예정"에서 "예정" 동그라미, "포함" 밑줄; 화살표 "상악 II / 하악 I, II" ([?] 읽기: "상악 II, 하악 I,II" 로 판독, 확신 낮음; 사랑니 지대치 사용 시 해당 분류 예시로 보임)
+(c) [힌트]: "예정" 동그라미 강조 (사랑니는 지대치 사용 '예정'일 때만 포함). 별도 문구 힌트 없음.
+
+## 부분3-쪽1 w4_b3-1.jpg
+(a) 슬라이드 "Applegate 원칙 - Kennedy classification에 추가적용":
+ ▶ 제2대구치가 결손되었어도 수복하지 않는다면 분류에 포함하지 않는다.
+  • 제2대구치 결손 시 수복 X -> 제외
+ ▶ 하나 이상의 결손부위가 있을 때에는 최후방 결손부위(무치악부분)가 항상 주분류를 결정 (분홍 형광: "최후방 결손부위가 주분류를 결정")
+ ▶ 주분류를 결정하고 남은 다른 결손부위는 modification으로 표시, 그 수만 기록
+ ▶ Modification의 크기와 위치는 고려되지 않으며 단지 수만 표기
+  • mod는 결손치아 갯수 상관 없음, 부위 수로 표기 (분홍 형광: "갯수 상관 없음")
+ ▶ Class IV는 modification이 있다. [슬라이드 원문 그대로; 주황색 글씨. 쪽2 표에서는 "Class IV는 mod가 없다"로 표기되어 불일치 -> 원문 오타 가능성[?]]
+(b) 손글씨/표시:
+- 제2대구치 항목 위 "7번"; "제2대구치 결손 시 수복 X -> 제외" 아래 "L 없다 생각"
+- "최후방 결손부위가 주분류를 결정" 왼쪽 별표(☆) + 분홍 형광
+- "남은 다른 결손부위는 modification으로 표시, 그 수만 기록" 검정 밑줄; "단지 수만" 동그라미
+- Class IV 문장 아래 "L 매우 어려움", "L 그냥 암기"
+- 상단 우측 박스 두 개 (치식 도식):
+ 1) 박스1: 6/5 6/5 (좌우 각각 하악[?] 제1대구치 6, 제2소구치 5 표기 형태), 오른쪽 위 ")수복X", 아래 "-> Class 4" [? 판독 "class4"]
+ 2) 박스2: 6/5 와 6/5, 오른쪽에 동그라미 친 "7 수복" 표기(17[?]로도 보임, 7번 치아), 아래 "-> Class II Mod I", "1~4 양측 다 없어도 mod I" ([?] 일부 글자 불확실)
+(c) [힌트]: "최후방 결손부위가 주분류를 결정" (별표 + 형광); "mod는 결손치아 갯수 상관 없음, 부위 수로 표기" (형광); "Class IV는 modification이 있다 -> 그냥 암기"(슬라이드 원문 대로이나 [?] 원문 오류 가능); "1~4 양측 다 없어도 mod I"; "매우 어려움 / 그냥 암기"
+
+## 부분3-쪽2 w4_b3-2.jpg
+(a) 슬라이드 "Kenndy Classification With Applegate's Rules": 좌측 하악 그림 격자 Class I / I Mod 1 / I Mod 2; Class II / II Mod 1 / II Mod 2; Class III / III Mod 1 / III Mod 4 (마지막 칸 Class III Mod 4); Class IV, No Modification. 우측 표 "Applegate's Rules": (노란 제목) 최후방 결손 부위가 주분류 결정 / Mod는 결손치아 갯수 상관 없이, 결손부위의 수로만 표기 / Class IV는 mod가 없다. 하단 2열 표: [분류 포함] 필요부위 발치 후 / (빈칸) / 사랑니 지대치 사용 예정 / (빈칸); [분류 제외] (빈칸) / 사랑니 발치 후 수복 X / (빈칸) / 제2대구치 결손 수복 X
+(b) 손글씨: 격자 위 "-> minor", 왼쪽 "↓ major"; Class III Mod 4 칸에 동그라미 두 개(결손부위 4개) 옆 "4개 부위"; 파란 점 표시; "사랑니 지대치 사용 예정" 밑줄
+(c) [힌트]: 별도 문구 없음 (Class IV는 mod가 없다 = 슬라이드 원문; 쪽 b3-1의 "Class IV는 modification이 있다"와 불일치 -> 원문 오류 가능[?])
+
+## 부분3-쪽3 w4_b3-3.jpg
+(a) 슬라이드 "지대치로서 고립치아의 사용":
+ ▶ 후방연장 의치상 고립치 -> 의치상 이탈하는 힘 -> 근심으로 회전/수평력
+  • 전치부 고립치 : 가장 가까운 치아와 연결
+   - 전치부 무치악 부위를 제거하여 온전한 치열궁 형성
+   - 다수의 지대치 지지를 부여
+   - 심미적 향상
+  - 고립치 : 단독 지대치로 사용하기 위험 -> 고정성 보철물 (붉은 글씨)
+ ▶ 치아지지 RPD의 고립치 : 부가적인 지지 위해 사용 가능
+(b) 손글씨: 슬라이드 좌측 위(사진 밖)에 "보2거" ([?] 필기 제목, 판독불확실); "고립치" 동그라미 + 화살표 "isolated teeth" 및 "전치에서 중절치 하나만~"; "고정성 보철물" 동그라미 + 화살표 "fixed도 옮던가 해서"[? "fixed도 옮겨가해서" 판독불확실], "바뀌야할"[?], "안하면 예측X 움직임 발생"
+(c) [힌트]: 없음 (고립치 단독 지대치 위험, 안 하면 예측 못한 움직임 발생 필기는 해설)
