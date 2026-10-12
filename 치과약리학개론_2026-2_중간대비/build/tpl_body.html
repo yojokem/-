@@ -1,0 +1,359 @@
+<div class="wrap">
+<header class="top">
+  <h1>치과약리학개론 중간고사 대비</h1>
+  <p class="sub">단국대 치과대학 치의예과 · 2026-2 · 반주연 교수 · 범위 1~3장. 기출 7개 학번(15·18·19·20·22·23·24) 고유 175건(학번 간 같은 문항 51묶음 포함 총 249건)을 단원별로 정리하고, 교안(2026) 근거를 문항마다 붙였습니다.</p>
+  <div class="chips" id="chips"></div>
+  <div class="diag" id="diag"></div>
+</header>
+<nav class="tabs" role="tablist" id="tabs" aria-label="대비 화면"></nav>
+<div id="app"></div>
+</div>
+<script>
+const DATA=__DATA__;
+const IMGS=__IMGS__;
+</script>
+<script>
+(function(){
+'use strict';
+var D=DATA, items=D.items, NEW=D.new, CARDS=D.cards;
+var byId={}; items.forEach(function(i){byId[i.id]=i});
+var CIRC=['①','②','③','④','⑤'];
+var ST_GRADE={'확정':1,'교차확인':1};
+var EXAM_DATE=new Date(2026,9,13,12,0,0);
+var store={get:function(k,d){try{var v=localStorage.getItem('dpj.'+k);return v?JSON.parse(v):d}catch(e){return d}},set:function(k,v){try{localStorage.setItem('dpj.'+k,JSON.stringify(v))}catch(e){}}};
+var S={tab:'mc',unit:0,cls:'all',st:{},exam:false,abbr:true,dedup:true,showAll:false,graded:null,focus:null,show:{},mockOpts:{inclNew:false,inclEst:false},timer:{t0:0,acc:0,run:false}};
+var OMR=store.get('omr',{}), UA=store.get('ua',{}), MOCK=store.get('mock',null), MARK=store.get('mmark',{});
+var TABS=[['mc','객관식'],['ds','서술형·단답'],['sum','내용 정리'],['new','예상 문제'],['mock','모의고사'],['stat','현황·범위']];
+var AB={'GPCR':['G-protein-coupled receptor','교안'],'TI':['therapeutic index (치료지수)','교안'],'ED50':['median effective dose','교안'],'TD50':['median toxic dose','교안'],'EC50':['drug dose that shows 50% of maximal response','교안'],'Emax':['maximal effect (최대효과)','교안 외 풀이'],'cAMP':['cyclic AMP','교안 외 풀이'],'PKA':['protein kinase A','교안'],'PKC':['protein kinase C','교안'],'PLC':['phospholipase C','교안'],'IP3':['inositol trisphosphate','교안'],'DAG':['diacylglycerol','교안'],'GRK':['G protein-coupled receptor kinase','교안'],'PDE':['phosphodiesterase','교안 외 풀이'],'RXR':['retinoid X receptor','교안'],'NMDA':['N-methyl-D-aspartate (교안은 NMDA로만 표기)','교안 외 풀이'],'5-HT3':['5-hydroxytryptamine type 3','교안'],'SH2':['Src homology 2 domain','교안 외 풀이'],'MAP':['mitogen-activated protein','교안'],'ACh':['acetylcholine','교안'],'Ach':['acetylcholine (원문 표기 Ach)','교안'],'PAR':['proteinase-activated receptor','교안 외 풀이']};
+var ABRE=new RegExp('(?<![A-Za-z0-9])('+Object.keys(AB).sort(function(a,b){return b.length-a.length}).map(function(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}).join('|')+')(?![A-Za-z0-9])','g');
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function ab(t,seen){var e=esc(t);if(!S.abbr||S.exam)return e;return e.replace(ABRE,function(m){if(seen[m])return m;seen[m]=1;var x=AB[m];return '<abbr class="ab" title="'+esc(m+' = '+x[0]+' ['+x[1]+']')+'">'+m+'</abbr>'})}
+function $(s,r){return (r||document).querySelector(s)}
+function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
+function effAns(it){var u=UA[it.id];return u&&u.a&&u.a.length?u.a:it.a}
+function userSet(it){var u=UA[it.id];return !!(u&&u.a&&u.a.length)}
+function gradable(it){return !!effAns(it)&&(userSet(it)||ST_GRADE[it.st]===1)}
+function stLabel(it){return userSet(it)?'사용자 확정':it.st}
+function stBadge(it){var l=stLabel(it);var c=userSet(it)?'사용자':it.st;return '<span class="badge st-'+c+'">'+l+'</span>'}
+function tierChips(it){return (it.tiers||[]).map(function(t){return '<span class="tier">'+t+'</span>'}).join('')}
+function freqOf(k){var n=0;items.forEach(function(i){if(i.k===k)n++});return n}
+var FREQ={};items.forEach(function(i){FREQ[i.k]=(FREQ[i.k]||0)+1});
+function noteHtml(nt){if(!nt)return '';var e=esc(nt).replace(/\[(원문|수정 제안|사유)\]/g,'<br><span class="tag">[$1]</span>');return '<div class="note">'+e.replace(/^<br>/,'')+'</div>'}
+function evHtml(ev){if(!ev||!ev.length)return '<div class="muted">근거 없음(교안 근거 없음 · 키 없음)</div>';return '<ul class="ev">'+ev.map(function(e){return '<li><span class="tier">'+esc(e[0])+'</span> '+esc(e[1])+' · '+esc(e[2])+' — <q>'+esc(e[3])+'</q></li>'}).join('')+'</ul>'}
+function figHtml(it){if(!it.fig)return '';var im=IMGS[it.fig];if(!im)return '';var low=(it.fig.indexOf('f15')===0);
+  var hid=it.reveal&&!(S.show[it.id]||S.showAll);
+  var alt=it.id+' '+(it.k||'')+' 그림'+(low?' (저해상도 원본 사진)':'');
+  var fig=it.fig.charAt(0)==='L'?'':'';
+  if(hid)return '<div class="fig"><div class="note">원본 그림에 정답 손글씨가 있어 ‘정답 보기’ 이후에만 표시합니다. (파일: 15학번 PDF p.4)</div></div>';
+  return '<div class="fig"><figure><img loading="lazy" alt="'+esc(alt)+'" src="data:image/webp;base64,'+im+'"><figcaption>'+esc(low?'원본 시험지 그림(저해상도)':(it.fig.charAt(0)==='L'?'2026 교안 슬라이드':'원본 시험지 그림'))+(it.fig==='f20_23'&&it.c!=='20'?' · 20학번 동형 그림으로 대체(원본에 정답 손글씨)':'')+(it.id==='19-2020-M-MC-07'?' · 15학번 4번 동형 그림 사용':'')+'</figcaption></figure></div>'}
+function linkItem(id){var it=byId[id];if(!it)return esc(id);return '<button class="lnk" data-act="go" data-id="'+esc(id)+'">'+esc(id)+'</button>'}
+function histOf(k){var h=items.filter(function(i){return i.k===k}).sort(function(a,b){return (+a.c)-(+b.c)||(+a.n||0)-(+b.n||0)});return h.map(function(i){return i.c+'학번 #'+i.n+'('+i.t+')'}).join(' · ')}
+function relCards(k){var o=[];CARDS.forEach(function(c){if((c.rel||[]).indexOf(k)>=0)o.push(c)});return o}
+function relLinks(k){var cs=relCards(k);if(!cs.length)return '';return '<div class="row"><span class="muted">관련 단원:</span>'+cs.map(function(c){return '<button class="lnk" data-act="gocard" data-id="'+c.id+'">Ch.'+c.ch+' '+esc(c.title)+'</button>'}).join('')+'</div>'}
+/* ---------- chips / header ---------- */
+function renderHead(){
+  var now=new Date();var d0=new Date(now.getFullYear(),now.getMonth(),now.getDate());var d1=new Date(2026,9,13);var days=Math.round((d1-d0)/86400000);
+  var dd=days>0?('D-'+days):(days===0?'D-day':'D+'+(-days));
+  $('#chips').innerHTML=[
+   '<span class="chip acc"><b>시험</b> 2026-10-13(화) 12:00–13:00 · '+dd+'</span>',
+   '<span class="chip">일정 출처: 사용자 전달 · 공지 원문 미확인</span>',
+   '<span class="chip"><b>내 학번</b> 25학번 · 본인 응시본 없음(모든 자료는 타 학번)</span>',
+   '<span class="chip"><b>범위</b> Ch.1~3 · 사용자 확정(2026-10-10)</span>',
+   '<span class="chip"><b>형식(가정)</b> 객관식 50문항 · 5지선다</span>',
+   '<span class="chip"><b>프롬프트</b> v6.2 · 2026-10-10 (작성은 v6.1, 2026-10-12 병합 반영)</span>'].join('');
+  $('#diag').textContent='AI: 사용 불가(이 페이지는 AI 호출 capability를 선언하지 않았습니다) · 저장: 이 브라우저(localStorage)';
+}
+function renderTabs(){
+  $('#tabs').innerHTML=TABS.map(function(t){return '<button role="tab" data-tab="'+t[0]+'" aria-selected="'+(S.tab===t[0])+'">'+t[1]+'</button>'}).join('');
+}
+/* ---------- filtering ---------- */
+function clsList(){var s={};items.forEach(function(i){s[i.c]=1});return Object.keys(s).sort(function(a,b){return a-b})}
+function filtered(type){
+  var f=items.filter(function(i){
+    if(i.t!==type)return false
+    if(S.unit&&i.ch!==S.unit)return false;
+    if(S.cls!=='all'&&i.c!==S.cls)return false;
+    if(S.dedup&&S.cls==='all'&&i.rep===false)return false;
+    var any=Object.keys(S.st).some(function(k){return S.st[k]});
+    if(any){if(!S.st[i.st]&&!(userSet(i)&&S.st['확정']))return false}
+    return true});
+  f.sort(function(a,b){return a.ch-b.ch||(a.k<b.k?-1:a.k>b.k?1:0)||(+a.c)-(+b.c)||(+a.n||0)-(+b.n||0)});
+  return f}
+function controls(withExtra){
+  var h='<div class="bar" role="group" aria-label="필터">';
+  h+='<div class="grp"><span class="lbl">단원</span>'+[0,1,2,3].map(function(u){return '<button class="pill" data-act="unit" data-v="'+u+'" aria-pressed="'+(S.unit===u)+'">'+(u?('Ch.'+u):'전체')+'</button>'}).join('')+'</div>';
+  h+='<div class="grp"><span class="lbl">학번</span><button class="pill" data-act="cls" data-v="all" aria-pressed="'+(S.cls==='all')+'">전체</button>'+clsList().map(function(c){return '<button class="pill" data-act="cls" data-v="'+c+'" aria-pressed="'+(S.cls===c)+'">'+c+'</button>'}).join('')+'<span class="muted" style="font-size:12px">· 25학번 문항은 없음(미응시)</span></div>';
+  h+='<div class="grp noexam"><span class="lbl">상태</span>'+['확정','교차확인','추정','충돌','추론','미확정'].map(function(s){return '<button class="pill" data-act="st" data-v="'+s+'" aria-pressed="'+(!!S.st[s])+'">'+s+'</button>'}).join('')+'</div>';
+  h+='</div><div class="bar">';
+  h+='<div class="grp"><button class="pill" data-act="exam" aria-pressed="'+S.exam+'">시험지형</button><button class="pill" data-act="showall" aria-pressed="'+S.showAll+'">정답 전체 보기</button><button class="pill noexam" data-act="dedup" aria-pressed="'+S.dedup+'" title="학번 달라도 같은 문항은 한 번만 표시(학번 필터 선택 시 원본 그대로)">중복 묶기</button><button class="pill noexam" data-act="abbr" aria-pressed="'+S.abbr+'">약어 풀이</button></div>';
+  if(withExtra){h+='<div class="grp"><button class="btn pri" data-act="grade">채점하기</button><button class="btn noexam" data-act="clearomr">마킹 지우기</button><button class="btn noexam" data-act="export">정답 지정 내보내기</button></div>'}
+  h+='</div><div id="exportbox"></div>';
+  return h}
+/* ---------- OMR ---------- */
+function omrHtml(list,two,key){
+  var h='<aside class="omr'+(two?' two':'')+'"><details open><summary>OMR 답안지 <span class="muted" id="timer"></span></summary>';
+  h+='<div class="row" style="margin-bottom:6px"><button class="btn sm" data-act="tstart">시작/정지</button><button class="btn sm" data-act="treset">초기화</button></div>';
+  h+='<div class="omr-list">'+list.map(function(it,ix){
+    var m=(key==='mock'?MARK:OMR)[it.id]||[];var res=S.graded&&S.graded[it.id];var cls=res?(res.ok?'ok':'no'):'';
+    var n=Math.min(5,(it.o||[]).length)||5;var cs='';
+    for(var k=1;k<=n;k++)cs+='<button class="omr-c'+(m.indexOf(k)>=0?' on':'')+'" data-act="omr" data-id="'+esc(it.id)+'" data-k="'+k+'" data-key="'+(key||'mc')+'" aria-label="'+(ix+1)+'번 '+k+'" aria-pressed="'+(m.indexOf(k)>=0)+'">'+k+'</button>';
+    return '<div class="omr-row '+cls+'"><span class="omr-n" data-act="goq" data-id="'+esc(it.id)+'">'+(ix+1)+'</span>'+cs+'</div>'}).join('')+'</div>';
+  h+='<div class="score" id="score">'+scoreHtml()+'</div></details></aside>';
+  return h}
+function scoreHtml(){if(!S.graded)return '<span class="muted">‘채점하기’는 확정·교차확인·사용자 확정 문항에만 적용합니다.</span>';var g=S.graded._sum;if(!g)return '';
+  var h='<b>'+g.ok+' / '+g.n+'</b> <span class="muted">확정·교차확인·사용자 확정 기준 (마킹 '+g.marked+'문항 중)</span>';
+  if(g.estN!=null)h+='<br><b>'+g.estOk+' / '+g.estN+'</b> <span class="muted">추정 포함 보조 점수</span>';
+  return h}
+function timerTick(){var el=$('#timer');if(!el)return;var t=S.timer;var ms=t.acc+(t.run?Date.now()-t.t0:0);var s=Math.floor(ms/1000);el.textContent='· 경과 '+String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')+(t.run?'':' (정지)')}
+setInterval(timerTick,1000);
+/* ---------- cards ---------- */
+function optsHtml(it,seen,sel,showAns,key){
+  var A=effAns(it)||[];var res=S.graded&&S.graded[it.id];
+  return '<ul class="opts">'+(it.o||[]).map(function(o,ix){var k=ix+1;var c='';
+    if(sel.indexOf(k)>=0)c+=' sel';
+    if(showAns&&A.indexOf(k)>=0&&(it.st!=='충돌'))c+=' ans';
+    if(res&&!res.ok&&sel.indexOf(k)>=0&&A.indexOf(k)<0)c+=' wrong';
+    return '<li class="'+c+'" data-act="opt" data-id="'+esc(it.id)+'" data-k="'+k+'" data-key="'+(key||'mc')+'"><span class="no">'+CIRC[ix]+'</span><span>'+ab(o,seen)+'</span></li>'}).join('')+'</ul>'}
+function uaHtml(it){
+  if(it.t!=='MC')return '';var u=UA[it.id]||{a:[],reason:''};var n=Math.min(5,(it.o||[]).length)||5;
+  var h='<h4>정답 지정(사용자 확정)</h4><div class="row">';
+  for(var k=1;k<=n;k++)h+='<button class="pill" data-act="ua" data-id="'+esc(it.id)+'" data-k="'+k+'" aria-pressed="'+(u.a.indexOf(k)>=0)+'">'+CIRC[k-1]+'</button>';
+  h+='<input type="text" id="r_'+esc(it.id)+'" data-act="uareason" data-id="'+esc(it.id)+'" placeholder="이유(선택)" value="'+esc(u.reason||'')+'" style="min-width:160px"><button class="btn sm" data-act="uaclear" data-id="'+esc(it.id)+'">해제(이전 판정으로 복귀)</button></div>';
+  if(userSet(it)){h+='<div class="muted" style="font-size:12px">이전 판정(이력 보존): '+esc(it.st)+(it.a?' · '+it.a.map(function(x){return CIRC[x-1]}).join(' '):' · 정답 없음')+'</div>';
+    if(it.a&&it.a.join()!==u.a.join())h+='<div class="note"><span class="tag">알림</span> 지정한 정답이 교안 근거와 다릅니다(이전 판정 대비). 지정은 그대로 적용됩니다. '+(u.reason?'':'(이유 미기재: 사용자 지정)')+'</div>'}
+  return h}
+function ansBox(it,seen){
+  var h='';var lab;
+  if(typeof it.a==='string')lab='정답: '+esc(it.a);
+  else if(Array.isArray(it.a))lab='정답: '+it.a.map(function(x){return CIRC[x-1]}).join(' ');
+  else if(it.st==='추론'&&it.prop)lab='추론 정답(잠정): '+(Array.isArray(it.prop)?it.prop.map(function(x){return CIRC[x-1]}).join(' '):esc(it.prop));
+  else if(it.cand&&it.cand.length)lab='정답 확정 불가 — 후보: '+it.cand.map(function(c){return typeof c.n==='number'?CIRC[c.n-1]:esc(c.n)}).join(', ');
+  else lab='정답 없음(미확정)';
+  h+='<div><b>'+lab+'</b> '+stBadge(it)+' '+tierChips(it)+(it.conf?'<span class="badge">신뢰도 '+esc(it.conf)+'</span>':'')+'</div>';
+  if(userSet(it))h+='<div>사용자 지정: <b>'+effAns(it).map(function(x){return CIRC[x-1]}).join(' ')+'</b>'+(UA[it.id].reason?' · 이유: '+esc(UA[it.id].reason):' · 사용자 지정(이유 미기재)')+'</div>';
+  if(it.st==='충돌'){h+='<div class="conf"><b>충돌(삭제하지 않고 보존)</b><br>'+(it.cf||[]).map(function(c){return esc(c[0])+' → '+esc(c[1])+' — '+esc(c[2])}).join('<br>')+(it.cand&&it.cand.length?'<br>다수 의견/후보 첫 항목: <b>'+(typeof it.cand[0].n==='number'?CIRC[it.cand[0].n-1]:esc(it.cand[0].n))+'</b> — '+esc(it.cand[0].why):'')+'</div>'}
+  else if(it.cf&&it.cf.length){h+='<div class="conf">'+it.cf.map(function(c){return esc(c[0])+' → '+esc(c[1])+' — '+esc(c[2])}).join('<br>')+'</div>'}
+  if(it.st==='추론'&&it.alt)h+='<div class="note"><span class="tag">대안·재판정 조건</span> '+esc(it.alt)+'</div>';
+  h+='<h4>근거</h4>'+evHtml(it.ev);
+  h+=noteHtml(it.nt);
+  if(it.orig)h+=noteHtml(it.orig);
+  h+='<div class="muted" style="font-size:12px">출처: '+(it.src||[]).map(esc).join(' · ')+'</div>';
+  if(it.dups&&it.dups.length>1)h+='<div class="muted" style="font-size:12px">같은 문항: '+it.dups.map(function(d){var x=byId[d];return d===it.id?esc(x.c+'학번 #'+x.n+'(이 카드)'):linkItem(d)}).join(' · ')+(S.dedup&&S.cls==='all'?' <span class="muted">— 중복 묶기 켜짐: 대표 1건만 표시</span>':'')+'</div>';
+  h+='<div class="muted" style="font-size:12px">출제 이력(개념 '+esc(it.k)+', '+(FREQ[it.k]||0)+'건): '+esc(histOf(it.k))+'</div>';
+  h+=relLinks(it.k);
+  return h}
+function qCard(it,idx,opts){
+  opts=opts||{};var seen={};var key=opts.key||'mc';var marks=(key==='mock'?MARK:OMR)[it.id]||[];
+  var showA=S.showAll||S.show[it.id];var hasOpts=it.t==='MC';
+  var h='<article class="card'+(S.focus===it.id?' focus':'')+'" id="q_'+esc(it.id)+'">';
+  h+='<div class="hd"><span class="cid keep">'+(idx+1)+'. </span><span class="cid">'+esc(it.id)+'</span>';
+  h+=stBadge(it)+tierChips(it);
+  h+='<span class="badge">'+(it.t==='MC'?'객관식':it.t==='DS'?'서술형':'빈칸·단답')+'</span><span class="badge">Ch.'+it.ch+'</span>'+(it.isNew?'<span class="badge">신규 예상</span>':((it.dups&&it.dups.length>1)?'<span class="badge">동일 문항 '+it.dups.length+'회 출제</span>':'<span class="badge">개념 반복 '+(FREQ[it.k]||0)+'회</span>'));
+  if(/\[원문\]/.test(it.nt||''))h+='<span class="badge">오기 병기</span>';
+  if(it.fig)h+='<span class="badge">그림</span>';
+  if(it.st==='충돌')h+='<span class="badge">충돌 보존</span>';
+  h+='</div>';
+  h+='<p class="stem">'+ab(it.q,seen)+'</p>'+figHtml(it);
+  if(hasOpts)h+=optsHtml(it,seen,marks,showA,key);
+  h+='<div class="row noexam" style="margin-top:8px"><button class="btn sm" data-act="toggle" data-id="'+esc(it.id)+'">'+(showA?'정답·근거 숨기기':'정답·근거 보기')+'</button></div>';
+  if(showA){h+='<div class="ansbox">'+ansBox(it,seen)+(hasOpts&&!opts.mock?uaHtml(it):'')+'</div>'}
+  else if(S.exam&&S.showAll){h+=''}
+  if(S.exam&&showA&&!opts.mock){}
+  h+='</article>';return h}
+function heading(it,prev){if(S.exam)return '';if(prev&&prev.k===it.k)return '';var c=relCards(it.k)[0];
+  return '<div class="sec">'+esc(it.k)+' <span class="muted" style="font-weight:400">· 출제 '+(FREQ[it.k]||0)+'건</span> '+(c?'<button class="lnk" data-act="gocard" data-id="'+c.id+'">내용 정리 →</button>':'')+'</div>'}
+/* ---------- tab: mc ---------- */
+function viewMC(){
+  var list=filtered('MC');S.list=list;
+  var h=controls(true);
+  h+='<p class="muted" style="margin:0 0 8px">'+list.length+'건 표시 · 범위 외 문항 0건(모든 문항이 Ch.1~3) · 같은 지문이라도 학번이 다르면 별개 출제로 세어 반복 빈도에 포함했습니다. 상태 배지는 근거 단계(T1~T6)를 따르며, 채점은 확정·교차확인·사용자 확정에만 적용됩니다.</p>';
+  h+='<div class="work has-omr">'+omrHtml(list,false,'mc')+'<div id="cards">';
+  var prev=null;list.forEach(function(it,ix){h+=heading(it,prev)+qCard(it,ix);prev=it});
+  if(!list.length)h+='<p class="muted">조건에 맞는 문항이 없습니다.</p>';
+  h+='</div></div>';return h}
+function viewDS(){
+  var list=filtered('DS');S.list=[];
+  var h=controls(false);
+  h+='<p class="muted" style="margin:0 0 8px">서술형 4건과 빈칸·단답 '+filtered('BK').length+'건입니다(개념별 출제 이력 포함). 서술형 모범답안은 교안 문장으로 구성한 것이며 야마에 답안이 있으면 그 표기를 근거로 적었습니다.</p>';
+  var l1=filtered('DS');h+='<div class="sec">서술형 · 개념 카드</div>';
+  var i=0;l1.forEach(function(it){h+=qCard(it,i++)});
+  var l2=filtered('BK');h+='<div class="sec">빈칸·단답</div>';var prev=null;l2.forEach(function(it){h+=heading(it,prev)+qCard(it,i++);prev=it});
+  return h}
+/* ---------- tab: summary ---------- */
+function tableHtml(t){return '<div class="tw"><table class="t"><caption style="text-align:left;font-weight:700;padding:4px 0">'+esc(t.title)+'</caption><thead><tr>'+t.head.map(function(x){return '<th>'+esc(x)+'</th>'}).join('')+'</tr></thead><tbody>'+t.rows.map(function(r){return '<tr>'+r.map(function(x){return '<td>'+esc(x)+'</td>'}).join('')+'</tr>'}).join('')+'</tbody></table></div><div class="muted" style="font-size:12px;margin:-6px 0 8px">근거: 2026 교안 '+esc(t.src)+'</div>'}
+function viewSum(){
+  var h='<div class="bar"><div class="grp"><span class="lbl">단원</span>'+[0,1,2,3].map(function(u){return '<button class="pill" data-act="unit" data-v="'+u+'" aria-pressed="'+(S.unit===u)+'">'+(u?('Ch.'+u):'전체')+'</button>'}).join('')+'</div><div class="grp"><button class="pill" data-act="abbr" aria-pressed="'+S.abbr+'">약어 풀이</button></div></div>';
+  h+='<details class="cd"><summary>선배 필기 대조 <span class="badge">T2′ · 타 학번 수업 기록</span> <span class="muted" style="font-weight:400">'+D.senior.length+'건 · 판독 파일 1개</span></summary><div class="in"><p class="muted">대상: ‘치과약리학개론 중간고사 준비.pptx’(4,646,928B, 2025-2 선배 정리). 텍스트로 변환된 슬라이드만 판독했고 그림 위주 슬라이드는 판독하지 못했습니다. 필기는 정답·상태를 바꾸지 못하며, 타 학번·타 학기 기준이라 올해와 다를 수 있습니다.</p><div class="tw"><table class="t"><thead><tr><th>필기(원문 요지)</th><th>kind</th><th>relation</th><th>단원</th><th>신뢰도</th></tr></thead><tbody>'+D.senior.map(function(s){return '<tr><td>'+esc(s.text)+(s.note?'<div class="muted">'+esc(s.note)+'</div>':'')+'</td><td>'+esc(s.kind)+'</td><td>'+esc(s.rel)+'</td><td>'+esc(s.unit)+'</td><td>'+esc(s.conf)+'</td></tr>'}).join('')+'</tbody></table></div></div></details>';
+  CARDS.filter(function(c){return !S.unit||c.ch===S.unit}).forEach(function(c){
+    var seen={};var tot=0;(c.rel||[]).forEach(function(k){tot+=FREQ[k]||0});
+    h+='<details class="cd" id="c_'+c.id+'"'+(S.cardOpen===c.id?' open':'')+'><summary><span class="badge">Ch.'+c.ch+'</span>'+esc(c.title)+'<span class="muted" style="font-weight:400">· 기출 연계 '+tot+'건 · '+(c.src||[]).map(esc).join(', ')+'</span></summary><div class="in">';
+    if(c.core&&c.core.length)h+='<h4 class="sec" style="font-size:13px">핵심 개념</h4><ul>'+c.core.map(function(x){return '<li>'+ab(x,seen)+'</li>'}).join('')+'</ul>';
+    (c.tables||[]).forEach(function(t){h+=tableHtml(t)});
+    (c.figs||[]).forEach(function(f){if(IMGS[f])h+='<figure class="fig" style="margin:6px 0"><img loading="lazy" alt="'+esc(c.title+' 교안 슬라이드')+'" src="data:image/webp;base64,'+IMGS[f]+'"><figcaption>2026 교안 슬라이드('+f.replace('L','Ch.').replace('_',' p.')+')</figcaption></figure>'});
+    if(c.mem&&c.mem.length)h+='<h4 class="sec" style="font-size:13px">암기 포인트</h4><ul>'+c.mem.map(function(x){return '<li>'+ab(x,seen)+'</li>'}).join('')+'</ul>';
+    var links=(c.rel||[]).filter(function(k){return FREQ[k]});
+    if(links.length){h+='<h4 class="sec" style="font-size:13px">기출 연계(개념 키 → 문항)</h4>'+links.map(function(k){var l=items.filter(function(i){return i.k===k});return '<div style="margin:2px 0"><b>'+esc(k)+'</b> <span class="muted">'+l.length+'건</span> '+l.slice(0,12).map(function(i){return linkItem(i.id)}).join(' ')+(l.length>12?' <span class="muted">외 '+(l.length-12)+'건</span>':'')+'</div>'}).join('')}
+    if(c.notes&&c.notes.length)h+='<h4 class="sec" style="font-size:13px">불일치·누락 별기</h4><ul>'+c.notes.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul>';
+    var rel=CARDS.filter(function(o){return o.id!==c.id&&(o.rel||[]).some(function(k){return (c.rel||[]).indexOf(k)>=0})});
+    if(rel.length)h+='<div class="row"><span class="muted">관련 단원:</span>'+rel.map(function(o){return '<button class="lnk" data-act="gocard" data-id="'+o.id+'">Ch.'+o.ch+' '+esc(o.title)+'</button>'}).join('')+'</div>';
+    h+='</div></details>'});
+  h+='<div class="sec">단원 간 교차 언급 표</div><div class="tw"><table class="t"><thead><tr><th>개념</th><th>단원 A</th><th>단원 B</th><th>판정</th></tr></thead><tbody>'+D.cross.map(function(r){return '<tr>'+r.map(function(x){return '<td>'+esc(x)+'</td>'}).join('')+'</tr>'}).join('')+'</tbody></table></div>';
+  return h}
+/* ---------- tab: new ---------- */
+function viewNew(){
+  var list=NEW.filter(function(q){return !S.unit||q.ch===S.unit});
+  var h='<div class="bar"><div class="grp"><span class="lbl">단원</span>'+[0,1,2,3].map(function(u){return '<button class="pill" data-act="unit" data-v="'+u+'" aria-pressed="'+(S.unit===u)+'">'+(u?('Ch.'+u):'전체')+'</button>'}).join('')+'</div><div class="grp"><button class="pill" data-act="showall" aria-pressed="'+S.showAll+'">정답 전체 보기</button><button class="pill" data-act="abbr" aria-pressed="'+S.abbr+'">약어 풀이</button></div></div>';
+  h+='<p class="muted">신규 예상 문제 '+NEW.length+'건(Ch.1 '+NEW.filter(function(q){return q.ch===1}).length+' · Ch.2 '+NEW.filter(function(q){return q.ch===2}).length+' · Ch.3 '+NEW.filter(function(q){return q.ch===3}).length+'). 모든 문항은 2026 교안 문장에서 만들었고 기출을 베끼지 않았습니다. 기본 분량 규칙(단원당 기출 수)은 7개 학번의 중복 개념이 많아 그대로 쓰지 않고 개념 수 기준으로 30건으로 가정했습니다. 검증: 근거 인용을 교안 원문과 자동 일치시켰고(빌드 시), 정답 유일성·중복 여부는 작성자가 수기 점검했습니다(별도 검증 에이전트 미사용).</p>';
+  list.forEach(function(q,ix){var seen={};var sh=S.showAll||S.show[q.id];
+    h+='<article class="card" id="q_'+q.id+'"><div class="hd"><span class="cid">'+q.id+'</span><span class="badge">신규 예상</span><span class="badge">Ch.'+q.ch+'</span><span class="badge">개념 '+esc(q.k)+'</span><span class="badge">신뢰도 '+q.conf+'</span></div><p class="stem">'+ab(q.q,seen)+'</p>';
+    if(q.fig&&IMGS[q.fig])h+='<div class="fig"><figure><img loading="lazy" alt="'+esc(q.id+' 교안 슬라이드')+'" src="data:image/webp;base64,'+IMGS[q.fig]+'"><figcaption>2026 교안 슬라이드</figcaption></figure></div>';
+    h+='<ul class="opts">'+q.o.map(function(o,i){return '<li class="'+(sh&&q.a.indexOf(i+1)>=0?'ans':'')+'" data-act="newopt"><span class="no">'+CIRC[i]+'</span><span>'+ab(o,seen)+'</span></li>'}).join('')+'</ul>';
+    h+='<div class="row" style="margin-top:8px"><button class="btn sm" data-act="toggle" data-id="'+q.id+'">'+(sh?'정답·해설 숨기기':'정답·해설 보기')+'</button></div>';
+    if(sh)h+='<div class="ansbox"><div><b>정답: '+q.a.map(function(x){return CIRC[x-1]}).join(' ')+'</b></div><div>'+esc(q.exp)+'</div><h4>근거(교안 위치)</h4>'+evHtml(q.ev)+'<div class="muted" style="font-size:12px">파생 기출: '+(q.derived.length?q.derived.map(linkItem).join(' '):'기출에 없는 개념(교안 신규)')+'</div></div>';
+    h+='</article>'});
+  return h}
+/* ---------- tab: mock ---------- */
+function mockPool(){
+  var strict=!S.mockOpts.inclEst;
+  var p=items.filter(function(i){return i.rep!==false&&i.t==='MC'&&i.a&&(i.o||[]).every(function(o){return o.indexOf('복기 누락')<0})&&(ST_GRADE[i.st]||(!strict&&i.st==='추정'))});
+  if(S.mockOpts.inclNew)NEW.forEach(function(q){p.push({id:q.id,ch:q.ch,k:q.k,t:'MC',q:q.q,o:q.o,a:q.a,st:'교차확인',ev:q.ev,fig:q.fig,nt:q.exp,tiers:['T4'],c:'N',n:q.id,cf:[],src:['신규 예상'],isNew:true})});
+  return p}
+function drawMock(){
+  var pool=mockPool();var groups={};pool.forEach(function(i){(groups[i.k]=groups[i.k]||[]).push(i)});
+  var keys=Object.keys(groups);keys.forEach(function(k){groups[k].sort(function(){return Math.random()-.5})});
+  keys.sort(function(){return Math.random()-.5});
+  var picked=[],r=0;
+  while(picked.length<50&&r<10){keys.forEach(function(k){if(picked.length<50&&groups[k][r])picked.push(groups[k][r])});r++}
+  picked.sort(function(a,b){return a.ch-b.ch||(a.k<b.k?-1:1)});
+  MOCK={ids:picked.map(function(i){return i.id}),made:Date.now(),opts:{inclNew:S.mockOpts.inclNew,inclEst:S.mockOpts.inclEst}};MARK={};S.graded=null;store.set('mock',MOCK);store.set('mmark',MARK);
+  S.mockPool={};picked.forEach(function(i){S.mockPool[i.id]=i})}
+function mockList(){
+  if(!MOCK)drawMock();
+  var all={};items.forEach(function(i){all[i.id]=i});NEW.forEach(function(q){all[q.id]={id:q.id,ch:q.ch,k:q.k,t:'MC',q:q.q,o:q.o,a:q.a,st:'교차확인',ev:q.ev,fig:q.fig,nt:q.exp,tiers:['T4'],c:'N',n:q.id,cf:[],src:['신규 예상'],isNew:true}});
+  return MOCK.ids.map(function(id){return all[id]}).filter(Boolean)}
+function viewMock(){
+  var list=mockList();S.list=list;
+  var h='<div class="bar"><div class="grp"><button class="btn pri" data-act="redraw">새로 뽑기</button><button class="pill" data-act="minew" aria-pressed="'+S.mockOpts.inclNew+'">예상 문제 포함</button><button class="pill" data-act="miest" aria-pressed="'+S.mockOpts.inclEst+'">추정 문항도 출제</button><button class="pill" data-act="exam" aria-pressed="'+S.exam+'">시험지형</button><button class="pill" data-act="showall" aria-pressed="'+S.showAll+'">정답 전체 보기</button><button class="btn pri" data-act="grade">채점하기</button></div></div>';
+  h+='<p class="muted">객관식 50문항·5지선다(가정, 시험 시간 미확인이라 카운트다운 없이 경과 시간만 표시). 출제 비중은 기출 문항 수에 비례하는 가정이며 같은 개념 키는 한 번씩 돌아가며 뽑습니다. 추론·충돌·미확정 문항은 제외합니다. 점수는 ‘확정·교차확인 기준’과 ‘추정 포함’을 함께 표시합니다. 이 화면에서 지정한 정답은 모의고사 채점에만 쓰이며 정답 대장에는 영향을 주지 않습니다.</p>';
+  h+='<div class="work has-omr wide">'+omrHtml(list,true,'mock')+'<div id="cards">';
+  list.forEach(function(it,ix){h+=qCard(it,ix,{key:'mock',mock:true})});
+  h+='</div></div>';return h}
+/* ---------- tab: stat ---------- */
+function statTbl(head,rows,cap){return '<div class="tw"><table class="t">'+(cap?'<caption style="text-align:left;font-weight:700;padding:4px 0">'+esc(cap)+'</caption>':'')+'<thead><tr>'+head.map(function(x){return '<th>'+esc(x)+'</th>'}).join('')+'</tr></thead><tbody>'+rows.map(function(r){return '<tr>'+r.map(function(x){return '<td>'+x+'</td>'}).join('')+'</tr>'}).join('')+'</tbody></table></div>'}
+function dl(id,t){return '<a href="https://drive.google.com/drive/folders/'+id+'" target="_blank" rel="noopener">'+esc(t)+'</a>'}
+function viewStat(){
+  var cnt={};items.forEach(function(i){cnt[i.c]=cnt[i.c]||{n:0,mc:0,cf:0,fig:0};cnt[i.c].n++;if(i.t==='MC')cnt[i.c].mc++;if(i.st==='충돌')cnt[i.c].cf++;if(i.fig)cnt[i.c].fig++});
+  var stc={};items.forEach(function(i){stc[i.st]=(stc[i.st]||0)+1});
+  var h='<div class="sec">1. 버전 · 개정안 · 세션 확인</div><ul><li>사용 프롬프트: <b>v6.1 · 2026-10-10(현행)</b>. Notion ‘2026-2 학사 업무 계획’ 맨 아래 블록(1,156행)을 끝까지 읽었으며 ‘직전 규칙’은 v5였습니다. <b>개정안 블록은 페이지에 없었습니다</b>(사용자 선택: 현행 v6.1 유지).</li><li><b>2026-10-12 갱신</b>: 이 화면 작성 뒤 사용자 승인으로 <b>v6.2가 현행에 병합</b>됐습니다(§15 학번 간 동일 문항·§9 중복 묶기·§14·보고 형식). 이에 맞춰 중복 묶기, ‘동일 문항 N회 출제’ 배지, 고유/총 건수 표기를 반영했습니다. 문항 ID와 정답 판정은 바뀌지 않았습니다. 교안 폴더(Drive 3개 PDF)는 2026-10-10 이후 변경이 없음을 2026-10-12에 재조회로 확인했습니다. <b>문항 수: 고유 175건 · 중복 51묶음(125건) 포함 총 249건</b>(객관식 고유 126건 / 총 182건).</li><li>학번: 25학번 확정(사용자 명시, 2026-10-10). 25학번 본인 응시본·본인 필기는 없어 모든 야마·필기는 타인 자료(T2·T2′)로 취급했습니다.</li><li>영구 메모리가 없어 범위·학번 확정은 ‘세션 한정 기억’이며 이 화면에는 기록으로만 남깁니다.</li></ul>';
+  h+='<div class="sec">2. 범위 확정 기록</div><div class="codebox">{"scope":{"from":"Ch.1","to":"Ch.3","excluded":[],"basis":["2026 교안 원본 폴더 3개 PDF(2026-10-10 업로드)","2025 중간고사 폴더의 동명 교안 3개","24학번 중간 복기 문항 전부 Ch.1~3 내용"],"confirmed_by_user":true,"exam_format":"객관식 50문항·5지선다(사용자 선택, 문항 수·시간 공지 미확인)","conflicts":[{"source":"시험일","range":"2026-10-13 12:00-13:00 (사용자 전달)","note":"Notion·Drive에서 예2-2 2026-2 일정 공지 원문 못 찾음; 작년 2025-10-21"}],"decided_at":"2026-10-10"}}</div>';
+  h+=statTbl(['단원','교안 유무','시험 공지 자료','과목 일람(Notion)','기출 범위 표기(연도별)','가공본 포함','판정'],[
+   ['Ch.1 약리학의 정의 및 역사','있음(12쪽, 2026-10-10)','없음(미확인)','개론 페이지 빈 페이지','24학번(2025): 1·2번 포함','가공본 없음','포함'],
+   ['Ch.2 약물의 작용기전','있음(25쪽)','없음','빈 페이지','전 학번 출제','없음','포함'],
+   ['Ch.3 약물의 작용기전-수용체','있음(33쪽)','없음','빈 페이지','전 학번 출제','없음','포함'],
+   ['Ch.4 Pharmacokinetics-1 / Ch.5 약물 치료학','2025 기말 폴더에만 있음','없음','—','중간 문항에 없음(기말 범위)','없음','제외(미확인 — 공지로 확정 필요)']],'교차 확인 표(§12)');
+  h+='<div class="sec">3. 일정 · 공지</div><ul><li>시험: 2026-10-13(화) 12:00–13:00 — 사용자 전달, <b>공지 원문 미확인</b>. 야마부장 업무 페이지(2026-10-07 수정)의 중간고사 일정은 본과 과목만 있고 예2-2 과목은 없습니다.</li><li>2025 중간고사: 2025-10-21 시행(24학번), 2025 기말: 12-09(Notion 지난 학기 기록).</li><li>일정표(Notion·캘린더)는 수정하지 않았습니다(읽기 전용).</li></ul>';
+  h+='<div class="sec">4. 자료 현황표 (학년도 × 폴더 id × 내용 × 최종 수정)</div>';
+  h+=statTbl(['학년도','폴더/파일','내용','최종 수정','처리'],[
+   ['2026','2학기/원본/치과약리학개론 '+dl('1PKaXYuNFA2GZln7W_G0kRvbtWC-6pMik','1PKaXYuN…'),'교안 PDF 3개(1. 정의 및 역사 / 2. 작용기전 / 3. 작용기전-수용체)','2026-10-10','전수 처리(텍스트·슬라이드 그림)'],
+   ['2025','2학기/치과약리학개론 '+dl('1Lcy7W5k0o423sY1JBTE8UpLqRorYEsDL','1Lcy7W5k…')+' · 중간고사 '+dl('1Yr8DT-1AMIjspKVGFzJBo9nmMYkRefjH','1Yr8DT-1…'),'교안 3개(2026과 텍스트 비교), 22학번 야마, 20학번 시험지 외 중간고사 준비 PPT, 기말고사 폴더','2025-12-03','중간 관련 처리 / 기말 폴더는 범위 외'],
+   ['2025','#중간고사 준비 '+dl('1bsjkaaofeZUwTU54XUgUpcP8qQ06xrC0','1bsjkaao…')+' · #반출 '+dl('19YuXGtJpGYxlfNHg6BIX-XnEEf0JWP6f','19YuXGtJ…'),'김은기·최준영 선배 야마 하위 ‘치과약리학개론’ 폴더(15·18·19·20·22학번 시험지·야마), 24학번 중간 야마 4벌','2025-10-12 ~ 2026-10-02','전수 처리'],
+   ['2025','@야마 보관소 '+dl('1Eygb5LcCNQMOfrOyGbFQHrY9Xiw9SVWq','1Eygb5Lc…'),'예2-2 zip 4개(약 0.6~2.0GB)','2025-10-12','<b>열람 못 함</b>: 열람·다운로드 한도(약 10MB·응답 크기) 초과 → 분할 제공 요청'],
+   ['2026','@야마보관소Global '+dl('1eqvQ1wkBfEKciAEPVy-H9Zb7bZQV8XGA','1eqvQ1wk…'),'예2-2·예2-1·본1-2 22홍신의.zip(2.1~4.8GB), 구강보건학 UCC 폴더','2026-09-28','<b>열람 못 함</b>(zip 용량) → 분할 제공 요청'],
+   ['공유','단치 야마 '+dl('1UXNP2DK6LxEFbehmz6F5Yyv3dSPZMxeU','1UXNP2DK…'),'본과 1·2학년 / 예과 2학년 1학기 폴더 등(예과 2학년 2학기 하위는 목록에서 확인하지 못함)','2025-03-25','1단계 열거만(하위 미확인)'],
+   ['공유','아름 예 2-2 / 은기 예과 2-2 / 최준영 예2 야마 등','개론 사본(중복) 및 중간 야마·기말 야마 하위 폴더','2023–2025','시험지 사본으로만 확인(‘중간 야마’ 하위 2곳은 목록이 비어 있음)'],
+   ['2026','2학기/@야마보관소/치과약리학2 '+dl('1OmlpF_ZoIJaxxWjZwHlgBYWULsy-gkNS','1OmlpF_Z…'),'치과약리학2 국시·야마(본1-2 과목)','2026-09-17','범위 외(다른 과목)'],
+   ['국시','치과의사 국가시험 '+dl('1I7p1z0slTLkKQLVFSfjRG4E6I9MBKSu2','1I7p1z0s…'),'회차·교시·정답','2026-09-09','1단계 열거만. 개론 1~3장 문항 매핑은 하지 않음(국시 키 없음)'],
+   ['Notion','2026-2 학사 업무 계획 · 야마부장 업무 · 교과목별 일람/예2-2 정리(치과약리학개론)','일정·프롬프트 블록·빈 일람 페이지','2026-10-07~10','읽기 전용']],'');
+  h+='<div class="sec">5. 학번 × 자료원 반영 현황표</div>';
+  var yr=D.YR,src=D.SRC;
+  var rows=Object.keys(cnt).sort().map(function(c){return [c+'학번 ('+yr[c]+'학년도'+(c==='15'?' 추정 2016':'')+')',(src[c]||'').replace(/\(.+\)/,'')+' — <b>'+cnt[c].n+'건</b> (객관식 '+cnt[c].mc+')','같은 시험지 사본 다수(중복, 대조 안 함)','가공본 없음(개론 가공본 폴더 미발견)',({'15':'39/39 쪽 렌더 대조','18':'32/32 쪽 렌더 대조','19':'45/45 쪽 렌더 대조','20':'51/51 쪽 렌더 대조','22':'33/33 쪽 렌더 대조','23':'17/17 텍스트 열람만(원문 PDF 대조 아님·오타 위험)','24':'32/32 텍스트 열람(그림 없음)'}[c]),cnt[c].cf?cnt[c].cf+'건 충돌 보존':'—']});
+  h+=statTbl(['학번','시험지·야마 PDF 반영(문항 수)','다른 사본','가공본','원문 대조 수/전체','비고'],rows,'');
+  h+='<ul><li>21학번(2022학년도) 시험지는 찾지 못했습니다. 23학번 시험지 머리글은 “21 야마에서 대부분 출제됐습니다”라고 적고 있어 <b>중요한 누락 자료</b>입니다. 16·17·21학번 등 다른 학번도 없습니다.</li><li>20학번에는 같은 시험지의 8MB 스캔 사본 ‘(1)’이 있으나 다운로드 한도로 열지 못했고, 작은 사본(410,871B)과 텍스트 열람본으로 대신했습니다.</li><li>22학번에는 152,124B 사본이 따로 있으나(수기 표시 없는 원본 추정) 이번엔 361,270B 수기 표시본만 대조했습니다.</li></ul>';
+  h+='<div class="sec">6. 블라인드본 · 완전본 짝 결과(24학번)</div><ul><li>짝 후보 판정: 195,897B(#반출, 번호 63까지) ⊂ 213,599B(번호 77까지, 7문항 더 있음: 15·27·32·33·40·41·48번). 지문 대조에서 겹치는 25문항의 지문·정답 표기가 일치하여 같은 시험지의 사본으로 보았고, §6의 ‘2개 이상 일치’에서 독립 근거 1건으로 셉니다. docx 2벌(26,350B ≈ 213,599B본, 24,810B ≈ 195,897B본)도 같은 내용입니다.</li><li><b>문항을 모두 담은 완전본은 없습니다</b>: 213,599B본도 번호만 남은 문항이 약 45개(51~77번 및 중간 번호)이어서 ‘문항 누락 가능’입니다.</li></ul>';
+  h+='<div class="sec">7. 상태 분포</div>'+statTbl(['상태','건수'],Object.keys(stc).map(function(k){return [k,String(stc[k])]}),'');
+  var conf=items.filter(function(i){return i.st==='충돌'});
+  h+='<div class="sec">8. 충돌 문항(삭제하지 않고 보존)</div>'+statTbl(['문항','typed 키/출처','후보·교안'],conf.map(function(i){return [linkItem(i.id),esc((i.cf[0]||[]).join(' → ')),esc((i.cand&&i.cand[0]?('후보 '+(typeof i.cand[0].n==='number'?CIRC[i.cand[0].n-1]:i.cand[0].n)+' — '+i.cand[0].why):''))]}),'');
+  var tw=items.filter(function(i){return /\[원문\]/.test(i.nt||'')});
+  h+='<div class="sec">9. 오기 병기 목록('+tw.length+'건, 원문 유지)</div><p class="muted">'+tw.map(function(i){return linkItem(i.id)}).join(' ')+'</p>';
+  var inf=items.filter(function(i){return i.st==='추론'||i.st==='미확정'});
+  h+='<div class="sec">10. 추론 · 미확정 문항</div>'+statTbl(['문항','상태','내용'],inf.map(function(i){return [linkItem(i.id),esc(i.st),esc((i.prop?('추론 '+(Array.isArray(i.prop)?i.prop.map(function(x){return CIRC[x-1]}).join(' '):i.prop)+' · 신뢰도 '+(i.conf||'-')+' · '):'')+(i.alt?('대안: '+i.alt+' · '):'')+(i.nt||''))]}),'');
+  h+='<div class="sec">11. 교안 누락 개념(교안 근거 없음·부족)</div><ul>'+D.missing.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul>';
+  h+='<div class="sec">12. 교안 변경(2025 → 2026)</div><ul><li>Ch.1: p.5 Pasteur 문장 변경(“질병의 원인으로 bacteria 발견” → “미생물과 질병의 연관성”), p.12 표 머리글 ‘기호명’ → ‘개발 코드명’ 및 UK-92,480 항목 추가.</li><li>Ch.2·Ch.3: 텍스트 전부 동일(그림만 바뀐 경우는 텍스트 비교로 확인할 수 없어 <b>그림 슬라이드 변경은 미확인</b>).</li></ul>';
+  h+='<div class="sec">13. 해결하지 못한 외부 참조</div>'+statTbl(['항목','가리키는 자료','상태'],[['23학번 머리글','“21 야마에서 대부분 출제”','21학번 시험지 없음 — 자료 제공 요청'],['교안 p.18 그림 “Regulation of energy metabolism by cAMP”','교재 원문','교재(약리학 개론) 미제공 — 필기 내용은 선배 PPT만 있음'],['교안 Ch.2 p.22 “Limitation of occupation theory”','교재 해설','교재 미제공(교안은 제목만)']],'');
+  h+='<div class="sec">14. 개념 키별 반복 빈도(병합 후, 학번 달라도 별개 출제로 셈)</div>'+statTbl(['개념 키','건수','출제 이력'],Object.keys(FREQ).sort(function(a,b){return FREQ[b]-FREQ[a]||(a<b?-1:1)}).map(function(k){return [esc(k),String(FREQ[k]),esc(histOf(k))]}),'');
+  h+='<div class="sec">15. 적용 건수·검증 범위(교안 밖 설명·AI·선배 필기)</div><ul><li>교안 밖 설명(§14): 요청이 없어 <b>적용하지 않음</b>(0건). 일반 지식이 필요한 판정은 ‘추론’ 또는 근거 칸의 T5 문구로만 표시.</li><li>선배 필기 대조: 파일 1개, '+D.senior.length+'건(모순 1·교안밖 4·보강 4·보강+교안밖 1·힌트표지 1·해석 불확실 1), 모순·힌트 항목은 작성자가 교안과 수기 대조(전수), 별도 Subagent 대조는 하지 않음.</li><li>AI 기능: 구현하지 않음(진단줄 참고). 약어 풀이 사전 '+Object.keys(AB).length+'개: 교안 병기 정의 우선(‘교안’ 표시), 교안에 없으면 ‘교안 외 풀이’.</li><li>웹 예시 이미지: 사용하지 않음(0건).</li></ul>';
+  h+='<div class="sec">16. 알려진 한계 목록(다른 세션에 붙여 넣기용)</div><div class="codebox" id="limits">'+esc(LIMITS)+'</div><div class="row" style="margin-top:6px"><button class="btn sm" data-act="copylim">복사</button></div>';
+  h+='<div class="sec">17. 교훈 목록(§18, 세션 한정 — 코드 상자)</div><div class="codebox">'+esc(LESSONS)+'</div>';
+  return h}
+var LIMITS=['[A 검증하지 못한 것]','- 쪽 렌더 대조: 15·18·19·20·22학번 PDF 전 쪽을 이미지로 확인했으나 수기 표시 판독은 육안이라 놓친 곳이 있을 수 있음','- 23학번·24학번 텍스트본은 원본 PDF 대조가 아니고 오타 위험이 있음(24학번은 이미지 없음)','- 신규 예상 문제 30건: 교안 인용 자동 일치만 수행, 정답 유일성·중복은 수기 점검(별도 검증 에이전트 없음)','- 브라우저 저장·클립보드 복사는 이 환경에서 실제 실행으로 확인하지 못함(렌더·콘솔 오류만 점검)','[B 근거·정답 쪽 한계]','- 키(T2)는 모두 타 학번 야마의 표기이며 국시 최종답안(T3) 매핑은 하지 않음 → 확정(2건 이상 일치) 문항 0건, 최고 상태는 교차확인','- 20학번 6·9·20·28·31·39, 24학번 30번은 typed 키와 교안·수기 정정이 충돌(삭제하지 않고 병기)','- potency·spare receptor·Li+·PDE 등은 교안에 정의/서술이 없어 추정·교안 근거 없음 표기','- 21학번 시험지 없음(23학번 머리글이 “대부분 21 야마에서 출제”라고 함)','[C 프롬프트와 구현의 불일치(결정 필요, 기본값 병기)]','- §4 가공본 ID: 개론 가공본이 없어 ID = 별칭(학번-학년도-고사-문형-원번호). 기본값: 별칭 사용','- §6 확정 상태: 같은 학번 내 typed 키와 수기 표시는 같은 사본이라 독립 근거 1건으로 셈. 기본값: 교차확인까지','- §14 요령 순위: 조언 전달이 없어 미구현(개념 빈도 표는 현황 14번에 수치로 제공)','- §10 AI 호출: capability 미선언으로 미구현','[D 아직 하지 않은 것]','- zip 보관소(예2-2 0.6~4.8GB) 열람: 분할 제공 필요','- 21학번 및 기타 학번 시험지 확보 후 증분 갱신','- 시험 공지(범위·문항 수·시간) 원문 확인 후 범위·모의고사 갱신','- 국시 폴더 열람·매핑'].join('\n');
+var LESSONS=['버전: 프롬프트 v6.2 · 2026-10-10 · 세션 1(작성은 v6.1, 2026-10-12 v6.2 병합 반영)','L-4 · 2026-10-12 · 상황: 학번만 다른 같은 문항이 카드로 따로 나열 · 문제: §15 동일 문항 판정이 학번 안 원번호 기준, §9에 중복 묶기 없음 · 처리: dups 묶음(유사도 0.85 이상 후보→정답 비교) + 대표 1건 표시 · 규칙: §9·§14·§15 · 상태: 채택(v6.2)','L-1 · 2026-10-10 · 상황: Notion 페이지에 ‘개정안’ 블록이 없음 · 문제: §0/§18의 적용 질의 대상이 없음 · 임시 처리: 현행 v6.1 유지로 질의 · 제안 규칙: 개정안 부재 시 질의를 ‘부재 보고+현행 유지’로 축약 · 영향 절: §0·§18 · 일반화: 가능 · 상태: 제안','L-2 · 2026-10-10 · 상황: 수기 표시 PDF에서 typed 키와 수기 정정이 충돌 · 문제: §6에 ‘수기 표시와 typed 키의 우열’ 규정 없음 · 임시 처리: 충돌로 보존하고 교안 일치 쪽을 후보 첫 항목으로 · 제안 규칙: 같은 사본의 typed 키·수기 표시는 독립 근거 1건으로 센다 · 영향 절: §6 · 일반화: 가능 · 상태: 제안','L-3 · 2026-10-10 · 상황: 다운로드 한도(10MB) · 문제: 8MB 스캔 사본·GB급 zip 열람 불가 · 임시 처리: 작은 사본으로 대체, blocked 기록 · 제안 규칙: §7 한계 문구에 ‘GB급 zip은 분할 제공 요청’ 예시 추가 · 영향 절: §7 · 일반화: 가능 · 상태: 제안','미결 제안: L-1, L-2, L-3(모두 ‘제안’ 상태, 사용자 승인 전 규칙 변경 없음)'].join('\n');
+/* ---------- render ---------- */
+function render(){
+  document.body.classList.toggle('exam',S.exam&&(S.tab==='mc'||S.tab==='mock'));
+  document.body.classList.toggle('showans',S.showAll);
+  renderTabs();var a=$('#app');
+  var fn={mc:viewMC,ds:viewDS,sum:viewSum,'new':viewNew,mock:viewMock,stat:viewStat}[S.tab];
+  a.innerHTML=fn();timerTick();if(window.innerWidth<920){$$('aside.omr details').forEach(function(d){d.open=false})}
+}
+function scrollToId(id){var el=document.getElementById(id);if(el){el.scrollIntoView({block:'start'});}}
+/* ---------- events ---------- */
+document.addEventListener('click',function(ev){
+  var t=ev.target.closest('[data-act],[data-tab]');if(!t)return;
+  if(t.dataset.tab){S.tab=t.dataset.tab;S.graded=null;render();window.scrollTo(0,0);return}
+  var act=t.dataset.act,id=t.dataset.id;
+  switch(act){
+   case 'unit':S.unit=+t.dataset.v;render();break;
+   case 'cls':S.cls=t.dataset.v;render();break;
+   case 'st':S.st[t.dataset.v]=!S.st[t.dataset.v];render();break;
+   case 'exam':S.exam=!S.exam;render();break;
+   case 'dedup':S.dedup=!S.dedup;render();break;
+   case 'showall':S.showAll=!S.showAll;render();break;
+   case 'abbr':S.abbr=!S.abbr;render();break;
+   case 'toggle':S.show[id]=!S.show[id];keepScroll(id);break;
+   case 'opt':case 'omr':{var key=t.dataset.key||'mc';var m=(key==='mock'?MARK:OMR);var k=+t.dataset.k;var a=m[id]||[];var i=a.indexOf(k);if(i>=0)a.splice(i,1);else a.push(k);m[id]=a;store.set(key==='mock'?'mmark':'omr',m);S.graded=null;keepScroll(id);break}
+   case 'newopt':break;
+   case 'ua':{var u=UA[id]||{a:[],reason:''};var k2=+t.dataset.k;var j=u.a.indexOf(k2);if(j>=0)u.a.splice(j,1);else u.a.push(k2);u.a.sort();UA[id]=u;if(!u.a.length)delete UA[id];store.set('ua',UA);S.show[id]=true;keepScroll(id);break}
+   case 'uaclear':delete UA[id];store.set('ua',UA);keepScroll(id);break;
+   case 'go':case 'goq':S.tab='mc';S.unit=0;S.cls='all';S.st={};S.focus=id;S.show[id]=(act==='go')?true:S.show[id];render();setTimeout(function(){scrollToId('q_'+id)},30);break;
+   case 'gocard':S.tab='sum';S.unit=0;S.cardOpen=id;render();setTimeout(function(){var d=document.getElementById('c_'+id);if(d){d.open=true;d.scrollIntoView({block:'start'})}},30);break;
+   case 'clearomr':OMR={};store.set('omr',OMR);S.graded=null;render();break;
+   case 'grade':grade();break;
+   case 'redraw':drawMock();render();break;
+   case 'minew':S.mockOpts.inclNew=!S.mockOpts.inclNew;MOCK=null;drawMock();render();break;
+   case 'miest':S.mockOpts.inclEst=!S.mockOpts.inclEst;MOCK=null;drawMock();render();break;
+   case 'tstart':{var T=S.timer;if(T.run){T.acc+=Date.now()-T.t0;T.run=false}else{T.t0=Date.now();T.run=true}timerTick();break}
+   case 'treset':S.timer={t0:0,acc:0,run:false};timerTick();break;
+   case 'export':doExport();break;
+   case 'copylim':copyText($('#limits').textContent,t);break;
+  }});
+document.addEventListener('input',function(ev){var t=ev.target;if(t.dataset&&t.dataset.act==='uareason'){var u=UA[t.dataset.id];if(u){u.reason=t.value;store.set('ua',UA)}}});
+function keepScroll(){var y=window.scrollY;render();window.scrollTo(0,y)}
+function grade(){
+  var list=S.list||[];var key=S.tab==='mock'?MARK:OMR;var g={};var ok=0,n=0,marked=0,estN=0,estOk=0;
+  list.forEach(function(it){
+    var m=(key[it.id]||[]).slice().sort(function(x,y){return x-y});var A=effAns(it);if(m.length)marked++;
+    if(!A||!m.length)return;
+    var As=A.slice().sort(function(x,y){return x-y});
+    var good=m.length===As.length&&m.every(function(x,i){return x===As[i]});
+    var strict=gradable(it)||!!it.isNew;
+    if(strict||S.tab==='mock')g[it.id]={ok:good};
+    if(strict){n++;if(good)ok++}
+    estN++;if(good)estOk++});
+  g._sum={ok:ok,n:n,marked:marked,estN:(S.tab==='mock'?estN:null),estOk:estOk};
+  S.graded=g;keepScroll()}
+function doExport(){
+  var ids=Object.keys(UA).filter(function(id){return UA[id].a&&UA[id].a.length});
+  var o={exported_at:new Date().toISOString().slice(0,10),user_answers:ids.map(function(id){var it=byId[id];return {id:(it&&it.gb)||id,alias:id,answer:UA[id].a,reason:UA[id].reason||''}})};
+  var txt=JSON.stringify(o);
+  copyText(txt,null,function(ok){var b=$('#exportbox');if(b)b.innerHTML=(ok?'<div class="note">지정한 정답 '+ids.length+'건을 클립보드에 복사했습니다. 대화창에 붙여 넣어 주세요. (가공본 ID가 없어 id에도 별칭을 담았습니다)</div>':'<div class="note">클립보드 복사가 막혀 있어 아래 상자에 표시합니다. 직접 복사해 주세요.</div>')+'<textarea id="exp" rows="4" style="width:100%" readonly>'+esc(txt)+'</textarea>';var e=$('#exp');if(e&&!ok){e.focus();e.select()}})}
+function copyText(txt,btn,cb){
+  var done=function(ok){if(cb)cb(ok);else if(btn){btn.textContent=ok?'복사됨':'복사 실패 — 직접 선택해 복사하세요'}};
+  try{navigator.clipboard.writeText(txt).then(function(){done(true)},function(){done(false)})}catch(e){done(false)}}
+/* ---------- init (after all declarations) ---------- */
+function init(){renderHead();
+  if(!MOCK||!MOCK.ids||MOCK.ids.some(function(id){return !byId[id]&&!/^N-/.test(id)}))MOCK=null;
+  var h=(location.hash||'').replace('#','');if(['mc','ds','sum','new','mock','stat'].indexOf(h)>=0)S.tab=h;
+  render()}
+setTimeout(init,0);
+})();
+</script>

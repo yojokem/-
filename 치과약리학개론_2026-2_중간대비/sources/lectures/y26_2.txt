@@ -1,0 +1,332 @@
+How drugs act:
+
+general principles
+PHARMACODYNAMICS :
+the ways in which drugs work
+or act
+
+
+
+PHARMACOKINETICS :
+the relationship between
+dosage and the changes in
+concentration of drugs in
+different parts of the body with
+time
+                               2
+The binding of drug molecules to cells
+
+  Drug : a chemical applied to a physiological system that affect
+  its function in a specific way
+  Paul Ehrlich : chemical interactions between drugs and tissues
+  The drug molecules must exert some chemical influence on one or
+  more constituents of cell in order to produce a pharmacological
+  response.
+  The drug molecules must be 'bound' to particular constituents of
+  cells and tissues in order to produce an effect.
+  Ehrlich : 'A drug will not work unless it is bound'.
+  Drug targets : Most drugs act on protein molecules.
+
+
+                                                                   3
+                   1. Receptors
+
+                   2. Enzymes
+
+Protein targets    3. Carrier molecules (transporters)
+for drug binding   4. Ion channels
+
+
+
+
+                                                  4
+   Drug receptors
+
+▪ In pharmacology, receptor describes protein molecules those
+ function is to recognize and respond to endogenous chemical
+ signals.
+
+▪ Receptors form a key part of the system of chemical
+ communication that all multicellular organism use to coordinate
+ the activities of their cells and organs.
+
+▪ There is an important distinction between agonists, which
+ 'activate' the receptors, and antagonists, which may combine at
+ the same site without causing activation, and block the effect of
+ agonists on that receptor.
+
+
+
+                                                                     5
+Drug specificity
+
+ ▪ For a drug to be useful as either a therapeutic or a scientific tool,
+  it must act selectively on particular cells and tissues. In other
+  words, it must show a high degree of binding-site specificity.
+
+ ▪ Specificity is reciprocal: individual classes of drug bind only to
+  certain targets, and individual targets recognize only certain
+  classes of drug.
+
+ ▪ No drugs are completely specific in their actions. In many
+  cases, increasing the dose of a drug will cause it to affect targets
+  other than the principal one, and this can lead to side effects.
+
+
+
+
+                                                                     6
+                 - Based on pharmacological response
+
+                 - Direct measurement of ligand
+                  binding to receptors
+
+Receptor         - Molecular cloning
+classification   - Analysis of the biochemical pathway
+                  that are linked to receptor activation
+
+
+
+
+                                                       7
+Drug-Receptor Interactions
+
+Occupation of a receptor by a drug molecule may or may not
+result in activation of the receptor.
+
+
+❖ The tendency of a drug
+  to bind to the receptors
+  is governed by its
+  affinity, whereas the
+  tendency for it, once
+  bound, to activate the
+  receptor is denoted by
+  its efficacy.               The distinction between drug binding and receptor
+                              activation
+
+
+
+                                                                        8
+9
+Agonists, antagonist and efficacy
+
+▪ Drugs acting on receptors may be agonists or antagonists.
+
+▪ Agonists initiate changes in cell function, producing effects of various
+ types; antagonists bund to receptors without initiating such changes.
+
+▪ Agonist potency depends on two parameters: affinity (i.e. tendency to
+ bind to receptors) and efficacy (i.e. ability, once bound, to initiate changes
+ that lead to effects).
+
+▪ For antagonists, efficacy is zero.
+
+▪ Full agonists (which can produce maximal effects) have high agonists.
+
+▪ Partial agonists (which can produce only submaximal effects) have
+ intermediate efficacy.
+
+
+                                                                         10
+     Effects of partial agonists.
+
+11
+Antagonists
+Competitive antagonists:
+▪ If the antagonist binds to the same site on the receptor as the agonist in a
+  reversible manner, it is “competitive.”
+
+▪ In the presence of the antagonist, the agonist log concentration-effect curve is
+  shifted to the right without change in slope or maximum, the extent of the shift
+  being a measure of the dose ratio.
+
+Irreversible antagonists:
+▪ Irreversible antagonists bind covalently to the active site of the receptor,
+  thereby permanently reducing the number of receptors available to the agonist.
+
+▪ An irreversible antagonist causes a downward shift of the Emax, with no shift of
+  EC50 values.
+
+
+
+                                                                            12
+Effects of drug antagonists. EC50= drug dose that shows 50% of maximal response.
+Hypothetical agonist concentration-occupancy curves in the presence of reversible and irreversible competitive
+antagonists. The concentrations are normalized with respect to the equilibrium constants, K, (i.e. 1.0 corresponds to a
+concentration equal to K and results in 50% occupancy).
+                   14
+Antagonists
+
+Allosteric antagonists:
+▪ An allosteric antagonist binds to a site (allosteric site) other than the agonist-
+  binding site and prevents receptor activation by the agonists.
+
+▪   An allosteric antagonist causes a downward shift of the Emax of an agonist,
+    with no change in the EC50 value.
+
+
+
+
+                                                                              15
+Types of drug antagonism
+
+ ▪ Chemical antagonism (interaction in solution)
+      : chelating agents (e.g. dimercaprol), neutralising antibody (e.g. infliximab)
+
+ ▪ Pharmacokinetic antagonism (one drug affecting the absorption,
+       metabolism or excretion of the other)
+       : e.g. cimetidine -- lidocaine
+
+ ▪Physiological antagonism              (two   agents      producing      opposing
+       physiological effects)
+      : e.g. histamine -- epinephrine
+
+
+
+                                                                             16
+    Inverse agonist
+
+
+
+
+   Inverse agonists show selectivity for the resting state of the receptor, this being
+    of significance only in situations where the receptors show constitutive
+    activity.
+
+
+                                                                                 17
+     The two-state model
+
+
+
+
+   According to the two-state model, efficacy reflects the relative affinity of the
+    compound for the resting and activated states of the receptor.
+   Agonists show selectivity for the activated state; antagonists show no selectivity.
+
+
+
+                  18
+Therapeutic index (TI)
+
+
+
+
+                                          ED50 (median effective dose)
+                                          TD50 (median toxic dose)
+
+
+
+
+TI = TD50/ED50
+  ➢ A large number = a wide margin of safety
+  ➢ A small number = a small margin of safety
+
+  ➢ Safe drug: TI is more than 10 or more
+
+
+                                                              19
+Drug-Binding Forces
+
+ •Covalent bonds
+ •Ionic bonds
+ •Hydrogen bonds
+ •Van der Waals forces
+ •Hydrophobic interactions
+
+
+
+
+                             20
+Concentration-response relationship
+ Occupation Concept
+  - The magnitude of a pharmacologic response elicited by a drug that
+ reversibly combines with its receptor is directly proportional to the number of
+ receptors occupied by the drug.
+             k1
+      D+R k       DR         Effect
+              2
+
+
+
+
+                         Emax  [D]
+      Effect =
+                        KD + [D]
+        KD (the dissociation constant)=k2/k1
+
+                                               Theoretic concentration-response curve
+                                               (log scale) for a smooth muscle stimulant.
+
+ 21
+Concentration-response relationship
+Occupation concept
+
+
+
+
+     Dose-effect curves for two drugs differing in receptor affinity by a factor of 1000.
+     Left, A log scale. Right, An arithmetic scale.
+
+
+
+    Limitation of occupation theory
+
+22
+     Spare receptor
+
+
+
+
+    Regulation of receptor
+         Desensitization
+         Down-regulation
+         Up-regulation
+
+
+23
+Drug Effects
+▪ Drugs act mainly on cellular targets, producing effects at different functional
+ levels (e.g. biochemical, cellular, physiological and structural).
+
+▪ The direct effect of the drug on its target produces acute responses at the
+ biochemical, cellular or physiological levels.
+
+▪ Prolonged receptor activation generally leads to delayed long-term effects, such as
+ desensitization or down-regulation of receptors, hypertrophy, atrophy or
+ remodelling of tissues, tolerance, dependence and addiction.
+
+▪ Long-term delayed responses result from changes in gene expression, although
+ the mechanisms by which the acute effects bring this about are often uncertain.
+
+▪ Therapeutic effects may be based on acute responses (e.g. the use of
+ bronchodilator drugs to treat asthma) or delayed responses (e.g. antidepressants).
+
+
+24
+                                    Drug + target
+
+                          Rapid                       Rapid
+
+
+          Rapid
+                                          Slow                       Altered gene
+       Physiological
+                                                                      expression
+        responses
+
+                                                                         Slow
+
+
+                                                                       Delayed
+                                                                      responses
+
+
+Fig. Early and late responses to drugs.
+Many drugs act directly on their targets (left-hand arrow) to produce a rapid physiological response. If
+this is maintained, it is likely to cause changes in gene expression that give rise to delayed effects.
+Some drugs (right-hand arrow) have their primary action on gene expression, producing delayed
+physiological responses. Drugs can also work by both pathways. Note the bidirectional interaction
+between gene expression and response.
+

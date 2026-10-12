@@ -1,0 +1,415 @@
+ How drugs act:
+ molecular aspects
+
+
+DENTAL PHARMACOLOGY
+    Targets for drug action
+2
+Types of Receptor
+
+
+1. Ligand-gated ion channel
+
+2. G-protein-coupled receptor
+
+3. Kinase-linked receptor
+
+4. Nuclear receptor
+
+
+
+
+                                3
+    Fig. Types of receptor-effector linkage.
+    ACh, acetylcholine; E, enzyme; G, G-protein; R, receptor.
+4
+     The four main types of receptor
+ 5
+            Type 1: ligand-gated      Type 2: G-protein-      Type 3: receptor        Type 4: nuclear
+            ion channels              coupled receptors       kinases                 receptors
+
+Location    Membrane                  Membrane                Membrane                Intracellular
+
+
+Effector    Ion channel               Channel or enzyme       Protein kinases         Gene transcription
+
+
+Coupling    Direct                    G-protein or arrestin   Direct                  via DNA
+
+
+Examples    Nicotinic acetylcholine   Muscarinic              Insulin, growth         Steroid receptors
+            receptor, GABAA           acetylcholine receptor, factors, cytokine
+            receptor                  adrenoceptors           receptors
+Structure   Oligomeric assembly of    Monomeric or            Single                  Monomeric structure
+            subunits surrounding      oligomeric assembly     transmembrane helix     with receptor- and
+            central pore              of subunits             linking extracellular   DNA-binding
+                                      comprising seven        receptor domain to      domains
+                                      transmembrane           intracellular kinase
+                                      helices with            domain
+                                      intracellular G-
+                                      protein-coupling
+                                      domain
+    Fig. General structure of four receptor
+    families.
+    The rectangular segments represent hydrophobic
+    -helical regions of the protein comprising
+    approximately 20 amino acidse membrane-
+    spanning domains of the receptors. [A] Type 1:
+    ligand-gated ion channels. Many ligand-gated ion
+    channels comprise four or five subunits of the
+    type shown, the whole complex containing 16-20
+    membrane-spanning segments surrounding a
+    central ion channel. [B] Type 2: G-protein-
+    coupled receptors. [C] Type 3: kinase-linked
+    receptors. Most growth factor receptors
+    incorporate the ligand-binding and enzymatic
+    (kinase) domains in the same molecule, as shown,
+    whereas cytokine receptors lack an intracellular
+    kinase domain but link to cytosolic kinase
+    molecules. Other structural variants also exist.
+    [D] Type 4: nuclear receptors that control gene
+    transcription.
+
+
+
+
+6
+Ligand-gated ion channel
+
+• These are sometimes called ionotropic receptors.
+
+• They are involved mainly in fast synaptic transmission.
+
+• There are several structural families, the commonest being
+ heteromeric assemblies of four or five subunits, with
+ transmembrane helices arranged around a central aqueous
+ channel.
+
+• Ligand binding and channel opening occur on a millisecond
+ timescale.
+
+• Examples include the nicotinic acetylcholine, GABA type A
+ (GABAA), glutamate (NMDA) and 5- hydroxytryptamine type 3
+ (5-HT3) receptors.
+
+                                                               7
+Fig. Structure of the nicotinic acetylcholine receptor (a typical ligand-gated ion channel).
+The five receptor subunits (2, , , ) form a cluster surrounding a central transmembrane pore, the lining of
+which is formed by the M2 helical segments of each subunit. These contain a preponderance of negatively charged
+amino acids, which makes the pore cation selective. There are two acetylcholine binding sites in the extracellular
+portion of the receptor, at the interface between the  and the adjoining subunits. When acetylcholine binds, the
+kinked  helices either straighten out or swing out of the way, thus opening the channel pore.
+
+8
+G-protein-coupled receptor
+
+ These are sometimes called metabotropic or seven-
+  transmembrane-domain (7-TDM) receptors.
+
+ Structures comprise seven membrane-spanning α-helices.
+
+ The G-protein is a membrane protein comprising three
+  subunits (α, β, γ), the α subunit possessing GTPase activity.
+
+ The G protein interacts with a binding pocket on the
+  intracellular surface of the receptor.
+
+ When the G protein binds to an agonist-occupied receptor, the
+  α subunit binds GTP, dissociates and is then free to activate an
+  effector (e.g. a membrane enzyme). In some cases, the βγ
+  subunit is the activator species.
+
+                                                                  9
+G-protein-coupled receptor
+
+
+• Activation of the effector is terminated when the bound GTP
+ molecule is hydrolyzed, which allows the α subunit to recombine
+ with βγ.
+
+• There are several types of G-protein, which interact with
+ different receptors and control different effectors.
+
+• Examples include muscarinic acetylcholine receptors,
+ adrenoceptors, neuropeptide and chemokine receptors, and
+ proteinase-activated receptors.
+
+
+
+
+                                                              10
+Fig. Transmembrane topology of a typical serpentine receptor.
+The receptor's amino (N) terminal is extracellular (above the plane of the membrane), and its carboxyl (C) terminal intracellular. The
+terminals are connected by a polypeptide chain that traverses the plane of the membrane seven times. The hydrophobic transmembrane
+segments (light color) are designated by roman numerals (Ⅰ-Ⅶ). The agonist (Ag) approaches the receptor from the extracellular fluid
+and binds to a site surrounded by the transmembrane regions of the receptor protein. G proteins interact with cytoplasmic regions of the
+receptor, expecially with protions of the third cytoplasmic loop between transmembrane regions Ⅴ and Ⅵ. The receptor's cytoplasmic
+terminal tail contains numerous serine and threonine residues whose hydroxyl (-OH) groups can be phosphorylated. This phosphorylation
+may be associated with diminished receptor-G protein interaction.
+
+11
+   G-protein-coupled receptor families
+
+
+
+Family                      Receptors                              Structural features
+
+
+A: rhodopsin family         The largest group. Receptors for       Short extracellular (N terminal) tail.
+                            most amine neurotransmitters, many     Ligand binds to transmembrane helices
+                            neuropeptides, purines, prostanoids,   (amines) or to extracellular loops
+                            cannabinoids, etc.                     (peptides)
+
+
+
+B: secretin/glucagon        Receptors for peptide hormones,        Intermediate extracellular tail
+receptor family             including secretin, glucagon,          incorporating ligand-binding domain
+                            calcitonin
+
+
+C: metabotropic glutamate   Small group. Metabotropic              Long extracellular tail incorporating
+receptor/calcium sensor     glutamate receptors, GABAB             ligand binding domain
+family                      receptors, Ca2+-sensing receptors
+
+
+
+
+                                                                                                    12
+     Fig. Activation of a proteinase-activated receptor by cleavage of the N-terminal extracellular
+     domain.
+     Inactivation occurs by phosphorylation. Recovery requires resynthesis of the receptor.
+
+13
+Fig. The function of the G-protein.
+The G-protein consists of three subunits (, , ), which are anchored to the membrane through attached lipid residues.
+Coupling of the  subunit to an agonist-occupied receptor causes the bound GDP to exchange with intracellular GTP; the
+-GTP complex then dissociates from the receptor and from the  complex, and interacts with a target protein (target 1,
+which may be an enzyme, such as adenylate cyclase, or an ion channel). The  complex may also activate a target
+protein (target 2). The GTPase activity of the  subunit is increased when the target protein is bound, leading to
+hydrolysis of the bound GTP to GDP, whereupon the  subunit reunites with .
+
+14
+ Figure. Bidirectional control of a target enzyme, such as adenylated cyclase by Gs and Gi.
+ Heterogeneity of G-proteins allows different receptors to exert opposite effects on a target enzyme.
+
+15
+The main G-protein subtypes and their functions
+ Subtypes       Main effectors                                           Notes
+
+ G subunits
+
+ Gs            Stimulates adenylyl cyclase, causing increased cAMP      Activated by cholera toxin, which
+                formation                                                blocks GTPase activity, thus preventing
+                                                                         inactivation
+ Gi            Inhibits adenylyl cyclase, decreasing cAMP               Blocked by pertussis toxin, which
+                formation                                                prevents dissociation of γ complex
+ Go            ?Limited effects of  subunit (effects mainly due to     Blocked by pertussis toxin.
+                γ subunits)                                             Occurs mainly in nervous system
+ Gq            Activates phospholipase C, increasing production of
+                second messengers inositol triphosphate and
+                diacylglycerol thus releasing Ca2++ from intracellular
+                stores and activating protein kinase C (PKC)
+ G12/13        Activates Rho and thus Rho kinase
+
+ Gγ subunits   Activate potassium channels                              Many γ isoforms identified, but
+                Inhibit voltage-gated calcium channels                   specific functions are not yet known
+                Activate GPCR kinases
+                Activate mitogen-activated protein kinase cascade
+                Interact with some forms of adenylyl cyclase and
+                with phospholipase Cβ
+Effectors controlled by G-proteins
+
+ Two key second messenger pathways are controlled by receptors via
+  G-proteins.
+
+  Adenylyl cyclase/cAMP:
+
+   ─ can be activated or inhibited by pharmacological ligands,
+     depending on the nature of the receptor and G protein;
+
+   ─ adenylyl cyclase catalyses formation of the intracellular
+     messenger cAMP;
+
+   ─ cAMP activates protein kinases such as protein kinase A(PKA)
+     that control cell function in many different ways by causing
+     phosphorylation of various enzymes, carriers and other proteins.
+
+
+
+
+                                                                 17
+     Fig. Regulation of energy metabolism by cAMP. AC, adenylate cyclase.
+18
+Effectors controlled by G-proteins
+
+ Phospholipase C/inositol trisphosphate (IP3)/diacylglycerol (DAG):
+
+  ─ catalyses the formation of two intracellular messengers, IP3 and
+    DAG, from membrane phospholipid;
+
+  ─ IP3 acts to increase free cytosolic Ca2+ by releasing Ca2+ from
+    intracellular compartments
+
+  ─ increased free Ca2+ initiates many events, including contraction,
+    secretion, enzyme activation and membrane hyperpolarization;
+
+  ─ DAG activates various protein kinase C (PKC) isoforms, which
+    controls many cellular functions by phosphorylating a variety of
+    proteins.
+
+
+
+                                                                      19
+Effectors controlled by G-proteins
+
+
+ Receptor-linked G-proteins also control:
+ ⚫ Ion channels:
+    –opening potassium channels, resulting in membrane
+     hyperpolarization;
+    –Inhibiting calcium channels, thus reducing neurotransmitter
+     release.
+ ⚫ Phospholipase A2 (and thus the formation of arachidonic acid and
+ eicosanoids).
+
+
+
+
+                                                                   20
+     Fig. Structure of phosphatidylinositol bisphosphate (PIP2), showing sites of cleavage by different
+     phospholipases to produce active mediators.
+     Cleavage by phospholipase A2 (PLA2) yields arachidonic acid. Cleavage by phospholipase C (PLC) yields inositol
+     trisphosphate (I(1,4,5)P3) and diacylglycerol (DAG). PA, phosphatidic acid; PLD, phospholipase D.
+
+21
+Fig. The phosphatidylinositol (PI) cycle.
+Receptor-mediated activation of phospholipase C results in the cleavage of phosphatidylinositol biphosphate (PIP2), forming
+diacylglycerol (DAG) (which activates protein kinase C) and inositol trisphosphate (IP3) (which releases intracellular Ca2+). The role of
+inositol tetraphosphate (IP4), which is formed from IP3 and other inositol phosphates, is unclear, but it may facilitate Ca2+ entry through
+the plasma membrane. IP3 is inactivated by dephosphorylation to inositol. DAG is converted to phosphatidic acid, and these two products
+are used to regenerate PI and PIP2.
+22
+     Fig. G-protein and second messenger control of cellular effector systems.
+     AA, arachidonic acid; DAG, diacylglycerol; IP3, inositol trisphosphate.
+23
+Fig. Desensitisation and trafficking of G protein-coupled receptors (GPCRs).
+On prolonged agonist activation of the GPCR selective G protein-coupled receptor kinases (GRKs) are recruited to the
+plasma membrane and phosphorylate the receptor. Arrestin (ARR) then binds and trafficks the GPCR to clathrin-coated
+pits for subsequent internalisation into endosomes in a dynamin-dependent process. The GPCR is then dephosphorylated
+by a phosphatase (PP2A) and either recycled back to the plasma membrane or trafficked to lysosomes for degradation.
+ARR, arrestin; Dyn, dynamin; GRK, G protein-coupled receptor kinase; PP2A, phosphatase 2A.
+Kinase-linked receptors
+
+ •Receptors for various growth factors incorporate tyrosine kinase
+  in their intracellular domain.
+
+ •Cytokine receptors have an intracellular domain that binds and
+  activates cytosolic kinases when the receptor is occupied.
+
+ •The receptors all share a common architecture, with a large
+  extracellular ligand-binding domain connected via a single
+  membrane-spanning helix to the intracellular domain.
+
+ •Signal transduction generally involves dimerisation of receptors,
+  followed by autophosphorylation of tyrosine residues. The
+  phosphotyrosine residues act as acceptors for the SH2 domains of
+  a variety of intracellular proteins, thereby allowing control of
+  many cell functions.
+
+                                                                25
+Kinase-linked receptors
+
+ They are involved mainly in events controlling cell growth and
+  differentiation, and act indirectly by regulating gene
+  transcription.
+
+ Two important pathways are:
+
+  ─ the Ras/Raf/mitogen-activated protein (MAP) kinase
+    pathway, which is important in cell division, growth and
+    differentiation
+
+  ─ the Jak/Stat pathway activated by many cytokines, which
+    controls the synthesis and release of many inflammatory
+    mediators.
+
+
+
+                                                               26
+27
+     Fig. Transduction mechanisms of kinase-linked receptors.
+     The first step following agonist binding is dimerisation, which leads to autophosphorylation of the intracellular
+     domain of each receptor. SH2 domain proteins then bind to the phosphorylated receptor and are themselves
+     phosphorylated. Two well-characterised pathways are shown: [A] The growth factor (Ras/Raf/mitogen-activated
+     protein [MAP] kinase) pathway; [B] the cytokine (Jak/Stat) pathway. Several other pathways exist, and these
+     phosphorylation cascades interact with components of G-protein systems.
+28
+Protein phosphorylation in signal transduction
+
+▪Many receptor-mediated events involve protein phosphorylation, which
+ controls the functional and binding properties of intracellular proteins.
+
+▪Receptor-linked tyrosine kinases, cyclic nucleotide-activated tyrosine
+ kinases, and intracellular serine/threonine kinases comprise a 'kinase
+ cascade' mechanism that leads to amplification of receptor-mediated
+ events.
+
+▪There are many kinases, with differing substrate specificities, allowing
+ specificity in the pathways activated by different hormones.
+
+▪Desensitization of G-protein-coupled receptors occurs as a result of
+ phosphorylation by specific receptor kinases, causing the receptor to
+ become non-functional and to be internalized.
+
+▪There is a large family of phosphatases that act to dephosphorylate
+ proteins and thus reverse the effects of kinases.
+                                                                    29
+Fig. Central role of kinase cascades in signal transduction.
+Kinase cascades are activated by GPCRs, either directly or via different second messengers, by receptors that generate
+cGMP, or by kinase-linked receptors. The kinase cascades regulate various target proteins, which in turn produce a
+wide variety of short- and long-term effects. CaM kinase, Ca2+/calmodulin-dependent kinase; DAG, diacylglycerol;
+GC, guanylate cyclase; GRK, GPCR kinase; IP3, inositol trisphosphate; PKA, cAMP-dependent protein kinase; PKC,
+protein kinase C; PKG, cGMP-dependent protein kinase.
+30
+Nuclear receptors
+▪A family of 48 soluble receptors that sense lipid and hormonal
+ signals and modulate gene transcription.
+
+▪Their ligands are many and varied, including steroid drugs and
+ hormone, thyroid hormones, vitamins A and D, various lipids
+ and xenobiotics.
+
+▪There are two main categories:
+
+  ─ Class I NRs are present in the cytoplasm, form homodimers
+    in the presence of their ligand, and migrate to the nucleus.
+    Their ligands are mainly endocrine in nature (e.g. steroid
+    hormones).
+  ─ Class II NRs are generally constitutively present in the
+    nucleus and form heterodimers with the retinoid X receptor.
+    Their ligands are usually lipids (e.g. the fatty acids).
+                                                             31
+Nuclear receptors
+
+
+▪The liganded receptor complexes initiate changes in gene
+ transcription by binding to hormone response elements in gene
+ promoters and recruiting co-activator or co-repressor factors.
+
+▪The receptor family is the target of approximately 10% of
+ prescription drugs, and the enzymes that it regulates affect the
+ pharmacokinetics of some 60% of all prescription drugs.
+
+
+
+
+                                                              32
+Fig. Structure and DNA binding of nuclear receptors. (A) Schematic diagram for a common domain
+structure of NRs which include N-terminal activation function 1(AF-1), DNA binding domain (DBD)
+consisting of two zinc fingers (ZF), hinge region (Hinge), ligand binding domain (LBD), and C-terminal
+AF-2. (B) Schematic diagram for NR dimerization and DNA binding. Nuclear receptors bind as
+heterodimers with RXR to repeats of the nucleotide hexamer AGGTCA with variable spacing. The
+hexamers can be arranged either as direct repeats (DR), everted repeats (ER), or inverted repeats( IR).
+
+ 33
+
