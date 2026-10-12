@@ -55,6 +55,7 @@ claude plugin list
 - **Notion**: "할 일 관리" DB는 `collection://6bea353d-87a3-409a-bfd4-c6e442e61235`. 상태는 할 일/진행 중/검토 대기/보류/완료/폐기, 자동화는 자동 실행/초안만/확인 필요.
 - **Google Calendar**: 계정 `frost.q@icloud.com`, 시간대 Asia/Seoul. 종일 일정은 `allDay`와 날짜 문자열, timeZone UTC로 만든다(하루 밀림 방지).
 - **Google Drive**: 큰 파일은 `download_file_content`가 base64를 파일로 저장하므로 python으로 디코딩한다. 서식 PDF는 입력 불가형이라 텍스트 상자로 채운다.
+- **수업일지(Notion)**: DB `collection://321ae3d0-c565-80da-97bd-000b46cf1c9b`(학교생활 하위). 속성은 수업일(title, 예: "10.12 (보강)"), 교과목(relation → 교과목별 일람), 시작/종료 시각(datetime). 수업·보강 일정을 캘린더에 등록할 때는 여기에도 같은 행을 만든다(둘 다 챙길 것). 본문은 사용자가 채운다.
 - 일부 외부 사이트(논문, 학회, 일부 한국 사이트)는 이 환경의 프록시가 막는다. 필요한 논문은 사용자가 구해 준다.
 
 ## 저장소 구성
