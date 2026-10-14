@@ -3,6 +3,9 @@ import json, base64, collections, os, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from data_q import Q, ev, D03, D05, D04, Y22, Y23, YJ
 from data_n import CH, CH_SRC, SUM, NEW
+from data_r import R as WHY_RAW
+from data_s import MEM, VS
+import re, glob
 
 B = os.path.dirname(__file__)
 YT = "조직학 중간 총정리본 2차_(영준).pdf (1~3주차만)"
@@ -18,6 +21,93 @@ PATCH = {
 for q in Q:
     for e in PATCH.get(q["id"], []):
         q["ev"].append(e)
+
+
+# ───────── v6.8 §14 ① 보기별 판단 이유 ─────────
+def norm(t):
+    return re.sub(r"[\s*\\•]+", "", t)
+CORPUS = ""
+for f in sorted(glob.glob(os.path.join(B, "corpus", "*.txt"))):
+    CORPUS += norm(open(f, encoding="utf-8").read())
+AUTO = bool(CORPUS)
+qmap = {q["id"]: q for q in Q}
+nq_total = nq_ok = nq_down = 0
+for qid, rows in WHY_RAW.items():
+    q = qmap[qid]
+    assert len(rows) == len(q["opts"]), qid
+    ans = q["ans"]
+    out = []
+    for i, (tv, sent, basis, quote) in enumerate(rows, 1):
+        b = basis
+        if b == "T4" and quote:
+            nq_total += 1
+            if AUTO:
+                if norm(quote) in CORPUS: nq_ok += 1
+                else: b = "G"; nq_down += 1
+        elif b == "T4" and not quote:
+            b = "G"
+        review = (tv == "?") or not ans
+        ok = None if review else (i in ans)
+        out.append({"l": i, "ok": ok, "s": sent, "b": b, "q": quote if b == "T4" else ""})
+    q["why"] = out
+    q["whyRev"] = any(w["ok"] is None for w in out)
+for q in Q:
+    q.setdefault("why", [])
+WHYSTAT = {"cards": len(WHY_RAW), "quotes": nq_total, "auto": AUTO, "autoOk": nq_ok, "downgraded": nq_down,
+           "noOpts": [q["id"] for q in Q if not q["opts"]]}
+
+MISMATCH = [
+ ["1-03", "교안에 '자극 → 각질화'를 직접 잇는 문장이 없어 개념 수준으로 판정했습니다."],
+ ["1-05", "콩팥 집합관은 단순입방/단순원주 경계라 22학번 필기도 애매하다고 적었습니다. 교안 직접 근거가 없습니다."],
+ ["1-09", "ㄹ '미토콘드리아'는 교안에 직접 문장이 없고 기저주름만 직접 근거입니다."],
+ ["2-03", "교안의 Sudan 염색 문장은 백색지방세포 슬라이드에 있고, 갈색지방에는 개념 수준으로 적용했습니다."],
+ ["3-08", "22학번 필기는 액틴만 표시했으나 교안은 액틴·트로포마이오신·트로포닌을 얇은 세사로 적습니다. 정답은 교안 기준 유지."],
+ ["4-05", "필기에 ㄱ(뼈 테두리) 표시가 없으나 교안은 긴뼈 연골내골화 과정에 포함합니다."],
+ ["4-06", "조골세포의 분열 가능성은 교안에 직접 문장이 없습니다."],
+ ["5-04", "지시문 '림프관'은 '림프절' 오기일 수 있습니다. 교안 직접 근거가 부족해 필기 기반 추정입니다."],
+ ["5-05", "교안 요약표(모두 공통)와 22학번 필기('림프절일 경우 답 가·나·다')가 어긋납니다. 양쪽 보존."],
+ ["6-07", "22학번 필기에서 4번 표현이 애매하다고 적었습니다."],
+ ["7-02", "교안에 '멜라닌 과립 = 카테콜아민' 직접 문장이 없습니다(2025판 04 기준)."],
+ ["8-01", "교안은 rRNA로 적고 문항 선지는 mRNA라 가장 가까운 선지로 판정했습니다."],
+]
+
+# ───────── v6.8 §13 인용 그림 번호·색인 ─────────
+FIGS = [
+ {"q": "Q1", "img": "plasma", "kind": "문항", "src": "23학번 치과조직학 중간.docx 이미지(형질세포 전자현미경 사진)", "emb": "내장(base64 JPEG)", "hist": "교체 이력 없음"},
+ {"q": "Q2", "img": "em", "kind": "문항", "src": "23학번 치과조직학 중간.docx 이미지(골격근 세로 전자현미경, 손글씨 표시 제거·흔적 일부 잔존)", "emb": "내장(base64 JPEG)", "hist": "교체 이력 없음"},
+ {"q": "Q3", "img": "cardiac", "kind": "문항", "src": "24학번 완전본 docx 이미지(근육 세로 단면, 화살표 = 사이원반)", "emb": "내장(base64 JPEG)", "hist": "교체 이력 없음"},
+]
+FIGNO = {f["img"]: f["q"] for f in FIGS}
+
+# ───────── v6.8 §14 ④ 연도·시점 카드 (교안에 실제 나온 것만) ─────────
+TL = {"years": [
+ ["1891", "혈액 도말법(Smear method) — Dimitri Ramanovsky (1891년), 교안 표기 그대로", "도말 염색 종류: Giemsa·Wright·Leishman", "교안04(2025판) Staining of the Blood", "Dimitri Ramanovsky (1891년)"]],
+ "times": [
+ ["상피(피부·소장)", "28일 / 4~6일", "상피 세포 교체 주기", "교안01 p.83", "Turnover time: 28 days in skin, 4 to 6 days in small intestine"],
+ ["적혈구", "수명 120일", "무핵 양면오목 원반", "교안04(2025판) RBC", "Life span: 120 days"],
+ ["혈소판", "수명 10일", "무핵 이중볼록 원반", "교안04(2025판) Platelet", "Life span: 10 days"],
+ ["적혈구 생성", "7일", "EPO·비타민 B12·철·엽산 필요", "교안04(2025판) Erythropoiesis", "EPO, Vit B12, iron, folic acid 7일"],
+ ["과립구 생성", "11일", "골수모세포 → 백혈구", "교안04(2025판) Granulopoiesis", "WBC 11일"],
+ ["혈소판 생성", "10일", "거핵모세포 → 거핵세포 → 혈소판", "교안04(2025판) Megakaryopoiesis", "Platelet 10일"],
+ ["뼈 재형성", "약 3주 / 6개월", "활성화·흡수 → 반전 → 형성 → 휴지", "교안03 p.98", "6 months"],
+ ["뼈 대사", "매주 5~7%", "골량이 매주 교체됨", "교안03 p.98", "5-7% of bone mass turned over each week"],
+ ["골 성장 종료", "여성 ~18세 / 남성 ~21세", "청소년기까지 골격 성장", "교안03 p.86", "through adolescence (~18 females, ~21 males)"],
+ ["가슴샘", "사춘기까지 성장(35~40 g)", "이후 퇴축·지방 침윤", "교안05 Thymus", "continues to grow until puberty (35 ~ 40 g weight)"],
+ ["태생기 조혈", "임신 6주(간) / 6개월(골수)", "간 시기 → 골수 시기", "교안04(2025판) Prenatal Hematopoiesis", "Hepatic phase 6th week of gestation"]],
+ "note": "연표는 교안에 연도가 실제로 적힌 1건뿐입니다(참고문헌 연도는 사건이 아니라 제외). 인물 이름은 원문에 없는 정보를 채우지 않았습니다."}
+
+# ───────── v6.8 §16 내용 정리 각주(선배 필기) ─────────
+FN_KIND = {"3-12": "교안 밖", "3-05": "보강", "3-01": "보강", "3-06": "보강", "6-06": "교안 밖", "1-06": "교안 밖", "7-05": "교안 밖"}
+FN = []; fn_excl = 0
+for q in Q:
+    for e in q["ev"]:
+        if e["t"] != "T2p": continue
+        if ("총정리본" in e["s"] or "나올것같은" in e["s"]) and not q["cf"]:
+            FN.append({"ch": q["ch"], "q": q["id"], "kind": FN_KIND.get(q["id"], "보강"), "t": e["q"], "src": e["s"], "conf": "중"})
+        else:
+            fn_excl += 1
+FN.sort(key=lambda f: (f["kind"] != "교안 밖", f["ch"]))
+FNSTAT = {"shown": len(FN), "excluded": fn_excl, "rule": "기출 정답 표시를 옮겨 적은 항목·모순 항목은 문항 카드에만 두고 각주에서 뺐습니다."}
 
 # 파생 관계
 REL = collections.defaultdict(list)
@@ -39,7 +129,7 @@ NEWRATE = round(100 * len(NEW) / len(Q))
 
 STATS = {"uniq": len(Q), "total": total, "dupBundles": dupb, "dist": dist_o, "conf": conf_o}
 
-VER = "v6.2 · 2026-10-10 (현행)"
+VER = "v6.8 · 2026-10-14 (현행)"
 SCOPE = {"scope": {
   "from": "1주 세포학·상피조직 (9/4)", "to": "7주 신경조직·혈구 (10/14)",
   "excluded": "8주 이후(호흡기, 소화관·소화샘, 내분비, 비뇨기, 특수감각기, 피부)는 기말 범위", "basis":
@@ -137,7 +227,8 @@ IMG = {
 
 DATA = {"Q": Q, "NEW": NEW, "SUM": SUM, "CH": CH, "CH_SRC": CH_SRC, "REL": REL, "STATS": STATS,
         "HAK": HAK, "CROSS": CROSS, "FILES": FILES, "REFS": REFS, "BLIND": BLIND, "SCOPE": SCOPE,
-        "LIMITS": LIMITS, "NEWRATE": NEWRATE, "VER": VER, "BUILT": "2026-10-10"}
+        "LIMITS": LIMITS, "NEWRATE": NEWRATE, "VER": VER, "BUILT": "2026-10-14",
+        "WHYSTAT": WHYSTAT, "MISMATCH": MISMATCH, "FIGS": FIGS, "FIGNO": FIGNO, "TL": TL, "MEM": MEM, "VS": VS, "FN": FN, "FNSTAT": FNSTAT}
 
 def js(o):
     return json.dumps(o, ensure_ascii=False).replace("</", "<\\/")
@@ -147,4 +238,5 @@ tpl = tpl.replace("__DATA__", js(DATA)).replace("__IMG__", js(IMG))
 tpl = tpl.replace("${st.dist['확정'] || 0 + 0}", "${st.dist['확정'] || 0}")
 out = os.path.join(B, "..", "hist_mid_2026.html")
 open(out, "w", encoding="utf-8").write(tpl)
+print("WHY", WHYSTAT, "FN", FNSTAT)
 print("size KB", len(tpl.encode()) // 1024, "uniq", len(Q), "total", total, "dupb", dupb, dict(dist_o), dict(byk), dict(per_ch), "new", len(NEW), NEWRATE)

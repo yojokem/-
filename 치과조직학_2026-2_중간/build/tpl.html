@@ -109,6 +109,39 @@ ul.plain li{margin:3px 0}
 .res{font-size:1rem;padding:10px 14px;border:1px solid var(--accent);background:var(--accent-weak);border-radius:8px;margin-bottom:12px}
 .link{color:var(--accent);text-decoration:underline;cursor:pointer;background:none;border:0;padding:0;font-size:inherit}
 .foot{margin-top:24px;font-size:.76rem;color:var(--muted);border-top:1px solid var(--line);padding-top:10px}
+
+sup,sub{font-size:.72em;line-height:0}
+.why{display:flex;flex-direction:column;gap:6px;margin:4px 0 0;padding:0;list-style:none}
+.why li{display:grid;grid-template-columns:auto auto minmax(0,1fr);gap:6px;align-items:start;font-size:.86rem}
+.vd{font-size:.7rem;border:1px solid var(--line);border-radius:4px;padding:0 6px;white-space:nowrap}
+.vd.a{color:var(--ok);border-color:var(--ok)}.vd.x{color:var(--bad);border-color:var(--bad)}.vd.r{color:var(--s-infer);border-color:var(--s-infer)}
+.bz{font-size:.7rem;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-left:4px;white-space:nowrap}
+.figwrap{position:relative;display:inline-block;max-width:100%}
+.figlab{position:absolute;top:6px;left:6px;pointer-events:none;border:1.5px solid var(--accent);color:var(--accent);background:transparent;font:700 .8rem var(--font-mono);padding:0 6px;border-radius:4px;text-shadow:0 0 3px var(--surface),0 0 3px var(--surface),0 0 6px var(--surface)}
+.scard{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin-bottom:14px;min-width:0}
+.scard-h{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;margin-bottom:6px}
+.scard-h h2{font-size:1.02rem;margin:0 8px 0 0}
+.cnt{font-size:.72rem;background:var(--accent-weak);border-radius:999px;padding:0 9px;white-space:nowrap}
+.sec-t{font-size:.76rem;font-weight:700;color:var(--accent);margin:14px 0 4px;letter-spacing:.03em}
+.pts{list-style:none;margin:0;padding:0}
+.pts li{padding:5px 0;border-bottom:1px dotted var(--line)}
+.pts .s{font-size:.7rem;color:var(--muted);margin-left:6px}
+.mem{background:var(--accent-weak);border-radius:6px;padding:8px 12px;margin:0;list-style:none}
+.mem li{padding:3px 0}
+.vsrow{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+@media (max-width:600px){.vsrow{grid-template-columns:minmax(0,1fr)}}
+.vsc{border:1px solid var(--line);border-radius:6px;padding:6px 10px;min-width:0}
+.vsc .vh{font-weight:700;font-size:.86rem}
+.vst{font-size:.78rem;color:var(--muted);margin-bottom:2px}
+table.st th{background:var(--accent-weak)}
+table.st tbody tr:nth-child(even){background:var(--soft)}
+table.st td:first-child{font-weight:700}
+details.srcd{margin-top:10px;font-size:.84rem}
+details.srcd summary{cursor:pointer;color:var(--muted)}
+.fnb{font-size:.82rem;border-top:1px solid var(--line);margin-top:6px;padding-top:6px}
+.toc{display:flex;flex-wrap:wrap;gap:6px}
+.hid{display:none}
+@media print{header.top,.tools,.row-actions,.no-print,.foot,.tabs{display:none!important}body{padding:0;background:#fff;color:#000}.scard{border:0;break-inside:avoid-page;padding:0}.hid{display:block!important}details.srcd:not([open]) *{display:none}}
 /* 시험지형 */
 body.exam{--bg:#ffffff;--surface:#ffffff;--fg:#000000;--muted:#000000;--line:#000000;--soft:#ffffff;--accent:#000000;--accent-weak:#ffffff;--accent-fg:#ffffff;color-scheme:light;font-family:var(--font-serif)}
 body.exam .meta,body.exam .ans-box,body.exam .card-h .badge,body.exam .card-h .tag:not(.keep),body.exam .row-actions,body.exam figcaption,body.exam .dupl{display:none!important}
@@ -140,10 +173,10 @@ const LS = {
   get(k, d){ try{ const v = localStorage.getItem('hist26.' + k); return v ? JSON.parse(v) : d; }catch(e){ return d; } },
   set(k, v){ try{ localStorage.setItem('hist26.' + k, JSON.stringify(v)); return true; }catch(e){ return false; } }
 };
-const TABS = [["status","현황·범위"],["mc","객관식"],["sum","내용 정리"],["new","예상 문제"],["mock","모의고사"]];
+const TABS = [["status","현황·범위"],["mc","객관식"],["sum","내용 정리"],["all","전체 내용 정리"],["new","예상 문제"],["mock","모의고사"]];
 const S = { tab: LS.get('tab','status'), ch: 0, hak: 'all', st: 'all', group: true, exam: false, showAll: false,
   omr: LS.get('omr', {}), ua: LS.get('ua', {}), uaWhy: LS.get('uaWhy', {}), open: {}, graded: null, inclEst: false,
-  mock: null, newOpen: {}, newMarks: {} };
+  mock: null, newOpen: {}, newMarks: {}, sch: 0, fold: {}, cc: {} };
 const MKS = {c:'①②③④⑤⑥⑦⑧', ga:'가나다라마바', g:'ㄱㄴㄷㄹㅁㅂ'};
 const mark = (mk, i) => mk === 'n' ? (i+1)+'.' : mk === 'ga' ? MKS.ga[i]+')' : mk === 'g' ? MKS.g[i]+'.' : MKS.c[i];
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -156,6 +189,30 @@ const ansOf = q => uaOf(q.id) || q.ans;
 const times = q => q.srcs.length;
 const haks = q => [...new Set(q.srcs.map(s => s.k))];
 const ansLabel = (q, a) => a && a.length ? a.map(i => mark(q.mk, i-1) + (q.opts[i-1] ? ' ' + q.opts[i-1] : '')).join(' / ') : '';
+
+
+/* v6.8 §14 ② 위·아래 첨자: 화면 표시 단계에서만 변환(원문 인용은 esc만 사용) */
+function sx(raw){
+  let h = esc(raw);
+  h = h.replace(/\b10\^(-?\d+)/g, (m, n) => '10<sup>' + n.replace('-', '−') + '</sup>');
+  h = h.replace(/\b10-(\d{1,3})(?=\s*(?:[~∼]|sec\b|[μµ㎛]m|nm\b|mm\b|cm\b|\)|M\b))/g, '10<sup>−$1</sup>');
+  h = h.replace(/([A-Za-z\)])\^(\d+)/g, '$1<sup>$2</sup>');
+  h = h.replace(/\b(Sv|Gy|Bq)-1\b/g, '$1<sup>−1</sup>');
+  h = h.replace(/\b(Ca|Mg)(\d)\+/g, '$1<sup>$2+</sup>');
+  h = h.replace(/\b(H2O2|H2O|CO2|O2|I2|N0|D1|D2)(?![\w])/g, m => m.replace(/(\d)/g, '<sub>$1</sub>'));
+  return h;
+}
+function rich(raw){
+  let t = String(raw ?? '');
+  if(!/\*\*/.test(t)){ const m = t.match(/^([^:：=]{2,26})([:：])/); if(m) t = '**' + m[1] + '**' + t.slice(m[1].length); }
+  return sx(t).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+}
+const EXAM_AT = new Date('2026-10-23T10:00:00+09:00');
+function dday(){
+  const d = Math.ceil((EXAM_AT - Date.now()) / 86400000);
+  return d > 0 ? 'D-' + d : d === 0 ? 'D-Day' : 'D+' + (-d);
+}
+const FN_TITLE = '각주 · 타 학번 필기 · 정답 판정 근거 아님';
 
 function badge(q){
   const s = statusOf(q);
@@ -172,14 +229,15 @@ function imgHtml(q){
   const cap = {plasma:'그림: 형질세포 전자현미경 사진(23학번 docx 이미지, 문항 번호 2-07)',
     em:'그림: 골격근 세로 전자현미경 사진(23학번 docx). a~e 라벨은 원본에 없음, 손글씨 표시는 지웠으나 흔적이 일부 남아 있음',
     cardiac:'그림: 근육 세로 단면(24학번 docx, 화살표 = 사이원반)'}[q.img];
-  return `<figure><img src="${IMG[q.img]}" alt="${esc(q.id + ' ' + cap)}"><figcaption>${esc(cap)}</figcaption></figure>`;
+  const fq = DB.FIGNO[q.img] || '';
+  return `<figure><div class="figwrap"><img src="${IMG[q.img]}" alt="${esc(fq + ' ' + q.id + ' ' + cap)}"><span class="figlab meta" aria-hidden="true">${esc(fq)}</span></div><figcaption>${esc(fq + ' · ' + cap)}</figcaption></figure>`;
 }
 function cardHtml(q, ctx){
   ctx = ctx || 'mc';
   const marks = ctx === 'mc' ? (S.omr[q.id] || []) : [];
   const opts = q.opts.length
     ? `<div class="opts" role="group" aria-label="선지">` + q.opts.map((o, i) =>
-      `<button type="button" class="opt" data-act="opt" data-q="${q.id}" data-i="${i+1}"><span class="mk">${esc(mark(q.mk, i))}</span><span>${esc(o)}</span></button>`).join('') + `</div>`
+      `<button type="button" class="opt" data-act="opt" data-q="${q.id}" data-i="${i+1}"><span class="mk">${esc(mark(q.mk, i))}</span><span>${sx(o)}</span></button>`).join('') + `</div>`
     : `<p class="note meta">선지가 복기되지 않은 문항입니다.</p>`;
   const times_ = times(q);
   const dup = times_ > 1 ? `<span class="badge plain dupl" title="학번 간 동일 문항 묶음 · 같은 시험 내 반복 포함">동일 문항 ${times_}회 출제</span>` : '';
@@ -193,7 +251,7 @@ function cardHtml(q, ctx){
     <div class="ans-box meta" hidden id="ua-${q.id}">${uaBox(q)}</div>` : '';
   return `<article class="card" id="c-${q.id}" data-card="${q.id}">
     <div class="card-h"><span class="cid">${q.id}</span><span class="tag meta">Ch${q.ch} ${esc(DB.CH[q.ch])}</span>${badge(q)}${dup}${srcTags(q)}</div>
-    <p class="stem">${esc(q.stem)}</p>${imgHtml(q)}${opts}${vars}${ex}</article>`;
+    <p class="stem">${sx(q.stem)}</p>${imgHtml(q)}${opts}${vars}${ex}</article>`;
 }
 function ansBox(q){
   const a = ansOf(q);
@@ -202,6 +260,12 @@ function ansBox(q){
   h += `<div class="keyline">${esc(statusOf(q))}: ${esc(line)}</div>`;
   if(q.proposed) h += `<div class="note"><b>추론·잠정:</b> ${esc(q.proposed)} <span class="tag">채점 제외</span></div>`;
   if(q.cand) h += `<div class="note"><b>후보:</b> ${esc(q.cand)}</div>`;
+  if(q.why && q.why.length){
+    const noAns = !(q.ans && q.ans.length);
+    h += `<div class="whybox"><b>${noAns ? '검토 포인트 · 정답 미확정이라 채점 제외' : '보기별 판단 이유'}</b>${uaOf(q.id) ? ' <span class="note">(사용자 정답 지정과 다를 수 있습니다. 아래는 대장 정답 기준)</span>' : ''}<ul class="why">${q.why.map(w => `<li><span class="vd ${w.ok === null ? 'r' : w.ok ? 'a' : 'x'}">${w.ok === null ? '검토' : w.ok ? '정답' : '오답'}</span><span class="mono">${esc(mark(q.mk, w.l - 1))}</span><div>${sx(w.s)}<span class="bz">${w.b === 'T4' ? '교안 근거(수기 대조)' : '일반 지식·논리'}</span>${w.b === 'T4' && w.q ? `<blockquote>${esc(w.q)}</blockquote>` : ''}</div></li>`).join('')}</ul></div>`;
+  } else if(!q.opts.length){ h += `<div class="note">선지 본문이 없는 문항이라 보기별 이유를 쓰지 않았습니다.</div>`; }
+  const mm = DB.MISMATCH.find(x => x[0] === q.id);
+  if(mm) h += `<div class="warn"><b>교안과 불일치 소지(사용자 확인 목록)</b> ${esc(mm[1])}</div>`;
   const ref = q.ev.filter(e => e.t !== 'T2p'), nb = q.ev.filter(e => e.t === 'T2p');
   if(ref.length) h += `<div><b>근거</b>${evHtml(ref)}</div>`;
   if(nb.length) h += `<div><b>선배 필기 대조</b> <span class="note">타 학번 기준이라 올해와 다를 수 있음 · 정답을 바꾸지 않음</span>${evHtml(nb)}</div>`;
@@ -234,7 +298,7 @@ function statusTab(){
     <dt>내 학번</dt><dd>25학번(사용자 확정). 25학번 응시본은 아직 없어 '내 학번' 강조 대상 문항이 없습니다. 자료의 학번 구분은 그대로 둡니다.</dd>
     <dt>일정</dt><dd>2026.10.23 10:00–12:00(사용자 지정). 강의계획서에는 10/24로 적혀 있고 2026-10-24는 토요일, 강의 요일은 금요일이라 불일치로 기록합니다.</dd>
     <dt>형식</dt><dd>객관식(선택형) 위주(24학번 복기본 번호 최대 81, 2025 선배 정리본 표제 '선택형에 한하여'). 문항 수·시간·배점 공지는 확인하지 못했습니다. 성적 비중: 중간 30%, 기말 30%, 실습시험 20%, 실습과제 10%, 출석 10%.</dd>
-    <dt>프롬프트</dt><dd>v6.2 · 2026-10-10 (현행). 별도 개정안 블록이 없어 현행 유지로 진행했습니다. 제안 L-1~L-3은 승인 전이라 규칙을 바꾸지 않았습니다.</dd>
+    <dt>프롬프트</dt><dd>${esc(DB.VER)}. 2026-10-10에는 v6.2로 만들었고, 2026-10-14 사용자 지시로 최신 Notion 범용 프롬프트(v6.8, v6.3~v6.7 포함)에 맞춰 교정했습니다. 문항 판정과 정답은 바꾸지 않았습니다.</dd>
   </dl></div>
   <div class="box"><h2>문항 현황</h2>
     <p>고유 <b>${st.uniq}</b>건(중복 <b>${st.dupBundles}</b>묶음 포함 총 <b>${st.total}</b>건). 예상 문제 <b>${NEW.length}</b>건. 정답이 확정·교차확인인 문항은 ${st.dist['확정'] || 0 + 0}건과 ${st.dist['교차확인'] || 0}건이며, 나머지는 추정·추론·미확정입니다.</p>
@@ -259,6 +323,15 @@ function statusTab(){
   <div class="box"><h2>미해결 외부 참조(§19)</h2>
     <div class="tw"><table><thead><tr><th>항목</th><th>가리키는 자료</th><th>상태</th></tr></thead><tbody>${refs}</tbody></table></div>
   </div>
+  <div class="box"><h2>인용 그림 색인(§13)</h2>
+    <p class="note">내장한 모든 그림에 Q 번호를 붙였습니다. 번호는 그림을 교체해도 바꾸지 않으며 '${esc(DB.FIGS[1].q)} 교체'처럼 번호로 교체를 지시할 수 있습니다. 교안·교재·웹 그림은 쓰지 않았습니다(0건). 번호 라벨은 시험지형에서 숨깁니다.</p>
+    <div class="tw"><table><thead><tr><th>번호</th><th>종류</th><th>출처</th><th>사용처</th><th>내장 여부</th><th>교체 이력</th></tr></thead><tbody>${DB.FIGS.map(f => `<tr><td class="mono">${esc(f.q)}</td><td>${esc(f.kind)}</td><td>${esc(f.src)}</td><td>${Q.filter(q => q.img === f.img).map(q => `<button class="link" type="button" data-act="gomc" data-q="${q.id}">${q.id}</button>`).join(' ')}</td><td>${esc(f.emb)}</td><td>${esc(f.hist)}</td></tr>`).join('')}</tbody></table></div></div>
+  <div class="box"><h2>보기별 판단 이유 현황(§14 ①)</h2>
+    <p>${DB.WHYSTAT.cards}문항에 보기별 이유를 달았습니다. 선지 본문이 없는 ${DB.WHYSTAT.noOpts.length}문항(${DB.WHYSTAT.noOpts.join(', ')})은 제외했습니다. 정답이 미확정이거나 선지 본문이 비어 있는 보기는 '검토 포인트'로만 쓰고 채점에서 뺐습니다.</p>
+    <p class="note">'교안 근거' ${DB.WHYSTAT.quotes}건은 열람한 교안 텍스트에서 짧은 조각을 직접 옮긴 것이며, <b>${DB.WHYSTAT.auto ? '원문 부분문자열 자동 대조를 통과' : '원문 부분문자열 자동 대조는 하지 못했습니다(교안 PDF를 파일로 내려받을 수 없어 대조용 텍스트가 없음)'}</b>. 그래서 화면에는 '교안 근거(수기 대조)'로 표시합니다.</p>
+    <h3>교안과 불일치 소지 — 사용자 확인 목록</h3>
+    <ul class="plain">${DB.MISMATCH.map(m => `<li><button class="link" type="button" data-act="gomc" data-q="${m[0]}">${m[0]}</button> ${esc(m[1])}</li>`).join('')}</ul>
+    <p class="note">정답은 위 사유로 바꾸지 않았습니다.</p></div>
   <div class="box"><h2>정답 지정 내보내기</h2>
     <p class="note">객관식 탭에서 지정한 정답을 JSON으로 복사합니다. 파일 저장과 외부 전송은 하지 않습니다. OMR 마킹은 담기지 않습니다.</p>
     <div class="row-actions"><button class="btn primary" type="button" data-act="export">정답 지정 JSON 복사</button></div>
@@ -309,34 +382,73 @@ function mcTab(){
   <div class="cards">${L.map(({q, label}) => label ? cardHtml(q).replace('<span class="cid">' + q.id + '</span>', `<span class="cid">${q.id}</span><span class="tag mono keep">${esc(label)}</span>`) : cardHtml(q)).join('')}</div></div>`;
 }
 
-/* ───────── 탭: 내용 정리 ───────── */
+/* ───────── 탭: 내용 정리 / 전체 내용 정리 (§14 ③④, §16) ───────── */
+function timeCard(){
+  const T = DB.TL;
+  return `<section class="scard" id="sum-time"><div class="scard-h"><h2>연도·시점 한눈에</h2><span class="cnt">연표 ${T.years.length}</span><span class="cnt">시점 ${T.times.length}</span></div>
+    <div class="sec-t">연도별 연표</div>
+    <div class="tw"><table class="st"><thead><tr><th>연도</th><th>사건</th><th>시험 포인트</th><th>출처</th></tr></thead><tbody>${T.years.map(r => `<tr><td>${esc(r[0])}</td><td>${sx(r[1])}</td><td>${sx(r[2])}</td><td class="note">${esc(r[3])}</td></tr>`).join('')}</tbody></table></div>
+    <div class="sec-t">기간·시점·성장 시기</div>
+    <div class="tw"><table class="st"><thead><tr><th>대상</th><th>시점</th><th>내용</th><th>출처</th></tr></thead><tbody>${T.times.map(r => `<tr><td>${sx(r[0])}</td><td>${sx(r[1])}</td><td>${sx(r[2])}</td><td class="note">${esc(r[3])}</td></tr>`).join('')}</tbody></table></div>
+    <details class="srcd"><summary>근거 원문(${T.years.length + T.times.length}행)</summary><ul class="plain">${T.years.concat(T.times).map(r => `<li><span class="note">${esc(r[3])}</span> <blockquote>${esc(r[4])}</blockquote></li>`).join('')}</ul></details>
+    <p class="note">${esc(T.note)} 교안 04는 2025학년도판입니다.</p></section>`;
+}
+function chapterCard(c, mode){
+  const u = DB.SUM[c], mem = DB.MEM[c] || [], vs = DB.VS[c] || [];
+  const qs = Q.filter(q => q.ch == c), ns = NEW.filter(n => n.ch == c);
+  const fns = DB.FN.filter(f => f.ch == c);
+  const all = mode === 'all', closed = !!S.cc[c];
+  const fold = !all && !S.fold[c] && u.pts.length > 6;
+  const pts = u.pts.map((p, i) => `<li class="${fold && i >= 6 ? 'hid' : ''}">${rich(p[0])}<span class="s">[${esc(p[1])}]</span> ${p[2].map(id => `<button class="link" type="button" data-act="gomc" data-q="${id}">${id}</button>`).join(' ')}</li>`).join('');
+  let tbl = '';
+  if(u.tbl){
+    const marks = fns.map((f, i) => `<sup>${i + 1}</sup>`).join('');
+    tbl = `<div class="sec-t">비교표</div><div class="tw"><table class="st"><thead><tr>${u.tbl.h.map((h, i) => `<th>${i === 0 && fns.length ? (esc(h) || '표 전체') + marks : esc(h)}</th>`).join('')}</tr></thead><tbody>${u.tbl.r.map(r => `<tr>${r.map(c2 => `<td>${sx(c2)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+    if(fns.length) tbl += `<div class="fnb"><b>${FN_TITLE}</b> <span class="note">표 전체 각주(행 연결 사전에서 못 찾아 표 머리 첫 칸에 붙임)</span><ul class="plain">${fns.map((f, i) => `<li><sup>${i + 1}</sup> [${esc(f.kind)}] ${sx(f.t)} <span class="note">(${esc(f.src)} · 쪽 미확인 · 신뢰도 ${esc(f.conf)})</span> <button class="link" type="button" data-act="gomc" data-q="${f.q}">${f.q}</button></li>`).join('')}</ul></div>`;
+  }
+  let gen = '';
+  if(!u.tbl && fns.length) gen = `<div class="fnb"><b>단원 전반 각주</b> · <span class="note">${FN_TITLE}</span><ul class="plain">${fns.map(f => `<li>[${esc(f.kind)}] ${sx(f.t)} <span class="note">(${esc(f.src)} · 쪽 미확인 · 신뢰도 ${esc(f.conf)})</span> <button class="link" type="button" data-act="gomc" data-q="${f.q}">${f.q}</button></li>`).join('')}</ul></div>`;
+  const memH = mem.length ? `<div class="sec-t">암기 포인트</div><ul class="mem">${mem.map(m => `<li>${rich(m[0])} <span class="note">[${esc(m[1])}]</span></li>`).join('')}</ul>` : '';
+  const vsH = vs.length ? `<div class="sec-t">헷갈리는 비교</div>${vs.map(v => `<div class="vst">${esc(v[0])}</div><div class="vsrow"><div class="vsc"><div class="vh">${esc(v[1])}</div>${sx(v[2])}<div class="note">${esc(v[3])}</div></div><div class="vsc"><div class="vh">${esc(v[5])}</div>${sx(v[6])}</div></div>`).join('')}` : '';
+  const links = `<div class="sec-t">기출·예상 연계</div><p class="note">${qs.map(q => `<button class="link" type="button" data-act="gomc" data-q="${q.id}">${q.id} ${esc(q.key.replace(/^\d\./, ''))}</button>`).join(' · ')}${ns.length ? '<br>예상 문제 ' + ns.map(n => `<button class="link" type="button" data-act="gonew" data-id="${n.id}">${n.id}</button>`).join(' ') : ''}</p>`;
+  const quotes = []; const seen = new Set();
+  const add = (src, q) => { if(q && !seen.has(q)){ seen.add(q); quotes.push([src, q]); } };
+  qs.forEach(q => q.ev.filter(e => e.t === 'T4' && !e.p).forEach(e => add(e.s, e.q)));
+  mem.forEach(m => add(m[1], m[2])); vs.forEach(v => { add(v[3], v[4]); add(v[3], v[7]); });
+  const srcH = `<details class="srcd" ${all ? 'open' : ''}><summary>근거 원문(${quotes.length}건, 교안 열람 텍스트에서 옮김)</summary><ul class="plain">${quotes.map(x => `<li><span class="note">${esc(x[0])}</span><blockquote>${esc(x[1])}</blockquote></li>`).join('')}</ul></details>`;
+  const body = `<p class="note">근거: ${esc(DB.CH_SRC[c])}</p>${gen}<div class="sec-t">핵심 요약</div><ul class="pts">${pts}</ul>${fold ? `<button class="btn no-print" type="button" data-act="fold" data-ch="${c}">더 보기 (${u.pts.length - 6}줄)</button>` : ''}${tbl}${memH}${vsH}${links}${srcH}`;
+  return `<section class="scard" id="${all ? 'all' : 'sum'}-${c}"><div class="scard-h"><h2>Ch${c} ${esc(DB.CH[c])}</h2><span class="cnt">요약 ${u.pts.length}</span><span class="cnt">표 ${u.tbl ? 1 : 0}</span><span class="cnt">암기 ${mem.length}</span><span class="cnt">비교 ${vs.length}</span><span class="cnt">기출 ${qs.length}</span>${all ? `<button class="btn no-print" type="button" data-act="cc" data-ch="${c}" style="margin-left:auto">${closed ? '펴기' : '접기'}</button>` : ''}</div>${all && closed ? '' : body}</section>`;
+}
 function sumTab(){
   const cf = Q.filter(q => q.cf.length);
   const nb = Q.reduce((n, q) => n + q.ev.filter(e => e.t === 'T2p').length, 0);
+  const chips = [0,1,2,3,4,5,6,7,8].map(c => `<button type="button" class="chip" data-act="sch" data-ch="${c}" aria-pressed="${S.sch === c}">${c ? 'Ch' + c + ' ' + esc(DB.CH[c]) : '전체'}</button>`).join('');
   const top = `<div class="box"><h2>선배 필기 대조 요약</h2>
-    <p class="note">필기·표시(T2′) 근거 ${nb}건이 ${Q.filter(q => q.ev.some(e => e.t === 'T2p')).length}개 문항에 붙어 있습니다. 모두 타 학번 기준이라 올해 출제와 다를 수 있고, 정답과 상태를 바꾸지 않습니다. 필기와 교안이 어긋난 문항 ${cf.length}건은 어느 쪽도 지우지 않고 보존했습니다.</p>
+    <p class="note">필기·표시(T2′) 근거 ${nb}건이 ${Q.filter(q => q.ev.some(e => e.t === 'T2p')).length}개 문항에 붙어 있습니다. 모두 타 학번 기준이라 올해 출제와 다를 수 있고, 정답과 상태를 바꾸지 않습니다. 필기와 교안이 어긋난 문항 ${cf.length}건은 어느 쪽도 지우지 않고 보존했습니다. 단원 요약 표 아래 각주에는 ${DB.FNSTAT.shown}건만 싣고 ${DB.FNSTAT.excluded}건은 뺐습니다. ${esc(DB.FNSTAT.rule)} 문항 카드의 '선배 필기 대조'에는 제외 항목까지 모두 있습니다.</p>
     <ul class="plain">${cf.map(q => `<li><button class="link" type="button" data-act="gomc" data-q="${q.id}">${q.id}</button> ${esc(q.key)} — ${esc(q.cf[0].s)}: ${esc(q.cf[0].a)}</li>`).join('')}</ul></div>`;
-  const body = Object.keys(DB.CH).map(c => {
-    const u = DB.SUM[c];
-    return `<section class="box" id="sum-${c}"><h2>Ch${c} ${esc(DB.CH[c])}</h2><p class="note">근거: ${esc(DB.CH_SRC[c])}</p>
-    <ul class="plain">${u.pts.map(p => `<li>${esc(p[0])} <span class="note">[${esc(p[1])}]</span> ${p[2].map(id => `<button class="link" type="button" data-act="gomc" data-q="${id}">${id}</button>`).join(' ')}</li>`).join('')}</ul>
-    ${u.tbl ? `<div class="tw"><table><thead><tr>${u.tbl.h.map(h => `<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${u.tbl.r.map(r => `<tr>${r.map(c2 => `<td>${esc(c2)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>` : ''}
-    <p class="note meta">기출 연계: ${Q.filter(q => q.ch == c).map(q => `<button class="link" type="button" data-act="gomc" data-q="${q.id}">${q.id} ${esc(q.key.replace(/^\d\./, ''))}</button>`).join(' · ')}</p></section>`;
-  }).join('');
-  return top + body;
+  const cs = Object.keys(DB.CH).filter(c => !S.sch || +c === S.sch).map(c => chapterCard(c, 'unit')).join('');
+  return `<div class="tools"><div class="chips" role="group" aria-label="단원">${chips}</div></div>` + timeCard() + top + cs;
+}
+function allTab(){
+  const toc = Object.keys(DB.CH).map(c => `<button class="link" type="button" data-act="goall" data-ch="${c}">Ch${c} ${esc(DB.CH[c])}</button>`).join(' · ');
+  return `<div class="box no-print"><h2>전체 내용 정리</h2><p class="note">범위 전 단원의 요약 카드를 한 화면에 이어 붙였습니다. 문항 카드는 넣지 않았고, 각 카드의 링크 버튼으로 연계 문항에 이동합니다.</p>
+    <div class="toc">${toc}</div>
+    <div class="row-actions"><button class="btn" type="button" data-act="expall">전체 펴기</button><button class="btn" type="button" data-act="colall">전체 접기</button><button class="btn" type="button" data-act="print">인쇄</button></div>
+    <p class="note" id="printNote" hidden>이 화면에서는 인쇄 호출이 막혀 있을 수 있습니다. 브라우저 메뉴의 인쇄(Ctrl/Cmd+P)를 쓰면 인쇄용 스타일이 적용됩니다.</p></div>`
+    + timeCard() + Object.keys(DB.CH).map(c => chapterCard(c, 'all')).join('');
 }
 
 /* ───────── 탭: 예상 문제 ───────── */
 function newCard(n, mode){
   const opened = S.newOpen[n.id];
   const key = (S.newMarks[n.id] || []);
-  const ch = `<div class="opts">${n.opts.map((o, i) => `<button type="button" class="opt ${key.includes(i+1) ? 'on' : ''} ${opened && n.ans.includes(i+1) ? 'key' : ''}" data-act="nopt" data-id="${n.id}" data-i="${i+1}"><span class="mk">${esc(mark(n.mk, i))}</span><span>${esc(o)}</span></button>`).join('')}</div>`;
+  const ch = `<div class="opts">${n.opts.map((o, i) => `<button type="button" class="opt ${key.includes(i+1) ? 'on' : ''} ${opened && n.ans.includes(i+1) ? 'key' : ''}" data-act="nopt" data-id="${n.id}" data-i="${i+1}"><span class="mk">${esc(mark(n.mk, i))}</span><span>${sx(o)}</span></button>`).join('')}</div>`;
   return `<article class="card" id="n-${n.id}"><div class="card-h"><span class="cid">${n.id}</span><span class="tag">Ch${n.ch} ${esc(DB.CH[n.ch])}</span><span class="badge plain">예상 문제</span><span class="tag">${n.multi ? '모두 고르시오' : '단일 선택'}</span></div>
-    <p class="stem">${esc(n.stem)}</p>${ch}
+    <p class="stem">${sx(n.stem)}</p>${ch}
     <div class="row-actions meta"><button class="btn" type="button" data-act="nans" data-id="${n.id}">정답·해설 ${opened ? '접기' : '보기'}</button></div>
     <div class="ans-box meta" ${opened ? '' : 'hidden'}>
       <div class="keyline">정답: ${n.ans.map(i => esc(mark(n.mk, i-1))).join(' ')}</div>
-      <div>${esc(n.expl)}</div>
+      <div>${sx(n.expl)}</div>
       <div><b>근거</b><ul class="evs"><li><span class="tier">T4 교안</span><div><span class="src">${esc(n.ev[0])}</span><blockquote>${esc(n.ev[1])}</blockquote></div></li></ul></div>
       <div class="note">파생 기출: ${n.der.length ? n.der.map(id => `<button class="link" type="button" data-act="gomc" data-q="${id}">${id}</button>`).join(' ') : '해당 단원 교안 기반 신규(직접 파생 기출 없음)'}</div>
     </div></article>`;
@@ -352,18 +464,19 @@ function newTab(){
 function mockTab(){
   const m = S.mock;
   const head = `<div class="box"><h2>모의고사</h2>
-    <p class="note">24학번 복기본은 번호가 최대 81입니다. 시험 시간·문항 수가 확인되기 전이라 카운트다운 없이 경과 시간만 보입니다. 단원 비중은 기출 문항 수에 비례한다고 가정했고, 대표 1건 기준으로 뽑아 같은 문항이 두 번 나오지 않습니다. 추론·충돌·미확정은 제외합니다.</p>
+    <p><b>시험 일시</b> 2026-10-23(금) 10:00–12:00 · <b>${dday()}</b> <span class="tag">사용자 제공, 원문 미확인</span></p>
+    <p class="note">24학번 복기본은 번호가 최대 81입니다. 모의 타이머는 시험 120분 ÷ 81문항 ≒ 문항당 1.5분을 가정해 ‘문항 수 × 1.5분’에서 남은 시간을 줄이고, 0 아래는 ‘초과’로 셉니다(가정, 실제 문항 수·시간 미확인). 단원 비중은 기출 문항 수에 비례한다고 가정했고, 대표 1건 기준으로 뽑아 같은 문항이 두 번 나오지 않습니다. 추론·충돌·미확정은 제외합니다.</p>
     <div class="tools"><label>문항 수 <input type="number" id="mockN" min="5" max="60" value="${m ? m.n : 20}" style="width:70px"></label>
     <label><input type="checkbox" id="mockNew" ${m && m.useNew ? 'checked' : ''}> 예상 문제 포함</label>
     <button class="btn primary" type="button" data-act="mockstart">새로 뽑기</button>
-    ${m ? `<span class="timer" id="timer">00:00</span><button class="btn" type="button" data-act="mockend">채점</button>` : ''}</div></div>`;
+    ${m ? `<span class="timer" id="timer">남은 --:--</span><button class="btn" type="button" data-act="mockend">채점</button>` : ''}</div></div>`;
   if(!m) return head;
   const res = m.done ? `<div class="res">확정·교차확인 기준 ${m.s1}/${m.j1}점, 추정 포함 ${m.s2}/${m.j2}점 (추정 문항은 보조 점수입니다)</div>` : '';
   return head + res + `<div class="cards">${m.items.map((q, n) => {
     const ks = m.marks[q.id] || [];
     const ok = m.done ? (JSON.stringify([...ansOfAny(q)].sort()) === JSON.stringify([...ks].sort())) : null;
     return `<article class="card ${m.done ? (ok ? 'ok' : 'bad') : ''}"><div class="card-h"><span class="cid">${n+1}번</span><span class="tag mono">${esc(q.id)}</span>${m.done ? `<span class="badge" data-s="${esc(q.status || '예상')}">${esc(q.status || '예상 문제')}</span>` : ''}</div>
-      <p class="stem">${esc(q.stem)}</p>${q.img ? imgHtml(q) : ''}<div class="opts">${q.opts.map((o, i) => `<button type="button" class="opt ${ks.includes(i+1) ? 'on' : ''} ${m.done && ansOfAny(q).includes(i+1) ? 'key' : ''}" data-act="mopt" data-q="${q.id}" data-i="${i+1}"><span class="mk">${esc(mark(q.mk, i))}</span><span>${esc(o)}</span></button>`).join('')}</div></article>`;
+      <p class="stem">${sx(q.stem)}</p>${q.img ? imgHtml(q) : ''}<div class="opts">${q.opts.map((o, i) => `<button type="button" class="opt ${ks.includes(i+1) ? 'on' : ''} ${m.done && ansOfAny(q).includes(i+1) ? 'key' : ''}" data-act="mopt" data-q="${q.id}" data-i="${i+1}"><span class="mk">${esc(mark(q.mk, i))}</span><span>${sx(o)}</span></button>`).join('')}</div></article>`;
   }).join('')}</div>`;
 }
 const ansOfAny = q => (ansOf(q) || []);
@@ -383,7 +496,7 @@ function refreshMarks(){
 function render(){
   document.body.classList.toggle('exam', S.exam);
   $('#tabs').innerHTML = TABS.map(([k, n]) => `<button class="tab" role="tab" type="button" data-act="tab" data-k="${k}" aria-selected="${S.tab === k}">${n}</button>`).join('');
-  $('#main').innerHTML = ({status: statusTab, mc: mcTab, sum: sumTab, new: newTab, mock: mockTab}[S.tab] || statusTab)();
+  $('#main').innerHTML = ({status: statusTab, mc: mcTab, sum: sumTab, all: allTab, new: newTab, mock: mockTab}[S.tab] || statusTab)();
   refreshMarks();
   if(S.tab === 'mc' && S.graded) renderGrade();
 }
@@ -414,7 +527,7 @@ function goto(tab, fn){ S.tab = tab; LS.set('tab', tab); render(); if(fn) fn(); 
 let timerH = null;
 function startTimer(){
   clearInterval(timerH);
-  timerH = setInterval(() => { const t = $('#timer'); if(!t || !S.mock || S.mock.done) return; const s = Math.floor((Date.now() - S.mock.t0) / 1000); t.textContent = String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0'); }, 1000);
+  timerH = setInterval(() => { const t = $('#timer'); if(!t || !S.mock || S.mock.done) return; const el = Math.floor((Date.now() - S.mock.t0) / 1000), left = Math.round(S.mock.n * 90) - el, a = Math.abs(left); t.textContent = (left >= 0 ? '남은 ' : '초과 ') + String(Math.floor(a / 60)).padStart(2, '0') + ':' + String(a % 60).padStart(2, '0'); t.style.color = left < 0 ? 'var(--bad)' : ''; }, 1000);
 }
 document.addEventListener('click', e => {
   const t = e.target.closest('[data-act]'); if(!t) return;
@@ -422,6 +535,13 @@ document.addEventListener('click', e => {
   if(a === 'tab'){ S.tab = t.dataset.k; LS.set('tab', S.tab); render(); window.scrollTo({top: 0}); }
   else if(a === 'ch'){ S.ch = +t.dataset.ch; S.graded = null; render(); }
   else if(a === 'nch'){ S.nch = +t.dataset.ch; render(); }
+  else if(a === 'sch'){ S.sch = +t.dataset.ch; render(); }
+  else if(a === 'fold'){ S.fold[t.dataset.ch] = true; render(); document.getElementById('sum-' + t.dataset.ch)?.scrollIntoView(); }
+  else if(a === 'cc'){ S.cc[t.dataset.ch] = !S.cc[t.dataset.ch]; render(); document.getElementById('all-' + t.dataset.ch)?.scrollIntoView(); }
+  else if(a === 'expall'){ S.cc = {}; render(); document.querySelectorAll('details.srcd').forEach(d => d.open = true); }
+  else if(a === 'colall'){ Object.keys(DB.CH).forEach(c => S.cc[c] = true); render(); }
+  else if(a === 'goall'){ if(S.cc[t.dataset.ch]){ S.cc[t.dataset.ch] = false; render(); } document.getElementById('all-' + t.dataset.ch)?.scrollIntoView(); }
+  else if(a === 'print'){ try{ window.print(); }catch(err){ const n = $('#printNote'); if(n) n.hidden = false; } setTimeout(() => { const n = $('#printNote'); if(n) n.hidden = false; }, 400); }
   else if(a === 'group'){ S.group = !S.group; render(); }
   else if(a === 'exam'){ S.exam = !S.exam; render(); }
   else if(a === 'showall'){ S.showAll = !S.showAll; render(); }
@@ -433,7 +553,7 @@ document.addEventListener('click', e => {
   else if(a === 'grade'){ S.inclEst = !!($('#estChk') && $('#estChk').checked); grade(); refreshMarks(); renderGrade(); }
   else if(a === 'resetomr'){ S.omr = {}; LS.set('omr', S.omr); S.graded = null; render(); }
   else if(a === 'jump'){ e.preventDefault(); document.getElementById('c-' + id)?.scrollIntoView({block: 'start', behavior: 'smooth'}); }
-  else if(a === 'gosum'){ goto('sum', () => document.getElementById('sum-' + t.dataset.ch)?.scrollIntoView()); }
+  else if(a === 'gosum'){ S.sch = 0, goto('sum', () => document.getElementById('sum-' + t.dataset.ch)?.scrollIntoView()); }
   else if(a === 'gomc'){ S.ch = 0; S.hak = 'all'; S.st = 'all'; S.group = true; goto('mc', () => { const c = document.getElementById('c-' + id); if(c){ c.scrollIntoView({block: 'center'}); S.open[id] = true; const b = document.getElementById('ans-' + id); if(b) b.hidden = false; } }); }
   else if(a === 'gonew'){ S.nch = 0; goto('new', () => document.getElementById('n-' + id)?.scrollIntoView({block: 'center'})); }
   else if(a === 'nopt'){ const cur = new Set(S.newMarks[id] || []); const n = NEW.find(x => x.id === id); const i = +t.dataset.i; if(cur.has(i)) cur.delete(i); else { if(!n.multi) cur.clear(); cur.add(i); } S.newMarks[id] = [...cur]; render(); document.getElementById('n-' + id)?.scrollIntoView({block: 'center'}); }
@@ -479,6 +599,6 @@ $('#themeBtn').addEventListener('click', () => {
 $('#themeBtn').textContent = '테마: 시스템';
 $('#ver').textContent = DB.VER;
 const lsOk = LS.set('probe', 1);
-$('#diag').textContent = '화면 진단 · 프롬프트 ' + DB.VER + ' · 문항 ' + DB.STATS.uniq + '건 · AI: 미구현(요청 없음) · 브라우저 저장: ' + (lsOk ? '사용 가능' : '사용 불가(OMR 새로고침 시 초기화)') + ' · 생성 ' + DB.BUILT;
+$('#diag').textContent = '화면 진단 · 프롬프트 ' + DB.VER + ' · 문항 ' + DB.STATS.uniq + '건 · 보기별 이유 ' + DB.WHYSTAT.cards + '문항(교안 인용 ' + DB.WHYSTAT.quotes + '건, 자동 대조 ' + (DB.WHYSTAT.auto ? '통과' : '미실시·수기') + ') · 인용 그림 ' + DB.FIGS.length + '건 · AI: 미구현(요청 없음) · 브라우저 저장: ' + (lsOk ? '사용 가능' : '사용 불가(OMR 새로고침 시 초기화)') + ' · 생성 ' + DB.BUILT;
 render();
 </script>
