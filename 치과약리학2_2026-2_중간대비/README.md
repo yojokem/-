@@ -7,10 +7,10 @@
 | 항목 | 내용 |
 |---|---|
 | 시험 | 2026-2 〈치과약리학2〉 중간고사 (10/14), 범위 Ch.23~30, 객관식 80문항. Ch.31은 범위 밖 |
-| **현행 프롬프트** | **v6.6 (2026-10-14)**. v6.5 블록 위에 얹힌 개정이며 충돌 시 v6.6이 우선 |
+| **현행 프롬프트** | Notion 맨 아래의 가장 최신 블록(2026-10-14 기준). 그 아래 블록들은 직전 규칙이며 충돌 시 위쪽 최신 블록이 우선 |
 | 규칙 원본 | Notion 페이지 「📚 2026-2 학사 업무 계획」 맨 아래 prompt 블록들 (이 폴더 `prompt/`에 export) |
 
-## artifact 목록 (claude.ai, 비공개)
+## artifact 목록 (claude.ai)
 
 | 이름 | 용도 | 주소 |
 |---|---|---|
@@ -19,14 +19,14 @@
 | 약리2 약물별 지식 총정리 | 생리·기초 → 약물별 카드 → 치과 주의표, 한 페이지 세로 | https://claude.ai/artifact/MG9PhkYpev1MMxrF56BCLN |
 | 23학번 중간고사 풀이 | 23학번 54문항 + Ch.30(타 학번) 17문항 퀴즈 | https://claude.ai/artifact/5DMSoUXArMBW6Ffn31Qi3i |
 
-비공개 artifact이므로 소유 계정으로만 열립니다.
+공유 범위는 artifact마다 다릅니다. 정리장은 링크가 있으면 열람 가능하게 공유되어 있고, 나머지는 소유 계정 기준 비공개일 수 있습니다(각 artifact의 공유 메뉴에서 확인).
 
 ## 폴더 구성
 
 - `HANDOFF.md` 다음 세션이 먼저 읽을 인계 문서(현황·결정 이력·미결·하지 말 것)
 - `bootstrap/bootstrap.html` 부트스트랩 artifact 소스 (변수 치환 로직 포함). 이 파일을 같은 주소에 다시 발행하면 갱신됨
-- `prompt/current_v6.5-v6.6.md` Notion의 현행 블록(v6.5 본문 + v6.6 개정 요약). 규칙 §0~§19 전문
-- `prompt/archive_v2-v5_and_restore_tables.md` 구판 v2~v5와 복원표(v6.1/v6.2/v6.3), 교훈 목록 L-1~L-14 기록
+- `prompt/current.md` Notion의 현행 블록(규칙 §0~§19 전문 + 가장 최근 개정 요약)
+- `prompt/archive_old_blocks.md` 구판 블록과 복원표, 교훈 목록 기록
 - `notes/mcp_drive_limits.md` Drive MCP 대용량 파일 읽기·내려받기 한계와 우회 순서
 - `notes/artifact_pipeline.md` 정리장 빌드 구조와 데이터 흐름(로컬 빌드 파일은 유실되어 artifact에서 read로 복구)
 
