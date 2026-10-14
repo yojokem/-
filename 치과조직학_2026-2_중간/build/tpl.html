@@ -262,7 +262,7 @@ function ansBox(q){
   if(q.cand) h += `<div class="note"><b>후보:</b> ${esc(q.cand)}</div>`;
   if(q.why && q.why.length){
     const noAns = !(q.ans && q.ans.length);
-    h += `<div class="whybox"><b>${noAns ? '검토 포인트 · 정답 미확정이라 채점 제외' : '보기별 판단 이유'}</b>${uaOf(q.id) ? ' <span class="note">(사용자 정답 지정과 다를 수 있습니다. 아래는 대장 정답 기준)</span>' : ''}<ul class="why">${q.why.map(w => `<li><span class="vd ${w.ok === null ? 'r' : w.ok ? 'a' : 'x'}">${w.ok === null ? '검토' : w.ok ? '정답' : '오답'}</span><span class="mono">${esc(mark(q.mk, w.l - 1))}</span><div>${sx(w.s)}<span class="bz">${w.b === 'T4' ? (+String(q.id).split('-')[0] <= 6 ? '교안 근거(분할본 대조 완료)' : '교안 근거(수기 대조 · 04 교안 미확인)') : '일반 지식·논리'}</span>${w.b === 'T4' && w.q ? `<blockquote>${esc(w.q)}</blockquote>` : ''}</div></li>`).join('')}</ul></div>`;
+    h += `<div class="whybox"><b>${noAns ? '검토 포인트 · 정답 미확정이라 채점 제외' : '보기별 판단 이유'}</b>${uaOf(q.id) ? ' <span class="note">(사용자 정답 지정과 다를 수 있습니다. 아래는 대장 정답 기준)</span>' : ''}<ul class="why">${q.why.map(w => `<li><span class="vd ${w.ok === null ? 'r' : w.ok ? 'a' : 'x'}">${w.ok === null ? '검토' : w.ok ? '정답' : '오답'}</span><span class="mono">${esc(mark(q.mk, w.l - 1))}</span><div>${sx(w.s)}<span class="bz">${w.b === 'T4' ? (+String(q.id).split('-')[0] <= 6 ? (DB.WHYSTAT.auto ? '교안 근거(자동 대조 통과)' : '교안 근거(분할본 대조 완료)') : '교안 근거(수기 대조 · 04 교안 미확인)') : '일반 지식·논리'}</span>${w.b === 'T4' && w.q ? `<blockquote>${esc(w.q)}</blockquote>` : ''}</div></li>`).join('')}</ul></div>`;
   } else if(!q.opts.length){ h += `<div class="note">선지 본문이 없는 문항이라 보기별 이유를 쓰지 않았습니다.</div>`; }
   const mm = DB.MISMATCH.find(x => x[0] === q.id);
   if(mm) h += `<div class="warn"><b>교안과 불일치 소지(사용자 확인 목록)</b> ${esc(mm[1])}</div>`;
@@ -328,7 +328,7 @@ function statusTab(){
     <div class="tw"><table><thead><tr><th>번호</th><th>종류</th><th>출처</th><th>사용처</th><th>내장 여부</th><th>교체 이력</th></tr></thead><tbody>${DB.FIGS.map(f => `<tr><td class="mono">${esc(f.q)}</td><td>${esc(f.kind)}</td><td>${esc(f.src)}</td><td>${Q.filter(q => q.img === f.img).map(q => `<button class="link" type="button" data-act="gomc" data-q="${q.id}">${q.id}</button>`).join(' ')}</td><td>${esc(f.emb)}</td><td>${esc(f.hist)}</td></tr>`).join('')}</tbody></table></div></div>
   <div class="box"><h2>보기별 판단 이유 현황(§14 ①)</h2>
     <p>${DB.WHYSTAT.cards}문항에 보기별 이유를 달았습니다. 선지 본문이 없는 ${DB.WHYSTAT.noOpts.length}문항(${DB.WHYSTAT.noOpts.join(', ')})은 제외했습니다. 정답이 미확정이거나 선지 본문이 비어 있는 보기는 '검토 포인트'로만 쓰고 채점에서 뺐습니다.</p>
-    <p class="note">'교안 근거' ${DB.WHYSTAT.quotes}건 중 1~6단원 142건은 2026-10-14 올라온 교안 분할본(부분 PDF) 텍스트와 대조를 마쳤습니다(전부 일치; 4건은 다른 단원 교안 파일에 있어 해당 원본 파일에서 확인). 7·8단원 32건은 04 교안이 없어 수기 대조 상태입니다. 단, 분할본 대조는 사람이 읽고 확인한 것이며 프로그램의 부분문자열 자동 대조는 아닙니다.</p>
+    <p class="note">'교안 근거' ${DB.WHYSTAT.quotes}건 중 1~6단원 ${DB.WHYSTAT.autoOk}건은 2026-10-14 교안 분할본 텍스트와 <b>원문 부분문자열 자동 대조를 통과</b>했습니다(강등 ${DB.WHYSTAT.downgraded}건). 7·8단원은 04 교안이 없어 수기 대조 상태입니다.</p>
     <h3>교안과 불일치 소지 — 사용자 확인 목록</h3>
     <ul class="plain">${DB.MISMATCH.map(m => `<li><button class="link" type="button" data-act="gomc" data-q="${m[0]}">${m[0]}</button> ${esc(m[1])}</li>`).join('')}</ul>
     <p class="note">정답은 위 사유로 바꾸지 않았습니다.</p></div>
@@ -599,6 +599,6 @@ $('#themeBtn').addEventListener('click', () => {
 $('#themeBtn').textContent = '테마: 시스템';
 $('#ver').textContent = DB.VER;
 const lsOk = LS.set('probe', 1);
-$('#diag').textContent = '화면 진단 · 프롬프트 ' + DB.VER + ' · 문항 ' + DB.STATS.uniq + '건 · 보기별 이유 ' + DB.WHYSTAT.cards + '문항(교안 인용 ' + DB.WHYSTAT.quotes + '건, 대조 ' + (DB.WHYSTAT.auto ? '자동 통과' : '1~6단원 142건 분할본 대조·7~8단원 32건 수기') + ') · 인용 그림 ' + DB.FIGS.length + '건 · AI: 미구현(요청 없음) · 브라우저 저장: ' + (lsOk ? '사용 가능' : '사용 불가(OMR 새로고침 시 초기화)') + ' · 생성 ' + DB.BUILT;
+$('#diag').textContent = '화면 진단 · 프롬프트 ' + DB.VER + ' · 문항 ' + DB.STATS.uniq + '건 · 보기별 이유 ' + DB.WHYSTAT.cards + '문항(교안 인용 ' + DB.WHYSTAT.quotes + '건, 대조 ' + (DB.WHYSTAT.auto ? '1~6단원 ' + DB.WHYSTAT.autoOk + '건 자동 통과·7~8단원 수기' : '수기') + ') · 인용 그림 ' + DB.FIGS.length + '건 · AI: 미구현(요청 없음) · 브라우저 저장: ' + (lsOk ? '사용 가능' : '사용 불가(OMR 새로고침 시 초기화)') + ' · 생성 ' + DB.BUILT;
 render();
 </script>

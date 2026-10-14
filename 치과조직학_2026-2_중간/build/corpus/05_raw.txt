@@ -1,0 +1,1108 @@
+Immune system
+• Defense: protection self from non-self
+• self : organism's own molecule
+• non-self : microorganism, foreign body, foreign cells, tumor cell
+Lymphatic Tissue
+Immune system
+• first line of defense
+• epithelial barrier
+• skin and mucosa
+• Stratification, cell junction, keratinization, secretion of mucus and surfactant
+• forms a complete lining and covering of the body surfaces.
+• second and the third lines of defense
+• Immune system
+• activated when the physical barrier is breached by a cut, tear, or abrasion,
+• even if foreign substances are able to penetrate, but have not yet penetrated,
+the intact barrier
+• innate immune system
+• natural immune system, nonspecific and rapid response
+• No immunologic memory
+• adaptive immune system
+• acquired immune system,
+• Specific against antigen, Slower than innate response
+• Immunologic memory
+Adaptive Immune System
+•Type according to mediator
+• humoral immune response production
+of immunoglobulins (=antibodies)
+• cell-mediated immune response killing
+of the foreign cell or altered self-cell (e.g.,
+tumor cell)
+•Lymphoid organs
+• primary (central) lymphoid organs
+• bone marrow and the thymus
+• secondary (peripheral) lymphoid
+organs
+• After becoming immunocompetent
+• Diffuse to lymphoid tissue, lymph nodes,
+and spleen
+Antigen(≥Immunogen)
+• Epitope (reaction part of antigen)
+• reacts with an antibody, or T-cell receptor
+• Large foreign invaders (bacteria) have several epitopes,
+each capable of binding to a different antibody.
+Immunobiology, 5th edition Janeway et al.
+Tolerance to Self
+• Macromolecules of the self  not antigens
+ no immune response
+• mechanism (during development)
+– killing or disabling cells that would react
+against the self
+• Clonal deletion : remove the clone
+• Clonal anergy : disable the ability of lymphocyte
+Immunoglobulins (= antibodies)
+• Functions
+• elicit an extracellular response against
+invading microorganisms.
+• Y-shaped molecule
+• Composition
+• heavy chains : two long, 55- to 70-kDa
+polypeptides
+• light chains : two shorter, 25-kDa
+polypeptides
+• disulfide bonds and non-covalent bonds
+• Fragments
+• Fc fragment (easily crystallized)
+• binds to Fc receptors of many different cells
+and proteins in complement system
+• two Fab fragments
+• one heavy chain and one entire light chain.
+• antigen-binding region
+IgM
+(pentamer)
+IgG
+(monomer)
+IgA
+(dimer)
+IgE
+(monomer)
+J chain
+Secretory
+component
+J chain
+Transmembrane region
+IgD
+(monomer)
+Class Cytokines*
+No.
+of
+Units
+†
+Ig in
+Blood (%)
+Crosses
+Placenta Binds to Cells
+IgA TGFβ 1 or
+2
+10-15 No Epithelial cells
+(temporarily) during
+secretion
+IgD 1 0.2 No B-cell plasma
+membrane
+IgE IL-4, IL-5 1 0.002 No Mast cells and
+basophils
+IgG IFN-γ, IL-4,
+IL-6
+1 80 Yes Macrophages and
+neutrophils
+IgM 1 or
+5
+5-10 No B cells (in monomeric
+form)
+*Cytokines responsible for switching to this isotype.
+† A unit is a single immunoglobulin composed of two heavy and two light chains; thus,
+IgA exists both as a monomer and as a dimer.
+Classes of Immunoglobulins
+Classes of Immunoglobulins
+Class Biological Characteristics
+IgA
+(mucosal)
+secretory antibody in milk, tears, saliva the lumen of the gut, and mucus of the nasal cavity,
+vagina, and conjunctival sac; in bloodstream; assists eosinophils in recognizing and killing
+parasites
+IgD Surface immunoglobulin; assists B cells in recognizing antigens B cells differentiate into
+plasma cells
+IgE - Binds to allergens and triggers histamine release from mast cells and basophils, and is
+involved in immediate hypersensitivity reactions (allergy).
+- assists eosinophils in recognizing and killing parasites
+IgG - provides the majority of antibody-based immunity against invading pathogens.
+- the only antibody capable of crossing the placenta to give passive immunity to the fetus.
+- Also in milk
+IgM - Expressed on the surface of B cells (monomer) and in a secreted form (pentamer) with very
+high avidity.
+- Eliminates pathogens in the early stages of B cell-mediated (humoral) immunity before there
+is sufficient IgG; the first isotype to be formed in the primary immune response
+Major Histocompatibility Complex Molecules
+• unique in each individual (except for
+identical twins)
+• two classes of MHC molecules:
+• MHC I molecules
+• MHC I-epitope (short polypeptide derived
+from endogenous proteins) complex
+• CTLs "look" at the cell surface and "see"
+whether the cell is producing self-proteins or
+nonself-proteins
+• MHC II molecules
+• MHC II-epitope complex in Macrophages and
+APCs endocytosis
+• Epitope: longer polypeptide fragments
+derived from exogenous proteins
+• TH cells can "look" at the cell surface and
+"see" whether the cell is encountering non-
+self proteins
+• every cell : MHC I proteins
+• APCs : MHC I and II proteins
+Antigen-Presenting Cells (APCs)
+• MHC I and MHC II on their plasmalemmae
+• Function:
+• Phagocytose antigen
+• Catabolize antigen
+• Attach epitopes of antigen to MHC II molecules
+• Present MHC II-epitope complex to T cells.
+• Origin :
+• Mostly derived from monocytes (mononuclear phagocytic system)
+• macrophages, dendritic cells (such as Langerhans cells of the epidermis and
+oral mucosa), M cell of the intestinal epithelium
+• non-monocyte-derived cells
+• B cells and epithelial reticular cells of the thymus.
+Dendritic cell
+13
+Antigen presenting cell(APC)
+Antigen presenting cell(APC)
+16
+Surface markers on lymphocyte
+• CD molecules
+• clusters of differentiation proteins on their plasmalemma
+• bind to specific ligands on target cells.
+Protein Cell Surface Ligand on which Cells? Function
+CD3 All T cells None Transduces MHC-epitope complex binding into
+intracellular signal, activating T cell
+CD4 T-helper cells MHC II on APCs Coreceptor for TCR binding to MHC II-epitope complex,
+activation of T-helper cell
+CD8 Cytotoxic T cells MHC I on most nucleated
+cells
+Coreceptor for TCR binding to MHC I-epitope complex;
+activation of cytotoxic T cell
+CD28 T-helper cells
+Cytotoxic T cells
+B7 on APCs Assists in the activation of T-helper cells
+CD40 B cells CD40 receptor molecule
+expressed on activated T-
+helper cells
+Binding of CD40 to CD40 receptor permits T-helper cell to
+activate B cell to proliferate into B memory cells and
+plasma cells
+B lymphocytes
+• small lymphocytes
+• originate in the bone marrow and become immunocompetent in the bone
+marrow
+• in birds, become immunocompetent in a diverticulum of the cloaca
+(Bursa of Fabricius)
+• IgM and IgD immunoglobulins on surface
+• Processes
+– catch
+– Engulf
+– Present to helper T
+cell
+– mitosis
+– Differentiate
+– Produce antibody
+T lymphocytes
+• T cells
+• originate in the bone marrow
+• migrate to the thymus and become immunocompetent
+• Cell-mediated immune response
+• differences between T cells and B cells:
+• T cells have TCRs rather than sIgs on their cell surface.
+• T cells recognize only epitopes presented to them by other
+cells (APCs).
+• T cells respond only to protein antigens.
+• T cells perform their functions only at short distances.
+• TCRs
+• function as antigen receptors.
+• on the plasmalemma of T cells
+• Similar to sIgs on B cells,
+• the constant regions of the TCR are membrane-bound,
+• the variable amino-terminal regions (containing the antigen-
+binding sites) extend from the cell surface.
+T cells
+•Naive T Cells
+• leave the thymus, but not yet ready to function
+• becomes activated
+• undergoes cell division
+• forms both memory T cells and effector T cells.
+•Memory T Cells
+• form a clone  immunological memory of the adaptive
+immune system
+•Effector T cells
+• three types of effector T cells
+• TH cells (T helper cells)
+• TH0, precursor cells  TH1 and TH2
+• TH1,
+• induction of the cell-mediated immune response
+• TH2;
+• Stimulate production of antibodies by plasma cells.
+• T killer cells (cytotoxic T lymphocytes, CTLs)
+• regulatory T (T reg) cells; suppress the immune response
+Antigen presenting cell(APC)
+Cytotoxic T lymphocytes
+• CD8 molecules on their cell membrane
+• killing foreign cells, tumor cells, and virally altered cells.
+Lymphatic system
+Lymph
+– Tissue fluid (interstitial fluid)
+• Lymphatic vessels
+– Two main ducts:
+• thoracic duct and right lymphatic duct
+– drain into the right and left
+subclavian veins near internal jugular
+vein
+• Lymphoid organs
+– primary (central) lymphoid organs
+– secondary (peripheral) lymphoid organs
+LYMPHOID ORGANS
+•two categories:
+• 1. Central (primary) lymphoid organs
+• development and maturation of lymphocytes into mature,
+immunocompetent cells.
+• In human : fetal liver, prenatal and postnatal bone marrow, and thymus
+• 2. Peripheral (secondary) lymphoid organs
+• proper environment for immunocompetent cells to react with each
+other, as well as with antigens and other cells,
+• In human: lymph nodes, spleen, and mucosa-associated lymphoid
+tissues
+• * MALT : mucosa associated lymphoid tissue
+• digestive system: tonsil, appendix, Peyer's patch of the ileum (GALT)
+• respiratory system (BALT)
+• reproductive system
+• urinary system
+Lymph
+•Lymph
+• Tissue fluid (interstitial fluid)
+• Composition
+• similar to blood plasma
+• Rich lymphocytes from lymph node
+• rich triglyceride in digestive system (milky white.)
+•Lymphatic vessels
+• T. intima: endothelial cells
+• T. media: a thin layer of smooth muscles
+• T. adventitia
+• Two main ducts: thoracic duct and right lymphatic duct
+• drain into the right and left subclavian veins near
+internal jugular vein
+Bone Marrow
+Thymus
+Bursa Analogue
+(Bone Marrow)
+Central Lymphatic Organs
+Deep Cortical Zone
+of Lymph Nodes
+PALS of Spleen
+Lymph Nodules
+of Lymph Nodes
+and Spleen
+Peripheral
+Lymphatic
+Organs
+Stem Cell
+T Lymphocyte B Lymphocyte
+림프기관 T 림프구(%) B 림프구(%)
+가슴샘(Thymus) 100 0
+골수(Bone marrow) 10 90
+비장(Spleen) 45 55
+림프절(Lymph nodes) 60 40
+혈액(Blood) 75 25
+Lymphoid (Lymphatic) Tissue
+• Stroma (Framework)
+• Capsule – dense connective tissue
+• Trabecula or Septa – Lobule
+• Reticulum
+• Fibrous Reticulum : Reticular Fibers (Type III)
+• In Lymph node and Spleen
+• mesenchymal origin
+• produce reticular fibers
+• intermediate filament:
+• vimentin
+• Cellular Reticulum : Epithelial Reticular Cell
+• in Thymus
+• epithelial origin
+• processes
+• cell contact: desmosome
+• intermediate filament:
+• keratin (tonofibril)
+• Parenchyma – functional elements
+(Cellular Elements)
+• Lymphocytes: B & T Lymphocyte
+• Macrophage
+• Antigen Presenting Cells
+• Exogenous Cells
+• Neutrophil, Eosinophil, Basophil
+Classification of Lymphatic Tissue
+•Diffuse Lymphatic Tissue 산재성
+•Nodular Lymphatic Tissue 소절성
+• Lymph Nodule
+• Primary Nodule
+• Secondary Nodule - Germinal Center
+•Aggregated Nodule
+• Closely aggregated lymph nodules connected with diffuse
+lymphatic tissue
+Thymus
+• a primary lymphoid organ
+• lymphoepithelial organ
+• site of maturation of T lymphocytes.
+• Changes with age
+• originates early in the embryo, arises in the third and fourth pharyngeal
+pouches of the embryo
+• continues to grow until puberty (35 ~ 40 g weight)
+• after a few years of life, atrophy and infiltration of adipose cells
+• after puberty, degeneration
+• thymus-dependent area:
+• lymph node- paracortical area,
+• Peyer's patch (ileum),
+• white pulp- PALS (spleen)
+Thymus
+•Stroma:
+• Capsule : Dense irregular collagenous
+connective tissue
+• Septa
+• Reticulum
+• Epithelial reticular cell
+•Parenchyma:
+• Thymic Lobule
+• Cortex
+• Medulla
+• Hassall’s corpuscle
+•Blood Thymus Barrier
+Thymus
+Thymus
+• Hassall's corpuscles
+– the most characteristic feature of the thymic medulla.
+– Number is increased with a person's age
+– the site of T lymphocyte cell death in the medulla.
+– Concentric arrayes of flattened epithelial reticular cells around
+degenerating central cells
+– Keratin in the center
+– desmosome
+– In cytoplasm
+• Keratohyaline granule
+• Lipid droplet
+• Intermediate filament
+Thymocyte(lymphocyte)
+• Mostly small lymphocytes
+• Heterochromatic round nucleus with several small nucleoli
+• Precursor cells of thymocytes are lymphoblasts
+• Derived from bone marrow and embryonic hemopoietic tissue
+• Surface markers were developed in maturing lymphocytes,
+which moves toward deep cortex
+• CD4- class II MHC restriction: helper T cell
+• CD8- class I MHC restriction: cytotoxic T cell
+Histophysiology of the Thymus
+• developing T cells
+• proliferate extensively in the
+cortex,
+• begin to express their surface
+markers
+• Tested for their ability
+• Check TCR and CD molecules
+• to recognize self-MHC
+molecules and self-epitopes
+• Maturation
+• induced by epithelial reticular
+cells
+• From extrathymic sources
+• Gonads
+• Thyroid
+• Suprarenal glands
+Cortex of thymus
+• large number of T lymphocytes (thymocytes)  appears darker
+• Start maturation of immuno-incompetent T cells
+• extensively proliferate
+• become immunocompetent T cells
+• During development
+• Cell death in the cortex : 98% of developing T cells, by apoptosis or phagocytosis of
+resident macrophages
+• if TCRs recognize self-proteins,
+• If CD4 or CD8 molecules cannot recognize the MHC I or MHC II molecules
+• surviving cells :
+• enter the medulla (as naïve T lymphocytes)
+• distributed to peripheral lymphoid organs via vascular system
+• Cells in cortex
+• lymphocytes,
+• macrophages
+• epithelial reticular cells (APCs)
+• derived from the endoderm of the 3rd and 4th pharyngeal pouches
+• bone marrow-derived interdigitating cells (APCs)
+• blood-thymus barrier (selective)
+• To prevent developing T cells from contacting blood-borne macromolecules.
+• To eliminate those T cells that are programmed against self-antigens
+• blood-thymus barrier
+• Layers
+• continuous type capillaries
+• Endothelial tight junctions
+• developed after birth
+• Basement membrane of epithelial reticular cell
+• Connective tissue
+• containing occasional Pericyte or Macrophage
+• Basement membrane of ERC
+• Epithelial reticular cell (ERC)
+• Epithelial reticular cell
+• Large euchromatic cell with a prominent
+nucleolus compared to thymocytes
+• Richly branched cells
+• Processes are attached to one another by
+desmosome(macula adherens)
+• Cytoskeleton:
+• Intermediate filament(tonofibril)
+• Cytokeratin(epithelial origin)
+• Moderately developed r-ER, Golgi
+• Secrete granules: humoral factors
+• Thymosin, thymopoietin, thymulin, thymic
+humoral factor, thymotaxin
+Medulla
+• stains much lighter
+• Small number of lymphocytes
+• a large number of endothelially derived
+epithelial reticular cells
+• All thymocytes in medulla :
+immunocompetent T cells.
+• No blood-thymus barrier
+• Cell migration via blood vessel
+• Newly formed, incompetent T cells
+from bone marrow
+• Migrate to medulla via small venules
+• leave the venules at the
+corticomedullary junction
+• migrate to the periphery of the cortex
+• As these cells mature, they move deeper
+into the cortex
+• enter the medulla as naïve but
+immunocompetent cells
+• leave the medulla via veins draining the
+thymus.
+CLINICAL CORRELATIONS
+•DiGeorge's syndrome
+• One of 22q11.2 deletion syndromes
+• Congenital failure of thymus development
+• cannot produce T cells
+• Cell-mediated immune response is nonfunctional
+• die at an early age from infection
+• also lack parathyroid glands, death also may be caused by
+tetany.
+Lymph Nodes
+• small (less than 3 cm in diameter), encapsulated, oval structures
+• in the path of lymph vessels
+• serve as filters for the removal of bacteria and other foreign substances
+• Location
+• in various regions of the body
+• most prevalent in the neck, in the axilla, in the groin, along major vessels, and in the
+body cavities.
+• Lymphatic vessel
+• afferent lymphatic vessels : valves
+• efferent lymphatic vessels : valves
+• hilum
+CLINICAL CORRELATIONS
+• the presence of antigens or bacteria
+ increase to several times its normal size
+ becoming hard and palpable to the touch
+LYMPH NODE
+LYMPH NODES
+•Stroma:
+• Capsule: a fibrous connective tissue capsule
+• Trabecula
+• Reticulum : a network of reticular connective tissue
+•Parenchyma: T and B lymphocytes, APCs, and macrophages
+• Cortex
+• Lymph Nodule
+• Deep Cortical Zone (Paracortical Area) --- thymus dependent zone
+• Medulla
+• Medullary Cord
+• Medullary Sinus
+•three regions in lymph node
+• cortex, paracortex, and medulla.
+Lymph Node
+• Sinus
+• endothelium-like simple squamous
+epithelium.
+• Macrophages, attached to the stellate
+reticular cells,
+• types
+• Subcapsular Sinus
+• Paratrabecular (Cortical) Sinus
+• Medullary Sinus
+• Flow of lymph
+• afferent lymph vessels
+•  subcapsular sinus
+•  cortical sinuses
+(paratrabecular sinuses)
+•  medullary sinus
+•  efferent lymphatic vessel
+Lymph node
+High endothelial venules
+(HEVs)
+• located in the paracortex.
+• simple cuboidal endothelium-lined
+venule
+• the lymphocyte migrates between the
+cuboidal endothelial cells to enter the
+lymph node parenchyma.
+• B cells migrate to the outer cortex,
+whereas most T cells remain in the
+paracortex.
+• via diapedesis (혈구누출)
+Lymphoid Nodules in cortex
+• two types of lymphoid nodules:
+• primary lymphoid nodules
+• Secondary lymphoid nodules
+• primary lymphoid nodules,
+• spherical aggregates of B lymphocytes
+• both virgin B cells and B memory cells
+• in the process of entering or leaving the lymph
+node
+• secondary lymphoid nodules
+• germinal centers
+• the centers of the lymphoid nodules
+• stained pale
+• sites of B memory cell and plasma cell generation
+• corona (mantle)
+• peripheral region of the lymphoid nodules
+• a dense accumulation of small lymphocytes
+• migrate from germinal center
+Paracortex Medulla
+Paracortex
+• paracortex
+• region of the lymph node between the cortex and the medulla.
+• mostly T cells and the thymus-dependent zone of the lymph node
+• APCs migrate to the paracortex region of the lymph node
+• present their epitope-MHC II complex to TH cells.
+• If TH cells become activated, they proliferate
+• increasing width of the paracortex
+• intrude deep into the medulla.
+• Newly formed T cells migrate to the medullary sinuses,
+• leave the lymph node, and proceed to the area of antigenic activity.
+Medulla
+• composed of
+– large lymph sinuses
+– lymphoid cells clusters (medullary cords)
+• cells of the medullary cords
+– lymphocytes, plasma cells, and macrophages
+– network of reticular fibers and reticular cells
+Spleen
+•the largest lymphoid organ in the body
+•connective tissue capsule.
+•located in the peritoneum in the upper left quadrant of
+the abdominal cavity.
+•Functions
+• filters the blood,
+• forms lymphoid cells,
+• eliminates or inactivates blood-borne antigens,
+• destroys aged platelets and erythrocytes,
+• participates in hemopoiesis.
+•Hilum
+• arteries and nerve fibers: enter the spleen
+• veins and lymphatic vessels: leave the spleen.
+Spleen
+•Stroma:
+• Capsule : dense, irregular fibroelastic
+connective tissue
+• Trabecula : carry blood vessels into
+and out of the parenchyma
+• Reticulum : reticular fibers and
+reticular cells  3D network
+•Parenchyma:
+• White Pulp
+• Lymph Nodule
+• Periarterial Lymphatic Sheath
+(PALS)
+• thymus dependent zone
+• Red Pulp
+• Splenic Cord of Billroth
+• Splenic sinus
+White Pulp and Marginal Zone
+• Structures of white pulp
+• Central arteriole.
+• PALS
+•surrounds the central arteriole
+•composed of T lymphocytes.
+• Lymphoid nodules
+•Composed of B cells
+•Frequently, enclosed within the PALS,
+•germinal centers.
+• marginal zone
+• Surround white pulp
+• 100μm in width
+• separates the white pulp from the red pulp
+• composed of plasma cells, T and B lymphocytes, macrophages, and
+interdigitating dendritic cells (APCs).
+• marginal sinuses,
+• numerous small vascular channels,
+• especially surrounding lymphoid nodules.
+Red Pulp
+• composed of
+• splenic sinuses
+• splenic cords (of Billroth).
+• splenic sinuses
+• endothelial lining unusual fusiform
+• spaces (2 to 3 μm wide) between cells
+• surrounded by reticular fibers
+(continuous with those of the splenic
+cords)
+• a discontinuous basal lamina.
+• splenic cords
+• composed of a loose network of reticular
+fibers.
+• reticular fibers and stellate reticular cells
+• Macrophages are particularly numerous
+in the vicinity of the sinusoids.
+Splenic Artery
+Trabecular Artery
+Central Artery
+Penicillar Arteriole
+Sheathed Arterial Capillary
+Terminal Arterial Capillary
+Splenic Cord of Billorth Splenic Sinusoids
+Pulp Vein
+Trabecular Vein
+Splenic Vein
+Blood Circulation of the Spleen
+Vascular Supply of the Spleen
+• 1. splenic artery pierces the connective tissue capsule at the
+hilum
+• 2. Branch into trabecular arteries,
+• 3. decreasing sizes, about 0.2 mm in diameter, leave the
+trabeculae.
+• 4. central artery : occupies the center of the PALS
+• 5. penicillar arteries, enter the red pulp.
+• three regions of penicillar arteries :
+• (1) the pulp arteriole,
+• (2) the sheathed arteriole
+• (surrounded by a sheath of macrophages)
+• (3) the terminal arterial capillaries.
+• deliver their blood into the splenic sinuses,
+• three theories of spleen circulation:
+• (1) closed circulation
+• (2) open circulation
+• (3) a combination of the first two theories.
+Mucosa-Associated Lymphoid Tissue, MALT
+• Non-encapsulated,
+• localized lymphocyte infiltration
+• lymph nodules in the mucosa layer (lamina propria)
+• types
+• gut-associated lymphoid tissue (GALT),
+• bronchus-associated lymphatic tissue (BALT)
+• tonsils.
+GALT
+• lymphoid follicles along the
+length of the gastrointestinal
+tract
+• derived from Embryonic Gut
+• Digestive tract, Respiratory tract,
+Reproductive tract, Urinary tract,
+etc
+• Tonsils, Peyer’s Patch,
+Appendix
+• Peyer's patches
+• lymphoid aggregates in the ileum
+• B cells, T cells and numerous APCs.
+• M cells (microfold cells) :
+• squamous-like cells
+• Antigen presenting cells (without
+first processing them into epitopes)
+• no afferent lymphatic vessels
+• efferent lymph drainage.
+Bronchus-Associated Lymphoid Tissue, BALT
+• similar to Peyer's patches,
+• located in the walls of bronchi, especially in regions where
+bronchi and bronchioles bifurcate.
+• epithelial cover changes
+• pseudostratified ciliated columnar with goblet cells  M cells.
+• No afferent lymph vessels
+• rich vascular supply of BALT
+• B cells (most of the cells), APCs and T cells
+• Lymphocytes destined to enter BALT have homing receptors
+that are specific for the HEVs of this lymphoid tissue.
+Tonsils
+• Palatine tonsils, pharyngeal tonsils, and lingual tonsils
+• incompletely encapsulated aggregates of lymphoid nodules
+• palatine tonsils, bilateral
+• dense, fibrous capsule  isolated from the surrounding
+connective tissue
+• nonkeratinized stratified squamous epithelium
+• deep crypts
+• parenchyma : numerous lymphoid nodules, germinal centers
+• pharyngeal tonsil,
+• single in the roof of the nasal pharynx.
+• Incomplete, thin capsule.
+• Instead of crypts, the shallow, longitudinal infoldings
+• pseudostratified ciliated columnar epithelium and patches of
+stratified squamous epithelium
+• In parenchyma : lymphoid nodules, germinal centers.
+• Adenoid: inflamed pharyngeal tonsil
+• lingual tonsil
+• on the dorsal surface of the posterior one third of the tongue
+• nonkeratinized stratified squamous epithelium
+• Thin capsule
+• numerous crypts, ducts of mucous minor salivary glands
+• In Parenchyma: lymphoid nodules, germinal centers.
+Waldeyer’s ring
+Nasopharyngeal tonsil
+Perry and Whyte, Immunology today, 1998
+The Circulatory System
+Circulatory System
+Circulatory system
+• Blood vascular system
+– Heart, artery, vein, capillary
+• Lymph vascular system
+– Lymphatic capillary, lymphatic vessel
+No intrinsic pumping mechanism
+Circulation
+– Pulmonary circuit: Heart Lung Heart
+– Systemic circuit
+Heart elastic artery muscular artery
+arteriole capillary
+(lymphatic capillary Lymphatic vessel)
+ postcapillary venule venule  vein large
+vein heart
+Circulatory system
+• Macrovasculature
+– Diameter≥ 0.1mm
+– elastic artery, muscular artery, large arteriole,
+muscular vein
+• Microvasculature
+– Capillary, Arteriole, postcapillary venule
+Blood Vascular System
+• Heart, Arteries, Veins, Capillaries
+• Function
+– Transportation
+• Oxygen
+• Nutrients to the tissues
+– Carries away
+• carbon dioxide
+• waste products from the tissues
+– Circulates hormones
+• from their sites of synthesis
+• to their target cells
+Arteries
+• Blood away from the heart to the organs and tissues
+• Layers
+tunica intima (inner)
+tunica media (middle)
+tunica adventitia (outer)
+• Endothelium
+– simple squamous epithelium
+– lining the lumen of the blood vessel
+• Subendothelial layer
+– beneath the endothelial cells,
+– loose C-T and smooth muscle cells
+• Internal elastic lamina
+– beneath the subendothelial layer
+– well-developed in muscular arteries
+– separating the tunica intima from the tunica media,
+– composed of Elastin
+– permits the diffusion of substances into the deeper
+regions of arterial wall
+Tunica intima
+• smooth muscle cell layer
+– Smooth muscle cells
+– elastic fibers, reticular fiber, proteoglycans,
+glycoproteins, secreted by smooth muscle cells
+• external elastic lamina
+– more delicate than the internal elastic lamina
+– separates from the tunica adventitia
+Tunica media
+• Loose C-T
+– fibroblasts, type I collagen fiber, elastic fibers
+• Vasa vasorum
+– small arteries that enter the vessel walls
+• Arteriole, capillary, venule
+– often in Vein > artery
+– in large vessels: diameter ≥ 1mm
+• Tunica adventitia and external layer of tunica media
+• Nutrition
+– Tunica intima: diffusion from the lumen of vessels
+– tunica media and tunica adventitia: from vasa vasorum
+Tunica adventitia
+• myelinated sympathetic nerve = vasomotor nerve
+– In artery: only in Tunica adventitia
+• Diffusion of neurotransmitter into tunica media
+– In vein: tunica media and tunica adventitia
+– Well developed in artery
+• Neurotransmitter
+– Norepinephrine as neurotransmitter
+ constriction of smooth muscle  constriction of blood vessel
+– Acetylcholine (cholinergic vasodilator nerve) in skeletal
+muscle
+Nerve innervation
+• Elastic artery
+• Muscular artery
+• Arteriole : diameter ≤ 0.5mm
+• metarteriole
+Type of arteries
+• conducting arteries
+• aorta and its major
+branches
+• Function
+– reduce changes in blood
+pressure associated with
+the heartbeat
+Elastic arteries
+• Layers
+– Tunica intima: thicker,
+• endothelium,
+• subendothelial layer,
+• internal elastic lamina
+– Tunica media:
+• perforated elastic laminae:
+– 40 layers in neonate,
+– 70 in adult
+• abundant elastin yellowish
+• Smooth muscle cells, proteoglycan, glycoprotein
+– Tunica adventitia: vasa vasorum and nerves
+Elastic arteries
+Elastic arteries
+• distributing arteries,
+• most of the named arteries
+• Layers
+– Tunica intima
+– Tunica media:
+• 40 layers of smooth muscle
+cells
+• Reticular fiber, PG, GP
+• Well-developed external elastic
+lamina
+– Tunica adventitia:
+• vasa vasorum and nerves
+Muscular arteries
+Muscular artery (left),
+Large muscular vein (right)
+Muscular artery Elastic artery
+Elastic artery & Muscular artery
+• the smallest arteries
+• Diameter: less than 0.5 mm
+• regulate blood pressure
+• Layers
+– Tunica intima
+• thin endothelial layer
+– Tunica media
+• 1~2 layer of smooth muscle
+– Tunica adventitia
+• Very thin
+Arterioles
+• Endothelium
+• discontinuous smooth
+muscle layer
+• smooth muscle cells as
+precapillary sphincters
+• function:
+– controls blood flow into the
+capillary bed
+Metarterioles
+Arteriovenous Anastomoses
+• Baroreceptors
+– In internal carotid artery
+– are represented by the carotid sinus
+– respond to changes in blood pressure
+– In tunica intima and tunica adventitia
+• Chemoreceptors (carotid body)
+– In common carotid artery
+– help to regulate respiration
+– respond to changes in the blood levels of oxygen and carbon dioxide
+and to changes in blood pH.
+– Subtypes ; in fenestrated capillary
+• Type I: supporting cells
+• Type II: has dense-core vesicle
+Sensory nerves endings
+• small vessels (about 8-10 µm in diameter)
+• rich network (capillary bed) between
+arterioles and venules
+• consist of
+– a single layer of endothelial cells
+– basal lamina
+• selective permeability
+• exchange of oxygen, carbon dioxide, between
+blood and tissues
+Capillaries
+• polygonal in shape
+• a nucleus bulges into the capillary lumen
+• Golgi complex near the nucleus, free ribosomes,
+mitochondria,
+• contain intermediate filaments (Vimentin) in the perinuclear
+zone
+• tight junction, some desmosomes and gap junctions
+Endothelial cell
+• Long cytoplasmic process
+• Mesenchymal cell origin
+• Contraction : Myosin, actin, tropomyosin
+• Differenitate into fibroblast, smooth muscle cell, or macrophage
+• Regeneration of blood vessel or C-T
+Pericyte
+• Continuous capillary
+• Fenestrated capillary
+• Discontinuous sinusoidal
+capillary
+Types of capillaries
+• Somatic capillary
+• lack fenestrae in their wall
+• contain many pinocytotic vesicles, except the CNS,
+• a continuous basal lamina
+• in nervous tissue, muscle, connective tissue, lungs
+Continuous capillary
+• visceral capillary
+• Walls of endothelial cells are perforated with fenestrae, these
+openings are 60-80nm in diameter
+• contain only a few pinocytotic vesicles
+• have a continuous basal lamina
+• locate in endocrine glands, intestine, glomeruli of the
+kidneys
+Fenestrated capillary
+• many large fenestrae that lack diaphragms
+• a diameter of 30-40 µm, larger than continuous and
+fenestrated capillaries
+• lack pinocytotic vesicles
+• have a discontinous basal lamina
+• locate in liver, bone marrow, adrenal cortex
+Sinusoidal capillary
+• altered during the inflammatory response by
+histamine and bradykinin
+Permeability of capillaries
+The Microcirculation
+(arterioles, venules, capillaries)
+• Convension of inactive angiotensin I to active
+angiotensin II (lung), which is a powerful
+vasoconstrictor and stimulates secretion of
+aldosterone
+• Deactivation of various active substances
+(bradykinin, serotonin, thrombin, prostaglandins)
+• Breakdown of lipoproteins
+• Release of prostacyclin, potent vasodilator and
+inhibit of platelet aggregation
+Metabolic functions of capillaries
+• Contraction of precapillary sphicters
+Forces the blood flow through central channels,
+bypassing the capillary bed
+• Arteriovenous anastomoses: are small vessels or
+glomera (nail bed and fingertip) that directly
+connect arterioles to venules, bypassing the
+capillary bed
+: function in thermoregulation and in the control of blood
+flow and blood pressure
+Bypassing a capillary bed
+• Blood from the organs and tissues to the heart
+• Contain about 70% of the blood total volume at any time
+• Walls composed of three layers, tunica intima (inner),
+tunica media (middle) and tunica adventitia (outer)
+Veins
+a muscular artery (left) and
+accompanying vein (right).
+• Large veins
+– Include the vena cava, pulmonary veins,
+– Possess cardiac muscle in the adventitia (vasa vasorum,
+nerves )
+• Small and medium-sized veins
+– have a diameter of 1-9 mm.
+• Venules
+– a diameter of 0.2 – 1mm
+– involved in exchange of metabolites with tissues and in
+diapedesis (혈구누출)
+Veins
+• A four-chambered muscular
+organ,
+– two atria, two ventricles
+• Layers
+– Endocardium
+– Myocardium
+– Pericardium
+• Visceral layer (=epicardium)
+• Parietal layer
+• surrounded by a fibrous sac
+called the pericardium
+• Sympathetic and
+parasympathetic nerve fibers,
+– modulate the rate of the heartbeat
+Heart-Cardiovascular system
+• Endocardium
+- continuous with the tunica intima
+- endothelium: the lumen of the
+heart (simple squamous
+epithelium)
+- Subendothelial layer: thin,
+loose C-T, elastic fiber,
+collagen fiber, smooth muscle
+cells
+- Subendocardial layer
+a connective tissue layer that contain
+veins, nerves and Purkinje fibers
+Cardiac layer
+F - fat cells; M - myocardium;
+E - endocardium; V - valve
+• Myocardium
+– continuous with the tunica
+media
+– consists of layers of
+Cardiac muscle cells
+– small secreted peptides in
+the interventricular septum,
+artriopeptin,
+cardiodilatin,
+cardionatrin
+Cardiac layer
+M - myocardium; E - endocardium;
+En - endothelium; S - subendothelial layer
+Cardiac layer
+• Epicardium (tunica adventitia)
+– the outermost layer of the heart (visceral layer of the pericardium)
+– composed of simple squamous epithelium (mesothelium) on the external
+surface
+• composed
+– a skeleton of fibrous
+connective tissue
+– endothelium
+• Cardiac skeleton
+– the annuli fibrosi,
+around the base of the aorta,
+pulmonary artery, atrioventricular
+orifices
+– the trigonum fibrosum
+• some of the cuspal area of the
+aortic valve
+– Septum membranaceum
+• Upper portion of the
+interventricular septum
+Heart valves
+Impulse generating &
+impulse-conducting system
+• initiate and regulate the heart beat
+A. Sinoatrial (SA) node
+– the pacemaker of the heart,
+– located in the wall of the right atrium near SVC
+– generates impulses that initiate contraction of atrial muscle cells,
+to atrioventricular node
+B. Atrioventricular (AV) node
+– locates in the wall of the right atrium, near tricuspid valve
+C. Atrioventricular bundle of His (atrioventricular bundle)
+– a band of conducting tissue
+– radiating from the AV node into the interventricular septum
+– two branches (to subendocardium, to Purkinje fibers)
+D. Purkinje fibers
+– make contact with cardiac muscle cells
+– at the apex of the heart
+– Cell to cell junction: via gap junctions and desmosomes
+Impulse generating &
+impulse-conducting system
+Impulse generating &
+impulse-conducting system
+Purkinje fibers
+– large and modified cardiac muscle cells
+– one or two central nucleus
+– rich mitochondria and glycogen
+– poor myofibril only in periphery of cells
+in subendocardial layer in myocardium
+• Vasomotor;
+– a network of vasomotor nerves of the sympathetic
+component of the autonomic nervous system to
+smooth muscle cells of blood vessels.
+– Responsible for vasocontriction of the vessel walls
+• Norepinephrine;
+– diffuses into the media
+– acts on smooth muscle cells  reducing the diameter
+of the vessel lumen.
+

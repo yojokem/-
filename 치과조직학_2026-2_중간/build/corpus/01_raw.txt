@@ -1,0 +1,657 @@
+치과조직학
+구강조직학 교실
+이동준
+dongjoon@dankook.ac.kr
+2026학년도 2학기 2026. 9. 4.
+강의계획서
+과목명 치과조직학
+학점 3 시간 이론 3
+주 수강대상 치의예과 2학년 강의요일/시간 금 3~8 교시 (10:00~13:00)
+교재명 기초 조직학 12판, MIP / 핵심조직학 3판, Epublic
+□ 교과목 기본정보
+중간고사 기말고사 실습시험 실습과제 출석
+30% 30% 20% 10% 10%
+□ 성적평가 방법
+□ 주차별 강의계획
+주차 학습내용 주차 학습내용
+1 (9/4) 세포학 상피조직 9 (10/31) 호흡기
+2 (9/11) 휴강 10 (11/7) 소화관, 소화샘
+3 (9/18) 결합조직 11 (11/14) 내분비계통
+4 (9/25) 추석연휴 12 (11/21) 비뇨기
+5 (10/2) 근육조직, 연골&뼈 13 (11/28) 특수감각기
+6 (10/9) 한글날 (온라인: 림프, 순환기) 14 (12/5) 피부
+7 (10/14) 신경조직, 혈구 (수요일 강의) 15 (12/12) 기말고사
+8 (10/24) 중간고사
+HISTOLOGY
+• HISTOS + LOGOS
+• TISSUE
+– CELLS
+– EXTRACELLUAR MATRIX
+– EXTRACELLULAR FLUID
+• 4 BASIC TISSUES
+– EPITHELIAL TISSUE
+– CONNECTIVE TISSUE
+– MUSCULAR TISSUE
+– NERVOUS TISSUE
+• CELL-TISSUE-ORGAN-SYSTEM
+• Plasma membrane: phospholipid bilayer
+–protection, selective permeability, adhesion, cell signaling
+• Organelles: various functions
+• Cytoskeleton: support and movement
+• Cell deposits: glycogen, lipids, pigments
+• Cytosol (= intracellular fluid)
+–water, ions, macromolecules
+• Nucleus
+Cell
+Organelle
+• Mitochondria
+• Ribosomes
+• ER (Endoplasmic Reticulum)
+– r-ER : protein synthesizing cells
+– s-ER : adrenal cortex, liver, muscle
+• Golgi Complex : post-translational modification and packing
+• Lysosomes
+• Proteasome
+• Peroxisome
+• Secretory Vesicles or Granules
+Cytoskeleton
+• Microtubules ------- cilia, flagella, centriole, mitotic spindle, basal body
+• Filaments
+– Thin filaments : Actin ------microvilli, stereocilia
+– Intermediate filaments
+• Cytokeratin
+• Vimentin
+• Desmin
+• Glial filaments
+• Neurofilaments
+– Thick filaments : Myosin ------ muscle
+The microtubular arrangement of the axoneme in the cilium.
+Centriole : movement
+Filaments
+Intermediate filament
+1.
+2.
+3. Thick filaments - Myosin II : 2~3nm dia, 200~300개
+Cytokeratin
+Adrenal gland cell
+Lipid droplets
+Actin filament bundle
+NUCLEUS
+• Nuclear envelope (arrowheads)
+• Nuclear pore
+• Chromatin
+– Euchromatin
+– Heterochromatin
+– Barr body
+• Nucleolus
+– Nucleolar-organizer DNA
+– Fibrous part
+– Granular part (arrows)
+• Nuclear matrix
+Mitosis
+Cell cycle
+Cells in Bone
+Normal cells
+Mitosis
+in a cell containing a diploid (2n) number
+of 6 chromosomes
+Meiosis in testis
+Cell death
+Apoptosis
+Apoptotic body
+TISSUE PREPARATION
+• FIXATION
+• DEHYDRATION AND CLEARING
+• EMBEDDING
+• SECTIONING
+• MOUNTING
+• STAINING
+Staining
+LIGHT
+MICROSCOPE
+Virtual microscope
+Phase contrast, polarized light
+Conventional phase contrast Normaski differential interference
+Polarized light
+CONFOCAL MICROSCOPE
+ELECTRON MICROSCOPE
+Autoradiography
+Light
+EM
+Histochemistry for calcium
+Histochemistry for enzyme (alkaline phosphatase)
+Histochemistry for enzyme (acid phosphatase)
+Immunohistochemistry
+FLUORESCENT IMAGE
+Fluorescent Immunohistochemistry
+Fluorescent Immunohistochemistry
+desmin
+Actin and chromosome
+Immunohistochemistry in situ hybridization
+Antibody-biotin + streptavidin-Peroxidase + DAB RNA (or DNA)-Dig + andti-Dig Ab-peroxide+ Peroxidase-DAB
+EM + immunohistochemistry
+Antiamylase antibody + protein A-Gold particle
+Tissues
+- Cells and Extra Cellular Matrix (ECM)
+Organized aggregations of cells that function together
+* Connective tissue include connective tissue proper (supporting),
+cartilage, bone, bone marrow, blood, lymphatic tissue.
+4 Basic tissue types
+Tissue Cell
+Extracellular
+matrix
+Function
+Epithelial Aggregated polyhedral cells Little Glandular secretion
+Connective Fixed and wandering cells Rich
+Support and
+protection
+Nervous Inter-twining processes None
+Transfer nerve
+impulse
+Muscular Elongated contractile cells A little Movement
+Epithelium vs connective tissue
+Functions of epithelium
+• Protection
+• Transportation
+• Secretion of mucus, hormones and enzymes from various glands
+• Absorption digestion
+• selective permeability of intercellular junctions between epithelial
+cells
+• Detection of sensations
+Epithelium
+• two forms:
+– as sheets of contiguous cells (epithelia)
+• cover the body on its external surface
+• line the body on its internal surface
+– as glands
+• originate from invaginated epithelial cells.
+• Origin three embryonic germ layers
+– Ectoderm
+• oral and nasal mucosae, cornea, epidermis of the skin, and glands of
+the skin and the mammary glands.
+– Endoderm:
+• liver, gall bladder, the pancreas, and the lining of the respiratory
+and gastrointestinal tract
+– Mesoderm:
+• uriniferous tubules of the kidney,
+• lining of the male and female reproductive systems,
+• endothelial lining of the circulatory system,
+• mesothelium of the body cavities
+Morphology of epithelium
+• tightly bound together by
+junctional complexes.
+• little intercellular space
+• little extracellular matrix.
+• basal lamina
+– an extracellular matrix
+– separates from the underlying
+connective tissue
+– synthesized by the epithelial cells.
+– through the basal lamina
+• capillary beds in the adjacent
+supporting connective tissue supplies
+nourishment and oxygen via diffusion.
+Types of epithelium
+Type
+Shape of Surface
+Cells
+Sample Locations Functions
+Simple
+Squamous Flattened pulmonary alveolar cell, loop of Henle,
+parietal layer of Bowman capsule, inner ear,
+middle ear, endothelial cells of blood and
+lymphatic vessels, mesothelium of pleural
+and peritoneal cavities
+Limiting membrane, fluid
+transport, gaseous exchange,
+lubrication, reducing friction
+(thus aiding movement of
+viscera), lining membrane
+Cuboidal Cuboidal
+: nucleus in center
+Ducts of many glands, covering of ovary,
+convoluted tubules of kidney
+Secretion, absorption, protection
+Columnar Columnar
+: microvilli or cilia
+oviducts, ductuli efferentes of testis, uterus,
+small bronchi, much of digestive tract,
+gallbladder, large ducts of some glands
+Transportation, absorption,
+secretion, protection
+Pseudostratified - All cells rest on
+basal lamina.
+- but not all reach
+epithelial surface;
+- Surface cells are
+columnar.
+most of trachea, primary bronchi,, auditory
+tube, part of tympanic cavity, nasal cavity,
+lacrimal sac,
+epididymis and ductus deferens, male
+urethra, large excretory ducts
+Secretion, absorption, lubrication,
+protection, transportation
+Stratified
+Squamous,
+nonkeratinized
+Flattened (with
+nucleus)
+mouth, epiglottis, esophagus, vocal folds,
+vagina, pharynx
+Protection, secretion
+Squamous,
+keratinized
+Flattened (without
+nucleus, keratin)
+Epidermis of skin, gingiva, hard palate Protection
+Cuboidal Cuboidal ducts of sweat glands Absorption, secretion
+Columnar Columnar Conjunctiva of eye, some large excretory
+ducts, portions of male urethra
+Secretion, absorption, protection
+Transitional Dome-shaped
+(relaxed), flattened
+(distended)
+urinary tract from renal calyces to urethra Protection, distensible
+A, Simple squamous epithelium (arrows). simple cuboidal epithelium (arrowheads).
+B, Simple columnar epithelium. striated border (arrows)
+pseudostratified columnar epithelia
+Gland
+• parenchyma
+– Acinus: synthesize and secrete
+• secretory product
+– a polypeptide hormone (e.g., from the
+pituitary gland);
+– a waxy substance (e.g., from the
+ceruminous glands of the ear canal);
+– a mucinogen (e.g., from the goblet cells);
+– Milk; a combination of protein, lipid,
+and carbohydrates (e.g., from the
+mammary glands).
+– exudate from the bloodstream.
+– Duct: modification
+• stroma
+– connective tissue
+– support the parenchyma.
+– capsule : collagenous connective tissue
+– septum : strand of connective tissue
+– lobes and lobules
+Gland
+• Classification : travel distance of the cytokine
+– Autocrine: the cell stimulates itself.
+– Paracrine: target cell in the vicinity of signaling cell
+– Endocrine: target cell and signaling cell are far from
+each other
+• Classification : method of distribution
+– Exocrine glands :
+• via ducts
+• onto the external or internal epithelial surface
+– Endocrine glands :
+• ductless,
+• into the blood or lymphatic vessels
+Development of gland
+Exocrine Glands
+• Classification; Releasing mechanisms
+– Holocrine
+• sebaceous gland
+• secretory cell : matures, dies and becomes the secretory product
+– Merocrine : release via exocytosis, e.g.: eccrine sweat gland
+– Apocrine
+• a type of merocrine
+• lactating mammary gland, apocrine sweat gland, ceruminous glands
+• a small portion of the apical cytoplasm released along with the secretory
+product.
+Holocrine Merocrine Apocrine
+Exocrine Glands
+• Classification; their products
+– Serous glands secrete an enzyme-rich watery fluid in parotid gland
+and pancreas
+– Mucous glands:
+• goblet cells, minor salivary glands
+• secrete Mucin (a thick, viscous, gel-like protective lubricant a major
+component of mucus)
+– Mixed glands
+• sublingual and submandibular glands
+• possess serous demilunes,
+Serous gland. Light micrograph of a monkey pancreas
+Light micrograph of the monkey submandibular gland. M, mucous acini; S, serous
+demilunes.
+Salivary gland: its organization, secretory units, and system of ducts.
+Exocrine Glands
+• Classification; the number of cells
+– Unicellular Exocrine Glands
+• the simplest form of exocrine gland.
+• goblet cell
+– in the epithelium lining the digestive tract and the respiratory tract
+– Mucin  protect the linings of these tracts.
+– Multicellular Exocrine Glands
+• clusters of secretory cells
+• do not act alone and independently, function as secretory organs
+• Sub-classification:
+– according to the ductal branch
+» simple
+» compound
+– according to the morphology of secretory units
+» tubular
+» acinar (= alveolar)
+» tubuloalveolar
+Goblet cells (GC) in the epithelial lining of monkey ileum
+Structural classification of exocrine
+Myoepithelial cells in exocrine Glands
+• Myoepithelial cells
+– in sweat glands and major salivary glands
+– characteristics of smooth muscle cells, particularly contractility
+– small nuclei and fibrillar cytoplasm
+– wrap around the acini and some of the small ducts.
+– assist secretions of the acini and some small ducts.
+myoepithelial cells immunostained for actin
+Endocrine Glands
+• ductless
+• release their secretions
+(hormones) into blood or
+lymphatic vessels
+• The major endocrine
+glands
+– suprarenal (adrenal),
+pituitary, thyroid,
+parathyroid, and pineal
+glands and the ovaries,
+placenta, and testis.
+• Hormones
+– peptides, proteins, modified
+amino acids, steroids, and
+glycoproteins.
+Endocrine Glands
+• Arrangement of secretory cells
+– cord type
+• the most common arrangement
+• anastomosing cords around capillaries or blood sinusoids
+• Hormone release after the arrival of the proper signaling molecule
+or neural impulse.
+• suprarenal gland, anterior lobe of the pituitary gland, and
+parathyroid gland.
+– follicle type
+• follicles around a cavity storing the secreted hormone.
+• a release signal is received  stored hormone is resorbed by the
+follicular cells  released into the connective tissue to enter the
+blood capillaries.
+• thyroid gland
+• Mixed glands (endocrine + exocrine)
+– pancreas, ovary, and testis
+– exocrine portion secretes its product into a duct
+– endocrine portion secretes its product into the bloodstream.
+Gland
+• Classification : secretory
+pathways
+– Continuous secretion
+• continuously releasing their
+secretory products
+• immediately without storage and
+without requiring a prompt by
+signaling molecules.
+– Regulated secretion
+• concentrate and store their
+secretory products
+• by the proper signaling molecule
+for its release
+Secreting cells
+• Serous cell
+– In acinus of pancreas, parotid gland
+– Secretory granules, r-ER and Golgi complex
+• Mucus-secreting cell
+– Goblet cell and Mucous cells in mucous gland
+– In intestine, salivary gland, respiratory duct,
+reproductive duct
+• Steroid-secreting cell
+– In Testis, ovary, adrenal gland
+– Lipid droplet, s-ER, mitochondria
+Ion-transporting cell
+• Transcellular transport
+– From apical surface to basal surface
+• Villi in intestine
+• Proximal convoluted tubule
+• Striated duct
+• Gall bladder
+– From basal surface to apical surface
+• Choroid plexus
+• Ciliary body
+• Pinocytosis
+– Endothelium
+– Mesothelium
+– Type I Alveolar cell
+Polarity of epithelial cell
+• Apical domain : the region of the epithelial cell facing the lumen
+– rich in ion channels, carrier proteins, H+-ATPase, glycoproteins, and
+hydrolytic enzymes, as well as aquaporins
+– the site where regulated secretory products are delivered for release.
+– Microvilli, stereocilia, cilia, and flagella(of spermatozoa).
+• Basolateral domain in contact with the basal lamina.
+– junctional specializations
+– intercellular interdigitations.
+– subdivided into two regions:
+• lateral plasma membrane
+• basal plasma membrane.
+– junctional specializations and receptors for hormones and
+neurotransmitters.
+– rich in Na+/K+-ATPase and ion channels
+– sites for constitutive secretion.
+• apical and basolateral domains are separated from each other by
+tight junctions
+MICROVILLI
+• small finger-like cytoplasmic projections emanating from the free
+surface of the cell into the lumen.
+• cylindrical, membrane-bound projections of the cytoplasm
+• striated border of the intestinal absorptive cells
+• brush border of the kidney proximal tubule cells observed by light
+microscopy.
+Apical domain
+Microvilli
+Stereocilia
+• long microvilli,
+• Non-motile and rigid (core of actin
+filaments)
+– in the epididymis : increase the surface
+area
+– on the sensory hair cells of the cochlea and
+semicircular duct (inner ear): functions in
+signal generation
+Apical domain
+Cilia
+• long, motile, hair-like structures
+• a complex arrangement of microtubules known as the axoneme.
+– motile, hair-like projections (diameter, 0.2 μm; length, 7 to 10 μm)
+• Number of cilia
+– trachea and bronchi, oviduct: hundreds of cilia
+– hair cells of the semicircular duct in the inner ear: only a single cilium
+(sensory mechanism)
+• function via rapid rhythmic oscillations.
+– Cilia of the respiratory tree move mucus and debris toward the oropharynx.
+– Cilia of the oviduct move the fertilized ovum toward the uterus.
+• specific internal structure
+– axoneme : longitudinal microtubules arranged in a consistent 9 + 2
+• singlets : Two centrally placed microtubules
+• nine doublets of microtubules.
+• subunit A. Subunit B shares three protofilaments of subunit A.
+• basal body
+Apical domain
+Cilia
+• Movement of the cilia
+– dynein arms slide toward the tip of the cilium.
+– nexin restrains this action
+– translating the sliding movement into a bending motion.
+– the elastic protein complex is stretched.
+– dynein arms release their hold on the B subunit,
+– the elastic protein complex returns to its original length,
+– snapping the cilium back to its straight position (which does not
+require energy),
+– move material at the tip of the cilium.
+• Kartagener's syndrome : hereditary defects in the ciliary
+dynein
+– susceptible to lung infections
+– males with this syndrome are sterile since their sperm are
+immotile.
+Apical domain
+Basolateral domain
+Junctional complexes
+• Functional type of junctional complexes
+– Occluding junctions to form an impermeable barrier
+– Anchoring junctions to maintain cell-to-cell or cell-to-basal lamina
+adherence
+– Communicating junctions to permit movement of ions or signaling
+molecules between cells coupling adjacent cells both electrically and
+metabolically.
+Junctional complexes, gap junctions, and hemidesmosomes.
+Electron micrograph of the junctional complex. (From Fawcett DW:
+The Cell, 2nd ed. Philadelphia, WB Saunders, 1981.)
+Basolateral domain
+Occluding junction; Zonular occludens
+• apically located, "belt-like" junction
+• cell membranes approximate, fuse,
+diverge, and then fuse again
+• within a distance of 0.1 to 0.3 μm
+• Junctional proteins
+– claudins and occludins bind to each
+other
+– ZO1, ZO2, ZO3 (cytoplasmic zonula occludens protein)
+and Cadherins,
+• function in two ways:
+– prevent the movement of membrane
+proteins from the apical domain to the
+basolateral domain;
+– prohibit water-soluble molecules from
+passing between cells.
+Freeze-fracture replica displaying the tight
+junction (zonula occludens) in guinea pig
+small intestine. The P-face of the microvillar
+membrane (M) possesses fewer
+intramembrane particles than the P-face of the
+lateral cell membrane (L). Note the free
+terminal ridge-shaped protrusions (arrows)
+and desmosome (D). (From Trier JS, Allan CH,
+Marcial MA, Madara JL: Structural features of
+the apical and tubulovesicular membranes of
+rodent small intestinal tuft cells. Anat Rec
+219:69-77, 1987.)
+Anchoring junctions; Zonulae Adherens
+• belt-like junctions to adhere
+to one another.
+• basal to the zonulae
+occludentes
+• intercellular space of 15 to 20
+nm between the two adjacent
+cell membranes
+• E-cadherin + actin filaments
+Anchoring junctions; Desmosomes (Maculae Adherens)
+– weld-like junctions along the lateral cell membranes
+– randomly distributed
+• along the lateral cell membranes of simple epithelia
+• throughout the cell membranes of stratified squamous
+epithelia.
+– Structures
+• Disk-shaped attachment plaques (∼400 × 250 × 10 nm)
+• Proteins of plaque
+– desmoplakins and plakoglobins.
+• Intermediate filaments (cytokeratin) = Tonofilaments
+– inserted into the plaque
+– responsible for dispersing the shearing forces on the cell
+• filamentous cadherin family: desmoglein and
+desmocollin,
+– Pemphigus vulgaris
+• Produce autoantibodies against desmosomal proteins,
+disrupts cell adhesion,
+• consequent loss of extracellular fluids
+• leads to death
+• Treatment with systemic steroids and
+immunosuppressive agents
+• especially in the skin
+Electron micrographs of a desmosome.
+Observe the dense accumulation of
+intracellular intermediate filaments inserting
+into the plaque of each cell (asterisk). (From
+Fawcett DW: The Cell, 2nd ed. Philadelphia,
+WB Saunders, 1981.)
+desmosome
+Tight junction
+nexus
+Communicating junctions; Gap Junctions
+• also called nexus or communicating junctions
+• widespread in
+– epithelial tissues, cardiac muscle cells, smooth muscle cells, neurons,
+– not in skeletal muscle cells.
+• intercellular cleft : narrow and constant, about 2 to 4 nm.
+• intercellular hydrophilic communication channel
+– diameter : 1.5 to 2.0 nm,
+– passage of ions, amino acids , vitamins, cyclic adenosine monophosphate (cAMP), certain
+hormones, molecules smaller than 1 kDa in size
+the intramembrane particles of the astrocyte (scale bar = 0.1 &mu;m).
+A, Protoplasmic fracture face. Orthogonal arrays of particles (OAP; arrows) are
+observed near the gap junction (GJ). Note the respective differences in OAP and GJ
+particles in shape (square and circle), size (average, 30 nm2 and 45 nm2), and
+arrangement (orthogonal and hexagonal). B, Ectoplasmic fracture face. Corresponding
+pits of OAP are oriented into columns (arrows) near the GJ pits. Three OAP are
+gathered together (outlined rectangle). (From Yakushigawa H, Tokunaga Y, Inanobe
+A, et al: A novel junction-like membrane complex in the optic nerve astrocyte of the
+Japanese macaque with a possible relation to a potassium channel. Anat Rec 250:465-
+474, 1998.)
+Gap Junctions
+• Connexins : six closely packed transmembrane channel-
+forming proteins
+• Connexons : channel-structures, aqueous pores about 1.5
+nm
+• 20 different connexins  many different arrays of
+connexons  specific function
+• Functions
+– cellular sharing of molecules  coordinating physiological
+continuity within a particular tissue
+– electrical coupling of cells  coordinating the activities of these
+cells.
+– coupling the cells of the developing embryo
+• Mutations in connexin genes
+– genetically based nonsyndromic deafness
+– erythrokeratodermia variabilis, a skin disorder.
+– dysfunctional migration of neural crest cells during
+development  defects in the pulmonary vessels of the heart
+BASAL SURFACE SPECIALIZATIONS
+• Features
+– basal lamina
+• extracellular supporting structure
+• also in muscle cell, adipocyte, Schwann cell
+• secreted mainly by an epithelium
+• located at the boundary between the epithelium and the underlying
+connective tissue.
+– plasma membrane enfoldings
+• increase the surface area available for transport
+• active transport of ions
+• Striation : striated ducts in pancreas and salivary glands.
+– Hemidesmosomes; one of anchoring junctions
+• attach the basal cell membrane to the underlying basal lamina.
+• half desmosomes
+• Attachment plaques : desmoplakins, plectin, and other associated
+proteins
+• cytokeratin tonofilaments insert into these plaques, a sharp turn.
+• integrins (transmembrane linker proteins)
+– attached to the plaque and laminin and type IV collagen of the basal
+lamina.
+Basolateral domain
+Basal lamina
+Primary cilium(9+0 pattern), microvili, tight junction, hemides
+mosome, basal infolding
+Collecting tubule in kidney
+Uterine connective tissue
+Collecting tubule in kidney
+Renewal of Epithelial Cells
+• high turnover rate related to their location and function
+• Life of cells in epidermis
+– renewed at the basal layer by cell division.
+– migration from the germinal layer to the surface,
+– keratinized on their route and sloughed
+– Turnover time: 28 days in skin, 4 to 6 days in small intestine
+• metaplasia, transforming it into another epithelia
+• squamous metaplasia
+– Ex) bronchi of heavy smokers may undergo, transforming it into
+stratified squamous epithelium.
+** impaired function, but reversible
+• carcinomas: Malignant tumors arising from epithelia
+• adenocarcinomas : Malignant tumors arising from
+glandular epithelial cells
+

@@ -1,0 +1,1053 @@
+  주차                       학습내용              주차                       학습내용
+
+ 1 (9/4)    세포학 상피조직                       9 (10/31)    호흡기
+
+2 (9/11)    휴강                             10 (11/6)    소화관, 소화샘
+
+3 (9/18)    결합조직                           11 (11/13)   내분비계통
+
+4 (9/25)    추석연휴                           12 (11/20)   비뇨기
+
+5 (10/2)    근육조직, 연골&뼈                     13 (11/27)   특수감각기
+
+6 (10/9)    한글날 (온라인: 림프, 순환기)             14 (12/4)    피부
+
+7 (10/14)   신경조직, 혈구 (수요일 강의)              15 (12/11)   기말고사
+
+8 (10/24)   중간고사
+
+
+
+
+  주차                       학습내용              주차                       학습내용
+
+ 1 (9/4)    세포학 상피조직                       9 (10/31)    호흡기 (실습: 혈구, 호흡기)
+
+2 (9/11)    휴강                             10 (11/6)    소화관, 소화샘
+
+3 (9/18)    결합조직                           11 (11/13)   내분비계통
+
+4 (9/25)    추석연휴                           12 (11/20)   비뇨기
+
+5 (10/2)    근육조직, 연골&뼈                     13 (11/24)   특수감각기 (화요일 강의)
+
+6 (10/9)    한글날 (온라인: 림프, 순환기)             14 (12/4)    피부
+
+7 (10/16)   신경조직, 혈구 (실습: 림프, 순환기, 신경조직)   15 (12/11)   기말고사
+
+8 (10/24)   중간고사
+Muscle
+• Types of muscles
+  1. Skeletal muscle: striation, multiple nuclei, peripheral nuclei, voluntary
+  2. Cardiac muscle: striation, one or two nuclei, central nucleus, involuntary
+  3. Smooth muscle: no striation, one nucleus, central nucleus, involuntary
+           Muscle
+• Muscle cell – muscle fiber
+  – Sarcolemma: cell membrane
+  – Sarcoplasm: cytoplasm
+  – Sarcoplasmic Reticulum:
+    Smooth ER
+  – Sarcosome: mitochondria
+  – Myofibril  myofilament
+     • Thin myofilament : actin
+     • Thick myofilament : myosin
+             Muscle
+• Formation of muscle cell
+   – Skeletal muscle (multinucleated)
+      • Fusion of hundreds myoblasts
+        during development  myotubes
+
+
+   – Cardiac muscle (1 or 2 nuclei)
+      • No fusion
+
+
+   – Smooth muscle (one nucleus)
+      • No fusion
+Skeletal muscle
+• Types of skeletal muscle color
+   – Red muscle fiber : chick thigh muscle
+   – White muscle fiber : chick breast muscle
+   – Intermediate muscle fiber : mixed
+• Determinants of muscle color
+   – Myoglobin : smaller than hemoglobin
+   – Sarcosome : brown
+   – Sarcoplasmic reticulum : blue
+        Red fiber vs white fiber
+Characteristics           Red                   White
+ Contraction        Slow, repetitive,         Fast, “burst”,
+                   not easily fatigued,      easily fatigued,
+                         weaker           stronger contraction
+Fiber diameter            Thin            Thick  big muscle
+   Energy           Aerobic activity      Anaerobic Glycolysis
+                      using fats or       using glucose as fuel
+                  carbohydrates as fuel
+Vascularization           Rich                   Poorer
+ Mitochondria          Numerous                   Few
+   Myoglobin              Rich                    Poor
+ Sarcoplasmic        Not extensive             Extensive
+   Reticulum
+  Innervation     Smaller nerve fibers     Larger nerve fibers
+Red fiber vs white fiber
+
+
+
+
+       NADH-TR stain
+        Structures in Skeletal muscle
+Myofilament  myofibril  muscle fiber  muscle fascicle  biceps brachii muscle
+
+
+
+
+             fascicle = bundle
+   Connective tissue in Skeletal muscle
+ Myofilament  myofibril  muscle fiber  muscle fascicle  biceps brachii muscle
+
+                             endomysium        perimysium      epimysium
+
+• Connection between fibers
+   – Epimysium :
+        dense irregular C-T collagenous
+   – Perimysium :
+       less dense irregular C-T. collagenous
+   – Endomysium :
+       reticular fiber + basal lamina
+• Muscle attachment to bone
+   – Direct or Indirect (via 힘줄, 널힘줄)
+• Connection between muscle and bone
+ – Actin filament ---linker proteins---integrin---
+   basal lamina (laminin---Entactin---type IV collagen)---reticular fiber---
+   collagen fibers of tendon or aponeurosis---
+   collagen fiber of periosteum---Sharpey’s fiber---bone matrix
+
+
+
+
+Myotendinous junction
+                                            Endomysium
+
+
+
+
+Laminin in endomysium   Blood vessel in skeletal muscle
+Cells in Skeletal Muscle
+• Muscle cell
+   – Shape: long (up to 50 cm), cylindrical,
+     multinucleated
+   – Cell diameter
+       • 30 ~ 150 um
+       • Thicker  stronger
+       * more number of cells  stronger
+   – Striation : from myofibrils
+• Satellite cell
+   – myogenic cell (arrowheads)
+   – between basal lamina and muscle cell.
+   – small, heterochromatic single nucleus
+   – become muscle cell when needed for muscle
+     fiber growth and repair throughout life
+• Endothelial cell (red arrows)
+• Fibroblasts (black arrows)
+Striations
+Sarcomere (2.5 ㎛, Z line ~Z line)
+
+
+
+                sarcomere
+
+
+
+
+I = I band (isotropic in polarized light)
+A = A band (anisotropic in polarized light)
+Z = Z disk or Z line (Zwischenscheiben)
+M = M line (Mittelscheibe)
+N = nucleus
+H = H band (Heller band)
+   Myofilaments in Skeletal Muscle
+• Thin filament
+  – Actin molecule: G-actin
+  – Actin filament: F-actin: 6 nm diameter, 1.0 ㎛ long
+• Thick filament
+  – Myosin molecule : 3 nm diameter
+  – Myosin filament: 15 nm diameter, 1.5㎛ long, 200~300개의 myosin molecules
+• Arrangement in mammals
+  – 1 thick filament + 6 thin filaments
+Arrangement of myofilaments in myofibril
+                 A     H            I      Z
+Proteins in Sarcomere
+Contraction in muscles;
+ Sliding filament theory
+
+
+
+
+• Skeletal muscle
+ – All muscle cells are innervated
+ – All or none
+• Cardiac muscle
+ – Some cells are innervated
+ – can contract w/o nerve stimulus
+• Smooth muscle
+ – Some cells are innervated (individual)
+ – can contract w/o nerve stimulus
+                                            Sarcomere
+            Neuromuscular junction (= motor end plate)
+1. Depolarization of neuron
+2. depolarization of axon terminal
+3. opening of the voltage-gated Ca2+ channel in axon terminal
+4. influx of Ca2+ in axon terminal                         Votulinum
+5. fusion of synaptic vesicle and presynaptic membrane       toxin
+6. release of acethycholine(ACh) into synaptic cleft
+7. binding to ACh receptor on postsynaptic membrane
+8. opening of ligand-gated ion channel (ACh receptor)
+9. Influx of Na + ions in the muscle cell
+         10. depolarization of sarcolemma
+         11.transmission of action potential through T-tubule
+         12.spread to terminal cisternae(TC) of SR
+         13.release of Ca2+ into cytosol
+
+
+
+
+                                           From bio.purdue.edu
+
+
+
+
+(DHPR)
+Structures in skeletal muscle cell
+ – T-tubule
+  • Intracellular cell membrane (phospholipid bilayer)
+  • conduct depolarizing waves
+  • in the ends of myosin filaments
+ – Sarcoplasmic Reticulum: Smooth ER
+  • form meshwork around myofibril
+  • Intracellular Ca 2+ reservoir
+ – Myofibrils
+ – Sarcosome
+Triad in skeletal muscle
+= one tubule + two terminal cisternae
+Actin, Tropomyosin, Troponin
+
+
+
+
+                               in α-helical groove
+                                of actin filaments
+                        Actin-Myosin interface
+14. Ca2+ binds to TnC
+15. conformational change in TnI
+16. positional shift of tropomyosin
+17. unmasking of myosin-binding site on actin
+ Contraction cycles
+Repeated contraction & release
+                               18. ATP binding on myosin head ( detach)
+                               19. Hydrolysis of ATP  ADP + Pi
+                                    (energy release  change angle of head)
+                               20. cross-bridge: contact of myosin head to actin
+                               21. release of Pi  powerstroke
+                               22. release of ADP  powerstroke
+
+
+
+
+                     cocking
+
+
+
+
+                               Ca2+
+       Relaxation in skeletal muscle
+• Skeletal muscle
+  – Single stimulus single response
+  – Outside of sarcoplasm:
+     • acetylcholinesterase: Ach acetate + choline
+  – In the sarcoplasm
+     • In Ca2+ pump of Terminal cisternae
+      influx of Ca2+ into SR
+      decreased level of Ca2+
+      release Ca2+ from TnC
+      masking of myosin-binding sites in actin filament by
+       tropomyosin
+       Sensory receptors in skeletal muscle
+• Encapsulated sensory receptor : proprioceptors
+• Organs
+   – Muscle spindle (between muscle fibers): muscle fibers + nerve fibers
+      • detect stretch in muscle length
+   – Golgi tendon organ (between collagen fibers in tendon): nerve fibers
+      • detect tension in tendon
+• A component of Reflex system
+   – Upto spinal cord: spinal reflex systems
+   – Upto cerebellum or cerebral cortex
+
+
+
+
+  Muscle spindle                       Golgi tendon organ
+                                                     Muscle spindle
+• Function: constantly monitors
+       • Alteration in muscle length and alteration rate (fast or slow)
+• Structures                                                      Fusiform = spindle shape
+
+       • Capsule (external and internal)
+       • Intrafusal (muscle) fiber : 8~10 muscle fibers
+           – Nuclear bag fiber (static and dynamic)
+           – Nuclear chain fiber
+       • Nerve fibers: sensory (Ia, II), motor (γ)                                           fiber
+
+       • Fluid (GAG-rich)
+
+
+
+
+ Intrafusal muscle fiber   Extrafusal muscle fiber
+• Stretch reflex
+  Stretch of muscle
+   stretch of intrafusal muscle fiber
+   stimulation of sensory nerve endings
+     (Ia and II nerve fiber)
+   dorsal root ganglion
+   (interneuron in spinal cord)
+   α-motor neurons in spinal cord
+   extrafusal muscle fiber contract
+
+
+
+
+               patellar reflex or knee-jerk   Exercise-related muscle cramps (ERMC)
+                                               errors in nerve-muscle reflex arc
+                                                  - Golgi tendon organs: inhibited
+                                                  - Muscles spindles : hyperactive
+ Golgi tendon organ
+
+• Function: detect tension in tendon
+• capsule + type Ib nerve fibers
+
+• Golgi tendon reflex (=inverse stretch reflex):
+    Contraction of muscle
+     tension in tendon
+     tendon organs (Ib fiber)
+     inhibition of α-motor neuron
+     muscle relaxation
+   Exercise-related muscle cramps (ERMC)
+• Etiology
+    – Traditionally, known to arise from dehydration, electrolyte imbalances
+      (including magnesium, potassium and sodium), accumulation of lactic
+      acid, or low cellular energy levels.  however, minimal scientific value
+    – Recently, most likely involves the nerve-muscle reflex arc in skeletal
+      muscles
+        • CNS fatigue or overuse of feedback communication with muscles
+         the loss of inhibitory activity of the central nervous system (CNS) reflexes
+         Golgi tendon organs may become inhibited and muscles spindles can become
+          hyperactive
+         sustained activation of the muscle
+• influencing factors
+    – poor flexibility
+        • prolonged sitting, poor or abnormal posture or inefficient biomechanics (all of which may
+          be related to).
+    – Abnormal mechanical load
+        • increased body weight, improper footwear, eccentric muscle contraction and other
+          musculoskeletal injuries
+    – Aging
+Types of Nerve fiber
+    Cardiac Muscle
+•   Cell size: 15μm dia, 80 μm long
+•   1-2 central nuclei
+•   Striation
+•   Basal lamina + Reticular fiber
+
+• Intercalated disks :
+    – cell-cell junctions
+
+• highly vascularized
+• Myoglobin and Glycogen
+• Rich Mitochondria (halo)
+
+• T-tubule: large diameter
+• SR: less in number and small
+  terminal  Not triad but diad
+Skeletal muscle cell vs Cardiac muscle cell;
+       nucleus, T tubule, SR and mitochondria
+ Intercalated disk
+- Transverse portion (가로부분)
+ - cells joined end-to-end
+ - desmosome, fascia adherens
+- Lateral portion (세로부분)
+ - gap junction
+Intercalated disc in Cardiac muscle
+• Purkinje fibers
+  – Large specialized cardiac muscle cells
+  – in atrial and ventricular walls                   T-tubule: major source of Ca2+
+- Nucleus: one or two nuclei                             SR: minor source of Ca2+
+- Cytoplasm: Pale pink: Glycogen & mitochondria
+- Striations: weak, poor myofibrils in cytoplasm
+- Cell-cell junction: intercalated disk
+       (via gap junctions and desmosomes)
+- Function: conduct electric impulse to cardiac
+ muscle cells: contact with cardiac muscle cells
+
+
+
+
+                                                   (DHPR)
+                          Impulse generating &
+                        impulse-conducting system
+•   initiate and regulate the heart beat
+•   specialized cardiomyocytes
+
+1. Sinoatrial (SA) node
+     – the pacemaker of the heart do not contract robustly.
+2. Atrioventricular (AV) node
+     – between the atria and the ventricles
+3. Atrioventricular bundle (AV bundle , or bundle of His)
+     – a band of conducting tissue
+     – radiating from the AV node into the interventricular
+       septum
+4. Purkinje fibers
+     – at endocardium
+                             Smooth Muscle
+•   20 µm ~ 500 µm long, 5~10 µm dia
+•   Spindle shape (fusiform), taper
+•   One central nucleus
+•   Cell division
+•   No striation (No microfibril: irregular arrangement of actin and myosin filaments)
+•   Basal lamina + Reticular fiber
+•   Location :
+     – walls of hollow viscera, blood vessel, compound glands, respiratory tract,
+       dermis of skin, digestive tract, reproductive tract, ureter and bladder
+Smooth Muscle
+• Structures
+  – Many gap junctions
+  – No T-tubule but Caveola(e)
+  – Dense bodies connected by actin-myosin
+    filaments
+
+
+
+• Type
+  – Single-unit smooth muscle (common)
+     • nerve supply on a few cells
+     • Gap junctions
+     • induce wave contraction
+       ‘Peristalsis’
+  – Multiunit smooth muscle :
+     • as distinct individual
+       organs/structures
+     • Each cell innervated by a nerve
+       fiber
+    Smooth muscle cell
+    No troponin in Smooth muscle
+
+
+
+
+Dense body
+-    α-actinin-rich electron dense structures
+-    Dense body in cytoplasm
+-    Dense body on cell membrane
+       (desmosome)
+-    Actin filaments and intermediate
+     filaments bind
+-    irregular arrangement of actin and
+     myosin filaments
+                      Contraction in Smooth Muscle
+release of Ca2+ into cytosol
+ Ca 2+ binds to Calmodulin
+ Calmodulin binds to Caldesmon and activates myosin light chain kinase
+ conformational change in Caldesmon and myosin filament
+ Exposing of myosin-binding site on actin filament, unfolding of myosin light chain and
+   unmasking the actin-binding site in myosin head
+ binding of myosin head with actin filament
+ Release of Pi and ADP in order (in Cross-bridge cycling)
+ “contraction”
+           / Striations
+
+
+
+
+Size (diameter)                 30-150 μm           10-15 μm              5-10 μm
+
+                                                                   diad
+
+
+
+
+                          Movement/ stabilization              Pumping              Peristalsis
+                                      Function of muscle
+  Regeneration of Muscle
+• Skeletal muscle: satellite cell
+                                           contraction
+• Cardiac muscle: scar tissue by
+  fibroblast
+• Smooth muscle; smooth muscle cell
+
+
+
+
+                                       Pedersen and Febbraio, 2012, Nature Reviews
+   Cartilage and bone
+• Two of specialized connective tissues
+• Main function: support
+• Composed of
+  • Cells
+  • Extracellular matrix
+     • Fiber
+     • Ground substance
+  • Fluid
+Cartilage
+ Cartilage
+• Function
+   – Solid  Supporting
+   – Gel like and flexible  Shock-absorbing
+   – Smooth surface  sliding
+   – Long bone formation
+• Components
+   – Cell in lacuna
+   – Extracellular matrix
+       • Fiber: collagen fiber, elastic fiber
+       • Ground substance: proteoglycan, GAGs,
+          Hyaluronic acid, glycoprotein, collagen
+   – Extracellular fluid: water (75% in wet weight) in fresh
+     cartilage
+       forms a gel with the components of the ground substance
+• grow rapidly  important in development
+• also is formed very early during the repair of bone fractures.
+• Origin: undifferentiated mesenchymal cells
+• Characteristics
+  – Solid and gel-like matrix
+     • Collagen fibril-GAG-core protein-hyaluronic acid-core protein-GAG-collagen fibril
+  – No blood vessel (nourishment: diffusion through the water in matrix)
+  – No nerve
+  – No lymphatic vessel
+  – Covered by perichondrium
+     • Outer fibrous layer : fibroblast, type I collagen, blood vessels
+     • Inner cellular layer : chondrogenic cells
+  – Isogenous cell group (<8)
+• Classification
+  – Hyaline cartilage: collagen type II
+    (40% in dry weight)
+  – Elastic cartilage: collagen type II + elastic fiber
+  – Fibrous cartilage: collagen type I
+  * Type II collagen: easy to bind proteoglycan
+Classification of cartilage
+Type      Identifying Characteristics          Perichondrium              Location
+Hyaline   -Type II collagen (40%),             present in most places    Articular ends of long
+          -basophilic matrix,                  (exceptions: articular    bones, nose, larynx,
+          -chondrocytes usually arranged in    cartilages and epiphyses) trachea, bronchi, ventral
+          groups                                                         ends of ribs
+
+Elastic   -Type II collagen                    present                    Pinna of ear, walls of
+          -elastic fibers                                                 auditory canal, auditory
+                                                                          tube, epiglottis,
+                                                                          cuneiform cartilage of
+                                                                          larynx
+
+Fibrous   -Type I collagen, Type II collagen   absent                     Intervertebral disks,
+          -acidophilic matrix;                                            articular disks, pubic
+          -chondrocytes : parallel rows                                   symphysis, insertion of
+          between bundles of collagen; -                                  some tendons
+          always associated with dense
+          regular CT or hyaline cartilage
+           Hyaline cartilage
+• Bluish white, transparent
+• Cells
+• Extracellular matrix
+ – Fibril : Type II collagen, type IX, X, XI
+  • same refractive index as the ground substance.
+ – Ground substance
+  • Proteoglycan (especially aggrecan)
+      –Core protein
+      –GAGs:
+        » Chondroitin 4-sulfate
+        » Chondroitin 6-sulfate
+        » Keratan sulfate
+  • Hyaluronic acid : 200 proteoglycan
+  • Glycoprotein: chondronectin (bind to typeII collagen, C4S, C6S, HA, integrins)
+ – Classification of ECM
+  • Pericellular matrix (capsular Mat.): type VI collagen, integrin to attach to the matrix
+  • Territorial matrix : 50 μm band, rich chondriotin sulfate, poor in collagen
+  • Interterritorial matrix :richer type II collagen, poorer proteoglycans
+                Cells in cartilage
+– Chondrogenic cells
+   • Origin: mesenchymal cells
+   • Spindle shape
+       – Ovoid nucleus, 1~2 nucleoli
+       – Sparse cytoplasm
+   • Differentiate into chondroblasts and osteoprogenitor cells
+– Chondroblast
+   • Origin:
+       – chondrogenic cells in perichondrium
+       – mesenchymal cells within chondrification center
+   • Plump, basophilic
+       – r-ER, Golgi complex, mitochondria, secretory vesicles
+– Chondrocyte
+   • chondroblasts in cartilage lacunae
+   • Still proliferate  isogenous cell group
+   • Ovoid to round shape
+       – large nucleus and prominent nucleous
+       – Young and old chondrocyte
+                  Hyaline cartilage
+• Development
+  – Proliferation  condensation  chondrification center 
+    differentiation  secretion  matrix formation
+• Growth
+  – Interstitial growth : at epiphyseal plates, secrete  push 
+    enlarge
+  – Appositional growth : at perichondrium
+                      Elastic cartilage
+• More flexible than hyaline cartilage
+• Elastic fiber
+   – Yellowish
+   – more opaque than hyaline cartilage
+   – More in outer fibrous layer of perichondrium
+• More cells and less amount of matrix
+• Auricle, external auditory canal, eustachian tube,
+  epiglottis, cuneiform cartilage
+                                                Pubic symphysis
+          Fibrocartilage
+• Cells
+   – Origin : fibroblast  chondrocyte
+   – Parallel with collagen fiber bundle
+   – One or isogenous cell group
+• ECM
+   – Type I collagen fiber  acidophilic
+   – GAG: Chondrotin sulfate, keratan sulfate
+• Associated with dense C-T and hyaline cartilage
+• No perichondrium
+• Pubic symphysis, intervertebral disk, articular disk,
+  insertion of some tendons
+
+
+                                                            intervertebral disk
+             Fibrocartilage
+• Intervertebral disk
+ – between hyaline cartilage
+ – Two parts
+   • Annulus fibrosus: fibrous cartilage (tensile forces)
+      – Herring-bone appearance:
+               » Multilayer
+               » 45°~90° angulation
+   • Nucleus pulposus (compression)
+    – From cells of notochord
+    – Hyaluronic acid rich
+
+  – Ruptured disk
+  – Slipped disk
+
+                                      From http://www.palomar.edu/
+• Classification
+   – Synarthrosis
+                                                             Joint
+       • Synostosis: 뼈유착 결합 머리뼈
+       • Synchondrosis: 유리연골성결합 성장시(뼈끝판, 두개저), 성인(rib and sternum)
+       • Syndesmosis: 인대결합
+   – Diarthrosis
+• Structures
+   – Articular cavity
+   – Articular cartilage
+   – Joint capsule
+• Synovial fluid
+   – No color, transparent, viscous
+   – 성분:
+      • Dialyzed plasma component (투석된 혈장성분)
+      • Hyaluronic acid
+
+
+
+• Articular cartilage
+   – Hyaline cartilage, without perichondrium
+   – Elasticity
+      • Water out from the space in GAGs
+      • Electrostatic repulsion between carbonate and sulfate
+   – Exchange: gas, nutrient and waste with synovial fluid
+• Synovial membrane
+   – M-cell: macrophage-like cell, type B
+   – F-cell: fibroblast-like cell, type A
+Synovial membrane
+    Histophysiology of cartilage
+
+• Turnover : constant change of proteoglycans with age
+• Cartilage degeneration
+  – With age: ectopic hypertrophy death calcification 
+    bone formation  less mobility and pain in joint
+• Cartilage regeneration
+  – Chondrogenic cells
+  – fibroblast
+Bone
+Functions
+1. Mineral store for Ca 2+ : 99%
+2. Protection
+3. Support and motion
+4. Blood cell formation
+
+
+
+
+        Leverage                   Storage and production
+  Types of bone
+• According to shape
+  – Long bones
+  – Short bones: carpals and tarsals
+  – Flat bones: of skull, diploë (inner and outer tables)
+  – Irregular bones: vertebra
+  – Sesamoid bones: patella….
+                  Classification
+• Gross observation
+   – Compact bone
+       • dense, solid, weight-bearing,
+   – Spongy(cancellous) bone
+       • porous, marrow cavity, trabeculae, spicules, light weight
+
+
+• Microscopic observation (Maturity)
+   – Primary bone: woven bone
+       • Immature
+           – More cells, irregular fiber bundles
+           – Less mineralized
+       • During development and bone repair
+   – Secondary bone : lamellar bone
+       • Mature
+           – Lamellae (3~7μm thick)
+           – Canaliculi
+           – More calcified  stronger
+           – Regular and parallel collagen fiber
+Compact vs. Spongy Bone
+   Compact Bone
+• Lamellae : increase strength
+   – Osteon / Haversian system
+     • Structural unit of long bone
+     • Cylindrical, concentric
+     • Parallel to bone
+     • Haversian canal
+   – Circumferential lamellae
+      • Outer
+      • Inner
+   – Interstitial lamellae
+Bone and blood vessel architecture
+Bone
+   Periosteum : outer fibrous layer (fibroblast) + inner cellular layer (cells)
+   Bone
+       Cells : osteoprogenitor cell, osteoblast, osteoclast, osteocyte\
+       ECM
+           Organic :
+                fiber : type I collagen (80~90% )
+                ground substance
+                     Proteoglycan: GAG (chondroitin sulfate)
+                     Glycoprotein: osteonectin, osteocalcin, osteopontin, bone sialoprotein
+
+           Inorganic : 65% of dry weight
+                As a form of Hydroxyapatite crystals [Ca10(PO4)6(OH)2]
+                40nm in length, 25nm in width, 1.5~3nm in thickness
+
+   Endosteum : monolayer of osteoprogenitor cells and osteoblasts, osteoclast
+   Bone marrow
+      Red bone marrow
+      Yellow bone marrow
+  Leverage                                  Storage and production
+    Periosteum
+• Non-calcified tissue
+• Outer fibrous layer
+    – dense irregular CT (fibroblast)
+    – Nerves
+    – Blood vessels
+• Inner cellular layer
+    – osteoprogenitor cells
+    – osteoblasts,
+    – osteoclasts
+• Sharpey’s fibers
+
+
+    Endosteum
+• Inner surface of compact bone
+• Covers trabeculae
+• Cells
+    – osteoprogenitor cells
+    – osteoblasts
+    – osteoclasts
+   Types of cells in the bone
+• Osteocytes
+• Osteoblasts – central role in osteogensis
+• Osteoprogenitors- mesenchymal stem cells that
+  produce osteoblasts
+• Osteoclasts – bone remodeling
+        Metabolism in bone tissue
+• Mineral store for Ca 2+
+• Calcium release from bone
+  – Simple transfer (fast)
+     • in new lamellae
+     • bone-interstitial fluid-blood
+     • PTH
+  – Hormonal effect (slow)
+     • PTH
+     • Calcitonin
+Origin of bone cells
+
+ • Osteoprogenitor cells
+ • Osteoblast
+ • Osteoclast
+ • Fibroblast
+                       Osteoblast
+•   Origin: mesenchymal cell
+•   central role in osteogensis (osteoid), also resorb osteoid
+•   Sheet-like arrangement
+•   Cuboidal to columnar shape
+•   Processes and gap junction
+•   Secrete: osteoid (a thin uncalcified bone matrix)
+     – Type I collagen
+     – Proteoglycan (chondroitin sulfate)
+     – Glycoprotein
+     – RANKL (osteoclast stimulating factor)
+• Types
+     – Active form: cuboidal or columnar, polarized, basophilic cytoplasm
+     – Non-active form: flat, weak basophilic  bone lining cell
+• On cell membranes
+     – Receptor for PTH (parathyroid hormone)
+         • Secrete OPG(osteoprotegerin ligand)
+     – Integrin
+            Osteocyte
+•   20,000~30,000 osteocytes per mm3
+•   individually in lacunae
+•   Flat nucleus, poor cytoplasm
+•   Process in bony canaliculi
+•   Cell to cell junction: gap junction
+•   can not divide
+•   Inactive but secrete substances
+•   Function:
+    – Maintain and monitor the protein and mineral content
+      of the surrounding matrix.
+    – Mechanotransduction: respond to mechanical stress 
+      cAMP, osteocalcin, IGF  recruit preosteoblasts
+    – Participate in the repair of the damaged bone
+            Osteoclast
+• Origin: hematopoietic stem cells
+  (rather than monocytes in bone marrow)
+• Wandering cells
+• appearance:
+    –   Big (150μm) and Irregular shape
+    –   Acidophilic cytoplasm
+    –   many processes
+    –   Many nuclei (5~50) by cell fusion
+    –   Ruffled border
+    –   Clear zone
+• In Howship’s lacunae (shallow depression)                     Osteocytes
+• Secrete: collagenase, proteolytic enzyme  resorb the bone
+• Receptor:
+    –   for calcitonin (parafollicular cell in thyroid gland)
+    –   RANK
+    –   Colony-stimulating factor-1
+    –   Osteoprotegerin
+    –   Not for PTH
+                     •M-CSF
+Osteoclastogenesis     – macrophage colony-stimulating factor
+                       – promotes formation of mononucleated
+                       osteoclasts
+                     •RANKL
+                       – receptor activator of NF-kB ligand
+                       – interacts with RANK expressed by
+                       osteoclast
+                       – promotes formation of multinucleated
+                       osteoclasts
+                     •OPG
+                       – osteoprotegerin
+                       – negative regulates RANKL signaling by
+                       binding RANKL
+                     • Calcitonin:
+                       – a hormone of thyroid gland,
+                       – suppresses the osteoclastic activity.
+                     • Parathyroid hormone (PTH):
+                       – No PTH receptor in osteoclasts.
+                       – PTH stimulates the osteoblasts to secrete
+                       RANKL
+           Osteoclast
+• Bone resorption
+    – Decalcification : remove inorganic matrix
+         • H2O + CO2  H+ + HCO3-
+         • H+-ATPase
+         • Below pH 4.0
+    – Resorption of organic matrix
+         • Lysosomal hydrolases, metalloproteinase :
+           Collagenase and gelatinase
+
+
+
+
+Odontoclast: an osteoclast associated with root
+resorption of deciduous teeth
+              Other cells in bone
+• Osteoprogenitor cells :
+  – Lining the endosteum and periosteum
+  – Spindle shape
+  – Pale-staining oval nucleus
+  – Scant cytoplasm
+  – Differentiate into
+     • Osteoblast
+     • Chondroblast: in low oxygen level
+• Fibroblasts: Inner and outer layer of periosteum
+                 Bone Formation
+• Osteogenesis – development of the skeleton and growth
+  through adolescence (~18 females, ~21 males)
+  – Osteoblasts secrete osteoid
+  – Osteoblasts become osteocytes
+  – Osteoid is mineralized (calcium phosphate precipitates)
+  – Periosteum formed
+  – Mature lamellar bone formed on surfaces
+• Intramembranous ossification: mandible body
+• Endochondral ossification: long bones and condyle
+        Intramembranous Ossification
+• Locations
+  – Flat bone develops from mesenchyme (undifferentiated, embryonic CT)
+  – Appositional growth in long bone
+  – Skull and clavicle
+• Mesenchymal cells become osteoblasts
+• Osteoblasts form bone
+• Processes
+  – Primary ossification center
+  – Fusion of centers
+  – Formation of woven bone
+  – Formation of periosteum
+  – Formation of lamellar bone
+Intramembranous Ossification
+Endochondral ossification
+• Hyaline cartilage model of bone first
+• Cartilage is replaced by bone (long bone)
+• Procedures
+   – Bone collar
+   – Degeneration of chondrocyte
+   – Osteoclast
+   – Blood vessel invasion
+   – Osteoprogenitor cells invasion
+   – Osteoclasts, macrophage: remove the
+     cartilage matrix
+   – Osteoblast : bone apposition
+Endochondral Bone Formation
+     Endochondral Bone Formation
+Event                                                   Description
+Hyaline cartilage model formed.                         Miniature hyaline cartilage model formed in region of developing embryo where bone is to develop; some
+                                                        chondrocytes mature, hypertrophy, and die; cartilage matrix becomes calcified
+Primary Center of Ossification
+Perichondrium at the midriff of diaphysis becomes       Vascularization of perichondrium changes it to periosteum Chondrogenic cells become osteoprogenitor cells
+vascularized.
+Osteoblasts secrete matrix, forming subperiosteal       The subperiosteal bone collar is formed of primary bone (intramembranous bone formation)
+bone collar.
+Chondrocytes within the diaphysis core hypertrophy,     Presence of periosteum and bone prevents diffusion of nutrients to chondrocytes; their degeneration leaves
+die, and degenerate.                                    lacunae, opening large spaces in septa of cartilage
+Osteoclasts etch holes in subperiosteal bone collar,    Holes permit osteoprogenitor cells and capillaries to invade cartilage model, now calcified, and begin elaborating
+permitting entrance of osteogenic bud                   bone matrix
+Calcified cartilage/calcified bone complex is formed.   Bone matrix laid down on septa of calcified cartilage forms this complex (histologically, calcified cartilage stains
+                                                        blue, calcified bone stains red)
+Osteoclasts begin resorbing the calcified               Destruction of the calcified cartilage/calcified bone complex enlarges the marrow cavity
+cartilage/calcified bone complex.
+Subperiosteal bone collar thickens, begins growing      This event, over a period of time, completely replaces diaphyseal cartilage with bone
+toward the epiphyses.
+Secondary Center of Ossification
+Ossification begins at epiphysis.                       Process begins in same way as at primary center, except that there is no bone collar; osteoblasts lay down bone
+                                                        matrix on calcified cartilage scaffold
+Growth of bone occurs at epiphyseal plate.              Cartilaginous articular surface of bone remains; epiphyseal plate persists-growth added at epiphyseal end of
+                                                        plate. Bone is added at diaphyseal end of plate
+Epiphysis and diaphysis become continuous.              At the end of bone growth, cartilage of epiphyseal plate ceases proliferation; bone development continues to
+                                                        unite the diaphysis and epiphysis
+Endochondral ossification;
+Five zone in developing epiphyseal plate
+
+ • Reserve zone(=resting zone)
+     – Randomly distributed chondrocytes
+ • Proliferative zone
+     – Isogenous cell group
+ • Hypertrophic zone
+     – Mature, hypertrophic
+     – Accumulate glycogen
+ • Calcified cartilage zone
+     – Dead chondrocytes
+     – calcified matrix
+ • Ossification zone
+     – Bone formation on calcified cartilage
+Endochondral ossification
+Mechanisms of calcification
+• Heterogenous nucleation theory
+   – Deposition of calcium phosphate on collagen
+     fiber gap
+• Matrix vesicle theory
+   – Secreted by osteoblasts
+   – Small membrane-bounded vesicle
+   – 100~200nm in diameter,
+   – Numerous calcium pump
+   – High concentration of Ca 2+ , PO43- ions,
+     cAMP, ATP, ATPase, Alkaline phosphatase,
+     pyrophosphatase, calcium-binding proteins,
+     phosphoserine
+
+• Stimulation
+   – proteoglycan
+   – Calcium-binding glycoprotein
+      • osteonectin, bone sialoprotein
+Bone remodeling process
+                                                                    • Dynamic – changing throughout life
+Osteoclastogenesis                Osteoblastogenesis                         – 5-7% of bone mass turned over each week
+                                                                    • Osteoblasts – form new bone
+        Endosteal sinus                                             • Osteoclasts
+                                   Mesenchymal
+                  Macrophage        progenitor                               – multinucleated, fused cells
+                                                                             – Lysosomal enzymes digest collagen & matrix
+ Pre-osteoclast
+                                                                             – Phagocytize debris
+                                           Pre-osteoblasts
+
+                               Monocytes                       Osteoblasts
+      Osteoclasts                                                                       Lining cells
+
+
+
+                                                                                                 Osteocytes
+
+
+
+
+  Activation & Resorption             Reversal               Bone Formation             Quiescence
+
+
+                  3 weeks                                         6 months
+Bone remodeling
+Bone remodeling
+  Bone Remodeling
+• Fracture repair
+   – localized hemorrhage, blood clot
+   – Death of osteocyte
+   – Macrophage
+      • Scavenge the clot, dead osteocyte, bone matrix
+   – Proliferation of osteoprogenitor cells
+   – Formation of cellular tissue
+   – Primary bone formation (Bone callus)
+      • By intramembraneous ossification
+      • Endochondral ossification
+   – bone remodeling to secondary bone
+Steps in the fracture repair
+                                      Bone                         Cartilage
+                                      Osteoblast, Osteocyte,       Chondroblast
+       Cells                          osteoclast                   Chondrocyte
+
+Extracellular matrix                  67%
+ (inorganic matrix)
+Extracellular matrix   Fiber          Collagen fiber               Collagen fiber
+ (organic matrix)                                                  Elastic fiber
+                       Ground         Collagen fiber               GAG, proteoglycan,
+                       substance                                   glycoprotein, hyaluronic acid,
+                                                                   elastin
+                       hardness       hard                         Gel-like
+                       Blood vessel   Yes                          No
+  characteristics
+                       Nerve          Yes                          No
+                       Lymphatics     yes                          no
+                                      Mineral store, Protection    Elasticity
+     Function                         Support and motion           Shock absorption
+                                      Blood cell formation         Sliding area
+                                      Interstitial growth          Interstitial growth
+      Growth                          Appositional growth          Appositional growth
+
+                                      Compact bone, Spongy bone,   Hyaline cartilage, Elastic
+     subtypes                         lamellar bone, woven bone    cartilage, Fibrous cartilage
+
+                                      Periosteum                   perichondrium
+     coverage
+                                      endosteum
+

@@ -25,13 +25,13 @@ for q in Q:
 
 # ───────── v6.8 §14 ① 보기별 판단 이유 ─────────
 def norm(t):
-    return re.sub(r"[\s*\\•]+", "", t)
+    return re.sub(r"[\s*\\•]+", "", t).lower()
 CORPUS = ""
 for f in sorted(glob.glob(os.path.join(B, "corpus", "*.txt"))):
     CORPUS += norm(open(f, encoding="utf-8").read())
 AUTO = bool(CORPUS)
 qmap = {q["id"]: q for q in Q}
-nq_total = nq_ok = nq_down = 0
+nq_total = nq_ok = nq_down = 0  # 7·8단원은 04 교안이 없어 자동 대조 제외(수기 유지)
 for qid, rows in WHY_RAW.items():
     q = qmap[qid]
     assert len(rows) == len(q["opts"]), qid
@@ -41,7 +41,7 @@ for qid, rows in WHY_RAW.items():
         b = basis
         if b == "T4" and quote:
             nq_total += 1
-            if AUTO:
+            if AUTO and int(qid.split("-")[0]) <= 6:
                 if norm(quote) in CORPUS: nq_ok += 1
                 else: b = "G"; nq_down += 1
         elif b == "T4" and not quote:
