@@ -96,6 +96,45 @@ TL = {"years": [
  ["태생기 조혈", "임신 6주(간) / 6개월(골수)", "간 시기 → 골수 시기", "교안04(2025판) Prenatal Hematopoiesis", "Hepatic phase 6th week of gestation"]],
  "note": "연표는 교안에 연도가 실제로 적힌 1건뿐입니다(참고문헌 연도는 사건이 아니라 제외). 인물 이름은 원문에 없는 정보를 채우지 않았습니다."}
 
+# ───────── v6.9 내용 정리 재구성: 키워드·흐름(kw/chN.py), 반복 개념, 시점 막대 ─────────
+import importlib.util
+KW = {}
+for _n in range(1, 9):
+    _p = os.path.join(B, "kw", "ch%d.py" % _n)
+    if os.path.exists(_p):
+        _sp = importlib.util.spec_from_file_location("kw%d" % _n, _p); _m = importlib.util.module_from_spec(_sp); _sp.loader.exec_module(_m)
+        KW[_n] = _m.K
+CON_DEF = [
+ ("basal", "기저판·기저막", "basal lamina", r"basal lamina|basement|기저판|기저막|hemidesmosome|반데스모솜|laminin"),
+ ("junction", "세포 접합", "junction", r"junction|desmosome|접합|tight|zonula|adherens|데스모솜|connexin|cadherin"),
+ ("cytoskel", "세포골격", "actin · 중간필라멘트 · 미세소관", r"actin|myosin|intermediate|keratin|microtubule|미세소관|중간 ?필라멘트|액틴|미오신|tubulin|filament"),
+ ("collagen", "콜라겐", "collagen", r"collagen|콜라겐"),
+ ("ecm", "기질·GAG", "ECM · proteoglycan", r"GAG|glycosaminoglycan|proteoglycan|hyaluron|chondroitin|ground substance|기질|matrix"),
+ ("ca", "칼슘", "Ca2+", r"Ca ?2\+|calcium|칼슘|Ca2\+"),
+ ("blast", "-blast → -cyte", "모세포 → 성숙세포", r"blast|모세포|fibrocyte|osteocyte|chondrocyte|tenocyte"),
+ ("stain", "염색법", "staining", r"stain|염색|PAS|Orcein|Verhoeff|H&E|toluidine|Masson|Sudan|Giemsa|Wright"),
+ ("vessel", "혈관·내피", "endothelium · vessel", r"capillar|endotheli|vessel|혈관|내피|lymphatic|림프관|모세"),
+ ("immune", "면역세포·항체", "immune", r"macrophage|대식|lymphocyte|림프구|MHC|antibod|항체|Ig[AGEMD]|APC|plasma cell|형질세포|T cell|B cell|mast"),
+ ("germ", "배엽 기원", "germ layer", r"ectoderm|endoderm|mesoderm|mesenchym|배엽|중배엽|외배엽|내배엽"),
+]
+CON = []
+for _id, _nm, _en, _rx in CON_DEF:
+    _r = re.compile(_rx, re.I)
+    _cnt = {c: 0 for c in range(1, 9)}
+    for q in Q:
+        _t = q["stem"] + " " + " ".join(q["opts"])
+        if _r.search(_t): _cnt[int(q["ch"])] += 1
+    _where = []
+    for c in range(1, 9):
+        k = KW.get(c)
+        if k and _id in k["tags"]:
+            _where.append([c, k["tagnote"].get(_id, "")])
+    CON.append({"id": _id, "name": _nm, "en": _en, "qn": sum(_cnt.values()), "byq": _cnt, "where": _where})
+CON.sort(key=lambda x: (-len(x["where"]), -x["qn"]))
+# 기간 막대(일 단위, 교안에 적힌 기간만): [라벨, 일수(막대 길이 기준), 표기, 출처행 index]
+TLV = [["소장 상피 교체", 5, "4~6일"], ["적혈구 생성", 7, "7일"], ["혈소판 수명·생성", 10, "10일"], ["과립구 생성", 11, "11일"],
+       ["뼈 재형성 1주기", 21, "약 3주"], ["피부 상피 교체", 28, "28일"], ["태생기 간 조혈 시작", 42, "임신 6주"], ["적혈구 수명", 120, "120일"], ["뼈 재형성 전체", 180, "6개월"]]
+
 # ───────── v6.8 §16 내용 정리 각주(선배 필기) ─────────
 FN_KIND = {"3-12": "교안 밖", "3-05": "보강", "3-01": "보강", "3-06": "보강", "6-06": "교안 밖", "1-06": "교안 밖", "7-05": "교안 밖"}
 FN = []; fn_excl = 0
@@ -228,7 +267,7 @@ IMG = {
 DATA = {"Q": Q, "NEW": NEW, "SUM": SUM, "CH": CH, "CH_SRC": CH_SRC, "REL": REL, "STATS": STATS,
         "HAK": HAK, "CROSS": CROSS, "FILES": FILES, "REFS": REFS, "BLIND": BLIND, "SCOPE": SCOPE,
         "LIMITS": LIMITS, "NEWRATE": NEWRATE, "VER": VER, "BUILT": "2026-10-14",
-        "WHYSTAT": WHYSTAT, "MISMATCH": MISMATCH, "FIGS": FIGS, "FIGNO": FIGNO, "TL": TL, "MEM": MEM, "VS": VS, "FN": FN, "FNSTAT": FNSTAT}
+        "WHYSTAT": WHYSTAT, "MISMATCH": MISMATCH, "FIGS": FIGS, "FIGNO": FIGNO, "TL": TL, "MEM": MEM, "VS": VS, "FN": FN, "FNSTAT": FNSTAT, "KW": KW, "CON": CON, "TLV": TLV}
 
 def js(o):
     return json.dumps(o, ensure_ascii=False).replace("</", "<\\/")

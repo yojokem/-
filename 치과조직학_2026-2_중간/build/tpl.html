@@ -7,6 +7,7 @@
   --bg:#f4f6f6; --surface:#ffffff; --fg:#16201f; --muted:#566562; --line:#d7dedd; --soft:#e9eeed;
   --accent:#0e6b66; --accent-fg:#ffffff; --accent-weak:#d8edeb;
   --ok:#1b7a43; --bad:#b0352b; --ok-bg:#e0f1e6; --bad-bg:#f8e2df;
+  --c1:#0e6b66; --c2:#2b64a8; --c3:#b0352b; --c4:#9a6200; --c5:#6a4ca0; --c6:#1b7a43; --c7:#a24a7d; --c8:#5b6770;
   --s-conf:#1b7a43; --s-cross:#2b64a8; --s-est:#9a6200; --s-conflict:#b0352b; --s-undec:#69736f; --s-infer:#6a4ca0; --s-user:#1b7a43;
   --font-body:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
   --font-serif:"Noto Serif KR","Batang","Nanum Myeongjo",serif;
@@ -16,12 +17,14 @@
   --bg:#0e1514; --surface:#162120; --fg:#e3ebea; --muted:#9db0ad; --line:#2a3a38; --soft:#1e2c2b;
   --accent:#5fcbc2; --accent-fg:#06211f; --accent-weak:#173c39;
   --ok:#62c88a; --bad:#f0857b; --ok-bg:#163826; --bad-bg:#40201d;
+  --c1:#5fcbc2; --c2:#79aef0; --c3:#f0857b; --c4:#e0aa4a; --c5:#b79df0; --c6:#62c88a; --c7:#e28bbd; --c8:#a9b8c2;
   --s-conf:#62c88a; --s-cross:#79aef0; --s-est:#e0aa4a; --s-conflict:#f0857b; --s-undec:#9aa6a3; --s-infer:#b79df0; --s-user:#62c88a;
   color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0e1514; --surface:#162120; --fg:#e3ebea; --muted:#9db0ad; --line:#2a3a38; --soft:#1e2c2b;
   --accent:#5fcbc2; --accent-fg:#06211f; --accent-weak:#173c39;
   --ok:#62c88a; --bad:#f0857b; --ok-bg:#163826; --bad-bg:#40201d;
+  --c1:#5fcbc2; --c2:#79aef0; --c3:#f0857b; --c4:#e0aa4a; --c5:#b79df0; --c6:#62c88a; --c7:#e28bbd; --c8:#a9b8c2;
   --s-conf:#62c88a; --s-cross:#79aef0; --s-est:#e0aa4a; --s-conflict:#f0857b; --s-undec:#9aa6a3; --s-infer:#b79df0; --s-user:#62c88a;
   color-scheme:dark}
 *{box-sizing:border-box}
@@ -150,6 +153,82 @@ body.exam .opt.on{background:#fff;border-color:#000;text-decoration:underline}
 body.exam aside.omr{border-radius:0}
 .timer{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
 @media (prefers-reduced-motion:no-preference){.card{transition:border-color .15s}}
+
+/* v6.9 내용 정리: 단원 허브(흐름 → 키워드 → 비교 → 순서 → 함정), 반복 개념, 연결 맵, 기간 막대 */
+.hub{--cc:var(--accent);background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--cc);border-radius:8px;padding:16px 18px 14px;margin-bottom:18px;min-width:0}
+.hub-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:4px}
+.hub-n{font-family:var(--font-mono);font-weight:500;font-size:.8rem;color:var(--cc);border:1px solid var(--cc);border-radius:4px;padding:0 7px}
+.hub-h h2{font-size:1.2rem;margin:0;letter-spacing:-.01em}
+.hub-tag{color:var(--muted);font-size:.92rem;flex:1 1 220px}
+.hub .cn-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px}
+.cn{border:1px solid var(--line);background:var(--soft);border-radius:12px;padding:2px 10px;font-size:.78rem;display:inline-flex;flex-wrap:wrap;gap:0 6px;align-items:baseline;max-width:100%;text-align:left}.cn .note{flex:1 1 150px;min-width:0}
+.cn::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--cc,var(--accent));align-self:center;flex:none}
+button.cn:hover{border-color:var(--cc,var(--accent))}
+.h3s{font-size:.78rem;font-weight:700;letter-spacing:.04em;color:var(--cc);margin:18px 0 8px;display:flex;align-items:center;gap:8px}
+.h3s::after{content:"";flex:1;height:1px;background:var(--line)}
+ol.flow{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px 16px}
+ol.flow>li{position:relative;background:color-mix(in srgb,var(--cc) 9%,var(--surface));border:1px solid color-mix(in srgb,var(--cc) 28%,var(--line));border-radius:8px;padding:10px 12px 10px;min-width:0}
+ol.flow>li:not(:last-child)::after{content:"\2192";position:absolute;right:-12px;top:50%;transform:translateY(-50%);color:var(--cc);font-weight:700;background:var(--surface);border-radius:50%;width:16px;height:16px;line-height:15px;text-align:center;font-size:.8rem;z-index:1}
+.fn{font-family:var(--font-mono);font-size:.72rem;color:var(--cc);margin-right:6px}
+ol.flow b{font-size:.95rem}
+.fk{display:flex;flex-wrap:wrap;gap:4px;margin:6px 0 4px}
+.kc{font-family:var(--font-mono);font-size:.72rem;background:var(--surface);border:1px solid color-mix(in srgb,var(--cc) 35%,var(--line));border-radius:4px;padding:0 6px}
+ol.flow p{overflow-wrap:anywhere;margin:2px 0 0;font-size:.82rem;color:var(--muted);line-height:1.45}
+@media (max-width:640px){ol.flow{grid-template-columns:minmax(0,1fr)}ol.flow>li:not(:last-child)::after{content:"\2193";right:auto;left:50%;top:auto;bottom:-14px;transform:translateX(-50%)}}
+.kg{margin:10px 0 0}
+.kg h4{margin:0 0 6px;font-size:.88rem;display:flex;align-items:center;gap:8px}
+.kg h4::before{content:"";width:9px;height:9px;border-radius:2px;background:var(--cc)}
+.kt{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:6px}
+.kti{border:1px solid var(--line);border-left:3px solid var(--cc);border-radius:4px;padding:5px 9px;background:var(--surface);min-width:0}
+.kti b{display:block;font-size:.86rem;overflow-wrap:anywhere}
+.kti span{display:block;font-size:.78rem;color:var(--muted);line-height:1.4}
+.cmpw{margin:10px 0 0}.cmpw .ct{font-size:.84rem;font-weight:700;margin-bottom:3px}
+.cmpw table.st th{background:color-mix(in srgb,var(--cc) 16%,var(--surface))}
+.cmpw table.st td:first-child{color:var(--cc)}
+.steps{list-style:none;padding:0;margin:4px 0 0;display:flex;flex-wrap:wrap;gap:6px 0;counter-reset:st}
+.steps li{counter-increment:st;display:flex;align-items:stretch}
+.steps li>div{background:color-mix(in srgb,var(--cc) 9%,var(--surface));border:1px solid color-mix(in srgb,var(--cc) 28%,var(--line));border-radius:6px;padding:4px 10px;font-size:.82rem;min-width:110px}
+.steps li>div b{display:block}.steps li>div span{color:var(--muted);font-size:.76rem}
+.steps li:not(:last-child)::after{content:"\2192";align-self:center;padding:0 6px;color:var(--cc);font-weight:700}
+.tline{position:relative;display:flex;flex-wrap:wrap;gap:8px 0;margin:8px 0 0;padding-top:14px}
+.tline::before{content:"";position:absolute;left:0;right:0;top:6px;height:2px;background:color-mix(in srgb,var(--cc) 40%,var(--line))}
+.tline>div{flex:1 1 130px;min-width:110px;position:relative;padding:6px 8px 0 0}
+.tline>div::before{content:"";position:absolute;top:-12px;left:0;width:10px;height:10px;border-radius:50%;background:var(--cc);border:2px solid var(--surface)}
+.tline b{display:block;font-size:.84rem}.tline span{font-size:.76rem;color:var(--muted)}
+.seqt{font-size:.84rem;font-weight:700;margin:12px 0 2px}
+ul.traps{list-style:none;padding:0;margin:4px 0 0;display:grid;gap:5px}
+ul.traps li{display:flex;gap:8px;font-size:.88rem;background:var(--bad-bg);border-radius:6px;padding:5px 10px}
+ul.traps li::before{content:"!";font-weight:700;color:var(--bad);font-family:var(--font-mono)}
+.hub details.srcd{margin-top:12px}
+.con-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px}
+.con{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px;min-width:0}
+.con h3{margin:0;font-size:1rem;display:flex;flex-wrap:wrap;gap:2px 8px;align-items:baseline}.con h3 small{color:var(--muted);font-weight:400;font-size:.76rem}
+.fq{display:flex;align-items:center;gap:8px;margin:8px 0 6px;font-size:.78rem;color:var(--muted)}
+.fq .bar{flex:1;height:8px;background:var(--soft);border-radius:4px;overflow:hidden}.fq .bar i{display:block;height:100%;background:var(--accent)}
+.cbars{display:flex;gap:3px;align-items:flex-end;height:26px;margin:2px 0 8px}
+.cbars span{flex:1;background:var(--soft);border-radius:2px 2px 0 0;position:relative;min-height:3px}
+.cbars span.on{background:var(--cc)}
+.con ul{list-style:none;padding:0;margin:0;display:grid;gap:3px;font-size:.82rem}
+.con li{display:flex;gap:8px}.con li b{color:var(--cc);font-family:var(--font-mono);font-size:.74rem;flex:none;width:30px}
+table.mx{border-collapse:collapse;font-size:.84rem;width:100%}
+table.mx th,table.mx td{border:1px solid var(--line);padding:4px 8px;text-align:center}
+table.mx thead th{background:var(--soft);font-weight:700;position:sticky;top:0}
+table.mx td:first-child,table.mx th:first-child{text-align:left;font-weight:700;position:sticky;left:0;background:var(--surface)}
+table.mx .dot{display:inline-block;width:14px;height:14px;border-radius:50%;background:var(--cc)}
+table.mx td.no{color:var(--line)}
+.tv{display:grid;grid-template-columns:130px minmax(0,1fr) 74px;gap:8px;align-items:center;margin:4px 0;font-size:.84rem}
+.tv .tt{height:14px;background:var(--soft);border-radius:3px;position:relative}.tv .tt i{display:block;height:100%;background:var(--accent);border-radius:3px}
+.tv b{text-align:right;font-family:var(--font-mono);font-size:.78rem}
+.tax{display:grid;grid-template-columns:130px minmax(0,1fr) 74px;gap:8px;font-size:.7rem;color:var(--muted)}
+.tax div{position:relative;height:14px}.tax div span{white-space:nowrap;position:absolute;transform:translateX(-50%)}
+@media (max-width:520px){.tv,.tax{grid-template-columns:96px minmax(0,1fr) 64px}}
+.yline{position:relative;height:56px;margin:8px 8px 4px;border-bottom:2px solid var(--line)}
+.yline i{position:absolute;bottom:-6px;width:10px;height:10px;border-radius:50%;background:var(--accent);transform:translateX(-50%)}
+.yline span{position:absolute;bottom:10px;transform:translateX(-50%);font-size:.78rem;white-space:nowrap}
+.subnav{position:sticky;top:calc(env(safe-area-inset-top,0px) + 92px);z-index:10;background:var(--bg);padding:6px 0;display:flex;flex-wrap:nowrap;overflow-x:auto;gap:6px;border-bottom:1px solid var(--line);margin-bottom:14px;scrollbar-width:thin}.subnav .chip{white-space:nowrap;flex:none}
+.part{font-size:1.1rem;margin:26px 0 10px;display:flex;align-items:center;gap:10px}
+.part::before{content:"";width:6px;height:20px;background:var(--accent);border-radius:2px}
+@media print{.subnav{display:none}}
 </style>
 
 <div class="wrap">
@@ -173,7 +252,7 @@ const LS = {
   get(k, d){ try{ const v = localStorage.getItem('hist26.' + k); return v ? JSON.parse(v) : d; }catch(e){ return d; } },
   set(k, v){ try{ localStorage.setItem('hist26.' + k, JSON.stringify(v)); return true; }catch(e){ return false; } }
 };
-const TABS = [["status","현황·범위"],["mc","객관식"],["sum","내용 정리"],["all","전체 내용 정리"],["new","예상 문제"],["mock","모의고사"]];
+const TABS = [["status","현황·범위"],["mc","객관식"],["sum","내용 정리"],["full","전체 내용 정리"],["all","단원별 전체 펴기"],["new","예상 문제"],["mock","모의고사"]];
 const S = { tab: LS.get('tab','status'), ch: 0, hak: 'all', st: 'all', group: true, exam: false, showAll: false,
   omr: LS.get('omr', {}), ua: LS.get('ua', {}), uaWhy: LS.get('uaWhy', {}), open: {}, graded: null, inclEst: false,
   mock: null, newOpen: {}, newMarks: {}, sch: 0, fold: {}, cc: {} };
@@ -386,7 +465,7 @@ function mcTab(){
 function timeCard(){
   const T = DB.TL;
   return `<section class="scard" id="sum-time"><div class="scard-h"><h2>연도·시점 한눈에</h2><span class="cnt">연표 ${T.years.length}</span><span class="cnt">시점 ${T.times.length}</span></div>
-    <div class="sec-t">연도별 연표</div>
+    ${timeViz()}<div class="sec-t">연도별 연표</div>
     <div class="tw"><table class="st"><thead><tr><th>연도</th><th>사건</th><th>시험 포인트</th><th>출처</th></tr></thead><tbody>${T.years.map(r => `<tr><td>${esc(r[0])}</td><td>${sx(r[1])}</td><td>${sx(r[2])}</td><td class="note">${esc(r[3])}</td></tr>`).join('')}</tbody></table></div>
     <div class="sec-t">기간·시점·성장 시기</div>
     <div class="tw"><table class="st"><thead><tr><th>대상</th><th>시점</th><th>내용</th><th>출처</th></tr></thead><tbody>${T.times.map(r => `<tr><td>${sx(r[0])}</td><td>${sx(r[1])}</td><td>${sx(r[2])}</td><td class="note">${esc(r[3])}</td></tr>`).join('')}</tbody></table></div>
@@ -419,6 +498,78 @@ function chapterCard(c, mode){
   const body = `<p class="note">근거: ${esc(DB.CH_SRC[c])}</p>${gen}<div class="sec-t">핵심 요약</div><ul class="pts">${pts}</ul>${fold ? `<button class="btn no-print" type="button" data-act="fold" data-ch="${c}">더 보기 (${u.pts.length - 6}줄)</button>` : ''}${tbl}${memH}${vsH}${links}${srcH}`;
   return `<section class="scard" id="${all ? 'all' : 'sum'}-${c}"><div class="scard-h"><h2>Ch${c} ${esc(DB.CH[c])}</h2><span class="cnt">요약 ${u.pts.length}</span><span class="cnt">표 ${u.tbl ? 1 : 0}</span><span class="cnt">암기 ${mem.length}</span><span class="cnt">비교 ${vs.length}</span><span class="cnt">기출 ${qs.length}</span>${all ? `<button class="btn no-print" type="button" data-act="cc" data-ch="${c}" style="margin-left:auto">${closed ? '펴기' : '접기'}</button>` : ''}</div>${all && closed ? '' : body}</section>`;
 }
+
+/* ───────── v6.9 내용 정리: 단원 허브 ───────── */
+const chCol = c => `style="--cc:var(--c${c})"`;
+function hubParts(c){
+  const K = DB.KW[c]; if(!K) return '';
+  const manual = c >= 7;
+  const conRow = K.tags.map(id => { const cn = DB.CON.find(x => x.id === id); return `<button type="button" class="cn" data-act="gocon" data-id="${id}" title="${esc(K.tagnote[id] || '')}">${esc(cn ? cn.name : id)}<span class="note">${esc(K.tagnote[id] || '')}</span></button>`; }).join('');
+  const flow = `<ol class="flow">${K.flow.map((f, i) => `<li><span class="fn">${i + 1}</span><b>${sx(f.t)}</b><div class="fk">${f.k.map(k => `<span class="kc">${sx(k)}</span>`).join('')}</div><p>${sx(f.d)}</p></li>`).join('')}</ol>`;
+  const kws = K.kw.map(g => `<div class="kg"><h4>${sx(g.g)}</h4><div class="kt">${g.items.map(it => `<div class="kti"><b>${sx(it.w)}</b><span>${sx(it.d)}</span></div>`).join('')}</div></div>`).join('');
+  const cmps = K.cmp.map(t => `<div class="cmpw"><div class="ct">${sx(t.t)}</div><div class="tw"><table class="st"><thead><tr>${t.h.map(h => `<th>${sx(h)}</th>`).join('')}</tr></thead><tbody>${t.r.map(r => `<tr>${r.map(x => `<td>${sx(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div></div>`).join('');
+  const seqs = K.seq.map(s2 => `<div class="seqt">${sx(s2.t)}</div>` + (s2.kind === 'time'
+    ? `<div class="tline">${s2.items.map(i => `<div><b>${sx(i.l)}</b><span>${sx(i.d)}</span></div>`).join('')}</div>`
+    : `<ol class="steps">${s2.items.map(i => `<li><div><b>${sx(i.l)}</b><span>${sx(i.d)}</span></div></li>`).join('')}</ol>`)).join('');
+  const traps = `<ul class="traps">${K.traps.map(t => `<li><span>${sx(t)}</span></li>`).join('')}</ul>`;
+  const qs = []; K.kw.forEach(g => g.items.forEach(it => it.q && qs.push([it.w, it.q])));
+  K.cmp.forEach(t => t.q && qs.push([t.t, t.q])); K.seq.forEach(s2 => s2.q && qs.push([s2.t, s2.q]));
+  const src = `<details class="srcd"><summary>키워드 근거 원문(${qs.length}건${manual ? ' · 04 교안이 없어 기존 열람 자료에서 옮김, 자동 대조 안 함' : ' · 교안 분할본과 자동 대조 통과'})</summary><ul class="plain">${qs.map(x => `<li><b>${esc(x[0])}</b><blockquote>${esc(x[1])}</blockquote></li>`).join('')}</ul></details>`;
+  return {conRow, flow, kws, cmps, seqs, traps, src, K};
+}
+function hubBody(c){
+  const h = hubParts(c); if(!h) return '';
+  return `<section class="hub" id="hub-${c}" ${chCol(c)}>
+    <div class="hub-h"><span class="hub-n">Ch${c}</span><h2>${esc(DB.CH[c])}</h2><span class="hub-tag">${sx(h.K.tagline)}</span></div>
+    <p class="note">${esc(DB.CH_SRC[c])}${h.K.pg ? ' · ' + esc(h.K.pg) : ''}</p>
+    ${h.conRow ? `<div class="cn-row" aria-label="반복 개념">${h.conRow}</div>` : ''}
+    <div class="h3s">학습 흐름</div>${h.flow}
+    <div class="h3s">암기 키워드 · ${h.K.kw.reduce((n, g) => n + g.items.length, 0)}개</div>${h.kws}
+    <div class="h3s">비교표</div>${h.cmps}
+    ${h.seqs ? `<div class="h3s">순서 · 시점</div>${h.seqs}` : ''}
+    <div class="h3s">헷갈리는 포인트</div>${h.traps}
+    ${h.src}</section>`;
+}
+function hubCard(c){
+  const qn = Q.filter(q => q.ch == c).length;
+  return hubBody(c).replace(/<\/section>$/, `<details class="srcd"><summary>기존 요약 · 비교표 · 암기 포인트 · 헷갈리는 비교 · 기출 연계 · 근거 원문 (${qn}문항 연계, 모두 그대로 유지)</summary>${chapterCard(c, 'unit')}</details></section>`);
+}
+function conCards(){
+  const maxQ = Math.max(...DB.CON.map(x => x.qn), 1);
+  return `<div class="con-grid">${DB.CON.map(cn => `<article class="con" id="con-${cn.id}" style="--cc:var(--accent)">
+    <h3>${esc(cn.name)} <small>${esc(cn.en)}</small></h3>
+    <div class="fq"><span>기출 ${cn.qn}문항</span><span class="bar"><i style="width:${Math.round(cn.qn / maxQ * 100)}%"></i></span><span>${cn.where.length}개 단원</span></div>
+    <div class="cbars" title="단원별 기출 문항 수(Ch1~8)">${[1,2,3,4,5,6,7,8].map(c => { const n = cn.byq[c] || 0, mx = Math.max(...Object.values(cn.byq), 1); return `<span class="${cn.where.some(w => w[0] === c) ? 'on' : ''}" style="height:${Math.max(12, Math.round(n / mx * 100))}%;--cc:var(--c${c})" title="Ch${c} 기출 ${n}문항"></span>`; }).join('')}</div>
+    <ul>${cn.where.map(w => `<li style="--cc:var(--c${w[0]})"><b>Ch${w[0]}</b><span>${sx(w[1])}</span></li>`).join('')}</ul></article>`).join('')}</div>`;
+}
+function conMatrix(){
+  return `<div class="tw"><table class="mx"><thead><tr><th>개념</th>${[1,2,3,4,5,6,7,8].map(c => `<th>Ch${c}</th>`).join('')}<th>단원</th><th>기출</th></tr></thead><tbody>${DB.CON.map(cn => `<tr><td><button class="link" type="button" data-act="gocon" data-id="${cn.id}">${esc(cn.name)}</button></td>${[1,2,3,4,5,6,7,8].map(c => { const w = cn.where.find(x => x[0] === c); return w ? `<td style="--cc:var(--c${c})" title="${esc(w[1])}"><span class="dot"></span></td>` : '<td class="no">·</td>'; }).join('')}<td>${cn.where.length}</td><td>${cn.qn}</td></tr>`).join('')}</tbody></table></div>
+  <p class="note">점에 마우스를 올리면 그 단원에서의 역할이 보입니다. 단원 점은 단원 정리 데이터의 태그, 기출은 기출 71문항의 문제문·보기에서 해당 용어가 나온 문항 수입니다.</p>`;
+}
+function timeViz(){
+  const mx = Math.log10(200), pos = d => Math.max(2, Math.log10(d) / mx * 100);
+  const ticks = [[1, '1일'], [10, '10일'], [30, '30일'], [100, '100일']];
+  const yrs = DB.TL.years;
+  return `<div class="sec-t">기간 막대 (로그 눈금, 일 단위)</div>
+    ${DB.TLV.map(r => `<div class="tv"><span>${esc(r[0])}</span><div class="tt"><i style="width:${pos(r[1]).toFixed(1)}%"></i></div><b>${esc(r[2])}</b></div>`).join('')}
+    <div class="tax"><span></span><div>${ticks.map(t => `<span style="left:${pos(t[0]).toFixed(1)}%">${t[1]}</span>`).join('')}</div><span></span></div>
+    <p class="note">막대 길이는 일수의 로그입니다(길이 비교가 아니라 자릿수 비교). 값은 아래 표의 교안 기재 기간입니다.</p>
+    <div class="sec-t">연도 (교안에 적힌 것)</div>
+    <div class="yline">${yrs.map(r => `<i style="left:50%"></i><span style="left:50%">${esc(r[0])} · ${sx(r[1].split(' — ')[0])}</span>`).join('')}</div>`;
+}
+function seqAll(){
+  return [1,2,3,4,5,6,7,8].map(c => { const K = DB.KW[c]; if(!K || !K.seq.length) return ''; const h = hubParts(c);
+    return `<div class="hub" ${chCol(c)}><div class="hub-h"><span class="hub-n">Ch${c}</span><h2>${esc(DB.CH[c])}</h2></div>${h.seqs}</div>`; }).join('');
+}
+function fullTab(){
+  const nav = [['fv-con', '핵심 반복 개념'], ['fv-mx', '연결 맵'], ['fv-time', '기간·연도'], ['fv-seq', '순서·과정']].concat([1,2,3,4,5,6,7,8].map(c => ['hub-' + c, 'Ch' + c + ' ' + DB.CH[c]]));
+  return `<div class="subnav no-print" role="navigation" aria-label="전체 내용 정리 이동">${nav.map(n => `<button class="chip" type="button" data-act="goid" data-id="${n[0]}">${esc(n[1])}</button>`).join('')}</div>
+    <h2 class="part" id="fv-con">핵심 반복 개념</h2><p class="note">여러 단원에 걸쳐 나오고 기출 문항에서도 자주 등장하는 개념입니다. 단원 수가 많은 순서입니다.</p>${conCards()}
+    <h2 class="part" id="fv-mx">단원 간 연결 맵</h2>${conMatrix()}
+    <h2 class="part" id="fv-time">기간 · 연도</h2><section class="scard">${timeCard().replace(/^<section class="scard" id="sum-time">/, '<div>').replace(/<\/section>$/, '</div>')}</section>
+    <h2 class="part" id="fv-seq">순서 · 과정</h2>${seqAll()}
+    <h2 class="part">단원별 정리 (Ch1 → Ch8)</h2>${[1,2,3,4,5,6,7,8].map(hubBody).join('')}`;
+}
 function sumTab(){
   const cf = Q.filter(q => q.cf.length);
   const nb = Q.reduce((n, q) => n + q.ev.filter(e => e.t === 'T2p').length, 0);
@@ -426,7 +577,7 @@ function sumTab(){
   const top = `<div class="box"><h2>선배 필기 대조 요약</h2>
     <p class="note">필기·표시(T2′) 근거 ${nb}건이 ${Q.filter(q => q.ev.some(e => e.t === 'T2p')).length}개 문항에 붙어 있습니다. 모두 타 학번 기준이라 올해 출제와 다를 수 있고, 정답과 상태를 바꾸지 않습니다. 필기와 교안이 어긋난 문항 ${cf.length}건은 어느 쪽도 지우지 않고 보존했습니다. 단원 요약 표 아래 각주에는 ${DB.FNSTAT.shown}건만 싣고 ${DB.FNSTAT.excluded}건은 뺐습니다. ${esc(DB.FNSTAT.rule)} 문항 카드의 '선배 필기 대조'에는 제외 항목까지 모두 있습니다.</p>
     <ul class="plain">${cf.map(q => `<li><button class="link" type="button" data-act="gomc" data-q="${q.id}">${q.id}</button> ${esc(q.key)} — ${esc(q.cf[0].s)}: ${esc(q.cf[0].a)}</li>`).join('')}</ul></div>`;
-  const cs = Object.keys(DB.CH).filter(c => !S.sch || +c === S.sch).map(c => chapterCard(c, 'unit')).join('');
+  const cs = Object.keys(DB.CH).filter(c => !S.sch || +c === S.sch).map(c => hubCard(+c)).join('');
   return `<div class="tools"><div class="chips" role="group" aria-label="단원">${chips}</div></div>` + timeCard() + top + cs;
 }
 function allTab(){
@@ -496,7 +647,7 @@ function refreshMarks(){
 function render(){
   document.body.classList.toggle('exam', S.exam);
   $('#tabs').innerHTML = TABS.map(([k, n]) => `<button class="tab" role="tab" type="button" data-act="tab" data-k="${k}" aria-selected="${S.tab === k}">${n}</button>`).join('');
-  $('#main').innerHTML = ({status: statusTab, mc: mcTab, sum: sumTab, all: allTab, new: newTab, mock: mockTab}[S.tab] || statusTab)();
+  $('#main').innerHTML = ({status: statusTab, mc: mcTab, sum: sumTab, full: fullTab, all: allTab, new: newTab, mock: mockTab}[S.tab] || statusTab)();
   refreshMarks();
   if(S.tab === 'mc' && S.graded) renderGrade();
 }
@@ -536,6 +687,8 @@ document.addEventListener('click', e => {
   else if(a === 'ch'){ S.ch = +t.dataset.ch; S.graded = null; render(); }
   else if(a === 'nch'){ S.nch = +t.dataset.ch; render(); }
   else if(a === 'sch'){ S.sch = +t.dataset.ch; render(); }
+  else if(a === 'goid'){ document.getElementById(t.dataset.id)?.scrollIntoView({behavior: 'smooth', block: 'start'}); }
+  else if(a === 'gocon'){ if(S.tab !== 'full'){ S.tab = 'full'; LS.set('tab', 'full'); render(); } document.getElementById('con-' + t.dataset.id)?.scrollIntoView({block: 'center'}); }
   else if(a === 'fold'){ S.fold[t.dataset.ch] = true; render(); document.getElementById('sum-' + t.dataset.ch)?.scrollIntoView(); }
   else if(a === 'cc'){ S.cc[t.dataset.ch] = !S.cc[t.dataset.ch]; render(); document.getElementById('all-' + t.dataset.ch)?.scrollIntoView(); }
   else if(a === 'expall'){ S.cc = {}; render(); document.querySelectorAll('details.srcd').forEach(d => d.open = true); }
