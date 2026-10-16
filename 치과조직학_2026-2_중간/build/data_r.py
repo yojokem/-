@@ -320,7 +320,7 @@ r("8-02",
   (U, "[검토 포인트] 림프계 다능세포는 자가재생.", "G", ""),
   (U, "[검토 포인트] CFU 계열은 증식능이 있다.", "G", ""),
   (U, "[검토 포인트] 다능줄기세포는 자가재생.", "G", ""),
-  (U, "[검토 포인트] 적혈모세포는 분화 단계라 재생능 없다는 가설.", "T4", "Orthochromatophil erythroblast"))
+  (U, "[검토 포인트] 적혈모세포는 분화 단계라 재생능 없다는 가설.", "T4", "Orthochromatophil erthroblast"))
 r("8-03",
   (U, "[검토 포인트] 피브리노겐은 혈장단백질.", "T4", "albumin, globulin, fibrinogen"),
   (U, "[검토 포인트] 알부민은 혈장단백질.", "T4", "albumin, globulin, fibrinogen"),

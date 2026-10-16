@@ -1,0 +1,819 @@
+  주차                       학습내용              주차                          학습내용
+
+ 1 (9/4)    세포학 상피조직                       9 (10/31)    호흡기 (실습: 혈구, 호흡기)
+
+2 (9/11)    휴강                             10 (11/6)    소화관, 소화샘
+
+3 (9/18)    결합조직                           11 (11/13)   내분비계통
+
+4 (9/25)    추석연휴                           12 (11/20)   휴강 (온라인: 특수감각기 (귀))
+
+5 (10/2)    근육조직, 연골&뼈                     13 (11/27)   특수감각기 (눈) / 피부
+
+6 (10/9)    한글날 (온라인: 림프, 순환기)             14 (12/4)    비뇨기
+
+7 (10/16)   신경조직, 혈구 (실습: 림프, 순환기, 신경조직)   15 (12/11)   기말고사
+
+8 (10/24)   중간고사
+Nervous Tissue
+                          Nervous System               Ventricle
+
+
+
+* Anatomic classification
+  • Central Nervous System
+    * nervous tissue
+       - brain
+       - spinal cord
+    * connective tissue; meninges, choroid plexus
+  • Peripheral Nervous System
+    * nervous tissue: nerve, ganglion, nerve plexus:
+    * connective tissue
+
+* Functional classification
+    • Somatic Nervous System
+    • Autonomic Nervous System
+       • sympathetic and parasympathetic
+         (Circulatory, respiratory, urinary,
+         reproductive systems)
+       • digestive (Enteric nerve system)
+         Nervous Tissue
+1. Cellular Elements
+• Neuron (Nerve Cell)
+• Neuroglia (Neuroglial Cells)
+     - CNS
+       astrocyte, oligodendrocyte, microglia and
+       ependymal cell
+     - PNS
+       Schwann cell in nerve and ganglion
+       satellite cell in ganglion
+2. Intercellular Substance: extremely scarce
+                                  Neuron
+Function : Communication
+ stimulus  Receptor - Neuron - Effector  reaction
+
+environment                                                                    environment
+                Nervous system                                       animal
+                                                                    organism
+   stimulus                                                                    reaction
+                             sensory       Inter-    Motor
+               receptor                                             effector
+                              neuron      neuron     neuron
+
+                                       Type of neurons
+
+
+
+       - Excitability (Irritability) : impulse (action potential)
+       - Conductivity
+                   - 전기적 신호 전기적신호 “electrical synapse”
+                        - through membrane in intraneuronal conduction
+                        - gap junction in smooth muscle cells and cardiac muscle cells
+                   - 전기적신호 화학적신호 (neurotransmitters) “chemical synapse”
+                        ; via synapse in interneuronal conduction
+  Morphology of Typical Motor Neuron
+
+
+
+      = r-ER, Nissl substance
+
+
+
+
+       sheath
+
+
+                                Nissl stain
+
+Neuromuscular junction
+            Neuronal Volume and Dimension
+
+                                                                 5 × 5 × 𝜋𝜋 × 1000000
+                                      𝑉𝑉𝑉𝑉𝑉𝑉𝑉𝑉𝑉𝑉𝑉𝑉 𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟 =                         = 150
+                                                                50 × 50 × 50 × 𝜋𝜋 × 4/3
+50 × 50 × 50 × π × 4/3 ≒ 523,333.3
+
+     100 ㎛
+                            Axon diameter 10 ㎛
+
+
+                        1m = 106㎛ = 1,000,000 ㎛
+                      5 × 5 × π × 1,000,000 ≒
+                      78,500,000
+                                     If diameter of cell body = 1km,
+                                            diameter of axon = 100m
+                                          length of axon = 10,000km
+10,000km
+                    Neuronal cell body (Soma)
+
+
+   Protein Synthesizing Assembly
+
+ • Euchromatic Nucleus
+    ------- m-RNA transcription
+ • Prominent Nucleolus
+    ------- r-RNA (ribosome) synthesis
+
+
+* no protein-synthesizing assembly in axon
+* transport via axonal (axoplasmic) transport
+      : neurotransmitters, enzymes, membrane proteins in axon
+                     Neuronal cell body (Soma)
+Cytoplasmic Organelles
+• Nissl substance: r-ER
+active site of protein (polypeptide) synthesis
+not in axon hillock
+well developed in motor neuron
+• Golgi complex
+complex of perinuclear Golgi substance
+glycosylation, sulfation & phosphorylation
+packing and condensation protein to transport
+                          Neuronal cell body (Soma)
+Cytoplasmic Organelles
+• Mitochondria
+      - energy source for ion exchange (Na+/K+ exchange pump)
+         and axonal transport
+• s-ER ; abundant in axon and dendrites, for anterograde transfer
+• Lysosome
+       - hydrolytic enzymes --- waste products
+       - lysosomal storage disease (mental retardation, seizure)
+• Pigment Granules
+   - Melanin granule
+   - Lipofuscin granule
+           Distinction between Axon and Dendrites
+                             Axon                        Dendrite
+
+Dimension
+    number                      1            multiple (0, 1, or more)
+    length                 200 µm – 1 m        less than 700 µ m
+    diameter          constant throughout        gradually tapered
+Branching pattern
+    angle              almost right angle          acute angle
+    site              distant from cell body     near cell body
+Structural components
+    Nissl substance          absent           could be present
+    dendritic spine          absent           could be present
+    myelin sheath      could be associated      not associated
+
+
+
+
+                                                         Dendrite
+
+                                                 Nissl
+  Distinction between Axon and Dendrites
+
+                            Axon               Dendrite
+
+Functional
+  direction of              efferent              afferent
+    conduction        (soma → axon terminal)    (dendrite → soma)
+
+
+
+* exception: pseudounipolar neuron
+      - Efferent: soma → axon terminal
+      - Afferent: axon terminal → soma
+                                   Cytoskeleton
+• Neurofilament: Intermediate Filament
+     - supporting
+     - neurofibril -------reduced silver staining
+• Microtubule
+     - tubulin
+     - axonal transport
+          - anterograde
+           - retrograde
+• Actin filament: microfilament
+      binds to cell membrane
+
+
+
+
+                                                    Malacrida et al., 2019. 10.3390/ijms20092287
+Shah and Rossie, 2017. doi.org/10.1007/s12035-017-0525-3
+            Axonal (Axoplasmic) Transport
+
+                    Components of Axonal (Axoplasmic) Transport
+
+      Components               Velocity (mm/day)   Transporting Substances
+
+Anterograde Axonal Transport
+ Fast Transport                     200-400        synaptic vesicle, enzymes
+                                                   neurotransmitters
+ Mitochondrial Transport             50-100        mitochondria
+ Slow Transport
+     Slow Component a (SCa)        0.1 - 1.0       tubulin, neurofilament protein
+     Slow Component b (SCb)          2-6           actin, clathrine, calmodulins
+                                                   spectrin, cytoplasmic enzymes
+Retrograde Axonal Transport         100-200        prelysosomal vesicles,
+                                                   recycled proteins, HRP, WGA
+                                                   neurotrophic viruses
+Classification of Neurons
+
+•   Number of Processes
+
+    1. unipolar neuron (no dendrite)
+    2. pseudounipolar neuron
+    3. bipolar neuron
+    4. multipolar neuron
+•   Function
+    1. Sensory neurons
+    2. Motor neurons; CNS muscle, glands
+    3. Interneurons; integrating, only in CNS
+         Pseudounipolar neuron
+      in DRG (dorsal root ganglion)
+                                      central
+                                      process
+
+
+
+
+                                                peripheral
+                                                 process
+
+
+
+
+Morphological transition of DRG neurons
+                    Neuroglia (Neuroglial cells)
+Central Neuroglia                            Peripheral Neuroglia
+  Astrocyte                                       Schwann Cell
+    protoplasmic astrocyte                          in peripheral nerve
+    fibrous astrocyte
+                                                    and ganglion
+  Oligodendrocyte
+    perineuronal satellite cell                   Satellite Cell
+    interfascicular cell                            in ganglion
+  Microglia
+  Ependymal Cell
+
+
+
+
+  Astrocyte         Oligodendrocyte   Microglia
+                                                Astrocyte
+                                                               Protoplasmic astrocyte in the gray matter
+
+
+•     Types
+      - Protoplasmic Astrocyte: in Gray Matter
+      - Fibrous Astrocyte: in White Matter
+• Cell Body
+      - ‘potato’ shape nucleus, scarce pale cytoplasm
+• Processes
+   - GFAP (glial fibroacidic protein): intermediate filament
+   - Perivascular Feet surrounding blood vessels
+   - Perineural feet
+• Specialized Astrocytes
+      - Bergmann’s glial cell, Muller cell, pituicyte
+
+
+
+
+Fibrous astrocytes in the white matter
+                                                                           20
+Blood-Brain Barrier (BBB)
+• Physiologic barrier (= physical + metabolic)
+    - highly selective semipermeable border of endothelial
+      cells
+    - tight junctions between the endothelial cell
+    - continuous-type capillaries (including Basal lamina)
+
+• Functions of BBB
+   - restricts passage of certain ions and substances
+      (MW < 500 dalton) from the bloodstream to
+      tissues of the CNS.
+   - protects the CNS from fluctuating levels of
+      electrolytes, hormones, and tissue metabolites
+      circulating in the blood vessels
+• Role of Astrocyte in BBB
+    - induction of tight junction formation
+    - maintenance, functional regulation and the repair of
+      the blood-brain barrier.
+                                                        Connective Tissue of the CNS
+       Glial cells in the brain                         Meninges
+                                                        - Dura mater: a dense connective tissue
+                                                        - Arachnoid: thin loose connective tissue
+                                                        - Pia mater: thin loose connective tissue
+
+
+= simple squamous epithelium + thin connective tissue
+                               Oligodendrocyte
+• Cell Body
+    - round, heterochromatic nucleus
+    - dark cytopasm
+        - r-ER, free ribosome, Golgi complex, mitochondria
+
+• Myelin forming cell in CNS
+ - Myelin Sheath
+       Each process constitutes a internodal segment
+
+
+
+
+                                   1. nucleus of oligodendrocyte
+                                   2. process of oligodendrocyte
+                                   3. myelin sheath
+                                   4. axon
+                                   Microglia
+• Cell Body
+ - slender, elongated, heterochromatic nucleus
+ - dark cytoplasm, prominent secondary lysosome
+• Processes
+ - a few main processes from cell body, highly branched
+
+• Macrophage (Mononuclear Phagocytic System)
+  - Origin : Blood Monocyte
+ - increased in Inflammation
+
+
+
+
+                                                 gray matter of the brain
+                                       Ependymal Cell
+• Epithelial glial cell lining brain ventricles and spinal central canal
+        - simple cuboidal and columnar cell with round nucleus
+        - cilia and microvilli on luminal surface
+• Choroid Plexus (= ependymal cell + capillary)
+        - ion transporting columnar cell: numerous mitochondria
+• Functions
+        - cerebrospinal fluid (CSF) homeostasis, brain metabolism, and
+           the clearance of waste from the brain
+• Tanicyte
+        - non-ciliated cells in 3rd ventricle, sensitive to glucose
+        concentration, T4 and T3 uptake                                                    Choroid Plexus
+
+
+
+
+                                                                           Junctional Complex (JC)
+                                                                           cilia (C)
+                                                                           microvilli (M)
+                                                                           Basal bodies (BB)
+                                                                           Golgi apparatus (G)
+             Schwann Cell
+• slender cell with small heterochromatic nuclei
+
+• Types
+
+  1. myelin forming cell in PNS
+   - Myelin Sheath: Myelinated Fiber
+      A Schwann cell constitutes a internodal Segment
+
+  2. surround Unmyelinated Axons
+      A Schwann cell surround
+            many unmyelinated axons
+
+
+
+
+ LEPROSY: Mycobactrium leprae infection
+           of Schwann cell
+MBP, myelin basic protein;
+Nrg1, neuregulin;
+P0, protein 0;
+PMP22, peripheral myelin protein
+             Myelin
+Myelin Sheath
+• formed by wrapped cell membrane of
+        Oligodendrocyte in CNS
+        Schwann Cell in PNS
+• Node of Ranvier
+    - Saltatory Conduction 도약전도
+    evolutionary innovation in chordate
+    - conduction velocity
+
+
+
+
+                                          Node of Ranvier- internodal segment
+                                          Schmidt Lantermann’s cleft
+                                                   Internodal Segment
+Types of Nerve fiber
+
+
+
+
+                       Myelinated fiber
+
+
+
+                       Unmyelinated fiber
+Conduction velocity is proportional to
+ 1. Length of Internodal Segment
+ 2. Thickness of Myelin sheath the number of myelin wraps
+ 3. Diameter of Axon
+ + Node (of Ranvier) Length
+ + size of the periaxonal space
+                     Satellite Cell (= Capsular cell)
+Cells encircling neuronal cell body in Ganglion
+ - small cuboidal cells forming a layer
+ - completely encircles pseudounipolar neuron
+        in spinal and cranial ganglion
+- less completely surround neurons of autonomic ganglia
+
+Function
+ : establish a controlled microenvironment
+  - providing electrical insulation
+  - metabolic exchanges
+
+
+
+
+                                                          “Satellite glial cell”
+Composition of Peripheral Nerve
+• Connective Tissue Sheath
+ - Endoneurium (속)
+ - Perineurium (다발)– blood vessels
+ - Epineurium (바깥)
+• Nerve Fiber
+ - Myelinated Nerve Fiber
+    Axon, Myelin sheath, Schwann cell
+ - Unmyelinated Nerve Fiber
+    Axon, Schwann cell
+       Axon Terminal - Peripheral Nerve Endings
+1. Receptors
+      - free nerve ending
+      - encapsulated ending
+      - expanded tip ending
+2. Effectors
+      - neuromuscular junction
+      - autonomic nerve ending
+3. Neuromuscular Spindle
+Neuromuscular junction
+
+
+
+
+                    - Presynaptic Portion (terminal):
+                     Synaptic vesicle, mitochondria,
+                     Presynaptic membrane
+                    - Synaptic Cleft : 20-30 nm
+                    - Postsynaptic Portion
+                     mitochondria, Postsynaptic memb.
+         Axon Terminal - Synapse
+1. Presynaptic Portion: Synaptic Button
+    - synaptic vesicle
+    - mitochondria
+    - presynaptic density: active zone
+
+2. Synaptic Cleft
+    - 20 ~ 30 nm
+3. Postsynaptic Portion
+    - postsynaptic density: complex of many proteins in membrane
+    - mitochondria
+                                                axosomatic synapses         axodendritic synapses
+
+
+
+
+                                                                      3: presynaptic density
+                                                                      4: postsynaptic density
+                Lagow et al., 2007
+
+Axon Terminal
+  - Synapse
+
+
+
+
+                    porocytosis
+                            Al-Ghamdi et al., 2015
+Muscle spindle & Golgi tendon organ
+  Response of a nerve cell to injury
+1. Wallerian Degeneration = anterograde degeneration
+   • changes distal from the injury site
+  - myelin breakdown  Schwann cells dedifferentiate
+   Schwann cell proliferate  myelin debris removal by macrophages
+   von Büngner’s band by proliferated Schwann cell
+                                                                      Axon (Nissl) Reaction - chromatolysis
+   axonal sprout is growing  growing axonal sprout reaches the
+    muscle fiber  successful regeneration                                               new neuromuscular junctions
+
+2. Axon Reaction = (Chromatolysis, retrograde degeneration)
+   • changes in soma
+ - displacement of nucleus
+  Large reduction in number
+     of Nissl bodies
+  regeneration of Nissl bodies
+
+
+
+
+                   * neuroma
+Degeneration and Regeneration of Nervous System
+BLOOD
+Blood
+   1. Color: dark red
+   2. Viscous
+   3. pH 7.4
+   4. About 5L (7-8% of the body weight)
+
+
+Function of the Blood
+  1. Conveying of the O2, nutrient
+  2. Transportation of the metabolites
+  3. Transportation of the hormone, signaling molecule
+  4. Regulation of the body temperature
+  5. Delivering of the waste products
+  6. Protective mechanism
+  7. Maintanance of the acid-base and osmotic balance
+Blood의 구성성분
+Plasma (55%)
+      Water 90% ↑
+      Plasma protein 7%
+         (albumin, globulin, fibrinogen, etc)
+      Inorganic salts, Organic compounds 1%
+                               AA. Vit, hormone
+
+Formed element (45%)                              Buffy coat
+
+      RBC
+      WBC
+      Platelet
+                     1%
+
+Hematocrit (Hct)
+        : 40-50%
+        : 35-45%
+      Child : 35%
+      New-born : 45-60%
+Staining of the Blood
+  Smear method
+  Dimitri Ramanovsky (1891년)
+    metylene blue (+, alkaline) : basophilia
+    eosin (-, acidic) : eosinophilia
+    azure (+) : azurophilia
+  Giemsa, Wright, Leishman staining
+
+The kind of Formed element
+  RBC
+  WBC
+    Granulocyte (Neutrophil, Basophil, Eosinophil)
+    Agranulocyte (Lymphocyte, Monocyte)
+  Platelet
+Red Blood Cell (RBC) = Erythrocyte
+  Hemoglobin
+  No nuclear
+  Biconcave disk shape
+  Life span: 120 days
+  Greenish yellow color
+  Staining: Salmon pink color
+  7.5 ㎛ in diameter,
+  0.8 ㎛, 2.6 ㎛ thickness
+    : 5,000,000/mm3
+    : 4,500,000/mm3
+Anemia, erythrocytosis(=polycythemia)
+Isotonic solution (300 mOsm)
+Hypertonic solution → crenation
+Hypotonic solution → hemolysis
+
+
+Macrocyte (=megalocyte) > 9㎛
+Microcyte < 6㎛
+Poikilocytosis
+     spherocyte, ellipsocyte, sickle cell
+Anisocytosis
+Plasma membrane
+40% lipid + 50% protein + 10% Carbohydrate
+Lipid bilayer
+Integral membrane protein
+   glycophorin
+   ion channel
+   band 3 protein
+
+Peripheral protein
+   band 4.1 protein
+   ankyrin
+   spectrin
+   actin
+   band 4.9 protein
+Blood group system
+  ABO group
+  Rh group (Rhesus antigen)
+Hemoglobin (33% v/v of erythrocyte)
+  M.W.: 68,000 Da
+  4 polypeptide chain + heme
+
+
+  HbA1: 2α + 2β + 4heme (97%)
+  HbA2: 2α + 2δ + 4heme (2%)
+  HbF: 2α + 2γ + 4heme (1%)
+
+
+  Oxyhemoglobin (O2)
+  Carbaminohemoglobin (CO2)
+  Carboxyhemoglobin (CO)
+
+
+  Sickle cell anemia (HbS) β chain: glutamate -> valine
+Reticulocyte
+    Reticulum in RBC (rRNA)
+    Immature RBC
+    Reticulocyte count
+
+
+
+
+       Brilliant cresyl blue
+White Blood Cell (WBC) = Leukocyte
+  Defense mechanism
+  6,000-9,000/mm3
+  Leukocytosis > 12,000
+  Leukopenia < 5,000
+
+  Neutrophil : 60 - 70%
+  Eosinophil : 2 - 4%     Differential count
+  Basophil : 0.5 – 1%
+  Lymphocyte : 20 - 30%
+  Monocyte : 3 – 8%
+    Neutrophil
+7㎛, smear: 10-12㎛ in diameter
+2 – 5 lobe nucleus
+Few golgi, mitochondria, ribosome
+Many glycogen (low oxygen condition)
+Drum stick (=Barr body)
+Band form nucleus
+Hypersegmentation
+Active phagocyte
+Specific granule
+  Alkaline phosphatase, Collagenese Lactoferin,
+  Lysozyme
+
+                   diapedesis
+ALP stain   diapedesis
+        Eosinophil
+
+7㎛, smear: 10-12㎛ in diameter
+Bilobe nucleus
+Many specific granule Few
+azurophilic granule
+Allergy reaction, Parasite infection
+
+
+                  steroid
+Specific granules in eosinophil
+
+1.5㎛
+Internum
+  Major basic protein (eosinophilic)
+  Eosinophil cationic protein
+  Eosionphil derived neurotoxin
+Externum
+  Acid phosphatase
+  Arylsulfatase
+  β-glucuronidase
+  Collagenase
+  Phospholipase
+  Cathepsin
+  RNAase
+        Basophil
+
+
+7㎛, smear: 10-12㎛ in diameter
+
+S shaped nucleus
+
+Few RER, mitochodria
+
+Immunoglobulin E receptor
+
+Immediate hypersensitive reaction
+Specific granule in
+    basophil
+0.5㎛
+heparin
+histamin
+eosinophil chemotactic factor
+neutrophil chemotactic factor
+peroxidase
+            Lymphocyte
+smear: 10-15㎛ in diameter
+  (small, medium, large)
+round nucleus
+Few mitochondria, RER, Golgi
+Immune reaction
+
+
+B lymphocyte               15~20%
+  humorally mediated immune system
+  (plasma cell)
+T lymphocyte             70~80%
+  cellularly mediated immune system
+  (helper, suppressor, cytotoxic cell)
+Null cell          5%
+  (stem cell, NK cell)
+   Monocyte
+
+smear: 12-20㎛ in diameter
+Oval, kidney shaped nucleus
+Two nucleoli
+Many mitochondria, lysosome
+Few RER, glycogen
+Differentiation into macrophage
+Mononuclear phagocyte system
+   Platelet
+
+smear: 2-4㎛ in diameter
+Biconvex disk shape
+250,000-400,000/mm3
+No nucleus
+Life span: 10 days
+Platelet aggregation & adhesion
+Hyalomere 투명질층               Granulomere 과립층
+microtubule                  α granule (300~500nm)       응고작용
+
+actin and myosin monomer     - fibrinogen, von Willebrand factor, thrombopondin factor)
+
+open canalicular system      δ granule (dense body) (250~300nm) 혈관수축
+dense tubular system (sER)   - Ca2+, ATP, ADP, pyrophosphate)
+
+                             λ granule (lysosome)(170~250nm)
+                             mitochodria
+Blood clot formation
+                     Hemophilia
+                        •   Type I: Factor VIII (X-linked)
+                        •   Type II: Factor IX (X-linked)
+                        •   Type III: Factor XI (non-linked)
+Blood clot cascade
+
+
+
+
+                                 Plasminogen
+
+                                 Plasmin
+Prenatal Hematopoiesis
+      Mesoblastic phase
+       2 weeks after gestation
+       blood islands near the yolk sac
+
+
+      Hepatic phase
+       6th week of gestation
+       RBC, leukocyte (8w), platelet
+      Splenic phase
+       3months of gestation RBC
+
+
+      Myeloid phase
+       6 months of gestation
+       Bone marrow – RBC, granulocyte, monocyte, platelet
+           Red marrow, Yellow marrow
+       Lymph node - lymphocyte
+Postnatal Hematopoiesis
+
+
+                   Myeloid   lymphoid
+                                     EPO, Vit B12, iron, folic acid
+  Erythropoiesis              7일
+
+
+Proerythroblast (ribosome)
+      ↓
+Basophil erythroblast (hemoglobin)
+      ↓
+Polychromatophil erythroblast
+      ↓
+Orthochromatophil erthroblast
+ (Normoblast)
+      ↓
+Reticulocyte (rRNA remnant)
+      ↓
+RBC
+    Granulopoiesis             11일   Shift to left
+
+
+ Myeloblast (nongranule)
+             ↓
+       Promyelocyte
+(golgi, azurophilic granule)
+             ↓
+       Myelocyte
+    (specific granule)
+             ↓
+      Metamyelocyte
+       (sp. Granule)
+             ↓
+         Stab cell
+          Band cell
+             ↓
+           WBC
+Agranulopoiesis
+
+     Lymphoblast     Monoblast
+          ↓              ↓
+     Prolymphocyte   Promonocyte
+          ↓              ↓
+     Lymphocyte      Monocyte
+Megakaryopoiesis      10일
+
+
+
+
+     Megakaryoblast
+            ↓
+     Megakaryocyte
+            ↓
+     Platelet
+
