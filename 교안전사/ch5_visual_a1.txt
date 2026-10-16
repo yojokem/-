@@ -1,0 +1,20 @@
+# 5장(2026-10-12) 사진 육안 판독 (OCR 빈 결과분) — 박재한 교수 슬라이드 · 불확실 [?] · 강조(빨강) {R}
+## 124904076 : 표지 — 주연결장치와 부연결장치 (Major and Minor Connectors) / 단국대학교 치과대학 치과보철과 박재한
+## 124904076_01 : 표지(동일)
+## 124904076_02, _03 : Goals — ▶주연결장치의 역할과 설계 원리 ▶하악/상악 주연결장치의 종류와 적응증 ▶부연결장치의 기능/형태/위치 (※ "RPD 시작 수업" 삽화)
+## 124904076_05 : 치과 보철학 용어(RPD) — Figure 1-3 Maxillary framework (Kennedy I): A Major connector, B Rests, C Direct retainer, D Minor connector, E Guide plane, F Indirect retainer
+## 124904076_06 : 주연결장치의 역할과 위치 — Figure 5-1 (A 하악 RPD 프레임: 1 lingual bar major connector, 2a minor connector(레진 의치상 부착), 2b proximal plate, 2c rest 연결 minor connector, 3 occlusal rest, 4 direct retainer arm, 5 stabilizing/reciprocal, 6 indirect retainer; B 상악; C 하악 양측 distal extension) + 자동차 프레임 그림 「Car Frame = Major Connector」
+## 124904076_07 / _08 : 주연결장치의 역할과 위치
+▶ 주연결장치 역할: ・좌/우 악궁을 연결하는 보철물 ・RPD의 모든 구조물이 부착 ・{R}교차악궁안정(Cross-arch stabilization): 좌/우 견고한 연결 / 지레작용 감소 / 후방연장 RPD에 중요한 역할 ・{R}견고성(rigidity): 지대치 손상(치주) / 치조제 손상 / 하부 조직에 위해작용(impingement)
+## 124904076_12 : 주연결장치의 역할과 위치 — ▶주연결장치의 {R}위치 설정
+・가동성 조직이 없는 곳: {R}firm한 곳 ・치은 조직에 위해작용 X ・삽입철거 시 골이나 연조직 돌출부 피함 ・{R}릴리프: 골융기(수술X), 정중구개봉합(Median palatal suture) / 후방연장 국소의치 움직임 고려 ・환자에게 {R}편안한 위치 (사진 4장)
+## 124904076_13 / _15 / _16 : 주연결장치의 역할과 위치 — ▶주연결장치의 {R}특성
+・{R}생체 친화적 합금재료 ・{R}교차악궁안정 제공: 견고 ・혀에 자극 없어야 함 ・해부학적 형태를 변경 시키면 안됨 ・삽입/철거, 기능 시 → 구강조직 자극 X ・필요 이상 조직 피개 금지: {R}최소한의 피개 ・음식물 잔사 침착/함입 X ・기능 시 회전하려는 경향 최소화: 다른 구성요소에서 지지 획득 ・보철물 {R}지지에 기여 (사진: 하악 RPD 모형, 노란 화살표 도해)
+## 124904076_17 : 하악 주연결장치 (목록) — 1.설측바(Lingual bar) 2.설측판(Linguoplate) 3.설하바(Sublingual bar) 4.연속바(Continuous bar, Cingulum bar) 5.순측바(Labial bar) / 손글씨 박스: 「일단 외우자!」 「많이 쓰는 순서!」
+## 124904076_18 : 하악 주연결장치 — {R}1.설측바(Lingual bar) 강조 / 그림 5-2 설측바(Lingual bar) A·B (B에 "4mm" 표시) / 파란 박스 「하악 기본 선택 Major connector!」
+## 124904076_19 : {R}2.설측판(Linguoplate) 강조 / 그림 5-8 설측판 / 「Bar가 사용하기 어려울 때!」
+## 124904076_20 : {R}3.설하바(Sublingual bar) 강조 / 그림 5-13 설하바, 그림 5-14 「Dr. Kro의 설하바 설계. A, 설측바는 치은연에서 적어도 4 mm 떨어져야 한다. B, 구강저가 높은 경우 4 mm를 유지하기 위해 설하바를 사용한다. C, 치은 퇴축으로 인해 설측바를 사용할 수 없을 때 설하바를 사용한다」[일부 판독 불확실 ?] / 「Bar가 사용하기 어려울 때!」
+## 124904076_23 : {R}5.순측바(Labial bar) 강조 / 사진(순측바 구강 내·모형) / 「설측에 뭔가 문제가 있을 때!」
+## 124904076_24, _25 : 하악 주연결장치 — 목록 1~5 + 사진 A~F(라벨 없음) [정답 공개 전 문제용 슬라이드]
+## 124913053_03 : 하악 주연결장치 — 같은 사진 라벨 공개: A Lingual bar / B Linguoplate / C Sublingual bar / D Lingual bar + Continuous bar(병용) / E Continuous bar / F Labial bar
+## 124913053_01 : (상악 — 범위 외, 전사만) 상악 주연결장치 목록: 1.단순 구개판(Single palatal strap) 2.전후방 구개판(A-P palatal strap) 3.구개판형 연결장치(Palatal plate) 4.U자형 구개 연결장치(U-shaped connector) / 사진 A~D (A 라벨 "Sin…")
