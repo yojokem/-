@@ -9,15 +9,15 @@
 
 | Slide # | Organ | Species | Stain | 배율 | 주제 | 야마 |
 |---|---|---|---|---|---|---|
-| #37 | Small intestine (ileum) | Human | PAS-hematoxylin | ×400 | Loose CT | |
+| #37 | Small intestine (ileum) | Human | PAS-hematoxylin | ×400 | Loose CT | ★ |
 | #1 | Tendon | Human | HE | ×400 | Dense (regular) CT, tenocyte | |
 | #36 | Stomach | Human | Masson's trichrome | ×100~400 | Collagen fiber, Dense irregular CT | ★ |
 | #79 | Epiglottis | Human | Orcein | ×40~400 | Elastic fiber | ★ |
-| #72 | Blood vessel | Rat | Verhoeff's elastic | ×400 | Elastic fiber | |
+| #72 | Blood vessel | Rat | Verhoeff's elastic | ×400 | Elastic fiber | ★ |
 | #25 | Lymph node | Rat | Bielschowsky's silver | ×40~400 | Reticular fiber | ★ |
 | #40 | Mesentery | Rat | Toluidine blue | ×100~400 | Mast cell | ★ |
 | #43 | Liver | Rat | India ink-HE | ×400 | Kupffer cell | |
-| #71 | Sole | Human | HE | ×400 | Adipose cell | |
+| #71 | Sole | Human | HE | ×400 | Adipose cell | ★ |
 | #59 | Inflammated uterus | Human | HE | ×400~1000 | Plasma cell | ★ |
 | #18 | Neural tube | Animal embryo | HE | ×100~400 | Mesenchymal tissue | ★ |
 | #62 | Umbilical cord | Human | HE | ×20~100 | Mucoid CT | ★ |
@@ -49,7 +49,7 @@
 
 ---
 
-## Slide #37 — Small intestine (ileum), Human, PAS-hematoxylin, ×400 — Loose CT
+## Slide #37 — Small intestine (ileum), Human, PAS-hematoxylin, ×400 — Loose CT ★야마
 
 ### 조직 소견 [필수]
 - PAS 염색 특성: 적색 = glycogen, GAG, glycoprotein.
@@ -62,6 +62,10 @@
 - 혈관이 매우 풍부하나 외력에 대한 저항성은 낮음.
 
 이미지: `../../images/교안/37_smallintestine_looseCT-cells_x400.jpg`
+
+### 선배들 그림
+- 선배 권영주(22학번) ×400 (monkey, PAS) : PAS 염색이라 Goblet cell이 흰색이 아니라 보라색에 가까운 분홍색으로 염색(핵과는 다른 색). 라벨 Goblet cell / goblet cell nucleus / lymphocyte / lamina propria(CT) / 상피세포와 결합조직 사이 basal lamina. Simple columnar epithelium nuclei = 핵이 비슷한 위치. Striated border = apical domain의 microvilli가 brush가 아닌 하나의 줄무늬 형태(actin filament로 운동성 X). 술잔세포 = 핵이 아래쪽으로 밀려 있어서 붙은 이름. 융모·microvilli는 표면적을 넓혀 영양 흡수를 좋게 함. 결합조직이라 상피조직보다 세포가 적게 표현. 이미지: `../../images/선배그림/37_smallintestine_YAMA-senior-kwon_x400.jpg`
+- 선배 권영주(22학번) ×40 (Ileum, human, PAS) : Small intestine = duodenum / jejunum / **ileum**(✓) : vitamin B12·bile salts 흡수. Peyer's patch(림프조직 집합, M-cell epi — 세균의 혈류 유입 차단). Paneth cell = gland 기저부, exocrine serous, 기저 핵·호염기성 세포질, eosinophilic granule(lysozyme → 항균). Goblet cell = ileum에 많음, mucinogen 분비로 상피 보호·윤활. Intestinal villi(finger-shaped), Crypt of Lieberkühn, Plica circularis, T. mucosa / submucosa / muscularis. 이미지: `../../images/선배그림/37_ileum_YAMA-senior-kwon-2_x40.jpg`
 
 ---
 
@@ -112,6 +116,7 @@
 - 선배 B (오아름, 22학번·2023학년도): `../../images/선배그림/36_stomach_YAMA-senior-B_x400.jpg` — fibroblast·혈관·신경(핵이 갈색 염색) 표시, "콜라겐 섬유가 많고 방향성이 일정하지 않아 dense irregular CT"라는 서술.
 
 이미지(교안): `../../images/교안/36_stomach_YAMA-collagenfiber-overview_x100.jpg`, `../../images/교안/36_stomach_YAMA-collagenfiber-closeup_x400.jpg`
+- 선배 권영주(22학번) ×400 : Tunica mucosa(Lamina propria = loose CT : cellular ↑ fibrous ↓ / Muscularis mucosae) · T. submucosa(cellular ↓ fibrous ↑ = **dense irregular CT**, fibroblast 동그란 핵, 신경 통과) · T. muscularis · blood vessel. Masson's trichrome : **red = muscle fiber·cytoplasm, green = collagen fiber**, hematoxylin 염색은 색이 달라질 수 있음. Collagen fiber = CT의 ECM 중 fiber 가운데 가장 두껍고 Type I collagen, 1.0~20μm. 이미지: `../../images/선배그림/36_stomach_YAMA-senior-kwon_x400.jpg`
 
 ---
 
@@ -142,10 +147,11 @@
 - 선배 B (오아름, 22학번·2023학년도): `../../images/선배그림/79_epiglottis_YAMA-senior-B_x400.jpg` — lacuna(안에 세포 1~2개와 연골기질 포함) 라벨링.
 
 이미지(교안): `../../images/교안/79_epiglottis_YAMA-elasticfiber-overview_x40.jpg`, `../../images/교안/79_epiglottis_YAMA-elasticfiber-lacuna_x400.jpg`
+- 선배 권영주(22학번) ×100 : Elastic cartilage(Chondrocyte, lacuna, matrix = 연골기질/탄성섬유). **Elastic fiber = Orcein에서 갈색**, 0.2~2.0μm. 구조 필기 : microfibril(glycoprotein + fibrillin)이 amorphous **elastin core**를 둘러쌈, desmosine 교차결합 — stretch(늘어남) ↔ relax(복원). 이미지: `../../images/선배그림/79_epiglottis_YAMA-senior-kwon_x100.jpg`
 
 ---
 
-## Slide #72 — Blood vessel, Rat, Verhoeff's elastic, ×400 — Elastic fiber
+## Slide #72 — Blood vessel, Rat, Verhoeff's elastic, ×400 — Elastic fiber ★야마
 
 ### 조직 소견 [필수]
 - Verhoeff's elastic 염색: elastin이 **파랑(검파랑)**으로 발색.
@@ -156,6 +162,9 @@
 - Verhoeff 염색은 elastin을 검파랑으로 특이적으로 보여주는 표준 감별염색법(orcein과 세트로 출제됨).
 
 이미지: `../../images/교안/72_bloodvessel_elasticlamellae_x400.jpg`
+
+### 선배들 그림
+- 선배 권영주(22학번) ×(배율 미기재, Verhoeff's elastic) : 라벨 T.intima(내피) / Int. elastic membrane / T.media(Elastic lamina) / T.adventitia / Ext. elastic membrane. 이미지: `../../images/선배그림/72_bloodvessel_YAMA-senior-kwon_xNA.jpg`
 
 ---
 
@@ -182,6 +191,7 @@
 - 선배 B (오아름, 22학번·2023학년도): `../../images/선배그림/25_lymphnode_YAMA-senior-B_x400.jpg` — "reticular fiber는 장기에서 강한 결합을 형성, 당단백질을 다량 함유" / "collagen fiber는 인장력에 저항하는 힘 제공, Type I collagen, 섬유성 구조밀도 높음" 대비 메모.
 
 이미지(교안): `../../images/교안/25_lymphnode_YAMA-reticularfiber-trabecula_x40.jpg`, `../../images/교안/25_lymphnode_YAMA-reticularfiber-reticulocyte_x400.jpg`
+- 선배 권영주(22학번) ×264 : Bielschowsky's silver = 은이랑 달라붙는 염색. **검은색 = reticular fiber, 보라색 = collagen fiber**. Lymph node의 capsule·trabecula에는 reticular fiber가 없다(근처 흰색 물질은 collagen fiber). Type III collagen = 가장 작음 + glycoprotein·proteoglycan으로 구성, 0.2~2.0μm. Lymph node에서 형태를 잡아주는 **framework of hematopoietic organ = Reticular tissue**(세포가 떠다니지 않고 달라붙어 있음). 이미지: `../../images/선배그림/25_lymphnode_YAMA-senior-kwon_x264.jpg`
 
 ---
 
@@ -211,6 +221,7 @@
 - 선배 B (오아름, 22학번·2023학년도): `../../images/선배그림/40_mesentery_YAMA-senior-B_x800.jpg` — "heparin이 집중적으로 분포하면 진한 보라색으로 관찰된다 → 비만세포(mast cell)에서 분비되어 알레르기 반응을 유발한다 → 항응고제로 연결할 수 있다" 메모.
 
 이미지(교안): `../../images/교안/40_mesentery_YAMA-mastcell-overview_x100.jpg`, `../../images/교안/40_mesentery_YAMA-mastcell-granule_x400.jpg`
+- 선배 권영주(22학번) ×300 (toluidine blue) : Blue = granule의 anionic site, cytoplasm 약하게 염색. **Metachromasia** : mast cell nucleus = blue, cytoplasm = purple(heparin이 몰려 있으면 보라색 — sulfated GAG가 전자를 내보낸 anion 변색성으로 blue → magenta). Large cell 20~30μm(일반 세포 10~15μm), secretory granule 0.3~0.5μm. Allergic reaction(약한 반응 ~ Anaphylaxis), **IgE 방출(특이항체)**, heparin = anticoagulant. (원문 : 사진 초점이 맞지 않아 granule이 잘 안 보임.) 이미지: `../../images/선배그림/40_mesentery_YAMA-senior-kwon_x300.jpg`
 
 ---
 
@@ -238,7 +249,7 @@
 
 ---
 
-## Slide #71 — Sole, Human, HE, ×400 — Adipose cell
+## Slide #71 — Sole, Human, HE, ×400 — Adipose cell ★야마
 
 ### 조직 소견 [필수]
 - Epidermis(표피) → Dermis(진피) → Hypodermis(피하조직) 순 관찰.
@@ -249,6 +260,9 @@
 - (비교 배경지식) Brown adipose cell: 다포성(multilocular), 15–25μm, 미토콘드리아 풍부, 신생아·동면동물에서 열생산(non-shivering thermogenesis) 담당 — 이번 슬라이드에는 없으나 白색/갈색 대비로 자주 출제.
 
 이미지: `../../images/교안/71_sole_adipocyte_x400.jpg`
+
+### 선배들 그림
+- 선배 권영주(22학번) ×200 : Thick skin : Epidermis(keratinized stratified squamous, 외배엽성) / Dermis(CT, 중배엽성). 라벨 **Corneum**(핵 없음, multilayered flat cells) · **Lucidum**(얇고 광택, 핵 없음, eosinophilic → 분홍) · **Granulosum**(basophilic keratohyaline granule, band로 보임) · **Spinosum**(다층 다각형, 세포경계 뚜렷, intercellular bridge = desmosome) · **Basale**(columnar, melanin granule — keratinocyte·melanocyte·Langerhans·Merkel cell) · **Meissner's corpuscle**(touch 감각 종말수용체, dermal papilla, 타원 세포가 여러 겹). 이미지: `../../images/선배그림/71_sole_YAMA-senior-kwon_x200.jpg`
 
 ---
 
@@ -280,6 +294,7 @@
 - 선배 B (오아름, 22학번·2023학년도): `../../images/선배그림/59_uterus_YAMA-senior-B_x1600.jpg` — 동일 슬라이드를 "항체 성분을 가지고 있는 rER(거친면 소포체)", "사바퀴모양 핵(cartwheel nucleus)", "halo(perinuclear halo, 곁세포에 다수 분포한다)"로 재정리.
 
 이미지(교안): `../../images/교안/59_uterus_YAMA-plasmacell_x400.jpg`, `../../images/교안/59_uterus_YAMA-plasmacell-cartwheel_x1000.jpg`
+- 선배 권영주(22학번) ×400 : 염증으로 손상되어 세포가 겹쳐 보임. **heterochromatin이 바깥쪽에 모여 cart wheel / clock face 같은 핵**, **perinuclear halo**(핵 바로 옆 Golgi complex 모임). B림프구에서 유래한 특화된 세포, antibody 생성이 major(IgG), 미토콘드리아 풍부. Specific immune → specific antigen. 이미지: `../../images/선배그림/59_uterus_YAMA-senior-kwon_x400.jpg`
 
 ---
 
@@ -304,6 +319,7 @@
 - 선배 B (오아름, 22학번·2023학년도): `../../images/선배그림/18-62_neuraltube-umbilicalcord_YAMA-senior-B_x400.jpg` (상단) — "Mesenchyme: 미분화·미성숙 상태의 embryonic tissue, 원시적 → 유사의 차후분화와 택솔을 구성, 히알루론산 성분이 풍부", Stellate cell(별모양)·Fusiform cell(방추모양) 라벨, "세포 수가 적고 섬유성분이 많은 dense CT"라는 자체 메모(주의: 이 표현은 이론 정의상 오해 소지가 있어, 실제로는 무형질 위주의 배아성 조직임을 위 배경설명대로 정정해서 이해할 것).
 
 이미지(교안): `../../images/교안/18_neuraltube_YAMA-mesenchymalcell_x100.jpg`, `../../images/교안/18_neuraltube_YAMA-mesenchymalcell_x400.jpg`
+- 선배 권영주(22학번) ×200 (#18 + #62 한 쪽) : **#18** Mesenchymal tissue(pluripotential cell) : stellate / fusiform, few cytoplasm·few mitochondria, 물이 많은 부위라 세포가 적다. **#62** Umbilical cord = **Wharton's jelly**, 히알루론산↑, 세포 거의 X(거의 space), mesenchymal stem cell(비교적 연한 핵) → 분화 시 fibroblast(방추형, 비교적 진한 핵, spindle shape), mucous connective tissue(점액↑). 이미지: `../../images/선배그림/18-62_neuraltube-umbilicalcord_YAMA-senior-kwon_x200.jpg`
 
 ---
 

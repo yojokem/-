@@ -5,8 +5,9 @@
   - 림프·순환기 실습 PDF는 이론 교안이 이번 업로드에 없음 → #24·#23·#26·#72·#19·#22(동맥) 배경설명은 **실습 교안 본문 + 일반 조직학 지식**으로 작성(해당 부분 **[보충]** 표기). 림프·순환기 이론 교안(6주차 온라인) 받으면 보강 가능.
 - 대상 슬라이드(10종): **#15 #10 #16 #24 #23 #26 #22 #72 #19 / Blood** (사용자 지정, 순서는 실습 교안 흐름에 맞춰 신경 → 림프 → 순환 → 혈구로 재배열)
 - 야마(★) 판정 기준: **선배 실습노트(족보) 자료 존재 여부** — 내용 중요도 아님(CLAUDE.md 원칙)
-  - 이번 회차 선배 자료 : **오아름(22학번, jpg 9장)** · **김은기(23학번, pdf 07장 중 #15·#14·#16·Blood = 05 신경조직·혈구)** + (#19는 10/2 선배 자료 3종 재사용)
-  - **야마(★) 7종** : #15 · #16 · #24 · #22 · #72 · #19 · Blood / **비야마 3종** : #10 · #23 · #26
+  - 이번 회차 선배 자료 : **오아름(22학번, jpg 9장)** · **김은기(23학번, pdf 07장 중 #15·#14·#16·Blood = 05 신경조직·혈구)** + **권영주(22학번, 실습노트 44쪽 — 이번 회차 #15·#14·#16·#22·#24·#23·#72·Blood 반영)** + (#19는 10/2 선배 자료 3종 재사용)
+  - **야마(★) 8종** : #15 · #16 · #24 · #22 · #72 · #19 · #23 · Blood / **비야마 2종** : #10 · #26
+  - #23 : 처음엔 비야마였으나 **권영주 자료가 추가돼 야마(★)로 격상**(권영주 22학번 : 아래 선배 자료 표)
   - #72 : 09-18에는 비야마였으나 이번에 **오아름 자료가 생겨 야마(★)로 격상**
   - #10 : 선배 자료 없음 → 비야마. 다만 사용자 지시로 같은 주제인 **#14(연수, 신경아교세포)** 선배 자료를 #10 섹션 뒤 토글에 참고로 포함.
 - 선배 자료 표 :
@@ -21,6 +22,7 @@
 | #19 | (10/2) | (10/2) | 10/2 노트의 오아름·김은기·김선우 자료 재사용 |
 | Blood | ○ ×400 | ○ ×400 | Wright |
 | #14 | ○ ×400 | ○ ×400 | 요청 목록 밖 — #10 섹션에 참고 |
+| #23 | – | – | **권영주 ○**(신규) |
 | #28·#29 | #28 ×50 / #29 ×400 | #28 ×16 / #29 ×20·×264 | 이번 회차 아님 → 파일만 보관(호흡계통 회차용) |
 
 ## 오늘 실습 범위 요약
@@ -32,7 +34,7 @@
 | #16 | Spinal ganglion | Rat | Cresyl violet | ×40~400 | Neuron(pseudounipolar) + Satellite cell | ★ |
 | #22 | Neurovascular bundle | Monkey | HE | ×12.5~400 | Peripheral nerve / Muscular artery | ★ |
 | #24 | Lymph node | Cat | HE | ×40~400 | Cortex·Paracortex·Medulla | ★ |
-| #23 | Spleen | Monkey | HE | ×40~400 | White pulp / Red pulp | |
+| #23 | Spleen | Monkey | HE | ×40~400 | White pulp / Red pulp | ★ |
 | #26 | Thymus | Human newborn | HE | ×40~400 | Cortex / Medulla, Hassall's corpuscle | |
 | #72 | Blood vessel | Rat | Verhoeff's elastic | ×40~400 | Elastic artery | ★ |
 | #19 | Heart | Human(교안 표기; 10/2 노트는 dog) | HE (observe) | ×40~400 | Endocardium, Purkinje fiber | ★ |
@@ -134,6 +136,7 @@
 ### 선배들 그림
 - 선배 오아름(22학번) ×400 : Nissl substance(평행하게 배열된 r-ER, **양이 많고 basophilic**), **핵(RNA·DNA가 뭉쳐 짙게 염색)** / 핵소체는 리보솜 생성, **Axon**(soma에서 생성된 단백질 사용, r-ER 거의 없음), **Ependymal cell**(뇌척수액 생성, 진정염색질로 이루어져 옅게 염색), Barr body(암컷 세포의 비활성 X 염색체, 빈 공간 안의 염색체). Spinal cord = 안쪽 회백질(cell body)·바깥 백색질(process·axon), 뇌척수막(dense CT)·choroid plexus 설명. 이미지: `../../images/선배그림/15_spinalcord_YAMA-senior-ahreum_x400.jpg`
 - 선배 김은기(23학번) ×400 : "Spinal cord 중 **anterior horn** 부위", 주로 **multipolar cell인 motor neuron** 분포, **핵은 euchromatin으로 연하게, nucleolus는 중앙**. **Nissl substance** = basophilic한 r-ER 성분(단백질 생성 특성상 motor neuron에서 잘 발달). 라벨: axon, Barr body, nucleus. **Barr body** = heterochromatin 중 여성에서만 보이는 비활성화된 X 염색체. "염색에서 제대로 보이지 않지만 motor neuron이므로 cell body에서 수많은 dendrite 가지가 빠져나올 것임을 유추". 이미지: `../../images/선배그림/15_spinalcord_YAMA-senior-eungi_x400.jpg`
+- 선배 권영주(22학번) ×200 (KB) : 척수 가로 절단면. KB = Nissl 염색의 한 종류(세포체 진하게), **Nissl bodies·myelin → 푸른색**. CNS : 세포사이물질이 적고 대부분 세포성분. **Gray matter = neural soma(안쪽) / White matter = process(바깥쪽)**. 앞뿔 쪽의 큰 신경세포 = 앞뿔세포 = **multipolar neuron**(축삭 1개 · 가지돌기 여러 개). Nucleus large & euchromatin(연하게, 크고 뚜렷, 세포체 중앙), **nucleolus**(핵 가운데 진하게 염색된 부분, rRNA 생성 → Nissl body). 여성은 **Barr body** 관찰(XX 중 하나 random inactivation → condensed → 진하게). 신경아교세포(CNS) : Astrocyte(혈관·soma를 감쌈) · Microglia(macrophage) · Oligodendrocyte(myelin) · Ependymal cell(뇌척수액) / PNS : 슈반세포 · satellite cell. 이미지: `../../images/선배그림/15_spinalcord_YAMA-senior-kwon_x200.jpg`
 
 ---
 
@@ -164,6 +167,7 @@
 ### 선배들 그림 (#14)
 - 선배 오아름(22학번) ×400 : 라벨 Neuron / Oligodendrocyte / Astrocyte / Microglia. CNS 신경아교세포 = Astrocyte·Oligodendrocyte·Microglia·Ependymal cell. Astrocyte = 큰 타원형·감자모양 핵, 진정·이질염색질이 모두 있어 진하게/연하게 염색된 부위가 모두 나타남, **GFAP**로 구조 강화되어 **BBB 유지·기능적 제어·수리** 담당, 소뇌의 **Bergmann's glial cell**, 망막의 **Müller cell**, 뇌하수체의 **pituicyte**. Oligodendrocyte = CNS에서 myelin sheath 형성(하나의 세포가 여러 axon을 감쌈), 작은 원형 핵·이질염색질 포함해 검게 염색. Microglia = 작고 납작한 모양, 포식작용, 중배엽 기원. 이미지: `../../images/선배그림/14_medulla_senior-ahreum_x400.jpg`
 - 선배 김은기(23학번) ×400 : 라벨 Oligodendrocyte(3) / Microglia / Astrocyte. Medulla oblongata = CNS 일부, 좌우 신경 교차. Oligodendrocyte = 핵이 둥글고 heterochromatic, PNS의 Schwann cell처럼 axon에 myelin 제공, 외배엽 기원. Astrocyte = 핵 크고 둥근 타원형(euchromatic + heterochromatic 둘 다), 별 모양 세포, 신경세포를 붙잡는 역할, 혈관에 붙어 tight junction을 강화하여 **BBB** 형성에 도움. Microglia = macrophage의 일종, 핵 heterochromatic·납작, 중배엽 기원, MPS에 의해 CNS의 macrophage로 이름이 바뀐 것. ※ 원문 "cell body에 붙으면 protoplasmic AS, axon에 붙으면 fibrous AS" 표기는 교안(회백질 = protoplasmic / 백색질 = fibrous)과 달라 **교안 기준** 사용, 외배엽·중배엽 기원 표기는 원문 그대로. 이미지: `../../images/선배그림/14_medulla_senior-eungi_x400.jpg`
+- 선배 권영주(22학번) ×200 (#14, HE) : **연수의 신경아교세포(요청 목록 밖 참고).** HE에서 신경아교세포는 **핵만 명확히**(돌기는 안 보임), 핵이 큰 것 = 신경세포, 작은 것 = 중추 신경아교세포. 가득 찬 분홍색 섬유 = 신경그물(신경세포 돌기 + 신경아교세포 돌기). **Astrocyte**(large round/oval, euchromatic + heterochromatic spot, potato shaped, BBB·혈류 조절) / **Oligodendrocyte**(small round heterochromatic, myelin 형성) / **Microglia**(small long heterochromatic, macrophage). + Ependymal cell(뇌실·중심관 내면, 그림에는 안 보임 → CSF 형성·항상성), + capillary → choroid plexus. 이미지: `../../images/선배그림/14_medulla_senior-kwon_x200.jpg`
 
 ---
 
@@ -190,6 +194,7 @@
 ### 선배들 그림
 - 선배 오아름(22학번) ×450 : 라벨 Nissl substance(평행하게 배열된 r-ER, basophilic), Nerve cell, nucleus, **Satellite cell(위성세포)** = 신경절의 neuronal cell body를 둘러싼 편평세포, 기능 = microenvironment 조정(electrical insulation / metabolic exchange). Peripheral neuroglia = Schwann cell(PNS에서 myelin sheath 형성; 1 Schwann cell → 여러 axon 감쌈) + Satellite cell(= capsule cell; spinal·cranial ganglion neuron은 완전히, autonomic ganglia neuron은 불완전하게 감쌈). 이미지: `../../images/선배그림/16_spinalganglion_YAMA-senior-ahreum_x450.jpg`
 - 선배 김은기(23학번) ×264 : ganglion(신경절) = 신경세포의 cell body가 모여있는 부분. "CT가 아닌 axon이다", Nissl substance(r-ER), 핵, Nerve cell, **Satellite cell** = 신경절에서 neuronal cell body를 둘러싸고 있는 세포, PNS에 존재하는 신경아교세포 중 하나, **거짓단극뉴런을 둘러쌈으로써 절연(insulation)** 역할. 이미지: `../../images/선배그림/16_spinalganglion_YAMA-senior-eungi_x264.jpg`
+- 선배 권영주(22학번) ×200 : 말초신경에서 신경세포가 모인 부위 = 신경절. Cresyl violet = Nissl stain의 일부(핵·r-ER, basophilic). Spinal ganglion은 **capsule(dense CT)** 에 싸여 있고 신경세포·신경아교세포·신경섬유 관찰 가능. **Pseudounipolar cell** : dendrite 없이 양쪽 모두 axon, 하나의 축삭에서 나와 두 갈래(central / peripheral). Neuron = 크고 세포질이 보라색(r-ER = Nissl bodies), 연한 부분 = 핵(euchromatin → not condensed → transcription ↑). Nissl substance = basophilic 과립상. 주변에 원형으로 배열된 **satellite cell**(basophilic, PNS 신경아교세포). 이미지: `../../images/선배그림/16_spinalganglion_YAMA-senior-kwon_x200.jpg`
 
 ---
 
@@ -234,6 +239,7 @@
 
 ### 선배들 그림
 - 선배 오아름(22학번) ×400 (**Muscular artery 부분**) : 라벨 Internal elastic membrane(내탄성막), External elastic membrane(외탄성막), Tunica intima / media / adventitia, fibroblast, smooth muscle cell. Muscular artery의 층 구분 : intima(endothelium·subendothelium·IEM), media(smooth muscle·collagen fiber·elastic fiber·EEM), adventitia. IEM·EEM은 "섬유성분으로 잘 염색되지 않아 흰 띠의 형태로 나타난다", IEM = intima와 media 구분, EEM = media와 adventitia 구분. (*Artery의 구분 → 필기 미완) 이미지: `../../images/선배그림/22_neurovascularbundle_YAMA-senior-ahreum_x400.jpg`
+- 선배 권영주(22학번) ×(배율 미기재, HE) : **Muscular artery** : small round lumen, thick wall. 라벨 endothelium / Tunica intima / Tunica media / involuntary muscle fiber(smooth muscle) / elastic fiber. 이미지: `../../images/선배그림/22_neurovascularbundle_YAMA-senior-kwon_xNA.jpg`
 
 ---
 
@@ -285,10 +291,11 @@
 
 ### 선배들 그림
 - 선배 오아름(22학번) ×100 : 라벨 Medullary cord(*), Medullary sinus(*), Medulla / Cortex / Capsule, Paracortex / Outer cortex, Lymphoid nodule, Germinal center(Lymphoid nodule 내부에서 밀도가 낮은 부분, B cell이 plasma cell로 분화됨), Cortical sinus, Subcapsular sinus. **Sinus** = endothelium-like simple squamous epithelium. **Paracortex(Deep cortex)** = T cell이 주로 발견되는 Thymus dependent zone이며 세포 밀도가 낮다. **Medullary cord** = lymphatic tissue의 cord로 형질세포와 lymphocyte가 발견되고 reticular fiber와 혈관이 발견된다. **Medullary sinus** = Lymph fluid가 지나가는 공간으로 reticular fiber가 분포한다. **흐름** : afferent lymph vessel → subcapsular sinus → cortical sinus → medullary sinus → efferent lymphatic vessel. 이미지: `../../images/선배그림/24_lymphnode_YAMA-senior-ahreum_x100.jpg`
+- 선배 권영주(22학번) ×(배율 미기재, HE) : Lymph node = adaptive immune system의 lymphoid organ(Primary / **Secondary ✓✓**). 라벨 Medulla / Deep cortex(T cell) / Cortex(B cell) / Lymph nodule / **Germinal center(low cell density) = secondary lymphoid nodule** / Capsule / Subcapsular sinus / Trabecula / Cortical sinus(Peritrabecular sinus). 이미지: `../../images/선배그림/24_lymphnode_YAMA-senior-kwon_xNA.jpg`
 
 ---
 
-## Slide #23 — Spleen, Monkey, HE, ×40→×400 — White pulp / Red pulp
+## Slide #23 — Spleen, Monkey, HE, ×40→×400 — White pulp / Red pulp ★야마
 이미지(교안): `../../images/교안/23_spleen_whitepulp-redpulp_x40.jpg`, `../../images/교안/23_spleen_whitepulp-redpulp_x100.jpg`, `../../images/교안/23_spleen_lymphnodule-germinalcenter_x400.jpg`, `../../images/교안/23_spleen_PALS-centralartery_x400.jpg`, `../../images/교안/23_spleen_redpulp_x100.jpg`, `../../images/교안/23_spleen_redpulp-venoussinus_x400.jpg`
 
 ### 조직 소견 [필수]
@@ -312,6 +319,9 @@
 ### 암기 포인트
 - **WP = nodule + PALS(Central artery)** / **RP = venous sinus + cord of Billroth**.
 - Spleen = **혈액 여과·RBC 파괴**, LN = **림프 여과**.
+
+### 선배들 그림
+- 선배 권영주(22학번) ×(배율 미기재, HE) : **White pulp** = 세포 밀집으로 진한색, **Red pulp** = 세포가 적어 연한색, Central artery · PALS · Trabecula. Spleen **parenchyma** = White pulp(Lymph nodule · PALS[Periarterial lymphatic sheath, thymus dependent zone]) + Red pulp(Splenic cord of Billroth · Splenic sinus) / **Stroma** = Capsule(dense irregular fibroelastic CT) · Trabecula(혈관이 parenchyma로 출입) · Reticular(reticular fiber 3D network). 이미지: `../../images/선배그림/23_spleen_YAMA-senior-kwon_xNA.jpg`
 
 ---
 
@@ -379,6 +389,7 @@
 
 ### 선배들 그림
 - 선배 오아름(22학번) ×320 : 라벨 External elastic membrane / Internal elastic membrane / Tunica adventitia / Tunica intima / **Elastic lamina***. "Elastic lamina = **탄력층판이 두껍고 잘 이어져 있다**", "elastic artery = 탄력층이 ○○다"(원문 판독 불확실 — 교안 기준으로 **탄력판이 많다**로 이해). 이미지: `../../images/선배그림/72_bloodvessel_YAMA-senior-ahreum_x320.jpg`
+- 선배 권영주(22학번) ×(배율 미기재, Verhoeff's elastic) : 라벨 T.intima(내피) / Int. elastic membrane / T.media(Elastic lamina) / T.adventitia / Ext. elastic membrane. 이미지: `../../images/선배그림/72_bloodvessel_YAMA-senior-kwon_xNA.jpg`
 
 ---
 
@@ -480,6 +491,7 @@
 ### 선배들 그림
 - 선배 오아름(22학번) ×400 (Wright) : 라벨 Basophil(호염기성 백혈구) / Neutrophil(호중성 백혈구, **Barr body = Drumstick**) / Lymphocyte / Monocyte / Eosinophil. WBC = 세포질 내 과립의 유무와 핵의 모양에 따라 분류. **Granulocyte**(과립 O) — Neutrophil : 전체 WBC 중 가장 양이 많고, 2~5개의 핵엽이 서로 연결된 핵, lysozyme·lactoferrin을 가져 포식작용 가능 / Eosinophil : 2개의 엽으로 구성된 핵, 크기가 크고 기생충 감염 시 그 수가 늚, specific granule에 internum과 externum(괄호 내 "(헤파린·히스타민)" 표기는 판독 불확실 — 교안 기준 internum = MBP 등) / Basophil : 하나의 S자형 핵, IgE 수용체를 가져 알레르기 반응에 관여. **Agranulocyte**(과립 X) — Lymphocyte : 세포질이 매우 적어 핵이 세포의 대부분, 미토콘드리아·r-ER·골지가 적다, 면역반응에 관여(분화하여 B cell·T cell) / Monocyte : 타원형 핵이 옅게 염색, WBC 중 가장 크고 2개의 핵소체, r-ER 적고 미토콘드리아·리소좀이 많음, 분화하면 대식세포. 이미지: `../../images/선배그림/Blood_human_YAMA-senior-ahreum_x400.jpg`
 - 선배 김은기(23학번) ×400 (Wright) : 라벨 RBC / N / E / M. **RBC** = 전체 혈액의 44%(Hct), 가운데가 비어 보이는 이유 = 빛이 비치기 때문(**biconcave disk, 2.6 μm / 0.8 μm**), 모양이 다른 RBC가 모이면 **Poikilocytosis**, 크기가 다르면 **Anisocytosis**, **spectrin**으로 모양 유지, **glycophorin**에 붙은 당단백을 antigen으로 가짐(혈액형 결정). **WBC 분류** : Neutrophil·Eosinophil·Basophil = granulocyte, Lymphocyte·Monocyte = agranulocyte. 둘 다 azurophilic granule을 가지지만 **specific granule을 가지는 것은 granulocyte뿐**. **N** : 핵은 2~5개 lobe가 핵사로 연결, 여성의 경우 inactive X chromosome인 **Barr body** 관찰 가능, granulocyte 중 가장 많고 **diapedesis** 시 가장 많이 빠져나감. **E** : 핵은 2개의 lobe, "Allergy reaction 시 B cell과 함께 작용"(원문 그대로, 교안은 allergy·parasite). **M** : 타원형 핵, 미토콘드리아와 리소좀이 잘 발달해 세포질이 basophilic, macrophage로 분화할 시 **Mononuclear phagocyte system**에 의해 이름만 바뀜(예 : CNS의 microglia). **관찰되지 않은 WBC** — Basophil : 전체 WBC의 약 1%, 핵과 granule이 모두 basophilic해 구분이 어렵다, IgE를 가지며 **I형 과민반응**에 mast cell처럼 반응(heparin·histamine 보유), Lymphocyte : 면역 과정에 작용하는 세포, B cell·T cell·Null cell. 이미지: `../../images/선배그림/Blood_human_YAMA-senior-eungi_x400.jpg`
+- 선배 권영주(22학번) ×400 (Wright) : Cell in blood = Erythrocyte · Leukocyte(**Granular** : neutrophil · eosinophil · basophil / **Agranular** : lymphocyte · monocyte) · Platelet. **Erythrocyte** = 성숙 적혈구, 양오목원반, 핵·세포소기관 없음, 헤모글로빈(산소운반 단백질, Fe에 산소 결합), Wright's stain에서 붉은색. **Neutrophil** 60~75% · 핵 3~5엽 + nuclear thread / **Eosinophil** 1~3% · 2엽, 분홍 과립 / **Basophil** 0.5~1%(가장 드묾) · 짙은 보라 과립 / **Lymphocyte** 20~25% · 작은 세포, 둥글고 진하며 큰 핵, 투명 세포질 / **Monocyte** · 큰 세포, 말발굽·콩팥형 핵(림프구보다 연함), 투명 세포질 / **Platelet** · 여러 개가 무리, basophilic, megakaryocyte에서 떨어진 조각. 이미지: `../../images/선배그림/Blood_human_YAMA-senior-kwon_x400.jpg`
 
 ---
 
