@@ -15,3 +15,12 @@
 ## 124926042_16 / _17 : 설측판 — ▶적응증 ・치주적으로 약화된 치아 안정 / - 건전한 인접 치아와 {R}고정(Splinting): 명확한 레스트
 ## 124926042_18 / _19 / _20 : 설측판 — ▶적응증 ・예후 나쁜 전치부 치아 존재 / - 발치 → {R}수리(유지고리 추가) (그림 22-5 A~C 전치부 발치 후 수리, 그림 5-10 "물결모양의 하악설측판은 치간공극을 폐쇄시키도록 설계된다. 치간공극내 설측판은 얇고 여러 겹의 …[판독불가 ?]")
 ## 124926042_21 : 설측판 — ▶적응증 ・설측바(Lingual bar) 사용 원하지 않는 경우 / - 환자 경험 ・치간사이 공간이 커서 심미적으로 문제 있는 경우 / - 변형된 형태 설측판 (그림 5-12 "전치부에 큰 공극이 있는 경우에는 interrupted linguoplate를 제작해 줄 수 있다", Figure 5-11 Interrupted linguoplate in the presence of interproximal spaces)
+## 124926042_24 : (_21과 동일 슬라이드, 빨간 점 포인터)
+## 124926042_29 / 124932960 : 하악 주연결장치 — 설하바(Sublingual bar)
+▶적응증: ・유리치은 ↔ 설측바 상연 ≤ {R}4mm ・전방 설측 언더컷 → 상당한 블록아웃 ・설측소대 방해 없는 경우 ▶위치: ・설측바 보다 하방 ・구강저 전방부: 평행 ▶금기증: ・설측 골융기 ・설소대가 높게 부착된 경우 ・기능 시 구강저가 높게 상승되는 경우
+(그림 Figure 5-2 영문 캡션: "Lingual bar major connector should be located at least 4 mm inferior to gingival margins and farther if possible. The vertical height of a finished lingual bar should be at least 4 mm for strength and rigidity. If less than 8 mm exists between gingival margins and the movable floor of the mouth, a linguoplate (B), a sublingual bar (C), or a continuous bar (D) is preferred as a major connector. Relief is provided for soft tissue under all portions of the mandibular major connector and at any location where the framework crosses the marginal gingiva. The inferior border of mandibular major connectors should be gently rounded after being cast to eliminate a sharp edge.")
+## 124932960_03 : 하악 주연결장치 목록 + 라벨 공개 사진(A Lingual bar / B Linguoplate / C Sublingual bar / D Lingual bar+Continuous bar / E Continuous bar / F Labial bar) — 124913053_03과 동일
+## 124932960_07 / _08(상동) : 하악 주연결장치 목록 + 라벨 공개 사진(위와 동일)
+## 124932960_08 / _09 / _10 : 하악 주연결장치 — 순측바(Labial bar)
+▶위치: ・상연: 협측 치은 변연에서 {B}4mm 이상 떨어진 곳 ・하연: 부착점막/유동점막 경계부 ▶두께: ・설측바/판 보다 길어서 두꺼워야함 → {R}불편 ▶적응증(Indications): ・잔존치의 심한 설측경사: 설측에서 삽입/철거 불가 ・심한 하악골융기 ・설측 심한 조직 언더컷 (그림 5-14 영문: "A, Lingual inclination of patient's canines and premolars precludes use of the lingual bar. B, Labial bar major connector was used in treatment. Retention was obtained on terminal abutments. Support and stabilization were gained by using rests, minor connectors arising from the labial bar, and well-fitting denture bases." / 그림 5-17 Swing-lock labial bar)
+## 124932960_11 : (상악 — 범위 외, 전사만) 상악 주연결장치 4종 + 라벨 사진 A Single palatal strap / B A-P palatal strap / C Palatal plate / D U-shaped
