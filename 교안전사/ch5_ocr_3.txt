@@ -342,3 +342,9 @@ Cingulum bar = Continuous bar ▶ 일반적으로 설측바와 함께 사용
 ## KakaoTalk_20261012_124932960_09.jpg (1Dz-s0c_t3IdDKj0-yiXaNnwp8ziHqHJc)
 [OCR 없음/실패: fileContent 빈 문자열]
 
+## KakaoTalk_20261012_124932960_10.jpg (1_dtczNoBb66Cu4dGuLDaqcn5W2J6-bT4)
+[OCR 없음/실패: fileContent 빈 문자열]
+
+## KakaoTalk_20261012_124932960_11.jpg (16W4Y_LUevqvOjBAgS9OpIwA0VGtqcY9M)
+[OCR 없음/실패: fileContent 빈 문자열]
+
