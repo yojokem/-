@@ -34,7 +34,13 @@
 - `교안_추출텍스트/` 2026 교안 3장(요약형)·4장 텍스트 추출본
 - `미검증_서브에이전트사본(근거로 쓰지 말 것)/` 서브에이전트가 옮겨 쓴 사본. 근거 아님, 원본은 Drive 재열람
 
-## Drive 원본 ID (자료는 용량·저작권 문제로 저장소에 넣지 않음)
+## 시험지 원본 (`시험지_원본/`, 사용자 허가로 비공개 저장소에 포함)
+- `국시_2교시·최종답안/`: 제74~78회 2교시 문제 PDF와 1~4교시 최종답안 PDF 10건
+- `학번별_야마/`: 24학번 중간 pdf 2건(완전본 1g41LI · 블라인드본 1Cglb), 21학번 중간 정답본 docx·pdf, 21학번 개론 중간 pdf, 23학번 중간 docx
+- 아직 저장소에 없는 원본(Drive에만 있음): 22학번 중간 docx(1rkTjD…, 1mmoUL…), 21학번 중간 무정답 docx(1CyQbb…), 24학번 중간 docx(1s9AH6…, 1oNf4i…), 21학번 기말 docx(1c9Bd1…, 1_s9qY…), 22학번 기말 docx(1YeahP…), 16~20학번 합본 pdf(1li-Aw…, 7.5MB라 커넥터 전송 실패), 21·22학번 기말 pdf 등. 소형 docx는 내려받기 결과가 파일로 저장되지 않아 복원하지 못했습니다
+- 교안 PDF는 아직 넣지 않았습니다(아래 Drive ID 참조)
+
+## Drive 원본 ID
 - 2026-2 교안 폴더 13Qy93KM1oeGZKMILpJCG6Sd8fkLVYTVy (1장 1puJKW…, 2장 1aJZJY…, 3장 요약형 1XFCDo…, 3장 원본 1kmQhg…, 4장 1udnm8…)
 - 2025 5장 1Hmtw3Pgpx42TVkyvE-1-_AYXH0DZSUxJ · 24학번 중간 pdf 1g41LINF849pz8M5Y0GrQPn0-g5VAo4dT
 - 21학번 정답 docx 1njw2iw5tF6y7pwionZacU6eInDljxg0X · 국시 폴더 1I7p1z0slTLkKQLVFSfjRG4E6I9MBKSu2

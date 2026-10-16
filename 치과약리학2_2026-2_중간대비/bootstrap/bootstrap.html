@@ -1,0 +1,173 @@
+<title>시험 대비 부트스트랩</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+/* layout: 왼쪽 변수 입력 / 오른쪽 프롬프트(탭: 신규·갱신). 좁은 화면에서는 한 열 */
+:root{
+  --bg:#f4f5f7; --surface:#ffffff; --fg:#1b2027; --muted:#5c6572; --line:#d8dce2;
+  --accent:#1f6f8b; --accent-fg:#ffffff; --accent-soft:#e3f0f5; --code-bg:#eef0f3; --warn:#9a5b00;
+  --sans:"Noto Sans KR",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Noto Sans KR",monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#13161b; --surface:#1b2027; --fg:#e7eaee; --muted:#9aa4b1; --line:#2d343e;
+  --accent:#6cc4dc; --accent-fg:#0c1d24; --accent-soft:#17303a; --code-bg:#11151a; --warn:#e0a24a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#13161b; --surface:#1b2027; --fg:#e7eaee; --muted:#9aa4b1; --line:#2d343e;
+  --accent:#6cc4dc; --accent-fg:#0c1d24; --accent-soft:#17303a; --code-bg:#11151a; --warn:#e0a24a; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:15px;line-height:1.6;padding-inline:16px;padding-block:24px}
+.wrap{max-width:1040px;margin:0 auto}
+h1{font-size:1.45rem;margin:0 0 4px;letter-spacing:-.01em;text-wrap:balance}
+.lead{margin:0 0 20px;color:var(--muted);max-width:60ch}
+.grid{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:16px;align-items:start}
+@media (max-width:760px){.grid{grid-template-columns:minmax(0,1fr)}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px}
+.panel h2{font-size:.95rem;margin:0 0 12px}
+label{display:block;font-size:.8rem;color:var(--muted);margin:10px 0 3px;letter-spacing:.02em}
+label:first-of-type{margin-top:0}
+input,textarea{width:100%;box-sizing:border-box;font:inherit;font-size:.9rem;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:7px 9px;min-width:0}
+input:focus-visible,textarea:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.hint{font-size:.78rem;color:var(--muted);margin:8px 0 0}
+.tabs{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+.tab{font:inherit;font-size:.9rem;padding:7px 14px;border-radius:6px;border:1px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer}
+.tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-fg);font-weight:700}
+.when{margin:0 0 10px;color:var(--muted);font-size:.88rem}
+pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;background:var(--code-bg);border:1px solid var(--line);border-radius:6px;padding:12px 14px;font-family:var(--mono);font-size:.84rem;line-height:1.65;min-width:0}
+.bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}
+.btn{font:inherit;font-size:.9rem;padding:8px 16px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:var(--accent-fg);cursor:pointer;font-weight:700}
+.btn.ghost{background:transparent;color:var(--accent)}
+.status{font-size:.84rem;color:var(--muted)}
+.miss{font-size:.82rem;color:var(--warn)}
+.note{margin-top:16px;font-size:.84rem;color:var(--muted);max-width:70ch}
+.sel{width:100%}
+textarea.fallback{margin-top:10px;font-family:var(--mono);font-size:.82rem;min-height:140px}
+</style>
+
+<div class="wrap">
+  <h1>시험 대비 부트스트랩</h1>
+  <p class="lead">새 세션에 붙여 넣는 한 덩어리 프롬프트입니다. 규칙 본문은 Notion의 최신 prompt 블록이 갖고 있고, 여기서는 읽을 위치와 대상만 채웁니다.</p>
+
+  <div class="grid">
+    <section class="panel" aria-label="변수">
+      <h2>채울 값</h2>
+      <label for="f-school">학교</label><input id="f-school" data-k="학교" placeholder="예: 단국대 치의학과">
+      <label for="f-term">학년-학기</label><input id="f-term" data-k="학기" placeholder="예: 2026-2">
+      <label for="f-exam">고사</label><input id="f-exam" data-k="고사" placeholder="중간고사 / 기말고사 / 수시시험">
+      <label for="f-subj">교과목</label><input id="f-subj" data-k="과목" placeholder="예: 치과약리학2">
+      <label for="f-no">학번 (선택)</label><input id="f-no" data-k="학번" placeholder="숫자만, 예: 24 (모르면 비워 두세요)">
+      <label for="f-drive">야마 폴더 이름·주소 (선택)</label><input id="f-drive" data-k="drive" placeholder="예: 야마부장 업무 (모르면 비워 두세요)">
+      <label for="f-notion">Notion 위치</label><input id="f-notion" data-k="notion" value="학교생활/{학기} 학사 업무 계획">
+      <label for="f-url">Notion 주소 (선택)</label><input id="f-url" data-k="url" placeholder="https://…">
+      <label for="f-art">기존 artifact 주소 (갱신 때만)</label><input id="f-art" data-k="artifact" placeholder="https://claude.ai/artifact/…">
+      <label for="f-upd">갱신할 내용 (갱신 때만)</label><textarea id="f-upd" data-k="갱신" rows="3" placeholder="예: 새 교안 반영, 범위 변경, 정답 정정"></textarea>
+      <p class="hint">비워 두면 프롬프트에 {변수}가 그대로 남습니다. 입력값은 이 브라우저에만 저장됩니다.</p>
+    </section>
+
+    <section class="panel" aria-label="프롬프트">
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" id="t-new" aria-selected="true" aria-controls="p-new">신규 제작</button>
+        <button class="tab" role="tab" id="t-upd" aria-selected="false" aria-controls="p-upd">기존 artifact 갱신</button>
+      </div>
+
+      <div id="p-new" role="tabpanel" aria-labelledby="t-new">
+        <p class="when">처음부터 새 시험 대비 artifact를 만들 때.</p>
+        <pre id="o-new"></pre>
+      </div>
+      <div id="p-upd" role="tabpanel" aria-labelledby="t-upd" hidden>
+        <p class="when">이미 있는 artifact를 같은 주소에서 고칠 때.</p>
+        <pre id="o-upd"></pre>
+      </div>
+
+      <div class="bar">
+        <button class="btn" id="copy">복사</button>
+        <span class="status" id="status" role="status"></span>
+        <span class="miss" id="miss"></span>
+      </div>
+      <textarea class="fallback" id="fb" hidden readonly aria-label="복사용 텍스트"></textarea>
+    </section>
+  </div>
+
+  <p class="note">이 문구는 특정 artifact나 과목에 묶이지 않습니다. 규칙(§번호)은 Notion 프롬프트 맨 아래의 가장 최신 현행 블록을 가리키며(그 아래 블록은 직전 규칙), 개정안이 따로 있으면 어느 쪽을 쓸지 세션이 먼저 묻습니다. 연결된 세션에 Notion과 Artifact 도구가 있어야 합니다.</p>
+</div>
+
+<script>
+(function(){
+  var KEY="bootstrap.vars.v1";
+  var fields=[].slice.call(document.querySelectorAll("[data-k]"));
+  var vals={};
+  try{vals=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){}
+  fields.forEach(function(f){var k=f.getAttribute("data-k"); if(vals[k]!==undefined) f.value=vals[k]});
+
+  var NEW=[
+    "Notion '{notion}'의 맨 아래 prompt 블록에서 '현행'과 '개정안'을 모두 찾아 끝까지 읽고, §18대로 적용 여부를 먼저 물은 뒤 답한 블록의 규칙(§0~§19)대로 새 시험 대비 artifact를 만들어. 블록 맨 앞의 vN 표기를 확인해 보고에 적어.",
+    "- 대상: {학교} · {학기} · {고사} · {과목} · 학번: {학번}",
+    "- 개정안 적용 여부와 학번 확인은 §11의 선택지형 질의 한 번(질문 최대 4개)에 묶어서 물어.",
+    "- 야마 자료 시작 위치: {drive}",
+    "- 시험 범위·형식이 불명확하면 §12 절차로 근거를 모은 뒤 선택지 질의로 한 번에 확인.",
+    "- 자료는 §3대로 학년도별 폴더와 공유 보관소를 모두 열거해 직접 찾고(하위 폴더 끝까지), 문항 일부가 삭제된 블라인드본과 문항이 모두 있는 완전본은 §15로 짝지으며, 못 읽는 파일은 사유와 함께 분할 제공을 요청.",
+    "- 이 요청은 artifact 발행 허가를 포함한다. 결과는 단일 HTML artifact로 발행하고 이미지는 §13을 따르며(발행 검증이 실패하면 §9 구현 유의대로), 단계가 끝날 때만 §11의 경어체 개조식·① / ⓐ / ◦·고정 보고 틀로 보고."
+  ].join("\n");
+  var UPD=[
+    "기존 시험 대비 artifact를 갱신해. 기존 artifact: {artifact}",
+    "1) Artifact 도구의 read로 현재 페이지를 먼저 읽고(내장 데이터 위주), 그 파일을 기반으로 같은 주소에 증분 발행해. 이미지 같은 별도 파일은 유지.",
+    "2) 규칙은 Notion '{notion}' 맨 아래 prompt 블록의 '현행'과 '개정안'을 모두 읽고, §18대로 적용 여부를 먼저 물은 뒤 답한 블록을 따라. 이 요청은 같은 주소에 증분 발행하는 허가를 포함한다. 야마 자료 시작 위치: {drive}",
+    "3) 대상: {학교} · {학기} · {고사} · {과목} · 학번: {학번}. 갱신 내용: {갱신}",
+    "4) 새 자료가 있으면 §17: 본문 diff → 근거 성립 판정 → 영향받은 문항만 갱신. 정답·상태는 사용자 정정이 최우선(§6)이고 이전 판정은 이력으로 보존.",
+    "5) 바뀌지 않은 부분은 그대로 두고, 변경한 문항·탭만 §11 틀로 보고."
+  ].join("\n");
+
+  function fill(tpl){
+    var loc=(vals.notion&&vals.notion.trim())||"학교생활/{학기} 학사 업무 계획";
+    var url=(vals.url||"").trim();
+    var notion=url?loc+" ("+url+")":loc;
+    var out=tpl.split("{notion}").join(notion);
+    var map={"학교":vals["학교"],"학기":vals["학기"],"고사":vals["고사"],"과목":vals["과목"],"artifact":vals.artifact,"갱신":vals["갱신"]};
+    var hd=String(vals["학번"]||"").replace(/\D/g,"");
+    var hak=hd?hd.slice(-2):"";
+    out=out.split("{학번}").join(hak?hak+"학번":"미기재(§0 절차로 추정 후 한 번만 확인)");
+    var dr=(vals.drive||"").trim();
+    out=out.split("{drive}").join(dr||"미기재(§3 탐색으로 찾고, 못 찾으면 한 번 질의)");
+    Object.keys(map).forEach(function(k){
+      var v=(map[k]||"").trim();
+      if(v) out=out.split("{"+k+"}").join(v);
+    });
+    return out;
+  }
+  var cur="new";
+  function render(){
+    var a=fill(NEW), b=fill(UPD);
+    document.getElementById("o-new").textContent=a;
+    document.getElementById("o-upd").textContent=b;
+    var txt=cur==="new"?a:b;
+    var left=(txt.match(/\{[^}]+\}/g)||[]).filter(function(v,i,arr){return arr.indexOf(v)===i});
+    document.getElementById("miss").textContent=left.length?("비어 있는 변수: "+left.join(" ")):"";
+  }
+  fields.forEach(function(f){
+    f.addEventListener("input",function(){
+      vals[f.getAttribute("data-k")]=f.value;
+      try{localStorage.setItem(KEY,JSON.stringify(vals))}catch(e){}
+      render();
+    });
+  });
+  function pick(which){
+    cur=which;
+    document.getElementById("t-new").setAttribute("aria-selected",which==="new");
+    document.getElementById("t-upd").setAttribute("aria-selected",which==="upd");
+    document.getElementById("p-new").hidden=which!=="new";
+    document.getElementById("p-upd").hidden=which!=="upd";
+    document.getElementById("fb").hidden=true;
+    document.getElementById("status").textContent="";
+    render();
+  }
+  document.getElementById("t-new").onclick=function(){pick("new")};
+  document.getElementById("t-upd").onclick=function(){pick("upd")};
+  document.getElementById("copy").onclick=function(){
+    var txt=document.getElementById(cur==="new"?"o-new":"o-upd").textContent;
+    var st=document.getElementById("status"), fb=document.getElementById("fb");
+    function manual(){fb.hidden=false;fb.value=txt;fb.focus();fb.select();st.textContent="자동 복사가 막혀 있습니다. 아래 상자를 선택해 복사하세요."}
+    try{
+      navigator.clipboard.writeText(txt).then(function(){st.textContent="복사했습니다.";fb.hidden=true},manual);
+    }catch(e){manual()}
+  };
+  render();
+})();
+</script>

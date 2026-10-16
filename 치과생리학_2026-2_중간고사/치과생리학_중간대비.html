@@ -86,10 +86,43 @@ pre.code{background:var(--surface);border:1px solid var(--line);border-radius:8p
 .pts{margin:6px 0;padding-left:18px;display:grid;gap:3px;font-size:13.5px}
 .diag{margin-top:24px;font-size:12px;color:var(--muted)}
 .jump{background:none;border:0;color:var(--accent);padding:0;text-decoration:underline;font-size:12px}
+
+.flow{display:flex;flex-wrap:wrap;gap:6px 4px;align-items:center;margin:4px 0 12px}
+.flow .step{border:1px solid var(--accent);background:var(--accent-weak);border-radius:6px;padding:3px 10px;font-size:12.5px}
+.flow .step b{display:inline-block;min-width:1.2em;color:var(--accent)}
+.arr{color:var(--muted);font-size:13px}
+.sumhead{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+.chn{font-size:11px;border-radius:99px;background:var(--accent);color:var(--accent-fg);padding:0 8px}
+.sumttl{font-size:16px;margin:0;font-weight:700}
+.freq{font-size:11px;border:1px solid var(--accent);color:var(--accent);border-radius:99px;padding:0 7px;margin-left:auto}
+.kwwrap{display:flex;flex-wrap:wrap;gap:4px 6px;margin:8px 0}
+.kw{font-size:12.5px;font-weight:700;border-radius:6px;background:var(--accent-weak);border:1px solid var(--accent);padding:1px 8px}
+.sl{margin:6px 0 0;padding-left:18px;display:grid;gap:3px;font-size:14px}
+.rel.dim,.dim{color:var(--muted)}
+table.sumtbl th[scope=row]{width:34%;font-weight:400}
+table.sumtbl{min-width:520px}
+.toc{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.toc a{border:1px solid var(--line);border-radius:6px;padding:3px 10px;font-size:13px;text-decoration:none;background:var(--surface)}
+.conc{display:grid;gap:10px}
+.crow{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.cname{display:flex;flex-wrap:wrap;gap:2px 10px;align-items:baseline}
+.cg{font-size:12px;color:var(--muted)}
+.cbar{position:relative;height:22px;background:var(--bg);border-radius:6px;margin-top:6px;overflow:hidden;border:1px solid var(--line)}
+.cbar i{position:absolute;inset:0 auto 0 0;background:var(--accent-weak);border-right:2px solid var(--accent)}
+.cbar span{position:relative;background:var(--bg);border-radius:4px;margin-left:4px;font-size:12px;padding:0 8px;line-height:20px}
+.cids{margin-top:6px;font-size:12.5px}
+table.yr{min-width:560px} table.yr td{white-space:nowrap}
+.bar{display:inline-block;height:10px;background:var(--accent);border-radius:2px;vertical-align:middle}
+tr.kr th,tr.kr td{background:var(--accent-weak)}
+tr.now td,tr.now th{border-top:2px solid var(--accent);font-weight:700}
+.tl{display:flex;flex-wrap:wrap;gap:8px 6px;align-items:flex-start;margin:12px 0}
+.tly{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:6px 10px;display:grid;gap:2px;font-size:12.5px}
+.tly.now{border-color:var(--accent)}
+.tly .tk{color:var(--accent)}
 /* 시험지형: 흑백 세리프 단일 컬럼. 배지·근거·인용·빈도·AI·정답 지정 등은 숨기고 해설은 정답 보기 이후에만 보임 */
 body.paper{--bg:#ffffff;--surface:#ffffff;--fg:#000000;--muted:#000000;--line:#000000;--accent:#000000;--accent-weak:#eeeeee;--accent-fg:#ffffff;--ok:#000;--ok-bg:#eee;--ng:#000;--ng-bg:#eee;font-family:var(--font-serif)}
 body.paper .shell{grid-template-columns:200px minmax(0,640px);justify-content:center}
-body.paper .st,body.paper .tag,body.paper .meta,body.paper .own,body.paper .typo,body.paper details,body.paper .cid,body.paper .jump,body.paper .strip.paperhide,body.paper .sumcard{display:none!important}
+body.paper .st,body.paper .tag,body.paper .meta,body.paper .own,body.paper .typo,body.paper details,body.paper .cid,body.paper .jump,body.paper .strip.paperhide,body.paper .sumcard,body.paper .flow,body.paper .toc,body.paper .conc,body.paper .tl{display:none!important}
 body.paper .card{border:0;border-bottom:1px solid #000;border-radius:0;padding-inline:0}
 @media (max-width:820px){
   .shell{grid-template-columns:minmax(0,1fr)}
@@ -691,7 +724,7 @@ function gradeList(list,ctx){
 }
 
 /* ===== 탭 렌더 ===== */
-const TABS=[["mc","객관식(단원별)"],["ds","단답·서술형"],["ks","국시"],["sum","내용 정리"],["exp","예상 문제"],["mock","모의고사"],["info","현황·범위"]];
+const TABS=[["mc","객관식(단원별)"],["ds","단답·서술형"],["ks","국시"],["sum","내용 정리"],["all","전체 내용 정리"],["exp","예상 문제"],["mock","모의고사"],["info","현황·범위"]];
 function renderTabs(){
   $("#tabs").innerHTML=TABS.map(t=>`<button role="tab" aria-selected="${ST.tab===t[0]}" data-act="tab" data-t="${t[0]}" type="button">${t[1]}</button>`).join("");
 }
@@ -761,16 +794,108 @@ function renderKS(){
   h+=list.map(ksCard).join("")||`<div class="card">이 단원에 해당하는 국시 문항이 없습니다.</div>`;
   $("#main").innerHTML=h; renderOMR(list,"ks");
 }
+const KW={
+"1.항상성":["항상성","감지기","효과기","신호전달기전"],"1.체액구성":["42 L","세포내액 28 L","세포외액 14 L","혈장 4%"],"1.되먹임":["음성되먹임","앞먹임"],
+"1.이온분포":["K⁺ 내↑","Na⁺·Cl⁻·Ca²⁺ 외↑","단백질 음이온"],"1.해당과정":["해당과정","피루브산 2","ATP 2","NADH·FADH₂","전자전달계"],"1.소기관":["골지체","과산화소체","카탈라아제"],
+"1.세포접합":["결합체","간극결합(코넥손)","치밀이음부"],"1.세포내이입":["포식","포음","수용체 매개","세포외유출"],
+"2.스플라이싱":["인트론 제거","스플라이소좀","snRNP","엑손 연결"],"2.mRNA수명":["mRNA 수명","단백질 수명","구조단백질 vs 대사효소"],"2.유전자조절":["전사 시기","가공","번역","히스톤아세틸전이효소"],
+"2.세포내수용체":["스테로이드","갑상선호르몬","비타민 D","30분 내 1차 반응"],"2.신호전달방식":["paracrine","endocrine","autocrine","neurotransmitter"],
+"2.막수용체":["이온통로형","G단백 연계(7 pass)","효소 연계","kinase / phosphatase"],"2.G단백":["α subunit–GTP","Adenylyl cyclase→cAMP→PKA","PLC→IP3·DAG→PKC","Ca²⁺·칼모듈린"],
+"2.효소연계수용체":["티로신 키나아제","Ras/MAP-kinase","TGF-β = Ser/Thr kinase","guanylyl cyclase"],
+"3.막구조":["유동 모자이크","인지질 이중층","전압·리간드·기계적 통로"],"3.삼투":["반투과성 막","고장성·저장성","Donnan 평형"],
+"3.능동수송":["Na⁺/K⁺ 펌프","ATP 직접 사용","공동운반","역방향운반"],"3.상피수송":["치밀이음부","Na⁺-K⁺ 펌프","CFTR","Cl⁻ 분비"],
+"3.확산":["단순확산","촉진확산","아쿠아포린","GLUT4","분리계수"],"3.삼투압":["van't Hoff π=ΦiCRT","300 mOsm/L","긴장성","여과(Poiseuille)"],
+"3.도난평형":["[Na]i>[Na]o","[Cl]i<[Cl]o","Donnan Excess","세포 부종","Na-K pump로 용적 유지"],"3.펌프세부":["20~45%","Ouabain","PMCA·SERCA","Na⁺-Ca²⁺ 역방향","Cl⁻-HCO₃⁻ 교환"],
+"4.활동전압":["안정막전압","역치전압","활동전압","국소반응"],"4.이온통로":["Na 통로 4 domain","S4 = 전압감지","S5-S6 = 선택성","K 통로 ~1 msec","리도카인"],"4.전도":["축삭 직경↑","수초화","도약전도","가는 축삭 먼저 차단"],
+"5.전기시냅스":["간극 연접","코넥손","지연 없음","화학시냅스: 일방향"],"5.시냅스후전압":["EPSP: Na⁺·Ca²⁺","IPSP: Cl⁻","GABA·글리신","가중"],"5.시냅스가소성":["LTP","LTD","AMPA 수용체"]
+};
+const EXTRA3=[
+["3.확산","확산은 농도가 높은 쪽에서 낮은 쪽으로의 이동이며 단순확산과 촉진확산(매개체 결합)으로 나뉩니다. 확산 속도는 확산계수·농도 차이·막 면적·두께로 정해지고, 막에 대한 분리계수(지용성)가 클수록 빠릅니다. 물은 아쿠아포린, 이온은 이온통로를 통합니다. GLUT4는 골격근·지방세포의 포도당 운반체입니다.","교안 3장(원본 슬라이드) '확산', '통로를 통한 확산', '촉진확산'"],
+["3.삼투압","삼투는 용질의 종류·분자량이 아니라 용질의 수가 결정합니다. van't Hoff 식 π=(ΦiC)RT이며 포도당 1 M은 1 Osm/L, NaCl 1 M은 2 Osm/L입니다. 정상 세포내·외액의 삼투농도는 300 mOsm/L이고, 긴장성은 막을 통과하지 못하는 물질의 삼투농도로 정해집니다. 여과는 정수압 차이로 소공을 통해 일어납니다(Q/t = nπR⁴ΔP / 8ηl).","교안 3장(원본 슬라이드) '삼투(Osmosis)', '긴장성', '여과(Filtration)'"],
+["3.도난평형","Gibbs–Donnan 평형의 결과는 [Na]i>[Na]o, [Cl]i<[Cl]o이고 [Na]i+[Cl]i>[Na]o+[Cl]o입니다. 세포 내 단백질 때문에 생기는 Donnan Excess가 세포 부종을 유발하며, Na-K pump 활동으로 세포용적이 유지됩니다.","교안 3장(원본 슬라이드) '도난평형 Gibbs-Donnan Equilibrium'"],
+["3.펌프세부","Na⁺-K⁺ 펌프는 모든 동물세포막에 있으며 세포에너지의 20~45%를 쓰고 대표 길항제는 Ouabain입니다. Ca²⁺ 펌프에는 PMCA(세포막)와 SERCA(근소포체·소포체)가 있습니다. 이차능동수송은 Na⁺ 기울기를 이용하며 공동운반(소장에서 포도당·아미노산, 과당만 촉진운반)과 역방향운반(Na⁺-Ca²⁺, 근위세뇨관 Na⁺-H⁺, 적혈구 Cl⁻-HCO₃⁻)이 있습니다.","교안 3장(원본 슬라이드) '일차능동수송', '이차능동수송'"]
+];
+(function(){const s=SUM.find(x=>x.ch===3); EXTRA3.forEach(e=>s.items.push(e));})();
+const CHFLOW={
+1:["항상성 개념","체액 구획","되먹임 조절","세포 소기관·에너지(해당→TCA→전자전달)","세포 접합·세포내이입"],
+2:["전사","RNA 가공(스플라이싱)","번역","단백질·mRNA 수명","신호전달: 리간드→수용체","이온통로·G단백·효소연계","2차 전령→반응"],
+3:["막 구조","확산(단순·촉진·통로)","삼투·긴장성·여과","Donnan 평형","능동수송(1차·2차)","상피·비통과 수송"],
+4:["안정막전압","역치","활동전압(Na 활성화→K 지연)","전도(직경·수초·도약)","국소마취제 차단"],
+5:["시냅스 종류(전기·화학)","신경전달물질 방출(Ca²⁺)","수용체 활성화","EPSP / IPSP","가중","LTP / LTD","전달물질 제거"]
+};
+const NUMS=[
+["체액","전체 42 L(체중 60%) = 세포내액 28 L(체액 67%·체중 40%) + 세포외액 14 L(33%·체중 20%); 혈장은 체액의 6.6%·체중의 4%","1장"],
+["안정막전압","적혈구 −10 · 평활근 −40 · 골격근 −90 · 신경 −60~−70 mV","4장"],
+["삼투","정상 세포내·외액 300 mOsm/L; 포도당 1 M = 1 Osm/L, NaCl 1 M = 2 Osm/L","3장"],
+["Na-K 펌프","세포에너지의 20~45% · 신경세포 ATP 소비의 약 2/3 · 길항제 Ouabain","3장"],
+["막 구성","단백질:지질 = 1:4~4:1 · 축전기 1 μF/cm², 10 nm","3장"],
+["이온통로 속도","Na 통로 신속 활성화, K 통로 약 1 msec 지연","4장"],
+["시냅스","전기: 간격 3.5 nm, 지연 거의 없음, 보통 양방향 / 화학: 지연 최소 0.3 ms·보통 1~5 ms, 일방향","5장"],
+["RNA·단백질 수명","세균 mRNA 약 3분(진핵은 더 김) · 구조단백질 수개월~수년 · 대사 효소 수일~수초","2장"],
+["세포내 수용체","작용 수 시간~수 일 · 1차 반응은 30분 내 전사 유도","2장"],
+["해당과정","포도당(6탄당) 1분자 → 10단계 → 피루브산 2분자 + ATP 2분자","1장"]
+];
+const CONC=[
+["전압의존성 Na⁺ 통로·활동전압",/Na.{0,3}통로|활동전압|탈분극|역치/,"활동전압 탈분극의 주역 / 국소마취제의 표적 / 4장 핵심",[4]],
+["Na⁺-K⁺ 펌프·능동수송",/Na.?K.{0,3}pump|Na.{0,3}K.{0,3}펌프|능동수송|공동운반|역방향/i,"세포용적 유지 · 1차/2차 수송 · 3장 핵심",[3]],
+["이온 분포·도난평형",/세포내액|이온.{0,8}분포|칼륨|도나|Donnan|세포외액/,"K⁺ 내↑ Na⁺ 외↑ · Donnan 결과",[1,3]],
+["삼투·긴장성",/삼투|긴장성|고장성|저장성/,"삼투농도 300 mOsm/L · 적혈구 반응",[3]],
+["전기 vs 화학 시냅스",/전기시냅스|화학시냅스|간극|시냅스 지연|시냅스의/,"간극 연접 · 지연 · 방향성",[5]],
+["EPSP·IPSP·신경전달물질",/EPSP|IPSP|GABA|글리신|글루탐|아세틸콜린|니코틴/,"흥분성 Na⁺·Ca²⁺ / 억제성 Cl⁻",[5]],
+["LTP·LTD·AMPA",/LTP|LTD|AMPA/,"시냅스 가소성",[5]],
+["신경 전도(도약전도·수초·직경)",/도약|수초|전도속도|myelin|미엘린|신경 ?섬유|C 신경/i,"직경↑·수초화 → 전도속도↑",[4]],
+["세포 접합",/치밀|결합체|간극결합|접합/,"치밀이음부·결합체·간극결합",[1,3]],
+["수용체·신호전달(G단백·cAMP·IP3)",/G ?단백|cAMP|IP3|수용체|kinase|키나/,"세포막/세포내 수용체 · 2차 전령",[2]],
+["전사·번역·RNA 가공",/전사|번역|RNA|스플라이|인트론|엑손/,"2장 유전자 발현",[2]],
+["에너지 대사(해당·NADH·ATP)",/해당|NADH|FADH|미토콘드리아|ATP/,"1장 세포 소기관·에너지",[1]]
+];
+function sumItemHTML(it,compact){
+  const kw=(KW[it[0]]||[]), name=it[0].split(".")[1], sents=it[1].split(/(?<=다\.)\s+/).filter(Boolean);
+  const rel=Q.filter(q=>q.key===it[0]);
+  const chips=kw.map(k=>`<span class="kw">${esc(k)}</span>`).join("");
+  const list=`<ul class="sl">${sents.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`;
+  const link=rel.length?`<div class="rel">기출 ${rel.length}건: `+rel.map(q=>`<button class="jump" data-act="gotoQ" data-id="${esc(q.id)}" type="button">${esc(q.id)}</button>`).join(" ")+`</div>`:`<div class="rel dim">기출 연계 문항 없음</div>`;
+  if(compact)return `<tr><th scope="row"><span class="cid">${esc(it[0])}</span><div class="kwwrap">${chips}</div></th><td>${list}<div class="meta">근거: ${esc(it[2])}</div></td></tr>`;
+  return `<article class="card sumcard"><div class="sumhead"><span class="chn">${esc(it[0].split(".")[0])}장</span><h3 class="sumttl">${esc(name)}</h3>${rel.length?`<span class="freq" title="이 항목과 연결된 기출 문항 수">기출 ${rel.length}</span>`:""}</div><div class="kwwrap">${chips}</div>${list}<div class="meta"><div>근거: ${esc(it[2])}</div>${link}</div></article>`;
+}
+function flowHTML(ch){return `<div class="flow" aria-label="${esc(CHN[ch])} 흐름">`+CHFLOW[ch].map((s,i)=>`${i?'<span class="arr" aria-hidden="true">→</span>':""}<span class="step"><b>${i+1}</b> ${esc(s)}</span>`).join("")+`</div>`}
 function renderSum(){
   let h=chFilter();
-  h+=`<div class="strip paperhide">교안 원문에서 요약했습니다. 근거 위치는 교안 슬라이드 제목입니다. 4장은 2026 폴더에 올라온 파일(2025판과 동일)이고, 5장은 아직 2026판이 없어 2025판(잠정)입니다. 3장은 두 파일(요약형·원본 슬라이드형)을 모두 근거로 씁니다.</div>`;
+  h+=`<div class="strip paperhide">교안 원문에서 요약했습니다. 칩은 암기용 키워드이고, 아래 문장이 이해용 설명입니다. 4장은 2026 폴더 파일(2025판과 동일), 5장은 2025판(잠정), 3장은 요약형과 원본 슬라이드형을 함께 근거로 씁니다. 전체를 이어서 읽으려면 '전체 내용 정리' 탭을 보세요.</div>`;
   SUM.filter(s=>!ST.ch||s.ch===ST.ch).forEach(s=>{
-    h+=`<h2 class="sec">${esc(CHN[s.ch])}</h2>`+s.items.map(it=>{
-      const rel=Q.filter(q=>q.key===it[0]);
-      return `<article class="card sumcard"><div class="chead"><span class="cid">${esc(it[0])}</span></div><div class="stem" style="font-weight:400">${esc(it[1])}</div><div class="meta"><div>근거: ${esc(it[2])}</div>${rel.length?`<div>기출 연계: `+rel.map(q=>`<button class="jump" data-act="gotoQ" data-id="${esc(q.id)}" type="button">${esc(q.id)}</button>`).join(" ")+`</div>`:`<div>기출 연계: 없음</div>`}</div></article>`;
-    }).join("");
+    h+=`<h2 class="sec">${esc(CHN[s.ch])}</h2>`+flowHTML(s.ch)+s.items.map(it=>sumItemHTML(it,false)).join("");
   });
   $("#main").innerHTML=h; renderOMR([],"sum");
+}
+function qText(q){return [q.stem||"",(q.opts||[]).join(" "),q.atext||""].join(" ")}
+function concStats(){
+  return CONC.map(c=>{
+    const qs=Q.filter(q=>c[1].test(qText(q))), ks=KS.filter(k=>c[1].test([k.stem||"",(k.opts||[]).join(" "),k.atext||"",k.ex||""].join(" ")));
+    return {name:c[0],gist:c[2],chs:c[3],qs,ks,n:qs.length+ks.length};
+  }).sort((a,b)=>b.n-a.n);
+}
+function yearRows(){
+  const m={};
+  Q.forEach(q=>(q.srcs||[]).forEach(s=>{const k=`${s[1]}|${s[0]}학번 ${s[2]==="M"?"중간":"기말"}`; (m[k]=m[k]||{y:s[1],lab:`${s[0]}학번 ${s[2]==="M"?"중간":"기말"}`,c:[0,0,0,0,0,0]}).c[q.ch]++;}));
+  KS.forEach(k=>{const y={74:2022,75:2023,76:2024,77:2025,78:2026}[(k.ex.match(/제?(\d+)회/)||[])[1]]||0; const lab=(k.ex.match(/제\d+회/)||["국시"])[0]+" 국시 2교시"; const key=`${y}|${lab}`; (m[key]=m[key]||{y,lab,c:[0,0,0,0,0,0],ks:1}).c[k.ch]++;});
+  return Object.values(m).sort((a,b)=>a.y-b.y||(a.ks||0)-(b.ks||0)||a.lab.localeCompare(b.lab));
+}
+function renderAll(){
+  let h=`<div class="strip paperhide">처음부터 끝까지 이어서 읽는 화면입니다. ① 단원별 흐름과 키워드 → ② 숫자 암기표 → ③ 반복해서 나오는 개념 → ④ 연도·순서 정리 순서입니다. 국시 문항은 같은 문항이 아니라 개념이 비슷한 문항입니다.</div>`;
+  h+=`<nav class="toc paperhide" aria-label="목차"><a href="#all-a">① 단원별 정리</a><a href="#all-b">② 숫자 암기표</a><a href="#all-c">③ 빈출·연결 개념</a><a href="#all-d">④ 연도·순서</a></nav>`;
+  h+=`<h2 class="sec" id="all-a">① 단원별 흐름과 키워드</h2>`;
+  SUM.forEach(s=>{
+    h+=`<h3 class="sub">${esc(CHN[s.ch])}</h3>`+flowHTML(s.ch)+`<div class="tblwrap"><table class="sumtbl"><thead><tr><th>키워드</th><th>내용</th></tr></thead><tbody>${s.items.map(it=>sumItemHTML(it,true)).join("")}</tbody></table></div>`;
+  });
+  h+=`<h2 class="sec" id="all-b">② 숫자 암기표</h2><div class="tblwrap"><table><thead><tr><th>항목</th><th>수치·내용</th><th>단원</th></tr></thead><tbody>${NUMS.map(n=>`<tr><th scope="row">${esc(n[0])}</th><td>${esc(n[1])}</td><td>${esc(n[2])}</td></tr>`).join("")}</tbody></table></div>`;
+  const cs=concStats(), mx=Math.max(1,...cs.map(c=>c.n));
+  h+=`<h2 class="sec" id="all-c">③ 반복·연결되는 빈출 개념</h2><p class="q">문항 지문·선지·정답 텍스트에서 키워드로 자동 집계한 값입니다(정규식 일치라 정확한 개수가 아니라 경향입니다). 막대는 기출+국시 건수입니다.</p>`;
+  h+=`<div class="conc">`+cs.map(c=>`<div class="crow"><div class="cname"><b>${esc(c.name)}</b><span class="cg">${esc(c.gist)} · ${c.chs.map(x=>x+"장").join("·")}</span></div><div class="cbar"><i style="width:${Math.round(c.n/mx*100)}%"></i><span>${c.n}건 (기출 ${c.qs.length} · 국시 ${c.ks.length})</span></div><details><summary>해당 문항</summary><div class="cids">`+c.qs.map(q=>`<button class="jump" data-act="gotoQ" data-id="${esc(q.id)}" type="button">${esc(q.id)}</button>`).join(" ")+(c.ks.length?` · 국시: `+c.ks.map(k=>esc(k.id||k.ex)).join(", "):"")+`</div></details></div>`).join("")+`</div>`;
+  const yr=yearRows();
+  h+=`<h2 class="sec" id="all-d">④ 연도·시험별 출제 단원 (오래된 순)</h2><p class="q">범위 내 1~5장 문항만 셉니다. 셀의 막대는 건수입니다. 국시는 개념 유사 문항입니다.</p>`;
+  h+=`<div class="tblwrap"><table class="yr"><thead><tr><th>연도</th><th>시험</th>${[1,2,3,4,5].map(c=>`<th>${c}장</th>`).join("")}<th>합</th></tr></thead><tbody>`+yr.map(r=>{const sum=r.c.slice(1).reduce((a,b)=>a+b,0);return `<tr class="${r.ks?"kr":""}"><td>${r.y||"-"}</td><th scope="row">${esc(r.lab)}</th>${[1,2,3,4,5].map(c=>`<td>${r.c[c]?`<span class="bar" style="width:${r.c[c]*10}px"></span> ${r.c[c]}`:'<span class="dim">·</span>'}</td>`).join("")}<td><b>${sum}</b></td></tr>`}).join("")+`<tr class="now"><td>2026</td><th scope="row">25학번 중간 (이번 시험)</th><td colspan="6">범위 1~5장 (사용자 전달) · 형식은 야마대로</td></tr></tbody></table></div>`;
+  h+=`<div class="tl" aria-label="시간순 흐름">`+[...new Set(yr.map(r=>r.y).filter(Boolean))].map(y=>`<div class="tly"><b>${y}</b>${yr.filter(r=>r.y===y).map(r=>`<span class="${r.ks?"tk":"tq"}">${esc(r.lab)}</span>`).join("")}</div>`).join('<span class="arr" aria-hidden="true">→</span>')+`<span class="arr" aria-hidden="true">→</span><div class="tly now"><b>2026</b><span class="tq">25학번 중간</span></div></div>`;
+  $("#main").innerHTML=h; renderOMR([],"all");
 }
 function mockPool(withB){
   const a=Q.filter(q=>q.form==="MC").map(eff).filter(q=>GRADED.includes(q.status)||q.status==="추정");
@@ -844,7 +969,7 @@ D 아직 하지 않은 것
 function render(){
   document.body.classList.toggle("paper",ST.paper);
   renderTabs();
-  ({mc:renderMC,ds:renderDS,ks:renderKS,sum:renderSum,exp:renderExp,mock:renderMock,info:renderInfo})[ST.tab]();
+  ({mc:renderMC,ds:renderDS,ks:renderKS,sum:renderSum,all:renderAll,exp:renderExp,mock:renderMock,info:renderInfo})[ST.tab]();
   lsSet("dp-tab",ST.tab);
 }
 
