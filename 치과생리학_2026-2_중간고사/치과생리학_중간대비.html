@@ -119,6 +119,8 @@ tr.now td,tr.now th{border-top:2px solid var(--accent);font-weight:700}
 .tly{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:6px 10px;display:grid;gap:2px;font-size:12.5px}
 .tly.now{border-color:var(--accent)}
 .tly .tk{color:var(--accent)}
+.saform{display:flex;flex-wrap:wrap;gap:6px 8px;margin-top:8px;align-items:center}
+.sain{flex:1 1 220px;min-width:0;border:1px solid var(--line);background:var(--bg);border-radius:6px;padding:6px 10px;font-size:14px}
 /* 시험지형: 흑백 세리프 단일 컬럼. 배지·근거·인용·빈도·AI·정답 지정 등은 숨기고 해설은 정답 보기 이후에만 보임 */
 body.paper{--bg:#ffffff;--surface:#ffffff;--fg:#000000;--muted:#000000;--line:#000000;--accent:#000000;--accent-weak:#eeeeee;--accent-fg:#ffffff;--ok:#000;--ok-bg:#eee;--ng:#000;--ng-bg:#eee;font-family:var(--font-serif)}
 body.paper .shell{grid-template-columns:200px minmax(0,640px);justify-content:center}
@@ -724,7 +726,7 @@ function gradeList(list,ctx){
 }
 
 /* ===== 탭 렌더 ===== */
-const TABS=[["mc","객관식(단원별)"],["ds","단답·서술형"],["ks","국시"],["sum","내용 정리"],["all","전체 내용 정리"],["exp","예상 문제"],["mock","모의고사"],["info","현황·범위"]];
+const TABS=[["mc","객관식(단원별)"],["ds","단답·서술형"],["sa","단답 연습"],["ks","국시"],["sum","내용 정리"],["all","전체 내용 정리"],["exp","예상 문제"],["mock","모의고사"],["info","현황·범위"]];
 function renderTabs(){
   $("#tabs").innerHTML=TABS.map(t=>`<button role="tab" aria-selected="${ST.tab===t[0]}" data-act="tab" data-t="${t[0]}" type="button">${t[1]}</button>`).join("");
 }
@@ -897,6 +899,141 @@ function renderAll(){
   h+=`<div class="tl" aria-label="시간순 흐름">`+[...new Set(yr.map(r=>r.y).filter(Boolean))].map(y=>`<div class="tly"><b>${y}</b>${yr.filter(r=>r.y===y).map(r=>`<span class="${r.ks?"tk":"tq"}">${esc(r.lab)}</span>`).join("")}</div>`).join('<span class="arr" aria-hidden="true">→</span>')+`<span class="arr" aria-hidden="true">→</span><div class="tly now"><b>2026</b><span class="tq">25학번 중간</span></div></div>`;
   $("#main").innerHTML=h; renderOMR([],"all");
 }
+/* ===== 단답 연습 (선택형:단답형 = 50:50, 문항 수 미상) ===== */
+const DSB=[
+[1,"1.항상성","내부환경이 일정한 상태로 유지되는 것을 무엇이라 하는가?",[["항상성","homeostasis"]],"항상성 (homeostasis)"],
+[1,"1.항상성","항상성 조절을 이루는 세 가지 요소를 쓰시오.",[["감지기"],["효과기"],["신호전달기전","신호전달"]],"감지기 · 효과기 · 신호전달기전"],
+[1,"1.체액구성","전체 체액은 체중의 몇 %인가?",[["60"]],"60% (42 L)"],
+[1,"1.체액구성","세포내액은 약 몇 L이며 체중의 몇 %인가?",[["28"],["40"]],"28 L · 체중의 40% (체액의 67%)"],
+[1,"1.체액구성","세포외액에서 혈장과 간질액의 비율은?",[["20"],["80"]],"혈장 20% : 간질액 80%"],
+[1,"1.되먹임","변화에 반대되는 방향으로 조절해 정상으로 회복시키는 기전은?",[["음성되먹임","음성 되먹임","음성피드백","negative feedback"]],"음성되먹임"],
+[1,"1.되먹임","변화를 예상하여 미리 반응을 일으키는 조절 기전은?",[["앞먹임","feedforward","전향"]],"앞먹임 (feedforward)"],
+[1,"1.이온분포","세포 내부에 더 많은 이온과 외부에 더 많은 이온을 쓰시오.",[["K","칼륨","인산"],["Na","나트륨","Cl","염소","Ca","칼슘"]],"내부: K⁺·인산기 / 외부: Na⁺·Cl⁻·Ca²⁺"],
+[1,"1.해당과정","해당과정으로 포도당 1분자에서 얻는 산물(분자 수 포함)은?",[["피루브산","pyruvate"],["ATP"]],"피루브산 2분자 + ATP 2분자"],
+[1,"1.해당과정","구연산 회로에서 생성되는 환원력이 강한 물질 두 가지는?",[["NADH"],["FADH"]],"NADH, FADH₂"],
+[1,"1.소기관","카탈라아제 등 산화 효소로 노폐물을 해독하는 소기관은?",[["과산화소체","peroxisome","퍼옥시좀"]],"과산화소체"],
+[1,"1.세포접합","카드헤린이 두 플라크를 연결하는 강한 세포 접합은?",[["결합체","데스모좀","desmosome"]],"결합체 (desmosome)"],
+[1,"1.세포접합","코넥손 채널로 인접 세포질을 연결하는 접합은?",[["간극결합","간극 결합","간극연접","gap junction"]],"간극결합 (gap junction)"],
+[1,"1.세포내이입","세포내이입의 세 종류를 쓰시오.",[["포식"],["포음"],["수용체"]],"포식작용 · 포음작용 · 수용체 매개 세포내이입"],
+[2,"2.스플라이싱","인트론을 제거하고 엑손을 연결하는 복합체는?",[["스플라이소좀","spliceosome"]],"스플라이소좀 (snRNP + 단백질)"],
+[2,"2.mRNA수명","세균 mRNA의 수명은 약 몇 분인가?",[["3"]],"약 3분 (진핵세포는 더 김)"],
+[2,"2.mRNA수명","구조단백질과 대사 효소의 수명을 비교하시오.",[["수개월","수년"],["수일","수초"]],"구조단백질 수개월~수년 / 대사 효소 수일~수초"],
+[2,"2.세포내수용체","세포내 수용체에 결합하는 리간드 네 가지는?",[["스테로이드"],["갑상선"],["레티노이드"],["비타민 D","비타민D","vitamin D"]],"스테로이드 호르몬 · 갑상선호르몬 · 레티노이드 · 비타민 D"],
+[2,"2.세포내수용체","세포내 수용체의 1차 반응은 몇 분 내 무엇을 유도하는가?",[["30"],["전사"]],"30분 내 전사 유도"],
+[2,"2.신호전달방식","인접한 동일 type의 세포에 작용하는 분비 신호전달 방식은?",[["autocrine","오토크라인","자가분비"]],"autocrine regulation"],
+[2,"2.막수용체","세포막 수용체의 세 종류를 쓰시오.",[["이온통로","이온 통로"],["G"],["효소"]],"이온통로형 · G단백 연계(7 pass) · 효소 연계(single-pass)"],
+[2,"2.막수용체","단백질을 인산화하는 효소와 탈인산화하는 효소는?",[["kinase","키나아제","키나제"],["phosphatase","포스파타아제","포스파타제"]],"protein kinase / phosphatase"],
+[2,"2.G단백","G 단백에서 GTP에 고친화도로 결합하는 subunit은?",[["α","알파","alpha"]],"α subunit (β, γ는 낮음)"],
+[2,"2.G단백","Adenylyl cyclase 경로의 2차 전령과 활성화되는 kinase는?",[["cAMP"],["PKA"]],"cAMP → PKA"],
+[2,"2.G단백","Phospholipase C 경로의 두 가지 2차 전령은?",[["IP3","IP₃"],["DAG"]],"IP₃ · DAG (→ PKC)"],
+[2,"2.효소연계수용체","TGF-β 수용체는 어떤 종류의 효소 연계 수용체인가?",[["세린","트레오닌","serine","threonine"]],"세린/트레오닌 키나아제 수용체"],
+[2,"2.효소연계수용체","EGF·인슐린 수용체가 속하는 효소 연계 수용체와 활성화하는 경로는?",[["티로신","tyrosine"],["Ras","MAP"]],"티로신 키나아제 수용체 → Ras/MAP-kinase 경로"],
+[3,"3.막구조","세포막 구조를 설명하는 모델의 이름은?",[["유동 모자이크","유동모자이크","fluid mosaic"]],"유동 모자이크 모델 (인지질 이중층)"],
+[3,"3.막구조","막 통로(채널)의 세 가지 개폐 유형은?",[["전압"],["리간드"],["기계"]],"전압 의존성 · 리간드 의존성 · 기계적 통로"],
+[3,"3.확산","물 이동을 담당하는 통로 단백질은?",[["아쿠아포린","aquaporin"]],"아쿠아포린 (aquaporin)"],
+[3,"3.확산","골격근과 지방세포의 포도당 운반체는?",[["GLUT4","glut-4"]],"GLUT4"],
+[3,"3.삼투압","삼투를 결정하는 것은 용질의 종류·분자량이 아니라 무엇인가?",[["수","입자","개수"]],"용질의 수(입자 수)"],
+[3,"3.삼투압","삼투압을 나타내는 van't Hoff 식을 쓰시오.",[["ΦiCRT","ΦiC)RT","φicrt"]],"π = (ΦiC)RT"],
+[3,"3.삼투압","NaCl 1 M의 삼투농도는 몇 Osm/L인가?",[["2"]],"2 Osm/L (포도당 1 M = 1 Osm/L)"],
+[3,"3.삼투압","정상 세포내·외액의 삼투농도는?",[["300"]],"300 mOsm/L"],
+[3,"3.삼투압","긴장성은 어떤 물질의 삼투농도로 정해지는가?",[["통과하지 못","비투과","투과하지 못","막을 통과하지"]],"막을 통과하지 못하는 물질"],
+[3,"3.도난평형","Donnan 평형에서 [Na]와 [Cl]의 세포 안팎 관계는?",[["[Na]i>[Na]o","Na i>","나트륨은 내부가","Na가 안","Na 내부"],["[Cl]i<[Cl]o","Cl i<","염소는 외부가","Cl이 밖","Cl 외부"]],"[Na]i>[Na]o, [Cl]i<[Cl]o"],
+[3,"3.도난평형","Donnan Excess가 유발하는 현상과, 이를 막아 세포용적을 유지하는 것은?",[["부종","swelling","팽창"],["Na-K","Na/K","나트륨-칼륨","펌프","pump"]],"세포 부종 → Na-K pump로 세포용적 유지"],
+[3,"3.펌프세부","Na⁺-K⁺ 펌프가 쓰는 세포에너지 비율과 대표 길항제는?",[["20","45"],["Ouabain","ouabain","우아바인","오와바인"]],"20~45% · Ouabain"],
+[3,"3.펌프세부","Ca²⁺ 펌프 두 종류를 쓰시오.",[["PMCA"],["SERCA"]],"PMCA(세포막) · SERCA(근소포체·소포체)"],
+[3,"3.능동수송","이차능동수송의 두 가지 방식은?",[["공동","symport"],["역방향","antiport"]],"공동운반(symport) · 역방향운반(antiport)"],
+[3,"3.펌프세부","소장에서 Na⁺와 공동운반되는 물질과, 촉진운반으로만 이동하는 당은?",[["포도당","glucose"],["과당","fructose"]],"포도당·아미노산 공동운반 / 과당은 촉진운반"],
+[3,"3.상피수송","낭포성 섬유증은 어떤 단백질의 변이로 어떤 이온 분비가 저해되는가?",[["CFTR"],["Cl"]],"CFTR 변이 → Cl⁻ 분비 저해"],
+[4,"4.활동전압","골격근의 안정막전압은?",[["-90","−90","90"]],"−90 mV (적혈구 −10 · 평활근 −40 · 신경 −60~−70)"],
+[4,"4.활동전압","막전압이 역치전압에 도달하지 못하면 나타나는 반응은?",[["국소반응","local response","국소 반응"]],"국소반응 (local response)"],
+[4,"4.이온통로","활동전압 탈분극 때 열리는 이온통로의 이름은?",[["전압 의존성 Na","전압의존성 Na","voltage-gated Na","Na 통로","Na통로","Na채널","Na channel"]],"전압 의존성 Na⁺ 통로"],
+[4,"4.이온통로","Na 통로에서 전압을 감지하는 부위와 Na⁺ 선택성을 정하는 부위는?",[["S4"],["S5","S6","pore"]],"S4 = 전압감지 / S5–S6 고리(pore loop) = Na⁺ 선택성"],
+[4,"4.이온통로","K 통로는 Na 통로보다 활성화에 약 얼마나 더 걸리는가?",[["1"]],"약 1 msec"],
+[4,"4.이온통로","리도카인이 결합하는 부위는?",[["S6","IV","Ⅳ"]],"Na 통로 IV영역 S6"],
+[4,"4.전도","활동전압 전도속도를 높이는 두 가지 방법은?",[["직경","굵"],["수초","myelin","미엘린"]],"축삭 직경 증가 · 수초화"],
+[4,"4.전도","유수신경의 전도 방식은?",[["도약","saltatory"]],"도약전도 (ATP 소모 적음)"],
+[4,"4.전도","국소마취제에 먼저 차단되는 신경축삭은?",[["가는","가늘"]],"가는 축삭"],
+[5,"5.전기시냅스","6개의 코넥신이 이루는 전기시냅스 통로는?",[["코넥손","connexon"]],"코넥손 (간극 연접)"],
+[5,"5.전기시냅스","화학시냅스의 시냅스 지연은 최소 얼마이며 보통은?",[["0.3"],["1"]],"최소 0.3 ms, 보통 1~5 ms"],
+[5,"5.전기시냅스","전기시냅스에서 막 사이 거리는?",[["3.5"]],"3.5 nm"],
+[5,"5.시냅스후전압","EPSP를 일으키는 이온통로(이온)는?",[["Na","나트륨","Ca","칼슘"]],"Na⁺·Ca²⁺ 통로 열림 → 탈분극"],
+[5,"5.시냅스후전압","IPSP를 일으키는 신경전달물질 두 가지와 열리는 통로는?",[["GABA"],["글리신","glycine"],["Cl"]],"GABA · 글리신 → Cl⁻ 통로 → 과분극"],
+[5,"5.시냅스후전압","여러 흥분성 입력이 더해져 EPSP가 커지는 현상은?",[["가중","summation"]],"가중 (공간적·시간적)"],
+[5,"5.시냅스가소성","LTP에서 세포막에 노출되는 수용체는?",[["AMPA"]],"AMPA 수용체"],
+[5,"5.시냅스가소성","LTD의 기전은?",[["AMPA"],["회수","끌어","내재화","세포 안","세포 내"]],"AMPA 수용체를 세포 안으로 회수 → 반응 감소"],
+[5,"5.시냅스후전압","시냅스전종말에서 신경전달물질 방출을 유발하는 이온은? (국시 제78회 유사)",[["Ca","칼슘"]],"Ca²⁺ (국시 제78회 2교시 57번 ④)"]
+].map((a,i)=>({id:"SA-"+String(i+1).padStart(2,"0"),ch:a[0],key:a[1],stem:a[2],groups:a[3],show:a[4],kind:"exp"}));
+const SAN=s=>(s||"").toLowerCase().replace(/[\s·・,.()\[\]\-–—−_+⁺⁻²₂³'’"“”:;/\\]/g,"");
+function saMatch(c,input){
+  const u=SAN(input); if(!u)return {ok:false,hit:0,n:c.groups.length,empty:true};
+  let hit=0;
+  c.groups.forEach(g=>{
+    const m=g.some(alt=>{const a=SAN(alt); if(!a)return false; return u.includes(a)||(c.groups.length===1&&u.length>=2&&a.includes(u))});
+    if(m)hit++;
+  });
+  return {ok:hit===c.groups.length,hit,n:c.groups.length};
+}
+function saPast(){
+  return Q.filter(q=>q.form==="DS").map(q=>{
+    const raw=q.atext||"";
+    const alts=raw.split(/[,/()（）·]|\s{2,}/).map(s=>s.replace(/잠정/g,"").trim()).filter(Boolean);
+    return {id:q.id,ch:q.ch,key:q.key,stem:q.stem,groups:alts.length?[alts.concat([raw.replace(/\(.*?\)/g,"").trim()].filter(Boolean))]:[],show:raw||(q.prop?"잠정(추론): "+q.prop.text:"정답 미확정"),kind:"past",status:q.status,src:(q.srcs||[]).map(s=>`${s[0]}학번 ${s[3]}`).join(", "),pending:!raw};
+  });
+}
+let SAR={}; try{SAR=JSON.parse(lsGet("dp-sa")||"{}")||{}}catch(e){SAR={}}
+function saSave(){lsSet("dp-sa",JSON.stringify(SAR))}
+ST.sa={mode:"past",wrong:false,inp:{},shown:{}};
+function saCardHTML(c){
+  const id=c.id, r=SAR[id], shown=ST.sa.shown[id];
+  const st=c.kind==="past"?`<span class="st ${GRADED.includes(c.status)?"st-x":c.status==="추정"?"st-e":"st-u"}">${esc(c.status)}</span><span class="tag">기출 ${esc(c.src||"")}</span>`:`<span class="st st-p">예상</span>`;
+  let h=`<article class="card sacard${r==="ok"?" ok":r==="ng"?" ng":""}" id="c-sa-${esc(id)}"><div class="chead"><span class="cid">${esc(id)}</span><span class="tag">${c.ch}장</span>${st}${r?`<span class="tag">${r==="ok"?"✔ 맞음":"✘ 틀림"}</span>`:""}</div><div class="stem">${esc(c.stem)}</div>`;
+  h+=`<div class="saform"><input class="sain" type="text" data-id="${esc(id)}" value="${esc(ST.sa.inp[id]||"")}" placeholder="답을 직접 써 보세요" aria-label="답 입력 ${esc(id)}" autocomplete="off"><button class="btn pri" data-act="saCheck" data-id="${esc(id)}" type="button">확인</button><button class="btn" data-act="saShow" data-id="${esc(id)}" type="button">${shown?"정답 숨기기":"정답 보기"}</button></div>`;
+  if(shown){
+    const m=ST.sa.last&&ST.sa.last[id];
+    h+=`<div class="ansbox${c.pending?" prov":""}">${m&&!m.empty?`<b>${m.ok?"일치":"부분 일치"} ${m.hit}/${m.n}</b> · `:""}정답: ${esc(c.show)}</div>`;
+    h+=`<div class="acts"><button class="btn" data-act="saMark" data-v="ok" data-id="${esc(id)}" type="button">맞았다</button><button class="btn" data-act="saMark" data-v="ng" data-id="${esc(id)}" type="button">틀렸다</button></div>`;
+    if(c.kind==="exp"){const it=SUM.flatMap(s=>s.items).find(x=>x[0]===c.key);if(it)h+=`<div class="meta">근거: ${esc(it[2])} (${esc(c.key)})</div>`}
+  }
+  return h+`</article>`;
+}
+function saKwCards(){
+  return SUM.flatMap(s=>s.items.map(it=>({id:"KW-"+it[0],ch:s.ch,key:it[0],name:it[0].split(".")[1],kw:KW[it[0]]||[],sent:it[1]})));
+}
+function saStats(list){const ok=list.filter(c=>SAR[c.id]==="ok").length,ng=list.filter(c=>SAR[c.id]==="ng").length;return `<div class="strip paperhide" id="sastat">진행: 맞음 ${ok} · 틀림 ${ng} · 미풀이 ${list.length-ok-ng} / 전체 ${list.length}<button class="btn" data-act="saReset" type="button">이 목록 기록 지우기</button></div>`}
+function renderSA(){
+  const m=ST.sa.mode;
+  let h=`<div class="strip paperhide">시험은 선택형 : 단답형 = 50 : 50(절대 문항 수는 미상)이므로 단답도 선택형과 같은 비중으로 준비합니다. 직접 써 보고 확인하는 방식입니다(띄어쓰기·괄호는 무시). 자동 판정은 참고용이며, 최종 판단은 정답을 보고 직접 '맞았다/틀렸다'로 표시하세요.</div>`;
+  h+=`<div class="strip">`+[["past","기출 단답 ("+Q.filter(q=>q.form==="DS").length+")"],["exp","예상 단답 ("+DSB.length+")"],["kw","키워드 암기 카드"]].map(a=>`<button class="btn${m===a[0]?" pri":""}" data-act="saMode" data-m="${a[0]}" type="button">${a[1]}</button>`).join("")+`<label><input type="checkbox" id="saWrong"${ST.sa.wrong?" checked":""}> 틀린 것·미풀이만</label></div>`;
+  h+=chFilter();
+  if(m==="kw"){
+    const L=saKwCards().filter(c=>!ST.ch||c.ch===ST.ch);
+    h+=`<div class="strip paperhide">항목 이름만 보고 키워드를 떠올린 뒤 눌러서 확인하세요.</div>`+L.map(c=>{const o=ST.sa.shown[c.id];return `<article class="card sacard" id="c-sa-${esc(c.id)}"><div class="chead"><span class="chn">${c.ch}장</span><b>${esc(c.name)}</b></div>${o?`<div class="kwwrap">${c.kw.map(k=>`<span class="kw">${esc(k)}</span>`).join("")}</div><ul class="sl">${c.sent.split(/(?<=다\.)\s+/).filter(Boolean).map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:`<div class="dim">키워드 ${c.kw.length}개 — 떠올려 보세요</div>`}<div class="acts"><button class="btn" data-act="saShow" data-id="${esc(c.id)}" type="button">${o?"가리기":"키워드 보기"}</button></div></article>`}).join("");
+  } else {
+    let L=(m==="past"?saPast():DSB).filter(c=>!ST.ch||c.ch===ST.ch);
+    h+=saStats(L);
+    if(ST.sa.wrong)L=L.filter(c=>SAR[c.id]!=="ok");
+    h+=L.length?L.map(saCardHTML).join(""):`<div class="card">표시할 문항이 없습니다.</div>`;
+  }
+  $("#main").innerHTML=h; renderOMR([],"sa");
+}
+document.addEventListener("click",e=>{
+  const t=e.target.closest("[data-act^='sa']"); if(!t)return; const act=t.dataset.act, id=t.dataset.id;
+  const all=()=>saPast().concat(DSB);
+  if(act==="saMode"){ST.sa.mode=t.dataset.m;render()}
+  else if(act==="saShow"){ST.sa.shown[id]=!ST.sa.shown[id];render();const c=document.getElementById("c-sa-"+id);if(c)c.scrollIntoView({block:"nearest"})}
+  else if(act==="saCheck"){
+    const c=all().find(x=>x.id===id); if(!c)return; const inp=document.querySelector(`.sain[data-id="${id}"]`); ST.sa.inp[id]=inp?inp.value:"";
+    ST.sa.last=ST.sa.last||{}; ST.sa.last[id]=c.groups.length?saMatch(c,ST.sa.inp[id]):{ok:false,hit:0,n:0,empty:true};
+    if(!ST.sa.last[id].empty&&!c.pending){SAR[id]=ST.sa.last[id].ok?"ok":"ng";saSave()}
+    ST.sa.shown[id]=true; render(); const el=document.getElementById("c-sa-"+id); if(el)el.scrollIntoView({block:"nearest"});
+  }
+  else if(act==="saMark"){SAR[id]=t.dataset.v;saSave();render();const el=document.getElementById("c-sa-"+id);if(el)el.scrollIntoView({block:"nearest"})}
+  else if(act==="saReset"){const L=ST.sa.mode==="past"?saPast():DSB;L.forEach(c=>{delete SAR[c.id];delete ST.sa.shown[c.id];delete ST.sa.inp[c.id]});saSave();render()}
+});
+document.addEventListener("input",e=>{const t=e.target; if(t.classList&&t.classList.contains("sain"))ST.sa.inp[t.dataset.id]=t.value});
+document.addEventListener("keydown",e=>{const t=e.target; if(e.key==="Enter"&&t.classList&&t.classList.contains("sain")){const b=document.querySelector(`[data-act="saCheck"][data-id="${t.dataset.id}"]`);if(b)b.click()}});
+document.addEventListener("change",e=>{if(e.target.id==="saWrong"){ST.sa.wrong=e.target.checked;render()}});
+
 function mockPool(withB){
   const a=Q.filter(q=>q.form==="MC").map(eff).filter(q=>GRADED.includes(q.status)||q.status==="추정");
   const b=withB?B.filter(q=>q.form==="MC"):[];
@@ -969,7 +1106,7 @@ D 아직 하지 않은 것
 function render(){
   document.body.classList.toggle("paper",ST.paper);
   renderTabs();
-  ({mc:renderMC,ds:renderDS,ks:renderKS,sum:renderSum,all:renderAll,exp:renderExp,mock:renderMock,info:renderInfo})[ST.tab]();
+  ({mc:renderMC,ds:renderDS,sa:renderSA,ks:renderKS,sum:renderSum,all:renderAll,exp:renderExp,mock:renderMock,info:renderInfo})[ST.tab]();
   lsSet("dp-tab",ST.tab);
 }
 
