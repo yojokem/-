@@ -176,7 +176,7 @@ NEWRATE = round(100 * len(NEW) / len(Q))
 
 STATS = {"uniq": len(Q), "total": total, "dupBundles": dupb, "dist": dist_o, "conf": conf_o}
 
-VER = "v6.10 · 2026-10-16 (현행)"
+VER = "v6.11 · 2026-10-18 (현행)"
 SCOPE = {"scope": {
   "from": "1주 세포학·상피조직 (9/4)", "to": "7주 신경조직·혈구 (10/14)",
   "excluded": "8주 이후(호흡기, 소화관·소화샘, 내분비, 비뇨기, 특수감각기, 피부)는 기말 범위", "basis":
