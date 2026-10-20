@@ -229,6 +229,9 @@ table.mx td.no{color:var(--line)}
 .part{font-size:1.1rem;margin:26px 0 10px;display:flex;align-items:center;gap:10px}
 .part::before{content:"";width:6px;height:20px;background:var(--accent);border-radius:2px}
 @media print{.subnav{display:none}}
+.yon{margin-top:8px;border:1px solid var(--line);border-left:4px solid var(--s-cross);border-radius:6px;padding:6px 10px;background:var(--surface);font-size:.86rem}
+.yon.diff{border-left-color:var(--bad);background:var(--bad-bg)}.yon.unk{border-left-color:var(--s-est)}.yon.nm{border-left-color:var(--s-undec)}
+.yon .tag{margin-left:4px}.yx{display:flex;flex-wrap:wrap;gap:5px;margin:4px 0 0}.yx span{font-size:.78rem;border:1px dashed color-mix(in srgb,var(--cc) 45%,var(--line));border-radius:4px;padding:0 7px}
 </style>
 
 <div class="wrap">
@@ -346,6 +349,11 @@ function ansBox(q){
   } else if(!q.opts.length){ h += `<div class="note">선지 본문이 없는 문항이라 보기별 이유를 쓰지 않았습니다.</div>`; }
   const mm = DB.MISMATCH.find(x => x[0] === q.id);
   if(mm) h += `<div class="warn"><b>교안과 불일치 소지(사용자 확인 목록)</b> ${esc(mm[1])}</div>`;
+  const yy = DB.Y[q.id];
+  if(yy){
+    const vl = {ok: '정답 후보와 일치', diff: '정답 후보와 불일치', unk: '우리 쪽 정답 미정', nm: '연대 쪽 정답 표시 없음'}[yy[3]];
+    h += `<div class="yon ${yy[3]}"><b>타 학교 대조 · 연대야마</b> <span class="tag">${yy[0] === 'S' ? '같은 문항' : '비슷한 문항'}</span> <span class="tag">${vl}</span> <span class="tag">${{M: '정답 표시', N: '해설·노트 근거', '-': '표시 없음'}[yy[1]]}</span><div>${sx(yy[2])}</div><div class="note">정답·상태는 바꾸지 않았습니다. 에이전트가 읽은 기록이며 원문 쪽수는 확인하지 않았습니다.</div></div>`;
+  }
   const ref = q.ev.filter(e => e.t !== 'T2p'), nb = q.ev.filter(e => e.t === 'T2p');
   if(ref.length) h += `<div><b>근거</b>${evHtml(ref)}</div>`;
   if(nb.length) h += `<div><b>선배 필기 대조</b> <span class="note">타 학번 기준이라 올해와 다를 수 있음 · 정답을 바꾸지 않음</span>${evHtml(nb)}</div>`;
@@ -412,6 +420,11 @@ function statusTab(){
     <h3>교안과 불일치 소지 — 사용자 확인 목록</h3>
     <ul class="plain">${DB.MISMATCH.map(m => `<li><button class="link" type="button" data-act="gomc" data-q="${m[0]}">${m[0]}</button> ${esc(m[1])}</li>`).join('')}</ul>
     <p class="note">정답은 위 사유로 바꾸지 않았습니다.</p></div>
+  <div class="box"><h2>타 학교(연대야마) 기출 대조</h2>
+    <p class="note">${esc(DB.YSRC)}를 열람해 우리 기출 71문항과 비교한 결과입니다. 같은 문항 ${Object.values(DB.Y).filter(v => v[0] === 'S').length}건, 비슷한 문항 ${Object.values(DB.Y).filter(v => v[0] === 'M').length}건이며 정답 후보와 일치 ${Object.values(DB.Y).filter(v => v[3] === 'ok').length}건, 불일치 ${Object.values(DB.Y).filter(v => v[3] === 'diff').length}건, 우리 쪽 정답 미정 ${Object.values(DB.Y).filter(v => v[3] === 'unk').length}건, 연대 쪽 표시 없음 ${Object.values(DB.Y).filter(v => v[3] === 'nm').length}건입니다. 파일의 뒷부분(합본 80쪽 이후, 기출 201쪽 이후)은 텍스트가 오지 않아 비교하지 못했고, 일부 복기본은 정답 표시가 없습니다. 정답·상태는 바꾸지 않았습니다.</p>
+    <h3>확인 목록</h3><ul class="plain">${DB.YCHECK.map(m => `<li><button class="link" type="button" data-act="gomc" data-q="${m[0]}">${m[0]}</button> ${esc(m[1])}</li>`).join('')}</ul>
+    <h3>우리 쪽 정답 미정인 문항에 연대가 표시한 답</h3><ul class="plain">${Object.entries(DB.Y).filter(e => e[1][3] === 'unk').map(e => `<li><button class="link" type="button" data-act="gomc" data-q="${e[0]}">${e[0]}</button> ${sx(e[1][2])}</li>`).join('')}</ul>
+    <p class="note">국시: 이번 범위(중간)에서는 국시 표기가 달린 문항을 찾지 못했습니다. 국가시험 폴더(74~78회)와 '구강조직학 기말(국시)'는 구강 위주라 기말 범위이고, 정답 표시가 없어 T3로 쓰지 않았습니다.</p></div>
   <div class="box"><h2>정답 지정 내보내기</h2>
     <p class="note">객관식 탭에서 지정한 정답을 JSON으로 복사합니다. 파일 저장과 외부 전송은 하지 않습니다. OMR 마킹은 담기지 않습니다.</p>
     <div class="row-actions"><button class="btn primary" type="button" data-act="export">정답 지정 JSON 복사</button></div>
@@ -529,6 +542,7 @@ function hubBody(c){
     <div class="h3s">비교표</div>${h.cmps}
     ${h.seqs ? `<div class="h3s">순서 · 시점</div>${h.seqs}` : ''}
     <div class="h3s">헷갈리는 포인트</div>${h.traps}
+    ${(DB.YX[c] || []).length ? `<div class="h3s">타 학교 기출 연계 (연대야마 · ${DB.YX[c].length}개)</div><div class="yx">${DB.YX[c].map(x => `<span>${sx(x)}</span>`).join('')}</div><p class="note">우리 71문항에 없는 연대야마 중간범위 문항의 주제입니다. 문항 원문은 넣지 않았습니다.</p>` : ''}
     ${h.src}</section>`;
 }
 function hubCard(c){

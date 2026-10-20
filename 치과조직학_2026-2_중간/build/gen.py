@@ -106,6 +106,7 @@ TL = {"years": [
 
 # ───────── v6.9 내용 정리 재구성: 키워드·흐름(kw/chN.py), 반복 개념, 시점 막대 ─────────
 import importlib.util
+import data_y as YD
 KW = {}
 for _n in range(1, 9):
     _p = os.path.join(B, "kw", "ch%d.py" % _n)
@@ -275,7 +276,7 @@ IMG = {
 DATA = {"Q": Q, "NEW": NEW, "SUM": SUM, "CH": CH, "CH_SRC": CH_SRC, "REL": REL, "STATS": STATS,
         "HAK": HAK, "CROSS": CROSS, "FILES": FILES, "REFS": REFS, "BLIND": BLIND, "SCOPE": SCOPE,
         "LIMITS": LIMITS, "NEWRATE": NEWRATE, "VER": VER, "BUILT": "2026-10-14",
-        "WHYSTAT": WHYSTAT, "MISMATCH": MISMATCH, "FIGS": FIGS, "FIGNO": FIGNO, "TL": TL, "MEM": MEM, "VS": VS, "FN": FN, "FNSTAT": FNSTAT, "KW": KW, "CON": CON, "TLV": TLV}
+        "WHYSTAT": WHYSTAT, "MISMATCH": MISMATCH, "FIGS": FIGS, "FIGNO": FIGNO, "TL": TL, "MEM": MEM, "VS": VS, "FN": FN, "FNSTAT": FNSTAT, "KW": KW, "CON": CON, "TLV": TLV, "Y": YD.Y, "YCHECK": YD.CHECK, "YX": YD.YX, "YSRC": YD.SRC}
 
 def js(o):
     return json.dumps(o, ensure_ascii=False).replace("</", "<\\/")
