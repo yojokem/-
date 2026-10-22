@@ -234,7 +234,7 @@ table.mx td.no{color:var(--line)}
 .yon .tag{margin-left:4px}.yx{display:flex;flex-wrap:wrap;gap:5px;margin:4px 0 0}.yx span{font-size:.78rem;border:1px dashed color-mix(in srgb,var(--cc) 45%,var(--line));border-radius:4px;padding:0 7px}
 .vdl{font-size:.74rem;border-radius:999px;padding:0 8px;background:var(--soft);white-space:nowrap}.vdl.ok{background:var(--ok-bg);color:var(--ok)}.vdl.diff{background:var(--bad-bg);color:var(--bad)}.vdl.unk{background:color-mix(in srgb,var(--s-est) 18%,var(--surface))}.star{color:var(--accent);font-weight:700}tr.rel td{color:var(--muted)}
 .yt td:nth-child(2),.yt td:nth-child(4){white-space:nowrap}
-.lk-row{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:10px;align-items:start;margin:6px 0}.lk-col,.lk-mid{padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--soft)}.lk-mid{text-align:center}.lk-h{font-size:.75em;color:var(--muted);margin-bottom:4px}.kwt{display:inline-block;font-size:.8em;padding:1px 6px;border-radius:10px;background:var(--surface);border:1px solid var(--line);margin:2px}.tag.mut{opacity:.7}@media(max-width:640px){.lk-row{grid-template-columns:1fr}}
+.lkbox{margin-top:8px;border:1px solid var(--line);border-left:4px solid var(--c1);border-radius:6px;padding:6px 10px;background:var(--surface);font-size:.86rem}.lkbox .plain{margin:2px 0 4px}.lk-row{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:10px;align-items:start;margin:6px 0}.lk-col,.lk-mid{padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--soft)}.lk-mid{text-align:center}.lk-h{font-size:.75em;color:var(--muted);margin-bottom:4px}.kwt{display:inline-block;font-size:.8em;padding:1px 6px;border-radius:10px;background:var(--surface);border:1px solid var(--line);margin:2px}.tag.mut{opacity:.7}@media(max-width:640px){.lk-row{grid-template-columns:1fr}}
 .solo{margin:6px 0;padding-left:0;list-style:none}.solo li{padding:4px 8px;border-left:3px solid var(--line);margin:3px 0;font-size:.92em}.solo li.sy{border-color:var(--ok);background:color-mix(in srgb,var(--ok-bg) 100%,transparent)}.sol{margin-bottom:8px}
 .ansc{display:inline-block;min-width:22px;text-align:center;border:1px solid var(--ok);color:var(--ok);background:var(--ok-bg);border-radius:999px;padding:0 6px;font-weight:700}.keyline.okk{color:var(--ok)}.keyline.badd{color:var(--bad)}.yt-l{display:block;margin:6px 0 2px;font-size:.84rem;color:var(--muted)}.yt-ta{width:100%;margin-top:4px;font:inherit;background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:6px 8px}.tag.bad{background:var(--bad-bg);color:var(--bad)}
 </style>
@@ -263,7 +263,7 @@ const LS = {
 const TABS = [["status","현황·범위"],["mc","객관식"],["sum","내용 정리"],["full","전체 내용 정리"],["all","단원별 전체 펴기"],["yon","연대야마"],["new","예상 문제"],["mock","모의고사"]];
 const S = { tab: LS.get('tab','status'), ch: 0, hak: 'all', st: 'all', group: true, exam: false, showAll: false,
   omr: LS.get('omr', {}), ua: LS.get('ua', {}), uaWhy: LS.get('uaWhy', {}), open: {}, graded: null, inclEst: false,
-  mock: null, newOpen: {}, newMarks: {}, sch: 0, fold: {}, cc: {}, ymode: 'tab', lkgap: 'all', yex: 'all', yst: 'all', yp: LS.get('yp', {}), yt: LS.get('yt', {}), yopen: {}, yclr: false };
+  mock: null, newOpen: {}, newMarks: {}, sch: 0, fold: {}, cc: {}, ymode: 'tab',  yex: 'all', yst: 'all', yp: LS.get('yp', {}), yt: LS.get('yt', {}), yopen: {}, yclr: false };
 const MKS = {c:'①②③④⑤⑥⑦⑧', ga:'가나다라마바', g:'ㄱㄴㄷㄹㅁㅂ'};
 const mark = (mk, i) => mk === 'n' ? (i+1)+'.' : mk === 'ga' ? MKS.ga[i]+')' : mk === 'g' ? MKS.g[i]+'.' : MKS.c[i];
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -359,6 +359,7 @@ function ansBox(q){
     const vl = {ok: '정답 후보와 일치', diff: '정답 후보와 불일치', unk: '우리 쪽 정답 미정', nm: '연대 쪽 정답 표시 없음'}[yy[3]];
     h += `<div class="yon ${yy[3]}"><b>타 학교 대조 · 연대야마</b> <span class="tag">${yy[0] === 'S' ? '같은 문항' : '비슷한 문항'}</span> <span class="tag">${vl}</span> <span class="tag">${{M: '정답 표시', N: '해설·노트 근거', '-': '표시 없음'}[yy[1]]}</span><div>${sx(yy[2])}</div><div class="note">정답·상태는 바꾸지 않았습니다. 에이전트가 읽은 기록이며 원문 쪽수는 확인하지 않았습니다.</div></div>`;
   }
+  (LKO[q.id] || []).forEach(c => { h += lkBox(c, null, q.id); });
   const ref = q.ev.filter(e => e.t !== 'T2p'), nb = q.ev.filter(e => e.t === 'T2p');
   if(ref.length) h += `<div><b>근거</b>${evHtml(ref)}</div>`;
   if(nb.length) h += `<div><b>선배 필기 대조</b> <span class="note">타 학번 기준이라 올해와 다를 수 있음 · 정답을 바꾸지 않음</span>${evHtml(nb)}</div>`;
@@ -667,7 +668,7 @@ function yqCard(q){
     const nt = q.note ? `<div class="note">연대 파일 해설·메모: ${sx(q.note)}</div>` : '';
     const fl = (q.flags || []).length ? `<div class="note">원문 상태: ${q.flags.map(esc).join(' · ')}</div>` : '';
     const ours = (q.ours || []).length ? `<div class="note">우리 기출과 겹침: ${q.ours.map(i => `<button class="link" type="button" data-act="gomc" data-q="${i}">${i}</button>`).join(' ')}</div>` : '';
-    res = `<div class="ans-box">${mine2}${sol}${yAns}${kyo}${conf}${nt}${fl}${ours}<div class="note">출처 줄: ${esc(q.lines || '')} (조직학 기출 ~21학번까지.pdf 읽은 텍스트 기준)</div></div>`;
+    res = `<div class="ans-box">${mine2}${sol}${yAns}${kyo}${conf}${nt}${fl}${ours}${LKY[q.id] ? lkBox(LKY[q.id], q.id, null) : ''}<div class="note">출처 줄: ${esc(q.lines || '')} (조직학 기출 ~21학번까지.pdf 읽은 텍스트 기준)</div></div>`;
   }
   return `<article class="card" id="yq-${q.id}"><div class="card-h"><span class="cid">${esc(q.id)}</span><span class="tag">${esc(q.exam)}${q.no !== '' ? ' ' + esc(q.no) + '번' : ''}</span><span class="tag">Ch${q.ch} ${esc(DB.CH[q.ch])}</span><span class="tag">${{mc: '단일 선택', multi: '모두 고르기', match: '짝짓기·조합', short: '선지 없음'}[q.type] || ''}</span>${q.ans ? '' : (hasOpts ? '<span class="tag">정답 표시 없음</span>' : '')}${s.conf ? '<span class="tag bad">충돌</span>' : ''}</div>
     <p class="stem">${sx(q.stem)}</p>${opts}${mine}
@@ -690,27 +691,21 @@ function yonSolve(){
     <details class="srcd"><summary>내 답안 ${nSaved}개 · 내보내기/가져오기</summary><p class="note">기기나 브라우저가 바뀌면 저장이 이어지지 않습니다. 아래 JSON을 복사해 두었다가 붙여넣어 가져오세요.</p><textarea id="yExp" rows="3" style="width:100%" readonly>${esc(exp)}</textarea><div class="row-actions"><button class="btn" type="button" data-act="ycopy">복사</button></div><textarea id="yImp" rows="3" style="width:100%" placeholder="여기에 JSON을 붙여넣고 가져오기"></textarea><div class="row-actions"><button class="btn" type="button" data-act="yimp">가져오기</button><button class="btn" type="button" data-act="yclrall">${S.yclr ? '정말 모두 지우기(한 번 더)' : '내 답안 모두 지우기'}</button></div><p class="note" id="yMsg"></p></details></div>
     <div class="cards">${L.map(yqCard).join('') || '<p class="note">조건에 맞는 문항이 없습니다.</p>'}</div>`;
 }
-function linkTab(){
-  const LKs = DB.LK || [];
-  const gaps = [['all', '전부'], ['양쪽', '양쪽에 있음'], ['연대만', '연대에만'], ['우리만', '우리에만']];
-  const gc = gaps.map(x => `<button type="button" class="chip" data-act="lkgap" data-id="${x[0]}" aria-pressed="${S.lkgap === x[0]}">${x[1]}</button>`).join('');
-  const L = LKs.filter(c => (!S.ych || c.ch === S.ych) && (S.lkgap === 'all' || c.gap === S.lkgap));
-  const nY = L.reduce((a, c) => a + c.y.length, 0), nO = new Set(L.flatMap(c => c.ours)).size;
-  const relCls = {'같은 사실': 'okk', '같은 개념(다른 각도)': '', '같은 출제 원리': '', '같은 영역': 'mut'};
-  const card = c => `<article class="card lk"><div class="card-h"><span class="tag">Ch${c.ch} ${esc(DB.CH[c.ch])}</span><span class="tag ${relCls[c.rel] || ''}">${esc(c.rel)}</span><span class="tag">${esc(c.gap)}</span></div>
-    <div class="lk-row"><div class="lk-col"><div class="lk-h">우리 문제</div>${c.ours.length ? c.ours.map(i => `<button class="link" type="button" data-act="gomc" data-q="${i}">${i}</button>`).join(' ') : '<span class="note">없음</span>'}</div>
-    <div class="lk-mid"><div class="lk-h">개념</div><b>${sx(c.concept)}</b><div>${(c.kw || []).map(k => `<span class="kwt">${sx(k)}</span>`).join(' ')}</div></div>
-    <div class="lk-col"><div class="lk-h">연대 문제 ${c.y.length}</div>${c.y.length ? c.y.map(i => `<button class="link" type="button" data-act="goyq" data-id="${i}">${i}</button>`).join(' ') : '<span class="note">없음</span>'}</div></div>
-    <p class="note">${sx(c.why)}</p></article>`;
-  return `<div class="box"><h2>연결 지도</h2><p class="note">범위·문항 소재·출제 원리가 겹치는 것을 개념 단위로 묶었습니다. 왼쪽 우리 문제 → 가운데 개념 → 오른쪽 연대 문제입니다. 번호를 누르면 해당 문항으로 이동합니다. 연결은 AI가 문항 문장과 교안 키워드로 묶은 것이라 억지 연결이 있을 수 있고, '같은 사실'만 문장 수준으로 같은 소재입니다.</p>
-    <div class="chips" role="group" aria-label="구분">${gc}</div><p class="sub">묶음 ${L.length}개 · 우리 문제 ${nO}개 · 연대 문제 ${nY}개</p></div>
-    <div class="cards">${L.map(card).join('') || '<p class="note">연결 데이터가 없습니다.</p>'}</div>`;
+const LKY = {}, LKO = {};
+(DB.LK || []).forEach(c => { c.y.forEach(i => { LKY[i] = c; }); c.ours.forEach(i => { (LKO[i] = LKO[i] || []).push(c); }); });
+const LK_REL = {'같은 사실': '문장 수준으로 같은 소재', '같은 개념(다른 각도)': '같은 개념을 다른 각도로 묻음', '같은 출제 원리': '구분 원리가 같음', '같은 영역': '느슨하게 같은 영역(참고용)'};
+function lkPrev(s, n){ s = String(s || '').replace(/\s+/g, ' '); return s.length > n ? s.slice(0, n) + '…' : s; }
+function lkBox(c, selfY, selfO){
+  const ys = c.y.filter(i => i !== selfY).map(i => { const y = DB.YQ.find(x => x.id === i); const fa = y && y.sol && y.sol.final && y.sol.final.length ? ` <span class="ansc">${y.sol.final.map(k => '①②③④⑤⑥⑦⑧'[k - 1] || k).join('')}</span>` : ''; return `<li><button class="link" type="button" data-act="goyq" data-id="${i}">${i}</button> <span class="note">${y ? sx(lkPrev(y.stem, 46)) : ''}</span>${fa}</li>`; }).join('');
+  const os = c.ours.filter(i => i !== selfO).map(i => { const q = Q.find(x => x.id === i); return `<li><button class="link" type="button" data-act="gomc" data-q="${i}">${i}</button> <span class="note">${q ? sx(lkPrev(q.stem, 46)) : ''}</span></li>`; }).join('');
+  return `<div class="lkbox"><b>개념 연결</b> <span class="tag">${esc(c.concept)}</span> <span class="tag ${c.rel === '같은 영역' ? 'mut' : ''}">${esc(c.rel)}</span> <span class="tag">${esc(c.gap)}</span>
+    <div>${(c.kw || []).map(k => `<span class="kwt">${sx(k)}</span>`).join(' ')}</div><div class="note">${esc(LK_REL[c.rel] || '')} · ${sx(c.why)}</div>
+    ${os ? `<div class="lk-h">같은 개념의 우리 학교 문제</div><ul class="plain">${os}</ul>` : ''}${ys ? `<div class="lk-h">같은 개념의 연대 문제 ${c.y.length - (selfY ? 1 : 0)}개</div><ul class="plain">${ys}</ul>` : ''}</div>`;
 }
 function yonTab(){
   const m = S.ymode;
-  const sw = `<div class="chips" role="group" aria-label="보기 방식" style="margin-bottom:10px"><button type="button" class="chip" data-act="ymode" data-id="tab" aria-pressed="${m === 'tab'}">대응표 (우리 기출과 겹침)</button><button type="button" class="chip" data-act="ymode" data-id="solve" aria-pressed="${m === 'solve'}">문제 풀이 (선지 체크 · 정답 확인)</button><button type="button" class="chip" data-act="ymode" data-id="link" aria-pressed="${m === 'link'}">연결 지도 (문제 ↔ 개념 ↔ 연대)</button></div>`;
+  const sw = `<div class="chips" role="group" aria-label="보기 방식" style="margin-bottom:10px"><button type="button" class="chip" data-act="ymode" data-id="tab" aria-pressed="${m === 'tab'}">대응표 (우리 기출과 겹침)</button><button type="button" class="chip" data-act="ymode" data-id="solve" aria-pressed="${m === 'solve'}">문제 풀이 (선지 체크 · 정답 확인)</button></div>`;
   const chips = [0,1,2,3,4,5,6,7,8].map(c => `<button type="button" class="chip" data-act="ych" data-ch="${c}" aria-pressed="${(S.ych || 0) === c}">${c ? 'Ch' + c + ' ' + esc(DB.CH[c]) : '전체'}</button>`).join('');
-  if(m === 'link') return sw + `<div class="tools"><div class="chips" role="group" aria-label="단원">${chips}</div></div>` + linkTab();
   if(m === 'solve') return sw + `<div class="tools"><div class="chips" role="group" aria-label="단원">${chips}</div></div>` + yonSolve();
   return sw + yonTable();
 }
@@ -813,7 +808,6 @@ document.addEventListener('click', e => {
   else if(a === 'ch'){ S.ch = +t.dataset.ch; S.graded = null; render(); }
   else if(a === 'nch'){ S.nch = +t.dataset.ch; render(); }
   else if(a === 'sch'){ S.sch = +t.dataset.ch; render(); }
-  else if(a === 'lkgap'){ S.lkgap = t.dataset.id; render(); }
   else if(a === 'goyq'){ const q = DB.YQ.find(x => x.id === id); if(q){ S.ymode = 'solve'; S.ych = q.ch; S.yex = 'all'; S.yst = 'all'; S.yopen[id] = true; render(); const c = document.getElementById('yq-' + id); if(c) c.scrollIntoView({block: 'center'}); } }
   else if(a === 'ymode'){ S.ymode = t.dataset.id; render(); }
   else if(a === 'yex'){ S.yex = t.dataset.id; render(); }
