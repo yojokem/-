@@ -110,6 +110,8 @@ import data_y as YD
 import json as _json
 _yqp = os.path.join(B, "yq", "items.json")
 YQ = _json.load(open(_yqp, encoding="utf-8")) if os.path.exists(_yqp) else []
+_lkp = os.path.join(B, "lk", "links.json")
+LK = _json.load(open(_lkp, encoding="utf-8")) if os.path.exists(_lkp) else []
 KW = {}
 for _n in range(1, 9):
     _p = os.path.join(B, "kw", "ch%d.py" % _n)
@@ -279,7 +281,7 @@ IMG = {
 DATA = {"Q": Q, "NEW": NEW, "SUM": SUM, "CH": CH, "CH_SRC": CH_SRC, "REL": REL, "STATS": STATS,
         "HAK": HAK, "CROSS": CROSS, "FILES": FILES, "REFS": REFS, "BLIND": BLIND, "SCOPE": SCOPE,
         "LIMITS": LIMITS, "NEWRATE": NEWRATE, "VER": VER, "BUILT": "2026-10-14",
-        "WHYSTAT": WHYSTAT, "MISMATCH": MISMATCH, "FIGS": FIGS, "FIGNO": FIGNO, "TL": TL, "MEM": MEM, "VS": VS, "FN": FN, "FNSTAT": FNSTAT, "KW": KW, "CON": CON, "TLV": TLV, "Y": YD.Y, "YCHECK": YD.CHECK, "YX": YD.YX, "YR": YD.YR, "YQ": YQ, "YSRC": YD.SRC}
+        "WHYSTAT": WHYSTAT, "MISMATCH": MISMATCH, "FIGS": FIGS, "FIGNO": FIGNO, "TL": TL, "MEM": MEM, "VS": VS, "FN": FN, "FNSTAT": FNSTAT, "KW": KW, "CON": CON, "TLV": TLV, "Y": YD.Y, "YCHECK": YD.CHECK, "YX": YD.YX, "YR": YD.YR, "YQ": YQ, "LK": LK, "YSRC": YD.SRC}
 
 def js(o):
     return json.dumps(o, ensure_ascii=False).replace("</", "<\\/")
