@@ -1,0 +1,2407 @@
+[
+ {
+  "id": "c1-01",
+  "ch": 1,
+  "ask": "옳은 것",
+  "stem": "다음 중 상피조직의 일반적 특징과 발생 기원에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "바닥판(basal lamina)은 상피세포 자신이 합성하여 아래 결합조직과 경계를 이룬다.",
+    "ok": true,
+    "why": "바닥판은 상피세포가 만든 세포외기질이다.",
+    "quote": "synthesized by the epithelial cells."
+   },
+   {
+    "k": "나",
+    "t": "상피에는 혈관이 없어 결합조직 모세혈관의 영양분이 바닥판을 지나 확산으로 공급된다.",
+    "ok": true,
+    "why": "무혈관이므로 확산으로 영양을 받는다.",
+    "quote": "supplies nourishment and oxygen via diffusion"
+   },
+   {
+    "k": "다",
+    "t": "간과 이자의 상피성 실질은 중배엽에서 유래한다.",
+    "ok": false,
+    "why": "간·쓸개·이자는 내배엽 기원이다.",
+    "quote": "liver, gall bladder, the pancreas"
+   },
+   {
+    "k": "라",
+    "t": "순환계의 내피와 체강의 중피는 중배엽 기원 상피이다.",
+    "ok": true,
+    "why": "내피·중피는 중배엽 유래 상피다.",
+    "quote": "endothelial lining of the circulatory system"
+   }
+  ],
+  "basis": [
+   "1-01",
+   "1-02",
+   "Y21-10"
+  ],
+  "src": "교안01",
+  "opts": [
+   "가, 나",
+   "나, 다",
+   "가, 나, 라",
+   "가, 나, 다",
+   "나, 다, 라"
+  ],
+  "ans": 3
+ },
+ {
+  "id": "c1-02",
+  "ch": 1,
+  "ask": "옳은 것",
+  "stem": "다음 중 상피 세포 정단면(apical)의 돌기 구조에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "부동모(stereocilia)는 긴 미세융모로, 액틴 세사가 중심이며 운동성이 없다.",
+    "ok": true,
+    "why": "부동모는 액틴 중심의 비운동성 긴 미세융모다.",
+    "quote": "Non-motile and rigid (core of actin"
+   },
+   {
+    "k": "나",
+    "t": "섬모의 축사(axoneme)는 미세소관이 9+2 형태로 배열된 구조이다.",
+    "ok": true,
+    "why": "axoneme은 9쌍 이중관+중심 2개의 구조다.",
+    "quote": "arranged in a consistent 9 + 2"
+   },
+   {
+    "k": "다",
+    "t": "미세융모의 중심 지지체는 미세소관이다.",
+    "ok": false,
+    "why": "미세융모의 중심은 액틴 세사이다.",
+    "quote": "Thin filaments : Actin ------microvilli, stereocilia"
+   },
+   {
+    "k": "라",
+    "t": "내이 반고리관의 유모세포는 수백 개의 운동성 섬모를 가진다.",
+    "ok": false,
+    "why": "반고리관 유모세포는 단일 섬모(감각)를 가진다.",
+    "quote": "only a single cilium"
+   }
+  ],
+  "basis": [
+   "Y21-20",
+   "Ysmp-14",
+   "Ysmp-22"
+  ],
+  "src": "교안01",
+  "opts": [
+   "가, 나",
+   "나, 라",
+   "가, 나, 다",
+   "가, 나, 라",
+   "가, 다, 라"
+  ],
+  "ans": 1
+ },
+ {
+  "id": "c1-03",
+  "ch": 1,
+  "ask": "옳은 것",
+  "stem": "다음 중 상피세포 사이 연접(junction)에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "폐쇄띠(zonula occludens)는 막단백질이 정단에서 기저외측으로 이동하는 것을 막는다.",
+    "ok": true,
+    "why": "claudin·occludin이 극성 유지와 장벽을 만든다.",
+    "quote": "prevent the movement of membrane"
+   },
+   {
+    "k": "나",
+    "t": "부착띠(zonula adherens)는 폐쇄띠보다 기저쪽에 있으며 E-cadherin과 액틴 세사가 관여한다.",
+    "ok": true,
+    "why": "폐쇄띠 아래의 띠로 cadherin-actin 연결이다.",
+    "quote": "E-cadherin + actin filaments"
+   },
+   {
+    "k": "다",
+    "t": "부착반점(desmosome)의 부착판에는 desmoplakin과 plakoglobin이 있다.",
+    "ok": true,
+    "why": "부착반점 plaque의 구성 단백질이다.",
+    "quote": "Proteins of plaque"
+   },
+   {
+    "k": "라",
+    "t": "틈새이음(gap junction)은 골격근세포에 가장 풍부하다.",
+    "ok": false,
+    "why": "틈새이음은 골격근세포에는 없다.",
+    "quote": "not in skeletal muscle cells."
+   }
+  ],
+  "basis": [
+   "1-07",
+   "1-09",
+   "Ysmp-16"
+  ],
+  "src": "교안01",
+  "opts": [
+   "가, 나",
+   "나, 다",
+   "가, 나, 라",
+   "가, 다, 라",
+   "가, 나, 다"
+  ],
+  "ans": 5
+ },
+ {
+  "id": "c1-04",
+  "ch": 1,
+  "ask": "옳지 않은 것",
+  "stem": "다음 중 외분비샘에 대한 설명으로 옳지 않은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "기름샘(피지샘)은 분비세포가 성숙하여 죽으면서 분비물이 되는 온분비샘이다.",
+    "ok": true,
+    "why": "holocrine은 세포 자체가 분비물이 된다.",
+    "quote": "secretory cell : matures, dies and becomes the secretory product"
+   },
+   {
+    "k": "나",
+    "t": "에크린 땀샘은 정단 세포질 일부가 떨어져 나오는 아포크린 방식이다.",
+    "ok": false,
+    "why": "에크린 땀샘은 exocytosis를 하는 부분분비(merocrine)다.",
+    "quote": "Merocrine : release via exocytosis, e.g.: eccrine sweat gland"
+   },
+   {
+    "k": "다",
+    "t": "턱밑샘과 혀밑샘은 점액꽈리에 장액반월이 붙은 혼합샘이다.",
+    "ok": true,
+    "why": "혼합샘은 serous demilune을 가진다.",
+    "quote": "possess serous demilunes"
+   },
+   {
+    "k": "라",
+    "t": "근상피세포는 기름샘의 분비부를 감싸 분비를 돕는다.",
+    "ok": false,
+    "why": "근상피세포는 땀샘과 주요 침샘에 있고 기름샘엔 없다.",
+    "quote": "in sweat glands and major salivary glands"
+   }
+  ],
+  "basis": [
+   "1-04",
+   "Y07-16",
+   "Ysmp-20"
+  ],
+  "src": "교안01",
+  "opts": [
+   "나, 다",
+   "가, 나, 라",
+   "가, 다, 라",
+   "나, 라",
+   "나, 다, 라"
+  ],
+  "ans": 4
+ },
+ {
+  "id": "c1-05",
+  "ch": 1,
+  "ask": "옳은 것",
+  "stem": "다음 중 상피의 종류와 형태에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "비각질 중층편평상피는 입안, 식도, 질 등에서 관찰된다.",
+    "ok": true,
+    "why": "비각질 중층편평상피의 대표 분포다.",
+    "quote": "mouth, epiglottis, esophagus, vocal folds, vagina"
+   },
+   {
+    "k": "나",
+    "t": "이행상피는 늘어나면 돔 모양으로 바뀐다.",
+    "ok": false,
+    "why": "이완 시 돔형, 늘어나면 납작해진다.",
+    "quote": "Dome-shaped (relaxed), flattened (distended)"
+   },
+   {
+    "k": "다",
+    "t": "거짓중층원주상피에서는 모든 세포가 바닥판에 닿아 있다.",
+    "ok": true,
+    "why": "모든 세포가 바닥판에 있으나 표면까지 닿지는 않는다.",
+    "quote": "All cells rest on basal lamina."
+   },
+   {
+    "k": "라",
+    "t": "혈관 내피와 폐포 상피는 단층입방상피이다.",
+    "ok": false,
+    "why": "내피·폐포 상피는 단층편평상피다.",
+    "quote": "endothelial cells of blood and lymphatic vessels"
+   }
+  ],
+  "basis": [
+   "1-05",
+   "Ysmp-46",
+   "Y21-05"
+  ],
+  "src": "교안01",
+  "opts": [
+   "가, 나",
+   "가, 다",
+   "가, 나, 다",
+   "가, 나, 라",
+   "가, 다, 라"
+  ],
+  "ans": 2
+ },
+ {
+  "id": "c1-06",
+  "ch": 1,
+  "ask": "옳은 것",
+  "stem": "다음 중 상피세포의 극성과 기저면 특수 구조에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "반부착반점에서 integrin은 바닥판의 laminin 및 IV형 아교질과 결합한다.",
+    "ok": true,
+    "why": "integrin이 바닥판 성분과 부착판을 연결한다.",
+    "quote": "laminin and type IV collagen of the basal"
+   },
+   {
+    "k": "나",
+    "t": "Na+/K+-ATPase는 주로 기저외측 도메인에 풍부하다.",
+    "ok": true,
+    "why": "이온수송 상피의 기저외측막 특징이다.",
+    "quote": "rich in Na+/K+-ATPase and ion channels"
+   },
+   {
+    "k": "다",
+    "t": "스테로이드 분비세포는 조면소포체와 분비과립이 매우 발달되어 있다.",
+    "ok": false,
+    "why": "스테로이드 분비세포는 활면소포체·지방방울·미토콘드리아가 특징.",
+    "quote": "Lipid droplet, s-ER, mitochondria"
+   },
+   {
+    "k": "라",
+    "t": "정단 도메인과 기저외측 도메인은 폐쇄연접으로 서로 구분된다.",
+    "ok": true,
+    "why": "tight junction이 두 도메인의 경계다.",
+    "quote": "separated from each other by tight junctions"
+   }
+  ],
+  "basis": [
+   "1-09",
+   "Y21-09",
+   "Ysmp-21"
+  ],
+  "src": "교안01",
+  "opts": [
+   "나, 라",
+   "다, 라",
+   "가, 나, 라",
+   "가, 나, 다",
+   "나, 다, 라"
+  ],
+  "ans": 3
+ },
+ {
+  "id": "c2-01",
+  "ch": 2,
+  "ask": "옳은 것",
+  "stem": "다음 중 결합조직의 섬유와 염색법에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "그물섬유는 III형 아교질로 이루어지며 은염색에 호은성을 보인다.",
+    "ok": true,
+    "why": "reticular f.는 type III, 은염색 양성이다.",
+    "quote": "Silver (Argyrophilic)"
+   },
+   {
+    "k": "나",
+    "t": "탄력섬유는 orcein이나 Verhoeff 염색으로 확인할 수 있다.",
+    "ok": true,
+    "why": "orcein 갈색, Verhoeff 청흑색이다.",
+    "quote": "brown with Orcein"
+   },
+   {
+    "k": "다",
+    "t": "아교섬유는 Masson 삼색염색에서 붉게 염색된다.",
+    "ok": false,
+    "why": "Masson에서는 초록, Mallory에서는 파랑이다.",
+    "quote": "green with Masson"
+   },
+   {
+    "k": "라",
+    "t": "탄력섬유는 아교섬유보다 일반적으로 굵다.",
+    "ok": false,
+    "why": "아교섬유(1~20μm)가 탄력섬유(0.2~2μm)보다 굵다.",
+    "quote": "1.0 - 20"
+   }
+  ],
+  "basis": [
+   "Ysmp-26",
+   "Ysmp-70",
+   "Y18-26"
+  ],
+  "src": "교안02",
+  "opts": [
+   "가, 다",
+   "가, 나, 다",
+   "가, 나, 라",
+   "가, 나",
+   "나, 다, 라"
+  ],
+  "ans": 4
+ },
+ {
+  "id": "c2-02",
+  "ch": 2,
+  "ask": "옳은 것",
+  "stem": "다음 중 아교질(collagen)의 종류와 특징에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "IV형 아교질은 바닥판의 그물 구조를 이룬다.",
+    "ok": true,
+    "why": "IV형은 network-forming collagen이다.",
+    "quote": "IV : component of basal lamina"
+   },
+   {
+    "k": "나",
+    "t": "뼈 유기질의 주성분은 II형 아교질이다.",
+    "ok": false,
+    "why": "뼈의 주성분은 I형, II형은 연골이다.",
+    "quote": "main component of the organic part of bone"
+   },
+   {
+    "k": "다",
+    "t": "III형 아교질은 원섬유를 형성하지 않는다.",
+    "ok": false,
+    "why": "I, II, III, V, XI형이 원섬유 형성 아교질이다.",
+    "quote": "I, II, III, V, XI"
+   },
+   {
+    "k": "라",
+    "t": "상피세포는 IV형 아교질을 합성한다.",
+    "ok": true,
+    "why": "상피는 바닥판의 IV형을 만든다.",
+    "quote": "Epithelial cells - type IV collagen"
+   }
+  ],
+  "basis": [
+   "2-09",
+   "Y21-18",
+   "Y21-19"
+  ],
+  "src": "교안02",
+  "opts": [
+   "가, 라",
+   "나, 라",
+   "다, 라",
+   "가, 나, 라",
+   "가, 다, 라"
+  ],
+  "ans": 1
+ },
+ {
+  "id": "c2-03",
+  "ch": 2,
+  "ask": "옳은 것",
+  "stem": "다음 중 비만세포(mast cell)에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "분비과립은 heparin 때문에 toluidine blue에서 변색성을 보인다.",
+    "ok": true,
+    "why": "황산화 GAG인 heparin이 metachromasia를 일으킨다.",
+    "quote": "Metachromasia; heparin"
+   },
+   {
+    "k": "나",
+    "t": "세포막에 IgE 수용체가 있어 항원 재노출 시 탈과립한다.",
+    "ok": true,
+    "why": "IgE-항원 결합이 탈과립을 유도한다.",
+    "quote": "cell membrane - IgE receptor"
+   },
+   {
+    "k": "다",
+    "t": "ECF-A는 염증 부위로 호중구를 유인한다.",
+    "ok": false,
+    "why": "ECF-A는 호산구, NCF가 호중구를 유인한다.",
+    "quote": "ECF-A - attracts eosinophils"
+   },
+   {
+    "k": "라",
+    "t": "결합조직 비만세포는 점막 비만세포보다 작다.",
+    "ok": false,
+    "why": "결합조직형 10~12μm, 점막형 5~10μm로 점막형이 작다.",
+    "quote": "smaller than the CT mast cells."
+   }
+  ],
+  "basis": [
+   "2-05",
+   "2-07",
+   "Y21-12"
+  ],
+  "src": "교안02",
+  "opts": [
+   "가, 다",
+   "가, 나",
+   "가, 나, 다",
+   "가, 나, 라",
+   "가, 다, 라"
+  ],
+  "ans": 2
+ },
+ {
+  "id": "c2-04",
+  "ch": 2,
+  "ask": "옳지 않은 것",
+  "stem": "다음 중 단핵포식세포계통과 결합조직 세포에 대한 설명으로 옳지 않은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "대식세포는 혈액 단핵구가 결합조직으로 이동하여 분화한 세포이다.",
+    "ok": true,
+    "why": "단핵구가 조직으로 나가 대식세포가 된다.",
+    "quote": "derived blood Monocytes"
+   },
+   {
+    "k": "나",
+    "t": "Kupffer 세포는 중추신경계에 분포하는 대식세포이다.",
+    "ok": false,
+    "why": "Kupffer 세포는 간, 중추신경계는 microglia다.",
+    "quote": "Liver (perisinusoidal)"
+   },
+   {
+    "k": "다",
+    "t": "파골세포는 호중구가 융합하여 형성된다.",
+    "ok": false,
+    "why": "파골세포는 여러 대식세포(단핵구계)의 융합체다.",
+    "quote": "Osteoclast (from fusion of"
+   },
+   {
+    "k": "라",
+    "t": "형질세포는 T림프구에서 분화하여 세포성 면역을 담당한다.",
+    "ok": false,
+    "why": "형질세포는 B림프구에서 분화해 항체를 만든다.",
+    "quote": "differentiated from B lymphocyte"
+   }
+  ],
+  "basis": [
+   "2-06",
+   "Ysmp-35",
+   "Y18-24"
+  ],
+  "src": "교안02",
+  "opts": [
+   "가, 라",
+   "나, 다",
+   "나, 라",
+   "가, 다, 라",
+   "나, 다, 라"
+  ],
+  "ans": 5
+ },
+ {
+  "id": "c2-05",
+  "ch": 2,
+  "ask": "옳은 것",
+  "stem": "다음 중 지방조직에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "백색지방세포는 하나의 큰 지방방울이 핵을 변두리로 밀어 반지세포 모양을 보인다.",
+    "ok": true,
+    "why": "단방성 세포로 핵이 주변부에 있다.",
+    "quote": "peripheral nucleus"
+   },
+   {
+    "k": "나",
+    "t": "갈색지방세포는 UCP-1(thermogenin)에 의해 ATP 대신 열을 만든다.",
+    "ok": true,
+    "why": "양성자 역류의 에너지가 열로 소실된다.",
+    "quote": "thermogenin"
+   },
+   {
+    "k": "다",
+    "t": "갈색지방조직은 혈관 분포가 빈약하다.",
+    "ok": false,
+    "why": "갈색지방조직은 혈관이 매우 풍부하다.",
+    "quote": "extremely rich blood supply."
+   },
+   {
+    "k": "라",
+    "t": "백색지방조직은 인슐린과 자율신경의 조절을 받는다.",
+    "ok": true,
+    "why": "호르몬·자율신경이 지방 저장과 동원을 조절한다.",
+    "quote": "regulated by hormone (insulin) and autonomic nerve"
+   }
+  ],
+  "basis": [
+   "Y22-13",
+   "2-03",
+   "Y061-e3"
+  ],
+  "src": "교안02",
+  "opts": [
+   "가, 라",
+   "나, 라",
+   "가, 나, 라",
+   "가, 다, 라",
+   "나, 다, 라"
+  ],
+  "ans": 3
+ },
+ {
+  "id": "c2-06",
+  "ch": 2,
+  "ask": "옳은 것",
+  "stem": "다음 중 결합조직의 기질과 관련 질환에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "괴혈병은 비타민 C 결핍으로 prolyl hydroxylase가 작동하지 못해 생긴다.",
+    "ok": true,
+    "why": "비타민 C는 prolyl hydroxylase의 필수 보조인자다.",
+    "quote": "Lack of vitamin C, a required cofactor for prolyl hydroxylase"
+   },
+   {
+    "k": "나",
+    "t": "Marfan 증후군은 fibrillin 유전자의 결함으로 생긴다.",
+    "ok": true,
+    "why": "fibrillin은 탄력섬유 미세섬유의 당단백질이다.",
+    "quote": "that codes for fibrillin."
+   },
+   {
+    "k": "다",
+    "t": "탯줄의 Wharton 젤리는 히알루론산이 풍부한 점액결합조직이다.",
+    "ok": true,
+    "why": "탯줄과 어린 치아의 치수가 점액결합조직이다.",
+    "quote": "the umbilical cord (Wharton’s jelly): rich hyaluronic acid"
+   },
+   {
+    "k": "라",
+    "t": "골수와 림프절의 기질은 치밀불규칙결합조직이다.",
+    "ok": false,
+    "why": "조혈·림프기관의 틀은 그물조직이다.",
+    "quote": "provide the architectural framework of the myeloid"
+   }
+  ],
+  "basis": [
+   "Ysmp-29",
+   "Ysmp-54",
+   "2-01"
+  ],
+  "src": "교안02",
+  "opts": [
+   "가, 나",
+   "가, 다",
+   "나, 다",
+   "다, 라",
+   "가, 나, 다"
+  ],
+  "ans": 5
+ },
+ {
+  "id": "c3-01",
+  "ch": 3,
+  "ask": "옳은 것",
+  "stem": "다음 중 근육 3종의 발생과 재생에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "골격근은 발생 중 수백 개의 myoblast가 융합하여 다핵의 근섬유가 된다.",
+    "ok": true,
+    "why": "골격근만 myoblast 융합(myotube)으로 다핵이 된다.",
+    "quote": "Fusion of hundreds myoblasts"
+   },
+   {
+    "k": "나",
+    "t": "골격근은 위성세포(satellite cell)가 활성화되어 손상 후 재생된다.",
+    "ok": true,
+    "why": "위성세포가 골격근 성장·재생을 담당한다.",
+    "quote": "Skeletal muscle: satellite cell"
+   },
+   {
+    "k": "다",
+    "t": "심근은 손상되면 위성세포가 근세포로 분화하여 재생한다.",
+    "ok": false,
+    "why": "심근은 재생되지 않고 섬유모세포 흉터조직으로 대체된다.",
+    "quote": "Cardiac muscle: scar tissue by fibroblast"
+   },
+   {
+    "k": "라",
+    "t": "심근은 근모세포 융합 없이 형성되며 세포당 핵이 1~2개이다.",
+    "ok": true,
+    "why": "심근은 융합하지 않아 핵이 1~2개다.",
+    "quote": "Cardiac muscle (1 or 2 nuclei)"
+   }
+  ],
+  "opts": [
+   "가, 나",
+   "가, 라",
+   "가, 나, 라",
+   "가, 다, 라",
+   "나, 다, 라"
+  ],
+  "ans": 3,
+  "basis": [
+   "Y08-5",
+   "3-01"
+  ],
+  "src": "교안03"
+ },
+ {
+  "id": "c3-02",
+  "ch": 3,
+  "ask": "옳은 것",
+  "stem": "다음 중 골격근의 근절(sarcomere)과 필라멘트에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "근절은 A band의 한쪽 끝에서 반대쪽 끝까지의 구간이다.",
+    "ok": false,
+    "why": "근절은 Z line에서 Z line까지(약 2.5 ㎛)이다.",
+    "quote": "Sarcomere (2.5 ㎛, Z line ~Z line)"
+   },
+   {
+    "k": "나",
+    "t": "F-actin은 지름 6 nm·길이 1.0 ㎛이고, myosin filament는 지름 15 nm·길이 1.5 ㎛이다.",
+    "ok": true,
+    "why": "얇은 필라멘트가 더 가늘고 짧다.",
+    "quote": "F-actin: 6 nm diameter, 1.0 ㎛ long"
+   },
+   {
+    "k": "다",
+    "t": "포유류 근원섬유에서 굵은 필라멘트 1개에 얇은 필라멘트 6개가 배열한다.",
+    "ok": true,
+    "why": "포유류는 굵은 1 : 얇은 6 배열이다.",
+    "quote": "1 thick filament + 6 thin filaments"
+   },
+   {
+    "k": "라",
+    "t": "A band는 편광에서 등방성(isotropic)을 보인다.",
+    "ok": false,
+    "why": "A band는 이방성(anisotropic), I band가 등방성이다.",
+    "quote": "A = A band (anisotropic in polarized light)"
+   }
+  ],
+  "opts": [
+   "가, 나",
+   "나, 다",
+   "나, 라",
+   "가, 나, 다",
+   "나, 다, 라"
+  ],
+  "ans": 2,
+  "basis": [
+   "3-07",
+   "3-02",
+   "Y22-26",
+   "Y21-26"
+  ],
+  "src": "교안03"
+ },
+ {
+  "id": "c3-03",
+  "ch": 3,
+  "ask": "옳은 것",
+  "stem": "다음 중 골격근의 흥분-수축 연결과 이완에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "신경종말에서 ACh 방출은 voltage-gated Na+ 채널을 통한 Na+ 유입으로 일어난다.",
+    "ok": false,
+    "why": "신경종말에서는 voltage-gated Ca2+ 채널이 열려 Ca2+가 유입된다.",
+    "quote": "opening of the voltage-gated Ca2+ channel in axon terminal"
+   },
+   {
+    "k": "나",
+    "t": "T소관은 세포 내 막 구조로 근세포막의 탈분극파를 안쪽으로 전도한다.",
+    "ok": true,
+    "why": "T소관은 세포 내 막으로 탈분극파를 전도한다.",
+    "quote": "conduct depolarizing waves"
+   },
+   {
+    "k": "다",
+    "t": "삼조체는 T소관 1개와 SR 종말조(terminal cisterna) 2개로 이루어진다.",
+    "ok": true,
+    "why": "삼조체 = T소관 1 + 종말조 2.",
+    "quote": "= one tubule + two terminal cisternae"
+   },
+   {
+    "k": "라",
+    "t": "이완 시 종말조의 Ca2+ pump가 Ca2+을 SR로 되돌리면 tropomyosin이 actin의 myosin 결합부위를 다시 가린다.",
+    "ok": true,
+    "why": "Ca2+ 재유입 → TnC에서 해리 → tropomyosin이 부위를 다시 가린다.",
+    "quote": "masking of myosin-binding sites in actin filament by"
+   }
+  ],
+  "opts": [
+   "나, 다",
+   "나, 라",
+   "다, 라",
+   "가, 나, 다",
+   "나, 다, 라"
+  ],
+  "ans": 5,
+  "basis": [
+   "3-04",
+   "Y22-21",
+   "Y17-b"
+  ],
+  "src": "교안03"
+ },
+ {
+  "id": "c3-04",
+  "ch": 3,
+  "ask": "옳은 것",
+  "stem": "다음 중 근육 내 고유감각수용기와 반사에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "근방추의 nuclear chain fiber는 extrafusal fiber에 속한다.",
+    "ok": false,
+    "why": "nuclear bag·chain fiber 모두 intrafusal fiber이다.",
+    "quote": "Intrafusal (muscle) fiber : 8~10 muscle fibers"
+   },
+   {
+    "k": "나",
+    "t": "골지건기관은 힘줄의 콜라겐 섬유 사이에서 장력을 감지한다.",
+    "ok": true,
+    "why": "골지건기관은 힘줄 장력 감지 기관이다.",
+    "quote": "Golgi tendon organ (between collagen fibers in tendon)"
+   },
+   {
+    "k": "다",
+    "t": "골지건기관 반사는 힘줄 장력이 커지면 α-운동뉴런을 흥분시켜 수축을 더 강화한다.",
+    "ok": false,
+    "why": "장력 증가 시 α-운동뉴런이 억제되어 근육이 이완된다.",
+    "quote": "inhibition of α-motor neuron"
+   },
+   {
+    "k": "라",
+    "t": "신장 반사(stretch reflex)에서 근방추의 Ia·II 감각섬유 자극은 척수 α-운동뉴런을 거쳐 extrafusal fiber 수축을 일으킨다.",
+    "ok": true,
+    "why": "근 신장 → Ia/II → 척수 α-운동뉴런 → 수축.",
+    "quote": "α-motor neurons in spinal cord"
+   }
+  ],
+  "opts": [
+   "나, 라",
+   "다, 라",
+   "가, 나, 다",
+   "가, 나, 라",
+   "나, 다, 라"
+  ],
+  "ans": 1,
+  "basis": [
+   "Y07-10",
+   "Y07-7",
+   "Y08-s6"
+  ],
+  "src": "교안03"
+ },
+ {
+  "id": "c3-05",
+  "ch": 3,
+  "ask": "옳은 것",
+  "stem": "다음 중 심근(cardiac muscle)에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "사이원반(intercalated disk)의 가로부분에는 desmosome과 fascia adherens가 있다.",
+    "ok": true,
+    "why": "가로부분은 세포 끝을 잇는 desmosome·fascia adherens이다.",
+    "quote": "desmosome, fascia adherens"
+   },
+   {
+    "k": "나",
+    "t": "사이원반의 가로부분에 gap junction이 집중되어 있다.",
+    "ok": false,
+    "why": "gap junction은 세로부분에 있다.",
+    "quote": "Lateral portion (세로부분) - gap junction"
+   },
+   {
+    "k": "다",
+    "t": "T소관은 굵고 SR 종말은 작아 삼조체가 아닌 이조체(diad)를 이룬다.",
+    "ok": true,
+    "why": "심근은 T소관 1 + 작은 SR 종말의 diad이다.",
+    "quote": "Not triad but diad"
+   },
+   {
+    "k": "라",
+    "t": "Purkinje 섬유는 심근세포보다 크고 연한 분홍색이며 근원섬유가 적다.",
+    "ok": true,
+    "why": "큰 특수 심근세포로 glycogen이 많고 근원섬유가 적다.",
+    "quote": "Striations: weak, poor myofibrils in cytoplasm"
+   }
+  ],
+  "opts": [
+   "가, 다",
+   "가, 라",
+   "다, 라",
+   "가, 다, 라",
+   "나, 다, 라"
+  ],
+  "ans": 4,
+  "basis": [
+   "3-01",
+   "3-05",
+   "3-06",
+   "Y21-29",
+   "Y202-24"
+  ],
+  "src": "교안03"
+ },
+ {
+  "id": "c3-06",
+  "ch": 3,
+  "ask": "옳지 않은 것",
+  "stem": "다음 중 평활근에 대한 설명으로 옳지 않은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "T소관 대신 세포막의 caveola가 존재한다.",
+    "ok": true,
+    "why": "평활근은 T소관 없이 caveola를 가진다.",
+    "quote": "No T-tubule but Caveola(e)"
+   },
+   {
+    "k": "나",
+    "t": "Ca2+가 calmodulin에 결합하고 myosin light chain kinase가 활성화되어 수축이 시작된다.",
+    "ok": true,
+    "why": "평활근은 troponin 대신 calmodulin-MLCK 경로를 쓴다.",
+    "quote": "Ca 2+ binds to Calmodulin"
+   },
+   {
+    "k": "다",
+    "t": "dense body는 troponin이 풍부한 구조로 actin 필라멘트가 부착한다.",
+    "ok": false,
+    "why": "dense body는 α-actinin이 풍부하다(troponin 없음).",
+    "quote": "α-actinin-rich electron dense structures"
+   },
+   {
+    "k": "라",
+    "t": "multiunit 평활근은 gap junction으로 연결되어 파상수축(peristalsis)을 일으킨다.",
+    "ok": false,
+    "why": "파상수축은 single-unit형이고 multiunit은 세포마다 신경이 분포한다.",
+    "quote": "Each cell innervated by a nerve"
+   }
+  ],
+  "opts": [
+   "가, 다",
+   "다, 라",
+   "가, 나, 다",
+   "가, 다, 라",
+   "나, 다, 라"
+  ],
+  "ans": 2,
+  "basis": [
+   "Y21-27",
+   "Y062-03",
+   "Y08-s1"
+  ],
+  "src": "교안03"
+ },
+ {
+  "id": "c4-01",
+  "ch": 4,
+  "ask": "옳은 것",
+  "stem": "다음 중 연골의 일반 특성에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "혈관·신경·림프관이 없어 기질 내 물을 통한 확산으로 영양을 받는다.",
+    "ok": true,
+    "why": "연골은 무혈관·무신경·무림프관이다.",
+    "quote": "No blood vessel (nourishment: diffusion through the water in matrix)"
+   },
+   {
+    "k": "나",
+    "t": "관절연골은 유리연골이지만 연골막이 없다.",
+    "ok": true,
+    "why": "관절연골은 연골막이 없는 유리연골이다.",
+    "quote": "Hyaline cartilage, without perichondrium"
+   },
+   {
+    "k": "다",
+    "t": "섬유연골은 연골막으로 싸여 있다.",
+    "ok": false,
+    "why": "섬유연골은 연골막이 없다.",
+    "quote": "No perichondrium"
+   },
+   {
+    "k": "라",
+    "t": "탄력연골은 II형 콜라겐 없이 elastic fiber만으로 이루어진다.",
+    "ok": false,
+    "why": "탄력연골은 II형 콜라겐 + elastic fiber이다.",
+    "quote": "Elastic cartilage: collagen type II + elastic fiber"
+   }
+  ],
+  "opts": [
+   "가, 나",
+   "가, 다",
+   "가, 라",
+   "가, 나, 다",
+   "가, 나, 라"
+  ],
+  "ans": 1,
+  "basis": [
+   "4-01",
+   "4-02",
+   "Y22-42",
+   "Y22-47"
+  ],
+  "src": "교안03"
+ },
+ {
+  "id": "c4-02",
+  "ch": 4,
+  "ask": "옳은 것",
+  "stem": "다음 중 연골의 종류와 분포에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "탄력연골은 연골막이 없다.",
+    "ok": false,
+    "why": "탄력연골은 연골막이 있고, 바깥 섬유층에 elastic fiber가 많다.",
+    "quote": "More in outer fibrous layer of perichondrium"
+   },
+   {
+    "k": "나",
+    "t": "외이도·이관·귓바퀴는 탄력연골로 이루어진다.",
+    "ok": true,
+    "why": "귓바퀴, 외이도, 이관, 후두덮개는 탄력연골이다.",
+    "quote": "Auricle, external auditory canal, eustachian tube,"
+   },
+   {
+    "k": "다",
+    "t": "섬유연골은 치밀결합조직 또는 유리연골과 함께 존재한다.",
+    "ok": true,
+    "why": "섬유연골은 항상 dense C-T나 유리연골과 연관된다.",
+    "quote": "Associated with dense C-T and hyaline cartilage"
+   },
+   {
+    "k": "라",
+    "t": "추간판의 수핵(nucleus pulposus)은 척삭(notochord) 세포에서 유래한다.",
+    "ok": true,
+    "why": "수핵은 척삭 유래이고 hyaluronic acid가 풍부하다.",
+    "quote": "From cells of notochord"
+   }
+  ],
+  "opts": [
+   "나, 다",
+   "나, 라",
+   "다, 라",
+   "가, 나, 다",
+   "나, 다, 라"
+  ],
+  "ans": 5,
+  "basis": [
+   "4-04",
+   "4-09",
+   "Y07-13",
+   "Y20K-k"
+  ],
+  "src": "교안03"
+ },
+ {
+  "id": "c4-03",
+  "ch": 4,
+  "ask": "옳은 것",
+  "stem": "다음 중 유리연골의 기질에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "세포영역기질(territorial matrix)은 chondroitin sulfate가 풍부하고 collagen이 적다.",
+    "ok": true,
+    "why": "세포 주변 약 50 μm 띠로 CS 풍부·collagen 빈약이다.",
+    "quote": "Territorial matrix : 50 μm band, rich chondriotin sulfate, poor in collagen"
+   },
+   {
+    "k": "나",
+    "t": "세포간영역기질(interterritorial matrix)은 세포영역기질보다 proteoglycan이 더 풍부하다.",
+    "ok": false,
+    "why": "세포간영역기질은 II형 collagen이 더 많고 proteoglycan이 적다.",
+    "quote": "Interterritorial matrix :richer type II collagen, poorer proteoglycans"
+   },
+   {
+    "k": "다",
+    "t": "주된 proteoglycan은 aggrecan이며 GAG로 chondroitin sulfate와 keratan sulfate를 가진다.",
+    "ok": true,
+    "why": "aggrecan의 GAG는 C4S, C6S, keratan sulfate이다.",
+    "quote": "Proteoglycan (especially aggrecan)"
+   },
+   {
+    "k": "라",
+    "t": "연골은 연골막 쪽에서 첨가성 성장, 내부에서 간질성 성장을 한다.",
+    "ok": true,
+    "why": "첨가성은 연골막에서, 간질성은 내부에서 일어난다.",
+    "quote": "Appositional growth : at perichondrium"
+   }
+  ],
+  "opts": [
+   "가, 다",
+   "가, 라",
+   "다, 라",
+   "가, 다, 라",
+   "나, 다, 라"
+  ],
+  "ans": 4,
+  "basis": [
+   "4-03",
+   "Ysmp-17",
+   "Y07-12"
+  ],
+  "src": "교안03"
+ },
+ {
+  "id": "c4-04",
+  "ch": 4,
+  "ask": "옳은 것",
+  "stem": "다음 중 뼈 조직에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "뼈 기질의 유기질은 주로 I형 collagen(80~90%)이다.",
+    "ok": true,
+    "why": "뼈 유기질 섬유는 I형 collagen이다.",
+    "quote": "fiber : type I collagen (80~90% )"
+   },
+   {
+    "k": "나",
+    "t": "미성숙한 woven bone은 세포가 많고 섬유다발이 불규칙하며 덜 석회화되어 있다.",
+    "ok": true,
+    "why": "primary bone은 세포 많고 불규칙, 석회화 적다.",
+    "quote": "More cells, irregular fiber bundles"
+   },
+   {
+    "k": "다",
+    "t": "골내막(endosteum)은 해면뼈의 trabeculae 표면도 덮는다.",
+    "ok": true,
+    "why": "골내막은 compact bone 내면과 trabeculae를 덮는다.",
+    "quote": "Covers trabeculae"
+   },
+   {
+    "k": "라",
+    "t": "뼈막(periosteum)은 석회화된 조직이다.",
+    "ok": false,
+    "why": "뼈막은 석회화되지 않은 조직이다.",
+    "quote": "Non-calcified tissue"
+   }
+  ],
+  "opts": [
+   "가, 나",
+   "가, 다",
+   "나, 다",
+   "가, 나, 다",
+   "가, 나, 라"
+  ],
+  "ans": 4,
+  "basis": [
+   "4-07",
+   "Y07-b9",
+   "Y22-41"
+  ],
+  "src": "교안03"
+ },
+ {
+  "id": "c4-05",
+  "ch": 4,
+  "ask": "옳지 않은 것",
+  "stem": "다음 중 뼈 관련 세포에 대한 설명으로 옳지 않은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "골모세포는 RANKL을 분비하여 파골세포 형성을 촉진한다.",
+    "ok": true,
+    "why": "RANKL은 osteoclast 형성 촉진 인자이다.",
+    "quote": "RANKL (osteoclast stimulating factor)"
+   },
+   {
+    "k": "나",
+    "t": "파골세포는 PTH 수용체를 가져 PTH에 직접 반응한다.",
+    "ok": false,
+    "why": "파골세포에는 PTH 수용체가 없다(골모세포가 반응).",
+    "quote": "Not for PTH"
+   },
+   {
+    "k": "다",
+    "t": "뼈세포(osteocyte)는 분열하여 골모세포를 보충한다.",
+    "ok": false,
+    "why": "뼈세포는 분열하지 못한다.",
+    "quote": "can not divide"
+   },
+   {
+    "k": "라",
+    "t": "파골세포는 세포 융합으로 핵이 5~50개이며 Howship 소와에 위치한다.",
+    "ok": true,
+    "why": "다핵 거대세포로 Howship's lacuna에 있다.",
+    "quote": "Many nuclei (5~50) by cell fusion"
+   }
+  ],
+  "opts": [
+   "가, 나",
+   "나, 다",
+   "나, 라",
+   "가, 나, 다",
+   "나, 다, 라"
+  ],
+  "ans": 2,
+  "basis": [
+   "4-08",
+   "4-06",
+   "Y07-b3",
+   "Y21-50"
+  ],
+  "src": "교안03"
+ },
+ {
+  "id": "c4-06",
+  "ch": 4,
+  "ask": "옳은 것",
+  "stem": "다음 중 뼈의 발생과 석회화에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "막내뼈형성에서는 중간엽 세포가 직접 골모세포로 분화하여 뼈를 만든다.",
+    "ok": true,
+    "why": "연골 모형 없이 중간엽 세포 → 골모세포이다.",
+    "quote": "Mesenchymal cells become osteoblasts"
+   },
+   {
+    "k": "나",
+    "t": "연골내뼈형성에서 뼈 테두리(bone collar)는 막내뼈형성 방식으로 생긴 primary bone이다.",
+    "ok": true,
+    "why": "뼈막 아래 bone collar는 막내뼈형성으로 만들어진다.",
+    "quote": "The subperiosteal bone collar is formed of primary bone (intramembranous bone formation)"
+   },
+   {
+    "k": "다",
+    "t": "성장판에서 동형세포집단을 이루며 증식하는 층은 비대구역이다.",
+    "ok": false,
+    "why": "동형세포집단은 증식구역(proliferative zone)이다.",
+    "quote": "Proliferative zone – Isogenous cell group"
+   },
+   {
+    "k": "라",
+    "t": "기질소포(matrix vesicle)는 골모세포가 분비하는 100~200 nm 소포로 석회화를 시작한다.",
+    "ok": true,
+    "why": "matrix vesicle은 Ca2+·ALP를 가진 소포로 석회화 유도.",
+    "quote": "100~200nm in diameter,"
+   }
+  ],
+  "opts": [
+   "가, 나",
+   "가, 라",
+   "가, 나, 라",
+   "가, 다, 라",
+   "나, 다, 라"
+  ],
+  "ans": 3,
+  "basis": [
+   "4-05",
+   "Y07-b4",
+   "Y07-s3",
+   "Y061-s4"
+  ],
+  "src": "교안03"
+ },
+ {
+  "id": "c5-01",
+  "ch": 5,
+  "ask": "옳은 것",
+  "stem": "다음 중 면역글로불린(항체)에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "IgG는 태반을 통과할 수 있는 유일한 항체로 태아에게 수동면역을 준다.",
+    "ok": true,
+    "why": "IgG만 태반을 통과해 태아 수동면역을 준다.",
+    "quote": "the only antibody capable of crossing the placenta to give passive immunity to the fetus."
+   },
+   {
+    "k": "나",
+    "t": "IgM은 1차 면역반응에서 가장 먼저 만들어지는 isotype이다.",
+    "ok": true,
+    "why": "IgM은 IgG가 충분해지기 전 초기 체액성 면역을 담당한다.",
+    "quote": "the first isotype to be formed in the primary immune response"
+   },
+   {
+    "k": "다",
+    "t": "혈액 내 비율이 가장 높은 면역글로불린은 IgA이다.",
+    "ok": false,
+    "why": "혈중 약 80%로 가장 많은 것은 IgG이다.",
+    "quote": "provides the majority of antibody-based immunity against invading pathogens."
+   },
+   {
+    "k": "라",
+    "t": "IgE는 비만세포·호염기구에서 히스타민 분비를 유발해 즉시형 과민반응에 관여한다.",
+    "ok": true,
+    "why": "IgE는 allergen 결합 후 mast cell 탈과립을 일으킨다.",
+    "quote": "Binds to allergens and triggers histamine release from mast cells and basophils"
+   }
+  ],
+  "opts": [
+   "가, 나",
+   "가, 다",
+   "나, 라",
+   "가, 나, 다",
+   "가, 나, 라"
+  ],
+  "ans": 5,
+  "basis": [
+   "5-07",
+   "Y18-01",
+   "Y21-60-b"
+  ],
+  "src": "교안05"
+ },
+ {
+  "id": "c5-02",
+  "ch": 5,
+  "ask": "옳은 것",
+  "stem": "다음 중 가슴샘(thymus)에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "혈액-가슴샘 장벽은 피질에 있으며 수질에는 없다.",
+    "ok": true,
+    "why": "BTB는 피질 한정이고 수질에는 없다.",
+    "quote": "No blood-thymus barrier"
+   },
+   {
+    "k": "나",
+    "t": "Hassall 소체는 수질에서 관찰되며 그 수는 나이가 들수록 증가한다.",
+    "ok": true,
+    "why": "Hassall 소체는 수질의 특징이고 나이와 함께 늘어난다.",
+    "quote": "Number is increased with a person's age"
+   },
+   {
+    "k": "다",
+    "t": "가슴샘의 그물세포는 중간엽 기원이며 그물섬유를 만든다.",
+    "ok": false,
+    "why": "가슴샘은 상피그물세포(상피 기원, keratin)로 이뤄진다.",
+    "quote": "Cellular Reticulum : Epithelial Reticular Cell"
+   },
+   {
+    "k": "라",
+    "t": "피질에서는 발생 중인 T세포의 약 2%만 사멸하고 대부분 수질로 이동한다.",
+    "ok": false,
+    "why": "실제로는 약 98%가 피질에서 사멸하고 소수만 생존한다.",
+    "quote": "Cell death in the cortex : 98% of developing T cells"
+   }
+  ],
+  "opts": [
+   "가, 나",
+   "가, 다",
+   "나, 라",
+   "가, 나, 다",
+   "가, 나, 라"
+  ],
+  "ans": 1,
+  "basis": [
+   "5-03",
+   "5-04",
+   "Y21-55"
+  ],
+  "src": "교안05"
+ },
+ {
+  "id": "c5-03",
+  "ch": 5,
+  "ask": "옳은 것",
+  "stem": "다음 중 림프절(lymph node)에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "높은내피세정맥(HEV)은 곁질(paracortex)에 있으며 입방내피로 이루어진다.",
+    "ok": true,
+    "why": "HEV는 paracortex의 입방내피 세정맥이다.",
+    "quote": "simple cuboidal endothelium-lined"
+   },
+   {
+    "k": "나",
+    "t": "림프는 수질굴에서 피질굴·피막밑굴 순으로 흘러 수출림프관으로 나간다.",
+    "ok": false,
+    "why": "순서는 수입관→피막밑굴→피질굴→수질굴→수출관이다.",
+    "quote": "afferent lymph vessels"
+   },
+   {
+    "k": "다",
+    "t": "2차 림프소절의 배중심(germinal center)은 연하게 염색되며 B 기억세포와 형질세포가 생성된다.",
+    "ok": true,
+    "why": "배중심은 B세포 증식·분화(기억·형질세포)의 장이다.",
+    "quote": "sites of B memory cell and plasma cell generation"
+   },
+   {
+    "k": "라",
+    "t": "곁질(paracortex)은 대부분 T세포로 이루어진 가슴샘의존구역이다.",
+    "ok": true,
+    "why": "paracortex는 thymus-dependent zone이다.",
+    "quote": "mostly T cells and the thymus-dependent zone of the lymph node"
+   }
+  ],
+  "opts": [
+   "가, 라",
+   "다, 라",
+   "가, 나, 라",
+   "가, 다, 라",
+   "나, 다, 라"
+  ],
+  "ans": 4,
+  "basis": [
+   "5-01",
+   "5-02",
+   "Y21-51"
+  ],
+  "src": "교안05"
+ },
+ {
+  "id": "c5-04",
+  "ch": 5,
+  "ask": "옳지 않은 것",
+  "stem": "다음 중 비장(spleen)에 대한 설명으로 옳지 않은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "동맥주위림프초(PALS)는 중심동맥을 둘러싸는 T림프구 집단이다.",
+    "ok": true,
+    "why": "PALS는 central arteriole 주위의 T세포 영역이다.",
+    "quote": "surrounds the central arteriole"
+   },
+   {
+    "k": "나",
+    "t": "Billroth 삭(비장삭)은 백색수질에 속한다.",
+    "ok": false,
+    "why": "비장삭은 비장동과 함께 적색수질을 이룬다.",
+    "quote": "composed of a loose network of reticular"
+   },
+   {
+    "k": "다",
+    "t": "비장동의 내피는 기저판이 연속적이어서 혈구가 통과하지 못한다.",
+    "ok": false,
+    "why": "비장동은 불연속 기저판을 가져 혈구가 통과한다.",
+    "quote": "a discontinuous basal lamina"
+   },
+   {
+    "k": "라",
+    "t": "비장은 노화된 혈소판과 적혈구를 파괴한다.",
+    "ok": true,
+    "why": "비장의 기능 중 하나이다.",
+    "quote": "destroys aged platelets and erythrocytes"
+   }
+  ],
+  "opts": [
+   "가, 나",
+   "가, 다",
+   "가, 라",
+   "나, 다",
+   "가, 나, 다"
+  ],
+  "ans": 4,
+  "basis": [
+   "Y22-54",
+   "Y21-57",
+   "Y202-57"
+  ],
+  "src": "교안05"
+ },
+ {
+  "id": "c5-05",
+  "ch": 5,
+  "ask": "옳은 것",
+  "stem": "다음 중 T세포·항원제시세포·MHC에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "CD4 보조 T세포는 MHC I 복합체를 인식한다.",
+    "ok": false,
+    "why": "CD4는 MHC II, CD8(세포독성 T)이 MHC I을 인식한다.",
+    "quote": "Coreceptor for TCR binding to MHC II-epitope complex"
+   },
+   {
+    "k": "나",
+    "t": "항원제시세포는 항원을 탐식·분해해 epitope-MHC II 복합체를 T세포에 제시한다.",
+    "ok": true,
+    "why": "APC의 핵심 기능이다.",
+    "quote": "Present MHC II-epitope complex to T cells."
+   },
+   {
+    "k": "다",
+    "t": "B세포는 비단핵구 유래 항원제시세포로 MHC I과 II를 모두 가질 수 있다.",
+    "ok": true,
+    "why": "B세포와 가슴샘 상피그물세포는 비단핵구 유래 APC이다.",
+    "quote": "B cells and epithelial reticular cells of the thymus."
+   },
+   {
+    "k": "라",
+    "t": "호중구는 세포 표면에 MHC I과 MHC II를 모두 가질 수 있다.",
+    "ok": false,
+    "why": "MHC II는 APC에만 있고 호중구는 APC가 아니다.",
+    "quote": "APCs : MHC I and II proteins"
+   }
+  ],
+  "opts": [
+   "가, 나",
+   "가, 다",
+   "나, 다",
+   "가, 나, 다",
+   "가, 다, 라"
+  ],
+  "ans": 3,
+  "basis": [
+   "5-06",
+   "5-08",
+   "Y22-59"
+  ],
+  "src": "교안05"
+ },
+ {
+  "id": "c5-06",
+  "ch": 5,
+  "ask": "옳은 것",
+  "stem": "다음 중 점막연관림프조직(MALT)과 편도에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "Peyer판에는 수입림프관이 없고 수출림프관만 있다.",
+    "ok": true,
+    "why": "Peyer판과 BALT는 afferent lymphatic vessel이 없다.",
+    "quote": "no afferent lymphatic vessels"
+   },
+   {
+    "k": "나",
+    "t": "M세포는 항원을 epitope로 먼저 처리한 뒤에 제시한다.",
+    "ok": false,
+    "why": "M세포는 처리 과정 없이 항원을 제시한다.",
+    "quote": "Antigen presenting cells (without"
+   },
+   {
+    "k": "다",
+    "t": "구개편도는 비각질 중층편평상피로 덮이고 깊은 음와(crypt)를 가진다.",
+    "ok": true,
+    "why": "구개편도의 상피는 비각질 중층편평상피이다.",
+    "quote": "nonkeratinized stratified squamous epithelium"
+   },
+   {
+    "k": "라",
+    "t": "인두편도는 구개편도처럼 깊은 음와를 가지고 중층편평상피로만 덮인다.",
+    "ok": false,
+    "why": "인두편도는 얕은 주름과 거짓중층섬모원주상피를 가진다.",
+    "quote": "Instead of crypts, the shallow, longitudinal infoldings"
+   }
+  ],
+  "opts": [
+   "가, 다",
+   "가, 라",
+   "나, 다",
+   "가, 나, 다",
+   "가, 다, 라"
+  ],
+  "ans": 1,
+  "basis": [
+   "Y22-76",
+   "Y21-56",
+   "Y08-3"
+  ],
+  "src": "교안05"
+ },
+ {
+  "id": "c6-01",
+  "ch": 6,
+  "ask": "옳은 것",
+  "stem": "다음 중 혈관벽의 영양 공급과 신경 분포에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "tunica intima는 내강의 혈액에서 확산으로 영양을 받는다.",
+    "ok": true,
+    "why": "intima는 확산, media·adventitia는 vasa vasorum이 공급한다.",
+    "quote": "Tunica intima: diffusion from the lumen of vessels"
+   },
+   {
+    "k": "나",
+    "t": "맥관벽혈관(vasa vasorum)은 동맥보다 정맥에서 더 흔히 관찰된다.",
+    "ok": true,
+    "why": "vasa vasorum은 Vein > artery로 많다.",
+    "quote": "often in Vein > artery"
+   },
+   {
+    "k": "다",
+    "t": "동맥의 혈관운동 교감신경은 tunica media 안쪽까지 직접 분포한다.",
+    "ok": false,
+    "why": "동맥에서는 adventitia에만 있고 신경전달물질이 media로 확산된다.",
+    "quote": "In artery: only in Tunica adventitia"
+   },
+   {
+    "k": "라",
+    "t": "아세틸콜린은 모든 혈관에서 평활근을 수축시킨다.",
+    "ok": false,
+    "why": "수축은 norepinephrine이고 ACh는 골격근 혈관을 확장시킨다.",
+    "quote": "Acetylcholine (cholinergic vasodilator nerve) in skeletal"
+   }
+  ],
+  "opts": [
+   "가, 나",
+   "가, 다",
+   "가, 라",
+   "가, 나, 다",
+   "가, 다, 라"
+  ],
+  "ans": 1,
+  "basis": [
+   "6-03",
+   "6-05",
+   "Y21-69"
+  ],
+  "src": "교안05"
+ },
+ {
+  "id": "c6-02",
+  "ch": 6,
+  "ask": "옳은 것",
+  "stem": "다음 중 동맥의 구조에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "내탄력막은 근육동맥에서 가장 잘 발달한다.",
+    "ok": true,
+    "why": "internal elastic lamina는 muscular artery에서 뚜렷하다.",
+    "quote": "well-developed in muscular arteries"
+   },
+   {
+    "k": "나",
+    "t": "탄력동맥 tunica media의 탄성판 층수는 신생아 약 40층에서 성인 약 70층으로 늘어난다.",
+    "ok": true,
+    "why": "탄력동맥 탄성판은 나이와 함께 증가한다.",
+    "quote": "40 layers in neonate"
+   },
+   {
+    "k": "다",
+    "t": "소동맥(arteriole)의 tunica media는 평활근이 약 40층이다.",
+    "ok": false,
+    "why": "소동맥의 media는 평활근 1~2층이다(40층은 근육동맥).",
+    "quote": "1~2 layer of smooth muscle"
+   },
+   {
+    "k": "라",
+    "t": "tunica media의 평활근세포는 탄성섬유·그물섬유·proteoglycan 등을 분비한다.",
+    "ok": true,
+    "why": "media의 기질 성분은 평활근세포가 분비한다.",
+    "quote": "elastic fibers, reticular fiber, proteoglycans,"
+   }
+  ],
+  "opts": [
+   "가, 나",
+   "가, 나, 다",
+   "가, 나, 라",
+   "가, 다, 라",
+   "나, 다, 라"
+  ],
+  "ans": 3,
+  "basis": [
+   "6-08",
+   "Y21-66",
+   "Y062-09"
+  ],
+  "src": "교안05"
+ },
+ {
+  "id": "c6-03",
+  "ch": 6,
+  "ask": "옳은 것",
+  "stem": "다음 중 모세혈관과 혈관주위세포에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "연속 모세혈관은 기저판이 불연속적이다.",
+    "ok": false,
+    "why": "연속 모세혈관은 연속 기저판을 가진다(불연속은 동모양).",
+    "quote": "a continuous basal lamina"
+   },
+   {
+    "k": "나",
+    "t": "동모양 모세혈관의 큰 창(fenestra)에는 격막(diaphragm)이 없다.",
+    "ok": true,
+    "why": "sinusoidal capillary는 diaphragm 없는 큰 fenestra를 가진다.",
+    "quote": "many large fenestrae that lack diaphragms"
+   },
+   {
+    "k": "다",
+    "t": "유창 모세혈관은 내분비샘, 장, 신장 사구체에 분포한다.",
+    "ok": true,
+    "why": "visceral capillary의 분포 부위이다.",
+    "quote": "locate in endocrine glands, intestine, glomeruli of the"
+   },
+   {
+    "k": "라",
+    "t": "혈관주위세포는 내배엽 세포에서 유래한다.",
+    "ok": false,
+    "why": "혈관주위세포는 중간엽 세포에서 유래한다.",
+    "quote": "Mesenchymal cell origin"
+   }
+  ],
+  "opts": [
+   "가, 나",
+   "나, 다",
+   "가, 나, 다",
+   "가, 다, 라",
+   "나, 다, 라"
+  ],
+  "ans": 2,
+  "basis": [
+   "6-04",
+   "6-06",
+   "Y21-60-a"
+  ],
+  "src": "교안05"
+ },
+ {
+  "id": "c6-04",
+  "ch": 6,
+  "ask": "옳지 않은 것",
+  "stem": "다음 중 혈관과 미세순환에 대한 설명으로 옳지 않은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "정맥은 전체 혈액량의 약 70%를 담고 있다.",
+    "ok": true,
+    "why": "정맥은 용량혈관으로 혈액의 약 70%를 보유한다.",
+    "quote": "Contain about 70% of the blood total volume at any time"
+   },
+   {
+    "k": "나",
+    "t": "대정맥과 폐정맥의 tunica adventitia에는 심근이 관찰된다.",
+    "ok": true,
+    "why": "큰 정맥의 외막에는 심근이 있다.",
+    "quote": "Possess cardiac muscle in the adventitia"
+   },
+   {
+    "k": "다",
+    "t": "소동맥(arteriole)은 혈압 조절보다 물질 교환이 주된 기능이다.",
+    "ok": false,
+    "why": "소동맥은 혈압 조절을 담당하고 물질 교환은 모세혈관에서 일어난다.",
+    "quote": "regulate blood pressure"
+   },
+   {
+    "k": "라",
+    "t": "동정맥문합은 모세혈관상을 거쳐 소동맥과 소정맥을 연결한다.",
+    "ok": false,
+    "why": "동정맥문합은 모세혈관상을 우회해 직접 연결한다.",
+    "quote": "directly connect arterioles to venules, bypassing the capillary bed"
+   }
+  ],
+  "opts": [
+   "가, 다",
+   "다, 라",
+   "가, 나, 다",
+   "가, 다, 라",
+   "나, 다, 라"
+  ],
+  "ans": 2,
+  "basis": [
+   "6-02",
+   "Y17-i",
+   "Y202-67"
+  ],
+  "src": "교안05"
+ },
+ {
+  "id": "c6-05",
+  "ch": 6,
+  "ask": "옳은 것",
+  "stem": "다음 중 심장의 구조와 전도계에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "심내막은 혈관의 tunica intima와 연속된다.",
+    "ok": true,
+    "why": "endocardium-intima, myocardium-media, epicardium-adventitia가 대응한다.",
+    "quote": "continuous with the tunica intima"
+   },
+   {
+    "k": "나",
+    "t": "Purkinje 섬유는 심내막하층에 있으며 근원섬유가 적은 크고 변형된 심근세포이다.",
+    "ok": true,
+    "why": "Purkinje 섬유는 미토콘드리아·글리코겐이 풍부하고 근원섬유가 주변부에만 있다.",
+    "quote": "poor myofibril only in periphery of cells"
+   },
+   {
+    "k": "다",
+    "t": "동방결절(SA node)은 우심방 벽에 위치하는 심장의 박동조율기이다.",
+    "ok": true,
+    "why": "SA node가 pacemaker이다.",
+    "quote": "the pacemaker of the heart,"
+   },
+   {
+    "k": "라",
+    "t": "심외막은 심낭의 벽측판에 해당한다.",
+    "ok": false,
+    "why": "심외막은 심낭의 장측판(visceral layer)이다.",
+    "quote": "the outermost layer of the heart (visceral layer of the pericardium)"
+   }
+  ],
+  "opts": [
+   "가, 나",
+   "가, 다",
+   "가, 라",
+   "나, 다",
+   "가, 나, 다"
+  ],
+  "ans": 5,
+  "basis": [
+   "6-01",
+   "Y22-64",
+   "Y062-04b"
+  ],
+  "src": "교안05"
+ },
+ {
+  "id": "c6-06",
+  "ch": 6,
+  "ask": "옳은 것",
+  "stem": "다음 중 혈관의 감각수용기와 내피세포·모세혈관의 기능에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "경동맥동(carotid sinus)의 압수용기는 혈압 변화에 반응한다.",
+    "ok": true,
+    "why": "carotid sinus의 baroreceptor는 혈압 변화를 감지한다.",
+    "quote": "respond to changes in blood pressure"
+   },
+   {
+    "k": "나",
+    "t": "경동맥소체(carotid body)는 혈압 변화를 감지하는 압수용기이다.",
+    "ok": false,
+    "why": "경동맥소체는 O2·CO2·pH를 감지하는 화학수용기이다.",
+    "quote": "respond to changes in the blood levels of oxygen and carbon dioxide"
+   },
+   {
+    "k": "다",
+    "t": "폐 모세혈관에서는 활성형 angiotensin II가 불활성형 angiotensin I로 전환된다.",
+    "ok": false,
+    "why": "반대로 불활성 angiotensin I이 활성 angiotensin II로 전환된다.",
+    "quote": "Convension of inactive angiotensin I to active"
+   },
+   {
+    "k": "라",
+    "t": "내피세포 사이에는 밀착연접이 있고 일부 데스모솜·간극연접도 있다.",
+    "ok": true,
+    "why": "내피세포 연접의 구성이다.",
+    "quote": "tight junction, some desmosomes and gap junctions"
+   }
+  ],
+  "opts": [
+   "가, 다",
+   "가, 라",
+   "다, 라",
+   "가, 나, 라",
+   "가, 다, 라"
+  ],
+  "ans": 2,
+  "basis": [
+   "Y062-s5",
+   "Y202-62",
+   "Y062-12"
+  ],
+  "src": "교안05"
+ },
+ {
+  "id": "c7-01",
+  "ch": 7,
+  "ask": "옳은 것",
+  "stem": "신경원 세포체와 축삭의 세포소기관에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "Nissl 소체(r-ER)는 축삭둔덕까지 풍부하게 분포해 그곳에서도 단백질 합성이 활발하다.",
+    "ok": false,
+    "why": "Nissl 소체는 축삭둔덕에 없다(세포체·가지돌기에만).",
+    "quote": "not in axon hillock"
+   },
+   {
+    "k": "나",
+    "t": "축삭에는 단백질 합성 장치가 없어 신경전달물질·효소·막단백질은 축삭수송으로 공급된다.",
+    "ok": true,
+    "why": "합성은 세포체, 축삭은 수송으로 공급받는다.",
+    "quote": "no protein-synthesizing assembly in axon"
+   },
+   {
+    "k": "다",
+    "t": "미토콘드리아는 Na+/K+ 펌프와 축삭수송에 쓰이는 에너지원이다.",
+    "ok": true,
+    "why": "신경원 미토콘드리아는 이온 교환·축삭수송의 에너지원이다.",
+    "quote": "energy source for ion exchange (Na+/K+ exchange pump)"
+   },
+   {
+    "k": "라",
+    "t": "활면소포체(s-ER)는 세포체에만 있고 축삭과 가지돌기에는 없다.",
+    "ok": false,
+    "why": "s-ER은 축삭·가지돌기에 풍부하다(순행성 수송).",
+    "quote": "s-ER ; abundant in axon and dendrites, for anterograde transfer"
+   }
+  ],
+  "opts": [
+   "가, 나",
+   "가, 다",
+   "나, 다",
+   "가, 나, 다",
+   "나, 다, 라"
+  ],
+  "ans": 3,
+  "basis": [
+   "7-01",
+   "Y21-37",
+   "Y07-n3"
+  ],
+  "src": "교안04(2026판)"
+ },
+ {
+  "id": "c7-02",
+  "ch": 7,
+  "ask": "옳은 것",
+  "stem": "축삭과 가지돌기의 비교에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "한 신경원에서 축삭은 하나이고 가지돌기는 여러 개일 수 있다.",
+    "ok": true,
+    "why": "축삭 1개, 가지돌기 0·1·여러 개.",
+    "quote": "number 1 multiple (0, 1, or more)"
+   },
+   {
+    "k": "나",
+    "t": "말이집은 가지돌기에는 연결될 수 있으나 축삭에는 연결되지 않는다.",
+    "ok": false,
+    "why": "반대로 말이집은 축삭에만 연결 가능하다.",
+    "quote": "myelin sheath could be associated not associated"
+   },
+   {
+    "k": "다",
+    "t": "가지돌기 가시(spine)는 가지돌기에 있을 수 있으나 축삭에는 없다.",
+    "ok": true,
+    "why": "dendritic spine: 축삭 absent, 가지돌기 could be present.",
+    "quote": "dendritic spine absent could be present"
+   },
+   {
+    "k": "라",
+    "t": "거짓단극 신경원은 예외적으로 축삭 말단에서 세포체 방향의 구심성 전도를 한다.",
+    "ok": true,
+    "why": "거짓단극은 axon terminal→soma(afferent)인 예외다.",
+    "quote": "Afferent: axon terminal"
+   }
+  ],
+  "opts": [
+   "가, 다, 라",
+   "가, 다",
+   "가, 라",
+   "다, 라",
+   "가, 나, 다"
+  ],
+  "ans": 1,
+  "basis": [
+   "7-03",
+   "7-05",
+   "Y21-36"
+  ],
+  "src": "교안04(2026판)"
+ },
+ {
+  "id": "c7-03",
+  "ch": 7,
+  "ask": "옳은 것",
+  "stem": "중추신경계 신경아교세포에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "원형질성 별아교세포는 회색질에, 섬유성 별아교세포는 백색질에 주로 분포한다.",
+    "ok": true,
+    "why": "protoplasmic=gray matter, fibrous=white matter.",
+    "quote": "Protoplasmic Astrocyte: in Gray Matter"
+   },
+   {
+    "k": "나",
+    "t": "혈액-뇌장벽은 분자량 500 dalton 이상의 큰 물질만 선택적으로 통과시킨다.",
+    "ok": false,
+    "why": "BBB는 MW 500 dalton 미만만 통과시킨다.",
+    "quote": "(MW < 500 dalton)"
+   },
+   {
+    "k": "다",
+    "t": "미세아교세포는 혈액 단핵구에서 유래한 대식세포로 염증 시 증가한다.",
+    "ok": true,
+    "why": "microglia의 기원은 blood monocyte, 염증 시 증가.",
+    "quote": "Origin : Blood Monocyte"
+   },
+   {
+    "k": "라",
+    "t": "뇌실막세포는 내강면에 섬모와 미세융모가 없는 납작한 세포이다.",
+    "ok": false,
+    "why": "뇌실막세포는 입방·원주상피형이며 내강면에 섬모·미세융모가 있다.",
+    "quote": "cilia and microvilli on luminal surface"
+   }
+  ],
+  "opts": [
+   "가, 나",
+   "가, 라",
+   "가, 나, 다",
+   "가, 다, 라",
+   "가, 다"
+  ],
+  "ans": 5,
+  "basis": [
+   "Y21-31",
+   "Y202-31",
+   "7-08"
+  ],
+  "src": "교안04(2026판)"
+ },
+ {
+  "id": "c7-04",
+  "ch": 7,
+  "ask": "옳은 것",
+  "stem": "말이집 형성 세포와 말초 신경아교세포에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "희소돌기아교세포는 한 세포의 여러 돌기가 각각 하나의 마디사이분절을 이룬다.",
+    "ok": true,
+    "why": "oligodendrocyte는 돌기마다 internodal segment 하나를 만든다.",
+    "quote": "Each process constitutes a internodal segment"
+   },
+   {
+    "k": "나",
+    "t": "무수신경에서는 한 개의 슈반세포가 여러 개의 무수 축삭을 함께 둘러싼다.",
+    "ok": true,
+    "why": "Schwann cell 하나가 여러 unmyelinated axon을 둘러싼다.",
+    "quote": "A Schwann cell surround many unmyelinated axons"
+   },
+   {
+    "k": "다",
+    "t": "위성세포는 신경절에서 신경세포체를 둘러싸 전기적 절연과 대사 교환을 돕는다.",
+    "ok": true,
+    "why": "satellite cell은 신경절 신경세포체를 둘러싸 미세환경을 조절한다.",
+    "quote": "providing electrical insulation"
+   },
+   {
+    "k": "라",
+    "t": "한센병은 Mycobacterium leprae가 희소돌기아교세포를 감염해 생긴다.",
+    "ok": false,
+    "why": "나균이 감염하는 세포는 슈반세포이다.",
+    "quote": "Mycobactrium leprae infection"
+   }
+  ],
+  "opts": [
+   "가, 나",
+   "가, 나, 다",
+   "가, 다",
+   "나, 다",
+   "가, 나, 라"
+  ],
+  "ans": 2,
+  "basis": [
+   "Y202-34",
+   "Y21-40",
+   "Y062-10"
+  ],
+  "src": "교안04(2026판)"
+ },
+ {
+  "id": "c7-05",
+  "ch": 7,
+  "ask": "옳은 것",
+  "stem": "신경섬유의 전도속도, 말초신경의 결합조직 및 시냅스에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "마디사이분절이 길고 축삭 직경이 클수록 신경 전도속도가 빠르다.",
+    "ok": true,
+    "why": "전도속도는 internodal 길이·말이집 두께·축삭 직경에 비례한다.",
+    "quote": "Length of Internodal Segment"
+   },
+   {
+    "k": "나",
+    "t": "말초신경에서 신경다발막(perineurium)이 개별 신경섬유를 둘러싸는 가장 안쪽 결합조직이다.",
+    "ok": false,
+    "why": "가장 안쪽은 endoneurium, perineurium은 다발을 둘러싼다.",
+    "quote": "Endoneurium (속)"
+   },
+   {
+    "k": "다",
+    "t": "시냅스 틈(synaptic cleft)의 폭은 약 20~30 nm이다.",
+    "ok": true,
+    "why": "교안: Synaptic Cleft 20-30 nm.",
+    "quote": "Synaptic Cleft : 20-30 nm"
+   },
+   {
+    "k": "라",
+    "t": "활성영역(presynaptic density)은 시냅스 후막에 있는 단백질 복합체이다.",
+    "ok": false,
+    "why": "presynaptic density(active zone)는 시냅스 전부에 있다.",
+    "quote": "presynaptic density: active zone"
+   }
+  ],
+  "opts": [
+   "가, 나",
+   "가, 라",
+   "가, 나, 다",
+   "가, 다",
+   "가, 다, 라"
+  ],
+  "ans": 4,
+  "basis": [
+   "Y07-n4",
+   "Y062-05",
+   "Y07-19"
+  ],
+  "src": "교안04(2026판)"
+ },
+ {
+  "id": "c7-06",
+  "ch": 7,
+  "ask": "옳지 않은 것",
+  "stem": "축삭수송과 신경 손상 후 변화에 대한 설명으로 옳지 않은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "순행성 빠른 수송은 약 200~400 mm/day로 시냅스소포와 효소를 운반한다.",
+    "ok": true,
+    "why": "Fast transport 200-400 mm/day.",
+    "quote": "Fast Transport 200-400"
+   },
+   {
+    "k": "나",
+    "t": "Slow component a(SCa)는 actin, calmodulin, 세포질 효소를 운반한다.",
+    "ok": false,
+    "why": "SCa는 tubulin·neurofilament, actin 등은 SCb이다.",
+    "quote": "Slow Component a (SCa) 0.1 - 1.0"
+   },
+   {
+    "k": "다",
+    "t": "HRP, WGA 및 신경친화성 바이러스는 역행성 수송으로 세포체에 도달한다.",
+    "ok": true,
+    "why": "retrograde 수송 물질에 HRP·WGA·바이러스가 포함된다.",
+    "quote": "HRP, WGA"
+   },
+   {
+    "k": "라",
+    "t": "Wallerian 변성은 손상 근위부에서 세포체 쪽으로 진행하는 retrograde 변성이다.",
+    "ok": false,
+    "why": "Wallerian은 손상 원위부의 anterograde 변성이다.",
+    "quote": "Wallerian Degeneration = anterograde degeneration"
+   }
+  ],
+  "opts": [
+   "가, 나",
+   "가, 라",
+   "나, 라",
+   "가, 나, 라",
+   "나, 다, 라"
+  ],
+  "ans": 3,
+  "basis": [
+   "7-04",
+   "Y07-j3",
+   "Y07-s4"
+  ],
+  "src": "교안04(2026판)"
+ },
+ {
+  "id": "c8-01",
+  "ch": 8,
+  "ask": "옳은 것",
+  "stem": "혈액의 일반적 성질과 구성에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "혈장은 약 55%이며 대부분이 물이고 혈장단백질(albumin, globulin, fibrinogen 등)은 약 7%이다.",
+    "ok": true,
+    "why": "Plasma 55%, 물 90%↑, 단백질 7%.",
+    "quote": "Plasma protein 7%"
+   },
+   {
+    "k": "나",
+    "t": "헤마토크릿(Hct)은 혈액 중 백혈구가 차지하는 부피 비율을 뜻한다.",
+    "ok": false,
+    "why": "Hct는 유형성분(주로 적혈구)의 부피 비율이다.",
+    "quote": "Hematocrit (Hct)"
+   },
+   {
+    "k": "다",
+    "t": "혈액 도말 염색에서 methylene blue는 염기성으로 호염기성, eosin은 산성으로 호산성을 보인다.",
+    "ok": true,
+    "why": "methylene blue(+): basophilia, eosin(-): eosinophilia.",
+    "quote": "eosin (-, acidic) : eosinophilia"
+   },
+   {
+    "k": "라",
+    "t": "혈액은 pH 약 7.4이며 양은 약 5 L(체중의 7~8%)이다.",
+    "ok": true,
+    "why": "교안: pH 7.4, 약 5L (체중 7-8%).",
+    "quote": "About 5L (7-8% of the body weight)"
+   }
+  ],
+  "opts": [
+   "가, 다",
+   "가, 다, 라",
+   "가, 라",
+   "다, 라",
+   "가, 나, 다"
+  ],
+  "ans": 2,
+  "basis": [
+   "8-03",
+   "Y08-13"
+  ],
+  "src": "교안04(2026판)"
+ },
+ {
+  "id": "c8-02",
+  "ch": 8,
+  "ask": "옳은 것",
+  "stem": "적혈구에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "ankyrin은 적혈구막의 peripheral protein으로 spectrin 골격을 integral protein에 고정하는 anchor 역할을 한다.",
+    "ok": true,
+    "why": "ankyrin이 spectrin 그물을 band 3 등 막단백질에 연결.",
+    "quote": "ankyrin"
+   },
+   {
+    "k": "나",
+    "t": "세망적혈구는 미성숙 적혈구로 rRNA가 남아 있어 brilliant cresyl blue로 염색된다.",
+    "ok": true,
+    "why": "Reticulocyte: rRNA 그물, BCB 염색.",
+    "quote": "Brilliant cresyl blue"
+   },
+   {
+    "k": "다",
+    "t": "적혈구는 저장액(hypotonic)에서 쪼그라드는 crenation을, 고장액에서 용혈을 보인다.",
+    "ok": false,
+    "why": "저장액→hemolysis, 고장액→crenation이다.",
+    "quote": "Hypotonic solution → hemolysis"
+   },
+   {
+    "k": "라",
+    "t": "태아 헤모글로빈 HbF는 2α+2δ 사슬로 이루어진다.",
+    "ok": false,
+    "why": "HbF는 2α+2γ, 2α+2δ는 HbA2이다.",
+    "quote": "HbF: 2α + 2γ + 4heme (1%)"
+   }
+  ],
+  "opts": [
+   "가, 다",
+   "가, 라",
+   "가, 나, 다",
+   "가, 나, 라",
+   "가, 나"
+  ],
+  "ans": 5,
+  "basis": [
+   "Y22-56",
+   "Y21-76",
+   "8-01"
+  ],
+  "src": "교안04(2026판)"
+ },
+ {
+  "id": "c8-03",
+  "ch": 8,
+  "ask": "옳은 것",
+  "stem": "과립백혈구에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "호중구는 감별계수 60~70%로 가장 많고 핵은 대개 2엽이다.",
+    "ok": false,
+    "why": "호중구 핵은 2~5엽(분엽핵)이다.",
+    "quote": "2 – 5 lobe nucleus"
+   },
+   {
+    "k": "나",
+    "t": "호산구 특수과립의 internum에는 major basic protein이 들어 있다.",
+    "ok": true,
+    "why": "MBP는 호산구 특수과립 internum 성분.",
+    "quote": "Major basic protein (eosinophilic)"
+   },
+   {
+    "k": "다",
+    "t": "호염기구는 IgE 수용체를 가지며 heparin·histamine 과립으로 즉시형 과민반응에 관여한다.",
+    "ok": true,
+    "why": "basophil: IgE receptor, heparin/histamine.",
+    "quote": "Immunoglobulin E receptor"
+   },
+   {
+    "k": "라",
+    "t": "호중구 특수과립에는 alkaline phosphatase, collagenase, lactoferrin, lysozyme이 있다.",
+    "ok": true,
+    "why": "교안의 호중구 specific granule 성분.",
+    "quote": "Alkaline phosphatase, Collagenese Lactoferin"
+   }
+  ],
+  "opts": [
+   "나, 다, 라",
+   "나, 다",
+   "나, 라",
+   "다, 라",
+   "가, 나, 다"
+  ],
+  "ans": 1,
+  "basis": [
+   "8-06",
+   "8-04",
+   "Y22-74"
+  ],
+  "src": "교안04(2026판)"
+ },
+ {
+  "id": "c8-04",
+  "ch": 8,
+  "ask": "옳은 것",
+  "stem": "림프구와 단핵구에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "림프구 중 T림프구가 약 70~80%로 대부분을 차지하고 B림프구는 15~20%이다.",
+    "ok": true,
+    "why": "T 70~80%, B 15~20%, null cell 5%.",
+    "quote": "T lymphocyte 70~80%"
+   },
+   {
+    "k": "나",
+    "t": "B림프구는 세포성 면역을, T림프구는 체액성 면역을 담당한다.",
+    "ok": false,
+    "why": "B=체액성(형질세포), T=세포성 면역이다.",
+    "quote": "humorally mediated immune system"
+   },
+   {
+    "k": "다",
+    "t": "단핵구는 콩팥모양 핵을 가지며 조직에서 대식세포로 분화하는 단핵포식세포계통의 전구세포이다.",
+    "ok": true,
+    "why": "monocyte는 macrophage로 분화, MPS에 속한다.",
+    "quote": "Differentiation into macrophage"
+   },
+   {
+    "k": "라",
+    "t": "단핵구의 감별계수(3~8%)는 호염기구(0.5~1%)보다 낮다.",
+    "ok": false,
+    "why": "단핵구 3~8%는 호염기구보다 높다.",
+    "quote": "Monocyte : 3 – 8%"
+   }
+  ],
+  "opts": [
+   "가, 나",
+   "가, 라",
+   "가, 나, 다",
+   "가, 다",
+   "가, 다, 라"
+  ],
+  "ans": 4,
+  "basis": [
+   "Y22-70",
+   "Y21-72",
+   "Y21-75"
+  ],
+  "src": "교안04(2026판)"
+ },
+ {
+  "id": "c8-05",
+  "ch": 8,
+  "ask": "옳은 것",
+  "stem": "혈소판에 대한 설명으로 옳은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "혈소판은 핵이 없는 2~4㎛의 작은 세포질 조각으로 수명은 약 10일이다.",
+    "ok": true,
+    "why": "No nucleus, life span 10 days.",
+    "quote": "Life span: 10 days"
+   },
+   {
+    "k": "나",
+    "t": "α granule에는 Ca2+·ATP·ADP가 있어 혈관수축에, δ granule에는 fibrinogen·vWF가 있어 응고에 관여한다.",
+    "ok": false,
+    "why": "α granule=응고(fibrinogen, vWF), δ granule=혈관수축.",
+    "quote": "α granule (300~500nm) 응고작용"
+   },
+   {
+    "k": "다",
+    "t": "투명질층(hyalomere)에는 미세소관과 actin·myosin이 있어 형태 유지와 수축에 관여한다.",
+    "ok": true,
+    "why": "hyalomere: microtubule, actin and myosin.",
+    "quote": "actin and myosin monomer"
+   },
+   {
+    "k": "라",
+    "t": "혈소판은 거핵모세포에서 거핵구를 거쳐 만들어지며 이 과정은 약 10일 걸린다.",
+    "ok": true,
+    "why": "Megakaryopoiesis 10일.",
+    "quote": "Megakaryopoiesis 10일"
+   }
+  ],
+  "opts": [
+   "가, 다",
+   "가, 라",
+   "가, 다, 라",
+   "다, 라",
+   "가, 나, 다"
+  ],
+  "ans": 3,
+  "basis": [
+   "8-05",
+   "Y062-04a",
+   "Y21-80"
+  ],
+  "src": "교안04(2026판)"
+ },
+ {
+  "id": "c8-06",
+  "ch": 8,
+  "ask": "옳지 않은 것",
+  "stem": "혈구 생성(조혈)에 대한 설명으로 옳지 않은 것은?",
+  "st": [
+   {
+    "k": "가",
+    "t": "적혈구는 proerythroblast에서 시작해 호염기성·다염성·정염성 적혈모구와 세망적혈구를 거쳐 성숙한다.",
+    "ok": true,
+    "why": "Proerythroblast→...→Reticulocyte→RBC 순서.",
+    "quote": "Proerythroblast (ribosome)"
+   },
+   {
+    "k": "나",
+    "t": "과립구 형성에서 특수과립은 myeloblast 단계부터 처음 나타난다.",
+    "ok": false,
+    "why": "특수과립은 myelocyte 단계에서 생긴다.",
+    "quote": "Myelocyte (specific granule)"
+   },
+   {
+    "k": "다",
+    "t": "태생기 조혈은 난황낭 부근 혈액섬에서 시작해 간, 지라, 골수 순으로 옮겨 간다.",
+    "ok": true,
+    "why": "mesoblastic→hepatic→splenic→myeloid phase.",
+    "quote": "blood islands near the yolk sac"
+   },
+   {
+    "k": "라",
+    "t": "헤모글로빈 합성은 세망적혈구 단계에서 처음 시작된다.",
+    "ok": false,
+    "why": "Hb 합성은 호염기성 적혈모구 단계부터 시작된다.",
+    "quote": "Basophil erythroblast (hemoglobin)"
+   }
+  ],
+  "opts": [
+   "나, 라",
+   "가, 나",
+   "가, 라",
+   "가, 나, 라",
+   "나, 다, 라"
+  ],
+  "ans": 1,
+  "basis": [
+   "Y21-79-b",
+   "Y08-10",
+   "Y062-s1"
+  ],
+  "src": "교안04(2026판)"
+ }
+]
