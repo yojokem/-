@@ -234,6 +234,7 @@ table.mx td.no{color:var(--line)}
 .yon .tag{margin-left:4px}.yx{display:flex;flex-wrap:wrap;gap:5px;margin:4px 0 0}.yx span{font-size:.78rem;border:1px dashed color-mix(in srgb,var(--cc) 45%,var(--line));border-radius:4px;padding:0 7px}
 .vdl{font-size:.74rem;border-radius:999px;padding:0 8px;background:var(--soft);white-space:nowrap}.vdl.ok{background:var(--ok-bg);color:var(--ok)}.vdl.diff{background:var(--bad-bg);color:var(--bad)}.vdl.unk{background:color-mix(in srgb,var(--s-est) 18%,var(--surface))}.star{color:var(--accent);font-weight:700}tr.rel td{color:var(--muted)}
 .yt td:nth-child(2),.yt td:nth-child(4){white-space:nowrap}
+.ansc{display:inline-block;min-width:22px;text-align:center;border:1px solid var(--ok);color:var(--ok);background:var(--ok-bg);border-radius:999px;padding:0 6px;font-weight:700}.keyline.okk{color:var(--ok)}.keyline.badd{color:var(--bad)}.yt-l{display:block;margin:6px 0 2px;font-size:.84rem;color:var(--muted)}.yt-ta{width:100%;margin-top:4px;font:inherit;background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:6px 8px}.tag.bad{background:var(--bad-bg);color:var(--bad)}
 </style>
 
 <div class="wrap">
@@ -260,7 +261,7 @@ const LS = {
 const TABS = [["status","현황·범위"],["mc","객관식"],["sum","내용 정리"],["full","전체 내용 정리"],["all","단원별 전체 펴기"],["yon","연대야마"],["new","예상 문제"],["mock","모의고사"]];
 const S = { tab: LS.get('tab','status'), ch: 0, hak: 'all', st: 'all', group: true, exam: false, showAll: false,
   omr: LS.get('omr', {}), ua: LS.get('ua', {}), uaWhy: LS.get('uaWhy', {}), open: {}, graded: null, inclEst: false,
-  mock: null, newOpen: {}, newMarks: {}, sch: 0, fold: {}, cc: {} };
+  mock: null, newOpen: {}, newMarks: {}, sch: 0, fold: {}, cc: {}, ymode: 'tab', yex: 'all', yst: 'all', yp: LS.get('yp', {}), yt: LS.get('yt', {}), yopen: {}, yclr: false };
 const MKS = {c:'①②③④⑤⑥⑦⑧', ga:'가나다라마바', g:'ㄱㄴㄷㄹㅁㅂ'};
 const mark = (mk, i) => mk === 'n' ? (i+1)+'.' : mk === 'ga' ? MKS.ga[i]+')' : mk === 'g' ? MKS.g[i]+'.' : MKS.c[i];
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -608,7 +609,7 @@ function allTab(){
 
 
 /* ───────── 탭: 연대야마(타 학교) 단원별 정리 ───────── */
-function yonTab(){
+function yonTable(){
   const sc = S.ych || 0;
   const chips = [0,1,2,3,4,5,6,7,8].map(c => `<button type="button" class="chip" data-act="ych" data-ch="${c}" aria-pressed="${sc === c}">${c ? 'Ch' + c + ' ' + esc(DB.CH[c]) : '전체'}</button>`).join('');
   const VDL = {ok: '일치', diff: '불일치', unk: '우리 쪽 정답 미정', nm: '연대 표시 없음'};
@@ -625,6 +626,72 @@ function yonTab(){
     <div class="box"><h2>연대야마 단원별 정리</h2><p class="note">${esc(DB.YSRC)}를 읽어 정리한 기록입니다. ★은 우리 기출과 같거나 비슷한 문항, ☆은 관련만 있는 문항입니다. 출처 태그 B22 = 2022 중간 복기, B21 = 2021, B20-2 = 2020-2, B18·B17 = 2018·2017, B08·B07·B06 = 2008·2007·2006 복원, B-prac = 기출 모음 표본 문제입니다. 표시: [M] 파일에 정답 표시, [N] 해설·노트 근거, [-] 정답 없음. 에이전트가 읽은 기록이라 원문 쪽수는 확인하지 못했고, 합본 80쪽 이후·기출 모음 201쪽 이후는 비교하지 못했습니다. 정답·상태는 바꾸지 않았습니다.</p>
     <p class="note">연대야마 문제모음(답O)과 합본은 구강·치아 발생 위주라 이 범위와 거의 겹치지 않고(22건 중 같은 문항 0), 단원별 내용은 '조직학 기출 ~21학번까지' 파일이 중심입니다.</p>
     <h3>확인이 필요한 4건</h3><ul class="plain">${DB.YCHECK.map(m => `<li><button class="link" type="button" data-act="gomc" data-q="${m[0]}">${m[0]}</button> ${esc(m[1])}</li>`).join('')}</ul></div>${secs}`;
+}
+
+
+/* ───────── 연대야마 문제 풀이 (선지 체크 · 정답 확인 · 내 답안) ───────── */
+const Y_ST = [['all', '전체'], ['mark', '연대 정답 표시 있음'], ['none', '정답 표시 없음'], ['conf', '교안과 충돌'], ['open', '선지 없음(내 답안)']];
+const sameSet = (a, b) => a.length === b.length && a.every(x => b.includes(x));
+function yqStatus(q){
+  const hasOpts = q.opts && q.opts.length;
+  const conf = !!(q.ans && q.est && q.est.ans && !sameSet(q.ans, q.est.ans));
+  return {hasOpts, conf};
+}
+function yqPass(q){
+  const s = yqStatus(q);
+  if(S.ych && q.ch !== S.ych) return false;
+  if(S.yex !== 'all' && q.exam !== S.yex) return false;
+  if(S.yst === 'mark') return !!q.ans;
+  if(S.yst === 'none') return s.hasOpts && !q.ans;
+  if(S.yst === 'conf') return s.conf;
+  if(S.yst === 'open') return !s.hasOpts;
+  return true;
+}
+function yqCard(q){
+  const s = yqStatus(q), pick = S.yp[q.id] || [], op = S.yopen[q.id];
+  const hasOpts = s.hasOpts;
+  const mk = i => '①②③④⑤⑥⑦⑧'[i] || (i + 1) + '.';
+  const opts = hasOpts ? `<div class="opts">${q.opts.map((o, i) => `<button type="button" class="opt ${pick.includes(i + 1) ? 'on' : ''} ${op && q.ans && q.ans.includes(i + 1) ? 'key' : ''}" data-act="yopt" data-id="${q.id}" data-i="${i + 1}"><span class="mk">${mk(i)}</span><span>${sx(o)}</span></button>`).join('')}</div>` : '';
+  const mine = hasOpts ? '' : `<label class="yt-l">내 답안<textarea class="yt-ta" id="yt-${q.id}" data-act="yt" data-id="${q.id}" rows="3" placeholder="먼저 직접 써 보세요. 입력하면 이 브라우저에 자동 저장됩니다.">${esc(S.yt[q.id] || '')}</textarea></label><div class="note">${S.yt[q.id] ? '저장됨 · ' + S.yt[q.id].length + '자' : '저장 전'}${LS.get('__t', 1) ? '' : ''}</div>`;
+  let res = '';
+  if(op){
+    const srcL = {M: '연대 파일에 정답 표시', N: '연대 파일의 해설·노트에서 도출', '-': '연대 파일에 정답 없음'}[q.ans_src || '-'];
+    const mine2 = hasOpts && pick.length && q.ans ? `<div class="keyline ${sameSet(pick, q.ans) ? 'okk' : 'badd'}">내 선택 ${pick.map(mk).join(' ')} → ${sameSet(pick, q.ans) ? '연대 표시 답과 같음' : '연대 표시 답과 다름'}</div>` : '';
+    const yAns = q.ans ? `<div><b>연대 자료 기준</b> <span class="tag">${srcL}</span> ${hasOpts ? q.ans.map(i => `<span class="ansc">${mk(i - 1)}</span>`).join(' ') : ''}${q.ans_text ? `<div>${sx(q.ans_text)}</div>` : ''}</div>` : `<div><b>연대 자료 기준</b> <span class="tag">${srcL}</span>${q.ans_text ? `<div>${sx(q.ans_text)}</div>` : ''}</div>`;
+    const kyo = q.est ? `<div><b>교안 기준 추정</b> <span class="tag">${esc(q.est.src)}</span> ${(q.est.ans || []).map(i => `<span class="ansc">${mk(i - 1)}</span>`).join(' ')}${q.est.quote ? `<blockquote>${esc(q.est.quote)}</blockquote>` : ''}${q.est.note ? `<div class="note">${sx(q.est.note)}</div>` : ''}</div>` : `<div><b>교안 기준</b> <span class="note">근거로 쓸 교안 문장을 찾지 못했습니다(추정 없음).</span></div>`;
+    const conf = s.conf ? `<div class="warn"><b>충돌</b> 연대 표시 답과 교안 기준 추정이 다릅니다. 어느 쪽도 바꾸지 않고 둘 다 적었습니다.</div>` : '';
+    const nt = q.note ? `<div class="note">연대 파일 해설·메모: ${sx(q.note)}</div>` : '';
+    const fl = (q.flags || []).length ? `<div class="note">원문 상태: ${q.flags.map(esc).join(' · ')}</div>` : '';
+    const ours = (q.ours || []).length ? `<div class="note">우리 기출과 겹침: ${q.ours.map(i => `<button class="link" type="button" data-act="gomc" data-q="${i}">${i}</button>`).join(' ')}</div>` : '';
+    res = `<div class="ans-box">${mine2}${yAns}${kyo}${conf}${nt}${fl}${ours}<div class="note">출처 줄: ${esc(q.lines || '')} (조직학 기출 ~21학번까지.pdf 읽은 텍스트 기준)</div></div>`;
+  }
+  return `<article class="card" id="yq-${q.id}"><div class="card-h"><span class="cid">${esc(q.id)}</span><span class="tag">${esc(q.exam)}${q.no !== '' ? ' ' + esc(q.no) + '번' : ''}</span><span class="tag">Ch${q.ch} ${esc(DB.CH[q.ch])}</span><span class="tag">${{mc: '단일 선택', multi: '모두 고르기', match: '짝짓기·조합', short: '선지 없음'}[q.type] || ''}</span>${q.ans ? '' : (hasOpts ? '<span class="tag">정답 표시 없음</span>' : '')}${s.conf ? '<span class="tag bad">충돌</span>' : ''}</div>
+    <p class="stem">${sx(q.stem)}</p>${opts}${mine}
+    <div class="row-actions"><button class="btn" type="button" data-act="yopen" data-id="${q.id}">${op ? '정답·근거 접기' : '정답·근거 확인'}</button>${hasOpts && pick.length ? `<button class="btn" type="button" data-act="yclr1" data-id="${q.id}">선택 지우기</button>` : ''}</div>${res}</article>`;
+}
+function yonSolve(){
+  const L = DB.YQ.filter(yqPass);
+  const exams = ['all'].concat(Array.from(new Set(DB.YQ.map(q => q.exam))));
+  const exChips = exams.map(e => `<button type="button" class="chip" data-act="yex" data-id="${esc(e)}" aria-pressed="${S.yex === e}">${e === 'all' ? '모든 시험' : esc(e)}</button>`).join('');
+  const stChips = Y_ST.map(x => `<button type="button" class="chip" data-act="yst" data-id="${x[0]}" aria-pressed="${S.yst === x[0]}">${x[1]}</button>`).join('');
+  const mcAll = DB.YQ.filter(q => q.opts && q.opts.length && q.ans);
+  const done = mcAll.filter(q => (S.yp[q.id] || []).length), right = done.filter(q => sameSet(S.yp[q.id], q.ans));
+  const nSaved = Object.keys(S.yp).filter(k => (S.yp[k] || []).length).length + Object.keys(S.yt).filter(k => S.yt[k]).length;
+  const exp = JSON.stringify({v: 1, saved: new Date().toISOString(), picks: S.yp, texts: S.yt});
+  return `<div class="box"><h2>연대야마 문제 풀이</h2>
+    <p class="note">연대야마 '조직학 기출 ~21학번까지'에서 우리 범위(Ch1~8) 문항 ${DB.YQ.length}개를 옮겼습니다. 선지를 눌러 고르고 '정답·근거 확인'을 누르면 두 가지 기준이 나란히 나옵니다. ⓐ 연대 자료 기준: 파일에 표시된 답이나 해설·노트 ⓑ 교안 기준 추정: 교안 문장 인용이 있을 때만(근거 파일명 표기). 둘이 다르면 '충돌'로 표시하며 어느 쪽도 바꾸지 않습니다. 정답 표시가 없는 문항은 연대 쪽에 답이 없다고 적습니다. 내 선택과 답안은 이 브라우저(localStorage)에만 저장되고 채점·모의고사에는 쓰이지 않습니다.</p>
+    <p class="note">읽은 텍스트는 파일 약 201쪽까지이고 그 뒤는 오지 않았습니다. 빠진 부분이 있으면 파일의 해당 쪽을 나눠 올려 주시면 보정하겠습니다.</p>
+    <div class="chips" role="group" aria-label="시험">${exChips}</div><div class="chips" role="group" aria-label="상태" style="margin-top:6px">${stChips}</div>
+    <p class="sub">${L.length}개 표시 · 선지 있고 연대 정답 표시 있는 ${mcAll.length}개 중 푼 ${done.length}개, 같은 답 ${right.length}개</p>
+    <details class="srcd"><summary>내 답안 ${nSaved}개 · 내보내기/가져오기</summary><p class="note">기기나 브라우저가 바뀌면 저장이 이어지지 않습니다. 아래 JSON을 복사해 두었다가 붙여넣어 가져오세요.</p><textarea id="yExp" rows="3" style="width:100%" readonly>${esc(exp)}</textarea><div class="row-actions"><button class="btn" type="button" data-act="ycopy">복사</button></div><textarea id="yImp" rows="3" style="width:100%" placeholder="여기에 JSON을 붙여넣고 가져오기"></textarea><div class="row-actions"><button class="btn" type="button" data-act="yimp">가져오기</button><button class="btn" type="button" data-act="yclrall">${S.yclr ? '정말 모두 지우기(한 번 더)' : '내 답안 모두 지우기'}</button></div><p class="note" id="yMsg"></p></details></div>
+    <div class="cards">${L.map(yqCard).join('') || '<p class="note">조건에 맞는 문항이 없습니다.</p>'}</div>`;
+}
+function yonTab(){
+  const m = S.ymode;
+  const sw = `<div class="chips" role="group" aria-label="보기 방식" style="margin-bottom:10px"><button type="button" class="chip" data-act="ymode" data-id="tab" aria-pressed="${m === 'tab'}">대응표 (우리 기출과 겹침)</button><button type="button" class="chip" data-act="ymode" data-id="solve" aria-pressed="${m === 'solve'}">문제 풀이 (선지 체크 · 정답 확인)</button></div>`;
+  const chips = [0,1,2,3,4,5,6,7,8].map(c => `<button type="button" class="chip" data-act="ych" data-ch="${c}" aria-pressed="${(S.ych || 0) === c}">${c ? 'Ch' + c + ' ' + esc(DB.CH[c]) : '전체'}</button>`).join('');
+  if(m === 'solve') return sw + `<div class="tools"><div class="chips" role="group" aria-label="단원">${chips}</div></div>` + yonSolve();
+  return sw + yonTable();
 }
 
 /* ───────── 탭: 예상 문제 ───────── */
@@ -725,6 +792,15 @@ document.addEventListener('click', e => {
   else if(a === 'ch'){ S.ch = +t.dataset.ch; S.graded = null; render(); }
   else if(a === 'nch'){ S.nch = +t.dataset.ch; render(); }
   else if(a === 'sch'){ S.sch = +t.dataset.ch; render(); }
+  else if(a === 'ymode'){ S.ymode = t.dataset.id; render(); }
+  else if(a === 'yex'){ S.yex = t.dataset.id; render(); }
+  else if(a === 'yst'){ S.yst = t.dataset.id; render(); }
+  else if(a === 'yopen'){ S.yopen[id] = !S.yopen[id]; render(); document.getElementById('yq-' + id)?.scrollIntoView({block: 'nearest'}); }
+  else if(a === 'yopt'){ const q = DB.YQ.find(x => x.id === id), i = +t.dataset.i; let p = S.yp[id] || []; p = (q.type === 'multi' || q.type === 'match') ? (p.includes(i) ? p.filter(x => x !== i) : p.concat(i).sort()) : (p.includes(i) ? [] : [i]); S.yp[id] = p; LS.set('yp', S.yp); render(); document.getElementById('yq-' + id)?.scrollIntoView({block: 'nearest'}); }
+  else if(a === 'yclr1'){ delete S.yp[id]; LS.set('yp', S.yp); render(); }
+  else if(a === 'ycopy'){ const ta = document.getElementById('yExp'); ta.select(); try{ navigator.clipboard.writeText(ta.value).then(() => { document.getElementById('yMsg').textContent = '복사했습니다.'; }, () => { document.getElementById('yMsg').textContent = '복사가 막혀 있습니다. 위 글상자를 직접 선택해 복사하세요.'; }); }catch(e){ document.getElementById('yMsg').textContent = '복사가 막혀 있습니다. 위 글상자를 직접 선택해 복사하세요.'; } }
+  else if(a === 'yimp'){ const m = document.getElementById('yMsg'); try{ const j = JSON.parse(document.getElementById('yImp').value); if(!j || j.v !== 1) throw 0; S.yp = Object.assign({}, S.yp, j.picks || {}); S.yt = Object.assign({}, S.yt, j.texts || {}); LS.set('yp', S.yp); LS.set('yt', S.yt); render(); document.getElementById('yMsg').textContent = '가져왔습니다.'; }catch(e){ m.textContent = '형식이 맞지 않습니다. 내보내기로 만든 JSON을 붙여넣으세요.'; } }
+  else if(a === 'yclrall'){ if(!S.yclr){ S.yclr = true; render(); } else { S.yp = {}; S.yt = {}; S.yclr = false; LS.set('yp', {}); LS.set('yt', {}); render(); } }
   else if(a === 'ych'){ S.ych = +t.dataset.ch; render(); }
   else if(a === 'goid'){ document.getElementById(t.dataset.id)?.scrollIntoView({behavior: 'smooth', block: 'start'}); }
   else if(a === 'gocon'){ if(S.tab !== 'full'){ S.tab = 'full'; LS.set('tab', 'full'); render(); } document.getElementById('con-' + t.dataset.id)?.scrollIntoView({block: 'center'}); }
@@ -781,7 +857,7 @@ document.addEventListener('change', e => {
   else if(e.target.id === 'stSel'){ S.st = e.target.value; render(); }
   else if(e.target.id === 'estChk'){ S.inclEst = e.target.checked; if(S.graded){ grade(); refreshMarks(); renderGrade(); } }
 });
-document.addEventListener('input', e => { const t = e.target; if(t.dataset && t.dataset.act === 'uawhy'){ S.uaWhy[t.dataset.q] = t.value; LS.set('uaWhy', S.uaWhy); } });
+document.addEventListener('input', e => { const t = e.target; if(t.dataset && t.dataset.act === 'yt'){ S.yt[t.dataset.id] = t.value; LS.set('yt', S.yt); const n = t.parentElement.nextElementSibling; if(n) n.textContent = '저장됨 · ' + t.value.length + '자'; return; } if(t.dataset && t.dataset.act === 'uawhy'){ S.uaWhy[t.dataset.q] = t.value; LS.set('uaWhy', S.uaWhy); } });
 $('#themeBtn').addEventListener('click', () => {
   const r = document.documentElement, cur = r.getAttribute('data-theme');
   const next = cur === 'dark' ? 'light' : cur === 'light' ? null : 'dark';
