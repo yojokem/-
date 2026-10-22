@@ -1,0 +1,1862 @@
+[
+ {
+  "id": "b1-01",
+  "ch": 1,
+  "lv": "쉬움",
+  "stem": "상피와 결합조직의 경계를 이루는 세포외기질인 (  ①  )은 상피세포가 합성한다.",
+  "blanks": [
+   {
+    "ans": "basal lamina",
+    "alts": [
+     "기저판",
+     "basal lamina"
+    ]
+   }
+  ],
+  "src": "교안01",
+  "quote": "synthesized by the epithelial cells.",
+  "explain": "상피세포가 합성하는 경계 기질은 기저판"
+ },
+ {
+  "id": "b1-02",
+  "ch": 1,
+  "lv": "쉬움",
+  "stem": "요로의 신배에서 요도까지를 덮으며 이완 시 돔 모양, 늘어나면 편평해지는 상피는 (  ①  ) 상피이다.",
+  "blanks": [
+   {
+    "ans": "Transitional",
+    "alts": [
+     "이행",
+     "이행상피",
+     "transitional epithelium"
+    ]
+   }
+  ],
+  "src": "교안01",
+  "quote": "urinary tract from renal calyces to urethra",
+  "explain": "요로를 덮고 형태가 변하는 상피는 이행상피"
+ },
+ {
+  "id": "b1-03",
+  "ch": 1,
+  "lv": "쉬움",
+  "stem": "(  ①  ) 분비는 분비세포가 성숙한 뒤 죽어서 그 자체가 분비물이 되며, 기름샘(sebaceous gland)이 그 예이다.",
+  "blanks": [
+   {
+    "ans": "Holocrine",
+    "alts": [
+     "홀로크린",
+     "전분비",
+     "개분비"
+    ]
+   }
+  ],
+  "src": "교안01",
+  "quote": "matures, dies and becomes the secretory product",
+  "explain": "세포 자체가 분비물이 되는 방식은 holocrine"
+ },
+ {
+  "id": "b1-04",
+  "ch": 1,
+  "lv": "쉬움",
+  "stem": "섬모의 내부 구조는 (  ①  )이며, 길이 방향의 미세소관이 (  ②  ) 배열로 늘어서 있다.",
+  "blanks": [
+   {
+    "ans": "axoneme",
+    "alts": [
+     "축사",
+     "액소님"
+    ]
+   },
+   {
+    "ans": "9+2",
+    "alts": [
+     "9 + 2",
+     "9+2 배열"
+    ]
+   }
+  ],
+  "src": "교안01",
+  "quote": "axoneme : longitudinal microtubules arranged in a consistent 9 + 2",
+  "explain": "섬모 axoneme은 9+2 미세소관 구조"
+ },
+ {
+  "id": "b1-05",
+  "ch": 1,
+  "lv": "보통",
+  "stem": "(  ①  ) junction은 nexus라고도 하며, 6개의 (  ②  )이 모여 채널 구조인 connexon을 이룬다.",
+  "blanks": [
+   {
+    "ans": "Gap",
+    "alts": [
+     "간극",
+     "gap junction",
+     "간극연접"
+    ]
+   },
+   {
+    "ans": "connexin",
+    "alts": [
+     "connexins",
+     "코넥신"
+    ]
+   }
+  ],
+  "src": "교안01",
+  "quote": "Connexins : six closely packed transmembrane channel-",
+  "explain": "gap junction의 구성 단백질은 connexin"
+ },
+ {
+  "id": "b1-06",
+  "ch": 1,
+  "lv": "보통",
+  "stem": "섬모 (  ①  )의 유전적 결함으로 폐감염에 취약하고 남성 불임이 되는 질환을 (  ②  ) 증후군이라 한다.",
+  "blanks": [
+   {
+    "ans": "dynein",
+    "alts": [
+     "다이닌"
+    ]
+   },
+   {
+    "ans": "Kartagener's",
+    "alts": [
+     "Kartagener",
+     "카타게너",
+     "Kartagener's syndrome"
+    ]
+   }
+  ],
+  "src": "교안01",
+  "quote": "Kartagener's syndrome : hereditary defects in the ciliary",
+  "explain": "섬모 dynein 결함 질환은 Kartagener 증후군"
+ },
+ {
+  "id": "b1-07",
+  "ch": 1,
+  "lv": "보통",
+  "stem": "(  ①  )은 (  ②  ) 단백질에 대한 자가항체를 만들어 세포 접착을 파괴하는 피부 질환이다.",
+  "blanks": [
+   {
+    "ans": "Pemphigus vulgaris",
+    "alts": [
+     "천포창",
+     "심상성 천포창",
+     "pemphigus"
+    ]
+   },
+   {
+    "ans": "desmosome",
+    "alts": [
+     "desmosomal",
+     "데스모솜",
+     "desmosomal protein"
+    ]
+   }
+  ],
+  "src": "교안01",
+  "quote": "Produce autoantibodies against desmosomal proteins,",
+  "explain": "자가항체의 표적이 desmosome 단백질인 질환"
+ },
+ {
+  "id": "b1-08",
+  "ch": 1,
+  "lv": "보통",
+  "stem": "흡연자의 기관지 상피가 중층편평상피로 바뀌는 현상을 (  ①  )이라 하며, 기능은 떨어지지만 (  ②  )이다.",
+  "blanks": [
+   {
+    "ans": "squamous metaplasia",
+    "alts": [
+     "metaplasia",
+     "화생",
+     "편평상피화생"
+    ]
+   },
+   {
+    "ans": "reversible",
+    "alts": [
+     "가역적",
+     "가역"
+    ]
+   }
+  ],
+  "src": "교안01",
+  "quote": "impaired function, but reversible",
+  "explain": "한 상피가 다른 상피로 바뀌는 것은 화생"
+ },
+ {
+  "id": "b1-09",
+  "ch": 1,
+  "lv": "어려움",
+  "stem": "정단부에 띠 모양으로 위치하는 (  ①  )의 바로 기저쪽에는 E-cadherin과 actin filament가 관여하는 띠 모양의 (  ②  )가 위치한다.",
+  "blanks": [
+   {
+    "ans": "zonula occludens",
+    "alts": [
+     "zonulae occludentes",
+     "tight junction",
+     "밀착연접",
+     "폐쇄띠"
+    ]
+   },
+   {
+    "ans": "zonula adherens",
+    "alts": [
+     "zonulae adherens",
+     "접착띠",
+     "adherens junction",
+     "부착띠"
+    ]
+   }
+  ],
+  "src": "교안01",
+  "quote": "basal to the zonulae occludentes",
+  "explain": "연접은 정단에서 occludens, 그 기저쪽에 adherens"
+ },
+ {
+  "id": "b1-10",
+  "ch": 1,
+  "lv": "어려움",
+  "stem": "(  ①  )는 actin core를 가진 긴 microvilli로 비운동성이며 뻣뻣하다. 반면 (  ②  )는 운동성이며 미세소관으로 된 (  ③  )을 가진다.",
+  "blanks": [
+   {
+    "ans": "stereocilia",
+    "alts": [
+     "부동섬모",
+     "stereocilium"
+    ]
+   },
+   {
+    "ans": "cilia",
+    "alts": [
+     "섬모",
+     "cilium"
+    ]
+   },
+   {
+    "ans": "axoneme",
+    "alts": [
+     "축사"
+    ]
+   }
+  ],
+  "src": "교안01",
+  "quote": "Non-motile and rigid (core of actin",
+  "explain": "stereocilia는 actin, cilia는 미세소관 axoneme"
+ },
+ {
+  "id": "b2-01",
+  "ch": 2,
+  "lv": "쉬움",
+  "stem": "결합조직은 배아의 (  ①  )에서 기원한다.",
+  "blanks": [
+   {
+    "ans": "Mesenchyme",
+    "alts": [
+     "중간엽",
+     "간충조직",
+     "mesenchymal"
+    ]
+   }
+  ],
+  "src": "교안02",
+  "quote": "Origin - Mesenchyme",
+  "explain": "결합조직의 기원은 중간엽"
+ },
+ {
+  "id": "b2-02",
+  "ch": 2,
+  "lv": "쉬움",
+  "stem": "(  ①  )는 B 림프구에서 분화하며 항체를 생산하는 세포이다.",
+  "blanks": [
+   {
+    "ans": "Plasma cell",
+    "alts": [
+     "형질세포",
+     "plasma"
+    ]
+   }
+  ],
+  "src": "교안02",
+  "quote": "differentiated from B lymphocyte",
+  "explain": "B 림프구에서 분화해 항체 생산은 형질세포"
+ },
+ {
+  "id": "b2-03",
+  "ch": 2,
+  "lv": "쉬움",
+  "stem": "탯줄의 점액성 결합조직인 (  ①  )'s jelly에는 (  ②  )이 풍부하다.",
+  "blanks": [
+   {
+    "ans": "Wharton",
+    "alts": [
+     "Wharton's",
+     "Wharton’s",
+     "와튼"
+    ]
+   },
+   {
+    "ans": "hyaluronic acid",
+    "alts": [
+     "히알루론산",
+     "hyaluronan"
+    ]
+   }
+  ],
+  "src": "교안02",
+  "quote": "the umbilical cord (Wharton’s jelly): rich hyaluronic acid",
+  "explain": "탯줄 점액성 결합조직은 Wharton jelly, HA 풍부"
+ },
+ {
+  "id": "b2-04",
+  "ch": 2,
+  "lv": "쉬움",
+  "stem": "조직액의 평형이 깨져 조직액이 비정상적으로 늘어난 병적 상태를 (  ①  )라고 한다.",
+  "blanks": [
+   {
+    "ans": "Edema",
+    "alts": [
+     "부종",
+     "oedema"
+    ]
+   }
+  ],
+  "src": "교안02",
+  "quote": "Edema – pathologic condition",
+  "explain": "조직액 평형 이상의 병적 상태는 부종"
+ },
+ {
+  "id": "b2-05",
+  "ch": 2,
+  "lv": "보통",
+  "stem": "갈색지방세포에서 양성자 역류로 생긴 에너지는 (  ①  )(thermogenin)에 의해 ATP가 아닌 (  ②  )로 소실된다.",
+  "blanks": [
+   {
+    "ans": "UCP-1",
+    "alts": [
+     "uncoupling protein",
+     "uncoupling protein UCP-1",
+     "thermogenin",
+     "UCP1"
+    ]
+   },
+   {
+    "ans": "열",
+    "alts": [
+     "heat"
+    ]
+   }
+  ],
+  "src": "교안02",
+  "quote": "uncoupling protein UCP-1) is dissipated as heat, not used for ATP formation.",
+  "explain": "UCP-1이 에너지를 열로 방출해 열발생"
+ },
+ {
+  "id": "b2-06",
+  "ch": 2,
+  "lv": "보통",
+  "stem": "기질의 (  ①  )은 core protein에 (  ②  )이 붙은 구조로, hyaluronic acid에 시험관솔 모양으로 연결된다.",
+  "blanks": [
+   {
+    "ans": "Proteoglycan",
+    "alts": [
+     "프로테오글리칸",
+     "proteoglycans"
+    ]
+   },
+   {
+    "ans": "GAG",
+    "alts": [
+     "glycosaminoglycan",
+     "glycosaminoglycans",
+     "글리코사미노글리칸"
+    ]
+   }
+  ],
+  "src": "교안02",
+  "quote": "Proteoglycan : core protein + GAG",
+  "explain": "proteoglycan은 core protein + GAG"
+ },
+ {
+  "id": "b2-07",
+  "ch": 2,
+  "lv": "보통",
+  "stem": "(  ①  ) 증후군은 15번 염색체의 (  ②  ) 유전자 결함으로 승모판 탈출, 대동맥 박리 등을 일으킨다.",
+  "blanks": [
+   {
+    "ans": "Marfan",
+    "alts": [
+     "마르판",
+     "Marfan syndrome"
+    ]
+   },
+   {
+    "ans": "fibrillin",
+    "alts": [
+     "피브릴린"
+    ]
+   }
+  ],
+  "src": "교안02",
+  "quote": "a genetic defect in the gene on chromosome 15 that codes for fibrillin.",
+  "explain": "fibrillin 유전자 결함 질환은 Marfan"
+ },
+ {
+  "id": "b2-08",
+  "ch": 2,
+  "lv": "보통",
+  "stem": "(  ①  ) 결합조직은 섬유가 평행하게 배열되어 건, 인대, 건막을 이루고, 불규칙형은 진피와 근막을 이룬다.",
+  "blanks": [
+   {
+    "ans": "Dense regular",
+    "alts": [
+     "dense regular CT",
+     "규칙성 치밀결합조직",
+     "치밀규칙결합조직",
+     "dense regular connective tissue"
+    ]
+   }
+  ],
+  "src": "교안02",
+  "quote": "Dense Regular CT - Tendons, ligaments, aponeuroses",
+  "explain": "건·인대는 dense regular CT"
+ },
+ {
+  "id": "b2-09",
+  "ch": 2,
+  "lv": "어려움",
+  "stem": "콜라겐 섬유는 (  ①  )형 collagen, 세망섬유는 (  ②  )형 collagen으로 이루어지며, 세망섬유는 silver 염색에 반응하는 (  ③  )성이다.",
+  "blanks": [
+   {
+    "ans": "I",
+    "alts": [
+     "Type I",
+     "1형",
+     "I형"
+    ]
+   },
+   {
+    "ans": "III",
+    "alts": [
+     "Type III",
+     "3형",
+     "III형"
+    ]
+   },
+   {
+    "ans": "Argyrophilic",
+    "alts": [
+     "호은성",
+     "친은성",
+     "argyrophilia"
+    ]
+   }
+  ],
+  "src": "교안02",
+  "quote": "Reticular f. 0.2 - 2.0 Type III Silver (Argyrophilic)",
+  "explain": "콜라겐 섬유 type I, 세망섬유 type III·호은성"
+ },
+ {
+  "id": "b2-10",
+  "ch": 2,
+  "lv": "어려움",
+  "stem": "탄성섬유 형성 단계에서 elastin이 없는 초기 형태는 (  ①  )이고, 무정형 elastin과 미세섬유로 된 중간 단계는 (  ②  )이다.",
+  "blanks": [
+   {
+    "ans": "Oxytalan",
+    "alts": [
+     "옥시탈란"
+    ]
+   },
+   {
+    "ans": "Elaunin",
+    "alts": [
+     "엘라우닌"
+    ]
+   }
+  ],
+  "src": "교안02",
+  "quote": "Oxytalan ; early stages of formation. (no elastin)",
+  "explain": "oxytalan, elaunin, 성숙 elastic fiber 순서"
+ },
+ {
+  "id": "b3-01",
+  "ch": 3,
+  "lv": "쉬움",
+  "stem": "골격근은 줄무늬가 있고 (  ①  ) 핵을 가지며, 핵은 세포의 (  ②  )에 위치하고 수의근이다.",
+  "blanks": [
+   {
+    "ans": "multiple nuclei",
+    "alts": [
+     "다핵",
+     "multinucleated"
+    ]
+   },
+   {
+    "ans": "peripheral nuclei",
+    "alts": [
+     "주변핵",
+     "주변",
+     "peripheral"
+    ]
+   }
+  ],
+  "src": "교안03",
+  "quote": "Skeletal muscle: striation, multiple nuclei, peripheral nuclei, voluntary",
+  "explain": "골격근은 다핵·주변핵·수의근이다."
+ },
+ {
+  "id": "b3-02",
+  "ch": 3,
+  "lv": "쉬움",
+  "stem": "적색 섬유(red fiber)는 수축이 느리고 지속적이며 에너지원으로 (  ①  ) 대사를 하고 (  ②  )가 풍부하다.",
+  "blanks": [
+   {
+    "ans": "aerobic",
+    "alts": [
+     "유산소",
+     "호기성"
+    ]
+   },
+   {
+    "ans": "myoglobin",
+    "alts": [
+     "미오글로빈"
+    ]
+   }
+  ],
+  "src": "교안03",
+  "quote": "Aerobic activity",
+  "explain": "적색 섬유는 유산소 대사, myoglobin 풍부."
+ },
+ {
+  "id": "b3-03",
+  "ch": 3,
+  "lv": "쉬움",
+  "stem": "근육 재생에서 골격근은 (  ①  )가 담당하고, 심근은 (  ②  )에 의한 흉터조직으로 대체된다.",
+  "blanks": [
+   {
+    "ans": "satellite cell",
+    "alts": [
+     "위성세포"
+    ]
+   },
+   {
+    "ans": "fibroblast",
+    "alts": [
+     "섬유모세포"
+    ]
+   }
+  ],
+  "src": "교안03",
+  "quote": "Cardiac muscle: scar tissue by fibroblast",
+  "explain": "골격근은 위성세포, 심근은 섬유모세포 흉터."
+ },
+ {
+  "id": "b3-04",
+  "ch": 3,
+  "lv": "쉬움",
+  "stem": "근섬유 1개를 감싸는 결합조직은 (  ①  )이며, 그물섬유와 (  ②  )으로 이루어진다.",
+  "blanks": [
+   {
+    "ans": "endomysium",
+    "alts": [
+     "근내막"
+    ]
+   },
+   {
+    "ans": "basal lamina",
+    "alts": [
+     "바닥판",
+     "기저판"
+    ]
+   }
+  ],
+  "src": "교안03",
+  "quote": "Endomysium : reticular fiber + basal lamina",
+  "explain": "endomysium은 그물섬유+바닥판."
+ },
+ {
+  "id": "b3-05",
+  "ch": 3,
+  "lv": "보통",
+  "stem": "편광에서 I band는 (  ①  )이고 A band는 (  ②  )이다.",
+  "blanks": [
+   {
+    "ans": "isotropic",
+    "alts": [
+     "등방성"
+    ]
+   },
+   {
+    "ans": "anisotropic",
+    "alts": [
+     "이방성"
+    ]
+   }
+  ],
+  "src": "교안03",
+  "quote": "A = A band (anisotropic in polarized light)",
+  "explain": "I=isotropic, A=anisotropic."
+ },
+ {
+  "id": "b3-06",
+  "ch": 3,
+  "lv": "보통",
+  "stem": "골격근의 삼조체(triad)는 T소관 1개와 (  ①  ) 2개로 이루어진다.",
+  "blanks": [
+   {
+    "ans": "terminal cisternae",
+    "alts": [
+     "종말조",
+     "TC",
+     "terminal cistern"
+    ]
+   }
+  ],
+  "src": "교안03",
+  "quote": "= one tubule + two terminal cisternae",
+  "explain": "triad는 T-tubule + 종말조 2개."
+ },
+ {
+  "id": "b3-07",
+  "ch": 3,
+  "lv": "보통",
+  "stem": "Ca2+이 (  ①  )에 결합하면 TnI의 구조가 변하고 (  ②  )가 이동하여 actin의 myosin 결합부위가 노출된다.",
+  "blanks": [
+   {
+    "ans": "TnC",
+    "alts": [
+     "troponin C"
+    ]
+   },
+   {
+    "ans": "tropomyosin",
+    "alts": [
+     "트로포미오신"
+    ]
+   }
+  ],
+  "src": "교안03",
+  "quote": "positional shift of tropomyosin",
+  "explain": "Ca2+→TnC→tropomyosin 이동."
+ },
+ {
+  "id": "b3-08",
+  "ch": 3,
+  "lv": "보통",
+  "stem": "심근 사이원반의 가로부분에는 (  ①  )과 (  ②  )이 있고, 세로부분에는 (  ③  )이 있다.",
+  "blanks": [
+   {
+    "ans": "desmosome",
+    "alts": [
+     "데스모좀"
+    ]
+   },
+   {
+    "ans": "fascia adherens",
+    "alts": [
+     "접착띠"
+    ]
+   },
+   {
+    "ans": "gap junction",
+    "alts": [
+     "간극결합",
+     "틈새이음"
+    ]
+   }
+  ],
+  "src": "교안03",
+  "quote": "desmosome, fascia adherens",
+  "explain": "가로부분 desmosome·fascia adherens, 세로부분 gap junction."
+ },
+ {
+  "id": "b3-09",
+  "ch": 3,
+  "lv": "어려움",
+  "stem": "근 길이 변화(stretch)는 (  ①  )가, 힘줄의 장력은 (  ②  )가 감지한다.",
+  "blanks": [
+   {
+    "ans": "muscle spindle",
+    "alts": [
+     "근방추"
+    ]
+   },
+   {
+    "ans": "Golgi tendon organ",
+    "alts": [
+     "골지건기관",
+     "골지힘줄기관",
+     "GTO"
+    ]
+   }
+  ],
+  "src": "교안03",
+  "quote": "Golgi tendon organ (between collagen fibers in tendon)",
+  "explain": "spindle은 길이, GTO는 장력 감지."
+ },
+ {
+  "id": "b3-10",
+  "ch": 3,
+  "lv": "어려움",
+  "stem": "심근은 triad 대신 (  ①  )를 가지며, 평활근은 T소관 대신 (  ②  )이 있고 troponin이 없어 Ca2+가 (  ③  )에 결합한다.",
+  "blanks": [
+   {
+    "ans": "diad",
+    "alts": [
+     "이분체"
+    ]
+   },
+   {
+    "ans": "caveola",
+    "alts": [
+     "caveolae",
+     "카베올라"
+    ]
+   },
+   {
+    "ans": "calmodulin",
+    "alts": [
+     "칼모듈린"
+    ]
+   }
+  ],
+  "src": "교안03",
+  "quote": "Ca 2+ binds to Calmodulin",
+  "explain": "심근 diad, 평활근 caveola·calmodulin."
+ },
+ {
+  "id": "b4-01",
+  "ch": 4,
+  "lv": "쉬움",
+  "stem": "연골에는 혈관이 없어 영양분이 기질의 물을 통한 (  ①  )으로 공급되며, 연골은 (  ②  )로 덮여 있다.",
+  "blanks": [
+   {
+    "ans": "diffusion",
+    "alts": [
+     "확산"
+    ]
+   },
+   {
+    "ans": "perichondrium",
+    "alts": [
+     "연골막"
+    ]
+   }
+  ],
+  "src": "교안03",
+  "quote": "No blood vessel (nourishment: diffusion through the water in matrix)",
+  "explain": "무혈관 연골은 확산으로 영양받음."
+ },
+ {
+  "id": "b4-02",
+  "ch": 4,
+  "lv": "쉬움",
+  "stem": "유리연골은 (  ①  ) 콜라겐, 탄성연골은 type II 콜라겐과 (  ②  ), 섬유연골은 (  ③  ) 콜라겐을 가진다.",
+  "blanks": [
+   {
+    "ans": "type II",
+    "alts": [
+     "II형",
+     "collagen type II"
+    ]
+   },
+   {
+    "ans": "elastic fiber",
+    "alts": [
+     "탄성섬유"
+    ]
+   },
+   {
+    "ans": "type I",
+    "alts": [
+     "I형",
+     "collagen type I"
+    ]
+   }
+  ],
+  "src": "교안03",
+  "quote": "Fibrous cartilage: collagen type I",
+  "explain": "연골 3종은 콜라겐·탄성섬유로 구분."
+ },
+ {
+  "id": "b4-03",
+  "ch": 4,
+  "lv": "쉬움",
+  "stem": "뼈를 흡수하는 세포는 (  ①  )로, 세포 융합으로 핵이 5~50개인 다핵세포이다.",
+  "blanks": [
+   {
+    "ans": "osteoclast",
+    "alts": [
+     "파골세포"
+    ]
+   }
+  ],
+  "src": "교안03",
+  "quote": "Many nuclei (5~50) by cell fusion",
+  "explain": "다핵 흡수세포는 파골세포."
+ },
+ {
+  "id": "b4-04",
+  "ch": 4,
+  "lv": "쉬움",
+  "stem": "뼈는 체내 (  ①  )의 99%를 저장하며, 무기질은 (  ②  ) 결정 형태이다.",
+  "blanks": [
+   {
+    "ans": "Ca2+",
+    "alts": [
+     "calcium",
+     "칼슘",
+     "Ca"
+    ]
+   },
+   {
+    "ans": "hydroxyapatite",
+    "alts": [
+     "수산화인회석",
+     "하이드록시아파타이트"
+    ]
+   }
+  ],
+  "src": "교안03",
+  "quote": "As a form of Hydroxyapatite crystals",
+  "explain": "뼈 무기질은 hydroxyapatite."
+ },
+ {
+  "id": "b4-05",
+  "ch": 4,
+  "lv": "보통",
+  "stem": "석회화 기전 중 (  ①  ) theory는 콜라겐 섬유 틈에 calcium phosphate가 침착한다고 보고, (  ②  ) theory는 osteoblast가 분비한 작은 막소포를 이용한다.",
+  "blanks": [
+   {
+    "ans": "heterogenous nucleation",
+    "alts": [
+     "heterogeneous nucleation",
+     "불균질 핵형성"
+    ]
+   },
+   {
+    "ans": "matrix vesicle",
+    "alts": [
+     "기질소포"
+    ]
+   }
+  ],
+  "src": "교안03",
+  "quote": "Deposition of calcium phosphate on collagen fiber gap",
+  "explain": "두 석회화 이론: 핵형성 vs 기질소포."
+ },
+ {
+  "id": "b4-06",
+  "ch": 4,
+  "lv": "보통",
+  "stem": "미성숙하고 광화가 덜 된 뼈는 (  ①  )이고, 성숙하여 층판 구조를 가진 뼈는 (  ②  )이다.",
+  "blanks": [
+   {
+    "ans": "woven bone",
+    "alts": [
+     "primary bone",
+     "망상골",
+     "미성숙골"
+    ]
+   },
+   {
+    "ans": "lamellar bone",
+    "alts": [
+     "secondary bone",
+     "층판골"
+    ]
+   }
+  ],
+  "src": "교안03",
+  "quote": "Secondary bone : lamellar bone",
+  "explain": "primary=woven, secondary=lamellar."
+ },
+ {
+  "id": "b4-07",
+  "ch": 4,
+  "lv": "보통",
+  "stem": "PTH는 (  ①  )를 자극해 (  ②  )를 분비시키고, (  ③  )는 RANKL에 결합해 그 신호를 억제한다.",
+  "blanks": [
+   {
+    "ans": "osteoblast",
+    "alts": [
+     "조골세포"
+    ]
+   },
+   {
+    "ans": "RANKL",
+    "alts": []
+   },
+   {
+    "ans": "OPG",
+    "alts": [
+     "osteoprotegerin"
+    ]
+   }
+  ],
+  "src": "교안03",
+  "quote": "PTH stimulates the osteoblasts to secrete RANKL",
+  "explain": "파골세포엔 PTH 수용체 없고 조골세포가 RANKL 분비."
+ },
+ {
+  "id": "b4-08",
+  "ch": 4,
+  "lv": "보통",
+  "stem": "하악체는 (  ①  ) 골화로, 장골과 하악과두는 (  ②  ) 골화로 형성된다.",
+  "blanks": [
+   {
+    "ans": "intramembranous",
+    "alts": [
+     "막내골화",
+     "막성골화"
+    ]
+   },
+   {
+    "ans": "endochondral",
+    "alts": [
+     "연골내골화",
+     "연골성골화"
+    ]
+   }
+  ],
+  "src": "교안03",
+  "quote": "Intramembranous ossification: mandible body",
+  "explain": "하악체=막내, 장골·과두=연골내."
+ },
+ {
+  "id": "b4-09",
+  "ch": 4,
+  "lv": "어려움",
+  "stem": "성장판 5구역 순서는 reserve → (  ①  ) zone(isogenous cell group) → (  ②  ) zone(glycogen 축적) → (  ③  ) zone(죽은 연골세포) → ossification zone이다.",
+  "blanks": [
+   {
+    "ans": "proliferative",
+    "alts": [
+     "증식대",
+     "증식"
+    ]
+   },
+   {
+    "ans": "hypertrophic",
+    "alts": [
+     "비대대",
+     "비대"
+    ]
+   },
+   {
+    "ans": "calcified cartilage",
+    "alts": [
+     "석회화연골대",
+     "calcified"
+    ]
+   }
+  ],
+  "src": "교안03",
+  "quote": "Accumulate glycogen",
+  "explain": "reserve→증식→비대→석회화→골화 순."
+ },
+ {
+  "id": "b4-10",
+  "ch": 4,
+  "lv": "어려움",
+  "stem": "골절 치유에서 osteoprogenitor 세포 증식 후 (  ①  )가 형성되고, 이후 remodeling으로 (  ②  )로 대체된다.",
+  "blanks": [
+   {
+    "ans": "bone callus",
+    "alts": [
+     "primary bone",
+     "가골"
+    ]
+   },
+   {
+    "ans": "secondary bone",
+    "alts": [
+     "lamellar bone",
+     "2차골",
+     "층판골"
+    ]
+   }
+  ],
+  "src": "교안03",
+  "quote": "bone remodeling to secondary bone",
+  "explain": "callus(primary)→remodeling→secondary bone."
+ },
+ {
+  "id": "b5-01",
+  "ch": 5,
+  "lv": "쉬움",
+  "stem": "선천면역계(innate immune system)는 (  ①  )이고 빠른 반응을 보이지만 면역기억이 없다.",
+  "blanks": [
+   {
+    "ans": "nonspecific",
+    "alts": [
+     "비특이적",
+     "비특이"
+    ]
+   }
+  ],
+  "src": "교안05",
+  "quote": "natural immune system, nonspecific and rapid response",
+  "explain": "선천면역은 nonspecific, rapid, 기억 없음"
+ },
+ {
+  "id": "b5-02",
+  "ch": 5,
+  "lv": "쉬움",
+  "stem": "T 림프구가 성숙하는 일차림프기관 (  ①  )은 배아의 3·4번째 (  ②  )에서 생긴다.",
+  "blanks": [
+   {
+    "ans": "Thymus",
+    "alts": [
+     "흉선",
+     "가슴샘"
+    ]
+   },
+   {
+    "ans": "pharyngeal pouch",
+    "alts": [
+     "pharyngeal pouches",
+     "인두낭"
+    ]
+   }
+  ],
+  "src": "교안05",
+  "quote": "arises in the third and fourth pharyngeal pouches of the embryo",
+  "explain": "흉선은 3·4번째 pharyngeal pouch 기원"
+ },
+ {
+  "id": "b5-03",
+  "ch": 5,
+  "lv": "쉬움",
+  "stem": "태반을 통과해 태아에게 수동면역을 주는 유일한 항체는 (  ①  )이다.",
+  "blanks": [
+   {
+    "ans": "IgG",
+    "alts": []
+   }
+  ],
+  "src": "교안05",
+  "quote": "the only antibody capable of crossing the placenta to give passive immunity to the fetus",
+  "explain": "태반 통과 항체는 IgG뿐"
+ },
+ {
+  "id": "b5-04",
+  "ch": 5,
+  "lv": "쉬움",
+  "stem": "회장의 Peyer's patch에서 (  ①  )은 항원을 epitope로 처리하지 않고 제시하며, Peyer's patch에는 afferent lymphatic vessel이 없고 (  ②  ) lymph drainage만 있다.",
+  "blanks": [
+   {
+    "ans": "M cell",
+    "alts": [
+     "microfold cell",
+     "M세포"
+    ]
+   },
+   {
+    "ans": "efferent",
+    "alts": [
+     "efferent lymphatic vessel"
+    ]
+   }
+  ],
+  "src": "교안05",
+  "quote": "no afferent lymphatic vessels",
+  "explain": "Peyer's patch는 afferent 없이 efferent만"
+ },
+ {
+  "id": "b5-05",
+  "ch": 5,
+  "lv": "보통",
+  "stem": "모든 세포는 MHC (  ①  ) 단백질을 가지며, APC는 MHC I과 MHC (  ②  )를 모두 가진다.",
+  "blanks": [
+   {
+    "ans": "I",
+    "alts": [
+     "class I",
+     "1",
+     "MHC I"
+    ]
+   },
+   {
+    "ans": "II",
+    "alts": [
+     "class II",
+     "2",
+     "MHC II"
+    ]
+   }
+  ],
+  "src": "교안05",
+  "quote": "every cell : MHC I proteins",
+  "explain": "모든 세포 MHC I, APC는 MHC I+II"
+ },
+ {
+  "id": "b5-06",
+  "ch": 5,
+  "lv": "보통",
+  "stem": "(  ①  )는 class II MHC restriction의 helper T cell 표지이고, (  ②  )은 class I MHC restriction의 cytotoxic T cell 표지이다.",
+  "blanks": [
+   {
+    "ans": "CD4",
+    "alts": []
+   },
+   {
+    "ans": "CD8",
+    "alts": []
+   }
+  ],
+  "src": "교안05",
+  "quote": "CD4- class II MHC restriction: helper T cell",
+  "explain": "CD4=helper(MHC II), CD8=CTL(MHC I)"
+ },
+ {
+  "id": "b5-07",
+  "ch": 5,
+  "lv": "보통",
+  "stem": "흉선 (  ①  )에서는 발생 중인 T cell의 98%가 (  ②  ) 또는 대식세포의 탐식으로 사멸한다.",
+  "blanks": [
+   {
+    "ans": "cortex",
+    "alts": [
+     "피질"
+    ]
+   },
+   {
+    "ans": "apoptosis",
+    "alts": [
+     "세포자멸사",
+     "세포사멸"
+    ]
+   }
+  ],
+  "src": "교안05",
+  "quote": "Cell death in the cortex : 98% of developing T cells, by apoptosis",
+  "explain": "피질에서 98% T cell이 apoptosis로 사멸"
+ },
+ {
+  "id": "b5-08",
+  "ch": 5,
+  "lv": "보통",
+  "stem": "림프절에서 흉선의존 영역인 (  ①  )에는 입방 내피로 된 정맥인 (  ②  )가 있어 림프구가 이동해 들어온다.",
+  "blanks": [
+   {
+    "ans": "paracortex",
+    "alts": [
+     "paracortical area",
+     "deep cortical zone",
+     "부피질"
+    ]
+   },
+   {
+    "ans": "HEV",
+    "alts": [
+     "high endothelial venule",
+     "high endothelial venules",
+     "HEVs"
+    ]
+   }
+  ],
+  "src": "교안05",
+  "quote": "located in the paracortex.",
+  "explain": "paracortex에 HEV 위치"
+ },
+ {
+  "id": "b5-09",
+  "ch": 5,
+  "lv": "어려움",
+  "stem": "흉선에서 blood-thymus barrier가 없는 곳은 (  ①  )이고, 이 barrier가 존재하는 곳은 (  ②  )이다.",
+  "blanks": [
+   {
+    "ans": "medulla",
+    "alts": [
+     "수질"
+    ]
+   },
+   {
+    "ans": "cortex",
+    "alts": [
+     "피질"
+    ]
+   }
+  ],
+  "src": "교안05",
+  "quote": "No blood-thymus barrier",
+  "explain": "BTB는 피질에만, 수질은 없음"
+ },
+ {
+  "id": "b5-10",
+  "ch": 5,
+  "lv": "어려움",
+  "stem": "비장 white pulp에서 central arteriole을 둘러싼 (  ①  )은 (  ②  ) 림프구로, lymphoid nodule은 (  ③  ) 림프구로 구성된다.",
+  "blanks": [
+   {
+    "ans": "PALS",
+    "alts": [
+     "periarterial lymphatic sheath",
+     "periarterial lymphoid sheath"
+    ]
+   },
+   {
+    "ans": "T",
+    "alts": [
+     "T cell",
+     "T 림프구"
+    ]
+   },
+   {
+    "ans": "B",
+    "alts": [
+     "B cell",
+     "B 림프구"
+    ]
+   }
+  ],
+  "src": "교안05",
+  "quote": "composed of T lymphocytes.",
+  "explain": "PALS=T, nodule=B"
+ },
+ {
+  "id": "b6-01",
+  "ch": 6,
+  "lv": "쉬움",
+  "stem": "동맥은 혈액을 심장에서 장기로 보내고, (  ①  )은 혈액을 장기와 조직에서 심장으로 되돌린다.",
+  "blanks": [
+   {
+    "ans": "vein",
+    "alts": [
+     "veins",
+     "정맥"
+    ]
+   }
+  ],
+  "src": "교안05",
+  "quote": "Blood from the organs and tissues to the heart",
+  "explain": "정맥은 심장으로 복귀"
+ },
+ {
+  "id": "b6-02",
+  "ch": 6,
+  "lv": "쉬움",
+  "stem": "혈관벽은 안쪽부터 tunica (  ①  ), tunica (  ②  ), tunica (  ③  )의 3층이다.",
+  "blanks": [
+   {
+    "ans": "intima",
+    "alts": [
+     "내막"
+    ]
+   },
+   {
+    "ans": "media",
+    "alts": [
+     "중막"
+    ]
+   },
+   {
+    "ans": "adventitia",
+    "alts": [
+     "외막"
+    ]
+   }
+  ],
+  "src": "교안05",
+  "quote": "tunica intima (inner) tunica media (middle) tunica adventitia (outer)",
+  "explain": "혈관벽 3층 순서"
+ },
+ {
+  "id": "b6-03",
+  "ch": 6,
+  "lv": "쉬움",
+  "stem": "심장의 pacemaker는 (  ①  )이며, 여기서 발생한 자극은 (  ②  )로 전달된다.",
+  "blanks": [
+   {
+    "ans": "SA node",
+    "alts": [
+     "sinoatrial node",
+     "동방결절"
+    ]
+   },
+   {
+    "ans": "AV node",
+    "alts": [
+     "atrioventricular node",
+     "방실결절"
+    ]
+   }
+  ],
+  "src": "교안05",
+  "quote": "generates impulses that initiate contraction of atrial muscle cells, to atrioventricular node",
+  "explain": "SA node가 박동 발생, AV node로 전달"
+ },
+ {
+  "id": "b6-04",
+  "ch": 6,
+  "lv": "쉬움",
+  "stem": "큰 혈관의 tunica media와 adventitia는 혈관벽으로 들어가는 작은 동맥인 (  ①  )에서 영양을 공급받는다.",
+  "blanks": [
+   {
+    "ans": "vasa vasorum",
+    "alts": []
+   }
+  ],
+  "src": "교안05",
+  "quote": "small arteries that enter the vessel walls",
+  "explain": "vasa vasorum이 벽 영양 공급"
+ },
+ {
+  "id": "b6-05",
+  "ch": 6,
+  "lv": "보통",
+  "stem": "심장의 (  ①  )는 tunica intima에, (  ②  )는 tunica media에, (  ③  )는 tunica adventitia에 해당한다.",
+  "blanks": [
+   {
+    "ans": "endocardium",
+    "alts": [
+     "심내막"
+    ]
+   },
+   {
+    "ans": "myocardium",
+    "alts": [
+     "심근층",
+     "심근"
+    ]
+   },
+   {
+    "ans": "epicardium",
+    "alts": [
+     "심외막"
+    ]
+   }
+  ],
+  "src": "교안05",
+  "quote": "Epicardium (tunica adventitia)",
+  "explain": "심장 3층과 혈관벽 3층 대응"
+ },
+ {
+  "id": "b6-06",
+  "ch": 6,
+  "lv": "보통",
+  "stem": "Purkinje fiber는 변형된 심근세포로 (  ①  )와 glycogen이 풍부하고 (  ②  )은 세포 주변부에만 적다.",
+  "blanks": [
+   {
+    "ans": "mitochondria",
+    "alts": [
+     "미토콘드리아"
+    ]
+   },
+   {
+    "ans": "myofibril",
+    "alts": [
+     "myofibrils",
+     "근원섬유"
+    ]
+   }
+  ],
+  "src": "교안05",
+  "quote": "rich mitochondria and glycogen",
+  "explain": "Purkinje: 미토콘드리아·글리코겐 풍부, myofibril 빈약"
+ },
+ {
+  "id": "b6-07",
+  "ch": 6,
+  "lv": "보통",
+  "stem": "tunica intima와 media를 가르는 (  ①  )은 (  ②  )으로 이루어지며 muscular artery에서 잘 발달해 있다.",
+  "blanks": [
+   {
+    "ans": "internal elastic lamina",
+    "alts": [
+     "내탄력막",
+     "IEL"
+    ]
+   },
+   {
+    "ans": "elastin",
+    "alts": [
+     "엘라스틴"
+    ]
+   }
+  ],
+  "src": "교안05",
+  "quote": "separating the tunica intima from the tunica media,",
+  "explain": "내탄력막은 elastin으로 구성"
+ },
+ {
+  "id": "b6-08",
+  "ch": 6,
+  "lv": "보통",
+  "stem": "(  ①  ) capillary는 직경 60-80nm의 fenestrae가 있고 endocrine gland, 장, 신장 glomerulus에 위치한다.",
+  "blanks": [
+   {
+    "ans": "fenestrated",
+    "alts": [
+     "visceral",
+     "유창성",
+     "유공성"
+    ]
+   }
+  ],
+  "src": "교안05",
+  "quote": "locate in endocrine glands, intestine, glomeruli of the kidneys",
+  "explain": "fenestrated는 내분비·장·사구체"
+ },
+ {
+  "id": "b6-09",
+  "ch": 6,
+  "lv": "어려움",
+  "stem": "(  ①  ) capillary는 연속 기저판과 많은 pinocytotic vesicle을 가지며, (  ②  ) capillary는 불연속 기저판을 가지고 간·골수·부신피질에 위치한다.",
+  "blanks": [
+   {
+    "ans": "continuous",
+    "alts": [
+     "somatic",
+     "연속"
+    ]
+   },
+   {
+    "ans": "sinusoidal",
+    "alts": [
+     "discontinuous sinusoidal",
+     "동양",
+     "불연속"
+    ]
+   }
+  ],
+  "src": "교안05",
+  "quote": "have a discontinous basal lamina",
+  "explain": "연속형 vs 동양(sinusoidal)형 구분"
+ },
+ {
+  "id": "b6-10",
+  "ch": 6,
+  "lv": "어려움",
+  "stem": "aorta와 주요 가지는 conducting artery인 (  ①  ) artery이고, 대부분의 named artery는 distributing artery인 (  ②  ) artery이다.",
+  "blanks": [
+   {
+    "ans": "elastic",
+    "alts": [
+     "탄력동맥"
+    ]
+   },
+   {
+    "ans": "muscular",
+    "alts": [
+     "근육동맥"
+    ]
+   }
+  ],
+  "src": "교안05",
+  "quote": "distributing arteries,",
+  "explain": "탄력동맥=conducting, 근육동맥=distributing"
+ },
+ {
+  "id": "b7-01",
+  "ch": 7,
+  "lv": "쉬움",
+  "stem": "Nissl 소체는 (  ①  )로 이루어져 있으며 단백질(폴리펩티드) 합성의 활성 부위이다.",
+  "blanks": [
+   {
+    "ans": "r-ER",
+    "alts": [
+     "rough ER",
+     "조면소포체",
+     "거친면소포체",
+     "RER"
+    ]
+   }
+  ],
+  "src": "교안04(2026판)",
+  "quote": "Nissl substance: r-ER",
+  "explain": "Nissl 소체의 실체는 r-ER이다."
+ },
+ {
+  "id": "b7-02",
+  "ch": 7,
+  "lv": "쉬움",
+  "stem": "CNS의 신경아교세포는 astrocyte, (  ①  ), microglia, ependymal cell이고, PNS에는 Schwann cell과 (  ②  )가 있다.",
+  "blanks": [
+   {
+    "ans": "oligodendrocyte",
+    "alts": [
+     "희소돌기아교세포",
+     "희소돌기세포"
+    ]
+   },
+   {
+    "ans": "satellite cell",
+    "alts": [
+     "위성세포",
+     "capsular cell"
+    ]
+   }
+  ],
+  "src": "교안04(2026판)",
+  "quote": "astrocyte, oligodendrocyte, microglia and ependymal cell",
+  "explain": "CNS 4종, PNS 2종 구분."
+ },
+ {
+  "id": "b7-03",
+  "ch": 7,
+  "lv": "쉬움",
+  "stem": "축삭에는 단백질 합성 장치가 없어 신경전달물질, 효소, 막단백질은 (  ①  )를 통해 운반된다.",
+  "blanks": [
+   {
+    "ans": "axonal transport",
+    "alts": [
+     "axoplasmic transport",
+     "축삭수송",
+     "축삭 수송"
+    ]
+   }
+  ],
+  "src": "교안04(2026판)",
+  "quote": "transport via axonal (axoplasmic) transport",
+  "explain": "축삭은 합성 불가라 수송에 의존."
+ },
+ {
+  "id": "b7-04",
+  "ch": 7,
+  "lv": "쉬움",
+  "stem": "Protoplasmic astrocyte는 회색질에, Fibrous astrocyte는 (  ①  )에 분포한다.",
+  "blanks": [
+   {
+    "ans": "white matter",
+    "alts": [
+     "백색질",
+     "흰질"
+    ]
+   }
+  ],
+  "src": "교안04(2026판)",
+  "quote": "Fibrous Astrocyte: in White Matter",
+  "explain": "섬유성 성상세포는 백색질."
+ },
+ {
+  "id": "b7-05",
+  "ch": 7,
+  "lv": "보통",
+  "stem": "말초신경의 결합조직 피막은 안쪽부터 endoneurium, (  ①  ), (  ②  ) 순이다. 가장 바깥층은 ②이다.",
+  "blanks": [
+   {
+    "ans": "perineurium",
+    "alts": [
+     "신경다발막",
+     "다발막"
+    ]
+   },
+   {
+    "ans": "epineurium",
+    "alts": [
+     "신경바깥막",
+     "바깥막"
+    ]
+   }
+  ],
+  "src": "교안04(2026판)",
+  "quote": "Epineurium (바깥)",
+  "explain": "epineurium이 가장 바깥층."
+ },
+ {
+  "id": "b7-06",
+  "ch": 7,
+  "lv": "보통",
+  "stem": "BBB에서 (  ①  )는 내피세포 tight junction 형성을 유도하고 BBB의 유지와 복구에 관여한다.",
+  "blanks": [
+   {
+    "ans": "astrocyte",
+    "alts": [
+     "성상세포",
+     "별아교세포"
+    ]
+   }
+  ],
+  "src": "교안04(2026판)",
+  "quote": "induction of tight junction formation",
+  "explain": "BBB 유지는 성상세포의 역할."
+ },
+ {
+  "id": "b7-07",
+  "ch": 7,
+  "lv": "보통",
+  "stem": "Microglia는 대식세포(Mononuclear Phagocytic System)로서 기원은 혈액 (  ①  )이며 염증 시 증가한다.",
+  "blanks": [
+   {
+    "ans": "monocyte",
+    "alts": [
+     "단핵구"
+    ]
+   }
+  ],
+  "src": "교안04(2026판)",
+  "quote": "Origin : Blood Monocyte",
+  "explain": "미세아교세포의 기원은 단핵구."
+ },
+ {
+  "id": "b7-08",
+  "ch": 7,
+  "lv": "보통",
+  "stem": "말이집 축삭의 전도속도는 internodal segment의 길이, myelin sheath의 두께, 축삭의 (  ①  )에 비례한다.",
+  "blanks": [
+   {
+    "ans": "diameter",
+    "alts": [
+     "직경",
+     "굵기",
+     "지름"
+    ]
+   }
+  ],
+  "src": "교안04(2026판)",
+  "quote": "Diameter of Axon",
+  "explain": "전도속도 결정 요소 중 하나."
+ },
+ {
+  "id": "b7-09",
+  "ch": 7,
+  "lv": "어려움",
+  "stem": "Nissl substance와 dendritic spine은 가지돌기에는 있을 수 있으나 축삭에는 (  ①  ). 말이집은 (  ②  )에만 연결될 수 있다.",
+  "blanks": [
+   {
+    "ans": "absent",
+    "alts": [
+     "없다",
+     "없음",
+     "not present"
+    ]
+   },
+   {
+    "ans": "축삭",
+    "alts": [
+     "axon"
+    ]
+   }
+  ],
+  "src": "교안04(2026판)",
+  "quote": "Nissl substance          absent           could be present",
+  "explain": "축삭·가지돌기 구조 차이."
+ },
+ {
+  "id": "b7-10",
+  "ch": 7,
+  "lv": "어려움",
+  "stem": "Wallerian degeneration은 (  ①  ) degeneration으로 손상 부위의 (  ②  )부 변화이고, axon reaction(chromatolysis)은 retrograde 변성으로 (  ③  )의 변화이다.",
+  "blanks": [
+   {
+    "ans": "anterograde",
+    "alts": [
+     "순행성"
+    ]
+   },
+   {
+    "ans": "원위",
+    "alts": [
+     "distal",
+     "말단"
+    ]
+   },
+   {
+    "ans": "soma",
+    "alts": [
+     "세포체"
+    ]
+   }
+  ],
+  "src": "교안04(2026판)",
+  "quote": "Wallerian Degeneration = anterograde degeneration",
+  "explain": "두 손상 반응의 위치 구분."
+ },
+ {
+  "id": "b8-01",
+  "ch": 8,
+  "lv": "쉬움",
+  "stem": "혈액은 혈장(Plasma) (  ①  )%와 유형성분(Formed element) 45%로 구성된다.",
+  "blanks": [
+   {
+    "ans": "55",
+    "alts": [
+     "55%"
+    ]
+   }
+  ],
+  "src": "교안04(2026판)",
+  "quote": "Plasma (55%)",
+  "explain": "혈장 55%, 유형성분 45%."
+ },
+ {
+  "id": "b8-02",
+  "ch": 8,
+  "lv": "쉬움",
+  "stem": "적혈구(RBC)는 핵이 없고 (  ①  ) 모양이다.",
+  "blanks": [
+   {
+    "ans": "biconcave disk",
+    "alts": [
+     "양면오목",
+     "양면오목 원반",
+     "biconcave"
+    ]
+   }
+  ],
+  "src": "교안04(2026판)",
+  "quote": "Biconcave disk shape",
+  "explain": "적혈구는 양면오목 원반."
+ },
+ {
+  "id": "b8-03",
+  "ch": 8,
+  "lv": "쉬움",
+  "stem": "과립백혈구에는 Neutrophil, Basophil, (  ①  )가 있다.",
+  "blanks": [
+   {
+    "ans": "eosinophil",
+    "alts": [
+     "호산구"
+    ]
+   }
+  ],
+  "src": "교안04(2026판)",
+  "quote": "Granulocyte (Neutrophil, Basophil, Eosinophil)",
+  "explain": "과립구 3종."
+ },
+ {
+  "id": "b8-04",
+  "ch": 8,
+  "lv": "쉬움",
+  "stem": "혈소판은 (  ①  )가 없는 biconvex disk 모양이며 수명은 약 10일이다.",
+  "blanks": [
+   {
+    "ans": "핵",
+    "alts": [
+     "nucleus",
+     "nuclear"
+    ]
+   }
+  ],
+  "src": "교안04(2026판)",
+  "quote": "No nucleus",
+  "explain": "혈소판은 무핵."
+ },
+ {
+  "id": "b8-05",
+  "ch": 8,
+  "lv": "보통",
+  "stem": "methylene blue는 염기성(+) 염료로 (  ①  )을, eosin은 산성(-) 염료로 eosinophilia를 나타낸다.",
+  "blanks": [
+   {
+    "ans": "basophilia",
+    "alts": [
+     "호염기성"
+    ]
+   }
+  ],
+  "src": "교안04(2026판)",
+  "quote": "metylene blue (+, alkaline) : basophilia",
+  "explain": "염기성 염료에 염색되면 호염기성."
+ },
+ {
+  "id": "b8-06",
+  "ch": 8,
+  "lv": "보통",
+  "stem": "호중구에서 관찰되는 Barr body에 해당하는 구조를 (  ①  )이라 한다.",
+  "blanks": [
+   {
+    "ans": "drum stick",
+    "alts": [
+     "drumstick",
+     "북채"
+    ]
+   }
+  ],
+  "src": "교안04(2026판)",
+  "quote": "Drum stick (=Barr body)",
+  "explain": "호중구 핵의 Barr body는 drum stick."
+ },
+ {
+  "id": "b8-07",
+  "ch": 8,
+  "lv": "보통",
+  "stem": "호산구는 핵이 2엽(Bilobe)이며 알레르기 반응과 (  ①  ) 감염에 관여한다.",
+  "blanks": [
+   {
+    "ans": "parasite",
+    "alts": [
+     "기생충"
+    ]
+   }
+  ],
+  "src": "교안04(2026판)",
+  "quote": "Allergy reaction, Parasite infection",
+  "explain": "호산구는 알레르기·기생충."
+ },
+ {
+  "id": "b8-08",
+  "ch": 8,
+  "lv": "보통",
+  "stem": "호염기구는 (  ①  ) receptor를 가지며 즉시형 과민반응에 관여한다.",
+  "blanks": [
+   {
+    "ans": "Immunoglobulin E",
+    "alts": [
+     "IgE",
+     "면역글로불린 E"
+    ]
+   }
+  ],
+  "src": "교안04(2026판)",
+  "quote": "Immunoglobulin E receptor",
+  "explain": "호염기구의 IgE 수용체."
+ },
+ {
+  "id": "b8-09",
+  "ch": 8,
+  "lv": "어려움",
+  "stem": "Granulopoiesis는 Myeloblast → (  ①  ) → Myelocyte → Metamyelocyte → (  ②  ) → WBC 순으로 진행된다.",
+  "blanks": [
+   {
+    "ans": "promyelocyte",
+    "alts": [
+     "전골수구"
+    ]
+   },
+   {
+    "ans": "stab cell",
+    "alts": [
+     "band cell",
+     "띠세포",
+     "stab"
+    ]
+   }
+  ],
+  "src": "교안04(2026판)",
+  "quote": "Promyelocyte (golgi, azurophilic granule)",
+  "explain": "Myeloblast 다음 단계는 promyelocyte."
+ },
+ {
+  "id": "b8-10",
+  "ch": 8,
+  "lv": "어려움",
+  "stem": "B lymphocyte는 (  ①  ) 면역을 담당하며 plasma cell로 분화하고, T lymphocyte는 (  ②  ) 면역을 담당한다.",
+  "blanks": [
+   {
+    "ans": "humorally mediated",
+    "alts": [
+     "체액성",
+     "humoral",
+     "체액"
+    ]
+   },
+   {
+    "ans": "cellularly mediated",
+    "alts": [
+     "세포성",
+     "cellular",
+     "세포매개성"
+    ]
+   }
+  ],
+  "src": "교안04(2026판)",
+  "quote": "cellularly mediated immune system",
+  "explain": "B는 체액성, T는 세포성 면역."
+ }
+]
