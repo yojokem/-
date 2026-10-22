@@ -10,7 +10,7 @@ for q in items:
     s=sol.get(q['id'])
     if not s: miss.append(q['id']); continue
     L=len(q['opts'])
-    assert len(s['opt'])==L and s['final'] and all(1<=i<=L for i in s['final']),q['id']
+    assert len(s['opt'])==L and all(1<=i<=L for i in s['final']),q['id']
     q['sol']={k:s.get(k,'') for k in('final','basis','opt','src','conf','note')}; n+=1
     if q.get('ans') and sorted(q['ans'])!=sorted(s['final']): diff.append(q['id'])
 json.dump(items,open('build/yq/items.json','w',encoding='utf-8'),ensure_ascii=False,indent=1)

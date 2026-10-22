@@ -657,9 +657,9 @@ function yqCard(q){
   let res = '';
   if(op){
     const srcL = {M: '연대 파일에 정답 표시', N: '연대 파일의 해설·노트에서 도출', '-': '연대 파일에 정답 없음'}[q.ans_src || '-'];
-    const fin = q.sol ? q.sol.final : q.ans;
-    const mine2 = hasOpts && pick.length && fin ? `<div class="keyline ${sameSet(pick, fin) ? 'okk' : 'badd'}">내 선택 ${pick.map(mk).join(' ')} → ${sameSet(pick, fin) ? '최종 정답과 같음' : '최종 정답과 다름'}</div>` : '';
-    const sol = q.sol ? `<div class="sol"><div class="keyline okk">최종 정답 ${q.sol.final.map(i => mk(i - 1)).join(' ')} <span class="tag">${esc(q.sol.basis)}</span> <span class="tag">확신 ${esc(q.sol.conf)}</span></div><ul class="solo">${q.sol.opt.map((x, i) => `<li class="${q.sol.final.includes(i + 1) ? 'sy' : 'sn'}"><b>${mk(i)}</b> ${sx(x)}</li>`).join('')}</ul><div class="note">풀이 근거: ${esc(q.sol.src)}</div>${q.sol.note ? `<div class="warn">${sx(q.sol.note)}</div>` : ''}</div>` : '';
+    const fin = (q.sol ? q.sol.final : q.ans); const finOk = fin && fin.length;
+    const mine2 = hasOpts && pick.length && finOk ? `<div class="keyline ${sameSet(pick, fin) ? 'okk' : 'badd'}">내 선택 ${pick.map(mk).join(' ')} → ${sameSet(pick, fin) ? '최종 정답과 같음' : '최종 정답과 다름'}</div>` : '';
+    const sol = q.sol ? `<div class="sol"><div class="keyline okk">최종 정답 ${q.sol.final.length ? q.sol.final.map(i => mk(i - 1)).join(" ") : "보기 유실(아래 메모 참조)"} <span class="tag">${esc(q.sol.basis)}</span> <span class="tag">확신 ${esc(q.sol.conf)}</span></div><ul class="solo">${q.sol.opt.map((x, i) => `<li class="${q.sol.final.includes(i + 1) ? 'sy' : 'sn'}"><b>${mk(i)}</b> ${sx(x)}</li>`).join('')}</ul><div class="note">풀이 근거: ${esc(q.sol.src)}</div>${q.sol.note ? `<div class="warn">${sx(q.sol.note)}</div>` : ''}</div>` : '';
     const yAns = q.ans ? `<div><b>연대 자료 기준</b> <span class="tag">${srcL}</span> ${hasOpts ? q.ans.map(i => `<span class="ansc">${mk(i - 1)}</span>`).join(' ') : ''}${q.ans_text ? `<div>${sx(q.ans_text)}</div>` : ''}</div>` : `<div><b>연대 자료 기준</b> <span class="tag">${srcL}</span>${q.ans_text ? `<div>${sx(q.ans_text)}</div>` : ''}</div>`;
     const kyo = q.est ? `<div><b>교안 기준 추정</b> <span class="tag">${esc(q.est.src)}</span> ${(q.est.ans || []).map(i => `<span class="ansc">${mk(i - 1)}</span>`).join(' ')}${q.est.quote ? `<blockquote>${esc(q.est.quote)}</blockquote>` : ''}${q.est.note ? `<div class="note">${sx(q.est.note)}</div>` : ''}</div>` : `<div><b>교안 기준</b> <span class="note">근거로 쓸 교안 문장을 찾지 못했습니다(추정 없음).</span></div>`;
     const conf = s.conf ? `<div class="warn"><b>충돌</b> 연대 표시 답과 교안 기준 추정이 다릅니다. 어느 쪽도 바꾸지 않고 둘 다 적었습니다.</div>` : '';
