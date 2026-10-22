@@ -232,6 +232,8 @@ table.mx td.no{color:var(--line)}
 .yon{margin-top:8px;border:1px solid var(--line);border-left:4px solid var(--s-cross);border-radius:6px;padding:6px 10px;background:var(--surface);font-size:.86rem}
 .yon.diff{border-left-color:var(--bad);background:var(--bad-bg)}.yon.unk{border-left-color:var(--s-est)}.yon.nm{border-left-color:var(--s-undec)}
 .yon .tag{margin-left:4px}.yx{display:flex;flex-wrap:wrap;gap:5px;margin:4px 0 0}.yx span{font-size:.78rem;border:1px dashed color-mix(in srgb,var(--cc) 45%,var(--line));border-radius:4px;padding:0 7px}
+.vdl{font-size:.74rem;border-radius:999px;padding:0 8px;background:var(--soft);white-space:nowrap}.vdl.ok{background:var(--ok-bg);color:var(--ok)}.vdl.diff{background:var(--bad-bg);color:var(--bad)}.vdl.unk{background:color-mix(in srgb,var(--s-est) 18%,var(--surface))}.star{color:var(--accent);font-weight:700}tr.rel td{color:var(--muted)}
+.yt td:nth-child(2),.yt td:nth-child(4){white-space:nowrap}
 </style>
 
 <div class="wrap">
@@ -255,7 +257,7 @@ const LS = {
   get(k, d){ try{ const v = localStorage.getItem('hist26.' + k); return v ? JSON.parse(v) : d; }catch(e){ return d; } },
   set(k, v){ try{ localStorage.setItem('hist26.' + k, JSON.stringify(v)); return true; }catch(e){ return false; } }
 };
-const TABS = [["status","현황·범위"],["mc","객관식"],["sum","내용 정리"],["full","전체 내용 정리"],["all","단원별 전체 펴기"],["new","예상 문제"],["mock","모의고사"]];
+const TABS = [["status","현황·범위"],["mc","객관식"],["sum","내용 정리"],["full","전체 내용 정리"],["all","단원별 전체 펴기"],["yon","연대야마"],["new","예상 문제"],["mock","모의고사"]];
 const S = { tab: LS.get('tab','status'), ch: 0, hak: 'all', st: 'all', group: true, exam: false, showAll: false,
   omr: LS.get('omr', {}), ua: LS.get('ua', {}), uaWhy: LS.get('uaWhy', {}), open: {}, graded: null, inclEst: false,
   mock: null, newOpen: {}, newMarks: {}, sch: 0, fold: {}, cc: {} };
@@ -604,6 +606,27 @@ function allTab(){
     + timeCard() + Object.keys(DB.CH).map(c => chapterCard(c, 'all')).join('');
 }
 
+
+/* ───────── 탭: 연대야마(타 학교) 단원별 정리 ───────── */
+function yonTab(){
+  const sc = S.ych || 0;
+  const chips = [0,1,2,3,4,5,6,7,8].map(c => `<button type="button" class="chip" data-act="ych" data-ch="${c}" aria-pressed="${sc === c}">${c ? 'Ch' + c + ' ' + esc(DB.CH[c]) : '전체'}</button>`).join('');
+  const VDL = {ok: '일치', diff: '불일치', unk: '우리 쪽 정답 미정', nm: '연대 표시 없음'};
+  const LVL = {S: '같은 문항', M: '비슷한 문항', R: '관련만'};
+  const secs = [1,2,3,4,5,6,7,8].filter(c => !sc || c === sc).map(c => {
+    const ids = Object.keys(DB.YR).filter(i => +i[0] === c).sort();
+    const rows = ids.map(i => { const r = DB.YR[i], d = DB.Y[i], q = Q.find(x => x.id === i);
+      return `<tr class="${r[0] === 'R' ? 'rel' : ''}"><td><span class="star">${r[0] === 'R' ? '☆' : '★'}</span> <button class="link" type="button" data-act="gomc" data-q="${i}">${i}</button><div class="note">${esc(q ? q.key.replace(/^\d\./, '') : '')}</div></td><td>${LVL[r[0]]}</td><td>${sx(r[1])}</td><td>${d ? `<span class="vdl ${d[3]}">${VDL[d[3]]}</span>` : '–'}</td></tr>`; }).join('');
+    const yx = (DB.YX[c] || []);
+    return `<section class="hub" id="yon-${c}" ${chCol(c)}><div class="hub-h"><span class="hub-n">Ch${c}</span><h2>${esc(DB.CH[c])}</h2><span class="hub-tag">겹침 ${ids.filter(i => DB.YR[i][0] !== 'R').length}문항 · 관련 ${ids.filter(i => DB.YR[i][0] === 'R').length}문항 · 연대에만 있는 주제 ${yx.length}개</span></div>
+      <div class="h3s">★ 우리 기출과 겹치는 문항</div><div class="tw"><table class="st yt"><thead><tr><th>우리 문항</th><th>겹침</th><th>연대 문항 · 표시된 답</th><th>대조</th></tr></thead><tbody>${rows}</tbody></table></div>
+      <div class="h3s">연대에만 있는 문항 주제</div><div class="yx">${yx.map(x => `<span>${sx(x)}</span>`).join('')}</div></section>`; }).join('');
+  return `<div class="tools"><div class="chips" role="group" aria-label="단원">${chips}</div></div>
+    <div class="box"><h2>연대야마 단원별 정리</h2><p class="note">${esc(DB.YSRC)}를 읽어 정리한 기록입니다. ★은 우리 기출과 같거나 비슷한 문항, ☆은 관련만 있는 문항입니다. 출처 태그 B22 = 2022 중간 복기, B21 = 2021, B20-2 = 2020-2, B18·B17 = 2018·2017, B08·B07·B06 = 2008·2007·2006 복원, B-prac = 기출 모음 표본 문제입니다. 표시: [M] 파일에 정답 표시, [N] 해설·노트 근거, [-] 정답 없음. 에이전트가 읽은 기록이라 원문 쪽수는 확인하지 못했고, 합본 80쪽 이후·기출 모음 201쪽 이후는 비교하지 못했습니다. 정답·상태는 바꾸지 않았습니다.</p>
+    <p class="note">연대야마 문제모음(답O)과 합본은 구강·치아 발생 위주라 이 범위와 거의 겹치지 않고(22건 중 같은 문항 0), 단원별 내용은 '조직학 기출 ~21학번까지' 파일이 중심입니다.</p>
+    <h3>확인이 필요한 4건</h3><ul class="plain">${DB.YCHECK.map(m => `<li><button class="link" type="button" data-act="gomc" data-q="${m[0]}">${m[0]}</button> ${esc(m[1])}</li>`).join('')}</ul></div>${secs}`;
+}
+
 /* ───────── 탭: 예상 문제 ───────── */
 function newCard(n, mode){
   const opened = S.newOpen[n.id];
@@ -662,7 +685,7 @@ function refreshMarks(){
 function render(){
   document.body.classList.toggle('exam', S.exam);
   $('#tabs').innerHTML = TABS.map(([k, n]) => `<button class="tab" role="tab" type="button" data-act="tab" data-k="${k}" aria-selected="${S.tab === k}">${n}</button>`).join('');
-  $('#main').innerHTML = ({status: statusTab, mc: mcTab, sum: sumTab, full: fullTab, all: allTab, new: newTab, mock: mockTab}[S.tab] || statusTab)();
+  $('#main').innerHTML = ({status: statusTab, mc: mcTab, sum: sumTab, full: fullTab, all: allTab, yon: yonTab, new: newTab, mock: mockTab}[S.tab] || statusTab)();
   refreshMarks();
   if(S.tab === 'mc' && S.graded) renderGrade();
 }
@@ -702,6 +725,7 @@ document.addEventListener('click', e => {
   else if(a === 'ch'){ S.ch = +t.dataset.ch; S.graded = null; render(); }
   else if(a === 'nch'){ S.nch = +t.dataset.ch; render(); }
   else if(a === 'sch'){ S.sch = +t.dataset.ch; render(); }
+  else if(a === 'ych'){ S.ych = +t.dataset.ch; render(); }
   else if(a === 'goid'){ document.getElementById(t.dataset.id)?.scrollIntoView({behavior: 'smooth', block: 'start'}); }
   else if(a === 'gocon'){ if(S.tab !== 'full'){ S.tab = 'full'; LS.set('tab', 'full'); render(); } document.getElementById('con-' + t.dataset.id)?.scrollIntoView({block: 'center'}); }
   else if(a === 'fold'){ S.fold[t.dataset.ch] = true; render(); document.getElementById('sum-' + t.dataset.ch)?.scrollIntoView(); }
