@@ -234,6 +234,7 @@ table.mx td.no{color:var(--line)}
 .yon .tag{margin-left:4px}.yx{display:flex;flex-wrap:wrap;gap:5px;margin:4px 0 0}.yx span{font-size:.78rem;border:1px dashed color-mix(in srgb,var(--cc) 45%,var(--line));border-radius:4px;padding:0 7px}
 .vdl{font-size:.74rem;border-radius:999px;padding:0 8px;background:var(--soft);white-space:nowrap}.vdl.ok{background:var(--ok-bg);color:var(--ok)}.vdl.diff{background:var(--bad-bg);color:var(--bad)}.vdl.unk{background:color-mix(in srgb,var(--s-est) 18%,var(--surface))}.star{color:var(--accent);font-weight:700}tr.rel td{color:var(--muted)}
 .yt td:nth-child(2),.yt td:nth-child(4){white-space:nowrap}
+.bk-in{width:9em;max-width:100%;margin:0 3px;padding:2px 6px;border:0;border-bottom:2px solid var(--muted);background:var(--soft);color:var(--fg);font:inherit;border-radius:4px 4px 0 0}.bk-in.ok{border-bottom-color:var(--ok);background:var(--ok-bg)}.bk-in.no{border-bottom-color:var(--bad);background:var(--bad-bg)}.bk-stem{line-height:2.1}
 .lkbox{margin-top:8px;border:1px solid var(--line);border-left:4px solid var(--c1);border-radius:6px;padding:6px 10px;background:var(--surface);font-size:.86rem}.lkbox .plain{margin:2px 0 4px}.lk-row{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:10px;align-items:start;margin:6px 0}.lk-col,.lk-mid{padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--soft)}.lk-mid{text-align:center}.lk-h{font-size:.75em;color:var(--muted);margin-bottom:4px}.kwt{display:inline-block;font-size:.8em;padding:1px 6px;border-radius:10px;background:var(--surface);border:1px solid var(--line);margin:2px}.tag.mut{opacity:.7}@media(max-width:640px){.lk-row{grid-template-columns:1fr}}
 .solo{margin:6px 0;padding-left:0;list-style:none}.solo li{padding:4px 8px;border-left:3px solid var(--line);margin:3px 0;font-size:.92em}.solo li.sy{border-color:var(--ok);background:color-mix(in srgb,var(--ok-bg) 100%,transparent)}.sol{margin-bottom:8px}
 .ansc{display:inline-block;min-width:22px;text-align:center;border:1px solid var(--ok);color:var(--ok);background:var(--ok-bg);border-radius:999px;padding:0 6px;font-weight:700}.keyline.okk{color:var(--ok)}.keyline.badd{color:var(--bad)}.yt-l{display:block;margin:6px 0 2px;font-size:.84rem;color:var(--muted)}.yt-ta{width:100%;margin-top:4px;font:inherit;background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:6px 8px}.tag.bad{background:var(--bad-bg);color:var(--bad)}
@@ -260,10 +261,10 @@ const LS = {
   get(k, d){ try{ const v = localStorage.getItem('hist26.' + k); return v ? JSON.parse(v) : d; }catch(e){ return d; } },
   set(k, v){ try{ localStorage.setItem('hist26.' + k, JSON.stringify(v)); return true; }catch(e){ return false; } }
 };
-const TABS = [["status","현황·범위"],["mc","객관식"],["sum","내용 정리"],["full","전체 내용 정리"],["all","단원별 전체 펴기"],["yon","연대야마"],["new","예상 문제"],["mock","모의고사"]];
+const TABS = [["status","현황·범위"],["mc","객관식"],["sum","내용 정리"],["full","전체 내용 정리"],["all","단원별 전체 펴기"],["yon","연대야마"],["new","예상 문제"],["blank","빈칸"],["mock","모의고사"]];
 const S = { tab: LS.get('tab','status'), ch: 0, hak: 'all', st: 'all', group: true, exam: false, showAll: false,
   omr: LS.get('omr', {}), ua: LS.get('ua', {}), uaWhy: LS.get('uaWhy', {}), open: {}, graded: null, inclEst: false,
-  mock: null, newOpen: {}, newMarks: {}, sch: 0, fold: {}, cc: {}, ymode: 'tab',  yex: 'all', yst: 'all', yp: LS.get('yp', {}), yt: LS.get('yt', {}), yopen: {}, yclr: false };
+  mock: null, newOpen: {}, newMarks: {}, sch: 0, fold: {}, cc: {}, ymode: 'tab', bch: 0, bans: LS.get('bans', {}), bchk: {}, bopen: {}, bclr: false,  yex: 'all', yst: 'all', yp: LS.get('yp', {}), yt: LS.get('yt', {}), yopen: {}, yclr: false };
 const MKS = {c:'①②③④⑤⑥⑦⑧', ga:'가나다라마바', g:'ㄱㄴㄷㄹㅁㅂ'};
 const mark = (mk, i) => mk === 'n' ? (i+1)+'.' : mk === 'ga' ? MKS.ga[i]+')' : mk === 'g' ? MKS.g[i]+'.' : MKS.c[i];
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -732,6 +733,29 @@ function newTab(){
   <div class="cards">${L.map(n => newCard(n)).join('')}</div>`;
 }
 
+/* ───────── 탭: 빈칸(Blank) ───────── */
+const bkNorm = s => String(s || '').toLowerCase().replace(/[\s·\-_.,()\[\]]/g, '');
+function bkOk(b, i){ const v = bkNorm((S.bans[b.id] || [])[i]); if(!v) return null; const bl = b.blanks[i]; return [bl.ans].concat(bl.alts || []).some(a => bkNorm(a) === v); }
+function bkCard(b){
+  const op = S.bopen[b.id], ck = S.bchk[b.id], saved = S.bans[b.id] || [];
+  const stem = esc(b.stem).replace(/\(\s*([①②③④⑤])\s*\)/g, (m, c) => { const i = '①②③④⑤'.indexOf(c); const r = ck ? bkOk(b, i) : null; return `<input class="bk-in ${r === true ? 'ok' : r === false ? 'no' : ''}" type="text" data-act="bki" data-id="${b.id}" data-n="${i}" value="${esc(saved[i] || '')}" placeholder="${c}" aria-label="빈칸 ${c}" autocomplete="off" spellcheck="false">`; });
+  const res = ck ? `<div class="keyline ${b.blanks.every((_, i) => bkOk(b, i)) ? 'okk' : 'badd'}">${b.blanks.map((_, i) => '①②③④⑤'[i] + (bkOk(b, i) === true ? ' 맞음' : bkOk(b, i) === false ? ' 다름' : ' 비어 있음')).join(' · ')}</div>` : '';
+  const ans = op ? `<div class="ans-box">${b.blanks.map((x, i) => `<div><span class="ansc">${'①②③④⑤'[i]}</span> <b>${sx(x.ans)}</b>${(x.alts || []).length ? ` <span class="note">(허용: ${x.alts.map(a => sx(a)).join(', ')})</span>` : ''}</div>`).join('')}<div>${sx(b.explain)}</div><div><b>근거</b> <span class="tag">${esc(b.src)}</span><blockquote>${esc(b.quote)}</blockquote></div></div>` : '';
+  return `<article class="card" id="bk-${b.id}"><div class="card-h"><span class="cid">${b.id}</span><span class="tag">Ch${b.ch} ${esc(DB.CH[b.ch])}</span><span class="tag">${esc(b.lv)}</span><span class="badge plain">BK 빈칸</span></div>
+    <p class="stem bk-stem">${stem}</p>${res}
+    <div class="row-actions"><button class="btn" type="button" data-act="bchk" data-id="${b.id}">채점</button><button class="btn" type="button" data-act="bopen" data-id="${b.id}">${op ? '모범 답안 숨기기' : '모범 답안 보기'}</button>${saved.some(Boolean) ? `<button class="btn" type="button" data-act="bclr1" data-id="${b.id}">내 답안 지우기</button>` : ''}</div>${ans}</article>`;
+}
+function blankTab(){
+  const chips = [0,1,2,3,4,5,6,7,8].map(c => `<button type="button" class="chip" data-act="bch" data-ch="${c}" aria-pressed="${S.bch === c}">${c ? 'Ch' + c + ' ' + esc(DB.CH[c]) : '전체'}</button>`).join('');
+  const L = DB.BK.filter(b => !S.bch || b.ch === S.bch);
+  const nSaved = Object.keys(S.bans).filter(k => (S.bans[k] || []).some(Boolean)).length;
+  const exp = JSON.stringify({v: 1, saved: new Date().toISOString(), bans: S.bans});
+  return `<div class="box"><h2>빈칸 문제 (BK)</h2><p class="note">단원마다 ${DB.BK.length / 8}문항, 총 ${DB.BK.length}문항입니다. 교안 문장에서 핵심 용어를 비웠고 모든 문항에 교안 원문 인용을 붙였습니다. 기출 문장은 옮기지 않았습니다. 빈칸에 쓰면 이 브라우저에 자동 저장됩니다. '채점'은 대소문자·띄어쓰기를 무시하고 모범 답안과 허용 표기에 견줍니다. 모범 답안은 기본으로 접혀 있습니다.</p>
+    <div class="chips" role="group" aria-label="단원">${chips}</div><p class="sub">${L.length}문항 표시 · 내 답안이 저장된 문항 ${nSaved}개</p>
+    <details class="srcd"><summary>내 답안 내보내기/가져오기</summary><p class="note">기기나 브라우저가 바뀌면 저장이 이어지지 않습니다. 아래 JSON을 복사해 두었다가 붙여넣어 가져오세요.</p><textarea id="bExp" rows="3" style="width:100%" readonly>${esc(exp)}</textarea><div class="row-actions"><button class="btn" type="button" data-act="bcopy">복사</button></div><textarea id="bImp" rows="3" style="width:100%" placeholder="여기에 붙여넣기"></textarea><div class="row-actions"><button class="btn" type="button" data-act="bimp">가져오기</button><button class="btn" type="button" data-act="bclrall">${S.bclr ? '정말 모두 지우기 (한 번 더)' : '내 답안 모두 지우기'}</button></div><p class="note" id="bMsg"></p></details></div>
+    <div class="cards">${L.map(bkCard).join('')}</div>`;
+}
+
 /* ───────── 탭: 모의고사 ───────── */
 function mockTab(){
   const m = S.mock;
@@ -768,7 +792,7 @@ function refreshMarks(){
 function render(){
   document.body.classList.toggle('exam', S.exam);
   $('#tabs').innerHTML = TABS.map(([k, n]) => `<button class="tab" role="tab" type="button" data-act="tab" data-k="${k}" aria-selected="${S.tab === k}">${n}</button>`).join('');
-  $('#main').innerHTML = ({status: statusTab, mc: mcTab, sum: sumTab, full: fullTab, all: allTab, yon: yonTab, new: newTab, mock: mockTab}[S.tab] || statusTab)();
+  $('#main').innerHTML = ({status: statusTab, mc: mcTab, sum: sumTab, full: fullTab, all: allTab, yon: yonTab, new: newTab, blank: blankTab, mock: mockTab}[S.tab] || statusTab)();
   refreshMarks();
   if(S.tab === 'mc' && S.graded) renderGrade();
 }
@@ -809,6 +833,13 @@ document.addEventListener('click', e => {
   else if(a === 'nch'){ S.nch = +t.dataset.ch; render(); }
   else if(a === 'sch'){ S.sch = +t.dataset.ch; render(); }
   else if(a === 'goyq'){ const q = DB.YQ.find(x => x.id === id); if(q){ S.ymode = 'solve'; S.ych = q.ch; S.yex = 'all'; S.yst = 'all'; S.yopen[id] = true; render(); const c = document.getElementById('yq-' + id); if(c) c.scrollIntoView({block: 'center'}); } }
+  else if(a === 'bch'){ S.bch = +t.dataset.ch; render(); }
+  else if(a === 'bopen'){ S.bopen[id] = !S.bopen[id]; render(); }
+  else if(a === 'bchk'){ S.bchk[id] = true; render(); }
+  else if(a === 'bclr1'){ delete S.bans[id]; delete S.bchk[id]; LS.set('bans', S.bans); render(); }
+  else if(a === 'bcopy'){ const ta = document.getElementById('bExp'); ta.select(); try{ navigator.clipboard.writeText(ta.value).then(() => { document.getElementById('bMsg').textContent = '복사했습니다.'; }, () => { document.getElementById('bMsg').textContent = '복사가 막혀 있습니다. 선택된 글을 직접 복사하세요.'; }); }catch(_){ document.getElementById('bMsg').textContent = '복사가 막혀 있습니다. 선택된 글을 직접 복사하세요.'; } }
+  else if(a === 'bimp'){ const m = document.getElementById('bMsg'); try{ const j = JSON.parse(document.getElementById('bImp').value); if(!j || j.v !== 1) throw 0; S.bans = Object.assign({}, S.bans, j.bans || {}); LS.set('bans', S.bans); render(); }catch(_){ m.textContent = '형식이 맞지 않습니다.'; } }
+  else if(a === 'bclrall'){ if(!S.bclr){ S.bclr = true; render(); } else { S.bans = {}; S.bchk = {}; S.bclr = false; LS.set('bans', {}); render(); } }
   else if(a === 'ymode'){ S.ymode = t.dataset.id; render(); }
   else if(a === 'yex'){ S.yex = t.dataset.id; render(); }
   else if(a === 'yst'){ S.yst = t.dataset.id; render(); }
@@ -874,7 +905,8 @@ document.addEventListener('change', e => {
   else if(e.target.id === 'stSel'){ S.st = e.target.value; render(); }
   else if(e.target.id === 'estChk'){ S.inclEst = e.target.checked; if(S.graded){ grade(); refreshMarks(); renderGrade(); } }
 });
-document.addEventListener('input', e => { const t = e.target; if(t.dataset && t.dataset.act === 'yt'){ S.yt[t.dataset.id] = t.value; LS.set('yt', S.yt); const n = t.parentElement.nextElementSibling; if(n) n.textContent = '저장됨 · ' + t.value.length + '자'; return; } if(t.dataset && t.dataset.act === 'uawhy'){ S.uaWhy[t.dataset.q] = t.value; LS.set('uaWhy', S.uaWhy); } });
+document.addEventListener('input', e => { const t = e.target; if(t.dataset && t.dataset.act === 'bki'){ const a = S.bans[t.dataset.id] || []; a[+t.dataset.n] = t.value; S.bans[t.dataset.id] = a; LS.set('bans', S.bans); return; }
+  if(t.dataset && t.dataset.act === 'yt'){ S.yt[t.dataset.id] = t.value; LS.set('yt', S.yt); const n = t.parentElement.nextElementSibling; if(n) n.textContent = '저장됨 · ' + t.value.length + '자'; return; } if(t.dataset && t.dataset.act === 'uawhy'){ S.uaWhy[t.dataset.q] = t.value; LS.set('uaWhy', S.uaWhy); } });
 $('#themeBtn').addEventListener('click', () => {
   const r = document.documentElement, cur = r.getAttribute('data-theme');
   const next = cur === 'dark' ? 'light' : cur === 'light' ? null : 'dark';
