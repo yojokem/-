@@ -234,6 +234,7 @@ table.mx td.no{color:var(--line)}
 .yon .tag{margin-left:4px}.yx{display:flex;flex-wrap:wrap;gap:5px;margin:4px 0 0}.yx span{font-size:.78rem;border:1px dashed color-mix(in srgb,var(--cc) 45%,var(--line));border-radius:4px;padding:0 7px}
 .vdl{font-size:.74rem;border-radius:999px;padding:0 8px;background:var(--soft);white-space:nowrap}.vdl.ok{background:var(--ok-bg);color:var(--ok)}.vdl.diff{background:var(--bad-bg);color:var(--bad)}.vdl.unk{background:color-mix(in srgb,var(--s-est) 18%,var(--surface))}.star{color:var(--accent);font-weight:700}tr.rel td{color:var(--muted)}
 .yt td:nth-child(2),.yt td:nth-child(4){white-space:nowrap}
+.kyo-h{margin:18px 0 6px;border-bottom:2px solid var(--line);padding-bottom:4px}
 .cb-st{margin:6px 0 10px;padding-left:0;list-style:none}.cb-st li{padding:3px 0}
 .bk-in{width:9em;max-width:100%;margin:0 3px;padding:2px 6px;border:0;border-bottom:2px solid var(--muted);background:var(--soft);color:var(--fg);font:inherit;border-radius:4px 4px 0 0}.bk-in.ok{border-bottom-color:var(--ok);background:var(--ok-bg)}.bk-in.no{border-bottom-color:var(--bad);background:var(--bad-bg)}.bk-stem{line-height:2.1}
 .lkbox{margin-top:8px;border:1px solid var(--line);border-left:4px solid var(--c1);border-radius:6px;padding:6px 10px;background:var(--surface);font-size:.86rem}.lkbox .plain{margin:2px 0 4px}.lk-row{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:10px;align-items:start;margin:6px 0}.lk-col,.lk-mid{padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--soft)}.lk-mid{text-align:center}.lk-h{font-size:.75em;color:var(--muted);margin-bottom:4px}.kwt{display:inline-block;font-size:.8em;padding:1px 6px;border-radius:10px;background:var(--surface);border:1px solid var(--line);margin:2px}.tag.mut{opacity:.7}@media(max-width:640px){.lk-row{grid-template-columns:1fr}}
@@ -262,10 +263,10 @@ const LS = {
   get(k, d){ try{ const v = localStorage.getItem('hist26.' + k); return v ? JSON.parse(v) : d; }catch(e){ return d; } },
   set(k, v){ try{ localStorage.setItem('hist26.' + k, JSON.stringify(v)); return true; }catch(e){ return false; } }
 };
-const TABS = [["status","현황·범위"],["mc","객관식"],["sum","내용 정리"],["full","전체 내용 정리"],["all","단원별 전체 펴기"],["yon","연대야마"],["new","예상 문제"],["blank","빈칸"],["combo","조합형"],["mock","모의고사"]];
+const TABS = [["status","현황·범위"],["mc","객관식"],["sum","내용 정리"],["full","전체 내용 정리"],["all","단원별 전체 펴기"],["yon","연대야마"],["kyo","연대·교안풀이"],["new","예상 문제"],["blank","빈칸"],["combo","조합형"],["mock","모의고사"]];
 const S = { tab: LS.get('tab','status'), ch: 0, hak: 'all', st: 'all', group: true, exam: false, showAll: false,
   omr: LS.get('omr', {}), ua: LS.get('ua', {}), uaWhy: LS.get('uaWhy', {}), open: {}, graded: null, inclEst: false,
-  mock: null, newOpen: {}, newMarks: {}, sch: 0, fold: {}, cc: {}, ymode: 'tab', bch: 0, cch: 0, cpk: LS.get('cpk', {}), copen: {}, bans: LS.get('bans', {}), bchk: {}, bopen: {}, bclr: false,  yex: 'all', yst: 'all', yp: LS.get('yp', {}), yt: LS.get('yt', {}), yopen: {}, yclr: false };
+  mock: null, newOpen: {}, newMarks: {}, sch: 0, fold: {}, cc: {}, ymode: 'tab', kch: 0, ksup: 'all', bch: 0, cch: 0, cpk: LS.get('cpk', {}), copen: {}, bans: LS.get('bans', {}), bchk: {}, bopen: {}, bclr: false,  yex: 'all', yst: 'all', yp: LS.get('yp', {}), yt: LS.get('yt', {}), yopen: {}, yclr: false };
 const MKS = {c:'①②③④⑤⑥⑦⑧', ga:'가나다라마바', g:'ㄱㄴㄷㄹㅁㅂ'};
 const mark = (mk, i) => mk === 'n' ? (i+1)+'.' : mk === 'ga' ? MKS.ga[i]+')' : mk === 'g' ? MKS.g[i]+'.' : MKS.c[i];
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -665,7 +666,7 @@ function yqCard(q){
     const mine2 = hasOpts && pick.length && finOk ? `<div class="keyline ${sameSet(pick, fin) ? 'okk' : 'badd'}">내 선택 ${pick.map(mk).join(' ')} → ${sameSet(pick, fin) ? '최종 정답과 같음' : '최종 정답과 다름'}</div>` : '';
     const sol = q.sol ? `<div class="sol"><div class="keyline okk">최종 정답 ${q.sol.final.length ? q.sol.final.map(i => mk(i - 1)).join(" ") : "보기 유실(아래 메모 참조)"} <span class="tag">${esc(q.sol.basis)}</span> <span class="tag">확신 ${esc(q.sol.conf)}</span></div><ul class="solo">${q.sol.opt.map((x, i) => `<li class="${q.sol.final.includes(i + 1) ? 'sy' : 'sn'}"><b>${mk(i)}</b> ${sx(x)}</li>`).join('')}</ul><div class="note">풀이 근거: ${esc(q.sol.src)}</div>${q.sol.note ? `<div class="warn">${sx(q.sol.note)}</div>` : ''}</div>` : '';
     const yAns = q.ans ? `<div><b>연대 자료 기준</b> <span class="tag">${srcL}</span> ${hasOpts ? q.ans.map(i => `<span class="ansc">${mk(i - 1)}</span>`).join(' ') : ''}${q.ans_text ? `<div>${sx(q.ans_text)}</div>` : ''}</div>` : `<div><b>연대 자료 기준</b> <span class="tag">${srcL}</span>${q.ans_text ? `<div>${sx(q.ans_text)}</div>` : ''}</div>`;
-    const kyo = q.est ? `<div><b>교안 기준 추정</b> <span class="tag">${esc(q.est.src)}</span> ${(q.est.ans || []).map(i => `<span class="ansc">${mk(i - 1)}</span>`).join(' ')}${q.est.quote ? `<blockquote>${esc(q.est.quote)}</blockquote>` : ''}${q.est.note ? `<div class="note">${sx(q.est.note)}</div>` : ''}</div>` : `<div><b>교안 기준</b> <span class="note">근거로 쓸 교안 문장을 찾지 못했습니다(추정 없음).</span></div>`;
+    const kyo = q.est ? `<div><b>교안 기준 추정</b> <span class="tag">${esc(q.est.src)}</span> ${q.est.support ? `<span class="tag">${q.est.support === 'direct' ? '교안에 직접 나옴' : '교안에서 일부 근거'}</span>` : ''} ${(q.est.ans || []).map(i => `<span class="ansc">${mk(i - 1)}</span>`).join(' ')}${q.est.quote ? `<blockquote>${esc(q.est.quote)}</blockquote>` : ''}${q.est.note ? `<div class="note">${sx(q.est.note)}</div>` : ''}</div>` : `<div><b>교안 기준</b> <span class="note">근거로 쓸 교안 문장을 찾지 못했습니다(추정 없음).</span></div>`;
     const conf = s.conf ? `<div class="warn"><b>충돌</b> 연대 표시 답과 교안 기준 추정이 다릅니다. 어느 쪽도 바꾸지 않고 둘 다 적었습니다.</div>` : '';
     const nt = q.note ? `<div class="note">연대 파일 해설·메모: ${sx(q.note)}</div>` : '';
     const fl = (q.flags || []).length ? `<div class="note">원문 상태: ${q.flags.map(esc).join(' · ')}</div>` : '';
@@ -778,6 +779,20 @@ function comboTab(){
     <div class="cards">${L.map(cbCard).join('')}</div>`;
 }
 
+/* ───────── 탭: 연대 문제 중 교안으로 풀 수 있는 것 ───────── */
+function kyoTab(){
+  const base = DB.YQ.filter(q => q.est && q.est.quote && q.opts && q.opts.length);
+  const chips = [0,1,2,3,4,5,6,7,8].map(c => `<button type="button" class="chip" data-act="kch" data-ch="${c}" aria-pressed="${S.kch === c}">${c ? 'Ch' + c + ' ' + esc(DB.CH[c]) + ' ' + base.filter(q => q.ch === c).length : '전체 ' + base.length}</button>`).join('');
+  const sups = [['all', '전부'], ['direct', '교안에 직접 나옴'], ['partial', '일부 근거']].map(x => `<button type="button" class="chip" data-act="ksup" data-id="${x[0]}" aria-pressed="${S.ksup === x[0]}">${x[1]}</button>`).join('');
+  const L = base.filter(q => (!S.kch || q.ch === S.kch) && (S.ksup === 'all' || q.est.support === S.ksup));
+  const done = base.filter(q => (S.yp[q.id] || []).length), right = done.filter(q => sameSet(S.yp[q.id], q.sol ? q.sol.final : q.ans || []));
+  let cur = 0;
+  const cards = L.map(q => { const h = q.ch !== cur ? `<h3 class="kyo-h">Ch${q.ch} ${esc(DB.CH[q.ch])}</h3>` : ''; cur = q.ch; return h + yqCard(q); }).join('');
+  return `<div class="box"><h2>연대 문제 · 교안으로 풀기</h2><p class="note">연대야마 문제 중 교안 텍스트에서 근거 문장을 찾을 수 있었던 ${base.length}문항만 단원별로 모았습니다. 선지를 직접 고른 뒤 '정답·근거 확인'을 누르면 최종 정답, 선지별 풀이, 교안 인용이 나옵니다. 선택은 연대야마 탭의 풀이와 같이 저장됩니다. '일부 근거'는 교안이 정답의 일부나 소거 근거만 뒷받침하는 문항입니다.</p>
+    <div class="chips" role="group" aria-label="단원">${chips}</div><div class="chips" role="group" aria-label="근거 강도" style="margin-top:6px">${sups}</div>
+    <p class="sub">${L.length}문항 표시 · 푼 ${done.length}개 중 최종 정답과 같음 ${right.length}개</p></div><div class="cards">${cards}</div>`;
+}
+
 /* ───────── 탭: 모의고사 ───────── */
 function mockTab(){
   const m = S.mock;
@@ -814,7 +829,7 @@ function refreshMarks(){
 function render(){
   document.body.classList.toggle('exam', S.exam);
   $('#tabs').innerHTML = TABS.map(([k, n]) => `<button class="tab" role="tab" type="button" data-act="tab" data-k="${k}" aria-selected="${S.tab === k}">${n}</button>`).join('');
-  $('#main').innerHTML = ({status: statusTab, mc: mcTab, sum: sumTab, full: fullTab, all: allTab, yon: yonTab, new: newTab, blank: blankTab, combo: comboTab, mock: mockTab}[S.tab] || statusTab)();
+  $('#main').innerHTML = ({status: statusTab, mc: mcTab, sum: sumTab, full: fullTab, all: allTab, yon: yonTab, kyo: kyoTab, new: newTab, blank: blankTab, combo: comboTab, mock: mockTab}[S.tab] || statusTab)();
   refreshMarks();
   if(S.tab === 'mc' && S.graded) renderGrade();
 }
@@ -866,6 +881,8 @@ document.addEventListener('click', e => {
   else if(a === 'copen'){ S.copen[id] = !S.copen[id]; render(); }
   else if(a === 'cpick'){ S.cpk[id] = +t.dataset.i; LS.set('cpk', S.cpk); render(); }
   else if(a === 'cclr'){ delete S.cpk[id]; LS.set('cpk', S.cpk); render(); }
+  else if(a === 'kch'){ S.kch = +t.dataset.ch; render(); }
+  else if(a === 'ksup'){ S.ksup = t.dataset.id; render(); }
   else if(a === 'ymode'){ S.ymode = t.dataset.id; render(); }
   else if(a === 'yex'){ S.yex = t.dataset.id; render(); }
   else if(a === 'yst'){ S.yst = t.dataset.id; render(); }
