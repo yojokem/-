@@ -1,0 +1,7162 @@
+[
+{
+"id": "Y22-04",
+"exam": "2022 중간 복기",
+"no": 4,
+"ch": 1,
+"type": "mc",
+"stem": "다음 설명에 해당하는 연접 -바닥쪽 세포막의 막단백질인 integrin이 바닥막의 laminin과 결합한다.",
+"opts": [
+"부착띠",
+"부착반점",
+"교통반점"
+],
+"ans": null,
+"ans_text": "반부착반점",
+"ans_src": "M",
+"note": "",
+"flags": [
+"선지일부없음"
+],
+"lines": "3-3",
+"ours": [
+"1-07"
+]
+},
+{
+"id": "Y22-11",
+"exam": "2022 중간 복기",
+"no": 11,
+"ch": 2,
+"type": "short",
+"stem": "염증조직에서 많이 관찰되며, 항체를 분비함, 핵근처에 염색이 되지않는 빈공간이 관찰, 핵이 시계판모양",
+"opts": [],
+"ans": null,
+"ans_text": "형질세포",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "5-5",
+"ours": [
+"2-07"
+]
+},
+{
+"id": "Y22-13",
+"exam": "2022 중간 복기",
+"no": 13,
+"ch": 2,
+"type": "mc",
+"stem": "갈색지방세포의 특징으로 옳지 않은 것은?",
+"opts": [
+"미토콘드리아가 많아서 갈색으로 보인다.",
+"축적된 지방을 열로 변환하여 사용한다.",
+"세포질에서 지방산으로 나타난다."
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"정답미표시"
+],
+"lines": "7-7",
+"ours": []
+},
+{
+"id": "Y22-14",
+"exam": "2022 중간 복기",
+"no": 14,
+"ch": 2,
+"type": "short",
+"stem": "탄력섬유에서 나타나는 특징으로 옳지 않은 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "9-9",
+"ours": []
+},
+{
+"id": "Y22-15",
+"exam": "2022 중간 복기",
+"no": 15,
+"ch": 2,
+"type": "short",
+"stem": "치밀결합조직으로 이루어진 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "11-11",
+"ours": []
+},
+{
+"id": "Y22-21",
+"exam": "2022 중간 복기",
+"no": 21,
+"ch": 3,
+"type": "short",
+"stem": "골격근세포에서 관측되는 삼조체와 관련 없는 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "13-13",
+"ours": [
+"3-04"
+]
+},
+{
+"id": "Y22-23",
+"exam": "2022 중간 복기",
+"no": 23,
+"ch": 3,
+"type": "mc",
+"stem": "수축했을 때 길이가 변하지 않은 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "A band",
+"ans_src": "M",
+"note": "",
+"flags": [
+"선지없음",
+"선지일부없음"
+],
+"lines": "15-15",
+"ours": [
+"3-12"
+]
+},
+{
+"id": "Y22-25",
+"exam": "2022 중간 복기",
+"no": 25,
+"ch": 3,
+"type": "short",
+"stem": "이 구조의 이름은?",
+"opts": [],
+"ans": null,
+"ans_text": "적색근",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "17-17",
+"ours": [
+"3-11"
+]
+},
+{
+"id": "Y22-26",
+"exam": "2022 중간 복기",
+"no": 26,
+"ch": 3,
+"type": "short",
+"stem": "a band, z line, I band, m line에 대한 설명 중 옳지 않은 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "19-19",
+"ours": []
+},
+{
+"id": "Y22-27",
+"exam": "2022 중간 복기",
+"no": 27,
+"ch": 4,
+"type": "short",
+"stem": "치밀조직",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "21-21",
+"ours": []
+},
+{
+"id": "Y22-29",
+"exam": "2022 중간 복기",
+"no": 29,
+"ch": 3,
+"type": "short",
+"stem": "푸르키니에 섬유에 대한 설명으로 맞는 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "23-23",
+"ours": [
+"3-01"
+]
+},
+{
+"id": "Y22-32",
+"exam": "2022 중간 복기",
+"no": 32,
+"ch": 7,
+"type": "short",
+"stem": "가지돌기가 세포체 방향으로 향하는 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "25-25",
+"ours": []
+},
+{
+"id": "Y22-33",
+"exam": "2022 중간 복기",
+"no": 33,
+"ch": 7,
+"type": "mc",
+"stem": "축삭 내에서 흔히 관찰되는 세포소기관은?",
+"opts": [
+"미토콘드리아",
+"니슬소체",
+"용해소체",
+"골지복합체",
+"바소체"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"정답미표시"
+],
+"lines": "27-27",
+"ours": [
+"7-01"
+]
+},
+{
+"id": "Y22-34",
+"exam": "2022 중간 복기",
+"no": 34,
+"ch": 7,
+"type": "multi",
+"stem": "다음 설명에 해당하는 슈반세포에 대한 설명으로 맞는 것을 모두 고른 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"선지없음"
+],
+"lines": "29-29",
+"ours": []
+},
+{
+"id": "Y22-41",
+"exam": "2022 중간 복기",
+"no": 41,
+"ch": 4,
+"type": "short",
+"stem": "뼈막에서 관찰할 수 없는 구조?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "31-31",
+"ours": []
+},
+{
+"id": "Y22-42",
+"exam": "2022 중간 복기",
+"no": 42,
+"ch": 4,
+"type": "match",
+"stem": "유리연골의 특징이 아닌 것은?",
+"opts": [
+"관절면쪽에 연골막이 없다",
+"type1 콜라겐이 주성분",
+"연골내뼈형성에 관여"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"정답미표시"
+],
+"lines": "33-33",
+"ours": [
+"4-02"
+]
+},
+{
+"id": "Y22-43",
+"exam": "2022 중간 복기",
+"no": 43,
+"ch": 4,
+"type": "short",
+"stem": "막내뼈형성 과정을 순서대로 나열하시오.",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "35-35",
+"ours": []
+},
+{
+"id": "Y22-44",
+"exam": "2022 중간 복기",
+"no": 44,
+"ch": 4,
+"type": "mc",
+"stem": "뼈 기질을 수직으로 뚫고 들어가 뼈막을 뼈에 결합시켜주는 샤피 섬유가 있는 곳이 아닌 것은?",
+"opts": [
+"겉질뼈",
+"섬유연골",
+"머리덮개뼈",
+"이틀뼈",
+"시멘트질"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"정답미표시"
+],
+"lines": "37-37",
+"ours": []
+},
+{
+"id": "Y22-47",
+"exam": "2022 중간 복기",
+"no": 47,
+"ch": 4,
+"type": "mc",
+"stem": "관절연골에 대한 설명으로 옳지 않은 것은?",
+"opts": [
+"gel형태",
+"힘이 가해지면 물이 빠져나가면서 부피가 줄어듦, 이때 영양소 교환도 일어남",
+"GAG 있어서 탄성 나타냄"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"정답미표시"
+],
+"lines": "39-39",
+"ours": []
+},
+{
+"id": "Y22-49",
+"exam": "2022 중간 복기",
+"no": 49,
+"ch": 4,
+"type": "mc",
+"stem": "뼈세포와 섬유연골과의 유사성으로 옳지 않은 것은?",
+"opts": [
+"둘 다 혈관과 신경이 분포한다."
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "보기2) 항목만 복기",
+"flags": [
+"정답미표시",
+"선지일부없음"
+],
+"lines": "41-41",
+"ours": [
+"4-02"
+]
+},
+{
+"id": "Y22-51",
+"exam": "2022 중간 복기",
+"no": 51,
+"ch": 5,
+"type": "short",
+"stem": "림프절에 대한 설명 중 옳지 않은 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "43-43",
+"ours": [
+"5-01"
+]
+},
+{
+"id": "Y22-54",
+"exam": "2022 중간 복기",
+"no": 54,
+"ch": 5,
+"type": "short",
+"stem": "비장에 대한 설명으로 옳지 않은 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "45-45",
+"ours": []
+},
+{
+"id": "Y22-56",
+"exam": "2022 중간 복기",
+"no": 56,
+"ch": 8,
+"type": "mc",
+"stem": "적혈구 형질막의 peripheral protein중 integral membrane protein에 붙어 anchor 역 할을 하는 것은?",
+"opts": [
+"band 4.1",
+"actin",
+"ankrin",
+"spectrin"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"정답미표시"
+],
+"lines": "47-47",
+"ours": []
+},
+{
+"id": "Y22-57",
+"exam": "2022 중간 복기",
+"no": 57,
+"ch": 5,
+"type": "short",
+"stem": "비장과 림프절의 공통 구조가 아닌 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "49-49",
+"ours": []
+},
+{
+"id": "Y22-59",
+"exam": "2022 중간 복기",
+"no": 59,
+"ch": 5,
+"type": "mc",
+"stem": "다음 세포중 세포 표면에 두 종류의 주조직적합성복합체를 가질 수 있는 세포가 아닌 것 은? 1) 가지돌기세포 2) 호중구 3) B림프세포 4) 상피그물세포 5) T림프세포",
+"opts": [
+"가지돌기세포",
+"호중구",
+"B림프세포",
+"상피그물세포",
+"T림프세포"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"정답미표시"
+],
+"lines": "51-51",
+"ours": [
+"5-08"
+]
+},
+{
+"id": "Y22-64",
+"exam": "2022 중간 복기",
+"no": 64,
+"ch": 6,
+"type": "short",
+"stem": "심장외막",
+"opts": [],
+"ans": null,
+"ans_text": "심장외막층은 LCT이다.",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "53-53",
+"ours": []
+},
+{
+"id": "Y22-68",
+"exam": "2022 중간 복기",
+"no": 68,
+"ch": 8,
+"type": "mc",
+"stem": "적혈구 형성에 대한 설명으로 옳지 않은 것은?",
+"opts": [
+"수명은 약 120일이다.",
+"헤모글로빈을 더 이상 합성할 수 없다.",
+"과립을 갖고 있다.",
+"그물 적혈구는 아직 헤모글로빈을 합성할 수 있다."
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"정답미표시"
+],
+"lines": "55-55",
+"ours": [
+"8-01"
+]
+},
+{
+"id": "Y22-70",
+"exam": "2022 중간 복기",
+"no": 70,
+"ch": 8,
+"type": "short",
+"stem": "monocyte에 대한 설명",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "57-57",
+"ours": []
+},
+{
+"id": "Y22-74",
+"exam": "2022 중간 복기",
+"no": 74,
+"ch": 8,
+"type": "short",
+"stem": "호중구에 대한 설명으로 옳지 않은 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "59-59",
+"ours": []
+},
+{
+"id": "Y22-76",
+"exam": "2022 중간 복기",
+"no": 76,
+"ch": 5,
+"type": "short",
+"stem": "다음 설명을 모두 만족하는 구조는? 집합림프소절과 이를 연결하는 산재성 림프조직이 관찰됨, 중층편평상피로 덮혀 있음, 피막이 확실하게 관찰되지 않음, 점막 관련 림프 조직",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "61-61",
+"ours": []
+},
+{
+"id": "Y22-78",
+"exam": "2022 중간 복기",
+"no": 78,
+"ch": 6,
+"type": "mc",
+"stem": "혈관주위세포에 대한 설명 중 옳지 않은 것은?",
+"opts": [
+"모세혈관이나 소정맥에서 발견됨",
+"조혈줄기세포로부터 기원",
+"긴 세포질 돌기를 가짐",
+"혈관을 수축할 수 있음",
+"혈관 또는 결합조직세포로 분화 가능"
+],
+"ans": [
+2
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "63-63",
+"ours": [
+"6-06"
+]
+},
+{
+"id": "Y22-80",
+"exam": "2022 중간 복기",
+"no": 80,
+"ch": 8,
+"type": "short",
+"stem": "blood clotting의 과정의 올바른 순서",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "65-65",
+"ours": []
+},
+{
+"id": "Y21-10",
+"exam": "2021 중간 복기",
+"no": 10,
+"ch": 1,
+"type": "short",
+"stem": "상피의 종류와 기원이 틀린 것",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "441",
+"ours": []
+},
+{
+"id": "Y21-11",
+"exam": "2021 중간 복기",
+"no": 11,
+"ch": 2,
+"type": "short",
+"stem": "형질 세포의 특징",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "연습 문제 그대로",
+"flags": [],
+"lines": "441",
+"ours": [
+"2-07"
+]
+},
+{
+"id": "Y21-60-a",
+"exam": "2021 중간 복기",
+"no": 60,
+"ch": 6,
+"type": "short",
+"stem": "동모양 모세혈관 특징",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "441",
+"ours": []
+},
+{
+"id": "Y21-08",
+"exam": "2021 중간 복기",
+"no": 8,
+"ch": 1,
+"type": "multi",
+"stem": "술잔 세포의 설명",
+"opts": [
+"큰창자에서 관찰",
+"샘분비",
+"단세포샘",
+"점액소 분비"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "441",
+"ours": [
+"1-04"
+]
+},
+{
+"id": "Y21-03",
+"exam": "2021 중간 복기",
+"no": 3,
+"ch": 1,
+"type": "multi",
+"stem": "다음 구조를 모두 관찰할 수 있는 것은",
+"opts": [
+"단층입방상피에서 관찰 가능",
+"중층입방상피에서 관찰 가능",
+"단순꼬인관상샘",
+"피부밑조직에서 분비부가 있음"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "구조 그림/설명 복기X; 이어 나오는 기름샘~턱밑샘 보기와 연결 불명",
+"flags": [
+"복기X"
+],
+"lines": "441",
+"ours": []
+},
+{
+"id": "Y21-03-b",
+"exam": "2021 중간 복기",
+"no": 3,
+"ch": 1,
+"type": "mc",
+"stem": "(문항 불명) 기름샘/땀샘/장액샘/점액샘/턱밑샘 중 고르는 문제",
+"opts": [
+"기름샘",
+"땀샘",
+"장액샘",
+"점액샘",
+"턱밑샘"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "*영어로 출제됨",
+"flags": [
+"복기X",
+"stem불명"
+],
+"lines": "443",
+"ours": []
+},
+{
+"id": "Y21-19",
+"exam": "2021 중간 복기",
+"no": 19,
+"ch": 2,
+"type": "mc",
+"stem": "collagen type 1를 분비하지 않는 세포",
+"opts": [
+"fibroblast",
+"odontoblast",
+"chondroblast",
+"상피세포",
+"cementoblast"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "443",
+"ours": []
+},
+{
+"id": "Y21-51",
+"exam": "2021 중간 복기",
+"no": 51,
+"ch": 5,
+"type": "multi",
+"stem": "림프절에 대한 설명으로 옳은 것은",
+"opts": [
+"림프액 내 존재하는 이물질을 제거해준다",
+"b세포, t세포 모두 관찰 가능",
+"수입림프관이 수출림프관보다 많다",
+"수출림프관보다 수입림프관에 가까이 존재한다",
+"피질과 수질이 있다"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "443",
+"ours": [
+"5-01"
+]
+},
+{
+"id": "Y21-52",
+"exam": "2021 중간 복기",
+"no": 52,
+"ch": 5,
+"type": "multi",
+"stem": "가슴샘 의존구역 고르시오",
+"opts": [
+"림프절 곁피질",
+"구개편도",
+"비장의 pals",
+"비장의 림프소절"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "원문 '가슴샘 의존구역'(T세포 의존구역 추정)",
+"flags": [
+"OCR훼손"
+],
+"lines": "443",
+"ours": [
+"5-02"
+]
+},
+{
+"id": "Y21-29",
+"exam": "2021 중간 복기",
+"no": 29,
+"ch": 3,
+"type": "mc",
+"stem": "푸르키니에 섬유에 대한 설명 틀린 것",
+"opts": [
+"심장전도세포의 일종",
+"세포질에 다량의 글리코젠 과립",
+"심장근세포보다 근원섬유가 적다",
+"변형된 심장 근육 세포",
+"심장근세포보다 크기가 작다"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "443-445",
+"ours": [
+"3-01"
+]
+},
+{
+"id": "Y21-15",
+"exam": "2021 중간 복기",
+"no": 15,
+"ch": 2,
+"type": "mc",
+"stem": "다음중 치밀 결합 조직이 아닌 것은",
+"opts": [
+"연골막",
+"신경외막",
+"뼈막의 바깥층",
+"작은창자의 점막 고유판",
+"힘줄"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "445",
+"ours": []
+},
+{
+"id": "Y21-23",
+"exam": "2021 중간 복기",
+"no": 23,
+"ch": 3,
+"type": "mc",
+"stem": "근육 수축 시 길이가 변하지 않은 것은",
+"opts": [
+"A band",
+"H 띠",
+"I 띠",
+"sarcomere",
+"?"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"선지일부없음"
+],
+"lines": "445",
+"ours": [
+"3-12"
+]
+},
+{
+"id": "Y21-69",
+"exam": "2021 중간 복기",
+"no": 69,
+"ch": 6,
+"type": "mc",
+"stem": "vasa vasorum에 대한 설명으로 틀린 것은",
+"opts": [
+"직경이 1mm 이상의 혈관의 외막이나 중간막에 존재한다",
+"혈관벽 세포에 산소와 영양물질을 제공한다",
+"세포벽의 소정맥 소동맥 모세혈관을 말한다",
+"주변의 림프관이 존재한다",
+"정맥보다 동맥의 혈관벽에 많이 분포한다"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "445",
+"ours": [
+"6-05"
+]
+},
+{
+"id": "Y21-37",
+"exam": "2021 중간 복기",
+"no": 37,
+"ch": 7,
+"type": "mc",
+"stem": "축삭에서 관찰되는 세포소기관은",
+"opts": [
+"미토콘드리아",
+"니슬소체",
+"용해소체",
+"골지복합체",
+"바소체"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "445",
+"ours": [
+"7-01"
+]
+},
+{
+"id": "Y21-65",
+"exam": "2021 중간 복기",
+"no": 65,
+"ch": 6,
+"type": "mc",
+"stem": "물질 교환이 잘 일어나는 혈관",
+"opts": [
+"소동맥",
+"모세혈관",
+"모세혈관이전소동맥",
+"모세혈관이후소동맥"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "445",
+"ours": [
+"6-02"
+]
+},
+{
+"id": "Y21-66",
+"exam": "2021 중간 복기",
+"no": 66,
+"ch": 6,
+"type": "mc",
+"stem": "외탄력막이 가장 뚜렷하게 보이는 동맥",
+"opts": [
+"동반정맥",
+"근육동맥",
+"소동맥",
+"소정맥",
+"대동맥"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "445",
+"ours": []
+},
+{
+"id": "Y21-75",
+"exam": "2021 중간 복기",
+"no": 75,
+"ch": 8,
+"type": "short",
+"stem": "단핵구-샘플 문제",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "샘플 문제 그대로 추정",
+"flags": [
+"복기X"
+],
+"lines": "445",
+"ours": []
+},
+{
+"id": "Y21-27",
+"exam": "2021 중간 복기",
+"no": 27,
+"ch": 3,
+"type": "short",
+"stem": "근육에서 dense body에 대한 설명 틀린 것",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "445",
+"ours": []
+},
+{
+"id": "Y21-12",
+"exam": "2021 중간 복기",
+"no": 12,
+"ch": 2,
+"type": "short",
+"stem": "비만세포의 특징이 아닌 것은",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "445",
+"ours": [
+"2-05"
+]
+},
+{
+"id": "Y21-22",
+"exam": "2021 중간 복기",
+"no": 22,
+"ch": 3,
+"type": "short",
+"stem": "골격근 내에 존재, 근육 수축 정도와 속도 감지 가능, 운동신경섬유와 감각신경섬유가 있는 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "445",
+"ours": []
+},
+{
+"id": "Y21-79-a",
+"exam": "2021 중간 복기",
+"no": 79,
+"ch": 8,
+"type": "mc",
+"stem": "과립백혈구형성에 대한 설명 중 틀린 것은",
+"opts": [
+"promyelocyte가 myeloblast보다 크다",
+"promyelocyte에서 세포질이 파란색을 띤다",
+"myelocyte에서 특수과립이 형성되기 시작한다",
+"metamyelocyte에서 골지~가 위축된다",
+"band cell. stab cell은 호산구로만 분화한다"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "445",
+"ours": []
+},
+{
+"id": "Y21-05",
+"exam": "2021 중간 복기",
+"no": 5,
+"ch": 1,
+"type": "match",
+"stem": "다음 상피의 종류가 같은 구조끼리 맞게 짝지은 것을 모두 고른 것은",
+"opts": [
+"방광상피-요관상피",
+"위상피-식도상피",
+"혈관내피-보우만주머니 외벽 상피",
+"작은창자 상피-부고환 상피"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "445-447",
+"ours": []
+},
+{
+"id": "Y21-31",
+"exam": "2021 중간 복기",
+"no": 31,
+"ch": 7,
+"type": "mc",
+"stem": "다음 중 신경아교세포에 대한 설명으로 옳지 않은 것은",
+"opts": [
+"(1번 선지 누락)",
+"microglia는 주로 neural crest cell에 유래한다",
+"중추신경계통에서 말이집은 oligodendrocyte가 형성한다",
+"말초신경계통에서 유수신경줄기는 바닥판에 의해 둘러싸여 있다",
+"말초신경계통에서 무수신경줄기는 슈반세포로 둘러싸고 있다"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "원문 '1.2.' 로 1번 선지 누락, 2번 선지 내용은 원문대로 microgilla",
+"flags": [
+"OCR훼손",
+"선지일부없음"
+],
+"lines": "447",
+"ours": []
+},
+{
+"id": "Y21-21",
+"exam": "2021 중간 복기",
+"no": 21,
+"ch": 3,
+"type": "mc",
+"stem": "삼조체와 관련이 없는 것은",
+"opts": [
+"A밴드 끝에 위치",
+"종말수조",
+"T tubule",
+"근형질 그물",
+"sarcomere"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "원문 2번 '종말수초'(종말수조 추정)",
+"flags": [
+"OCR훼손"
+],
+"lines": "447",
+"ours": [
+"3-04"
+]
+},
+{
+"id": "Y21-36",
+"exam": "2021 중간 복기",
+"no": 36,
+"ch": 7,
+"type": "mc",
+"stem": "신경에 대한 설명으로 틀린 것은",
+"opts": [
+"뇌와 척수의 백색질에는 신경세포체가 있다",
+"축삭에는 neurofilament와 microtubule이 있다",
+"니슬소체는 rER이다",
+"세포체에는 golgi가 발달되어 있다",
+"가지돌기는 말이집으로 둘러싸여있다"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "447",
+"ours": [
+"7-03"
+]
+},
+{
+"id": "Y21-18",
+"exam": "2021 중간 복기",
+"no": 18,
+"ch": 2,
+"type": "short",
+"stem": "원섬유를 형성하는 아교질이 아닌 것은 collagen type 1,2,3,4,5중에 고르기",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "447",
+"ours": [
+"2-09"
+]
+},
+{
+"id": "Y21-04",
+"exam": "2021 중간 복기",
+"no": 4,
+"ch": 1,
+"type": "short",
+"stem": "반부착반점의 결합 특징",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "447",
+"ours": [
+"1-07"
+]
+},
+{
+"id": "Y21-49",
+"exam": "2021 중간 복기",
+"no": 49,
+"ch": 4,
+"type": "short",
+"stem": "뼈, 섬유연골의 공통점이 아닌 것은",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "447",
+"ours": []
+},
+{
+"id": "Y21-50",
+"exam": "2021 중간 복기",
+"no": 50,
+"ch": 4,
+"type": "short",
+"stem": "뼈파괴세포에 대한 설명으로 틀린 것은",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "447",
+"ours": [
+"4-08"
+]
+},
+{
+"id": "Y21-80",
+"exam": "2021 중간 복기",
+"no": 80,
+"ch": 8,
+"type": "mc",
+"stem": "megakaryocyte에 대한 설명으로 옳은 것은",
+"opts": [
+"골수에서 10일 정도 성숙하고 혈액으로 방출된다.",
+"진정염색질이다",
+"핵소체가 없다",
+"골지체가 많고 미토콘드리아가 적다"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "447",
+"ours": [
+"8-05"
+]
+},
+{
+"id": "Y21-76",
+"exam": "2021 중간 복기",
+"no": 76,
+"ch": 8,
+"type": "mc",
+"stem": "적혈구 형질막의 peripheral protein 중 integral membrane protein에 붙어 anchor 역할을 하는 것은",
+"opts": [
+"band 4.1",
+"actin",
+"ankyrin",
+"spectrin"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "447",
+"ours": []
+},
+{
+"id": "Y21-02",
+"exam": "2021 중간 복기",
+"no": 2,
+"ch": 1,
+"type": "short",
+"stem": "거짓중층원주상피",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "예상문제와 같은",
+"flags": [],
+"lines": "447",
+"ours": []
+},
+{
+"id": "Y21-55",
+"exam": "2021 중간 복기",
+"no": 55,
+"ch": 5,
+"type": "mc",
+"stem": "가슴샘에 대한 설명으로 틀린 것은",
+"opts": [
+"피질에는 b림프구는 없다",
+"수질에는 하살소체가 있다",
+"림프소절은 있지만 종자중심은 없다",
+"피질에만 blood thymus barrier가 있다",
+"1차 림프기관이다"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "447-449",
+"ours": [
+"5-03"
+]
+},
+{
+"id": "Y21-56",
+"exam": "2021 중간 복기",
+"no": 56,
+"ch": 5,
+"type": "short",
+"stem": "다음 설명을 모두 만족하는 구조: 1. 집합림프소절과 이를 연결하는 산재성림프조직이 관찰됨 2. 중층편평상피로 덮혀 있음 3. 피막이 확실하게 관찰되지 않음 4. 점막관련 림프조직",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"선지없음"
+],
+"lines": "449",
+"ours": []
+},
+{
+"id": "Y21-26",
+"exam": "2021 중간 복기",
+"no": 26,
+"ch": 3,
+"type": "multi",
+"stem": "다음 골격근에 대한 설명 중 맞는 것을 모두 고른 것은",
+"opts": [
+"M line: myomesin에 의해 myosin이 연결되어 있음",
+"A band: 근원섬유마디",
+"Z line: 여기에 titin이 연결되어 있음",
+"H band: 마이오신 머리가 있는 부위"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "449",
+"ours": []
+},
+{
+"id": "Y21-79-b",
+"exam": "2021 중간 복기",
+"no": 79,
+"ch": 8,
+"type": "mc",
+"stem": "granulopoiesis에 대한 설명으로 틀린 것은",
+"opts": [
+"promyeloblast가 myeloblast보다 크다",
+"myeloblast에서 특수 과립이 관찰된다",
+"?",
+"?",
+"stab cell를 호산구로 분비한다"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "같은 번호(79) 문항 중복 복기",
+"flags": [
+"선지일부없음",
+"OCR훼손"
+],
+"lines": "449",
+"ours": []
+},
+{
+"id": "Y21-40",
+"exam": "2021 중간 복기",
+"no": 40,
+"ch": 7,
+"type": "short",
+"stem": "다음 설명을 모두 만족하는 세포: 말초신경계에 존재함, 신경절 내 존재함, 신경세포체를 둘러싸고 있는 세포, 신경아교세포의 일종",
+"opts": [],
+"ans": null,
+"ans_text": "satellite cell",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "449",
+"ours": []
+},
+{
+"id": "Y21-72",
+"exam": "2021 중간 복기",
+"no": 72,
+"ch": 8,
+"type": "mc",
+"stem": "혈액에 일반적으로 존재하는 세포가 아닌 것은",
+"opts": [
+"적혈구",
+"helper t cell",
+"megakaryocyte",
+"단핵구"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "449",
+"ours": []
+},
+{
+"id": "Y21-60-b",
+"exam": "2021 중간 복기",
+"no": 60,
+"ch": 5,
+"type": "mc",
+"stem": "igM이 붙는 것",
+"opts": [
+"B cell",
+"t cell",
+"비만세포",
+"호산구"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "같은 번호(60) 문항 중복",
+"flags": [],
+"lines": "449",
+"ours": []
+},
+{
+"id": "Y21-57",
+"exam": "2021 중간 복기",
+"no": 57,
+"ch": 5,
+"type": "mc",
+"stem": "비장과 림프절에서 공통적으로 관찰되지 않는 구조",
+"opts": [
+"림프소절",
+"t 세포",
+"b 세포",
+"(기억 안남)"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"선지일부없음"
+],
+"lines": "449",
+"ours": []
+},
+{
+"id": "Y21-58",
+"exam": "2021 중간 복기",
+"no": 58,
+"ch": 5,
+"type": "mc",
+"stem": "림프세포에 대한 설명 중 맞는 것은",
+"opts": [
+"t림프세포는 가슴샘에서 성숙",
+"b림프세포는 골수에서 성숙, 말초림프기관에서 최종 분화",
+"t 도움세포는 b 림프구의 형질 세포의 분화를 자극한다",
+"도움 t 세포와 세포독성 t 세포로 나누어지는 곳은 말초림프기관이다"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "449",
+"ours": []
+},
+{
+"id": "Y21-20",
+"exam": "2021 중간 복기",
+"no": 20,
+"ch": 1,
+"type": "mc",
+"stem": "짝지은 구조 중 알맞지 않는 것은",
+"opts": [
+"형질세포의 핵주위테-골지복합체",
+"부동모-액틴세사",
+"아교원섬유의 가로무늬-tropocollagen 분자의 엇갈린 배열",
+"중심소체-미세소관"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "449-451",
+"ours": []
+},
+{
+"id": "Y21-09",
+"exam": "2021 중간 복기",
+"no": 9,
+"ch": 1,
+"type": "mc",
+"stem": "상피세포의 기능과 각 특징적인 구조",
+"opts": [
+"단백질 합성 상피-무과립형질내그물",
+"보호상피-부착반점",
+"지방분비세포-과립형질내그물",
+"이온수송세포-바닥주름과 미토콘드리아"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "451",
+"ours": [
+"1-09"
+]
+},
+{
+"id": "Y202-01",
+"exam": "2020-2 중간 지필 복기",
+"no": 1,
+"ch": 1,
+"type": "multi",
+"stem": "상피조직에 대해 맞는 것 모두 고르라.",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "459",
+"ours": [
+"1-01"
+]
+},
+{
+"id": "Y202-02",
+"exam": "2020-2 중간 지필 복기",
+"no": 2,
+"ch": 1,
+"type": "short",
+"stem": "거짓중층원주상피 옳은 설명",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "461",
+"ours": []
+},
+{
+"id": "Y202-03",
+"exam": "2020-2 중간 지필 복기",
+"no": 3,
+"ch": 1,
+"type": "short",
+"stem": "외분비샘 옳은 설명",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "463",
+"ours": []
+},
+{
+"id": "Y202-05",
+"exam": "2020-2 중간 지필 복기",
+"no": 5,
+"ch": 1,
+"type": "short",
+"stem": "sample 문제 상피 종류 연결 변형",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "465",
+"ours": []
+},
+{
+"id": "Y202-06",
+"exam": "2020-2 중간 지필 복기",
+"no": 6,
+"ch": 1,
+"type": "short",
+"stem": "섬모 설명",
+"opts": [],
+"ans": null,
+"ans_text": "섬모",
+"ans_src": "N",
+"note": "원문 '섬모 설명 답 섬모'",
+"flags": [
+"복기X"
+],
+"lines": "467",
+"ours": []
+},
+{
+"id": "Y202-07",
+"exam": "2020-2 중간 지필 복기",
+"no": 7,
+"ch": 1,
+"type": "short",
+"stem": "기름샘 설명",
+"opts": [],
+"ans": null,
+"ans_text": "기름샘",
+"ans_src": "N",
+"note": "원문 '기름샘 설명 후 답 기름샘'",
+"flags": [
+"복기X"
+],
+"lines": "469",
+"ours": []
+},
+{
+"id": "Y202-10",
+"exam": "2020-2 중간 지필 복기",
+"no": 10,
+"ch": 1,
+"type": "multi",
+"stem": "덮개상피의 특징과 덮개상피의 종류가 제대로 연결된 것을 모두 고르시오",
+"opts": [
+"가스교환",
+"보호",
+"수송",
+"분비"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "특징으로 가스교환 보호 수송 분비 가 나왔다고 함(상피 종류 쪽은 복기X)",
+"flags": [
+"선지일부없음"
+],
+"lines": "471-473",
+"ours": []
+},
+{
+"id": "Y202-23",
+"exam": "2020-2 중간 지필 복기",
+"no": 23,
+"ch": 3,
+"type": "multi",
+"stem": "근육 이완시 늘어나는 구조 모두 고르시오.",
+"opts": [
+"근육마디의 길이",
+"Z띠와 Z띠 사이 길이",
+"A띠",
+"I띠"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "475-477",
+"ours": []
+},
+{
+"id": "Y202-24",
+"exam": "2020-2 중간 지필 복기",
+"no": 24,
+"ch": 3,
+"type": "multi",
+"stem": "심장사이원반에 있는 구조 (맞는 것 모두 고르기)",
+"opts": [
+"Desmosome",
+"tight junction",
+"fascia adherens",
+"gap junction"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "479-481",
+"ours": [
+"3-06"
+]
+},
+{
+"id": "Y202-26",
+"exam": "2020-2 중간 지필 복기",
+"no": 26,
+"ch": 3,
+"type": "multi",
+"stem": "골격근에 대한 설명 중 맞는 것",
+"opts": [
+"M line: Myomesin에 의해 Myosin이 연결되어 있음.",
+"?? T-tubule (이하 불명)"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"선지일부없음"
+],
+"lines": "483-487",
+"ours": []
+},
+{
+"id": "Y202-31",
+"exam": "2020-2 중간 지필 복기",
+"no": 31,
+"ch": 7,
+"type": "mc",
+"stem": "다음 중 틀린 것은",
+"opts": [
+"보툴리눔(?) 독소는 축삭종말에서 아세틸콜린 분비를 억제한다.",
+"말초신경계통의 유수신경섬유(?)는 슈반세포에 의해 둘러싸여있다.",
+"중추신경의 말이집은 희소돌기아교세포가 만듬",
+"말초신경계통의 유수신경섬유는 바닥판으로 둘러싸여 있다.",
+"중추신경계통의 미세아교세포는 neural crest…?"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"OCR훼손"
+],
+"lines": "491-499",
+"ours": []
+},
+{
+"id": "Y202-32",
+"exam": "2020-2 중간 지필 복기",
+"no": 32,
+"ch": 7,
+"type": "mc",
+"stem": "축삭 전도 방향이 세포체 향하는 것",
+"opts": [
+"단극",
+"양극",
+"다극",
+"거짓단극",
+"별아교세포"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "501-503",
+"ours": []
+},
+{
+"id": "Y202-33",
+"exam": "2020-2 중간 지필 복기",
+"no": 33,
+"ch": 7,
+"type": "mc",
+"stem": "축삭 말단이 이루는 구조?",
+"opts": [
+"neuromuscular junction",
+"Meissner's corpuscle",
+"시냅스",
+"자유신경종말"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "-복기 왕박민영",
+"flags": [],
+"lines": "505-509",
+"ours": []
+},
+{
+"id": "Y202-34",
+"exam": "2020-2 중간 지필 복기",
+"no": 34,
+"ch": 7,
+"type": "mc",
+"stem": "슈반세포에 대한 설명으로 맞는 것은?",
+"opts": [
+"한 세포가 하나의 축삭에만 수초를 형성함.",
+"한 세포가 수초 없이 여러 개의 축삭을 둘러쌈.",
+"한 세포가 마디사이분절 하나를 형성함.",
+"나병과 관계있음"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "511-519",
+"ours": []
+},
+{
+"id": "Y202-35",
+"exam": "2020-2 중간 지필 복기",
+"no": 35,
+"ch": 7,
+"type": "short",
+"stem": "멜라닌 과립이 쌓이면 신경의 의미",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "521",
+"ours": [
+"7-02"
+]
+},
+{
+"id": "Y202-43",
+"exam": "2020-2 중간 지필 복기",
+"no": 43,
+"ch": 4,
+"type": "short",
+"stem": "막내뼈형성과정 순서대로",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "막속뼈/막내뼈형성 추정",
+"flags": [
+"복기X"
+],
+"lines": "523",
+"ours": []
+},
+{
+"id": "Y202-44",
+"exam": "2020-2 중간 지필 복기",
+"no": 44,
+"ch": 4,
+"type": "short",
+"stem": "샤피섬유 관찰 가능한 곳 (이틀뼈, 두개골봉합, 겉질뼈, 섬유연골(?))",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "보기 4개 나열됨 원문: 이틀뼈 두개골봉합 겉질뼈 섬유연골(?)",
+"flags": [
+"선지없음",
+"OCR훼손"
+],
+"lines": "525",
+"ours": []
+},
+{
+"id": "Y202-45",
+"exam": "2020-2 중간 지필 복기",
+"no": 45,
+"ch": 4,
+"type": "mc",
+"stem": "다음 중 분열이 가능한 세포는?",
+"opts": [
+"Chondroblast",
+"osteoblast",
+"chondrocyte",
+"osteocyte"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "527",
+"ours": [
+"4-06"
+]
+},
+{
+"id": "Y202-57",
+"exam": "2020-2 중간 지필 복기",
+"no": 57,
+"ch": 5,
+"type": "multi",
+"stem": "비장에서 관찰할 수 있는 구조는?",
+"opts": [
+"열린순환",
+"닫힌순환",
+"붓털소동맥",
+"HEV"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "529-531",
+"ours": []
+},
+{
+"id": "Y202-58",
+"exam": "2020-2 중간 지필 복기",
+"no": 58,
+"ch": 5,
+"type": "multi",
+"stem": "림프세포에 대한 설명 중 맞는 것을 모두 고르면?",
+"opts": [
+"B림프구는 골수에서 만들어져 말초~에서 최종분화한다",
+"T림프구는 가슴샘에서 helper T cell과 세포독성 T세포로 분화한다.",
+"도움 T세포가 B세포의 형질분화에 관여한다.",
+"T세포만 cd molecule을 갖고 있다."
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "533-543",
+"ours": []
+},
+{
+"id": "Y202-59",
+"exam": "2020-2 중간 지필 복기",
+"no": 59,
+"ch": 5,
+"type": "multi",
+"stem": "mhc가 2개가 있는 세포를 모두 고르시오",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "545",
+"ours": [
+"5-08"
+]
+},
+{
+"id": "Y202-60",
+"exam": "2020-2 중간 지필 복기",
+"no": 60,
+"ch": 5,
+"type": "multi",
+"stem": "ig와 이에 결합하는 세포가 맞게 짝지어진 것을 모두 고르시오",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "547",
+"ours": []
+},
+{
+"id": "Y202-61",
+"exam": "2020-2 중간 지필 복기",
+"no": 61,
+"ch": 6,
+"type": "multi",
+"stem": "혈관에 대한 설명 중 옳은 것 모두 고르기",
+"opts": [
+"정맥의 내강은 같이 주행하는 동맥보다 넓다",
+"동맥의 중간층은 같이 주행하는 정맥보다 두껍다"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"선지일부없음"
+],
+"lines": "549-555",
+"ours": []
+},
+{
+"id": "Y202-62",
+"exam": "2020-2 중간 지필 복기",
+"no": 62,
+"ch": 6,
+"type": "multi",
+"stem": "내피세포 설명 중 옳은 것 모두 고르기",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "557",
+"ours": []
+},
+{
+"id": "Y202-63",
+"exam": "2020-2 중간 지필 복기",
+"no": 63,
+"ch": 6,
+"type": "multi",
+"stem": "구조와 기능 일치하는 거 모두 고르기",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "샘플에 있는 판막있는 문제인데 ㄹ만 동맥토리?로 나왔어요",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "559",
+"ours": []
+},
+{
+"id": "Y202-66",
+"exam": "2020-2 중간 지필 복기",
+"no": 66,
+"ch": 6,
+"type": "mc",
+"stem": "pericyte 기능은? (가나다라)",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "561",
+"ours": []
+},
+{
+"id": "Y202-67",
+"exam": "2020-2 중간 지필 복기",
+"no": 67,
+"ch": 6,
+"type": "mc",
+"stem": "대정맥의 tunica adventitia에 보이는 구조? (가나다라)",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "563",
+"ours": [
+"6-03"
+]
+},
+{
+"id": "Y202-68",
+"exam": "2020-2 중간 지필 복기",
+"no": 68,
+"ch": 6,
+"type": "short",
+"stem": "외탄력막이 제일 잘 보이는 혈관은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X"
+],
+"lines": "565",
+"ours": []
+},
+{
+"id": "Y202-69",
+"exam": "2020-2 중간 지필 복기",
+"no": 69,
+"ch": 6,
+"type": "multi",
+"stem": "Sinusoidal artery 맞는것 모두 고르라.",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "원문 Sinosoidal artery (sinusoid 추정)",
+"flags": [
+"복기X",
+"선지없음",
+"OCR훼손"
+],
+"lines": "567",
+"ours": []
+},
+{
+"id": "Y202-70",
+"exam": "2020-2 중간 지필 복기",
+"no": 70,
+"ch": 6,
+"type": "mc",
+"stem": "vasa vasorum에 대해 맞는 것을 고르라.",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "569",
+"ours": [
+"6-05"
+]
+},
+{
+"id": "Y20K-a",
+"exam": "2020/7/2 1차 기말 복기",
+"no": "",
+"ch": 1,
+"type": "short",
+"stem": "[?]섬모 / 기름샘 (설명하고 해당 구조 고르기 추정)",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"OCR훼손"
+],
+"lines": "575",
+"ours": []
+},
+{
+"id": "Y20K-b",
+"exam": "2020/7/2 1차 기말 복기",
+"no": "",
+"ch": 6,
+"type": "short",
+"stem": "동모양 모세혈관 특징",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "577",
+"ours": []
+},
+{
+"id": "Y20K-c",
+"exam": "2020/7/2 1차 기말 복기",
+"no": "",
+"ch": 4,
+"type": "short",
+"stem": "연골에 많은 바탕질",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "579",
+"ours": []
+},
+{
+"id": "Y20K-d",
+"exam": "2020/7/2 1차 기말 복기",
+"no": "",
+"ch": 5,
+"type": "multi",
+"stem": "그물섬유 없는 장기",
+"opts": [
+"비장",
+"간",
+"골수",
+"림프절"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "원문 '그물섬유 없는 장기 : 비장 간 골수 림프절' (보기인지 답인지 불명)",
+"flags": [],
+"lines": "581",
+"ours": []
+},
+{
+"id": "Y20K-e",
+"exam": "2020/7/2 1차 기말 복기",
+"no": "",
+"ch": 5,
+"type": "short",
+"stem": "IgD, IgM을 수용가능한 친구들?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "583",
+"ours": []
+},
+{
+"id": "Y20K-f",
+"exam": "2020/7/2 1차 기말 복기",
+"no": "",
+"ch": 7,
+"type": "mc",
+"stem": "슈반세포(sample 그대로)",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "587",
+"ours": []
+},
+{
+"id": "Y20K-g",
+"exam": "2020/7/2 1차 기말 복기",
+"no": "",
+"ch": 7,
+"type": "mc",
+"stem": "멜라닌과립이 있는 세포의 특징",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "원문 '카테콜아민을 분비한다.' (보기 또는 답 여부 불명)",
+"flags": [
+"선지없음"
+],
+"lines": "589",
+"ours": []
+},
+{
+"id": "Y20K-h",
+"exam": "2020/7/2 1차 기말 복기",
+"no": "",
+"ch": 3,
+"type": "mc",
+"stem": "심장의 impulse를 형성하는 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"선지없음"
+],
+"lines": "591",
+"ours": []
+},
+{
+"id": "Y20K-i",
+"exam": "2020/7/2 1차 기말 복기",
+"no": "",
+"ch": 1,
+"type": "mc",
+"stem": "상피에 대해 틀린 설명은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"선지없음"
+],
+"lines": "593",
+"ours": []
+},
+{
+"id": "Y20K-j",
+"exam": "2020/7/2 1차 기말 복기",
+"no": "",
+"ch": 6,
+"type": "mc",
+"stem": "Pericyte에 관한 설명으로 맞는 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"선지없음"
+],
+"lines": "595",
+"ours": []
+},
+{
+"id": "Y20K-k",
+"exam": "2020/7/2 1차 기말 복기",
+"no": "",
+"ch": 4,
+"type": "mc",
+"stem": "탄력연골에 대한 설명으로 틀린 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"선지없음"
+],
+"lines": "597",
+"ours": []
+},
+{
+"id": "Y20K-l",
+"exam": "2020/7/2 1차 기말 복기",
+"no": "",
+"ch": 1,
+"type": "mc",
+"stem": "각 상피조직의 구조적 특성 중 옳지 않은 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"선지없음"
+],
+"lines": "599",
+"ours": []
+},
+{
+"id": "Y20K-m",
+"exam": "2020/7/2 1차 기말 복기",
+"no": "",
+"ch": 4,
+"type": "mc",
+"stem": "뼈세포와 연골세포의 공통점으로 맞는 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"선지없음"
+],
+"lines": "601",
+"ours": []
+},
+{
+"id": "Y18-01",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 5,
+"type": "short",
+"stem": "태아의 면역을 책임지는 면역 글로불린은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-02",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 6,
+"type": "short",
+"stem": "vasa vasorum 관련설명",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-03",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 1,
+"type": "short",
+"stem": "상피 관련 설명",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-04",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 3,
+"type": "short",
+"stem": "사이원반에 있는 구조?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-05",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 5,
+"type": "short",
+"stem": "두가지의 MHC 형성할 수 있는 세포?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-06",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 2,
+"type": "short",
+"stem": "콜라겐1 분비하는 세포?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-07",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 1,
+"type": "short",
+"stem": "(땡시) 부고환",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-08",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 1,
+"type": "short",
+"stem": "(땡시) 기름샘",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-09",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 1,
+"type": "short",
+"stem": "(땡시) 온분비",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-10",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 5,
+"type": "short",
+"stem": "(땡시) B세포가 분화하는 곳 고르시오",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-11",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 7,
+"type": "short",
+"stem": "(땡시) 푸르키니에 세포가 있는 층",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-12",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 6,
+"type": "short",
+"stem": "(땡시) arteriol",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-13",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 7,
+"type": "short",
+"stem": "(땡시) molecular layer와 거기 있는 세포",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-14",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 7,
+"type": "short",
+"stem": "(땡시) 신경섬유다발에 있는 슈반세포",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-15",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 1,
+"type": "short",
+"stem": "(땡시) 하살소체와 하살소체가 있는 장기",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-16",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 7,
+"type": "short",
+"stem": "(땡시) astrocyte와 기능",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-17",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 2,
+"type": "short",
+"stem": "(땡시) 헤파린",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-18",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 7,
+"type": "short",
+"stem": "(땡시) 니슬소체",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-19",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 6,
+"type": "short",
+"stem": "(땡시) muscular vein",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-20",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 4,
+"type": "short",
+"stem": "(땡시) 성숙연골구역",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-21",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 5,
+"type": "short",
+"stem": "(땡시) lamina propria에 있는 세포 세 개",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-22",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 3,
+"type": "short",
+"stem": "(땡시) 근방추 안에 있는 근세포 두 개",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-23",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 8,
+"type": "short",
+"stem": "(땡시) 마크로파지로 분화하는 monocyte",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-24",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 2,
+"type": "short",
+"stem": "(땡시) plasma cell과 기능",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-25",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 6,
+"type": "short",
+"stem": "(땡시) T. intermedia에 있는 구조",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-26",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 2,
+"type": "short",
+"stem": "(땡시) reticular fiber와 염색법",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-27",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 6,
+"type": "short",
+"stem": "(땡시) endocardium",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-28",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 3,
+"type": "short",
+"stem": "(땡시) 백색근",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-29",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 3,
+"type": "short",
+"stem": "(땡시) smooth muscle",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Y18-30",
+"exam": "2018 중간 복기",
+"no": "",
+"ch": 3,
+"type": "short",
+"stem": "(땡시) 사진 주고 근육의 종류",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"주제만복기"
+],
+"lines": "605-605",
+"ours": []
+},
+{
+"id": "Ysmp-01",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 1,
+"ch": 2,
+"type": "short",
+"stem": "큰포식세포 계통의 cell을 5개 이상 나열하고 존재하는 위치를 써라.",
+"opts": [],
+"ans": null,
+"ans_text": "Kupffer cell-liver; histiocyte-connective tissue proper; dust cell(alveolar macrophage)-lung; microglial cell-CNS; Langerhans cell-skin(epidermis); Hofbauer cell-placenta; osteoclast-bone",
+"ans_src": "M",
+"note": "큰포식세포는 특정 부위에서 특별한 이름으로 불린다.",
+"flags": [],
+"lines": "619-623",
+"ours": []
+},
+{
+"id": "Ysmp-02",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 2,
+"ch": 1,
+"type": "short",
+"stem": "거짓섬모중층원주상피가 발견되는 곳과 조직학적 특징에 대하여 설명하라.",
+"opts": [],
+"ans": null,
+"ans_text": "모든 세포가 기저막에 부착되어 있으나 일부는 내강쪽 표면에 도달하지 못해 핵들이 여러 층으로 보이며, 호흡관(기관, 기관지)에서 발견된다.",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "625-627",
+"ours": []
+},
+{
+"id": "Ysmp-03",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 3,
+"ch": 1,
+"type": "short",
+"stem": "세포소기관 중에 에너지 생성의 중추적 역할을 담당하는 기관에 대하여 설명하라.",
+"opts": [],
+"ans": null,
+"ans_text": "미토콘드리아: 대사물질의 화학적 에너지를 쉽게 쓸 수 있는 에너지로 전환. 에너지 절반은 ATP 고에너지 인산결합으로 저장, 나머지는 열. 폭 0.5~1um, 길이 최대 10um, 외막·내막(cristae). 산화적 인산화·전자전달계 위치. 내부공생설.",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "629-635",
+"ours": []
+},
+{
+"id": "Ysmp-04",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 4,
+"ch": 1,
+"type": "short",
+"stem": "장액 세포에 대하여 설명하라.",
+"opts": [],
+"ans": null,
+"ans_text": "중앙에 둥근 핵의 다각형 세포; 뚜렷한 극성; 기저부 RER 풍부해 염기호성; 상부에 성숙분비과립 축적되어 밝게 보임; e.g. 췌장·귀밑샘 샘포세포",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "637-637",
+"ours": []
+},
+{
+"id": "Ysmp-05",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 5,
+"ch": 1,
+"type": "short",
+"stem": "솔모양 가장자리에 대하여 설명하라.",
+"opts": [],
+"ans": null,
+"ans_text": "미세융모(microvilli)와 당질층(glycocalyx)의 복합체로 광학현미경에서 쉽게 관찰된다. 줄무늬가장자리라고도 한다.",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "639-639",
+"ours": []
+},
+{
+"id": "Ysmp-06",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 6,
+"ch": 1,
+"type": "short",
+"stem": "표본제작 순서에 대하여 설명하라.",
+"opts": [],
+"ans": null,
+"ans_text": "고정(formaldehyde 4%) - 탈수(alcohol) - 투명(xylene 등) - 포매(paraffin/resin) - 절단 - 염색(hematoxylin, eosin)",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "641-641",
+"ours": []
+},
+{
+"id": "Ysmp-07",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 7,
+"ch": 1,
+"type": "short",
+"stem": "단층상피세포에 대해 설명하라.",
+"opts": [],
+"ans": null,
+"ans_text": "한 층의 세포; 단층편평(내피·중피, 폐포, Bowman낭 벽측: 포음작용·능동수송), 단층입방(난소표면, 신세뇨관, 갑상샘: 덮음·분비), 단층원주(장, 담낭, 자궁: 보호·윤활·흡수·분비, 길이가 폭의 2-3배)",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "643-645",
+"ours": []
+},
+{
+"id": "Ysmp-08",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 8,
+"ch": 1,
+"type": "short",
+"stem": "상피조직의 기능 5가지",
+"opts": [],
+"ans": null,
+"ans_text": "covering(피부,구강점막), resorption(장), secretion(샘), sensation(신경상피), contraction(근상피)",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "647-647",
+"ours": []
+},
+{
+"id": "Ysmp-09",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 9,
+"ch": 1,
+"type": "short",
+"stem": "intermediate filament의 종류와 발견되는 곳",
+"opts": [],
+"ans": null,
+"ans_text": "케라틴: 대부분 상피(20여종); 바이멘틴: 중간엽 기원 세포; 데스민: 평활근·골격근·심장근 Z선; 아교세사(GFA): 별아교세포; 신경세사: 신경원 세포체·돌기",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "649-649",
+"ours": []
+},
+{
+"id": "Ysmp-10",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 10,
+"ch": 1,
+"type": "short",
+"stem": "Endocytosis 과정과 세포막 출입 설명",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "[그림 2-7]과 딸린 내용을 숙지하라고만 되어 있음(답 없음).",
+"flags": [
+"복기X"
+],
+"lines": "649-649",
+"ours": []
+},
+{
+"id": "Ysmp-11",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 11,
+"ch": 2,
+"type": "short",
+"stem": "활동에 따른 섬유모세포의 특징",
+"opts": [],
+"ans": null,
+"ans_text": "활동기: 세포질 풍부, 불규칙 가지, 핵 크고 난원형·연한 염색질·뚜렷한 핵소체, RER·골지 발달. 휴지기(섬유세포): 작고 방추형, 돌기 적음, 핵 작고 길며 짙음, 세포질 산호성, RER 적음.",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "649-655",
+"ours": []
+},
+{
+"id": "Ysmp-12",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 12,
+"ch": 1,
+"type": "short",
+"stem": "분비방식에 따른 샘의 분류",
+"opts": [],
+"ans": null,
+"ans_text": "샘분비(merocrine, 췌장; exocytosis, 세포 손상 없음), 온분비(holocrine, 피지샘; 세포 전체 파괴), 부분분비(apocrine, 젖샘; 세포질 일부와 함께 방출)",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "657-659",
+"ours": []
+},
+{
+"id": "Ysmp-13",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 13,
+"ch": 1,
+"type": "mc",
+"stem": "상피세포의 기능과 특징적인 구조를 옳게 짝 지은 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "이온 수송-기질 주름",
+"ans_src": "M",
+"note": "상피조직은 세포사이물질이 거의 없고 결합이 강함. 기능: 덮음, 흡수, 분비, 지각, 수축. 세 배엽 모두에서 기원.",
+"flags": [
+"선지없음"
+],
+"lines": "661-669",
+"ours": []
+},
+{
+"id": "Ysmp-14",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 14,
+"ch": 1,
+"type": "multi",
+"stem": "다음 중 섬모가 있는 곳은? (1.3)",
+"opts": [
+"기관지",
+"식도",
+"난관",
+"부정소"
+],
+"ans": [
+1,
+3
+],
+"ans_text": "1.3",
+"ans_src": "M",
+"note": "섬모는 9+2 미세소관, 기저소체 부착. 식도는 중층비각질편평(섬모X). 난관 단층원주(분비+섬모세포). 부고환관은 부동모(운동성X).",
+"flags": [],
+"lines": "671-683",
+"ours": []
+},
+{
+"id": "Ysmp-15",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 15,
+"ch": 1,
+"type": "short",
+"stem": "이행 상피의 특징은?",
+"opts": [],
+"ans": null,
+"ans_text": "비뇨기 계통에서 발견",
+"ans_src": "N",
+"note": "이행상피는 중층상피; 방광·요관·요도 상부. 표면세포는 돔 모양, 방광 확장에 따라 변함; 이핵세포 흔함.",
+"flags": [
+"줄번호추정"
+],
+"lines": "681-683",
+"ours": []
+},
+{
+"id": "Ysmp-16",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 16,
+"ch": 1,
+"type": "multi",
+"stem": "다음 중 Gap Junction이 없는 구조는? (1,4)",
+"opts": [
+"skeletal m.",
+"smooth m.",
+"cardiac m.",
+"blood cell"
+],
+"ans": [
+1,
+4
+],
+"ans_text": "1,4",
+"ans_src": "M",
+"note": "간·렌즈·심장근에 존재. 심장근 사이원반 외측에 교통반; 평활근 발달; 골격근은 교과서 언급 없음; 혈구는 없다고 생각 가능.",
+"flags": [],
+"lines": "685-691",
+"ours": []
+},
+{
+"id": "Ysmp-17",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 17,
+"ch": 4,
+"type": "short",
+"stem": "세포 영역 기질의 특징?",
+"opts": [],
+"ans": null,
+"ans_text": "연골세포 주변 연골기질로 GAG 풍부, 아교질 적음. 조직화학적으로 강한 염기호성·변색성; 영역사이기질보다 PAS 강양성.",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "693-699",
+"ours": []
+},
+{
+"id": "Ysmp-18",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 18,
+"ch": 1,
+"type": "mc",
+"stem": "H-E Staining이 잘 되지 않는 곳은? (1)",
+"opts": [
+"술잔세포",
+"장액성 꽈리세포",
+"단순 관상 분비샘"
+],
+"ans": [
+1
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "술잔세포는 점액세포: 큰 투명한 분비과립, 핵은 기저부로 눌림. H-E에서 점액은 염색되지 않음.",
+"flags": [],
+"lines": "701-709",
+"ours": []
+},
+{
+"id": "Ysmp-19",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 19,
+"ch": 1,
+"type": "mc",
+"stem": "다음중 기저막을 구성하는 당단백질은? (1)",
+"opts": [
+"laminin",
+"fibronectin",
+"collagen"
+],
+"ans": [
+1
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "laminin: 상피세포를 기저판에 부착. chondronectin: 연골. fibronectin: 세포·아교질·GAG 결합.",
+"flags": [],
+"lines": "711-719",
+"ours": []
+},
+{
+"id": "Ysmp-20",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 20,
+"ch": 1,
+"type": "mc",
+"stem": "기름샘의 분비방법은? (3)",
+"opts": [
+"샘분비",
+"부분분비",
+"온분비",
+"paracrine",
+"답 없음"
+],
+"ans": [
+3
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "721-725",
+"ours": []
+},
+{
+"id": "Ysmp-21",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 21,
+"ch": 1,
+"type": "mc",
+"stem": "스테로이드 분비세포의 염색성은? (2)",
+"opts": [
+"염기호성",
+"산호성",
+"변색성",
+"은호성(?)",
+"H-E Staining이 안된다"
+],
+"ans": [
+2
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "",
+"flags": [
+"원문 선지배열 OCR 뒤섞임"
+],
+"lines": "727-731",
+"ours": []
+},
+{
+"id": "Ysmp-22",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 22,
+"ch": 1,
+"type": "mc",
+"stem": "다음 중 부동모에 대한 설명으로 맞는 것은? (4)",
+"opts": [
+"단순 원주 상피에서 볼 수 있다.",
+"액틴 세사가 있다.",
+"축미 세관이 있다.",
+"물질 이동 역할을 한다.",
+"돌기 길이가 비교적 일정하다."
+],
+"ans": [
+4
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "733-735",
+"ours": []
+},
+{
+"id": "Ysmp-23",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 23,
+"ch": 2,
+"type": "short",
+"stem": "아교질 섬유를 만드는 세포를 모두 골라라.",
+"opts": [],
+"ans": null,
+"ans_text": "섬유모세포, 연골세포(2형), 뼈모세포(1,2형) (원문: 보기 없음, 해설에서 대표 세포로 제시)",
+"ans_src": "N",
+"note": "아교섬유는 eosin 분홍, Mallory 파랑, Masson 초록, Sirius red 붉은색.",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "737-743",
+"ours": []
+},
+{
+"id": "Ysmp-24",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 24,
+"ch": 2,
+"type": "mc",
+"stem": "GAG의 염색성은? (1)",
+"opts": [
+"염기호성",
+"산호성",
+"변색성",
+"은호성"
+],
+"ans": [
+1
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "745-747",
+"ours": []
+},
+{
+"id": "Ysmp-25",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 25,
+"ch": 2,
+"type": "short",
+"stem": "tropocollagen 생성장소?",
+"opts": [],
+"ans": null,
+"ans_text": "ER",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "749-749",
+"ours": []
+},
+{
+"id": "Ysmp-26",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 26,
+"ch": 2,
+"type": "short",
+"stem": "탄력섬유의 염색법으로 옳은 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "resorcin-fuchsin",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "751-751",
+"ours": []
+},
+{
+"id": "Ysmp-27",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 27,
+"ch": 2,
+"type": "mc",
+"stem": "성긴결합조직의 특성이 아닌 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "N",
+"note": "성긴결합조직: 근섬유-근육집 사이 공간, 상피 지지, 혈관·림프관 둘러쌈, 진피 유두층·진피하조직·장막. 섬유모세포·큰포식세포 많음, 섬세·유연, 저항성 약함.",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "751-755",
+"ours": []
+},
+{
+"id": "Ysmp-28",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 28,
+"ch": 2,
+"type": "mc",
+"stem": "Mast Cell 과 관계있는 세포는? (4)",
+"opts": [
+"macrophage",
+"림프구",
+"plasma cell",
+"산호성 백혈구"
+],
+"ans": [
+4
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "757-759",
+"ours": []
+},
+{
+"id": "Ysmp-29",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 29,
+"ch": 2,
+"type": "short",
+"stem": "아교질 합성장애로 인한 임상적 질환은?",
+"opts": [],
+"ans": null,
+"ans_text": "엘러스 단로스 증후군, 괴혈병",
+"ans_src": "M",
+"note": "",
+"flags": [
+"줄번호추정"
+],
+"lines": "761-765",
+"ours": []
+},
+{
+"id": "Ysmp-30",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 30,
+"ch": 1,
+"type": "short",
+"stem": "junction(세포사이 연접)에 대해서 모두 설명하시오.",
+"opts": [],
+"ans": null,
+"ans_text": "1.Occluding(tight, zonula occludens): 세포간 물질확산 차단, 막단백질 이동 방지. 2.Adherent(zonula adherens): alpha actin/vinculin 등 actin binding protein 연결. 3.Communicating(gap): connexon, 이온·소분자 수송, 심장·평활근에 많음. 4.Desmosome: desmoplakin 등 link protein + 케라틴 tonofilament.",
+"ans_src": "M",
+"note": "(주관식)",
+"flags": [
+"줄번호추정"
+],
+"lines": "761-765",
+"ours": []
+},
+{
+"id": "Ysmp-31",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 31,
+"ch": 1,
+"type": "short",
+"stem": "goblet cell(술잔세포)의 조직학적 특징에 대해서 설명하시오.",
+"opts": [],
+"ans": null,
+"ans_text": "점액분비세포(mucus를 exocytosis로 분비). 점액소(당단백질) 함유 크고 옅게 염색되는 과립이 자유표면쪽 대부분, 핵은 납작하게 눌려 기저부, RER 풍부, glycosyltransferase가 단당류를 중심단백질에 첨가.",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "767-769",
+"ours": []
+},
+{
+"id": "Ysmp-32",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 32,
+"ch": 1,
+"type": "short",
+"stem": "기관(trachea)의 상피세포에 대해서 설명하시오.",
+"opts": [],
+"ans": null,
+"ans_text": "거짓중층상피: 실제 한 층이나 여러 층처럼 보임, 모든 세포가 기저막에 닿으나 일부는 자유표면에 못 닿음. 표층세포에 섬모, 술잔세포 사이사이, 기저세포는 핵이 둥글고 농축. 두꺼운 기저막.",
+"ans_src": "M",
+"note": "단층원주상피 접선절단과의 감별: 기저층 세포 핵 모양이 다르면 거짓중층.",
+"flags": [],
+"lines": "771-783",
+"ours": []
+},
+{
+"id": "Ysmp-33",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 33,
+"ch": 2,
+"type": "short",
+"stem": "결합조직내에서 관찰되는 고정세포(fixed cell)를 설명하시오.",
+"opts": [],
+"ans": null,
+"ans_text": "고정세포: 섬유모세포, 비만세포, 고정큰포식세포, 세망세포, 지방세포, 색소세포 (혈관주위세포, 평활근세포, 간엽세포도 관찰). 세포성분은 고정세포와 자유세포로 분류.",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "785-787",
+"ours": []
+},
+{
+"id": "Ysmp-34",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 34,
+"ch": 2,
+"type": "short",
+"stem": "1형 아교질(collagen type 1)을 형성하는 아교섬유의 구조적인 주기성을 설명하시오.",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "원문에 답 없음.",
+"flags": [
+"복기X"
+],
+"lines": "789-789",
+"ours": []
+},
+{
+"id": "Ysmp-35",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 35,
+"ch": 2,
+"type": "short",
+"stem": "단핵포식세포계통(MPS)에 속하는 세포들을 조직별로 나열하시오.",
+"opts": [],
+"ans": null,
+"ans_text": "1번과 답 같음",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "791-793",
+"ours": []
+},
+{
+"id": "Ysmp-36",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 36,
+"ch": 1,
+"type": "short",
+"stem": "DNA는 HE 염색에 의해 어떻게 염색되는가?",
+"opts": [],
+"ans": null,
+"ans_text": "DNA는 basophilic하여 청색으로 염색된다.",
+"ans_src": "M",
+"note": "hematoxylin: 핵·RNA 풍부 구조 청색; eosin: 세포질 붉게, collagen 핑크.",
+"flags": [],
+"lines": "795-803",
+"ours": []
+},
+{
+"id": "Ysmp-37",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 37,
+"ch": 1,
+"type": "mc",
+"stem": "Nuclear Pore 에 대한 설명중 맞는것은? (b)",
+"opts": [
+"secretory protein을 많이 합성하는 세포의 경우, nuclear pore가 드물게 존재한다.",
+"nuclear pore를 통해 핵내 물질과 cytoplasmic 물질 사이의 교환이 selectively 일어난다.",
+"둘 다 맞다.",
+"둘 다 틀리다."
+],
+"ans": [
+2
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "a는 '단백질 많이 합성하는 세포는 nuclear pore가 많다'로 정정해야 함.",
+"flags": [],
+"lines": "805-813",
+"ours": []
+},
+{
+"id": "Ysmp-38",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 38,
+"ch": 1,
+"type": "mc",
+"stem": "heterochromatin에 대한 설명 중 맞는 것은? (c)",
+"opts": [
+"전자현미경에서만 관찰 가능하다.",
+"광학 현미경에서 옅게 산재되어 관찰된다.",
+"핵 가장자리에 짙게 존재한다.",
+"산호성이다."
+],
+"ans": [
+3
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "이질염색질: EM 굵은 과립, LM 핵막 내면 염기호성 덩어리. 모든 염색질은 basophilic.",
+"flags": [],
+"lines": "815-821",
+"ours": []
+},
+{
+"id": "Ysmp-39",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 39,
+"ch": 1,
+"type": "mc",
+"stem": "핵소체에서 발견되지 않는 물질은?",
+"opts": [],
+"ans": null,
+"ans_text": "(선지 없음) 핵소체 구성: rRNA, 단백질, primary transcript, 성숙중 ribosome, 이질염색질",
+"ans_src": "N",
+"note": "핵소체형성체, 실부분(primary transcript), 과립부분(성숙중 ribosome)으로 구성.",
+"flags": [
+"선지없음"
+],
+"lines": "823-825",
+"ours": []
+},
+{
+"id": "Ysmp-40",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 40,
+"ch": 1,
+"type": "mc",
+"stem": "광학현미경의 분해능(resolving power) 범위를 벗어나는 구조는?",
+"opts": [],
+"ans": null,
+"ans_text": "광학현미경 분해능 약 0.1um(100nm) 이하는 구별 불가(예: ribosome). 핵(5-10um)은 관찰 가능.",
+"ans_src": "N",
+"note": "",
+"flags": [
+"선지없음"
+],
+"lines": "827-831",
+"ours": []
+},
+{
+"id": "Ysmp-41",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 41,
+"ch": 1,
+"type": "short",
+"stem": "단백질 운송 및 분류 기전",
+"opts": [],
+"ans": null,
+"ans_text": "ER: translation, signal peptide 절단, segregation, initial glycosylation; Golgi cisternae: 당질화·인산화·황산화, 분류; postcisternal: packing, condensation, final proteolysis, 축적",
+"ans_src": "N",
+"note": "cis face는 ER로부터 받음, trans face에서 condensing vacuole로 모여 budding off.",
+"flags": [],
+"lines": "833-847",
+"ours": []
+},
+{
+"id": "Ysmp-42",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 42,
+"ch": 1,
+"type": "mc",
+"stem": "Microvilli(미세융모)에 관한 설명 중 틀린 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "(선지 없음) microvilli: actin filament, glycocalyx 피복, PAS 양성, LM 줄무늬/솔 가장자리, 소장·근위세뇨관, 소화효소 결합",
+"ans_src": "N",
+"note": "부동모(stereocilia)는 부고환의 분지된 미세융모. 섬모는 microtubule, 운동성, ATP.",
+"flags": [
+"선지없음"
+],
+"lines": "849-859",
+"ours": []
+},
+{
+"id": "Ysmp-43",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 43,
+"ch": 1,
+"type": "short",
+"stem": "거짓 중층 원주상피의 특징은?",
+"opts": [],
+"ans": null,
+"ans_text": "모든 세포가 기저막에 부착되나 일부는 내강쪽에 도달하지 못해 핵이 여러 층으로 보임. 실제로는 한 층.",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "861-863",
+"ours": []
+},
+{
+"id": "Ysmp-44",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 44,
+"ch": 1,
+"type": "mc",
+"stem": "Desmosome의 기능은? (d)",
+"opts": [
+"공격",
+"물질막음",
+"세포간 물질교환",
+"세포사이 부착"
+],
+"ans": [
+4
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "tight junction: sealing, gap junction: 물질교환, desmosome: 세포사이 부착; 피부 중층편평상피에 존재하는 유일한 연접형태.",
+"flags": [],
+"lines": "865-869",
+"ours": []
+},
+{
+"id": "Ysmp-45",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 45,
+"ch": 1,
+"type": "mc",
+"stem": "holocrine에 대해 맞는 것은? (b)",
+"opts": [
+"no loss of cytoplasm",
+"cell death가 일어난다.",
+"둘 다 맞다.",
+"둘 다 틀리다."
+],
+"ans": [
+2
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "샘분비: no cell death; 온분비: cell death 동반(피지샘); 부분분비: 세포질 일부 소실, cell death 없음.",
+"flags": [],
+"lines": "871-883",
+"ours": []
+},
+{
+"id": "Ysmp-46",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 46,
+"ch": 1,
+"type": "mc",
+"stem": "표면 상피와 기관 연결 중 틀린 것은? (d)",
+"opts": [
+"단층입방-난소의 표면",
+"비각질중층편평-식도",
+"이행상피-방광",
+"거짓중층원주상피-후두",
+"중층원주상피-결막"
+],
+"ans": [
+4
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "후두는 비각질중층편평. 표 4-2는 시험에 꼭 나옴.",
+"flags": [
+"원문 선지 a,c,b,d,e 순 OCR"
+],
+"lines": "885-891",
+"ours": []
+},
+{
+"id": "Ysmp-47",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 47,
+"ch": 1,
+"type": "mc",
+"stem": "simple squamous epithelium이 존재하지 않는 곳은? (보기 복원 X)",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "단층편평 존재: 혈관 내강(내피), 심막·흉막·복막 등 장막성 표면(중피).",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "893-897",
+"ours": []
+},
+{
+"id": "Ysmp-48",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 48,
+"ch": 1,
+"type": "mc",
+"stem": "상피세포의 특징은? (보기 X, 답 복원)",
+"opts": [],
+"ans": null,
+"ans_text": "혈관이 없다.",
+"ans_src": "M",
+"note": "혈관은 결합조직에 분포. 상피는 세 배엽 모두에서 기원.",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "899-907",
+"ours": []
+},
+{
+"id": "Ysmp-49",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 49,
+"ch": 2,
+"type": "short",
+"stem": "mononuclear phagocytic system이란?",
+"opts": [],
+"ans": null,
+"ans_text": "큰포식세포가 대부분 장기에 분포하며 단핵포식세포계통을 형성; 골수 전구세포 유래 monocyte가 결합조직으로 이주해 큰포식세포로 분화. liver-Kupffer, CTP-histiocyte, bone-osteoclast, lung-dust cell, CNS-microglia, placenta-Hofbauer, skin-Langerhans",
+"ans_src": "N",
+"note": "Golgi 발달, lysosome 많고 RER 뚜렷, 활발한 pinocytosis·phagocytosis. 각 조직 대식세포 이름은 Quiz 기출.",
+"flags": [],
+"lines": "909-915",
+"ours": []
+},
+{
+"id": "Ysmp-50",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 50,
+"ch": 2,
+"type": "short",
+"stem": "아교질(collagen)의 종류",
+"opts": [],
+"ans": null,
+"ans_text": "I: bone,dentine,tendon,피막,진피 (가장 풍부); II: 유리·탄력연골, fibril; III: reticular fiber, I형과 공존; IV: 기저판, fibril/fiber 없음; V: 근세포·혈관 기저막",
+"ans_src": "N",
+"note": "12종류 이상이나 I-V가 중요.",
+"flags": [],
+"lines": "917-927",
+"ours": []
+},
+{
+"id": "Ysmp-51",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 51,
+"ch": 2,
+"type": "short",
+"stem": "Reticular fiber의 존재 지역",
+"opts": [],
+"ans": null,
+"ans_text": "평활근, endoneurium, 조혈기관(비장·림프절·적색골수) 뼈대, 실질기관(간·신·내분비샘); 동맥, 비장, 간, 자궁, 장근육층",
+"ans_src": "N",
+"note": "주로 type III collagen. Ehlers-Danlos type IV: III형 부족, 동맥·장 파열.",
+"flags": [],
+"lines": "929-941",
+"ours": []
+},
+{
+"id": "Ysmp-52",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 52,
+"ch": 2,
+"type": "mc",
+"stem": "basal lamina의 구성성분이 아닌 것은? (d)",
+"opts": [],
+"ans": null,
+"ans_text": "(d) (선지 미복원, 번호만 표기)",
+"ans_src": "M",
+"note": "2006년도 기출 1차 12번과 동일 (족보 p.30)",
+"flags": [
+"복기X",
+"선지없음",
+"타시험참조"
+],
+"lines": "943-945",
+"ours": []
+},
+{
+"id": "Ysmp-53",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 53,
+"ch": 2,
+"type": "short",
+"stem": "glycosaminoglycan 의 구성성분에 대해서..",
+"opts": [],
+"ans": null,
+"ans_text": "uronic acid(glucuronic acid, iduronic acid)와 hexosamine(glucosamine, galactosamine)으로 구성된 이당류가 반복되는 선형 다당류",
+"ans_src": "N",
+"note": "표(GAG 종류)는 OCR에 없음.",
+"flags": [],
+"lines": "947-951",
+"ours": []
+},
+{
+"id": "Ysmp-54",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 54,
+"ch": 2,
+"type": "mc",
+"stem": "결합조직의 병변과 원인이 잘못 짝지어진 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "불완전 뼈 발생 - type II collagen (type I collagen 이 맞다)",
+"ans_src": "M",
+"note": "뼈에는 type I, type II는 유리·탄력연골.",
+"flags": [
+"선지없음"
+],
+"lines": "953-961",
+"ours": []
+},
+{
+"id": "Ysmp-55",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 55,
+"ch": 2,
+"type": "mc",
+"stem": "adipocyte에 관한 설명 중 맞는 것은? (a)",
+"opts": [
+"areolar connective tissue에서 발견된다.",
+"fight-flight response ATP를 release한다.",
+"둘 다 맞다.",
+"둘 다 틀리다."
+],
+"ans": [
+1
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "Areolar CT = loose CT. 지방세포 미토콘드리아에서 H+는 ATP 합성 대신 열로 방출되므로 b는 틀림.",
+"flags": [],
+"lines": "963-971",
+"ours": []
+},
+{
+"id": "Ysmp-56",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 56,
+"ch": 2,
+"type": "short",
+"stem": "collagen 합성과정, 효소, 등록펩타이드의 역할",
+"opts": [],
+"ans": null,
+"ans_text": "RER에서 preprocollagen -> signal peptide 제거(procollagen); proline/lysine hydroxylation(peptidyl proline/lysine hydroxylase); 당질화; 양끝 등록펩타이드; 세포밖 procollagen peptidase가 제거->tropocollagen; lysyl oxidase 교차결합. 등록펩타이드는 용해성 부여, 세포내 조기 침착 방지",
+"ans_src": "M",
+"note": "괄호넣기·영어 지문 출제 언급.",
+"flags": [],
+"lines": "973-997",
+"ours": []
+},
+{
+"id": "Ysmp-57",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 57,
+"ch": 2,
+"type": "short",
+"stem": "잘못된 아교질 합성으로 인한 질병",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "2006 기출 1차 5번과 동일 (조직학 족보 p.28)",
+"flags": [
+"타시험참조"
+],
+"lines": "999-1001",
+"ours": []
+},
+{
+"id": "Ysmp-58",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 58,
+"ch": 2,
+"type": "short",
+"stem": "아교질의 과도축적에 의해 생기는 질병",
+"opts": [],
+"ans": null,
+"ans_text": "진행성전신성경화증(progressive systemic sclerosis): 피부·소화기·근육·신장 등 과도 침착; 켈로이드(keloid): 피부 흉터에 과도한 아교질",
+"ans_src": "N",
+"note": "collagen 합성과정은 매우 중요.",
+"flags": [],
+"lines": "1003-1009",
+"ours": []
+},
+{
+"id": "Ysmp-59",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 59,
+"ch": 1,
+"type": "short",
+"stem": "단백질 합성, 분비",
+"opts": [],
+"ans": null,
+"ans_text": "rER 합성·격리·신호서열 제거, early glycosylation -> transport vesicle -> Golgi cis face; Golgi cisternae 당질화·인산화·황산화 분류; trans face 농축공포; postcisternal 농축·분류·저장 -> 분비과립/용해소체/세포막",
+"ans_src": "N",
+"note": "그림을 그리면 점수를 잘 주는 경향.",
+"flags": [],
+"lines": "1011-1021",
+"ours": []
+},
+{
+"id": "Ysmp-60",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 60,
+"ch": 2,
+"type": "short",
+"stem": "mesenchymal tissue란?",
+"opts": [],
+"ans": null,
+"ans_text": "대부분 중배엽 유래(머리 일부는 외배엽성 신경능선). 중배엽성 세포가 이주해 장기를 둘러싸면 중간엽세포, 그 조직은 mesenchyme. 모든 결합조직 세포의 기원, 혈구·혈관으로도 분화.",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1023-1025",
+"ours": []
+},
+{
+"id": "Ysmp-61",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 61,
+"ch": 2,
+"type": "short",
+"stem": "단백당의 구조와 기능",
+"opts": [],
+"ans": null,
+"ans_text": "시험관 닦는 솔 모양: 중심 단백질 + 방사상 GAG 사슬. GAG 음이온에 물분자 결합, 충격흡수·생체역학적 용수철 역할(관절연골에서 중요)",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1027-1031",
+"ours": []
+},
+{
+"id": "Ysmp-62",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 62,
+"ch": 1,
+"type": "short",
+"stem": "중층편평각질상피세포란?",
+"opts": [],
+"ans": null,
+"ans_text": "주로 피부. 여러 층, 아래쪽은 입방/원주세포, 표면으로 갈수록 불규칙·납작해짐.",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1033-1039",
+"ours": []
+},
+{
+"id": "Ysmp-63",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 63,
+"ch": 1,
+"type": "short",
+"stem": "유동모자이크 막이란?",
+"opts": [],
+"ans": null,
+"ans_text": "지질 이중층 그림, 관통단백질(일부는 수용성 물질 channel), 내재성 단백질(이중층 내부), 표재성 단백질(표면에 느슨히 결합)",
+"ans_src": "N",
+"note": "그림 그릴 것.",
+"flags": [],
+"lines": "1041-1045",
+"ours": []
+},
+{
+"id": "Ysmp-64",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 64,
+"ch": 2,
+"type": "short",
+"stem": "fibronectin 구조를 그리고 설명하시오.",
+"opts": [],
+"ans": null,
+"ans_text": "섬유모세포와 일부 상피세포에서 합성되는 당단백질. 세포·아교질·GAG 결합부위가 있어 세포사이 결합과 이동을 도움.",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1047-1051",
+"ours": []
+},
+{
+"id": "Ysmp-65",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 65,
+"ch": 2,
+"type": "short",
+"stem": "perinuclear halo",
+"opts": [],
+"ans": null,
+"ans_text": "형질세포 특징: antibody 생산, clock-face 핵, RER 풍부해 염기호성, perinuclear halo(핵주위 Golgi·중심체 부위 비염색 공간), 만성염증에 많음",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1053-1057",
+"ours": []
+},
+{
+"id": "Ysmp-66",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 66,
+"ch": 1,
+"type": "short",
+"stem": "heterochromatin(염색질)",
+"opts": [],
+"ans": null,
+"ans_text": "이질염색질: 현미경에서 어둡게 염색, highly condensed, transcriptionally inactive. 진정염색질: 밝게 염색, actively transcribed DNA.",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1059-1063",
+"ours": []
+},
+{
+"id": "Ysmp-67",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 67,
+"ch": 1,
+"type": "short",
+"stem": "adherent junction",
+"opts": [],
+"ans": null,
+"ans_text": "tight junction: 신호전달, 물질확산 예방, sealing strand; adherens(부착띠): actin-binding protein으로 actin fiber-transmembrane protein 연결; desmosome: desmoglein, plaque, 피부 중층편평상피 유일, hemidesmosome은 상피-기저막; gap junction: connexin/connexon, 간·렌즈·심장근",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1065-1077",
+"ours": []
+},
+{
+"id": "Ysmp-68",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 68,
+"ch": 2,
+"type": "short",
+"stem": "mast cell 염색법",
+"opts": [],
+"ans": null,
+"ans_text": "1) 염기호성이므로 methylene blue 등 basic dye. 2) 이염색(metachromatic): sulfated GAG인 heparin 함유, toluidine blue에서 blue->magenta (metachromasia)",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1079-1087",
+"ours": []
+},
+{
+"id": "Ysmp-69",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 69,
+"ch": 1,
+"type": "short",
+"stem": "Goblet cell 점액분비세포",
+"opts": [],
+"ans": null,
+"ans_text": "점액소(당단백질) 함유 크고 옅은 과립이 자유표면쪽, 핵은 납작하게 눌려 기저부, RER 풍부, glycosyltransferase가 단당류를 중심단백질에 첨가",
+"ans_src": "N",
+"note": "31번과 동일 내용.",
+"flags": [],
+"lines": "1089-1091",
+"ours": []
+},
+{
+"id": "Ysmp-70",
+"exam": "이전부터 내려오는 기출 표본",
+"no": 70,
+"ch": 2,
+"type": "short",
+"stem": "reticular 와 elastic 의 염색차이",
+"opts": [],
+"ans": null,
+"ans_text": "reticular: H-E 안됨, 은염색 검게 침착, PAS 양성, Sirius red 약한 이중굴절. elastic: Orcein, resorcin fuchsin, aldehyde fuchsin, Verhoeff's hematoxylin",
+"ans_src": "N",
+"note": "",
+"flags": [
+"줄번호추정"
+],
+"lines": "1091-1099",
+"ours": []
+},
+{
+"id": "Y17-a",
+"exam": "2017 기출 복원",
+"no": "",
+"ch": 5,
+"type": "multi",
+"stem": "상피파트 - 비장과 신경절의 차이나는 구조 모두 고르시오",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"OCR훼손",
+"선지없음"
+],
+"lines": "1107-1126",
+"ours": []
+},
+{
+"id": "Y17-b",
+"exam": "2017 기출 복원",
+"no": "",
+"ch": 3,
+"type": "mc",
+"stem": "Triad랑 관련이 없는 것은?",
+"opts": [
+"Z 라인에 존재",
+"SR",
+"T tubule",
+"Terminal cisternae",
+"골격근"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1107-1126",
+"ours": []
+},
+{
+"id": "Y17-c",
+"exam": "2017 기출 복원",
+"no": "",
+"ch": 3,
+"type": "mc",
+"stem": "Muscle이 커지는 것은 어떤 것이 커진 것인가?",
+"opts": [
+"Myofibril",
+"Myofiber"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1107-1126",
+"ours": []
+},
+{
+"id": "Y17-d",
+"exam": "2017 기출 복원",
+"no": "",
+"ch": 2,
+"type": "multi",
+"stem": "탄력섬유 분비하는 세포 모두 고르시오",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"선지없음"
+],
+"lines": "1107-1126",
+"ours": []
+},
+{
+"id": "Y17-e",
+"exam": "2017 기출 복원",
+"no": "",
+"ch": 8,
+"type": "mc",
+"stem": "적혈구 성숙 과정 옳은 것 고르시오",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"선지없음"
+],
+"lines": "1107-1126",
+"ours": []
+},
+{
+"id": "Y17-f",
+"exam": "2017 기출 복원",
+"no": "",
+"ch": 8,
+"type": "mc",
+"stem": "림프구 성숙 과정 옳은 것 고르시오",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"선지없음"
+],
+"lines": "1107-1126",
+"ours": []
+},
+{
+"id": "Y17-g",
+"exam": "2017 기출 복원",
+"no": "",
+"ch": 5,
+"type": "multi",
+"stem": "림프파트 - 비장과 신경절 공통 구조 고르시오",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"선지없음"
+],
+"lines": "1107-1126",
+"ours": []
+},
+{
+"id": "Y17-h",
+"exam": "2017 기출 복원",
+"no": "",
+"ch": 7,
+"type": "short",
+"stem": "신경파트 - 슈반세포 관련 설명",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1107-1126",
+"ours": []
+},
+{
+"id": "Y17-i",
+"exam": "2017 기출 복원",
+"no": "",
+"ch": 6,
+"type": "mc",
+"stem": "소동맥/모세혈관전소동맥/모세혈관/모세혈관후소정맥 중 물질교환이 일어나는 곳은?",
+"opts": [
+"소동맥",
+"모세혈관전소동맥",
+"모세혈관",
+"모세혈관후소정맥"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1107-1126",
+"ours": []
+},
+{
+"id": "Y08-1",
+"exam": "2008 기출 복원",
+"no": 1,
+"ch": 5,
+"type": "match",
+"stem": "림프관에서 혈액이 도는 순서? (림프절 내 림프 흐름)",
+"opts": [
+"lymphatic venule of hilum",
+"중간림프동",
+"피막하림프동",
+"수질림프동"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"OCR훼손"
+],
+"lines": "1127-1172",
+"ours": []
+},
+{
+"id": "Y08-2",
+"exam": "2008 기출 복원",
+"no": 2,
+"ch": 3,
+"type": "mc",
+"stem": "수축시 줄어드는 곳은?",
+"opts": [
+"H존",
+"I존",
+"Z존과 Z존사이",
+"A존"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1127-1172",
+"ours": []
+},
+{
+"id": "Y08-3",
+"exam": "2008 기출 복원",
+"no": 3,
+"ch": 5,
+"type": "mc",
+"stem": "림프 기관에 대한 설명 중 틀린 것은?",
+"opts": [
+"Geminal Center는 출생후 항원에 노출되면 나타난다.",
+"지라: 혈액저장 기능뿐만 아니라 혈구형성 기능도 한다.",
+"모든 림프는 혈액으로 들어간다",
+"지라에는 적색수질과 백색수질이 있다",
+"림프절에서는 이물질을 깨끗이 한다."
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1127-1172",
+"ours": []
+},
+{
+"id": "Y08-4",
+"exam": "2008 기출 복원",
+"no": 4,
+"ch": 8,
+"type": "mc",
+"stem": "세망적혈구에 관한 설명으로 옳은 것은?",
+"opts": [
+"정상혈액에서 관찰할 수 있다",
+"Wright염색으로 염색할 수 있다",
+"세포질 내에 리보솜이 남아있다"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1127-1172",
+"ours": []
+},
+{
+"id": "Y08-5",
+"exam": "2008 기출 복원",
+"no": 5,
+"ch": 3,
+"type": "mc",
+"stem": "다음 중 골격근에 해당하는 세포를 고르시오",
+"opts": [
+"볼근",
+"섬모체근",
+"심실근육"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1127-1172",
+"ours": []
+},
+{
+"id": "Y08-6",
+"exam": "2008 기출 복원",
+"no": 6,
+"ch": 3,
+"type": "short",
+"stem": "다음 중 심장근의 intercalated disk에서 가로부분에서 볼 수 있는 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "부착반, 부착막",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1127-1172",
+"ours": []
+},
+{
+"id": "Y08-7",
+"exam": "2008 기출 복원",
+"no": 7,
+"ch": 3,
+"type": "multi",
+"stem": "심장의 임펄스 전도와 생성에 관계된 것을 고르시오.",
+"opts": [
+"푸르키니에세포",
+"심방세포",
+"동방결절세포"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1127-1172",
+"ours": []
+},
+{
+"id": "Y08-8",
+"exam": "2008 기출 복원",
+"no": 8,
+"ch": 8,
+"type": "mc",
+"stem": "적혈구의 biconcave한 구조를 이루게 해주는 물질은 무엇인가?",
+"opts": [
+"ankyrin",
+"단백질",
+"4.1",
+"actin",
+"spectrin"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1127-1172",
+"ours": []
+},
+{
+"id": "Y08-9",
+"exam": "2008 기출 복원",
+"no": 9,
+"ch": 8,
+"type": "match",
+"stem": "Eosinophil과 관련 있는 것을 바르게 묶은 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "기생충감염, 히스타민, 알러지 반응",
+"ans_src": "-",
+"note": "원문 '묶은 것은?' 뒤 항목 나열(정답 표시 아님)",
+"flags": [
+"선지일부없음",
+"선지없음"
+],
+"lines": "1127-1172",
+"ours": []
+},
+{
+"id": "Y08-10",
+"exam": "2008 기출 복원",
+"no": 10,
+"ch": 8,
+"type": "mc",
+"stem": "적혈구 성숙과정 중에 헤모글로빈이 생성되는 과정은?",
+"opts": [
+"전적혈구모세포",
+"염기호성적혈구모세포",
+"다염색성적혈구모세포",
+"산호성적혈구모세포",
+"세망적혈구"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1127-1172",
+"ours": []
+},
+{
+"id": "Y08-11",
+"exam": "2008 기출 복원",
+"no": 11,
+"ch": 8,
+"type": "mc",
+"stem": "아주르호성 과립이 없는 것은?",
+"opts": [
+"myelocyte",
+"promyelocytes",
+"myeloblast",
+"eosinophil",
+"metamyelocyte"
+],
+"ans": [
+3
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1127-1172",
+"ours": []
+},
+{
+"id": "Y08-12",
+"exam": "2008 기출 복원",
+"no": 12,
+"ch": 5,
+"type": "short",
+"stem": "일차림프기관으로 조류에게 있는 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "파브리시우스 주머니",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1127-1172",
+"ours": []
+},
+{
+"id": "Y08-13",
+"exam": "2008 기출 복원",
+"no": 13,
+"ch": 8,
+"type": "mc",
+"stem": "(객관식) 혈장에 들어 있는 물질을 고르시오",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "1127-1172",
+"ours": [
+"8-03"
+]
+},
+{
+"id": "Y08-s1",
+"exam": "2008 기출 복원 서술형",
+"no": "",
+"ch": 3,
+"type": "short",
+"stem": "골격근에서의 수축과 평활근에서의 수축을 비교하시오.",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1127-1172",
+"ours": []
+},
+{
+"id": "Y08-s2",
+"exam": "2008 기출 복원 서술형",
+"no": "",
+"ch": 6,
+"type": "short",
+"stem": "탄력동맥과 근육동맥을 그리고 차이 적기",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1127-1172",
+"ours": []
+},
+{
+"id": "Y08-s3",
+"exam": "2008 기출 복원 서술형",
+"no": "",
+"ch": 8,
+"type": "short",
+"stem": "Prenatal Hematopoiesis",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1127-1172",
+"ours": []
+},
+{
+"id": "Y08-s4",
+"exam": "2008 기출 복원 서술형",
+"no": "",
+"ch": 5,
+"type": "short",
+"stem": "가슴샘, 림프절, 지라의 기능과 형태학적 차이를 쓰시오",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1127-1172",
+"ours": []
+},
+{
+"id": "Y08-s5",
+"exam": "2008 기출 복원 서술형",
+"no": "",
+"ch": 3,
+"type": "short",
+"stem": "푸르키네 섬유에 대해, 목동맥 소체, 산호성백혈구의 형태와 과립, 혈소판의 과립 부분, 근육의 적색섬유와 백색섬유 차이 5가지 이상.",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복합문항",
+"ch혼합(근육/순환/혈구)"
+],
+"lines": "1127-1172",
+"ours": []
+},
+{
+"id": "Y08-s6",
+"exam": "2008 기출 복원 서술형",
+"no": "",
+"ch": 3,
+"type": "short",
+"stem": "근육 방추(muscle spindle)의 기작에 대해서 설명하시오",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1127-1172",
+"ours": []
+},
+{
+"id": "Y07-1",
+"exam": "2007 기출 복원",
+"no": 1,
+"ch": 7,
+"type": "mc",
+"stem": "다음중 분류가 틀린 나머지 하나는?",
+"opts": [
+"Oligodendrocyte",
+"Ependymal Cell",
+"Satellite cell",
+"microglia",
+"astrocyte"
+],
+"ans": [
+3
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-2",
+"exam": "2007 기출 복원",
+"no": 2,
+"ch": 1,
+"type": "mc",
+"stem": "gap junction과 관련없는것?",
+"opts": [
+"microfilament",
+"dense plaque",
+"connexon",
+"myofilament"
+],
+"ans": [
+2
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "dense plaque는 zonula adherens와 관련",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-3",
+"exam": "2007 기출 복원",
+"no": 3,
+"ch": 2,
+"type": "short",
+"stem": "비만세포에 붙은 면역글로불린은 IgE!",
+"opts": [],
+"ans": null,
+"ans_text": "답은 IgM으로 나와서 그게 틀린 보기였음",
+"ans_src": "M",
+"note": "",
+"flags": [
+"선지없음"
+],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-4",
+"exam": "2007 기출 복원",
+"no": 4,
+"ch": 1,
+"type": "short",
+"stem": "미세융모랑 부동모의 차이점 비교하는 문제",
+"opts": [],
+"ans": null,
+"ans_text": "보기에 있었다고 추측하는 문장들: 솔모양 가장자리는 부동모와 당질층 복합체가 이룬다 / 중앙에 10쌍의 미세소관이 존재한다",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"정답불명"
+],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-5",
+"exam": "2007 기출 복원",
+"no": 5,
+"ch": 2,
+"type": "mc",
+"stem": "인대의 염색법?",
+"opts": [
+"마송삼색",
+"은염색",
+"verhoeff"
+],
+"ans": null,
+"ans_text": "마송삼색법",
+"ans_src": "M",
+"note": "",
+"flags": [
+"선지일부없음"
+],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-6",
+"exam": "2007 기출 복원",
+"no": 6,
+"ch": 2,
+"type": "mc",
+"stem": "피하조직의 염색법? (말로리삼색이 보기에 있음)",
+"opts": [
+"말로리삼색"
+],
+"ans": null,
+"ans_text": "수단Ⅲ염색법(지방염색)",
+"ans_src": "M",
+"note": "",
+"flags": [
+"선지일부없음"
+],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-7",
+"exam": "2007 기출 복원",
+"no": 7,
+"ch": 3,
+"type": "mc",
+"stem": "신경 근육 방추에 대해서 틀린 문장은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "보기,답 복원X",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-8",
+"exam": "2007 기출 복원",
+"no": 8,
+"ch": 2,
+"type": "short",
+"stem": "콜라겐 합성중 원섬유 형성하는 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "콜라겐 1,2,3 아교질원섬유; 직경 다양, 가늘고 긴 구조, 64nm주기의 가로무늬",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-9",
+"exam": "2007 기출 복원",
+"no": 9,
+"ch": 7,
+"type": "mc",
+"stem": "카테콜아민, 도파민, 노르에피네프린을 분비하는 세포에서 발달한 구조는?",
+"opts": [
+"sER",
+"secondary lysosome",
+"dendritic spine",
+"glycogen granule",
+"melanine granule"
+],
+"ans": [
+2
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "원문 답 2",
+"flags": [
+"정답의심"
+],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-10",
+"exam": "2007 기출 복원",
+"no": 10,
+"ch": 3,
+"type": "multi",
+"stem": "muscle spindle에 대한 설명으로 옳은 것 모두 고르시오.",
+"opts": [
+"리셉터와 이펙터가 같이 있다",
+"캡슐 안에 있다",
+"뉴클리어 백 파이버는 intrafusal muscle fiber이다",
+"뉴클리어 체인 파이버는 extrafusal m. fiber 이다"
+],
+"ans": [
+1,
+2,
+3
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-11",
+"exam": "2007 기출 복원",
+"no": 11,
+"ch": 2,
+"type": "short",
+"stem": "탯줄, this is tissue like jelly와 관련 된 문제?",
+"opts": [],
+"ans": null,
+"ans_text": "하이알루론산",
+"ans_src": "M",
+"note": "GAG 보충: 하이알루론산-탯줄, 윤활액, 안방수, 연골. 점액성결합조직(와튼아교질)",
+"flags": [],
+"lines": "1173-1436",
+"ours": [
+"2-02"
+]
+},
+{
+"id": "Y07-12",
+"exam": "2007 기출 복원",
+"no": 12,
+"ch": 4,
+"type": "multi",
+"stem": "세포영역기질에 대한 설명중 맞는 것을 모두 고르시오?",
+"opts": [
+"GAG의 농도가 높다.",
+"동형세포집단가 많다.",
+"변색성이 있다.",
+"fibril이 많다"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"정답표시없음"
+],
+"lines": "1173-1436",
+"ours": [
+"4-03"
+]
+},
+{
+"id": "Y07-13",
+"exam": "2007 기출 복원",
+"no": 13,
+"ch": 4,
+"type": "mc",
+"stem": "섬유연골에 대한 설명 중 틀린것은?",
+"opts": [
+"연골막에 쌓여있다.",
+"type 1 콜라겐 다발 형성",
+"무형질이 많다.",
+"동형집단이 존재한다."
+],
+"ans": [
+1
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "섬유연골은 연골막 없음, 1형 아교질, herring-bone",
+"flags": [],
+"lines": "1173-1436",
+"ours": [
+"4-09"
+]
+},
+{
+"id": "Y07-14",
+"exam": "2007 기출 복원",
+"no": 14,
+"ch": 1,
+"type": "mc",
+"stem": "세포의 군집양상이 다른것?",
+"opts": [
+"부신",
+"부갑상샘",
+"갑상샘",
+"뇌하수체 전엽"
+],
+"ans": [
+3
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-15",
+"exam": "2007 기출 복원",
+"no": 15,
+"ch": 1,
+"type": "short",
+"stem": "기저막에 존재하며 세포와 콜라겐 글라이코스아미노글라이칸를 연결하는 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "fibronectin",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-16",
+"exam": "2007 기출 복원",
+"no": 16,
+"ch": 1,
+"type": "mc",
+"stem": "다음중 myoepithelial cell이 없는 샘은?",
+"opts": [
+"침샘",
+"땀샘",
+"기름샘"
+],
+"ans": [
+3
+],
+"ans_text": "기름샘",
+"ans_src": "M",
+"note": "보기에 침샘 땀샘 기름샘 있음",
+"flags": [
+"선지일부없음"
+],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-17",
+"exam": "2007 기출 복원",
+"no": 17,
+"ch": 1,
+"type": "short",
+"stem": "리소좀이 없어서 생기는 증상?",
+"opts": [],
+"ans": null,
+"ans_text": "정신지체와 간질발작",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-18",
+"exam": "2007 기출 복원",
+"no": 18,
+"ch": 2,
+"type": "multi",
+"stem": "고유결합조직의 세포외 기질?",
+"opts": [
+"아교섬유",
+"fibronectin",
+"elastin",
+"Histamin"
+],
+"ans": [
+1,
+3
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-19",
+"exam": "2007 기출 복원",
+"no": 19,
+"ch": 7,
+"type": "mc",
+"stem": "다음중 옳은것을 고르시오.",
+"opts": [
+"유수축색돌기가 무수 축색돌기보다 신경전달 속도가 빠르다.",
+"oligodendrite는 한 축삭만을 감싼다.",
+"CNS의 myelin은 schwann's cell이다.",
+"랑비에 결절은 schwann cell 세포질이 만든다."
+],
+"ans": [
+1
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "PNS 슈반세포 1:1 myelin, CNS oligodendrocyte는 여러 axon",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-20",
+"exam": "2007 기출 복원",
+"no": 20,
+"ch": 1,
+"type": "mc",
+"stem": "goblet cell의 특징이 아닌것은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "보기,답 복원X. 보충: 점액 exocytosis 분비, 핵 기저부, 풍부한 rER",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "1173-1436",
+"ours": [
+"1-04"
+]
+},
+{
+"id": "Y07-21",
+"exam": "2007 기출 복원",
+"no": 21,
+"ch": 7,
+"type": "mc",
+"stem": "다음 중 말초신경아교세포에 속하는 것은?",
+"opts": [
+"뇌실막세포(Ependymal cell)",
+"슈반세포",
+"미세아교세포",
+"위성세포",
+"..."
+],
+"ans": [
+5
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "원문 답 5(보기5 미복원); 위성세포/슈반세포 모두 말초아교",
+"flags": [
+"선지일부없음",
+"정답충돌"
+],
+"lines": "1173-1436",
+"ours": [
+"7-07"
+]
+},
+{
+"id": "Y07-22",
+"exam": "2007 기출 복원",
+"no": 22,
+"ch": 7,
+"type": "multi",
+"stem": "다음중 옳은 것은?",
+"opts": [
+"소뇌 바깥층은 백질, 안층은 회백질이다",
+"중추신경에 결합조직이 많아 부드럽다",
+"피질 분자층에는 작은 소립원이 밀집해있다",
+"백색질에는 세포체가 없다"
+],
+"ans": [
+3,
+4
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": [
+"7-03"
+]
+},
+{
+"id": "Y07-c1",
+"exam": "2007 기출 복원",
+"no": "c1",
+"ch": 2,
+"type": "mc",
+"stem": "[콜라겐합성 지문 1-5] 괄호 ① (수산화 효소 1)에 알맞은 효소의 명칭은?",
+"opts": [
+"아교질 가수분해효소(collagenase)",
+"전아교질 펩타이드 가수분해효소(procollagen peptidase)",
+"라이실 산화효소(lysyl oxydase)",
+"펩티딜 프롤린 수산화효소(peptidyl proline hydroxylase)",
+"펩티딜 라이신 수산화효소(peptidyl lysine hydroxylase)"
+],
+"ans": [
+4
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "지문은 콜라겐 합성 과정(rER-수산화-당질화-등록펩타이드-procollagen peptidase-tropocollagen-lysyl oxidase-collagenase)",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-c2",
+"exam": "2007 기출 복원",
+"no": "c2",
+"ch": 2,
+"type": "mc",
+"stem": "[콜라겐합성 지문 1-5] 괄호 ② (수산화 효소 2)에 알맞은 효소의 명칭은?",
+"opts": [
+"아교질 가수분해효소(collagenase)",
+"전아교질 펩타이드 가수분해효소(procollagen peptidase)",
+"라이실 산화효소(lysyl oxydase)",
+"펩티딜 프롤린 수산화효소(peptidyl proline hydroxylase)",
+"펩티딜 라이신 수산화효소(peptidyl lysine hydroxylase)"
+],
+"ans": [
+5
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "지문은 콜라겐 합성 과정(rER-수산화-당질화-등록펩타이드-procollagen peptidase-tropocollagen-lysyl oxidase-collagenase)",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-c3",
+"exam": "2007 기출 복원",
+"no": "c3",
+"ch": 2,
+"type": "mc",
+"stem": "[콜라겐합성 지문 1-5] 괄호 ③ (등록펩타이드 제거 효소)에 알맞은 효소의 명칭은?",
+"opts": [
+"아교질 가수분해효소(collagenase)",
+"전아교질 펩타이드 가수분해효소(procollagen peptidase)",
+"라이실 산화효소(lysyl oxydase)",
+"펩티딜 프롤린 수산화효소(peptidyl proline hydroxylase)",
+"펩티딜 라이신 수산화효소(peptidyl lysine hydroxylase)"
+],
+"ans": [
+2
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "지문은 콜라겐 합성 과정(rER-수산화-당질화-등록펩타이드-procollagen peptidase-tropocollagen-lysyl oxidase-collagenase)",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-c4",
+"exam": "2007 기출 복원",
+"no": "c4",
+"ch": 2,
+"type": "mc",
+"stem": "[콜라겐합성 지문 1-5] 괄호 ⑤ (공유교차결합 촉매 효소)에 알맞은 효소의 명칭은?",
+"opts": [
+"아교질 가수분해효소(collagenase)",
+"전아교질 펩타이드 가수분해효소(procollagen peptidase)",
+"라이실 산화효소(lysyl oxydase)",
+"펩티딜 프롤린 수산화효소(peptidyl proline hydroxylase)",
+"펩티딜 라이신 수산화효소(peptidyl lysine hydroxylase)"
+],
+"ans": [
+3
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "지문은 콜라겐 합성 과정(rER-수산화-당질화-등록펩타이드-procollagen peptidase-tropocollagen-lysyl oxidase-collagenase)",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-c5",
+"exam": "2007 기출 복원",
+"no": "c5",
+"ch": 2,
+"type": "mc",
+"stem": "[콜라겐합성 지문 1-5] 괄호 ⑥ (아교질 분해 시작 효소)에 알맞은 효소의 명칭은?",
+"opts": [
+"아교질 가수분해효소(collagenase)",
+"전아교질 펩타이드 가수분해효소(procollagen peptidase)",
+"라이실 산화효소(lysyl oxydase)",
+"펩티딜 프롤린 수산화효소(peptidyl proline hydroxylase)",
+"펩티딜 라이신 수산화효소(peptidyl lysine hydroxylase)"
+],
+"ans": [
+1
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "지문은 콜라겐 합성 과정(rER-수산화-당질화-등록펩타이드-procollagen peptidase-tropocollagen-lysyl oxidase-collagenase)",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-c6",
+"exam": "2007 기출 복원",
+"no": "c6",
+"ch": 2,
+"type": "mc",
+"stem": "6) 등록펩타이드의 기능은? (ㄱ.적절한 알파사슬들이 제자리에 모이게 함 ㄴ.procollagen 용해성 ㄷ.세포내 원섬유 미성숙 형성 방지 ㄹ.알파사슬을 rER 수조로 들여보냄)",
+"opts": [
+"ㄱ,ㄴ,ㄷ",
+"ㄱ,ㄷ",
+"ㄴ,ㄹ",
+"ㄹ",
+"ㄱ,ㄴ,ㄷ,ㄹ"
+],
+"ans": [
+1
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-c7",
+"exam": "2007 기출 복원",
+"no": "c7",
+"ch": 2,
+"type": "mc",
+"stem": "7) ⓑ(등록펩타이드를 갖는 폴리펩타이드)의 단백질은?",
+"opts": [
+"Ⅲ형 아교질",
+"전아교질(procollagen)",
+"트로포콜라겐(tropocollagen)",
+"엘라우닌(elauine)",
+"액틴(actin)"
+],
+"ans": [
+2
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "원문 답 (ⓑ)",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-c8",
+"exam": "2007 기출 복원",
+"no": "c8",
+"ch": 2,
+"type": "mc",
+"stem": "8) ④의 단백질은?",
+"opts": [
+"Ⅲ형 아교질",
+"전아교질(procollagen)",
+"트로포콜라겐(tropocollagen)",
+"엘라우닌(elauine)",
+"액틴(actin)"
+],
+"ans": [
+3
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "원문 답 (ⓒ)",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-c9",
+"exam": "2007 기출 복원",
+"no": "c9",
+"ch": 2,
+"type": "mc",
+"stem": "9) ⓒ(lysyl oxidase 등) 불충분이나 비정상적인 아교질합성으로 일어나는 질환은? (ㄱ.진행성전신성경화증 ㄴ.괴혈병 ㄷ.켈로이드 ㄹ.불완전 뼈발생증)",
+"opts": [
+"ㄱ,ㄴ,ㄷ",
+"ㄱ,ㄷ",
+"ㄴ,ㄹ",
+"ㄹ",
+"ㄱ,ㄴ,ㄷ,ㄹ"
+],
+"ans": [
+3
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "원문 답 (ⓒ)",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-j1",
+"exam": "2007 기출 복원",
+"no": "j1",
+"ch": 1,
+"type": "short",
+"stem": "desmosome에 대해 쓰시오",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-j2",
+"exam": "2007 기출 복원",
+"no": "j2",
+"ch": 4,
+"type": "short",
+"stem": "osteon(하버스계통) 그리고 라벨링 다섯개 하기",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-j3",
+"exam": "2007 기출 복원",
+"no": "j3",
+"ch": 7,
+"type": "short",
+"stem": "월러리안 degeneration에 대해 쓰시오",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-j4",
+"exam": "2007 기출 복원",
+"no": "j4",
+"ch": 2,
+"type": "short",
+"stem": "엘라우닌섬유에 대해 쓰시오",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-j5",
+"exam": "2007 기출 복원",
+"no": "j5",
+"ch": 4,
+"type": "short",
+"stem": "osteoclast 그림 그리고 형태학적 차이를 말하시오",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-j6",
+"exam": "2007 기출 복원",
+"no": "j6",
+"ch": 1,
+"type": "short",
+"stem": "goblet cell에 대해 쓰시오",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-j7",
+"exam": "2007 기출 복원",
+"no": "j7",
+"ch": 7,
+"type": "short",
+"stem": "전자현미경으로 보았을 때 엑손과 덴드라이트의 구별할 수 있는 방법은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-s1",
+"exam": "2007 기출 복원",
+"no": "s1",
+"ch": 1,
+"type": "short",
+"stem": "외분비-merocrine, apocine, holocrine, paracrine에 대해 쓰시오",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-s2",
+"exam": "2007 기출 복원",
+"no": "s2",
+"ch": 2,
+"type": "short",
+"stem": "단핵포식세포에 대해 쓰시오",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-s3",
+"exam": "2007 기출 복원",
+"no": "s3",
+"ch": 4,
+"type": "short",
+"stem": "연골뼈 뼈끝연골부위의 5개 층별로 설명하기",
+"opts": [],
+"ans": null,
+"ans_text": "예비층(휴지) - 증식층(동형세포집단) - 비대연골층(글리코겐 축적, 기질 흡수) - 석회화연골층(연골세포 죽음, 수산화인회석 침착) - 골화층(연골내골화로 뼈조직 출현)",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-s4",
+"exam": "2007 기출 복원",
+"no": "s4",
+"ch": 7,
+"type": "short",
+"stem": "신경세포체에서 distal쪽에 손상되었을 때와 proximal 쪽에 손상되었을 때 차이를 쓰시오(repair의 차이)",
+"opts": [],
+"ans": null,
+"ans_text": "proximal: chromatolysis, 세포체 부피 증가, 핵 주변부 이동. distal: axon/myelin 완전 degeneration, 큰포식세포 제거, Schwann cell 증식 세포기둥이 axon 성장 유도",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-b1",
+"exam": "2007 기출 복원",
+"no": "b1",
+"ch": 4,
+"type": "mc",
+"stem": "[뼈,연골,신경부분 추가문제] 뼈와 세포 사이 간의 영양 공급 통로 중 틀린 것은?",
+"opts": [
+"탄력 연골-연골막",
+"유리연골-연골막",
+"섬유연골-윤활액",
+"관절 연골-윤활액",
+"뼈-Harversian canal"
+],
+"ans": [
+3
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "윤활액->연골막이 되어야 한다.",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-b2",
+"exam": "2007 기출 복원",
+"no": "b2",
+"ch": 4,
+"type": "mc",
+"stem": "[뼈,연골,신경부분 추가문제] 다음 세포들과 그 세포 내 발달한 세포내 소기관의 연결이 바르지 못한 것은?",
+"opts": [
+"chondrocyte - rER, Golgi",
+"chondroblast - ribosome",
+"osteoblast - rER, Golgi",
+"Mature osteocyte - rER"
+],
+"ans": [
+4
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "mature osteocyte는 rER이 매우 감소",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-b3",
+"exam": "2007 기출 복원",
+"no": "b3",
+"ch": 4,
+"type": "mc",
+"stem": "[뼈,연골,신경부분 추가문제] osteocyte에 대한 설명으로 틀린 것은?",
+"opts": [
+"하나의 뼈 소강 내에는 하나의 osteocyte 가 존재한다.",
+"osteocyte끼리 gap junction 으로 연결되어 있다.",
+"osteocyte의 canaliculi 안에 process...",
+"osteoclast와 process 로 연결된다",
+"osteoprogenic cell로 다시 돌아갈 수 없다."
+],
+"ans": [
+4
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "osteocyte는 osteoclast와 process로 연결 안 됨",
+"flags": [
+"선지일부없음"
+],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-b4",
+"exam": "2007 기출 복원",
+"no": "b4",
+"ch": 4,
+"type": "mc",
+"stem": "[뼈,연골,신경부분 추가문제] 막성뼈 발생에 대한 설명 중 틀린 것은?",
+"opts": [
+"납작뼈에는 해면뼈가 없다.",
+"긴 뼈의 두께 성장에 기여한다."
+],
+"ans": [
+1
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "납작뼈는 두 층의 치밀뼈 사이에 해면뼈가 있음",
+"flags": [
+"선지일부없음",
+"OCR훼손"
+],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-b5",
+"exam": "2007 기출 복원",
+"no": "b5",
+"ch": 4,
+"type": "mc",
+"stem": "[뼈,연골,신경부분 추가문제] 뼈에 영향을 주는 호르몬에 관한 설명 중 틀린 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "보충: PTH 파골세포 증가, calcitonin 억제, GH, 성호르몬",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-b6",
+"exam": "2007 기출 복원",
+"no": "b6",
+"ch": 4,
+"type": "short",
+"stem": "[뼈,연골,신경부분 추가문제] 칼슘이온 분비 촉진, 억제 호르몬은?",
+"opts": [],
+"ans": null,
+"ans_text": "촉진: 부갑상샘호르몬(PTH), 억제: calcitonin",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-b7",
+"exam": "2007 기출 복원",
+"no": "b7",
+"ch": 4,
+"type": "match",
+"stem": "[뼈,연골,신경부분 추가문제] Bone fracture repair 순서: A 혈병 형성 B 포식세포에 의한 뼈기질 제거 C remodeling D bone callus 형성",
+"opts": [
+"혈병 형성",
+"포식세포에 의한 뼈기질 제거",
+"remodeling",
+"bone callus 형성"
+],
+"ans": null,
+"ans_text": "a-b-d-c",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-b8",
+"exam": "2007 기출 복원",
+"no": "b8",
+"ch": 4,
+"type": "mc",
+"stem": "[뼈,연골,신경부분 추가문제] Canaliculi 에 대한 설명으로 틀린 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "보충: canaliculi는 하버스관-뼈세포 혈액공급 통로, 돌기는 gap junction 연결",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-b9",
+"exam": "2007 기출 복원",
+"no": "b9",
+"ch": 4,
+"type": "short",
+"stem": "[뼈,연골,신경부분 추가문제] 일차,이차뼈의 조직 특성 비교",
+"opts": [],
+"ans": null,
+"ans_text": "일차: 미성숙뼈, 아교섬유 불규칙, 무기질 적음, 뼈세포 더 많음. 이차: 층판 동심원 배열, Haversian canal 있음",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-b10",
+"exam": "2007 기출 복원",
+"no": "b10",
+"ch": 4,
+"type": "short",
+"stem": "[뼈,연골,신경부분 추가문제] 주관식, osteoclast의 골흡수 기전",
+"opts": [],
+"ans": null,
+"ans_text": "수소이온과 lysosomal enzyme 분비 -> 미세공간 산성화 -> calcium phosphate 분해, collagenase 등으로 기질 제거 -> 산물은 흡수 후 모세혈관으로",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-b11",
+"exam": "2007 기출 복원",
+"no": "b11",
+"ch": 4,
+"type": "short",
+"stem": "[뼈,연골,신경부분 추가문제] 골형성과정(bone collar에서 bone matrix 까지)",
+"opts": [],
+"ans": null,
+"ans_text": "연골내골화: 유리연골모델 -> bone collar -> 연골세포 비대/석회화 -> 골막 구멍으로 혈관 침입 -> osteoblast 기질 합성 -> 석회화 연골 흡수",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-b12",
+"exam": "2007 기출 복원",
+"no": "b12",
+"ch": 4,
+"type": "short",
+"stem": "[뼈,연골,신경부분 추가문제] Osteoblast 에서 분비하는 물질",
+"opts": [],
+"ans": null,
+"ans_text": "type 1 collagen, proteoglycan, glycoprotein, alkaline phosphatase",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-b13",
+"exam": "2007 기출 복원",
+"no": "b13",
+"ch": 4,
+"type": "short",
+"stem": "[뼈,연골,신경부분 추가문제] Harversian system",
+"opts": [],
+"ans": null,
+"ans_text": "Harversian system = osteon: harversian canal과 4-20개 동심원 뼈층판",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-n1",
+"exam": "2007 기출 복원",
+"no": "n1",
+"ch": 7,
+"type": "short",
+"stem": "[신경조직] 다극 신경원에서 중추 신경로 말초신경의 돌기 형태는?",
+"opts": [],
+"ans": null,
+"ans_text": "하사는 축삭이며 나머지는 가지돌기이다 (p179 Fig 9-4)",
+"ans_src": "M",
+"note": "",
+"flags": [
+"OCR훼손"
+],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-n2",
+"exam": "2007 기출 복원",
+"no": "n2",
+"ch": 7,
+"type": "short",
+"stem": "[신경조직] 세포 소기관(의 성분이 될 단백질)을 합성할 수 있는 세포 소기관은?",
+"opts": [],
+"ans": null,
+"ans_text": "Nissl body",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-n3",
+"exam": "2007 기출 복원",
+"no": "n3",
+"ch": 7,
+"type": "multi",
+"stem": "[신경조직] axon과 axonhillock 에서 관찰되는 세포 소기관은?",
+"opts": [
+"mitochondria",
+"Nissl body",
+"neurofilament",
+"골지복합체"
+],
+"ans": [
+1,
+3
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-n4",
+"exam": "2007 기출 복원",
+"no": "n4",
+"ch": 7,
+"type": "multi",
+"stem": "[신경조직] conductivity가 높은 신경세포의 특징은?",
+"opts": [
+"axon이 두껍다",
+"internodal segment가 길다",
+"myelin이 두껍다",
+"perineurium 이 두껍다."
+],
+"ans": [
+1,
+2,
+3
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-n5",
+"exam": "2007 기출 복원",
+"no": "n5",
+"ch": 7,
+"type": "multi",
+"stem": "[신경조직] Lysosome이 없을 때 생기는 병은?",
+"opts": [
+"지능 저하",
+"간질발작",
+"마비",
+"바빈스키"
+],
+"ans": [
+1,
+2
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-n6",
+"exam": "2007 기출 복원",
+"no": "n6",
+"ch": 7,
+"type": "mc",
+"stem": "[신경조직] 다발성 경화증(MS)에서 가장 손상받는 세포는?",
+"opts": [
+"oligodendrocyte",
+"microglia",
+"astrocyte",
+"ependymal cell"
+],
+"ans": [
+1
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-n7",
+"exam": "2007 기출 복원",
+"no": "n7",
+"ch": 7,
+"type": "short",
+"stem": "[신경조직] 7-9) 7. Neurofilament:",
+"opts": [],
+"ans": null,
+"ans_text": "slow anterograde component",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-n8",
+"exam": "2007 기출 복원",
+"no": "n8",
+"ch": 7,
+"type": "short",
+"stem": "[신경조직] 8. Vesicle:",
+"opts": [],
+"ans": null,
+"ans_text": "fast anterograde component",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y07-n9",
+"exam": "2007 기출 복원",
+"no": "n9",
+"ch": 7,
+"type": "short",
+"stem": "[신경조직] 9. retrograde flow를 억제하는 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "원문 답 없음. 보충: dynein은 retrograde, kinesin은 anterograde 운송 단백질",
+"flags": [
+"정답불명"
+],
+"lines": "1173-1436",
+"ours": []
+},
+{
+"id": "Y061-1",
+"exam": "2006 기출 복원 1차",
+"no": 1,
+"ch": 1,
+"type": "short",
+"stem": "actin filament가 답인 문제가 있었다 (문제 복원X)",
+"opts": [],
+"ans": null,
+"ans_text": "actin filament",
+"ans_src": "M",
+"note": "actin filament 특징: 근육 thin filament, 세포피질, 세포내이입, 미세융모 등",
+"flags": [
+"복기X"
+],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-2",
+"exam": "2006 기출 복원 1차",
+"no": 2,
+"ch": 1,
+"type": "short",
+"stem": "ATP 생성하는 장소?",
+"opts": [],
+"ans": null,
+"ans_text": "미토콘드리아",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-3",
+"exam": "2006 기출 복원 1차",
+"no": 3,
+"ch": 2,
+"type": "short",
+"stem": "시계모양 그림 보여주고 이것과 관련있는 세포는?",
+"opts": [],
+"ans": null,
+"ans_text": "형질세포(B림프구로부터 분화, 시계판 모양 핵)",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-4",
+"exam": "2006 기출 복원 1차",
+"no": 4,
+"ch": 2,
+"type": "mc",
+"stem": "염색법 틀린것?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "참고: 아교섬유-말로리, 엘라우닌-리조르신푹신, 세망섬유-환원은, 비만세포-톨루이딘블루, 큰포식세포-트라이판블루. (00)탄력섬유=resorcin-fuchsin",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-5",
+"exam": "2006 기출 복원 1차",
+"no": 5,
+"ch": 2,
+"type": "mc",
+"stem": "콜라겐 이상증상에 대한 설명으로 옳지 않은 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "불완전뼈발생증은 Ⅱ형 아교질 유전자의 결함 때문이다 (오답: 실제 Ⅰ형)",
+"ans_src": "M",
+"note": "",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-6",
+"exam": "2006 기출 복원 1차",
+"no": 6,
+"ch": 2,
+"type": "mc",
+"stem": "mast cell 잘못된것?",
+"opts": [
+"헤파린, 히스타민 분비",
+"변색성을 가진다",
+"알러지반응에 관여",
+"단위막에 둘러싸여 있지 않아서 표본 제작 과정시 세포 밖으로 잘 흐트러져 나온다",
+"미분화 간엽세포로 부터 기원한다"
+],
+"ans": [
+4
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-7",
+"exam": "2006 기출 복원 1차",
+"no": 7,
+"ch": 1,
+"type": "mc",
+"stem": "부착띠에서 발견되는 것을 골라라.",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "zonula adherens: 액틴 미세사가 치밀반에 부착",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-8",
+"exam": "2006 기출 복원 1차",
+"no": 8,
+"ch": 1,
+"type": "short",
+"stem": "DNA 복제가 일어나는 세포 주기는?",
+"opts": [],
+"ans": null,
+"ans_text": "S기",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-9",
+"exam": "2006 기출 복원 1차",
+"no": 9,
+"ch": 1,
+"type": "short",
+"stem": "비각질중층편평상피는?",
+"opts": [],
+"ans": null,
+"ans_text": "식도",
+"ans_src": "M",
+"note": "중층 비각질편평: 구강, 식도, 후두, 질, 항문관",
+"flags": [
+"선지없음"
+],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-10",
+"exam": "2006 기출 복원 1차",
+"no": 10,
+"ch": 2,
+"type": "mc",
+"stem": "다음 중 각 조직에서 가장 많은 섬유가 잘못 짝지어워진 것은?",
+"opts": [
+"피부-1형",
+"대동맥-1형",
+"연골-2형",
+"기저막-4형",
+"뼈-1형"
+],
+"ans": [
+2
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "대동맥은 3형",
+"flags": [],
+"lines": "1437-1594",
+"ours": [
+"2-09"
+]
+},
+{
+"id": "Y061-11",
+"exam": "2006 기출 복원 1차",
+"no": 11,
+"ch": 1,
+"type": "multi",
+"stem": "상피조직의 특징을 고르시오",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-12",
+"exam": "2006 기출 복원 1차",
+"no": 12,
+"ch": 1,
+"type": "short",
+"stem": "기저막의 구성성분이 아닌것은?",
+"opts": [],
+"ans": null,
+"ans_text": "fibronectin",
+"ans_src": "M",
+"note": "(00)기출 basal lamina 구성성분 아닌 것: d fibronectin",
+"flags": [],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-13",
+"exam": "2006 기출 복원 1차",
+"no": 13,
+"ch": 1,
+"type": "multi",
+"stem": "desmosome과 상관없는 것을 모두 고르기",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "desmosome: 원반모양, 케라틴(상피)/데스민/바이멘틴 중간세사. (00)기능은 세포사이 부착",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-14",
+"exam": "2006 기출 복원 1차",
+"no": 14,
+"ch": 1,
+"type": "mc",
+"stem": "부착띠와 관계없는 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-15",
+"exam": "2006 기출 복원 1차",
+"no": 15,
+"ch": 2,
+"type": "mc",
+"stem": "GAG와 상관없는 것",
+"opts": [
+"chondroitin 4-sulfate",
+"chondroitin 6-sulfate",
+"keratan",
+"연골"
+],
+"ans": null,
+"ans_text": "연골이 답 추정(원문: 다른 보기가 답이었겠죠)",
+"ans_src": "-",
+"note": "",
+"flags": [
+"선지일부없음",
+"정답불명"
+],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-16",
+"exam": "2006 기출 복원 1차",
+"no": 16,
+"ch": 2,
+"type": "match",
+"stem": "아교질 합성 과정의 순서",
+"opts": [],
+"ans": null,
+"ans_text": "procollagen->tropocollagen->fibril->fiber",
+"ans_src": "M",
+"note": "",
+"flags": [
+"선지없음"
+],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-s1",
+"exam": "2006 기출 복원 1차",
+"no": "s1",
+"ch": 1,
+"type": "short",
+"stem": "세포의 주기에 대하여 간단히 설명하라.",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-s2",
+"exam": "2006 기출 복원 1차",
+"no": "s2",
+"ch": 1,
+"type": "short",
+"stem": "미세소관으로 이루어진 구조들을 모두 나열하라.",
+"opts": [],
+"ans": null,
+"ans_text": "cilia, flagella, basal body, centriole",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-s3",
+"exam": "2006 기출 복원 1차",
+"no": "s3",
+"ch": 1,
+"type": "short",
+"stem": "apoptosis와 necrosis를 비교하고 특징을 간단히 설명하라.",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-s4",
+"exam": "2006 기출 복원 1차",
+"no": "s4",
+"ch": 4,
+"type": "short",
+"stem": "연골뼈발생에 대하여 간단히 설명하라.",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-s5",
+"exam": "2006 기출 복원 1차",
+"no": "s5",
+"ch": 2,
+"type": "short",
+"stem": "단핵포식세포계통 5가지",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-s6",
+"exam": "2006 기출 복원 1차",
+"no": "s6",
+"ch": 1,
+"type": "short",
+"stem": "goblet cell에 대하여 설명하라.",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-s7",
+"exam": "2006 기출 복원 1차",
+"no": "s7",
+"ch": 2,
+"type": "short",
+"stem": "mast cell의 항원에 대한 기작에 대해 설명하라.",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-s8",
+"exam": "2006 기출 복원 1차",
+"no": "s8",
+"ch": 1,
+"type": "short",
+"stem": "gap junction에 대해 설명하라.",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-e1",
+"exam": "2006 기출 복원 1차",
+"no": "e1",
+"ch": 1,
+"type": "short",
+"stem": "표본의 제작과정",
+"opts": [],
+"ans": null,
+"ans_text": "fixation(formaldehyde 4%) - dehydration(alcohol) - transparentization(xylene) - embedding(resin/paraffin) - sectioning - staining",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-e2",
+"exam": "2006 기출 복원 1차",
+"no": "e2",
+"ch": 1,
+"type": "short",
+"stem": "외분비(exocrine)에 대하여 설명하라.",
+"opts": [],
+"ans": null,
+"ans_text": "merocrine(exocytosis, 예 췌장), holocrine(세포 파괴, 예 피지샘), apocrine(세포질 일부 소실, 세포사멸 없음)",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y061-e3",
+"exam": "2006 기출 복원 1차",
+"no": "e3",
+"ch": 2,
+"type": "short",
+"stem": "백색지방조직과 갈색지방조직에 대하여 설명하라.",
+"opts": [],
+"ans": null,
+"ans_text": "백색: 20-100um, 단일 큰 지방방울, 반지세포, leptin 분비. 갈색: 15-25um, 미토콘드리아 많음 작은 지방방울 다수, 열 생성",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1437-1594",
+"ours": []
+},
+{
+"id": "Y062-01",
+"exam": "2006 기출 복원 2차",
+"no": "01",
+"ch": 3,
+"type": "multi",
+"stem": "종말수조가 관찰되는 것은?",
+"opts": [
+"평활근",
+"심장근",
+"골격근"
+],
+"ans": [
+2,
+3
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "종말수조+가로소관=삼조체; 평활근은 SR 미약, 가로소관 없음",
+"flags": [],
+"lines": "1595-1715",
+"ours": [
+"3-04"
+]
+},
+{
+"id": "Y062-02",
+"exam": "2006 기출 복원 2차",
+"no": "02",
+"ch": 6,
+"type": "mc",
+"stem": "다음 중 소동맥에 포함되지 않는 것?",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "요약: 직경 0.1mm 이하, 내탄력막 없음, 중간막 1~2층 평활근, 외탄력막 없음",
+"flags": [
+"복기X",
+"선지없음"
+],
+"lines": "1595-1715",
+"ours": []
+},
+{
+"id": "Y062-03",
+"exam": "2006 기출 복원 2차",
+"no": "03",
+"ch": 3,
+"type": "short",
+"stem": "dense body가 있는 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "smooth muscle",
+"ans_src": "M",
+"note": "치밀소체: alpha-actinin 함유, Z선과 유사",
+"flags": [],
+"lines": "1595-1715",
+"ours": [
+"3-10"
+]
+},
+{
+"id": "Y062-04a",
+"exam": "2006 기출 복원 2차",
+"no": "04a",
+"ch": 8,
+"type": "short",
+"stem": "혈소판에서 과립물을 분비하는 기관은?",
+"opts": [],
+"ans": null,
+"ans_text": "open canaliculi system",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1595-1715",
+"ours": []
+},
+{
+"id": "Y062-04b",
+"exam": "2006 기출 복원 2차",
+"no": "04b",
+"ch": 6,
+"type": "multi",
+"stem": "심장외막에 대한 설명으로 옳은 것 모두 고르시오",
+"opts": [
+"심장을 덮고 있는 바깥막에 해당하며 얇은 결합조직층에 의해 지지된다",
+"바깥쪽으로 단층편평상피(중피)에 의해 덮여 있다",
+"심장외막하층은 성긴결합조직으로 구성되며 정맥, 신경, 신경절, 지방조직이 포함된다",
+"심장막의 내장측 심장막에 해당한다"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "원문은 보기가 아닌 요약; 정답 표시 없음",
+"flags": [
+"선지는요약"
+],
+"lines": "1595-1715",
+"ours": []
+},
+{
+"id": "Y062-05",
+"exam": "2006 기출 복원 2차",
+"no": "05",
+"ch": 7,
+"type": "short",
+"stem": "신경전달속도와 관련된 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "axon의 두께, myelin의 두께",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1595-1715",
+"ours": []
+},
+{
+"id": "Y062-06",
+"exam": "2006 기출 복원 2차",
+"no": "06",
+"ch": 4,
+"type": "short",
+"stem": "뼈세관에 관하여",
+"opts": [],
+"ans": null,
+"ans_text": "하버스관에서 뼈세포로 혈액공급 통로, 돌기는 gap junction 연결, 가로절단 방사상/세로절단 하버스관에 수직",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1595-1715",
+"ours": []
+},
+{
+"id": "Y062-07",
+"exam": "2006 기출 복원 2차",
+"no": "07",
+"ch": 7,
+"type": "multi",
+"stem": "니슬소체가 없어지면서 생기는 증상으로 옳은 것은?",
+"opts": [
+"핵이 치우친다",
+"세포체에 영향을 준다",
+"golgi 가 채로 채워진다"
+],
+"ans": [
+1,
+2
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "chromatolysis",
+"flags": [],
+"lines": "1595-1715",
+"ours": []
+},
+{
+"id": "Y062-08",
+"exam": "2006 기출 복원 2차",
+"no": "08",
+"ch": 4,
+"type": "short",
+"stem": "간질층판의 형성에 대해서..",
+"opts": [],
+"ans": null,
+"ans_text": "뼈가 성장/재구성되는 동안 하버스계통을 이루지 못한 일부 층판이 남은 구조",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1595-1715",
+"ours": []
+},
+{
+"id": "Y062-09",
+"exam": "2006 기출 복원 2차",
+"no": "09",
+"ch": 6,
+"type": "mc",
+"stem": "내탄력막이 가장 잘 보이는 구조는?",
+"opts": [
+"상대정맥",
+"대동맥",
+"대뇌동맥",
+"소동맥",
+"소정맥"
+],
+"ans": [
+3
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1595-1715",
+"ours": []
+},
+{
+"id": "Y062-10",
+"exam": "2006 기출 복원 2차",
+"no": "10",
+"ch": 7,
+"type": "short",
+"stem": "한센병 일어나는 원인?",
+"opts": [],
+"ans": null,
+"ans_text": "슈반세포의 손상",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1595-1715",
+"ours": []
+},
+{
+"id": "Y062-11",
+"exam": "2006 기출 복원 2차",
+"no": "11",
+"ch": 7,
+"type": "mc",
+"stem": "거짓단극신경세포의 두가지는 무엇인가?",
+"opts": [
+"둘다 axon",
+"둘다 dendrite",
+"axon은 중추로 dendrite는 말초로",
+"axon은 말초로 dendrite는 중추로",
+"때에 따라 변한다."
+],
+"ans": [
+3
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1595-1715",
+"ours": [
+"7-05"
+]
+},
+{
+"id": "Y062-12",
+"exam": "2006 기출 복원 2차",
+"no": "12",
+"ch": 6,
+"type": "multi",
+"stem": "모세혈관벽을 이루는 것이 아닌 것은?",
+"opts": [
+"내피세포",
+"기저막",
+"혈관주위세포",
+"결합조직"
+],
+"ans": [
+1,
+2,
+3
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "원문 답 ㄱㄴㄷ이나 해설상 모세혈관벽은 내피+기저판(+혈관주위세포); 결합조직이 답이어야 할 듯",
+"flags": [
+"정답충돌"
+],
+"lines": "1595-1715",
+"ours": [
+"6-07"
+]
+},
+{
+"id": "Y062-13",
+"exam": "2006 기출 복원 2차",
+"no": "13",
+"ch": 8,
+"type": "mc",
+"stem": "다음중 틀린것은?",
+"opts": [],
+"ans": null,
+"ans_text": "백혈구는 6만~10만개/uL이다 (정상 6,000~10,000)",
+"ans_src": "M",
+"note": "",
+"flags": [
+"선지없음"
+],
+"lines": "1595-1715",
+"ours": []
+},
+{
+"id": "Y062-14",
+"exam": "2006 기출 복원 2차",
+"no": "14",
+"ch": 6,
+"type": "multi",
+"stem": "조직으로 물질을 대사하는 혈관 모두 골라라",
+"opts": [],
+"ans": null,
+"ans_text": "모세혈관, 모세혈관이후소정맥",
+"ans_src": "M",
+"note": "",
+"flags": [
+"선지없음"
+],
+"lines": "1595-1715",
+"ours": [
+"6-02"
+]
+},
+{
+"id": "Y062-15",
+"exam": "2006 기출 복원 2차",
+"no": "15",
+"ch": 6,
+"type": "multi",
+"stem": "동모양 모세혈관의 특징은?",
+"opts": [
+"기저판이 연속적이다",
+"혈관벽에 큰포식세포가 존재한다",
+"세포질은 창을 가지고 있지 않다",
+"내피세포가 불연속적인 층을 이룬다"
+],
+"ans": [
+2,
+4
+],
+"ans_text": "",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1595-1715",
+"ours": [
+"6-04"
+]
+},
+{
+"id": "Y062-16",
+"exam": "2006 기출 복원 2차",
+"no": "16",
+"ch": 7,
+"type": "short",
+"stem": "myelin을 형성하는 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "Schwann, oligodendrocyte",
+"ans_src": "M",
+"note": "",
+"flags": [],
+"lines": "1595-1715",
+"ours": [
+"7-06"
+]
+},
+{
+"id": "Y062-17",
+"exam": "2006 기출 복원 2차",
+"no": "17",
+"ch": 7,
+"type": "short",
+"stem": "다음 중 axon에서는 없는 것은?",
+"opts": [],
+"ans": null,
+"ans_text": "니슬소체",
+"ans_src": "M",
+"note": "",
+"flags": [
+"선지없음"
+],
+"lines": "1595-1715",
+"ours": [
+"7-01"
+]
+},
+{
+"id": "Y062-18",
+"exam": "2006 기출 복원 2차",
+"no": "18",
+"ch": 6,
+"type": "mc",
+"stem": "다음중 가장 탄력 층판이 많은 것은?",
+"opts": [
+"빗장밑동맥",
+"배꼽동맥",
+"겨드랑 동맥"
+],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "원문: 정확한 답 불명, 1번이 가장 가깝다고 추정(복원자 추측)",
+"flags": [
+"정답불명"
+],
+"lines": "1595-1715",
+"ours": []
+},
+{
+"id": "Y062-s1",
+"exam": "2006 기출 복원 2차",
+"no": "s1",
+"ch": 8,
+"type": "short",
+"stem": "shift to left",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1595-1715",
+"ours": []
+},
+{
+"id": "Y062-s2",
+"exam": "2006 기출 복원 2차",
+"no": "s2",
+"ch": 3,
+"type": "short",
+"stem": "평활근의 종류",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1595-1715",
+"ours": []
+},
+{
+"id": "Y062-s3",
+"exam": "2006 기출 복원 2차",
+"no": "s3",
+"ch": 4,
+"type": "short",
+"stem": "골원 그림 그리고 라벨링",
+"opts": [],
+"ans": null,
+"ans_text": "Harversian system = osteon: 하버스관+4~20개 동심원 층판, 골소강, 뼈세관, Volkmann관",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1595-1715",
+"ours": []
+},
+{
+"id": "Y062-s4",
+"exam": "2006 기출 복원 2차",
+"no": "s4",
+"ch": 8,
+"type": "short",
+"stem": "crenation",
+"opts": [],
+"ans": null,
+"ans_text": "적혈구를 고장액에 넣음 -> 수분 유출 -> 부피 감소 -> 찌그러짐",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1595-1715",
+"ours": []
+},
+{
+"id": "Y062-s5",
+"exam": "2006 기출 복원 2차",
+"no": "s5",
+"ch": 6,
+"type": "short",
+"stem": "Carotid sinus의 기능에 대해 써라.",
+"opts": [],
+"ans": null,
+"ans_text": "내목동맥, 압력수용기(baroreceptor), 중간층 얇음, 외막 신경이 혈압 감지",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1595-1715",
+"ours": []
+},
+{
+"id": "Y062-s6",
+"exam": "2006 기출 복원 2차",
+"no": "s6",
+"ch": 6,
+"type": "short",
+"stem": "Metarteriole에 대해 설명하라.",
+"opts": [],
+"ans": null,
+"ans_text": "소동맥-소정맥 직접 교통(동정맥 연결) 혈류 조절",
+"ans_src": "N",
+"note": "",
+"flags": [
+"원문 설명이 동정맥연결(AV shunt) 위주"
+],
+"lines": "1595-1715",
+"ours": []
+},
+{
+"id": "Y062-s7",
+"exam": "2006 기출 복원 2차",
+"no": "s7",
+"ch": 3,
+"type": "short",
+"stem": "근육막을 구분하고 설명하시오",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1595-1715",
+"ours": []
+},
+{
+"id": "Y062-e1",
+"exam": "2006 기출 복원 2차",
+"no": "e1",
+"ch": 4,
+"type": "short",
+"stem": "뼈끝연골에서 층을 나누고 특징을 써라",
+"opts": [],
+"ans": null,
+"ans_text": "예비층-증식층-비대연골층-석회화연골층-골화층",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1595-1715",
+"ours": []
+},
+{
+"id": "Y062-e2",
+"exam": "2006 기출 복원 2차",
+"no": "e2",
+"ch": 3,
+"type": "short",
+"stem": "골격근의 모식도를 그리고 이를 이용하여 근수축기작을 설명하라",
+"opts": [],
+"ans": null,
+"ans_text": "Ca2+ 방출 -> troponin C 결합 -> 액틴 myosin 결합부위 노출 -> 마이오신 머리 ATP 분해/구부러짐 -> 가는세사가 A띠 중앙으로 활주",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1595-1715",
+"ours": []
+},
+{
+"id": "Y062-e3",
+"exam": "2006 기출 복원 2차",
+"no": "e3",
+"ch": 7,
+"type": "short",
+"stem": "축삭돌기과 가지돌기를 비교하라",
+"opts": [],
+"ans": null,
+"ans_text": "가지돌기: 짧고 분지 많음, 자극 수용, 폴리리보솜/rER 있음. 축삭: 길고 일정 직경, 자극 전달, 골지체 없음",
+"ans_src": "N",
+"note": "",
+"flags": [],
+"lines": "1595-1715",
+"ours": []
+},
+{
+"id": "Y062-e4",
+"exam": "2006 기출 복원 2차",
+"no": "e4",
+"ch": 4,
+"type": "short",
+"stem": "탄력연골과 근육연골의 층을 그림을 그려 구분하고 차이점에 대하여 설명하라",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "",
+"flags": [],
+"lines": "1595-1715",
+"ours": []
+},
+{
+"id": "Y062-e5",
+"exam": "2006 기출 복원 2차",
+"no": "e5",
+"ch": 8,
+"type": "short",
+"stem": "granulopoiesis에 대하여 설명하라.",
+"opts": [],
+"ans": null,
+"ans_text": "",
+"ans_src": "-",
+"note": "원문 myeloblast, promyelocyte 까지만 복원되고 끊김",
+"flags": [
+"OCR훼손"
+],
+"lines": "1595-1715",
+"ours": []
+}
+]
