@@ -137,6 +137,40 @@ pre.code{background:var(--surface2);border:1px solid var(--line);border-radius:8
 .sec>h2{font-size:1.2rem;margin-bottom:8px}
 .empty{color:var(--mute);padding:20px;text-align:center}
 .toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:7px 16px;border-radius:8px;font-size:.88rem;z-index:20}
+
+/* 내용 정리 v2 */
+.nh{display:flex;align-items:baseline;gap:10px;margin:22px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--accent)}
+.nh h2{font-size:1.35rem}.nh .nb{font-family:var(--f-serif);font-weight:700;background:var(--accent);color:var(--accent-fg);border-radius:6px;padding:0 10px;font-size:1.05rem}
+.nh .ns{color:var(--mute);font-size:.85rem}
+.nc{padding:16px 18px}
+.nc .lead{margin:2px 0 8px;color:var(--mute);font-size:.92rem}
+.nc .kws{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px}
+.nc .kw{font-size:.76rem;background:var(--accent-bg);color:var(--accent);border-radius:5px;padding:0 8px;font-weight:700}
+.nc .hd{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.nc .hd h3{margin:0}
+.nc .hits{font-size:.74rem;border:1px solid var(--warn);color:var(--warn);background:var(--warn-bg);border-radius:5px;padding:0 7px;font-weight:700}
+.nc b{color:var(--accent);font-weight:700}
+.secs{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:10px;margin:8px 0}
+.sp{background:var(--surface2);border-radius:8px;padding:8px 12px;min-width:0}
+.sp h5{margin:0 0 4px;font-size:.84rem;color:var(--accent);font-family:var(--f-sans);letter-spacing:.02em}
+.sp ul{margin:0;padding-left:1.1em;font-size:.88rem}
+.sp li{margin:2px 0}
+.sp .pg{font-size:.7rem;color:var(--mute);float:right}
+.flow{margin:8px 0}
+.flow .ft{font-size:.8rem;font-weight:700;color:var(--mute);margin-bottom:3px}
+.flow ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px 0;align-items:stretch}
+.flow li{display:flex;align-items:center}
+.flow .st{background:var(--surface);border:1.5px solid var(--accent);border-radius:8px;padding:3px 10px;font-size:.84rem;display:flex;gap:6px;align-items:center}
+.flow .st i{font-style:normal;font-weight:700;background:var(--accent);color:var(--accent-fg);border-radius:50%;width:18px;height:18px;font-size:.7rem;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.flow li+li::before{content:"\2192";color:var(--accent);font-weight:700;margin:0 6px}
+.pts{border:1.5px dashed var(--warn);background:var(--warn-bg);border-radius:8px;padding:6px 12px;margin:8px 0;font-size:.88rem}
+.pts h5{margin:0 0 2px;color:var(--warn);font-size:.8rem}
+.pts ul{margin:0;padding-left:1.1em}
+.nc .memo{border-left:0;background:var(--accent-bg)}
+.nc .memo h5{margin:0 0 2px;font-size:.8rem;color:var(--accent)}
+.nc details.fold>summary{cursor:pointer;color:var(--accent);font-weight:700;font-size:.88rem;margin:6px 0}
+.cmp>div{background:var(--surface)}
+.cmp .vs{display:grid;grid-template-columns:1fr 1fr;gap:6px}
 @media(prefers-reduced-motion:no-preference){.opt,.btn,.pill{transition:background .12s,border-color .12s}}
 </style>
 
@@ -367,19 +401,33 @@ function tbl(t){
 }
 function noteCard(c){
   var seen={};
-  function f(s){return abbrify(s,seen)}
-  var cnt=[['요약',(c.sum||[]).length],['표',(c.tbls||[]).length],['암기',(c.memo||[]).length],['비교',(c.cmp||[]).length],['기출',(c.q||[]).length]].filter(function(x){return x[1]});
-  var h='<section class="nc" id="n-'+c.id+'"><h3>'+esc(c.t)+'</h3><div class="chips" style="margin-bottom:6px"><span class="chip">'+c.ch+'장</span>'+cnt.map(function(x){return '<span class="chip">'+x[0]+' '+x[1]+'</span>'}).join('')+'</div>';
-  if(c.sum&&c.sum.length){
-    var vis=c.sum.length>6&&!S.openNotes?c.sum.slice(0,6):c.sum;
-    h+='<h4>핵심 요약</h4><ul>'+vis.map(function(s){return '<li>'+f(s)+'</li>'}).join('')+'</ul>';
-    if(vis.length<c.sum.length)h+='<button class="lk" data-more="'+c.id+'">더 보기 ('+(c.sum.length-vis.length)+')</button>';
-  }
+  function f(x){return abbrify(x,seen)}
+  var past=(c.q||[]).filter(function(i){return BYID[i]&&BYID[i].set==='past'}).length;
+  var h='<section class="nc" id="n-'+c.id+'"><div class="hd"><h3>'+esc(c.t)+'</h3><span class="chip">'+c.ch+'장</span>'+(past?'<span class="hits">23학번 기출 '+past+'문항 연계</span>':'')+'</div>';
+  if(c.lead)h+='<p class="lead">'+f(c.lead)+'</p>';
+  if(c.kw&&c.kw.length)h+='<div class="kws">'+c.kw.map(function(k){return '<span class="kw">'+esc(k)+'</span>'}).join('')+'</div>';
+  if(c.flow)c.flow.forEach(function(fl){h+='<div class="flow"><div class="ft">'+f(fl.t)+'</div><ol>'+fl.s.map(function(x,i){return '<li><span class="st"><i>'+(i+1)+'</i>'+f(x)+'</span></li>'}).join('')+'</ol></div>'});
+  if(c.secs&&c.secs.length)h+='<div class="secs">'+c.secs.map(function(sc){return '<div class="sp"><h5>'+f(sc.h)+(sc.p?'<span class="pg">'+esc(sc.p)+'</span>':'')+'</h5><ul>'+sc.b.map(function(x){return '<li>'+f(x)+'</li>'}).join('')+'</ul></div>'}).join('')+'</div>';
   (c.tbls||[]).forEach(function(t){if(t.cap)h+='<h4>'+esc(t.cap)+'</h4>';h+=tbl(t)});
-  if(c.memo&&c.memo.length)h+='<h4>암기 포인트</h4><div class="memo">'+c.memo.map(function(s){return '<div>· '+f(s)+'</div>'}).join('')+'</div>';
+  if(c.pts&&c.pts.length)h+='<div class="pts"><h5>시험 포인트</h5><ul>'+c.pts.map(function(x){return '<li>'+f(x)+'</li>'}).join('')+'</ul></div>';
+  if(c.memo&&c.memo.length)h+='<div class="memo"><h5>암기 포인트</h5>'+c.memo.map(function(x){return '<div>· '+f(x)+'</div>'}).join('')+'</div>';
   if(c.cmp&&c.cmp.length)h+='<h4>헷갈리는 비교</h4><div class="cmp">'+c.cmp.map(function(p){return '<div><b>'+f(p[0])+'</b>'+f(p[1])+'</div>'}).join('')+'</div>';
   if(c.q&&c.q.length)h+='<h4>기출·예상 연계</h4><div>'+c.q.map(function(id){var q=BYID[id];return q?'<button class="lk" data-goq="'+id+'">'+esc(q.n)+(q.set==='past'?'(기출)':'')+'</button>':''}).join('')+'</div>';
   h+='<div class="src">출처: '+esc(c.src)+'</div></section>';
+  return h;
+}
+function chHead(ch,list){
+  var past=0;list.forEach(function(c){(c.q||[]).forEach(function(i){if(BYID[i]&&BYID[i].set==='past')past++})});
+  var T={2:'세포 반응: 적응 · 손상 · 사멸',3:'염증과 수복',4:'혈류역학적 장애 · 혈전 · 쇼크'};
+  return '<div class="nh"><span class="nb">'+ch+'장</span><h2>'+T[ch]+'</h2><span class="ns">카드 '+list.length+' · 기출 연계 '+past+'문항</span></div>';
+}
+function notesBody(){
+  var h='';
+  [2,3,4].forEach(function(ch){
+    if(S.ch!=='all'&&String(ch)!==S.ch)return;
+    var l=NOTES.filter(function(c){return c.ch===ch});
+    h+=chHead(ch,l)+'<div class="toc">'+l.map(function(c){return '<button class="lk" data-scroll="n-'+c.id+'">'+esc(c.t)+'</button>'}).join('')+'</div>'+l.map(noteCard).join('');
+  });
   return h;
 }
 function timeCard(){
@@ -409,11 +457,11 @@ function renderMain(keep){
   }else if(S.tab==='notes'){
     h+='<div class="bar"><button class="pill" data-ch="all" aria-pressed="'+(S.ch==='all')+'">전체</button>'+[2,3,4].map(function(c){return '<button class="pill" data-ch="'+c+'" aria-pressed="'+(S.ch===String(c))+'">'+c+'장</button>'}).join('')+'</div>';
     h+=timeCard();
-    h+=NOTES.filter(function(c){return S.ch==='all'||String(c.ch)===S.ch}).map(noteCard).join('');
+    h+=notesBody();
   }else if(S.tab==='all'){
     h+='<div class="bar"><span class="grow"></span><button class="btn s" id="b-fold">'+(S.openNotes?'요약 접기':'요약 펴기')+'</button></div>';
     h+='<div class="toc">'+[['n-time','연도·시점']].concat(NOTES.map(function(c){return ['n-'+c.id,c.ch+'장 '+c.t]})).map(function(t){return '<button class="lk" data-scroll="'+t[0]+'">'+esc(t[1])+'</button>'}).join('')+'</div>';
-    h+=timeCard()+NOTES.map(noteCard).join('');
+    S.ch='all';h+=timeCard()+notesBody();
     h+='<p class="note">문항 카드는 이 화면에 넣지 않았습니다. 각 카드의 \'기출·예상 연계\' 버튼으로 해당 문항으로 이동합니다.</p>';
   }else if(S.tab==='mock'){
     h+=mockHtml();

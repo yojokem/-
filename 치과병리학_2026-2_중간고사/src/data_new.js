@@ -51,7 +51,7 @@ var NEWQ=[
  ev:[['T4','Ch2','p.39 Intrinsic Pathway','Anti-apoptotic proteins: Bcl-2, Bcl-xL, Mcl-1'],['T4','Ch2','p.39 Intrinsic Pathway','Pro-apoptotic proteins: Bax, Bak']],
  w:['anti-apoptotic','anti-apoptotic','anti-apoptotic','cytochrome c와 결합해 apoptosome을 만드는 단백질이며 Bcl-2 family의 pro-apoptotic으로 제시되지 않음','Bax, Bak이 pro-apoptotic proteins']},
 {id:'N2-13',set:'new',ch:2,n:'N2-13',alias:'',src:'예상 · 2장',stem:'파이롭토시스(pyroptosis)에 대한 설명으로 옳은 것은?',
- opts:['RIP1, RIP3, MLKL이 necrosome을 형성한다.','caspase 비의존성이다.','phosphatidylserine이 eat-me 신호로 작용하며 염증을 유발하지 않는다.','미생물에 감염된 세포에서 inflammasome이 caspase-1을 활성화하고 gasdermin D pore가 형성된다.','autophagosome이 lysosome과 융합하여 내용물을 소화한다.'],ans:[4],st:'추정',tier:'T4',conf:'상',ck:'2.세포자멸괴사',nk:'n2f',derive:D('10'),
+ opts:['RIP1, RIP3, MLKL이 necrosome을 형성한다.','caspase 비의존성이다.','phosphatidylserine이 eat-me 신호로 작용하며 염증을 유발하지 않는다.','미생물에 감염된 세포에서 inflammasome이 caspase-1을 활성화하고 gasdermin D pore가 형성된다.','autophagosome이 lysosome과 융합하여 내용물을 소화한다.'],ans:[4],st:'추정',tier:'T4',conf:'상',ck:'2.세포자멸괴사',nk:'n2f2',derive:D('10'),
  ev:[['T4','Ch2','p.44 Pyroptosis','미생물에 감염된 세포에서 발생함'],['T4','Ch2','p.44 Pyroptosis','Caspase-1 (IL-1β 전환효소) 활성화']],
  w:['necroptosis의 특징','caspase-8 비의존성은 necroptosis의 특징. pyroptosis는 caspase-1이 활성화됨','apoptosis의 설명','pyroptosis: 미생물 노출 → inflammasome → caspase-1 → IL-1β 활성형 방출, gasdermin D pore','autophagy의 설명']},
 {id:'N2-14',set:'new',ch:2,n:'N2-14',alias:'',src:'예상 · 2장',stem:'이영양성 석회화(dystrophic calcification)에 대한 설명으로 옳은 것은?',
