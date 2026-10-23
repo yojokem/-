@@ -541,6 +541,8 @@ function statusHtml(){
     MATS.map(function(r){return '<tr><td>'+esc(r[0])+'</td><td>'+esc(r[1])+'</td><td>'+esc(r[2])+'</td><td>'+esc(r[3])+'</td></tr>'}).join('')+'</tbody></table></div></section>';
   h+='<section class="sec"><h2>학번 × 자료원 반영 현황</h2><div class="tw"><table class="t"><thead><tr><th>학번(시기)</th><th>원본 시험지</th><th>원본 야마</th><th>가공본</th><th>비고</th></tr></thead><tbody>'+
     MATRIX.map(function(r){return '<tr>'+r.map(function(x){return '<td>'+esc(x)+'</td>'}).join('')+'</tr>'}).join('')+'</tbody></table></div></section>';
+  h+='<section class="sec"><h2>교안 슬라이드 커버리지(내용 정리)</h2><p class="note">2026 교안 Ch2·3(final)·4의 슬라이드 쪽을 내용 정리 카드에 대응시킨 표입니다. 이미지·손글씨 슬라이드는 비고에 적었습니다.</p><div class="tw"><table class="t"><thead><tr><th>장</th><th>쪽</th><th>교안 주제</th><th>카드</th><th>비고</th></tr></thead><tbody>'+
+    COVER.map(function(r){return '<tr><td>'+r[0]+'장</td><td>'+esc(r[1])+'</td><td>'+esc(r[2])+'</td><td><button class="lk" data-note="'+r[3]+'">'+esc((NOTE_BY[r[3]]||{}).t||r[3])+'</button></td><td>'+esc(r[4])+'</td></tr>'}).join('')+'</tbody></table></div></section>';
   h+='<section class="sec"><h2>인용 그림 색인</h2><p>그림 번호(Qn) 부여 0건. 이번 기출 원본(23학번 PDF·docx)은 텍스트 추출본만 열람했고 문항 그림은 확인하지 못했습니다. 그림 있음/텍스트 캡처 분류: 미수행(이미지 미열람). 교안 그림은 내장하지 않았습니다.</p></section>';
   h+='<section class="sec"><h2>외부 참조(\'표 N-N 참조\' 류)</h2><p>2·3·4장 교안 텍스트에서 \'그림 4-18\', \'4-18B\', \'4-19\'(경색) 참조가 있으나 교재 그림이며 교재는 열람하지 않았습니다. 해당 서술은 교안 요약 문장으로만 반영했습니다.</p></section>';
   h+='<section class="sec"><h2>알려진 한계 목록</h2><pre class="code">'+esc(LIMITS)+'</pre><button class="btn s" id="b-copylim">복사</button></section>';
