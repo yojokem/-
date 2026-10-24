@@ -171,6 +171,16 @@ pre.code{background:var(--surface2);border:1px solid var(--line);border-radius:8
 .nc details.fold>summary{cursor:pointer;color:var(--accent);font-weight:700;font-size:.88rem;margin:6px 0}
 .cmp>div{background:var(--surface)}
 .cmp .vs{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px;margin:6px 0}
+.fg{margin:0;min-width:0}
+.fg.big{grid-column:1/-1}
+.fw{position:relative;line-height:0;cursor:zoom-in;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff}
+.fg.big .fw{cursor:zoom-out}
+.fw img{width:100%;height:auto;display:block}
+.fq{position:absolute;left:6px;top:6px;border:1.5px solid var(--accent);color:var(--accent);background:transparent;border-radius:4px;padding:0 6px;font-size:.72rem;line-height:1.5;font-weight:700;pointer-events:none;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 4px #fff}
+.fg figcaption{font-size:.72rem;color:var(--mute);margin-top:2px}
+.exam .fq,.exam .gal{display:none}
 @media(prefers-reduced-motion:no-preference){.opt,.btn,.pill{transition:background .12s,border-color .12s}}
 </style>
 
@@ -406,6 +416,7 @@ function noteCard(c){
   var h='<section class="nc" id="n-'+c.id+'"><div class="hd"><h3>'+esc(c.t)+'</h3><span class="chip">'+c.ch+'장</span>'+(past?'<span class="hits">23학번 기출 '+past+'문항 연계</span>':'')+'</div>';
   if(c.lead)h+='<p class="lead">'+f(c.lead)+'</p>';
   if(c.kw&&c.kw.length)h+='<div class="kws">'+c.kw.map(function(k){return '<span class="kw">'+esc(k)+'</span>'}).join('')+'</div>';
+  if(CARDPG[c.id])h+=galHtml(c.ch,CARDPG[c.id][0],CARDPG[c.id][1]);
   if(c.flow)c.flow.forEach(function(fl){h+='<div class="flow"><div class="ft">'+f(fl.t)+'</div><ol>'+fl.s.map(function(x,i){return '<li><span class="st"><i>'+(i+1)+'</i>'+f(x)+'</span></li>'}).join('')+'</ol></div>'});
   if(c.secs&&c.secs.length)h+='<div class="secs">'+c.secs.map(function(sc){return '<div class="sp"><h5>'+f(sc.h)+(sc.p?'<span class="pg">'+esc(sc.p)+'</span>':'')+'</h5><ul>'+sc.b.map(function(x){return '<li>'+f(x)+'</li>'}).join('')+'</ul></div>'}).join('')+'</div>';
   (c.tbls||[]).forEach(function(t){if(t.cap)h+='<h4>'+esc(t.cap)+'</h4>';h+=tbl(t)});
@@ -476,6 +487,14 @@ function renderMain(keep){
 }
 
 /* ---------- 사진 문항 ---------- */
+function figHtml(ch,n){
+  var s=SLMAP[ch+'-'+n];if(!s)return '';
+  return '<figure class="fg"><div class="fw"><img loading="lazy" src="img/ch'+ch+'_'+(n<10?'0':'')+n+'.jpg" alt="'+s[3]+' 교안 Ch'+ch+' p.'+n+' '+esc(s[2])+'"><span class="fq">'+s[3]+'</span></div><figcaption>Ch'+ch+' p.'+n+'</figcaption></figure>';
+}
+function galHtml(ch,a,b){
+  var h='',c=0;for(var n=a;n<=b;n++){var f=figHtml(ch,n);if(f){h+=f;c++}}
+  return c?'<details class="d fold"><summary>교안 그림 슬라이드 '+c+'장 (그림·사진이 있는 쪽)</summary><div class="gal">'+h+'</div><div class="note">슬라이드를 누르면 크게 보입니다. 66dpi 렌더링이라 작은 글씨는 원본 PDF를 보십시오.</div></details>':'';
+}
 var PCNT=lsGet('pat26-pcnt',{gross:'36',slide:'30'});
 function photoHtml(){
   var l=PHOTO.filter(function(p){return (S.pc==='all'||p.cls===S.pc)&&(S.ch==='all'||String(p.ch)===S.ch)});
@@ -491,7 +510,7 @@ function photoHtml(){
     var front=S.pdir==='t2k'?'<b>'+esc(p.t)+'</b>':'<ul style="margin:0;padding-left:1.1em">'+p.k.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul>';
     var back=S.pdir==='t2k'?'<ul style="margin:0;padding-left:1.1em">'+p.k.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul>':'<b>'+esc(p.t)+'</b>';
     return '<div class="sp"><h5>'+p.ch+'장 · '+(p.cls==='gross'?'이론 후보(육안)':'실험 후보(조직)')+'</h5>'+front+
-      '<details class="d" style="margin-top:6px"><summary>정답 보기</summary>'+back+'<div class="note">관련 정리: <button class="lk" data-note="'+p.nk+'">'+esc((NOTE_BY[p.nk]||{}).t||p.nk)+'</button></div></details></div>';}).join('')+'</div>';
+      '<details class="d" style="margin-top:6px"><summary>정답 보기</summary>'+back+(PSL[p.t]?'<div class="gal">'+PSL[p.t].slice(1).map(function(n){return figHtml(PSL[p.t][0],n)}).join('')+'</div>':'')+'<div class="note">관련 정리: <button class="lk" data-note="'+p.nk+'">'+esc((NOTE_BY[p.nk]||{}).t||p.nk)+'</button></div></details></div>';}).join('')+'</div>';
   h+='<section class="sec" style="margin-top:14px"><h2>범위 외(면역계통) 라벨</h2><ul class="note">'+PHOTO_OOS.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul></section>';
   return h;
 }
@@ -565,7 +584,8 @@ function statusHtml(){
     MATRIX.map(function(r){return '<tr>'+r.map(function(x){return '<td>'+esc(x)+'</td>'}).join('')+'</tr>'}).join('')+'</tbody></table></div></section>';
   h+='<section class="sec"><h2>교안 슬라이드 커버리지(내용 정리)</h2><p class="note">2026 교안 Ch2·3(final)·4의 슬라이드 쪽을 내용 정리 카드에 대응시킨 표입니다. 이미지·손글씨 슬라이드는 비고에 적었습니다.</p><div class="tw"><table class="t"><thead><tr><th>장</th><th>쪽</th><th>교안 주제</th><th>카드</th><th>비고</th></tr></thead><tbody>'+
     COVER.map(function(r){return '<tr><td>'+r[0]+'장</td><td>'+esc(r[1])+'</td><td>'+esc(r[2])+'</td><td><button class="lk" data-note="'+r[3]+'">'+esc((NOTE_BY[r[3]]||{}).t||r[3])+'</button></td><td>'+esc(r[4])+'</td></tr>'}).join('')+'</tbody></table></div></section>';
-  h+='<section class="sec"><h2>인용 그림 색인</h2><p>그림 번호(Qn) 부여 0건. 이번 기출 원본(23학번 PDF·docx)은 텍스트 추출본만 열람했고 문항 그림은 확인하지 못했습니다. 그림 있음/텍스트 캡처 분류: 미수행(이미지 미열람). 교안 그림은 내장하지 않았습니다.</p></section>';
+  h+='<section class="sec"><h2>인용 그림 색인</h2><p class="note">교안 그림 슬라이드 '+SLIDES.length+'장을 슬라이드 단위로 내장하고 Q1~Q'+SLIDES.length+' 번호를 붙였습니다(번호는 한 번 부여하면 바꾸지 않음, 교체 이력 없음). 그림 있음/텍스트 캡처 분류: 그림·사진·도표가 있는 쪽만 내장했고 글만 있는 쪽·목차·표지는 제외했습니다. 기출 시험지(23학번)의 문항 그림은 확인하지 못했습니다.</p><div class="tw"><table class="t"><thead><tr><th>번호</th><th>종류</th><th>출처(자료·쪽)</th><th>사용처</th><th>내장</th><th>교체 이력</th></tr></thead><tbody>'+
+    SLIDES.map(function(r){var cid='';Object.keys(CARDPG).forEach(function(k){var c=NOTE_BY[k];if(c&&c.ch===r[0]&&r[1]>=CARDPG[k][0]&&r[1]<=CARDPG[k][1])cid=k});return '<tr><td>'+r[3]+'</td><td>교안</td><td>Ch'+r[0]+' p.'+r[1]+' '+esc(r[2])+'</td><td>'+(cid?'<button class="lk" data-note="'+cid+'">'+esc(NOTE_BY[cid].t)+'</button>':'')+'</td><td>내장(JPEG)</td><td>—</td></tr>'}).join('')+'</tbody></table></div></section>';
   h+='<section class="sec"><h2>외부 참조(\'표 N-N 참조\' 류)</h2><p>2·3·4장 교안 텍스트에서 \'그림 4-18\', \'4-18B\', \'4-19\'(경색) 참조가 있으나 교재 그림이며 교재는 열람하지 않았습니다. 해당 서술은 교안 요약 문장으로만 반영했습니다.</p></section>';
   h+='<section class="sec"><h2>알려진 한계 목록</h2><pre class="code">'+esc(LIMITS)+'</pre><button class="btn s" id="b-copylim">복사</button></section>';
   h+='<section class="sec"><h2>사용자 정답 지정 내보내기</h2><p class="note">정답 지정(사용자 확정) 내용을 JSON으로 복사해 대화에 붙여 넣으면 정해 대장에 반영합니다. OMR 마킹은 담지 않습니다.</p><button class="btn p s" id="b-export">클립보드로 복사</button><textarea id="exp-box" rows="5" style="width:100%;margin-top:6px;display:none" readonly></textarea>'+(lsOK?'':'<p class="note">이 환경에서는 브라우저 저장소를 쓸 수 없어 새로고침하면 마킹이 사라집니다.</p>')+'</section>';
@@ -586,6 +606,7 @@ function go(tab,keepCh){
 }
 function scrollTo(id){var e=document.getElementById(id);if(e)e.scrollIntoView({block:'start'})}
 document.addEventListener('click',function(ev){
+  var fw=ev.target.closest('.fw');if(fw){fw.parentNode.classList.toggle('big');return}
   var t=ev.target.closest('button,summary');if(!t)return;
   var d=t.dataset||{};
   if(d.tab)return go(d.tab);

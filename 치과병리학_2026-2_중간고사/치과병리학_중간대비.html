@@ -171,6 +171,16 @@ pre.code{background:var(--surface2);border:1px solid var(--line);border-radius:8
 .nc details.fold>summary{cursor:pointer;color:var(--accent);font-weight:700;font-size:.88rem;margin:6px 0}
 .cmp>div{background:var(--surface)}
 .cmp .vs{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px;margin:6px 0}
+.fg{margin:0;min-width:0}
+.fg.big{grid-column:1/-1}
+.fw{position:relative;line-height:0;cursor:zoom-in;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff}
+.fg.big .fw{cursor:zoom-out}
+.fw img{width:100%;height:auto;display:block}
+.fq{position:absolute;left:6px;top:6px;border:1.5px solid var(--accent);color:var(--accent);background:transparent;border-radius:4px;padding:0 6px;font-size:.72rem;line-height:1.5;font-weight:700;pointer-events:none;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 4px #fff}
+.fg figcaption{font-size:.72rem;color:var(--mute);margin-top:2px}
+.exam .fq,.exam .gal{display:none}
 @media(prefers-reduced-motion:no-preference){.opt,.btn,.pill{transition:background .12s,border-color .12s}}
 </style>
 
@@ -948,6 +958,12 @@ var PHOTO=[
 ];
 var PHOTO_OOS=['1형 과민(즉시반응): 혈관 확장·누출','4형 과민(지연과민): Th cell · 대식세포 · 혈관주위 침윤','전신홍반루푸스(ANA, 면역복합체) · 홍반루푸스 심장내막염','쇼그렌 증후군(혈관주위 림프구 침윤, 침샘 비대)','초급성·급성·항체매개 만성 거부, 전신경화증, 아밀로이드증(콩고레드)'];
 
+/* 교안 그림 슬라이드: 2026 교안 Ch2·3(final)·4 분할본(Drive 부분N)을 66dpi JPEG로 렌더링. [장,쪽,제목] */
+var SLIDES=[[2, 4, "Cellular Responses to Stress and Noxious Stimu"], [2, 5, "Cellular Responses to Stress and Noxious Stimu"], [2, 7, "7 Hypertrophy 임신성 자궁"], [2, 8, "8 Hyperplasia 정상 자궁내막"], [2, 9, "9 Atrophy 정상"], [2, 10, "10 Metaplasia ▪ 화생(Metaplasia)"], [2, 12, "Causes of Cell Injury 12 ▪ 세포손상 원인"], [2, 13, "(세포기능 변화 정도) Morphologic Alterations in Cell I"], [2, 14, "Reversible Cell Injury ▪ 가역적 손상(Reversible inj"], [2, 15, "15 Morphology 간 세포"], [2, 16, "16 Necrosis ▪ 괴사(Necrosis)"], [2, 17, "Myelin Figure 17"], [2, 18, "Patterns of Tissue Necrosis 1. 응고괴사(coagulativ"], [2, 19, "Patterns of Tissue Necrosis 2. 액화괴사(liquefacti"], [2, 20, "Patterns of Tissue Necrosis 3. 괴저괴사(gangrenous"], [2, 21, "Patterns of Tissue Necrosis 4. 건락괴사(caseous ne"], [2, 22, "Patterns of Tissue Necrosis 5. 지방괴사(fat necros"], [2, 23, "Patterns of Tissue Necrosis 23 6. 섬유소성괴사(Fibri"], [2, 25, "Mechanisms of Cell Injury ▪ 손상성 자극에 의해 가장 많은 손"], [2, 26, "26 Depletion of ATP ▪ ATP 생산 방법"], [2, 27, "27 의학계이슈에 대한 최신지견 中"], [2, 28, "Mitochondrial Damage ▪ 미토콘드리아는 모든 경로에 의한 세포손상과"], [2, 29, "29 Influx of Calcium and Loss of Calcium Homeo"], [2, 30, "Oxidative Stress ▪ 자유라디칼, 특히 활성산소종에 의해 유도되는 세포"], [2, 31, "Defects in Membrane Permeability ▪ 막 투과성 손상 : "], [2, 32, "Damage to DNA and Proteins 32 ▪ 세포는 DNA 손상을 복구"], [2, 34, "Apoptosis ▪ Type 1 cell death. ▪ Greek: apo “l"], [2, 35, "Morphologic Changes in Apoptosis 35 ▪ 형태학적 변화"], [2, 36, "Morphologic Changes in Apoptosis passed; Membr"], [2, 37, "Mechanism of Apoptosis 9 ▪"], [2, 38, "Extrinsic (Death Receptor) Pathway ▪ Extrinsic"], [2, 39, "Intrinsic (Mitochondrial) Pathway 39 ▪ Intrins"], [2, 40, "Removal of Dead Cells anti-inflammatory (?)"], [2, 41, "Necroptosis (세포자멸괴사) ▪ Necrosis (형태학적 특징)와 Apo"], [2, 42, "Mechanism of Necroptosis 42 ▪ Ligand가 Death re"], [2, 44, "Pyroptosis (파이롭토시스) ▪ 미생물에 감염된 세포에서 발생함. ▪ cel"], [2, 47, "Autophagy (자가포식) ▪ Type 2 cell death. ▪ 세포가 자기"], [2, 48, "48 Autophagy (자가포식) ▪ 물질을 옮기는 방법에 따라 세 가지로 분류"], [2, 49, "Mechanism of Autophagy ▪ autophagy 유발 환경 → pha"], [2, 51, "Intracellular Accumulations ▪ 비정상적인 세포 내 축적"], [2, 52, "Intracellular Accumulations 2. 단백질 (Proteins) "], [2, 53, "Intracellular Accumulations 53 글리코겐 축적병"], [2, 55, "Pathologic Calcification ▪ 병적 석회화 (Pathologic "], [2, 57, "Telomere ▪ 텔로미어(Telomere) : 염색체 말단에 존재하는 DNA의 "], [2, 58, "Telomerase Recruitment ▪ 텔로머라아제(Telomerase)"], [2, 59, "Relationship between Telomerase, Aging, and Ca"], [2, 60, "Cellular Aging ▪ 세포 노화 발생 기전 (원인) 1. DNA 손상 (D"], [3, 4, "Inflammation: An Important Field of Dentistry "], [3, 5, "Inflammation: An Important Field of Dentistry "], [3, 6, "Inflammation ▪ Inflammation (염증) : 혈관을 함유한 조직이"], [3, 7, "Steps of the Inflammatory Reaction 7 ▪ 염증반응의 단"], [3, 8, "Properties of Inflammation ▪ 염증반응의 주요한 구성요소 : "], [3, 9, "9 Cardinal Signs of Inflammation 1. 발적(rubor ="], [3, 10, "Causes of Inflammation 1. 감염(Infection) : 박테리아"], [3, 12, "12 Major Components of Acute Inflammation ▪ 급성"], [3, 13, "13 Reactions of Blood Vessels in Acute Inflamm"], [3, 14, "14 Reactions of Blood Vessels in Acute Inflamm"], [3, 15, "15 Reactions of Blood Vessels in Acute Inflamm"], [3, 16, "16 Reactions of Blood Vessels in Acute Inflamm"], [3, 17, "Leukocyte Recruitment to Sites of Inflammation"], [3, 18, "Leukocyte Recruitment to Sites of Inflammation"], [3, 19, "Leukocyte Recruitment to Sites of Inflammation"], [3, 20, "Phagocytosis and Clearance of the Offending Ag"], [3, 21, "Phagocytosis and Clearance of the Offending Ag"], [3, 22, "Neutrophil Extracellular Traps (NETs) ▪ 호중구 세포"], [3, 23, "Leukocyte-Mediated Tissue Injury ▪ 백혈구 매개 조직손상"], [3, 25, "Mediators of Inflammation ▪ 염증 매개체 : 염증반응을 개시하"], [3, 26, "26 Vasoactive Amines: Histamine and Serotonin "], [3, 27, "Arachidonic Acid Metabolites ▪ Arachidonic aci"], [3, 28, "Arachidonic Acid Metabolites 28 1. Prostagland"], [3, 29, "Cytokines and Chemokines ▪ Cytokines : 다른 세포의 "], [3, 30, "Complement System 30 ▪ Complement System (보체계)"], [3, 31, "Other Mediators of Inflammation ▪ Platelet-Act"], [3, 33, "33 Morphologic Patterns of Acute Inflammation "], [3, 34, "34 Morphologic Patterns of Acute Inflammation "], [3, 35, "Outcomes of Acute Inflammation 35 ▪ 급성염증의 결과"], [3, 38, "Morphologic Features ▪ 만성염증의 형태학적 소견 1. 단핵세포(m"], [3, 39, "39 Cells and Mediators of Chronic Inflammation"], [3, 40, "40 Cells and Mediators of Chronic Inflammation"], [3, 41, "41 Cells and Mediators of Chronic Inflammation"], [3, 42, "42 Cells and Mediators of Chronic Inflammation"], [3, 44, "Granulomatous Inflammation 1. 이물형 육아종(foreign "], [3, 45, "Granulomatous Inflammation 45"], [3, 49, "Overview of Tissue Repair 49 ▪ 조직수복(Tissue Rep"], [3, 51, "Mechanisms of Tissue Regeneration ▪ Liver rege"], [3, 52, "Repair by Connective Tissue Deposition 52 ▪ 결합"], [3, 53, "Repair by Connective Tissue Deposition 53"], [3, 54, "Repair by Connective Tissue Deposition ▪ 혈관형성 "], [3, 57, "57 Clinical Examples of Tissue Repair and Fibr"], [3, 58, "58 Clinical Examples of Tissue Repair and Fibr"], [3, 59, "59 Clinical Examples of Tissue Repair and Fibr"], [3, 60, "Abnormalities in Tissue Repair ▪ 조직 수복에서의 이상 1"], [4, 4, "Edema and Effusion 4 ▪ 심혈관계, 신장 또는 간 기능의 교란하는 "], [4, 5, "Edema and Effusion ▪ 부종 체액(fluids)과 삼출액 - 염증성 "], [4, 7, "7 Causes of Edema 3. 나트륨과 물의 저류(Sodium and wat"], [4, 8, "8 Morphology ▪ 부종(Edema)"], [4, 10, "Hyperemia and Congestion ▪ 충혈과 울혈 1. 충혈(Hypere"], [4, 11, "Morphology 11 ▪ 급성폐울혈(acute pulmonary congesti"], [4, 14, "Hemostasis 14 ▪ 정상적인 지혈 진행 단계"], [4, 15, "Hemostasis ③ 이차 지혈과정(secondary hemostasis): 손상"], [4, 16, "16 Platelets ▪ 혈소판(Platelets)"], [4, 17, "Coagulation Cascade ▪ 응고연쇄반응(Coagulation Casca"], [4, 18, "Coagulation Cascade ▪ 환자의 혈액 응고 기능을 평가하는 대표적인 "], [4, 19, "Coagulation Cascade 19 ▪ 응고인자 중 트롬빈의 역할"], [4, 20, "Coagulation Cascade ▪ 응고를 제한하는 인자들 - 간단한 희석(si"], [4, 21, "21 Endothelium ▪ 내피세포(Endothelium)"], [4, 22, "Hemorrhagic Disorders ▪ 출혈장애(Hemorrhagic Disor"], [4, 23, "23 Thrombosis ▪ 혈전증(Thrombosis) 유발 원인"], [4, 24, "Morphology 24 ▪ 혈전"], [4, 25, "Fate of the Thrombus ▪ 혈전의 운명 ① 증식(propagation"], [4, 27, "Embolism 27 ▪ 색전증(Embolism)"], [4, 28, "Embolism 2. 전신성 혈전색전증(Systemic Thromboembolism"], [4, 29, "Embolism 4. 공기 색전증(Air Embolism) - 순환계내 기포들이 거"], [4, 31, "Infarction 31 ▪ 경색증(Infarction)"], [4, 34, "Shock ▪ 쇼크(Shock) - 심박출량의 감소 또는 유효순환혈류량 감소로 인해"], [4, 35, "Pathogenesis of Septic Shock 35 ▪ 패혈성쇼크(Septic"]];
+var CARDPG={n2a:[4,10],n2b:[12,12],n2c:[13,17],n2d:[18,23],n2e:[25,32],n2f:[34,40],n2f2:[41,49],n2g:[51,60],n3a:[4,10],n3b:[12,16],n3c:[17,24],n3d:[25,31],n3e:[33,35],n3f:[37,45],n3g:[47,47],n3h:[49,60],n4a:[4,8],n4b:[10,11],n4c:[13,22],n4d:[23,25],n4e:[27,29],n4f:[31,32],n4g:[34,37]};
+var PSL={'임신성 자궁 (Hypertrophy)':[2,7],'뇌 위축 (Atrophy)':[2,9],'상피화생 (Metaplasia)':[2,10],'가역적 세포손상':[2,15],'비가역적 손상 (괴사)':[2,15],'허혈: 밝은 부위 + 괴사: 어두운 부위(자궁)':[2,15],'응고괴사 (신장경색)':[2,18],'Myelin figure':[2,17],'액화괴사':[2,19],'건락괴사':[2,21],'지방괴사':[2,22],'섬유소성괴사':[2,23],'Apoptosis':[2,35,36],'Necroptosis':[2,41,42],'Autophagy':[2,47,49],'지방증 (steatosis) / 단백질 방울':[2,51,52],'이영양성 석회화':[2,55],'콜레스테롤침착증':[2,51],'장액성 염증':[3,33],'만성염증':[3,38],'화농성 염증':[3,34],'화농성 염증: 농양':[3,34],'궤양':[3,34],'급성염증 (초기)':[3,19],'급성염증 (후기)':[3,19],'NETs':[3,22],'섬유소성 심장막염':[3,33],'육아조직 (흉터 형성)':[3,52,53],'이물형 육아종':[3,44],'면역 육아종':[3,44],'궤양의 치유 (이차유합)':[3,57],'이차유합: 당뇨 환자 압박성 궤양':[3,58],'켈로이드':[3,60],'림프관 폐쇄 → 하지부종 / 상지부종':[4,7],'함요부종 (pitting edema)':[4,8],'안와주위부종':[4,8],'뇌부종':[4,8],'만성수동성 간울혈 (육두구간)':[4,11],'일차성 지혈 결함':[4,22],'이차성 지혈 결함':[4,22],'벽혈전 · 판상혈전':[4,24],'혈전의 기질화와 재관통':[4,25],'폐색전증':[4,27],'골수색전증':[4,28],'양수색전증':[4,29],'적색경색':[4,31],'백색경색':[4,31],'경색의 치유':[4,31]};
+var SLMAP={};SLIDES.forEach(function(s,i){s.push('Q'+(i+1));SLMAP[s[0]+'-'+s[1]]=s});
+
 var SCOPE={scope:{from:'2장',to:'4장',excluded:['6장(면역계통): 범위 외로 숨김','오규영 교수 시기(21·22학번) 자료·형식 전부'],basis:'사용자 확정(2026-10-21)',confirmed_by_user:true,exam_format:'객관식(사용자 확정). 과목 일람 메모: 조직사진 있는 문항은 실험 시험, 없는 문항은 이론 시험으로 분리 출제',
  conflicts:[{source:'강의 계획(과목 일람)',range:'2장→3장→4장→면역계통→중간고사',note:'사용자가 면역 제외로 결정. 6장을 포함하게 되면 범위 외 33~40번과 2025 Ch6을 증분 반영'},{source:'일정 3곳',range:'10/26 14:00–16:00(과목 일람·야마부장 업무) / 미확정(학사 업무 계획) / 미정 유지(일정 정리)',note:'사용자 지시로 10/26 14:00–16:00을 잠정 확정, 학사 업무 계획 표 갱신'}],decided_at:'2026-10-21'}};
 var ASSUME=[
@@ -960,7 +976,7 @@ var ASSUME=[
  '정답이 없는 문항(추론·미확정)은 채점과 모의고사에서 제외합니다. 선지가 복기되지 않은 문항은 OMR에서 제외합니다.',
  '예상 문제 분량은 규칙 기본(단원당 기출 수)보다 늘렸습니다(2장 16 · 3장 14 · 4장 11). 기출이 2장 11건·3장 10건·4장 6건으로 얇기 때문입니다.',
  '2026-10-23 재확인: 2026/2학기/원본/치과병리학 폴더는 Ch2·Ch3·Ch3_final·Ch4 4건 그대로이고 6장은 없습니다. 미열람이던 Ch3 원판(9/21)을 final과 대조했더니 앞부분(35쪽까지, 급성염증)과 같고 final에 농양 형성 결과가 추가된 차이뿐이어서 반영할 새 내용은 없었습니다.',
- '2026-10-24 사용자 정정: 치과병리학(이론)과 치과병리학실험을 모두 본다. 조직 slide scan 사진은 실험, 그 밖의 사진(육안 등)은 이론 시험에 사진 문항으로 출제된다. 사진 문항 수는 이론 36 · 실험 30(메신저 전달 캡처로 확인, '최종 검토 후 변동 가능', 공지 원문 미확인)입니다. 이론/실험 분류는 이미지 없이 병변 성격으로 한 추정입니다.'
+ '2026-10-24 사용자 정정: 치과병리학(이론)과 치과병리학실험을 모두 본다. 조직 slide scan 사진은 실험, 그 밖의 사진(육안 등)은 이론 시험에 사진 문항으로 출제된다. 사진 문항 수는 이론 36 · 실험 30(메신저 전달 캡처로 확인, "최종 검토 후 변동 가능", 공지 원문 미확인)입니다. 이론/실험 분류는 이미지 없이 병변 성격으로 한 추정입니다.'
 ];
 var MATS=[
  ['2026','2026/2학기/원본/치과병리학 (1SfS0UWd4qYWlgHs7TUsnN5NkDSu_1-Z_)','Ch2(9/14), Ch3(9/21), Ch3_final(10/11), Ch4(10/11) PDF 4건','교안(T4). Ch2·Ch3_final·Ch4 사용, 텍스트 전체 열람'],
@@ -988,6 +1004,7 @@ var LIMITS=[
 '- 쪽 번호(p.N)는 추출 텍스트의 인접 슬라이드 번호 기준이라 ±1 오차가 있을 수 있습니다.',
 '- 23학번 시험지는 텍스트 추출본만 읽었습니다. 손글씨 체크·형광·그림은 확인하지 못했고 docx 내장 이미지는 추출하지 않았습니다.',
 '- 2025판 교안 Ch2·3·4와 2026판의 차이 대조를 하지 않았습니다.',
+'- 교안 그림 슬라이드 116장은 2026-10-24 사용자가 올린 분할본(Ch2 부분1~3, Ch3_final 부분1~2)과 Ch4 원본에서 66dpi로 렌더링했습니다. 일부 PDF에서 flate 오류 경고가 나왔으나 렌더링은 정상이었습니다. 슬라이드 속 작은 글씨는 원본 확인이 필요합니다.',
 '',
 '[B 근거·정답 쪽 한계]',
 '- 정답 확정 0건: T1(정답표)·T2(타 야마)·T3(국시) 근거가 없습니다. 기출 정답은 교안(T4) 근거 추정이거나 추론·미확정입니다.',
@@ -1216,6 +1233,7 @@ function noteCard(c){
   var h='<section class="nc" id="n-'+c.id+'"><div class="hd"><h3>'+esc(c.t)+'</h3><span class="chip">'+c.ch+'장</span>'+(past?'<span class="hits">23학번 기출 '+past+'문항 연계</span>':'')+'</div>';
   if(c.lead)h+='<p class="lead">'+f(c.lead)+'</p>';
   if(c.kw&&c.kw.length)h+='<div class="kws">'+c.kw.map(function(k){return '<span class="kw">'+esc(k)+'</span>'}).join('')+'</div>';
+  if(CARDPG[c.id])h+=galHtml(c.ch,CARDPG[c.id][0],CARDPG[c.id][1]);
   if(c.flow)c.flow.forEach(function(fl){h+='<div class="flow"><div class="ft">'+f(fl.t)+'</div><ol>'+fl.s.map(function(x,i){return '<li><span class="st"><i>'+(i+1)+'</i>'+f(x)+'</span></li>'}).join('')+'</ol></div>'});
   if(c.secs&&c.secs.length)h+='<div class="secs">'+c.secs.map(function(sc){return '<div class="sp"><h5>'+f(sc.h)+(sc.p?'<span class="pg">'+esc(sc.p)+'</span>':'')+'</h5><ul>'+sc.b.map(function(x){return '<li>'+f(x)+'</li>'}).join('')+'</ul></div>'}).join('')+'</div>';
   (c.tbls||[]).forEach(function(t){if(t.cap)h+='<h4>'+esc(t.cap)+'</h4>';h+=tbl(t)});
@@ -1286,6 +1304,14 @@ function renderMain(keep){
 }
 
 /* ---------- 사진 문항 ---------- */
+function figHtml(ch,n){
+  var s=SLMAP[ch+'-'+n];if(!s)return '';
+  return '<figure class="fg"><div class="fw"><img loading="lazy" src="img/ch'+ch+'_'+(n<10?'0':'')+n+'.jpg" alt="'+s[3]+' 교안 Ch'+ch+' p.'+n+' '+esc(s[2])+'"><span class="fq">'+s[3]+'</span></div><figcaption>Ch'+ch+' p.'+n+'</figcaption></figure>';
+}
+function galHtml(ch,a,b){
+  var h='',c=0;for(var n=a;n<=b;n++){var f=figHtml(ch,n);if(f){h+=f;c++}}
+  return c?'<details class="d fold"><summary>교안 그림 슬라이드 '+c+'장 (그림·사진이 있는 쪽)</summary><div class="gal">'+h+'</div><div class="note">슬라이드를 누르면 크게 보입니다. 66dpi 렌더링이라 작은 글씨는 원본 PDF를 보십시오.</div></details>':'';
+}
 var PCNT=lsGet('pat26-pcnt',{gross:'36',slide:'30'});
 function photoHtml(){
   var l=PHOTO.filter(function(p){return (S.pc==='all'||p.cls===S.pc)&&(S.ch==='all'||String(p.ch)===S.ch)});
@@ -1301,7 +1327,7 @@ function photoHtml(){
     var front=S.pdir==='t2k'?'<b>'+esc(p.t)+'</b>':'<ul style="margin:0;padding-left:1.1em">'+p.k.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul>';
     var back=S.pdir==='t2k'?'<ul style="margin:0;padding-left:1.1em">'+p.k.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul>':'<b>'+esc(p.t)+'</b>';
     return '<div class="sp"><h5>'+p.ch+'장 · '+(p.cls==='gross'?'이론 후보(육안)':'실험 후보(조직)')+'</h5>'+front+
-      '<details class="d" style="margin-top:6px"><summary>정답 보기</summary>'+back+'<div class="note">관련 정리: <button class="lk" data-note="'+p.nk+'">'+esc((NOTE_BY[p.nk]||{}).t||p.nk)+'</button></div></details></div>';}).join('')+'</div>';
+      '<details class="d" style="margin-top:6px"><summary>정답 보기</summary>'+back+(PSL[p.t]?'<div class="gal">'+PSL[p.t].slice(1).map(function(n){return figHtml(PSL[p.t][0],n)}).join('')+'</div>':'')+'<div class="note">관련 정리: <button class="lk" data-note="'+p.nk+'">'+esc((NOTE_BY[p.nk]||{}).t||p.nk)+'</button></div></details></div>';}).join('')+'</div>';
   h+='<section class="sec" style="margin-top:14px"><h2>범위 외(면역계통) 라벨</h2><ul class="note">'+PHOTO_OOS.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul></section>';
   return h;
 }
@@ -1375,7 +1401,8 @@ function statusHtml(){
     MATRIX.map(function(r){return '<tr>'+r.map(function(x){return '<td>'+esc(x)+'</td>'}).join('')+'</tr>'}).join('')+'</tbody></table></div></section>';
   h+='<section class="sec"><h2>교안 슬라이드 커버리지(내용 정리)</h2><p class="note">2026 교안 Ch2·3(final)·4의 슬라이드 쪽을 내용 정리 카드에 대응시킨 표입니다. 이미지·손글씨 슬라이드는 비고에 적었습니다.</p><div class="tw"><table class="t"><thead><tr><th>장</th><th>쪽</th><th>교안 주제</th><th>카드</th><th>비고</th></tr></thead><tbody>'+
     COVER.map(function(r){return '<tr><td>'+r[0]+'장</td><td>'+esc(r[1])+'</td><td>'+esc(r[2])+'</td><td><button class="lk" data-note="'+r[3]+'">'+esc((NOTE_BY[r[3]]||{}).t||r[3])+'</button></td><td>'+esc(r[4])+'</td></tr>'}).join('')+'</tbody></table></div></section>';
-  h+='<section class="sec"><h2>인용 그림 색인</h2><p>그림 번호(Qn) 부여 0건. 이번 기출 원본(23학번 PDF·docx)은 텍스트 추출본만 열람했고 문항 그림은 확인하지 못했습니다. 그림 있음/텍스트 캡처 분류: 미수행(이미지 미열람). 교안 그림은 내장하지 않았습니다.</p></section>';
+  h+='<section class="sec"><h2>인용 그림 색인</h2><p class="note">교안 그림 슬라이드 '+SLIDES.length+'장을 슬라이드 단위로 내장하고 Q1~Q'+SLIDES.length+' 번호를 붙였습니다(번호는 한 번 부여하면 바꾸지 않음, 교체 이력 없음). 그림 있음/텍스트 캡처 분류: 그림·사진·도표가 있는 쪽만 내장했고 글만 있는 쪽·목차·표지는 제외했습니다. 기출 시험지(23학번)의 문항 그림은 확인하지 못했습니다.</p><div class="tw"><table class="t"><thead><tr><th>번호</th><th>종류</th><th>출처(자료·쪽)</th><th>사용처</th><th>내장</th><th>교체 이력</th></tr></thead><tbody>'+
+    SLIDES.map(function(r){var cid='';Object.keys(CARDPG).forEach(function(k){var c=NOTE_BY[k];if(c&&c.ch===r[0]&&r[1]>=CARDPG[k][0]&&r[1]<=CARDPG[k][1])cid=k});return '<tr><td>'+r[3]+'</td><td>교안</td><td>Ch'+r[0]+' p.'+r[1]+' '+esc(r[2])+'</td><td>'+(cid?'<button class="lk" data-note="'+cid+'">'+esc(NOTE_BY[cid].t)+'</button>':'')+'</td><td>내장(JPEG)</td><td>—</td></tr>'}).join('')+'</tbody></table></div></section>';
   h+='<section class="sec"><h2>외부 참조(\'표 N-N 참조\' 류)</h2><p>2·3·4장 교안 텍스트에서 \'그림 4-18\', \'4-18B\', \'4-19\'(경색) 참조가 있으나 교재 그림이며 교재는 열람하지 않았습니다. 해당 서술은 교안 요약 문장으로만 반영했습니다.</p></section>';
   h+='<section class="sec"><h2>알려진 한계 목록</h2><pre class="code">'+esc(LIMITS)+'</pre><button class="btn s" id="b-copylim">복사</button></section>';
   h+='<section class="sec"><h2>사용자 정답 지정 내보내기</h2><p class="note">정답 지정(사용자 확정) 내용을 JSON으로 복사해 대화에 붙여 넣으면 정해 대장에 반영합니다. OMR 마킹은 담지 않습니다.</p><button class="btn p s" id="b-export">클립보드로 복사</button><textarea id="exp-box" rows="5" style="width:100%;margin-top:6px;display:none" readonly></textarea>'+(lsOK?'':'<p class="note">이 환경에서는 브라우저 저장소를 쓸 수 없어 새로고침하면 마킹이 사라집니다.</p>')+'</section>';
@@ -1396,6 +1423,7 @@ function go(tab,keepCh){
 }
 function scrollTo(id){var e=document.getElementById(id);if(e)e.scrollIntoView({block:'start'})}
 document.addEventListener('click',function(ev){
+  var fw=ev.target.closest('.fw');if(fw){fw.parentNode.classList.toggle('big');return}
   var t=ev.target.closest('button,summary');if(!t)return;
   var d=t.dataset||{};
   if(d.tab)return go(d.tab);

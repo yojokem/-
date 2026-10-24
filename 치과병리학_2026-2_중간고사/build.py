@@ -1,7 +1,7 @@
 import re,sys
 d='src/'
 t=open(d+'app.template.html',encoding='utf-8').read()
-data=''.join(open(d+f,encoding='utf-8').read()+'\n' for f in ['data_past.js','data_new.js','data_notes.js','data_notes_extra.js','data_photo.js','data_status.js'])
+data=''.join(open(d+f,encoding='utf-8').read()+'\n' for f in ['data_past.js','data_new.js','data_notes.js','data_notes_extra.js','data_photo.js','data_slides.js','data_status.js'])
 assert '</script' not in data
 out=t.replace('/*@@DATA@@*/','<script>\n'+data+'</script>')
 open('치과병리학_중간대비.html','w',encoding='utf-8').write(out)
