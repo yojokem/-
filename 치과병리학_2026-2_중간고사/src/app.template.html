@@ -476,13 +476,13 @@ function renderMain(keep){
 }
 
 /* ---------- 사진 문항 ---------- */
-var PCNT=lsGet('pat26-pcnt',{gross:'',slide:''});
+var PCNT=lsGet('pat26-pcnt',{gross:'36',slide:'30'});
 function photoHtml(){
   var l=PHOTO.filter(function(p){return (S.pc==='all'||p.cls===S.pc)&&(S.ch==='all'||String(p.ch)===S.ch)});
   var nG=PHOTO.filter(function(p){return p.cls==='gross'}).length,nS=PHOTO.length-nG;
   var h='<div class="memo" style="margin-top:0"><h5>시험 방식(과목 일람 메모 · 사용자 전달)</h5><div>· 조직 slide scan 사진 → <b>치과병리학실험</b> 시험 / 그 밖의 사진(육안·gross 등) → <b>치과병리학(이론)</b> 시험에 실어 사진 문항으로 출제</div><div>· 과목 일람: \'병리실 — 사진 보고 맞는 설명 찾는 형태\'</div></div>';
-  h+='<p class="note">구체적인 사진 문항 수는 Notion·Drive 자료에서 찾지 못했습니다. 아는 값을 적어 두면 아래에 표시됩니다(이 브라우저에만 저장).</p>';
-  h+='<div class="bar"><label class="tg">이론 사진 문항 수 <input id="pc-g" type="number" min="0" style="width:64px" value="'+esc(PCNT.gross)+'"></label><label class="tg">실험 사진 문항 수 <input id="pc-s" type="number" min="0" style="width:64px" value="'+esc(PCNT.slide)+'"></label><span class="chip w">출처 없음 · 사용자 기억 필요</span></div>';
+  h+='<p class="note">사진 문항 수: <b>이론 36 · 실험 30</b>(사용자 전달 2026-10-24, 공지 원문 미확인). 값이 바뀌면 아래 칸을 고치십시오(이 브라우저에만 저장).</p>';
+  h+='<div class="bar"><label class="tg">이론 사진 문항 수 <input id="pc-g" type="number" min="0" style="width:64px" value="'+esc(PCNT.gross)+'"></label><label class="tg">실험 사진 문항 수 <input id="pc-s" type="number" min="0" style="width:64px" value="'+esc(PCNT.slide)+'"></label><span class="chip w">사용자 전달 · 원문 미확인</span></div>';
   h+='<p class="note">출처: 2025-2(23학번, 같은 교수) 중간 사진 세트의 선배 손글씨 라벨 '+PHOTO.length+'건(범위 내). 사진 이미지는 열람하지 못했고, 이론/실험 분류는 병변 성격(육안 vs 조직)으로 한 <b>추정</b>입니다. 손글씨 OCR이라 오독 가능(\'6·2·5\'는 괄호·화살표 대용으로 읽힘). 올해 사진이 같다는 보장은 없습니다.</p>';
   h+='<div class="bar"><button class="pill" data-pc="all" aria-pressed="'+(S.pc==='all')+'">전체 '+PHOTO.length+'</button><button class="pill" data-pc="gross" aria-pressed="'+(S.pc==='gross')+'">이론 후보(육안) '+nG+'</button><button class="pill" data-pc="slide" aria-pressed="'+(S.pc==='slide')+'">실험 후보(조직) '+nS+'</button>'+
     '<span class="grow"></span>'+[2,3,4].map(function(c){return '<button class="pill" data-ch="'+c+'" aria-pressed="'+(S.ch===String(c))+'">'+c+'장</button>'}).join('')+'<button class="pill" data-ch="all" aria-pressed="'+(S.ch==='all')+'">전 장</button>'+
