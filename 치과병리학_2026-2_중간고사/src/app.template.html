@@ -597,7 +597,7 @@ function mxHtml(tab){
 function hardHtml(){
   var l=listFor('hard');
   var h=chBar([2,3,4],'');
-  h+='<p class="note hide-exam">심화 문항 '+HARDQ.length+'건: 합답형(ㄱ~ㄹ 보기 조합) '+HARDQ.filter(function(q){return q.lab.indexOf('합답')>=0}).length+' · 순서 배열 '+HARDQ.filter(function(q){return q.lab.indexOf('순서')>=0}).length+' · 짝짓기(가~라 ↔ ㄱ~ㄹ) '+HARDQ.filter(function(q){return q.lab.indexOf('짝짓기')>=0}).length+'. 기출·예상 문항의 해설(교안 T4 근거)에서 참·거짓 진술을 가져와 조합했고, 정답이 한 개 보기만 틀려도 달라지도록 오답 조합은 정답과 한 칸 차이인 것을 우선했습니다. 한 문항을 풀려면 보기 4개를 모두 판정해야 합니다. 해설에서 보기별 참·거짓을 확인하십시오.</p>';
+  h+='<p class="note hide-exam">심화 문항 '+HARDQ.length+'건: 합답형(ㄱ~ㄹ 보기 조합) '+HARDQ.filter(function(q){return q.lab.indexOf('합답')>=0}).length+' · 순서 배열 '+HARDQ.filter(function(q){return q.lab.indexOf('순서')>=0}).length+' · 짝짓기(가~라 ↔ ㄱ~ㄹ) '+HARDQ.filter(function(q){return q.lab.indexOf('짝짓기')>=0}).length+' · 그림+이론(사진 + 보기 판정) '+HARDQ.filter(function(q){return q.lab.indexOf('그림')>=0}).length+'. 기출·예상 문항의 해설(교안 T4 근거)에서 참·거짓 진술을 가져와 조합했고, 정답이 한 개 보기만 틀려도 달라지도록 오답 조합은 정답과 한 칸 차이인 것을 우선했습니다. 한 문항을 풀려면 보기 4개를 모두 판정해야 합니다. 해설에서 보기별 참·거짓을 확인하십시오.</p>';
   h+=l.length?l.map(function(q){return card(q,true)}).join(''):'<div class="empty">표시할 문항이 없습니다.</div>';
   return h;
 }

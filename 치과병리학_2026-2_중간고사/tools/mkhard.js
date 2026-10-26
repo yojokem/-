@@ -10,7 +10,7 @@ const NK={'적응(비대·증식·위축·화생)':'n2a','세포손상과 괴사
  '부종':'n4a','울혈과 충혈':'n4b','혈소판 부착과 응집':'n4c','정상 내피세포와 트롬빈':'n4c','응고 검사':'n4c','혈전과 색전':'n4d','경색':'n4f','쇼크의 분류와 원인':'n4g',
  '염증반응의 5단계(5R)':'n3a','정상 지혈 과정':'n4c','백혈구가 염증 부위로 이동하는 과정':'n3c','포식작용의 3단계':'n3c','괴사의 종류와 특징':'n2d','세포사의 유형과 특징':'n2f2','염증 매개체와 특징':'n3d','조직의 증식능력 분류와 예':'n3h'};
 const out=[];let k=0;
-const TP=shuf(Array.from({length:40},(_,i)=>i%5+1));
+const TP=shuf(Array.from({length:80},(_,i)=>i%5+1));
 const key=a=>a.join('|');
 function pickOpts(correct,cands,n){ /* correct: 정답 문자열, cands: 오답 후보(우선순위순) */
   const o=[correct];for(const c of cands){if(o.length>=n)break;if(!o.includes(c))o.push(c)}return o}
@@ -63,6 +63,32 @@ H.M.forEach(([ch,nk,title,[items,descs],amap])=>{
     stem:title+'에 대하여 (가)~('+LAB[n-1]+')와 &lt;보기&gt;의 설명을 옳게 짝지은 것은?<div class="bo"><div><b>항목</b> '+items.map((t,i)=>'('+LAB[i]+') '+t).join(' · ')+'</div>'+D.map(d=>'<div><b>'+d.l+'.</b> '+d.t+'</div>').join('')+'</div>',
     opts:so,ans:[pos],st:'추정',tier:'T4',conf:'상',nk:NK[title],sum:items.map((t,i)=>t+' → '+correct[i]+'. '+descs[amap[i]-1]),ev:[['T4','Ch'+ch,title,'교안 서술']],note:'교안 문장 근거(T4) 추정입니다.'});
 });
+/* 그림+이론 합답형 */
+{const {PHOTO}=new Function(fs.readFileSync('src/data_photo.js','utf8')+';return {PHOTO}')();
+ const HP=require('./hard_photo.js');
+ Object.keys(HP).forEach(key=>{
+  const n=+key,p=PHOTO.find(x=>x.n===n),[thT,thF,dxF]=HP[n];
+  const dx=p.t.replace(/ — /g,' · ');
+  const find=(p.k||[]).filter(x=>x&&x.indexOf('추가 설명')<0&&x.indexOf('원문')<0).join(', ');
+  const T=[{t:'이 사진의 병변은 '+dx+'에 해당한다.',v:1,w:'선배 정답 라벨(2025-2) 기준'},{t:thT,v:1,w:'교안 근거'}];
+  const F=[{t:'이 사진의 병변은 '+dxF+'에 해당한다.',v:0,w:'선배 라벨의 진단은 '+dx},{t:thF,v:0,w:'교안과 다름'}];
+  if(find){T.push({t:'이 사진에서 관찰되는 소견은 '+find+'이다.',v:1,w:'선배 라벨 기준'})}
+  /* 4진술: 참 2~3, 거짓 1~2 */
+  const nT=find&&r()<0.5?3:2;const pickT=shuf(T).slice(0,nT),pickF=shuf(F).slice(0,4-nT);
+  const order=shuf(pickT.concat(pickF));const S=order.map((x,i)=>Object.assign({l:LET[i]},x));
+  const neg=r()<0.25;const want=S.filter(x=>neg?!x.v:x.v);const A=want.map(x=>x.l);
+  const all=[];for(let m=1;m<16;m++){const c=[];for(let b=0;b<4;b++)if(m&(1<<b))c.push(LET[b]);all.push(c)}
+  const dist=c=>{let d=0;LET.slice(0,4).forEach(l=>{if(A.includes(l)!==c.includes(l))d++});return d};
+  const near=shuf(all.filter(c=>dist(c)===1)).concat(shuf(all.filter(c=>dist(c)===2)),shuf(all.filter(c=>dist(c)>=3)));
+  const o=pickOpts(A,near,5).map(c=>c.join(', '));const ans=A.join(', ');
+  const tp=TP.pop();const so=o.filter(x=>x!==ans).sort((x,y)=>x.split(', ').length-y.split(', ').length||x.localeCompare(y,'ko'));so.splice(tp-1,0,ans);
+  k++;
+  out.push({id:'HP-'+String(n).padStart(2,'0'),set:'hard',ch:p.ch,n:k+'번',lab:'심화 · 그림+이론',photo:n,img:'ph_'+(n<10?'0':'')+n+'.jpg',src:'사진 '+n+'번 · 선배 라벨',
+   stem:'다음 사진을 보고 &lt;보기&gt; 중 '+(neg?'옳지 않은':'옳은')+' 것만을 있는 대로 고른 것은?<div class="bo">'+S.map(x=>'<div><b>'+x.l+'.</b> '+x.t+'</div>').join('')+'</div>',
+   opts:so,ans:[tp],st:'추정',tier:'선배 라벨',conf:'중',nk:p.nk,
+   sum:S.map(x=>x.l+' '+(x.v?'옳음':'옳지 않음')+' — '+x.t+' ('+x.w+')'),ev:[['선배 라벨','PHOTO','사진 '+n+'번',p.t]],
+   note:'사진의 진단·소견은 선배 라벨(2025-2) 기준, 이론 진술은 교안(T4) 근거입니다. 올해 정답이 아닙니다.'});
+ });}
 out.forEach(q=>{if(!q.nk)throw new Error('nk '+q.src);if(new Set(q.opts).size!==5)throw new Error('opts '+q.id)});
 /* 장·유형 순으로 정렬해 번호를 다시 매긴다 */
 out.sort((a,b)=>a.ch-b.ch||a.id.localeCompare(b.id));out.forEach((q,i)=>{q.n=(i+1)+'번'});
