@@ -22,3 +22,6 @@
 - 이론 36 = 글 24(야마 그대로·변형·비야마 약 7·9·8) + 육안·기타 사진 12, 실험 30 = 조직 사진.
 - 글 문항 선지는 길이 편향을 줄이게 다시 썼다(`tools/fixopts.json`). 데이터 생성: `node tools/mkmock.js` → `src/data_mock.js` → `python3 build.py`.
 - 테스트: `node tests/mocks.js`.
+
+## 심화(합답형) 탭(2026-10-26)
+- 합답형(ㄱ~ㄹ) 26 · 순서 배열 4 · 짝짓기 4 = 34문항. 원자료 `tools/hard_items.js` → `node tools/mkhard.js` → `src/data_hard.js` → `python3 build.py`. 테스트 `node tests/hard.js`.
