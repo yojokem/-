@@ -36,7 +36,7 @@
 | 27 | #16 Spinal ganglion, rat (cresyl violet) | `16_spinalganglion_YAMA-senior-kwon_x200.jpg` |
 | 28 | Blood, human (Wright) | `Blood_human_YAMA-senior-kwon_x400.jpg` |
 | 29 | #28 Trachea, monkey (×40) — mucosa/submucosa | `28_trachea_YAMA-senior-kwon-2_x40.jpg` |
-| 30 | #29 Lung (thin section), monkey | `29_lung_senior-kwon_x200.jpg` |
+| 30 | #29 Lung (thin section), monkey | `29_lung_YAMA-senior-kwon_x200.jpg` |
 | 31 | #37 Ileum, human (PAS ×40) | `37_ileum_YAMA-senior-kwon-2_x40.jpg` |
 | 32 | #38 Colon, human | `38_colon_senior-kwon_x16.jpg` |
 | 33 | #41 Myenteric plexus, rat (NADH) | `41_myentericplexus_senior-kwon_x80.jpg` |
